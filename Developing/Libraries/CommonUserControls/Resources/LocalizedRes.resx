@@ -1,0 +1,757 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="grd_AddmissionContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_AddmissionContainer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_ChartOfAccountMargin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_ChartOfAccountMargin.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_ChartOfAccountType" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_ChartOfAccountType.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Customer_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Customer_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Doctor_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Doctor_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_FloorSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_FloorSearch.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InPatientRoomBedSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InPatientRoomBedSearch.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InPatientRoomClassificationSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InPatientRoomClassificationSearch.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InPatientRoomSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InPatientRoomSearch.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InsurancePolicySearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InsurancePolicySearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InventoryHousing_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InventoryHousing_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InventoryItemBrand_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InventoryItemBrand_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InventoryItemCategory_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InventoryItemCategory_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InventoryItemGroup_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InventoryItemGroup_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InventoryItemPrice_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InventoryItemPrice_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InventoryItem_InventoryHousing_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InventoryItem_InventoryHousing_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InventoryItem_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InventoryItem_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InvoiceDetail_Accommodation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InvoiceDetail_Accommodation.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_LabRegistration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_LabRegistration.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Location_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Location_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_MarketInvoiceCreation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_MarketInvoiceCreation.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_ReadyInvoicesForActions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_ReadyInvoicesForActions.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_ReadyInvoicesForPayments" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_ReadyInvoicesForPayments.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_RoleRegistration_Internal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_RoleRegistration_Internal.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_ServiceCategory_Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_ServiceCategory_Search.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_ServiceCategory_StationPoint_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_ServiceCategory_StationPoint_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_ServicePrice_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_ServicePrice_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_ServiceType_StationPoint_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_ServiceType_StationPoint_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Service_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Service_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Service_StationPoint_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Service_StationPoint_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_StationPointStage_SearchVeiwer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_StationPointStage_SearchVeiwer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_StationPoint_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_StationPoint_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Supplier_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Supplier_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_UnitMeasurmentTreeLink_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_UnitMeasurmentTreeLink_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_UnitMeasurment_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_UnitMeasurment_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_UserGroupSearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_UserGroupSearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_UserGroup_Application_Internal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_UserGroup_Application_Internal.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_UserSearchViewer_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_UserSearchViewer_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_User_Application_Internal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_User_Application_Internal.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_User_UserGroup_InternalUsers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_User_UserGroup_InternalUsers.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_AddmissionContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_AddmissionContainer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_AddmissionRegistration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_AddmissionRegistration.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_AddmissionRegistration_Accommodation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_AddmissionRegistration_Accommodation.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_AddmissionRegistration_Lab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_AddmissionRegistration_Lab.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_AdmissionInvoiceCreationContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_AdmissionInvoiceCreationContainer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_AdmissionInvoiceCreationDetails_GeneralOutPatient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_AdmissionInvoiceCreationDetails_GeneralOutPatient.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_AdmissionInvoiceCreationDetails_InPatientServices" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_AdmissionInvoiceCreationDetails_InPatientServices.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_AdmissionInvoiceCreationDetails_LabServices" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_AdmissionInvoiceCreationDetails_LabServices.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_AdmissionRegistrationContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_AdmissionRegistrationContainer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ChartOfAccountMarginEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ChartOfAccountMarginEditor.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ChartOfAccountMarginSearchEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ChartOfAccountMarginSearchEditor.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ChartOfAccountsType" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ChartOfAccountsType.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Customer_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Customer_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Customer_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Customer_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Doctor_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Doctor_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_FloorEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_FloorEditor.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InPatientRoomBedEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InPatientRoomBedEditor.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InPatientRoomBedSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InPatientRoomBedSearch.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InPatientRoomClassificationEditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InPatientRoomClassificationEditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InPatientRoomClassificationSearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InPatientRoomClassificationSearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InPatientRoomEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InPatientRoomEditor.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InPatientRoomSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InPatientRoomSearch.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InsurancePolicyEditorViewer_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InsurancePolicyEditorViewer_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InsurancePolicySearchViewer_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InsurancePolicySearchViewer_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryHousing_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryHousing_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryHousing_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryHousing_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItemBrand_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItemBrand_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItemBrand_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItemBrand_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItemCategory_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItemCategory_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItemCategory_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItemCategory_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItemGroup_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItemGroup_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItemGroup_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItemGroup_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItemPrice_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItemPrice_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItemPrice_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItemPrice_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItem_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItem_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItem_InventoryHousing_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItem_InventoryHousing_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItem_InventoryHousing_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItem_InventoryHousing_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItem_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItem_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItem_UnitMeasurment_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItem_UnitMeasurment_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InvoiceContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InvoiceContainer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InvoiceDetailsGrid_Accommodation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InvoiceDetailsGrid_Accommodation.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InvoiceDetailsViewing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InvoiceDetailsViewing.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InvoiceManagerInvoiceDetailsContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InvoiceManagerInvoiceDetailsContainer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InvoiceManagerQeueCardContainer_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InvoiceManagerQeueCardContainer_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InvoicePaymentEditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InvoicePaymentEditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Location_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Location_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Location_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Location_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_MainPatientInvoiceActions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_MainPatientInvoiceActions.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_MarketInvoiceCreation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_MarketInvoiceCreation.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_PatientEditorViewer_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_PatientEditorViewer_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_PEMRPatientQueueCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_PEMRPatientQueueCard.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_PEMRQueueContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_PEMRQueueContainer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_PEMR_PatientCardContainer_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_PEMR_PatientCardContainer_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_RoleRegistration_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_RoleRegistration_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ServiceCategoryStationPoint_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ServiceCategoryStationPoint_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ServiceCategoryStationPoint_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ServiceCategoryStationPoint_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ServiceCategory_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ServiceCategory_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ServiceCategory_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ServiceCategory_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ServicePrice_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ServicePrice_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ServicePrice_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ServicePrice_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ServiceStationPoint_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ServiceStationPoint_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ServiceStationPoint_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ServiceStationPoint_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ServiceTypeStationPoint_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ServiceTypeStationPoint_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ServiceTypeStationPoint_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ServiceTypeStationPoint_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Service_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Service_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Service_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Service_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_StationPointStage_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_StationPointStage_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_StationPointStage_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_StationPointStage_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_StationPoint_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_StationPoint_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_StationPoint_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_StationPoint_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Supplier_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Supplier_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Supplier_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Supplier_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_TrialBalance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_TrialBalance.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_UnitMeasurmentTreeLink_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_UnitMeasurmentTreeLink_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_UnitMeasurmentTreeLink_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_UnitMeasurmentTreeLink_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_UnitMeasurment_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_UnitMeasurment_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_UnitMeasurment_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_UnitMeasurment_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_UserEditorViewer_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_UserEditorViewer_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_UserGroupEditor_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_UserGroupEditor_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_UserGroupSearchViewer_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_UserGroupSearchViewer_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_UserGroup_Application_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_UserGroup_Application_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_UserSearchViewer_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_UserSearchViewer_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_User_Application_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_User_Application_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_User_UserGroup_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_User_UserGroup_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_PEMRHistoryVisits_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_PEMRHistoryVisits_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_CustomerFinanceInvoices_ReportViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_CustomerFinanceInvoices_ReportViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_ChartOfAccount_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_ChartOfAccount_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ChartOfAccount_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ChartOfAccount_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ChartOfAccount_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ChartOfAccount_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_CashBox_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_CashBox_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_CashBox_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_CashBox_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_CashBox_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_CashBox_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_CashBoxTransactionType_GeneralChartOfAccountType_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_CashBoxTransactionType_GeneralChartOfAccountType_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_GeneralChartOfAccountType_Internal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_GeneralChartOfAccountType_Internal.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_GeneralChartOfAccountType_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_GeneralChartOfAccountType_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_CashBoxTransactionType_GeneralChartOfAccountType_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_CashBoxTransactionType_GeneralChartOfAccountType_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_GeneralChartOfAccountType_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_GeneralChartOfAccountType_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_GeneralChartOfAccountType_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_GeneralChartOfAccountType_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_MedicalAdmissionInvoiceCreation_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_MedicalAdmissionInvoiceCreation_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InvoicePaymentBrief_Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InvoicePaymentBrief_Report.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InvoicePaymentBrief_Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InvoicePaymentBrief_Report.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_TotalServicesAndDoctorsRevenues" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_TotalServicesAndDoctorsRevenues.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_TotalServiceAndDoctorRevenues_Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_TotalServiceAndDoctorRevenues_Report.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_OutPatientInvoiceDetailItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_OutPatientInvoiceDetailItem.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_PaymentsHistory_Cash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_PaymentsHistory_Cash.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_PatientPrviousInvoices" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_PatientPrviousInvoices.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_UserGroup_Application_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_UserGroup_Application_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_User_UserGroup_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_User_UserGroup_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_BankAccount_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_BankAccount_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Bank_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Bank_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_BankAccount_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_BankAccount_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_BankAccount_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_BankAccount_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Bank_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Bank_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Bank_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Bank_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_PersonType_ChartOfAccount_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_PersonType_ChartOfAccount_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_PersonType_ChartOfAccount_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_PersonType_ChartOfAccount_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_PersonType_ChartOfAccount_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_PersonType_ChartOfAccount_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_VisitTiming_TreatmentPlan_Internal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_VisitTiming_TreatmentPlan_Internal.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_PEMR_Element_OrderIndex_Internal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_PEMR_Element_OrderIndex_Internal.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_DoctorCategory_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_DoctorCategory_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_MedicationCategory_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_MedicationCategory_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Medication_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Medication_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_DoctorCategory_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_DoctorCategory_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_DoctorCategory_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_DoctorCategory_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_MedicationCategory_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_MedicationCategory_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_MedicationCategory_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_MedicationCategory_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Medication_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Medication_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Medication_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Medication_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Medication_EditorViewer_en_US" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Medication_EditorViewer_en_US.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ChangeTheme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ChangeTheme.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ScanFiles_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ScanFiles_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InvoicePaymentBrief_Report_CashOnly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InvoicePaymentBrief_Report_CashOnly.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InvoicePaymentBrief_Report_CheckOnly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InvoicePaymentBrief_Report_CheckOnly.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InvoicePaymentBrief_Report_VisaOnly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InvoicePaymentBrief_Report_VisaOnly.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_OrganizationMachine_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_OrganizationMachine_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_OrganizationMachine_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_OrganizationMachine_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_OrganizationMachine_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_OrganizationMachine_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Dose_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Dose_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Dose_SearchViewer_en_US" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Dose_SearchViewer.en-US.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Medication_Dose_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Medication_Dose_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Dose_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Dose_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Dose_EditorViewer_en_US" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Dose_EditorViewer.en-US.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Dose_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Dose_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Dose_SearchViewer_en_US" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Dose_SearchViewer.en-US.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Medication_Dose_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Medication_Dose_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Medication_Dose_EditorViewer_en_US" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Medication_Dose_EditorViewer.en-US.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_VisitTiming_InvestigationReservation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_VisitTiming_InvestigationReservation.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_VisitTiming_Medications" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_VisitTiming_Medications.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_PatientDepositBalance_Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_PatientDepositBalance_Report.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_PatientDeposite_Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_PatientDeposite_Report.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_PatientsList" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_PatientsList.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_PEMR_SearchPanel_Diagnosis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_PEMR_SearchPanel_Diagnosis.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_DiagnosisCategory_Diagnosis_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_DiagnosisCategory_Diagnosis_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_DiagnosisCategory_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_DiagnosisCategory_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_DiagnosisCategory_SearchViewer_en_US" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_DiagnosisCategory_SearchViewer.en-US.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Diagnosis_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Diagnosis_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Diagnosis_SearchViewer_en_US" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Diagnosis_SearchViewer.en-US.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_DiagnosisCategories_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_DiagnosisCategories_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_DiagnosisCategories_EditorViewer_en_US" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_DiagnosisCategories_EditorViewer.en-US.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_DiagnosisCategories_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_DiagnosisCategories_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_DiagnosisCategories_SearchViewer_en_UD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_DiagnosisCategories_SearchViewer.en-UD.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_DiagnosisCategories_SearchViewer_en_US" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_DiagnosisCategories_SearchViewer.en-US.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_DiagnosisCategory_Diagnosis_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_DiagnosisCategory_Diagnosis_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_DiagnosisCategory_Diagnosis_EditorViewer_en_US" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_DiagnosisCategory_Diagnosis_EditorViewer.en-US.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Diagnosis_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Diagnosis_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Diagnosis_EditorViewer_en_US" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Diagnosis_EditorViewer.en-US.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Diagnosis_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Diagnosis_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Diagnosis_SearchViewer_en_US" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Diagnosis_SearchViewer.en-US.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_VisitTiming_VitalSigns" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_VisitTiming_VitalSigns.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_PEMR_Diagnosis_Cardiology" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_PEMR_Diagnosis_Cardiology.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_PEMR_Diagnosis_Opthalmology" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_PEMR_Diagnosis_Opthalmology.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_PEMR_VisionRefraction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_PEMR_VisionRefraction.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+</root>

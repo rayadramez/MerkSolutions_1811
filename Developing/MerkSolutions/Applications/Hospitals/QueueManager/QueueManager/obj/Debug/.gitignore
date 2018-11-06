@@ -1,0 +1,9 @@
+*.cs
+*.cache
+/QueueManager.Properties.Resources.resources
+/QueueManager.QueueManagerMainForm.resources
+/QueueManager.csproj.FileListAbsolute.txt
+/QueueManager.exe
+/QueueManager.pdb
+/queuemanager.exe.licenses
+/build.force

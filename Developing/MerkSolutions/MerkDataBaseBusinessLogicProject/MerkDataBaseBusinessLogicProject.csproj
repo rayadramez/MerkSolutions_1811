@@ -1,0 +1,1096 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01C542D3-1DE3-4F9F-A9A5-0AD614E675F1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MerkDataBaseBusinessLogicProject</RootNamespace>
+    <AssemblyName>MerkDataBaseBusinessLogicProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\Merk_Releases\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\Merk_Releases\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountingJournalEntryTransaction.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingJournalTransaction.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveSalaryEffect_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressRefrenceType_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Address_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Application_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BankAccount_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bank_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CashBoxInOutTransaction.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CashBoxInOutTransaction_AccountingJournalTransaction.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CashBoxTransactionType_GeneralChartOfAccountType_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CashBoxTransactionType_GeneralChartOfAccountType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CashBoxTransactionType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CashBox_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChartOfAccountBalance.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChartOfAccountCodeMargin_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChartOfAccount_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChartOfAccount_FinancialStatementElement_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChartOfAccount_GeneralChartOfAccountType_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CommonTransactionType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Currency_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPaymentTransaction.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBVersion.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department_JobTitle_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department_JobTitle_WorkingShiftTitle_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosisCategory_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosisCategory_Diagnosis_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosisType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnosis_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorCategory_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorFeesService_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorProfessionalFeesIssuingType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorRank_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorSpecialization_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorTaxType_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_DiagnosisCategory_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_Diagnosis_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_Service_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_SymptomsCategory_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_Symptoms_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dose_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeType_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Department_JobTitle_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_WorkingShiftTitle_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_WorkingShift_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmploymentDateType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmploymentDate_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\AccountingBusinessLogicEngine.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\CommonExtensions.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\FinancialBusinessLogicLibrary.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\Insurance.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\InventoryBusinessLogicEngine.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\InventoryItemConstructor.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\InvoiceObject.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\MedicalInvoiceItemConstructor.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\MerkDBBusinessLogicEngine.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\MerkPrintManagerLibrary.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\PEMRBusinessLogic.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\PEMRObject.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\PEMR_Translated.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\PrivateEnums.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\ReadyInvoicesForAction.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\UnitMeasurmentTreeLinkObject.cs" />
+    <Compile Include="Eye_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceInvoice.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceInvoiceDetail.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceInvoicePayment.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceInvoiceShare.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialInterval_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialInterval_Month_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialStatementElement_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialStatementElement_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialTransactionType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Floor_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralChartOfAccountType_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralChartOfAccountType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetBriefQueue_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCustomerBalance_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCustomerInvoices_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetInvoiceForAddmission_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetInvoicesPaymentBriefReport_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPatientDepositBalance_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPatientPreviousInvoices_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPreviousMedicalVisits_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPreviousVisitTiming_EOMReading_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPreviousVisitTiming_VisionRefractionReading_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSupplierBalance_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTotalServiceAndDoctorRevenues_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HeightUnit_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IdentificationCardType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImageType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InPatientAdmissionPricingType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InPatientRoomBedStatus_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InPatientRoomBed_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InPatientRoomBed_InPatientAdmissionPricingType_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InPatientRoomClassification_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InPatientRoomClassification_InPatientAdmissionPricingType_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InPatientRoomType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InPatientRoom_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InPatientRoom_InPatientAdmissionPricingType_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceCarrier_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceCarrier_InsuranceLevel_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceLevel_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryHousing_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItemBrand_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItemCategory_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItemGroup_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItemGroup_InventoryItem_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItemPrice_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItemTransaction.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItemTransactionType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItemType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItem_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItem_UnitMeasurment_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryTrackingType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceCostingStrategy_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDetail.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDetail_Accommodation.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDetail_DoctorFees.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDetail_Inventory.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDiscount.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoicePayment.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoicePaymentType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoicePayment_Check.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoicePayment_Visa.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceRequestedAmount.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceShare.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceType_Surcharge_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobTitle_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Location_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogAuditing.cs">
+      <DependentUpon>MerkAuditingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaritalStatus_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalFlow_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalStage_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicationCategory_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Medication_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Medication_Dose_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerkAuditingEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MerkAuditingEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerkAuditingEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MerkAuditingEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerkAuditingEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MerkAuditingEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PEMRSavingMode_User_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PupillaryAbnormalities_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PupillaryRAPDCauses_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\SegmentSignCategory_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\SegmentSign_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\UncorrectedDistanceVisualAcuity_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\MerkAuditingEntities.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\ActiveSalaryEffect_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Address_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\BankAccount_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Bank_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\CashBoxTransactionType_GeneralChartOfAccountType_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\CashBox_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\ChartOfAccount_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\ChartOfAccount_GeneralChartOfAccountType_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\City_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Country_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Customer_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\DiagnosisCategory_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\DiagnosisCategory_Diagnosis_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Diagnosis_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\DoctorCategory_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\DoctorTaxType_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Doctor_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Doctor_DiagnosisCategory_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Doctor_Diagnosis_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Dose_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Employee_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\FinancialInterval_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Floor_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\GeneralChartOfAccountType_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InPatientRoomBed_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InPatientRoomBed_InPatientAdmissionPricingType_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InPatientRoomClassification_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InPatientRoomClassification_InPatientAdmissionPricingType_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InPatientRoom_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InPatientRoom_InPatientAdmissionPricingType_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InsuranceCarrier_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InsuranceCarrier_InsuranceLevel_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InsuranceLevel_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryHousing_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItemBrand_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItemCategory_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItemGroup_InventoryItem_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItemPrice_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItem_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItem_UnitMeasurment_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItemGroup_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InvoiceType_Surcharge_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Location_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\MedicationCategory_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Medication_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Medication_Dose_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\OrganizationMachine_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Patient_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PEM_ElementPrintOrder_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PersonType_ChartOfAccount_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Person_ChartOfAccount_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Person_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Region_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\RoleRegistration_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\ServiceCategory_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\ServiceCategory_StationPoint_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\ServiceCategory_Surcharge_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\ServicePrice_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\ServiceType_StationPoint_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\ServiceType_Surcharge_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Service_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Service_StationPoint_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Service_Surcharge_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\StationPointStage_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\StationPoint_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Supplier_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Surcharge_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\UnitMeasurmentTreeLink_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\UnitMeasurment_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\UserGroup_Application_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\UserGroup_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\User_Application_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\User_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\User_UserGroup_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\DBCommon\DBBusinessLogicLibrary.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\DBCommon\DBCommon.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\DBCommon\DBCommonExtension.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\DBCommon\IDBCommon.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\DBCommon\IGenericDBCommon.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\DBCommon\IInvoiceItem.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\DBCommon\IPEMR_Element.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\DBCommon\Repositories\IRepository.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\DBCommon\Repositories\Repository.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\DBCommon\UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\DBCommon\UnitOfWork\UnitOfWork.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\DBConnectionManager.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\LogAuditing\LogAuditing.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\MerkFinanceEntities.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\Application_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\CashBoxTransactionType_GeneralChartOfAccountType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\CashBoxTransactionType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\ChartOfAccountCodeMargin_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\DiagnosisType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\DoctorProfessionalFeesIssuingType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\DoctorRank_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\DoctorSpecialization_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\Eye_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\GeneralChartOfAccountType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\HeightUnit_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\IdentificationCardType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\InPatientRoomBedStatus_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\InPatientRoomType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\InventoryItemTransactionType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\InventoryItemType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\MaritalStatus_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\NearVisiong_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PaymentType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PEMRSavingMode_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PEMR_Elemet_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PersonChartOtAccountType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PersonRelativeType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PersonTitle_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PersonType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PhoneType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PriceType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\Role_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\SegmentSignType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\ServerDirectory_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\ServiceType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\Station_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\TemperatureUnit_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\TimeDuration_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\UncorrectedDistanceVisualAcuityUnit_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\UnitMeasurment_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\VisionRefractionReadingType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\WeightUnit_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetCustomerInvoices_Result.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetInvoicesPaymentBriefReport_Result.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetPatientDepositBalance_Result.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetPatientPreviousInvoices_Result.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetPreviousMedicalVisits_Result.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetPreviousVisitTiming_EOMReading_Result.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetPreviousVisitTiming_VisionRefractionReading_Result.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetTotalServiceAndDoctorRevenues_Result.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\AccountingJournalEntryTransaction.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\AccountingJournalTransaction.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\CashBoxInOutTransaction.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\FinanceInvoice.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\FinanceInvoiceDetail.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\FinanceInvoicePayment.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\FinanceInvoiceShare.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\InventoryItemTransaction.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\Invoice.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\InvoiceDetail.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\InvoiceDetail_Accommodation.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\InvoiceDetail_DoctorFees.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\InvoiceDetail_Inventory.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\InvoicePayment.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\InvoiceShare.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PatientAttachment_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\PatientDepositeBalance.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\QueueManager.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_AdnexaSegmentSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_AnteriorSegmentSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_Attachment.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_Diagnosis.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_EOMReading.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_EOMSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_InvestigationReservation.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_InvestigationResult.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_LabReservation.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_LabResult.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_MainAdnexaSegmentSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_MainAnteriorSegmentSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_MainDiagnosis.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_MainEOMSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_MainPosteriorSegmentSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_MainSymptoms.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_Medication.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_PosteriorSegmentSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_Pupillary.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_SurgeryReservation.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_SurgeryResult.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_Symptoms.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_TreatmentPlan.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_VisionRefractionReading.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_VitalSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTimming_SocialHistory.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_Adnexa.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_AnteriorSegmentSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_EOMReading.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_EOMSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_PosteriorSegment.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_SocialHistory.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_VisionRefractionReading.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_VitalSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_Pupillary.cs" />
+    <Compile Include="MerkFinanceEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MerkFinanceEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerkFinanceEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerkFinanceEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MerkFinanceEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MilitaryStatus_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Month_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NearVisiong_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizationMachine_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Organization_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PainLevel_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientAttachment_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientDepositeBalance.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patient_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRSavingMode_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRSavingMode_User_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PEMR_Elemet_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PEM_ElementPrintOrder_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonChartOtAccountType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonRelativeType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonTitle_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonType_ChartOfAccount_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_ChartOfAccount_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_IdentificationCardType_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person_Phone_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PupillaryAbnormalities_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PupillaryRAPDCauses_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PupillaryRAPDGradingScale_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PupillaryShape_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PupillarySize_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QueueManager.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QueueManagerStatus_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Region_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Religion_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleRegistration_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SegmentSignCategory_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SegmentSignType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SegmentSign_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerDirectory_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceCategory_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceCategory_StationPoint_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceCategory_Surcharge_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServicePrice_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceType_ChartOfAccount_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceType_StationPoint_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceType_Surcharge_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service_ChartOfAccount_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service_StationPoint_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Surcharge_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StationPointStage_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StationPoint_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Station_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SurchargeType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Surcharge_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SymptomsCategory_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SymptomsCategory_Symptoms_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Symptoms_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TableIdentity.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TemperatureUnit_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Terriotry_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeDuration_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToBeInserted_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrialBalanceTransaction.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrialBalanceTransactionType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UncorrectedDistanceVisualAcuityUnit_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UncorrectedDistanceVisualAcuity_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnitMeasurmentTreeLink_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnitMeasurment_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnitMeasurment_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroup_Application_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroup_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_Application_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_UserGroup_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisionRefractionReadingType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitAssessmentTopic_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_AdnexaSegmentSign.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_AnteriorSegmentSign.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_Attachment.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_Diagnosis.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_EOMReading.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_EOMSign.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_InvestigationReservation.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_InvestigationResult.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_LabReservation.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_LabResult.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_MainAdnexaSegmentSign.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_MainAnteriorSegmentSign.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_MainDiagnosis.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_MainEOMSign.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_MainPosteriorSegmentSign.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_MainSymptoms.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_Medication.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_PosteriorSegmentSign.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_Pupillary.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_SocialHistory.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_SurgeryReservation.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_SurgeryResult.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_Symptoms.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_TreatmentPlan.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_VisionRefractionReading.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_VitalSign.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WeightUnit_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingShiftTitle_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="MerkAuditingEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MerkAuditingEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MerkAuditingEntities.edmx.diagram">
+      <DependentUpon>MerkAuditingEntities.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="MerkFinanceEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MerkFinanceEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MerkFinanceEntities.edmx.diagram">
+      <DependentUpon>MerkFinanceEntities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MerkAuditingEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MerkAuditingEntities.edmx</DependentUpon>
+      <LastGenOutput>MerkAuditingEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MerkAuditingEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MerkAuditingEntities.edmx</DependentUpon>
+      <LastGenOutput>MerkAuditingEntities.cs</LastGenOutput>
+    </Content>
+    <Content Include="MerkFinanceEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MerkFinanceEntities.edmx</DependentUpon>
+      <LastGenOutput>MerkFinanceEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MerkFinanceEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MerkFinanceEntities.edmx</DependentUpon>
+      <LastGenOutput>MerkFinanceEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+*.cs
+/Dental_PEMR.Form1.resources
+/Dental_PEMR.Properties.Resources.resources
+/Dental_PEMR.csproj.FileListAbsolute.txt
+/Dental_PEMR.csproj.GenerateResource.Cache
+/Dental_PEMR.csprojResolveAssemblyReference.cache
+/Dental_PEMR.exe
+/Dental_PEMR.pdb
+/DesignTimeResolveAssemblyReferences.cache
+/DesignTimeResolveAssemblyReferencesInput.cache
+/dental_pemr.exe.licenses

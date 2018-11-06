@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7EE62B50-B69C-46DC-8CA0-260F7F2081E1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MarketInvoiceCreation</RootNamespace>
+    <AssemblyName>MarketInvoiceCreation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\Merk_Releases\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\Merk_Releases\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.1" />
+    <Reference Include="DevExpress.Data.v15.1" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v15.1" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountingTransactionContainer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountingTransactionContainer_UC.Designer.cs">
+      <DependentUpon>AccountingTransactionContainer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashBoxTransactionContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CashBoxTransactionContainer.Designer.cs">
+      <DependentUpon>CashBoxTransactionContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceActions_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceActions_UC.Designer.cs">
+      <DependentUpon>InvoiceActions_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceReportsConatiner_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceReportsConatiner_UC.Designer.cs">
+      <DependentUpon>InvoiceReportsConatiner_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AccountingTransactionContainer_UC.resx">
+      <DependentUpon>AccountingTransactionContainer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashBoxTransactionContainer.resx">
+      <DependentUpon>CashBoxTransactionContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceActions_UC.resx">
+      <DependentUpon>InvoiceActions_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceReportsConatiner_UC.resx">
+      <DependentUpon>InvoiceReportsConatiner_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Libraries\CommonControlLibrary\CommonControlLibrary.csproj">
+      <Project>{62D00E59-3FCE-454B-8753-B63891FF2A44}</Project>
+      <Name>CommonControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Libraries\CommonUserControls\CommonUserControls.csproj">
+      <Project>{7EAA41E3-3785-4AF9-B18D-209F882E7FD8}</Project>
+      <Name>CommonUserControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Libraries\MVCBusinessLogicLibrary\MVCBusinessLogicLibrary.csproj">
+      <Project>{C11A9643-68D1-431F-9D73-35D2BB9A08C7}</Project>
+      <Name>MVCBusinessLogicLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ApplicationConfiguration\ApplicationConfiguration.csproj">
+      <Project>{88767B6B-1BC5-4B0E-8478-AED883E20AB4}</Project>
+      <Name>ApplicationConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MerkDataBaseBusinessLogicProject\MerkDataBaseBusinessLogicProject.csproj">
+      <Project>{01C542D3-1DE3-4F9F-A9A5-0AD614E675F1}</Project>
+      <Name>MerkDataBaseBusinessLogicProject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvoiceInIcon_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvoiceOutIcon_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvoiceReturnIn_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvoiceReturnOut_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvetoryItemIcon_8_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvetoryItemIcon_16_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvoicesReportsIcon_16_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CashBox_16_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvoicesReportsIcon_16_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CashBox_16_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_16_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CashReturning_16_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CashReturning_16_02.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

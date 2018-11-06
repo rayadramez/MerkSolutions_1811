@@ -1,0 +1,5 @@
+*.xml
+/MainProject.exe.config
+/MainProject.vshost.exe
+/MainProject.vshost.exe.config
+/MainProject.vshost.exe.manifest

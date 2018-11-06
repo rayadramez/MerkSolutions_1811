@@ -1,0 +1,15 @@
+*.cs
+/ApplicationsSettingsTool.AccountingSettingsContainer.resources
+/ApplicationsSettingsTool.GeneralSettingsContainer_UC.resources
+/ApplicationsSettingsTool.InventorySettingsContainer.resources
+/ApplicationsSettingsTool.MainSettingsForm.resources
+/ApplicationsSettingsTool.MedicalSettingsContainer_UC.resources
+/ApplicationsSettingsTool.Properties.Resources.resources
+/ApplicationsSettingsTool.csproj.FileListAbsolute.txt
+/ApplicationsSettingsTool.csproj.GenerateResource.Cache
+/ApplicationsSettingsTool.csprojResolveAssemblyReference.cache
+/ApplicationsSettingsTool.exe
+/ApplicationsSettingsTool.pdb
+/applicationssettingstool.exe.licenses
+/DesignTimeResolveAssemblyReferencesInput.cache
+*.force

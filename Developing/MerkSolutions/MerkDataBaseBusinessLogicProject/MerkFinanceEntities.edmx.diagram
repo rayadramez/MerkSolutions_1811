@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d1d55a3d16d94078a675fd119a539c6e" Name="Diagram1">
+        <EntityTypeShape EntityType="MerkFinanceModel.AccountingJournalEntryTransaction" Width="1.5" PointX="21.5" PointY="283.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.AccountingJournalTransaction" Width="1.5" PointX="22.5" PointY="271.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ActiveSalaryEffect_cu" Width="1.5" PointX="16.5" PointY="245.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Address_cu" Width="1.5" PointX="24.75" PointY="278.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.AddressRefrenceType_cu" Width="1.5" PointX="16.5" PointY="253.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Application_p" Width="1.5" PointX="52.25" PointY="300.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Bank_cu" Width="1.5" PointX="24.5" PointY="283.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.BankAccount_cu" Width="1.5" PointX="35.75" PointY="292.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.CashBox_cu" Width="1.5" PointX="25.5" PointY="273.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.CashBoxInOutTransaction" Width="1.5" PointX="52" PointY="290" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.CashBoxInOutTransaction_AccountingJournalTransaction" Width="1.5" PointX="35.75" PointY="285" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.CashBoxTransactionType_GeneralChartOfAccountType_cu" Width="1.5" PointX="25.5" PointY="270" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.CashBoxTransactionType_GeneralChartOfAccountType_p" Width="1.5" PointX="25.5" PointY="259.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.CashBoxTransactionType_p" Width="1.5" PointX="23.25" PointY="259" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ChartOfAccount_cu" Width="1.5" PointX="27.5" PointY="278.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ChartOfAccount_FinancialStatementElement_cu" Width="1.5" PointX="35.75" PointY="289" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ChartOfAccount_GeneralChartOfAccountType_cu" Width="1.5" PointX="40.75" PointY="287" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ChartOfAccountBalance" Width="1.5" PointX="41.75" PointY="277.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ChartOfAccountCodeMargin_p" Width="1.5" PointX="25.25" PointY="293.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.City_cu" Width="1.5" PointX="27.75" PointY="273.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.CommonTransactionType_p" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Country_cu" Width="1.5" PointX="16.5" PointY="281.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Currency_cu" Width="1.5" PointX="27.75" PointY="269.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Customer_cu" Width="1.5" PointX="5.25" PointY="277.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.CustomerPaymentTransaction" Width="1.5" PointX="16.5" PointY="276.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.CustomerType_p" Width="1.5" PointX="3" PointY="285.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.DBVersion" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Department_cu" Width="1.5" PointX="34.25" PointY="305.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Department_JobTitle_cu" Width="1.5" PointX="36.5" PointY="304.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Department_JobTitle_WorkingShiftTitle_cu" Width="1.5" PointX="36.5" PointY="351.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.DepartmentType_p" Width="1.5" PointX="32" PointY="306.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Diagnosis_cu" Width="1.5" PointX="16.5" PointY="285.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.DiagnosisCategory_cu" Width="1.5" PointX="16.5" PointY="290.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.DiagnosisCategory_Diagnosis_cu" Width="1.5" PointX="26.75" PointY="286.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.DiagnosisType_p" Width="1.5" PointX="44.75" PointY="264.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.DiscountType_p" Width="1.5" PointX="17.25" PointY="241.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Doctor_cu" Width="1.5" PointX="8.25" PointY="276.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Doctor_Diagnosis_cu" Width="1.5" PointX="21.75" PointY="279.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Doctor_DiagnosisCategory_cu" Width="1.5" PointX="21.75" PointY="275.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Doctor_Service_cu" Width="1.5" PointX="18.75" PointY="283.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Doctor_Symptoms_cu" Width="1.5" PointX="18.75" PointY="336.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Doctor_SymptomsCategory_cu" Width="1.5" PointX="18.75" PointY="340.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.DoctorCategory_cu" Width="1.5" PointX="16.5" PointY="294.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.DoctorFeesService_cu" Width="1.5" PointX="16.5" PointY="298.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.DoctorProfessionalFeesIssuingType_p" Width="1.5" PointX="6" PointY="269.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.DoctorRank_p" Width="1.5" PointX="6" PointY="287" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.DoctorSpecialization_p" Width="1.5" PointX="6" PointY="290" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.DoctorTaxType_cu" Width="1.5" PointX="16.5" PointY="302" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Dose_cu" Width="1.5" PointX="16.5" PointY="305.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Employee_cu" Width="1.5" PointX="5.25" PointY="272.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Employee_Department_JobTitle_cu" Width="1.5" PointX="39.5" PointY="307.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Employee_WorkingShift_cu" Width="1.5" PointX="18.75" PointY="352" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Employee_WorkingShiftTitle_cu" Width="1.5" PointX="21.75" PointY="354.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.EmployeeType_cu" Width="1.5" PointX="16.5" PointY="315.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.EmploymentDate_cu" Width="1.5" PointX="16.5" PointY="268" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.EmploymentDateType_p" Width="1.5" PointX="14.25" PointY="259.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Eye_p" Width="1.5" PointX="56" PointY="264.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.FinanceInvoice" Width="1.5" PointX="19.5" PointY="276" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.FinanceInvoiceDetail" Width="1.5" PointX="35.75" PointY="272.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.FinanceInvoicePayment" Width="1.5" PointX="32.75" PointY="283.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.FinanceInvoiceShare" Width="1.5" PointX="32.75" PointY="287.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.FinancialInterval_cu" Width="1.5" PointX="16.5" PointY="322.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.FinancialInterval_Month_cu" Width="1.5" PointX="18.75" PointY="292.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.FinancialStatementElement_cu" Width="1.5" PointX="21.5" PointY="288.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.FinancialStatementElement_p" Width="1.5" PointX="19.25" PointY="296.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.FinancialTransactionType_p" Width="1.5" PointX="20.25" PointY="260.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Floor_cu" Width="1.5" PointX="38.25" PointY="295.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.GeneralChartOfAccountType_cu" Width="1.5" PointX="22.5" PointY="266.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.GeneralChartOfAccountType_p" Width="1.5" PointX="20.25" PointY="257.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.HeightUnit_p" Width="1.5" PointX="46.75" PointY="305.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.IdentificationCardType_p" Width="1.5" PointX="0.75" PointY="274.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ImageType_p" Width="1.5" PointX="29.25" PointY="255.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InPatientAdmissionPricingType_p" Width="1.5" PointX="59" PointY="260.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InPatientRoom_cu" Width="1.5" PointX="46.5" PointY="290.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InPatientRoom_InPatientAdmissionPricingType_cu" Width="1.5" PointX="57.25" PointY="290" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InPatientRoomBed_cu" Width="1.5" PointX="60.75" PointY="266.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InPatientRoomBed_InPatientAdmissionPricingType_cu" Width="1.5" PointX="60.25" PointY="292" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InPatientRoomBedStatus_p" Width="1.5" PointX="58.5" PointY="264.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InPatientRoomClassification_cu" Width="1.5" PointX="24.5" PointY="288.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InPatientRoomClassification_InPatientAdmissionPricingType_cu" Width="1.5" PointX="61.25" PointY="271" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InPatientRoomType_p" Width="1.5" PointX="22.25" PointY="298.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InsuranceCarrier_cu" Width="1.5" PointX="41.75" PointY="281.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InsuranceCarrier_InsuranceLevel_cu" Width="1.5" PointX="47" PointY="300.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InsuranceLevel_cu" Width="1.5" PointX="16.5" PointY="339.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryHousing_cu" Width="1.5" PointX="41.75" PointY="272.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItem_cu" Width="1.5" PointX="44" PointY="309.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItem_UnitMeasurment_cu" Width="1.5" PointX="46.25" PointY="296.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemBrand_cu" Width="1.5" PointX="41.75" PointY="267.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemCategory_cu" Width="1.5" PointX="38.75" PointY="290.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemGroup_cu" Width="1.5" PointX="29.75" PointY="306.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemGroup_InventoryItem_cu" Width="1.5" PointX="46.25" PointY="311.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemPrice_cu" Width="1.5" PointX="16.5" PointY="271.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemTransaction" Width="1.5" PointX="54.25" PointY="294.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemTransactionType_p" Width="1.5" PointX="52" PointY="305" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemType_p" Width="1.5" PointX="18.75" PointY="363.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryTrackingType_p" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Invoice" Width="1.5" PointX="33.5" PointY="275.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoiceCostingStrategy_p" Width="1.5" PointX="31.25" PointY="258.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoiceDetail" Width="1.5" PointX="19.5" PointY="267.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoiceDetail_Accommodation" Width="1.5" PointX="35.75" PointY="278.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoiceDetail_DoctorFees" Width="1.5" PointX="32.75" PointY="291.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoiceDetail_Inventory" Width="1.5" PointX="33.75" PointY="265.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoiceDiscount" Width="1.5" PointX="44.75" PointY="272.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoicePayment" Width="1.5" PointX="44.75" PointY="267.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoicePayment_Check" Width="1.5" PointX="56" PointY="268.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoicePayment_Visa" Width="1.5" PointX="58" PointY="282" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoicePaymentType_p" Width="1.5" PointX="17.25" PointY="260.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoiceRequestedAmount" Width="1.5" PointX="46.75" PointY="282.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoiceShare" Width="1.5" PointX="44" PointY="299.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoiceType_p" Width="1.5" PointX="17.25" PointY="249.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InvoiceType_Surcharge_cu" Width="1.5" PointX="25.5" PointY="265.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.JobTitle_cu" Width="1.5" PointX="16.5" PointY="346.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Location_cu" Width="1.5" PointX="32" PointY="310.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Manager_cu" Width="1.5" PointX="16.5" PointY="350.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.MaritalStatus_p" Width="1.5" PointX="0.75" PointY="281.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.MedicalFlow_p" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.MedicalStage_cu" Width="1.5" PointX="16.5" PointY="353.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Medication_cu" Width="1.5" PointX="18.75" PointY="311.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Medication_Dose_cu" Width="1.5" PointX="18.75" PointY="288.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.MedicationCategory_cu" Width="1.5" PointX="16.5" PointY="360.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.MilitaryStatus_p" Width="1.5" PointX="3" PointY="270.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Month_p" Width="1.5" PointX="16.5" PointY="309.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.NearVisiong_p" Width="1.5" PointX="50.75" PointY="262.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Organization_p" Width="1.5" PointX="16.5" PointY="363.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.OrganizationMachine_cu" Width="1.5" PointX="56.75" PointY="317.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PainLevel_p" Width="1.5" PointX="39.75" PointY="260.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Patient_cu" Width="1.5" PointX="5.25" PointY="282.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PatientAttachment_cu" Width="1.5" PointX="31.5" PointY="262.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PatientDepositeBalance" Width="1.5" PointX="21.5" PointY="293.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PaymentType_p" Width="1.5" PointX="30.5" PointY="299" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PEM_ElementPrintOrder_cu" Width="1.5" PointX="28.5" PointY="266" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PEMR_Elemet_p" Width="1.5" PointX="26.25" PointY="254.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PEMRSavingMode_p" Width="1.5" PointX="27.25" PointY="296.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PEMRSavingMode_User_cu" Width="1.5" PointX="29.5" PointY="287" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Person_ChartOfAccount_cu" Width="1.5" PointX="11.25" PointY="277.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Person_cu" Width="1.5" PointX="3" PointY="274" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Person_IdentificationCardType_cu" Width="1.5" PointX="8.25" PointY="271.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Person_Phone_cu" Width="1.5" PointX="8.25" PointY="284" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PersonChartOtAccountType_p" Width="1.5" PointX="9" PointY="288" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PersonRelativeType_p" Width="1.5" PointX="3" PointY="288.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PersonTitle_p" Width="1.5" PointX="0.75" PointY="284.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PersonType_ChartOfAccount_cu" Width="1.5" PointX="36.75" PointY="264.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PersonType_p" Width="1.5" PointX="0.75" PointY="278" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PhoneType_p" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PriceType_p" Width="1.5" PointX="14.25" PointY="256.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PupillaryAbnormalities_cu" Width="1.5" PointX="16.5" PointY="373.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PupillaryRAPDCauses_cu" Width="1.5" PointX="16.5" PointY="377.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PupillaryRAPDGradingScale_p" Width="1.5" PointX="38.75" PointY="317.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PupillaryShape_p" Width="1.5" PointX="38.75" PointY="320.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PupillarySize_p" Width="1.5" PointX="38.75" PointY="323.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.QueueManager" Width="1.5" PointX="38.75" PointY="276.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.QueueManagerStatus_p" Width="1.5" PointX="36.5" PointY="269.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Region_cu" Width="1.5" PointX="38" PointY="286.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Religion_p" Width="1.5" PointX="0.75" PointY="287.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Role_p" Width="1.5" PointX="16.5" PointY="356.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.RoleRegistration_cu" Width="1.5" PointX="18.75" PointY="347.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.SegmentSign_cu" Width="1.5" PointX="27.5" PointY="290.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.SegmentSignCategory_cu" Width="1.5" PointX="16.5" PointY="263.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.SegmentSignType_p" Width="1.5" PointX="14.25" PointY="253.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ServerDirectory_p" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Service_ChartOfAccount_cu" Width="1.5" PointX="29.75" PointY="313.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Service_cu" Width="1.5" PointX="43.75" PointY="285.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Service_StationPoint_cu" Width="1.5" PointX="56" PointY="278" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Service_Surcharge_cu" Width="1.5" PointX="56" PointY="273.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ServiceCategory_cu" Width="1.5" PointX="44.75" PointY="276.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ServiceCategory_StationPoint_cu" Width="1.5" PointX="55" PointY="282" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ServiceCategory_Surcharge_cu" Width="1.5" PointX="55" PointY="285.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ServicePrice_cu" Width="1.5" PointX="57.25" PointY="294.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ServiceType_ChartOfAccount_cu" Width="1.5" PointX="39.75" PointY="264" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ServiceType_p" Width="1.5" PointX="42.5" PointY="259.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ServiceType_StationPoint_cu" Width="1.5" PointX="19.5" PointY="264" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ServiceType_Surcharge_cu" Width="1.5" PointX="30.5" PointY="277.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Station_p" Width="1.5" PointX="28.25" PointY="259.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.StationPoint_cu" Width="1.5" PointX="30.5" PointY="272.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.StationPointStage_cu" Width="1.5" PointX="54.5" PointY="289.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Supplier_cu" Width="1.5" PointX="11.25" PointY="273.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.SupplierType_p" Width="1.5" PointX="9" PointY="268.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Surcharge_cu" Width="1.5" PointX="30.5" PointY="282.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.SurchargeType_p" Width="1.5" PointX="28.25" PointY="299.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Symptoms_cu" Width="1.5" PointX="16.5" PointY="408.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.SymptomsCategory_cu" Width="1.5" PointX="16.5" PointY="413.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.SymptomsCategory_Symptoms_cu" Width="1.5" PointX="21.75" PointY="341.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.sysdiagram" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.TableIdentity" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.TemperatureUnit_p" Width="1.5" PointX="46.75" PointY="308.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.Terriotry_cu" Width="1.5" PointX="52.25" PointY="281.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.TimeDuration_p" Width="1.5" PointX="38.75" PointY="300.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ToBeInserted_cu" Width="1.5" PointX="30.5" PointY="291.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.TrialBalanceTransaction" Width="1.5" PointX="29.75" PointY="294.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.TrialBalanceTransactionType_p" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.UncorrectedDistanceVisualAcuity_cu" Width="1.5" PointX="50.75" PointY="259" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.UncorrectedDistanceVisualAcuityUnit_p" Width="1.5" PointX="48.5" PointY="259.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.UnitMeasurment_cu" Width="1.5" PointX="31.5" PointY="267.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.UnitMeasurment_p" Width="1.5" PointX="29.25" PointY="262.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.UnitMeasurmentTreeLink_cu" Width="1.5" PointX="38.75" PointY="282.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.User_Application_cu" Width="1.5" PointX="22.5" PointY="262.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.User_cu" Width="1.5" PointX="14.25" PointY="262.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.User_UserGroup_cu" Width="1.5" PointX="21.75" PointY="350.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.UserGroup_Application_cu" Width="1.5" PointX="21.75" PointY="346.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.UserGroup_cu" Width="1.5" PointX="16.5" PointY="436.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisionRefractionReadingType_p" Width="1.5" PointX="50.75" PointY="255.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitAssessmentTopic_p" Width="1.5" PointX="28.25" PointY="302.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming" Width="1.5" PointX="38.75" PointY="268.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_AdnexaSegmentSign" Width="1.5" PointX="60.25" PointY="287.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_AnteriorSegmentSign" Width="1.5" PointX="57.25" PointY="285.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_Attachment" Width="1.5" PointX="47" PointY="272.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_Diagnosis" Width="1.5" PointX="58.25" PointY="275.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_EOMReading" Width="1.5" PointX="47" PointY="276.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_EOMSign" Width="1.5" PointX="58.25" PointY="267.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_InvestigationReservation" Width="1.5" PointX="50" PointY="277.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_InvestigationResult" Width="1.5" PointX="58.25" PointY="271.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_LabReservation" Width="1.5" PointX="50" PointY="281.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_LabResult" Width="1.5" PointX="60.25" PointY="279.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_MainAdnexaSegmentSign" Width="1.5" PointX="49" PointY="285.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_MainAnteriorSegmentSign" Width="1.5" PointX="47" PointY="268.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_MainDiagnosis" Width="1.5" PointX="47" PointY="264.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_MainEOMSign" Width="1.5" PointX="46" PointY="286.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_MainPosteriorSegmentSign" Width="1.5" PointX="50" PointY="273.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_MainSymptoms" Width="1.5" PointX="42" PointY="263.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_Medication" Width="1.5" PointX="41" PointY="290.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_PosteriorSegmentSign" Width="1.5" PointX="60.25" PointY="283.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_Pupillary" Width="1.5" PointX="41" PointY="316.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_SocialHistory" Width="1.5" PointX="50" PointY="266.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_SurgeryReservation" Width="1.5" PointX="53" PointY="277.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_SurgeryResult" Width="1.5" PointX="61.25" PointY="275.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_Symptoms" Width="1.5" PointX="44.25" PointY="337" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_TreatmentPlan" Width="1.5" PointX="52" PointY="286" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_VisionRefractionReading" Width="1.5" PointX="53" PointY="267.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_VitalSign" Width="1.5" PointX="49" PointY="289.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.WeightUnit_p" Width="1.5" PointX="46.75" PointY="315" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.WorkingShiftTitle_cu" Width="1.5" PointX="16.5" PointY="440.125" IsExpanded="true" />
+        <AssociationConnector Association="MerkFinanceModel.FK_AccountingJournalEntryTransaction_AccountingJournalTransaction" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_AccountingJournalEntryTransaction_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_AccountingJournalEntryTransaction_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_AccountingJournalTransaction_FinancialTransactionType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_AccountingJournalTransaction_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_AccountingJournalTransaction_AccountingJournalTransaction" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CustomerPaymentTransaction_AccountingJournalTransaction" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ActiveSalaryEffect_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Address_cu_City_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Address_cu_Country_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Address_cu_Terriotry_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Address_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_AddressRefrenceType_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Role_p_Application_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_StationPointStage_cu_Application_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_User_Application_cu_Application_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_UserGroup_Application_cu_Application_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Bank_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Bank_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_BankAccount_cu_Bank_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_Bank_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoicePayment_Check_Bank_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoicePyament_Visa_Bank_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_BankAccount_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_BankAccount_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_BankAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoicePayment_Check_BankAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoicePyament_Visa_BankAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBox_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBox_cu_Floor_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBox_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_CashBox_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_AccountingJournalTransaction_CashBoxInOutTransaction" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_CashBoxTransactionType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_Currency_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_GeneralChartOfAccountType_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_PaymentType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_User_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxInOutTransaction_AccountingJournalTransaction_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxTransactionType_GeneralChartOfAccountType_cu_CashBoxTransactionType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxTransactionType_GeneralChartOfAccountType_cu_GeneralChartOfAccountType_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxTransactionType_GeneralChartOfAccountType_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxTransactionType_GeneralChartOfAccountType_p_CashBoxTransactionType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CashBoxTransactionType_GeneralChartOfAccountType_p_GeneralChartOfAccountType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_FinancialStatementElement_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_GeneralChartOfAccountType_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccountBalance_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccountBalance_ChartOfAccount_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InsuranceCarrier_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryHousing_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemBrand_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemCategory_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemGroup_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_ChartOfAccount_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PersonType_ChartOfAccount_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Service_ChartOfAccount_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Service_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceCategory_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceType_ChartOfAccount_cu_ChartOfAccount_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_FinancialStatementElement_cu_FinancialStatementElement_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_FinancialStatementElement_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_GeneralChartOfAccountType_cu_GeneralChartOfAccountType_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_GeneralChartOfAccountType_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccountBalance_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_City_cu_Country_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_City_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Location_cu_City_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_cu_City_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Region_cu_City_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Country_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Currency_cu_Country_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Location_cu_Country_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_cu_Country_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_cu_Country_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Currency_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Customer_cu_CustomerType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Customer_cu_Person_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Customer_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CustomerPaymentTransaction_Customer_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoice_FinanceInvoice" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemPrice_cu_Customer_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CustomerPaymentTransaction_FinanceInvoice" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_CustomerPaymentTransaction_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_cu_Department_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_cu_Department_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_cu_DepartmentType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_cu_Location_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_cu_Manager_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_JobTitle_CU_ID_Department_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_JobTitle_WorkingShiftTitle_cu_Department_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Employee_Department_JobTitle_cu_Department_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_JobTitle_CU_ID_JobTitle_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_JobTitle_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_JobTitle_WorkingShiftTitle_cu_JobTitle_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_JobTitle_WorkingShiftTitle_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Department_JobTitle_WorkingShiftTitle_cu_WorkingShiftTitle_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Diagnosis_cu_Diagnosis_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Diagnosis_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_DiagnosisCategory_Diagnosis_cu_Diagnosis_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_Diagnosis_cu_Diagnosis_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Diagnosis_Diagnosis_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_DiagnosisCategory_cu_DiagnosisCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_DiagnosisCategory_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_DiagnosisCategory_Diagnosis_cu_DiagnosisCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_DiagnosisCategory_cu_DiagnosisCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_DiagnosisCategory_Diagnosis_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_MainDiagnosis_DiagnosisType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Accommodation_DiscountType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_DiscountType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_DoctorFees_DiscountType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Inventory_InvoiceDetail_Inventory" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDiscount_DiscountType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_cu_DoctorCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_cu_DoctorProfessionalFeesIssuingType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_cu_DoctorRank_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_cu_DoctorSpecialization_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_cu_DoctorTaxType_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_cu_Person_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_Diagnosis_cu_Doctor_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_DiagnosisCategory_cu_Doctor_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_Service_CU_Doctor_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_Symptoms_cu_Doctor_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_SymptomsCategory_cu_Doctor_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Doctor_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PatientVisitTiming_Doctor_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_QueueManager_Doctor_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_Diagnosis_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_DiagnosisCategory_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_Service_CU_DoctorCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_Service_CU_Service_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_Service_CU_ServiceCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_Service_CU_ServiceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_Service_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_Symptoms_cu_Symptoms_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_Symptoms_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_SymptomsCategory_cu_SymptomsCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Doctor_SymptomsCategory_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_DoctorCategory_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServicePrice_cu_DoctorCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_DoctorFeesService_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_DoctorFees_DoctorFeesService_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServicePrice_cu_DoctorRank_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServicePrice_cu_DoctorSpecialization_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_DoctorTaxType_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Dose_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Medication_Dose_cu_Dose_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Medication_Dose_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Employee_cu_EmployeeType_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Employee_cu_EmploymentDate_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Employee_cu_MilitaryStatus_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Employee_cu_Person_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Employee_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Employee_Department_JobTitle_cu_JobTitle_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Employee_Department_JobTitle_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Employee_WorkingShift_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Employee_WorkingShift_cu_WorkingShiftTitle_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Employee_WorkingShiftTitle_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Employee_WorkingShiftTitle_cu_WorkingShiftTitle_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_EmployeeType_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_EmploymentDate_cu_EmploymentDateType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_EmploymentDate_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_AdnexaSegmentSign_Eye_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_AnteriorSegmentSign_Eye_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Diagnosis_Eye_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_EOMSign_Eye_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_PosteriorSegmentSign_Eye_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoice_InvoicePaymentType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoice_InvoiceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoice_Supplier_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoice_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoiceDetail_FinanceInvoice" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoicePayment_FinanceInvoice" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoiceShare_FinanceInvoice" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoiceDetail_FinanceInvoiceDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoiceDetail_InventoryHousing_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoiceDetail_InventoryItem_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoiceDetail_UnitMeasurment_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoicePayment_PaymentType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoicePayment_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinanceInvoiceShare_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccountBalance_FinancialInterval_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinancialInterval_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinancialInterval_Month_cu_FinancialInterval_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinancialInterval_Month_cu_Month_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinancialInterval_Month_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinancialStatementElement_cu_FinancialStatementElement_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinancialStatementElement_cu_FinancialStatementElement_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_FinancialStatementElement_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Floor_cu_Location_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Floor_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoom_cu_Floor_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryHousing_cu_Floor_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_StationPointStage_cu_Floor_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_GeneralChartOfAccountType_cu_GeneralChartOfAccountType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_GeneralChartOfAccountType_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VitalSign_HeightUnit_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_cu_IdentificationCardType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PatientAttachment_cu_ImageType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoom_InPatientAddmissionPricingType_cu_InPatientAddmissionPricingType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomBed_InPatientAddmissionPricingType_cu_InPatientAddmissionPricingType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomClassification_InPatientAddmissionPricingType_cu_InPatientAddmissionPricingType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoom_cu_InPatientRoomClassification_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoom_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoom_InPatientAddmissionPricingType_cu_InPatientRoom_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomBed_cu_InPatientRoom_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Accommodation_InPatientRoom_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoom_InPatientAdmissionPricingType_cu_InsuranceCarrier_InsuranceLevel_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoom_InPatientAdmissionPricingType_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomBed_cu_InPatientRoomBedStatus_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomBed_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomBed_InPatientAddmissionPricingType_cu_InPatientRoomBed_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Accommodation_InPatientRoomBed_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomBed_InPatientAdmissionPricingType_cu_InsuranceCarrier_InsuranceLevel_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomBed_InPatientAdmissionPricingType_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomClassification_cu_InPatientRoomType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomClassification_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomClassification_InPatientAddmissionPricingType_cu_InPatientRoomClassification_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Accommodation_InPatientRoomClassification_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomClassification_InPatientAdmissionPricingType_cu_InsuranceCarrier_InsuranceLevel_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InPatientRoomClassification_InPatientAdmissionPricingType_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InsuranceCarrier_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InsuranceCarrier_InsuranceLevel_cu_InsuranceCarrier_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceShare_InsuranceCarrier_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InsuranceCarrier_InsuranceLevel_cu_InsuranceLevel_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InsuranceCarrier_InsuranceLevel_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Patient_cu_InsuranceCarrier_InsuranceLevel_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServicePrice_cu_InsuranceCarrier_InsuranceLevel_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InsuranceLevel_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceShare_InsuranceLevel_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryHousing_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_cu_InventoryHousing_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_InventoryHousing_cu_InventoryHousing_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Inventory_InventoryHousing_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_cu_InventoryItemBrand_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_cu_InventoryItemCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_cu_InventoryItemType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_cu_UnitMeasurment_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_InventoryHousing_cu_InventoryItem_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_UnitMeasurment_cu_InventoryItem_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemGroup_InventoryItem_cu_InventoryItem_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemPrice_cu_InventoryItem_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Inventory_InventoryItem_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_UnitMeasurment_cu_UnitMeasurment_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_UnitMeasurment_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemPrice_cu_InventoryItem_UnitMeasurment_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemBrand_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemCategory_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemGroup_InventoryItem_cu_InventoryItemGroup_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemPrice_cu_PriceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemPrice_cu_Supplier_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemPrice_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_InventoryHousing_cu_UnitMeasurment_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItem_InventoryHousing_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemTransaction_InventoryItemTransactionType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InventoryItemType_p_Organization_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Invoice_InvoiceCostingStrategy_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Invoice_Patient_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Invoice_tr_InvoicePaymentType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Invoice_tr_InvoiceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Invoice_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDiscount_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoicePayment_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceRequestedAmount_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceShare_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Accommodation_InvoiceDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_DoctorFees_InvoiceDetail_DoctorFees" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Inventory_InvoiceDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_InvoiceDetail1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_InvoiceFinancialService_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PatientVisitTiming_InvoiceDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_QueueManager_InvoiceDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Accommodation_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_DoctorFees_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDetail_Inventory_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceDiscount_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoicePayment_Check_InvoicePayment" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoicePayment_Patient_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoicePayment_PaymentType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoicePayment_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoicePyament_Visa_InvoicePayment" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoicePayment_Check_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoicePayment_Visa_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceRequestedAmount_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceShare_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceType_Surcharge_cu_InvoiceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Service_Surcharge_cu_InvoiceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceCategory_Surcharge_cu_InvoiceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceType_Surcharge_cu_InvoiceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceType_Surcharge_cu_Surcharge_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceType_Surcharge_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_JobTitle_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Location_cu_Organization_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Location_cu_Region_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Location_cu_Terriotry_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Location_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Manager_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_cu_MaritalStatus_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_MedicalStage_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Medication_cu_MedicationCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Medication_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Medication_Dose_cu_Medication_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Medication_Medication_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Medication_Dose_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_MedicationCategory_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VisionRefractionReading_NearVisiong_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VisionRefractionReading_NearVisiong_p1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VisionRefractionReading_NearVisiong_p2" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Organization_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_OrganizationMachine_cu_Organization_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_User_cu_Organization_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_OrganizationMachine_cu_StationPoint_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_OrganizationMachine_cu_StationPointStage_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_OrganizationMachine_cu_User_UserGroup_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_MainSymptoms_PainLevel_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Patient_cu_Person_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Patient_cu_PersonRelativeType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Patient_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PatientAttachment_cu_Patient_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PatientDepositeBalance_Patient_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_QueueManager_Patient_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PatientAttachment_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Attachement_PatientAttachment_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PatientDepositeBalance_Service_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PatientDepositeBalance_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PEM_ElementPrintOrder_cu_PEMR_Elemet_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PEM_ElementPrintOrder_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PEMR_Elemet_p_PEMR_Elemet_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PEMRSavingMode_User_cu_PEMRSavingMode_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PEMRSavingMode_User_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PEMRSavingMode_User_cu_User_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_ChartOfAccount_cu_Person_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_ChartOfAccount_cu_PersonChartOtAccountType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_ChartOfAccount_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_cu_PersonTitle_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_cu_PersonType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_cu_Region_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_cu_Religion_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_IdentificationCardsType_cu_Person_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_Phone_cu_Person_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Supplier_cu_Person_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_User_cu_Person_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_IdentificationCardType_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Person_Phone_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PersonType_ChartOfAccount_cu_PersonChartOtAccountType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PersonType_ChartOfAccount_cu_PersonType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PersonType_ChartOfAccount_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PupillaryAbnormalities_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Pupillary_PupillaryAbnormalities_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Pupillary_PupillaryAbnormalities_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_RAPDCauses_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Pupillary_PupillaryRAPDCauses_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Pupillary_PupillaryRAPDCauses_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Pupillary_PupillaryRAPDGradingScale_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Pupillary_PupillaryRAPDGradingScale_p1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Pupillary_PupillaryShape_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Pupillary_PupillaryShape_p1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Pupillary_PupillarySize_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Pupillary_PupillarySize_p1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_QueueManager_QueueManagerStatus_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_QueueManager_Service_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_QueueManager_StationPoint_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_QueueManager_StationPointStage_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_QueueManager_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Region_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Terriotry_cu_Region_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_RoleRegistration_cu_Role_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_RoleRegistration_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_RoleRegistration_cu_UserGroup_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Segment_cu_SegmentSignCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Segment_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_AdnexaSegmentSign_SegmentSign_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_AnteriorSegmentSign_SegmentSign_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_EOMSign_SegmentSign_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_PosteriorSegmentSign_SegmentSign_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_SegmentSignCategory_cu_SegmentType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_SegmentSignCategory_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceFinancialService_cu_InvoiceFinancialServiceCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceFinancialService_cu_InvoiceFinancialServiceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Service_cu_Service_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Service_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Service_StationPoint_cu_Service_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Service_SurchargeType_cu_Service_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServicePrice_cu_Service_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_InvestigationReservation_Service_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_LabReservation_Service_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_SurgeryReservation_Service_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Service_StationPoint_cu_StationPoint_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Service_StationPoint_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Service_Surcharge_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Service_SurchargeType_cu_SurchargeType_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_InvoiceServiceCategory_cu_InvoiceServiceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceCategory_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceCategory_StationPoint_cu_ServiceCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceCategory_Surcharge_cu_ServiceCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServicePrice_cu_ServiceCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceCategory_StationPoint_cu_StationPoint_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceCategory_StationPoint_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceCategory_Surcharge_cu_Surcharge_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceCategory_Surcharge_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServicePrice_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceType_ChartOfAccount_cu_ServiceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceType_ChartOfAccount_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceType_StationPoint_cu_ServiceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceType_Surcharge_cu_ServiceType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceType_StationPoint_cu_StationPoint_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceType_StationPoint_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceType_Surcharge_cu_Surcharge_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ServiceType_Surcharge_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_StationPoint_cu_Station_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PatientVisitTiming_StationPoint_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_StationPoint_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_StationPointStage_cu_StationPoint_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PatientVisitTiming_StationPointStage_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_StationPointStage_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Supplier_cu_Supplier_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Supplier_cu_SupplierType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Surcharge_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_SurchargeType_cu_SuchargeType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Symptoms_cu_Symptoms_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Symptoms_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_SymptomsCategory_Symptoms_cu_Symptoms_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Symptoms_Symptoms_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_SymptomsCategory_cu_SymptomsCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_SymptomsCategory_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_SymptomsCategory_Symptoms_cu_SymptomsCategory_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_SymptomsCategory_Symptoms_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VitalSign_TemperatureUnit_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_Terriotry_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Medication_TimeDuration_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ToBeInserted_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ToBeInserted_cu_VisitAssessmentTopic_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_TrialBalanceTransaction_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_UncorrectedDistanceVisualAcuity_cu_UncorrectedDistanceVisualAcuityUnit_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VisionRefractionReading_UncorrectedDistanceVisualAcuity_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VisionRefractionReading_UncorrectedDistanceVisualAcuity_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VisionRefractionReading_UncorrectedDistanceVisualAcuity_cu2" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_UnitMeasurment_cu_UnitMeasurment_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_UnitMeasurment_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_UnitMeasurmentTreeLink_cu_UnitMeasurment_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_UnitMeasurmentTreeLink_cu_UnitMeasurment_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_UnitMeasurmentTreeLink_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_User_Application_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_User_Application_cu_User_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_PatientVisitTiming_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_User_UserGroup_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_User_UserGroup_cu_User_cu1" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_UserGroup_Application_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_UserGroup_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_AdnexaSegmentSign_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_AnteriorSegmentSign_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Attachement_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_EOMReading_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_EOMSign_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_InvestigationReservation_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_InvestigationResult_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_LabReservation_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_LabResult_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_MainAdnexaSegmentSign_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_MainAnteriorSegmentSign_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_MainEOMSign_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_MainPosteriorSegmentSign_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Medication_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_PosteriorSegmentSign_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Pupillary_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_SocialHistory_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_SurgeryReservation_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_SurgeryResult_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_TreatmentPlan_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VisionRefractionReading_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VitalSign_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_WorkingShiftTitle_cu_User_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_User_UserGroup_cu_UserGroup_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_UserGroup_Application_cu_UserGroup_cu" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VisionRefractionReading_VisionRefractionReadingType_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Attachement_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_EOMReading_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_InvestigationReservation_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_LabReservation_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_MainAdnexaSegmentSign_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_MainAnteriorSegmentSign_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_MainDiagnosis_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_MainEOMSign_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_MainPosteriorSegmentSign_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_MainSymptoms_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Medication_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Pupillary_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_SurgeryReservation_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_TreatmentPlan_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VisionRefractionReading_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VitalSign_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTimming_SocialHistory_VisitTiming" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_AdnexaSegmentSign_VisitTiming_MainAdnexaSegmentSign" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_AnteriorSegmentSign_VisitTiming_MainAnteriorSegmentSign" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_InvestigationResult_VisitTiming_Attachement" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_LabResult_VisitTiming_Attachement" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_SurgeryResult_VisitTiming_Attachement" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Diagnosis_VisitTiming_MainDiagnosis" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_EOMSign_VisitTiming_MainEOMSign" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_InvestigationResult_VisitTiming_InvestigationReservation" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_LabResult_VisitTiming_LabReservation" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_PosteriorSegmentSign_VisitTiming_MainPosteriorSegmentSign" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_Symptoms_VisitTiming_MainSymptoms" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_SurgeryResult_VisitTiming_SurgeryReservation" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_VisitTiming_VitalSign_WeightUnit_p" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

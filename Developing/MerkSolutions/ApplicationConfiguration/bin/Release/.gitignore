@@ -1,0 +1,7 @@
+/MerkDataBaseBusinessLogicProject.dll
+/MerkDataBaseBusinessLogicProject.pdb
+/EntityFramework.dll
+/EntityFramework.xml
+/ApplicationConfiguration.dll
+/ApplicationConfiguration.pdb
+*.Data.SqlServerCe.dll

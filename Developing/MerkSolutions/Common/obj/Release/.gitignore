@@ -1,0 +1,8 @@
+*.cs
+/Common.dll
+/Common.pdb
+/CommonActions.csproj.FileListAbsolute.txt
+/CommonActions.csprojResolveAssemblyReference.cache
+/CoreCompileInputs.cache
+*.cache
+/DesignTimeResolveAssemblyReferencesInput.cache

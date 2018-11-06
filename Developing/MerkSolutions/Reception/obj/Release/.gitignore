@@ -1,0 +1,12 @@
+*.cs
+/Settings.MainForm.resources
+/Settings.MainSettingsForm.resources
+/Settings.Properties.Resources.resources
+/Settings.csproj.FileListAbsolute.txt
+/Settings.csproj.GenerateResource.Cache
+/Settings.csprojResolveAssemblyReference.cache
+/Settings.exe
+/Settings.pdb
+/settings.exe.licenses
+/CoreCompileInputs.cache
+/DesignTimeResolveAssemblyReferencesInput.cache

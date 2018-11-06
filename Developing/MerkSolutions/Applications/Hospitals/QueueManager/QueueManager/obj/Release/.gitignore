@@ -1,0 +1,11 @@
+*.cs
+/QueueManager.Properties.Resources.resources
+/QueueManager.QueueManagerMainForm.resources
+/QueueManager.csproj.FileListAbsolute.txt
+/QueueManager.csproj.GenerateResource.Cache
+/QueueManager.csprojResolveAssemblyReference.cache
+/QueueManager.exe
+/QueueManager.pdb
+/queuemanager.exe.licenses
+/DesignTimeResolveAssemblyReferencesInput.cache
+*.force

@@ -1,0 +1,10 @@
+/MainProject.MainForm.ar-EG.resources
+/MainProject.MainForm.resources
+/MainProject.Properties.Resources.resources
+/MainProject.Resources.LocalizedRes.ar-EG.resources
+/MainProject.Resources.LocalizedRes.resources
+/mainproject.exe.licenses
+*.cache
+/MainProject.csproj.FileListAbsolute.txt
+/build.force
+*.cs

@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C11A9643-68D1-431F-9D73-35D2BB9A08C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVCBusinessLogicLibrary</RootNamespace>
+    <AssemblyName>MVCBusinessLogicLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\Merk_Releases\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\MerkSolutions\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\MerkSolutions\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\MerkSolutions\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\MerkSolutions\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\ICloseViewerAction.cs" />
+    <Compile Include="Actions\IDeleteViewerAction.cs" />
+    <Compile Include="Actions\IEditViewerAction.cs" />
+    <Compile Include="Actions\IMessageAfterAction.cs" />
+    <Compile Include="Actions\INewViewerAction.cs" />
+    <Compile Include="Actions\IPrintViewerAction.cs" />
+    <Compile Include="Actions\ISaveViewerAction.cs" />
+    <Compile Include="Actions\ISearchAction.cs" />
+    <Compile Include="BaseViewers\BaseContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseViewers\BaseContainer.Designer.cs">
+      <DependentUpon>BaseContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseViewers\BaseController.cs" />
+    <Compile Include="BaseViewers\BaseMessageBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseViewers\BaseMessageBox.Designer.cs">
+      <DependentUpon>BaseMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseViewers\BaseSettingsEditorContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseViewers\BaseSettingsEditorContainer.Designer.cs">
+      <DependentUpon>BaseSettingsEditorContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseViewers\BaseSettingsSearchContatiner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseViewers\BaseSettingsSearchContatiner.Designer.cs">
+      <DependentUpon>BaseSettingsSearchContatiner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseViewers\BaseEditorViewerContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseViewers\BaseEditorViewerContainer.Designer.cs">
+      <DependentUpon>BaseEditorViewerContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseViewers\CommonAbstractViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseViewers\CommonTabControl_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseViewers\CommonTabControl_UC.Designer.cs">
+      <DependentUpon>CommonTabControl_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseViewers\PopupBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseViewers\PopupBaseForm.Designer.cs">
+      <DependentUpon>PopupBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\IMVCController.cs" />
+    <Compile Include="Controller\IMVCControllerFactory.cs" />
+    <Compile Include="Controller\MVCController.cs" />
+    <Compile Include="MVCDataCollectors\AbstractDataCollector.cs" />
+    <Compile Include="MVCDataCollectors\BankAccount_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Bank_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\CashBoxTransactionType_GeneralChartOfAccountType_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\CashBox_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\ChartOfAccount_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\CustomerFinanceInvoice_Report_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Customer_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\DiagnosisCategory_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\DiagnosisCategory_Diagnosis_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Diagnosis_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\DoctorCategory_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Doctor_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Dose_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\FinanceInvoiceCreationDataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Floor_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\GeneralChartOfAccountType_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\IMVCDataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InPatientRoomBedDataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InPatientRoomClassificationDataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InPatientRoomDataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InsurancePolicyDataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InventoryHousing_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InventoryItemBrand_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InventoryItemCategory_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InventoryItemGroup_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InventoryItemPrice_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InventoryItem_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InventoryItem_InventoryHousing_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InventoryItem_UnitMeasurment_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InvoicePaymentBrief_Report_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InvoicePaymentDataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Location_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\MedicationCategory_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Medication_Dose_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\OrganizationMachine_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\PatientDataCollector.cs" />
+    <Compile Include="MVCDataCollectors\MedicalAdmissionInvoiceCreation_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\PatientDepositBalance_Report_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\PersonType_ChartOfAccount_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Person_ChartOfAccount_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\RoleRegistration_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\ServiceCategory_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\ServiceCategory_StationPoint_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Service_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\ServicePrice_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\ServiceType_StationPoint_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Service_StationPoint_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\StationPoint_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\StationPointStage_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Supplier_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\TotalServiceAndDoctorRevenue_Report_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\UnitMeasurmentTreeLink_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\UnitMeasurment_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\User_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\UserGroup_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\UserGroup_Application_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\User_Application_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\User_UserGroup_DataCollector.cs" />
+    <Compile Include="MVCFactories\DataCollectorFactory.cs" />
+    <Compile Include="MVCFactories\MVCControllerFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\LocalizedRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizedRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Viewers\IBankAccountViewer.cs" />
+    <Compile Include="Viewers\IBankViewer.cs" />
+    <Compile Include="Viewers\ICashBoxTransactionType_GeneralChartOfAccountType_Viewer.cs" />
+    <Compile Include="Viewers\ICashBoxViewer.cs" />
+    <Compile Include="Viewers\IChartOfAccountViewer.cs" />
+    <Compile Include="Viewers\ICustomerFinanceInvoices_Report_Viewer.cs" />
+    <Compile Include="Viewers\ICustomerViewer.cs" />
+    <Compile Include="Viewers\IDiagnosisCategory_Diagnosis_Viewer.cs" />
+    <Compile Include="Viewers\IDiagnosisCategory_Viewer.cs" />
+    <Compile Include="Viewers\IDiagnosis_Viewer.cs" />
+    <Compile Include="Viewers\IDoctorCategoryViewer.cs" />
+    <Compile Include="Viewers\IDoctorViewer.cs" />
+    <Compile Include="Viewers\IDose_Viewer.cs" />
+    <Compile Include="Viewers\IFinanceInvoiceCreation.cs" />
+    <Compile Include="Viewers\IFloorViewer.cs" />
+    <Compile Include="Viewers\IGeneralChartOfAccountTypeViewer.cs" />
+    <Compile Include="Viewers\IInPatientRoomBedViewer.cs" />
+    <Compile Include="Viewers\IInPatientRoomClassificationViewer.cs" />
+    <Compile Include="Viewers\IInPatientRoomViewer.cs" />
+    <Compile Include="Viewers\IInsurancePolicyViewer.cs" />
+    <Compile Include="Viewers\IInventoryHousingViewer.cs" />
+    <Compile Include="Viewers\IInventoryItemBrandViewer.cs" />
+    <Compile Include="Viewers\IInventoryItemCategoryViewer.cs" />
+    <Compile Include="Viewers\IInventoryItemPriceViewer.cs" />
+    <Compile Include="Viewers\IInventoryItemViewer.cs" />
+    <Compile Include="Viewers\IInventoryItem_InventoryHousing_Viewer.cs" />
+    <Compile Include="Viewers\IInventoryItem_UnitMeasurment_Viewer.cs" />
+    <Compile Include="Viewers\IInvetoryItemGroupViewer.cs" />
+    <Compile Include="Viewers\IInvoicePaymentBrief_Report_Viewer.cs" />
+    <Compile Include="Viewers\IInvoicePaymentViewer.cs" />
+    <Compile Include="Viewers\ILocationViewer.cs" />
+    <Compile Include="Viewers\IMedicationCategoryViewer.cs" />
+    <Compile Include="Viewers\IMedication_Dose_Viewer.cs" />
+    <Compile Include="Viewers\IMedication_Viewer.cs" />
+    <Compile Include="Viewers\IOrganizationMachine_Viewer.cs" />
+    <Compile Include="Viewers\IPatientDepositBalance_Report_Viewer.cs" />
+    <Compile Include="Viewers\IPatientInvoiceCreation.cs" />
+    <Compile Include="Viewers\IPatientInvoiceManager.cs" />
+    <Compile Include="Viewers\IPatientService.cs" />
+    <Compile Include="Viewers\IPatientViewer.cs" />
+    <Compile Include="Viewers\IPersonRelativeViewer.cs" />
+    <Compile Include="Viewers\IPersonType_ChartOfAccount_Viewer.cs" />
+    <Compile Include="Viewers\IPerson_ChartOfAccount_Viewer.cs" />
+    <Compile Include="Viewers\IRoleRegistrationViewer.cs" />
+    <Compile Include="Viewers\IServiceCategoryViewer.cs" />
+    <Compile Include="Viewers\IServiceCategory_StationPointViewer.cs" />
+    <Compile Include="Viewers\IServicePrice_EditorViewer.cs" />
+    <Compile Include="Viewers\IServiceType_StationPointViewer.cs" />
+    <Compile Include="Viewers\IServiceViewer.cs" />
+    <Compile Include="Viewers\IService_StationPointViewer.cs" />
+    <Compile Include="Viewers\IStationPointStageViewer.cs" />
+    <Compile Include="Viewers\IStationPointViewer.cs" />
+    <Compile Include="Viewers\ISupplierViewer.cs" />
+    <Compile Include="Viewers\ITotalServiceAndDoctorRevenues_Report_Viewer.cs" />
+    <Compile Include="Viewers\IUnitMeasurmentTreeLinkViewer.cs" />
+    <Compile Include="Viewers\IUnitMeasurmentViewer.cs" />
+    <Compile Include="Viewers\IUserGroupViewer.cs" />
+    <Compile Include="Viewers\IUserGroup_Application_Viewer.cs" />
+    <Compile Include="Viewers\IUserViewer.cs" />
+    <Compile Include="Viewers\IUser_Application_Viewer.cs" />
+    <Compile Include="Viewers\IUser_UserGroup_Viewer.cs" />
+    <Compile Include="Viewers\IViewer.cs" />
+    <Compile Include="Viewers\IViewerDataRelated.cs" />
+    <Compile Include="MVCDataCollectors\Medication_DataCollector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MerkSolutions\ApplicationConfiguration\ApplicationConfiguration.csproj">
+      <Project>{88767B6B-1BC5-4B0E-8478-AED883E20AB4}</Project>
+      <Name>ApplicationConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MerkSolutions\Common\CommonActions.csproj">
+      <Project>{A0089FDD-02E5-4F79-8B4C-DDEBD76DF570}</Project>
+      <Name>CommonActions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MerkSolutions\MerkDataBaseBusinessLogicProject\MerkDataBaseBusinessLogicProject.csproj">
+      <Project>{01c542d3-1de3-4f9f-a9a5-0ad614e675f1}</Project>
+      <Name>MerkDataBaseBusinessLogicProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonControlLibrary\CommonControlLibrary.csproj">
+      <Project>{62d00e59-3fce-454b-8753-b63891ff2a44}</Project>
+      <Name>CommonControlLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseViewers\BaseContainer.resx">
+      <DependentUpon>BaseContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseViewers\BaseMessageBox.resx">
+      <DependentUpon>BaseMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseViewers\BaseSettingsEditorContainer.resx">
+      <DependentUpon>BaseSettingsEditorContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseViewers\BaseSettingsSearchContatiner.resx">
+      <DependentUpon>BaseSettingsSearchContatiner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseViewers\BaseEditorViewerContainer.resx">
+      <DependentUpon>BaseEditorViewerContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseViewers\CommonTabControl_UC.resx">
+      <DependentUpon>CommonTabControl_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseViewers\PopupBaseForm.resx">
+      <DependentUpon>PopupBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LocalizedRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizedRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\BlackDim_Background_01.png" />
+    <Content Include="Resources\Images\Clear_1_16.png" />
+    <Content Include="Resources\Images\Delete_1_16.png" />
+    <Content Include="Resources\Images\DetailsIcon_16.png" />
+    <Content Include="Resources\Images\Edit_1_16.png" />
+    <Content Include="Resources\Images\ExitIcon_8.png" />
+    <Content Include="Resources\Images\Exit_1_16.png" />
+    <Content Include="Resources\Images\FullScreen_1_16.png" />
+    <Content Include="Resources\Images\FullScreen_2_16.png" />
+    <Content Include="Resources\Images\New_1_16.png" />
+    <Content Include="Resources\Images\Print_1_16.png" />
+    <Content Include="Resources\Images\Save_1_16.png" />
+    <Content Include="Resources\Images\Search_1_16.png" />
+    <Content Include="Resources\Images\Settings_4_16.png" />
+    <None Include="Resources\lyt_BasicViewContainerTitle_SaveNew.en-US.xml" />
+    <None Include="Resources\lyt_BaseEditorViewerContainer.xml" />
+    <None Include="Resources\lyt_BaseContainer.xml" />
+    <None Include="Resources\lyt_BaseSettingsSearchContainer.xml" />
+    <None Include="Resources\lyt_BaseItemContainer.xml" />
+    <None Include="Resources\lyt_BasicViewContainerTitle_UpdateExisting.xml" />
+    <None Include="Resources\lyt_BasicViewContainerTitle_SaveNew.xml" />
+    <None Include="Resources\lyt_BasicViewerContainer_EditingMode.xml" />
+    <None Include="Resources\lyt_BasicViewerContainer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,15 @@
+/Reception.MainForm.resources
+/Reception.Properties.Resources.resources
+/Reception.csproj.FileListAbsolute.txt
+/reception.exe.licenses
+/Reception.ReceptionMainForm.ar-EG.resources
+/Reception.ReceptionMainForm.resources
+*.cache
+*.cs
+/Reception.PatientsList_UC.resources
+/Reception.ReceptionReportsContainer.resources
+/Reception.Resources.LocalizedRes.resources
+/Reception.SelectedPatientFromReception_UC.resources
+/Reception.exe
+/Reception.pdb
+/build.force

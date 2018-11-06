@@ -1,0 +1,2172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7EAA41E3-3785-4AF9-B18D-209F882E7FD8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonUserControls</RootNamespace>
+    <AssemblyName>CommonUserControls</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\Merk_Releases\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.1.UI, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Snap.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Snap.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Snap.v15.1.Extensions, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1.UI, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.1.Extensions, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.1.UI, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.1.Wizard, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.1.Extensions, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\MerkSolutions\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\MerkSolutions\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\MerkSolutions\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\MerkSolutions\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLogicLibraries\PrintManagerLibrary.cs" />
+    <Compile Include="CommonGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonGrid.Designer.cs">
+      <DependentUpon>CommonGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonViewers\ChangeTheme_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonViewers\ChangeTheme_UC.Designer.cs">
+      <DependentUpon>ChangeTheme_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonViewers\LabRegistration_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonViewers\LabRegistration_UC.Designer.cs">
+      <DependentUpon>LabRegistration_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonViewers\PaintViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonViewers\PaintViewer_UC.Designer.cs">
+      <DependentUpon>PaintViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonViewers\PatientListContainer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonViewers\PatientListContainer_UC.Designer.cs">
+      <DependentUpon>PatientListContainer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonViewers\PatientMedicalServicesActions_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonViewers\PatientMedicalServicesActions_UC.Designer.cs">
+      <DependentUpon>PatientMedicalServicesActions_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonViewers\PatientNotCompletedPreviousVisits_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonViewers\PatientNotCompletedPreviousVisits_UC.Designer.cs">
+      <DependentUpon>PatientNotCompletedPreviousVisits_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonViewers\ScanFiles_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonViewers\ScanFiles_UC.Designer.cs">
+      <DependentUpon>ScanFiles_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialCommonViewers\AccountingJournalTransactionContainer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FinancialCommonViewers\AccountingJournalTransactionContainer_UC.Designer.cs">
+      <DependentUpon>AccountingJournalTransactionContainer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceViewers\AlreadyCreatedInvoicesActions_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceViewers\AlreadyCreatedInvoicesActions_UC.Designer.cs">
+      <DependentUpon>AlreadyCreatedInvoicesActions_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceViewers\InvoiceContainer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceViewers\InvoiceContainer_UC.Designer.cs">
+      <DependentUpon>InvoiceContainer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceViewers\InPatient_InvoiceDetailsGridViewer_Accommodation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceViewers\InPatient_InvoiceDetailsGridViewer_Accommodation.Designer.cs">
+      <DependentUpon>InPatient_InvoiceDetailsGridViewer_Accommodation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceViewers\InPatient_InvoiceDetailsViewerContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceViewers\InPatient_InvoiceDetailsViewerContainer.Designer.cs">
+      <DependentUpon>InPatient_InvoiceDetailsViewerContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceViewers\InvoiceManagerPatientQueueCard_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceViewers\InvoiceManagerPatientQueueCard_UC.Designer.cs">
+      <DependentUpon>InvoiceManagerPatientQueueCard_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceViewers\InvoiceManagerQeueCardContainer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceViewers\InvoiceManagerQeueCardContainer_UC.Designer.cs">
+      <DependentUpon>InvoiceManagerQeueCardContainer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceViewers\InvoiceManagerQueueContainerWithHeaderIcons_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceViewers\InvoiceManagerQueueContainerWithHeaderIcons_UC.Designer.cs">
+      <DependentUpon>InvoiceManagerQueueContainerWithHeaderIcons_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceViewers\InvoicePayment_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceViewers\InvoicePayment_UC.Designer.cs">
+      <DependentUpon>InvoicePayment_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceViewers\MarketInvoice\MarketCreationFinanceInvoice_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceViewers\MarketInvoice\MarketCreationFinanceInvoice_UC.Designer.cs">
+      <DependentUpon>MarketCreationFinanceInvoice_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceViewers\MedicalAdmissionInvoiceCreationContainer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceViewers\MedicalAdmissionInvoiceCreationContainer_UC.Designer.cs">
+      <DependentUpon>MedicalAdmissionInvoiceCreationContainer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceViewers\OutPatient_InvoiceDetailsViewerContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceViewers\OutPatient_InvoiceDetailsViewerContainer.Designer.cs">
+      <DependentUpon>OutPatient_InvoiceDetailsViewerContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceViewers\ReadyInvoiceForPayments_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InvoiceViewers\ReadyInvoiceForPayments_UC.Designer.cs">
+      <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_Interfaces\IPEMRDiagnosisServicesRequet.cs" />
+    <Compile Include="PEMRCommonViewers\PEMR_Interfaces\IPEMR_Viewer.cs" />
+    <Compile Include="PEMRCommonViewers\PEMRPatientQueueCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMRPatientQueueCard.Designer.cs">
+      <DependentUpon>PEMRPatientQueueCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMRContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMRContainer.Designer.cs">
+      <DependentUpon>PEMRContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_AdnexaSegment_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_AdnexaSegment_UC.Designer.cs">
+      <DependentUpon>PEMR_AdnexaSegment_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_AnteriorSegment_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_AnteriorSegment_UC.Designer.cs">
+      <DependentUpon>PEMR_AnteriorSegment_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_ExtraocularMuscles_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_ExtraocularMuscles_UC.Designer.cs">
+      <DependentUpon>PEMR_ExtraocularMuscles_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_PosteriorSegment_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_PosteriorSegment_UC.Designer.cs">
+      <DependentUpon>PEMR_PosteriorSegment_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_Pupillary_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_Pupillary_UC.Designer.cs">
+      <DependentUpon>PEMR_Pupillary_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_VisionRefractionDetails_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_VisionRefractionDetails_UC.Designer.cs">
+      <DependentUpon>PEMR_VisionRefractionDetails_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_VisionRefractionGraph_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_VisionRefractionGraph_UC.Designer.cs">
+      <DependentUpon>PEMR_VisionRefractionGraph_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_DiagnosisFullScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_DiagnosisFullScreen.Designer.cs">
+      <DependentUpon>PEMR_DiagnosisFullScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_LabContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_LabContainer.Designer.cs">
+      <DependentUpon>PEMR_LabContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_MedicalHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_MedicalHistory.Designer.cs">
+      <DependentUpon>PEMR_MedicalHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SearchPanel_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SearchPanel_UC.Designer.cs">
+      <DependentUpon>PEMR_SearchPanel_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_Diagnosis_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_Diagnosis_UC.Designer.cs">
+      <DependentUpon>PEMR_Diagnosis_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_DiagnosisServicesActions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_DiagnosisServicesActions.Designer.cs">
+      <DependentUpon>PEMR_DiagnosisServicesActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_InvestigationContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_InvestigationContainer.Designer.cs">
+      <DependentUpon>PEMR_InvestigationContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_MedicalRecordContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_MedicalRecordContainer.Designer.cs">
+      <DependentUpon>PEMR_MedicalRecordContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_VisionRefraction_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_VisionRefraction_UC.Designer.cs">
+      <DependentUpon>PEMR_VisionRefraction_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_PatientCardContainer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_PatientCardContainer_UC.Designer.cs">
+      <DependentUpon>PEMR_PatientCardContainer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_PreviousVisitCardContainer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_PreviousVisitCardContainer_UC.Designer.cs">
+      <DependentUpon>PEMR_PreviousVisitCardContainer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_PreviousVisitCard_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_PreviousVisitCard_UC.Designer.cs">
+      <DependentUpon>PEMR_PreviousVisitCard_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_PrintOrder_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_PrintOrder_UC.Designer.cs">
+      <DependentUpon>PEMR_PrintOrder_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SendToStage_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SendToStage_UC.Designer.cs">
+      <DependentUpon>PEMR_SendToStage_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_ServingContainer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_ServingContainer_UC.Designer.cs">
+      <DependentUpon>PEMR_ServingContainer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SocialHistory_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SocialHistory_UC.Designer.cs">
+      <DependentUpon>PEMR_SocialHistory_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SurgeryContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SurgeryContainer.Designer.cs">
+      <DependentUpon>PEMR_SurgeryContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_Symptoms_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_Symptoms_UC.Designer.cs">
+      <DependentUpon>PEMR_Symptoms_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_TreatmentPlan_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_TreatmentPlan_UC.Designer.cs">
+      <DependentUpon>PEMR_TreatmentPlan_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_VitalSigns_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_VitalSigns_UC.Designer.cs">
+      <DependentUpon>PEMR_VitalSigns_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_Medication_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_Medication_UC.Designer.cs">
+      <DependentUpon>PEMR_Medication_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QueueManagerViewers\QueueManagerContainer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueueManagerViewers\QueueManagerContainer_UC.Designer.cs">
+      <DependentUpon>QueueManagerContainer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueueManagerViewers\QueueManager_Actions_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueueManagerViewers\QueueManager_Actions_UC.Designer.cs">
+      <DependentUpon>QueueManager_Actions_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueueManagerViewers\QueueManager_DoctorCard_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueueManagerViewers\QueueManager_DoctorCard_UC.Designer.cs">
+      <DependentUpon>QueueManager_DoctorCard_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueueManagerViewers\QueueManager_DoctorSelection_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueueManagerViewers\QueueManager_DoctorSelection_UC.Designer.cs">
+      <DependentUpon>QueueManager_DoctorSelection_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsContainer\CustomerFinanceInvoices_Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportsContainer\CustomerFinanceInvoices_Report.Designer.cs">
+      <DependentUpon>CustomerFinanceInvoices_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsContainer\InvoicePaymentBrief_Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportsContainer\InvoicePaymentBrief_Report.Designer.cs">
+      <DependentUpon>InvoicePaymentBrief_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsContainer\PatientDepositBalance_Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportsContainer\PatientDepositBalance_Report.Designer.cs">
+      <DependentUpon>PatientDepositBalance_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsContainer\TotalServiceAndDoctorRevenues_Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportsContainer\TotalServiceAndDoctorRevenues_Report.Designer.cs">
+      <DependentUpon>TotalServiceAndDoctorRevenues_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MedicalPaymentReceiptTemplate_A5_rpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MedicalPaymentReceiptTemplate_A5_rpt.Designer.cs">
+      <DependentUpon>MedicalPaymentReceiptTemplate_A5_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PEMR_Element_Medications_A5_rpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PEMR_Element_Medications_A5_rpt.Designer.cs">
+      <DependentUpon>PEMR_Element_Medications_A5_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PEMR_HeaderAndFooterTemplate_A4_rpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PEMR_HeaderAndFooterTemplate_A4_rpt.Designer.cs">
+      <DependentUpon>PEMR_HeaderAndFooterTemplate_A4_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PEMR_HeaderAndFooterTemplate_A5_rpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PEMR_HeaderAndFooterTemplate_A5_rpt.Designer.cs">
+      <DependentUpon>PEMR_HeaderAndFooterTemplate_A5_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PEMR_ElementContainer_A5_rpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PEMR_ElementContainer_A5_rpt.Designer.cs">
+      <DependentUpon>PEMR_ElementContainer_A5_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PEMR_PatientMedicalRecordReportContainer_rpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PEMR_PatientMedicalRecordReportContainer_rpt.Designer.cs">
+      <DependentUpon>PEMR_PatientMedicalRecordReportContainer_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PEMR_PatientMedicalRecordReportElement_rpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PEMR_PatientMedicalRecordReportElement_rpt.Designer.cs">
+      <DependentUpon>PEMR_PatientMedicalRecordReportElement_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PEMR_PatientMedicalRecordReportSub_rpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PEMR_PatientMedicalRecordReportSub_rpt.Designer.cs">
+      <DependentUpon>PEMR_PatientMedicalRecordReportSub_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\BankAccountViewers\BankAccount_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\BankAccountViewers\BankAccount_EditorViewer.Designer.cs">
+      <DependentUpon>BankAccount_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\BankAccountViewers\BankAccount_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\BankAccountViewers\BankAccount_SearchViewer.Designer.cs">
+      <DependentUpon>BankAccount_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\BankViewers\Bank_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\BankViewers\Bank_EditorViewer.Designer.cs">
+      <DependentUpon>Bank_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\BankViewers\Bank_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\BankViewers\Bank_SearchViewer.Designer.cs">
+      <DependentUpon>Bank_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\CashBoxTranasctionType_GeneralChartOfAccountType_Viewers\CashBoxTranasctionType_GeneralChartOfAccountType_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\CashBoxTranasctionType_GeneralChartOfAccountType_Viewers\CashBoxTranasctionType_GeneralChartOfAccountType_EditorViewer.Designer.cs">
+      <DependentUpon>CashBoxTranasctionType_GeneralChartOfAccountType_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\CashBoxTranasctionType_GeneralChartOfAccountType_Viewers\CashBoxTranasctionType_GeneralChartOfAccountType_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\CashBoxTranasctionType_GeneralChartOfAccountType_Viewers\CashBoxTranasctionType_GeneralChartOfAccountType_SearchViewer.Designer.cs">
+      <DependentUpon>CashBoxTranasctionType_GeneralChartOfAccountType_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\CashBoxViewers\CashBox_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\CashBoxViewers\CashBox_EditorViewer.Designer.cs">
+      <DependentUpon>CashBox_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\CashBoxViewers\CashBox_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\CashBoxViewers\CashBox_SearchViewer.Designer.cs">
+      <DependentUpon>CashBox_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ChartOfAccountViewers\ChartOfAccount_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ChartOfAccountViewers\ChartOfAccount_EditorViewer.Designer.cs">
+      <DependentUpon>ChartOfAccount_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ChartOfAccountViewers\ChartOfAccount_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ChartOfAccountViewers\ChartOfAccount_SearchViewer.Designer.cs">
+      <DependentUpon>ChartOfAccount_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ChartOfAccount_GeneralChartOfAccountType_Viewers\ChartOfAccount_GeneralChartOfAccountType_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ChartOfAccount_GeneralChartOfAccountType_Viewers\ChartOfAccount_GeneralChartOfAccountType_EditorViewer.Designer.cs">
+      <DependentUpon>ChartOfAccount_GeneralChartOfAccountType_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ChartOfAccount_GeneralChartOfAccountType_Viewers\ChartOfAccount_GeneralChartOfAccountType_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ChartOfAccount_GeneralChartOfAccountType_Viewers\ChartOfAccount_GeneralChartOfAccountType_SearchViewer.Designer.cs">
+      <DependentUpon>ChartOfAccount_GeneralChartOfAccountType_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\CustomersViewers\Customer_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\CustomersViewers\Customer_EditorViewer.Designer.cs">
+      <DependentUpon>Customer_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\CustomersViewers\Customer_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\CustomersViewers\Customer_SearchViewer.Designer.cs">
+      <DependentUpon>Customer_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DiagnosisCategoriesViewers\DiagnosisCategories_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DiagnosisCategoriesViewers\DiagnosisCategories_EditorViewer.Designer.cs">
+      <DependentUpon>DiagnosisCategories_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DiagnosisCategoriesViewers\DiagnosisCategories_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DiagnosisCategoriesViewers\DiagnosisCategories_SearchViewer.Designer.cs">
+      <DependentUpon>DiagnosisCategories_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DiagnosisCategory_Diagnosis_Viewers\DiagnosisCategory_Diagnosis_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DiagnosisCategory_Diagnosis_Viewers\DiagnosisCategory_Diagnosis_EditorViewer.Designer.cs">
+      <DependentUpon>DiagnosisCategory_Diagnosis_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DiagnosisCategory_Diagnosis_Viewers\DiagnosisCategory_Diagnosis_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DiagnosisCategory_Diagnosis_Viewers\DiagnosisCategory_Diagnosis_SearchViewer.Designer.cs">
+      <DependentUpon>DiagnosisCategory_Diagnosis_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DiagnosisViewers\Diagnosis_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DiagnosisViewers\Diagnosis_EditorViewer.Designer.cs">
+      <DependentUpon>Diagnosis_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DiagnosisViewers\Diagnosis_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DiagnosisViewers\Diagnosis_SearchViewer.Designer.cs">
+      <DependentUpon>Diagnosis_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DoctorCategoriesViewers\DoctorCategory_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DoctorCategoriesViewers\DoctorCategory_EditorViewer.Designer.cs">
+      <DependentUpon>DoctorCategory_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DoctorCategoriesViewers\DoctorCategory_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DoctorCategoriesViewers\DoctorCategory_SearchViewer.Designer.cs">
+      <DependentUpon>DoctorCategory_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DoctorTaxTypesViewers\DoctorTaxType_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DoctorTaxTypesViewers\DoctorTaxType_EditorViewer.Designer.cs">
+      <DependentUpon>DoctorTaxType_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DoctorTaxTypesViewers\DoctorTaxType_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DoctorTaxTypesViewers\DoctorTaxType_SearchViewer.Designer.cs">
+      <DependentUpon>DoctorTaxType_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DoctorViewers\Doctor_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DoctorViewers\Doctor_EditorViewer.Designer.cs">
+      <DependentUpon>Doctor_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DoctorViewers\Doctor_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DoctorViewers\Doctor_SearchViewer.Designer.cs">
+      <DependentUpon>Doctor_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DoseViewers\Dose_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DoseViewers\Dose_EditorViewer.Designer.cs">
+      <DependentUpon>Dose_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\DoseViewers\Dose_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\DoseViewers\Dose_SearchViewer.Designer.cs">
+      <DependentUpon>Dose_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\EmployeeViewers\EmployeeEditorViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\EmployeeViewers\EmployeeEditorViewer_UC.Designer.cs">
+      <DependentUpon>EmployeeEditorViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\EmployeeViewers\EmployeeSearchViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\EmployeeViewers\EmployeeSearchViewer_UC.Designer.cs">
+      <DependentUpon>EmployeeSearchViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\FloorViewers\Floor_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\FloorViewers\Floor_EditorViewer.Designer.cs">
+      <DependentUpon>Floor_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\FloorViewers\Floor_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\FloorViewers\Floor_SearchViewer.Designer.cs">
+      <DependentUpon>Floor_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\GeneralChartOfAccountTypeViewers\GeneralChartOfAccountType_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\GeneralChartOfAccountTypeViewers\GeneralChartOfAccountType_EditorViewer.Designer.cs">
+      <DependentUpon>GeneralChartOfAccountType_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\GeneralChartOfAccountTypeViewers\GeneralChartOfAccountType_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\GeneralChartOfAccountTypeViewers\GeneralChartOfAccountType_SearchViewer.Designer.cs">
+      <DependentUpon>GeneralChartOfAccountType_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InPatientRoomBedViewers\InPatientRoomBedEditorViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InPatientRoomBedViewers\InPatientRoomBedEditorViewer_UC.Designer.cs">
+      <DependentUpon>InPatientRoomBedEditorViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InPatientRoomBedViewers\InPatientRoomBedSearchViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InPatientRoomBedViewers\InPatientRoomBedSearchViewer_UC.Designer.cs">
+      <DependentUpon>InPatientRoomBedSearchViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InPatientRoomClassificationViewres\InPatientRoomClassificationEditorViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InPatientRoomClassificationViewres\InPatientRoomClassificationEditorViewer_UC.Designer.cs">
+      <DependentUpon>InPatientRoomClassificationEditorViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InPatientRoomClassificationViewres\InPatientRoomClassificationSearchViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InPatientRoomClassificationViewres\InPatientRoomClassificationSearchViewer_UC.Designer.cs">
+      <DependentUpon>InPatientRoomClassificationSearchViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InPatientRoomViewers\InPatientRoomEditorViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InPatientRoomViewers\InPatientRoomEditorViewer_UC.Designer.cs">
+      <DependentUpon>InPatientRoomEditorViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InPatientRoomViewers\InPatientRoomSearchViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InPatientRoomViewers\InPatientRoomSearchViewer_UC.Designer.cs">
+      <DependentUpon>InPatientRoomSearchViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InsurancePolicyViewers\InsurancePolicyEditorViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InsurancePolicyViewers\InsurancePolicyEditorViewer_UC.Designer.cs">
+      <DependentUpon>InsurancePolicyEditorViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InsurancePolicyViewers\InsurancePolicySearchViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InsurancePolicyViewers\InsurancePolicySearchViewer_UC.Designer.cs">
+      <DependentUpon>InsurancePolicySearchViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryHousingViewers\InventoryHousing_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryHousingViewers\InventoryHousing_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryHousing_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryHousingViewers\InventoryHousing_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryHousingViewers\InventoryHousing_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryHousing_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemBrandViewers\InventoryItemBrand_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemBrandViewers\InventoryItemBrand_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryItemBrand_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemBrandViewers\InventoryItemBrand_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemBrandViewers\InventoryItemBrand_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryItemBrand_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemCategoryViewers\InventoryItemCategory_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemCategoryViewers\InventoryItemCategory_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryItemCategory_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemCategoryViewers\InventoryItemCategory_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemCategoryViewers\InventoryItemCategory_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryItemCategory_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemGroupViewers\InventoryItemGroup_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemGroupViewers\InventoryItemGroup_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryItemGroup_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemGroupViewers\InventoryItemGroup_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemGroupViewers\InventoryItemGroup_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryItemGroup_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemPriceViewers\InventoryItemPrice_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemPriceViewers\InventoryItemPrice_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryItemPrice_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemPriceViewers\InventoryItemPrice_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemPriceViewers\InventoryItemPrice_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryItemPrice_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemViewers\InventoryItem_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemViewers\InventoryItem_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryItem_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemViewers\InventoryItem_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItemViewers\InventoryItem_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryItem_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_InventoryHousingViewers\InventoryItem_InventoryHousing_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_InventoryHousingViewers\InventoryItem_InventoryHousing_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryItem_InventoryHousing_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_InventoryHousingViewers\InventoryItem_InventoryHousing_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_InventoryHousingViewers\InventoryItem_InventoryHousing_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryItem_InventoryHousing_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_UnitMeasurmentViewers\InventoryItem_UnitMeasurment_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_UnitMeasurmentViewers\InventoryItem_UnitMeasurment_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryItem_UnitMeasurment_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_UnitMeasurmentViewers\InventoryItem_UnitMeasurment_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_UnitMeasurmentViewers\InventoryItem_UnitMeasurment_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryItem_UnitMeasurment_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\LocationViewers\Location_EditorViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\LocationViewers\Location_EditorViewer_UC.Designer.cs">
+      <DependentUpon>Location_EditorViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\LocationViewers\Location_SearchViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\LocationViewers\Location_SearchViewer_UC.Designer.cs">
+      <DependentUpon>Location_SearchViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\MedicationCategoriesViewers\MedicationCategory_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\MedicationCategoriesViewers\MedicationCategory_EditorViewer.Designer.cs">
+      <DependentUpon>MedicationCategory_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\MedicationCategoriesViewers\MedicationCategory_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\MedicationCategoriesViewers\MedicationCategory_SearchViewer.Designer.cs">
+      <DependentUpon>MedicationCategory_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\MedicationViewers\Medication_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\MedicationViewers\Medication_EditorViewer.Designer.cs">
+      <DependentUpon>Medication_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\MedicationViewers\Medication_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\MedicationViewers\Medication_SearchViewer.Designer.cs">
+      <DependentUpon>Medication_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\Medication_Dose_Viewers\Medication_Dose_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\Medication_Dose_Viewers\Medication_Dose_EditorViewer.Designer.cs">
+      <DependentUpon>Medication_Dose_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\Medication_Dose_Viewers\Medication_Dose_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\Medication_Dose_Viewers\Medication_Dose_SearchViewer.Designer.cs">
+      <DependentUpon>Medication_Dose_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\OrganizationMachineViewers\OrganizationMachine_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\OrganizationMachineViewers\OrganizationMachine_EditorViewer.Designer.cs">
+      <DependentUpon>OrganizationMachine_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\OrganizationMachineViewers\OrganizationMachine_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\OrganizationMachineViewers\OrganizationMachine_SearchViewer.Designer.cs">
+      <DependentUpon>OrganizationMachine_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\PatientViewers\PatientEditorViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\PatientViewers\PatientEditorViewer_UC.Designer.cs">
+      <DependentUpon>PatientEditorViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonViewers\Login_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonViewers\Login_UC.Designer.cs">
+      <DependentUpon>Login_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonViewers\MainPatientInvoiceActions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonViewers\MainPatientInvoiceActions.Designer.cs">
+      <DependentUpon>MainPatientInvoiceActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonViewers\PatientTopTitle_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonViewers\PatientTopTitle_UC.Designer.cs">
+      <DependentUpon>PatientTopTitle_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomEditors\PopupContainerEditCustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomEditors\PopupContainerFormCustomButton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomEditors\PopupFormCustomButtonsViewInfo.cs" />
+    <Compile Include="CustomEditors\RepositoryItemPopupContainerEditCustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomEditors\SimplePopupButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\LocalizedRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizedRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\PersonType_ChartOfAccount_Viewers\PersonType_ChartOfAccount_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\PersonType_ChartOfAccount_Viewers\PersonType_ChartOfAccount_EditorViewer.Designer.cs">
+      <DependentUpon>PersonType_ChartOfAccount_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\PersonType_ChartOfAccount_Viewers\PersonType_ChartOfAccount_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\PersonType_ChartOfAccount_Viewers\PersonType_ChartOfAccount_SearchViewer.Designer.cs">
+      <DependentUpon>PersonType_ChartOfAccount_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\Person_ChartOfAccount_Viewers\Person_ChartOfAccount_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\Person_ChartOfAccount_Viewers\Person_ChartOfAccount_EditorViewer.Designer.cs">
+      <DependentUpon>Person_ChartOfAccount_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\Person_ChartOfAccount_Viewers\Person_ChartOfAccount_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\Person_ChartOfAccount_Viewers\Person_ChartOfAccount_SearchViewer.Designer.cs">
+      <DependentUpon>Person_ChartOfAccount_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\RoleRegistrationViewers\RoleRegistration_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\RoleRegistrationViewers\RoleRegistration_EditorViewer.Designer.cs">
+      <DependentUpon>RoleRegistration_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\RoleRegistrationViewers\RoleRegistration_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\RoleRegistrationViewers\RoleRegistration_SearchViewer.Designer.cs">
+      <DependentUpon>RoleRegistration_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceCategoryStationPointViewers\ServiceCategoryStationPoint_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceCategoryStationPointViewers\ServiceCategoryStationPoint_EditorViewer.Designer.cs">
+      <DependentUpon>ServiceCategoryStationPoint_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceCategoryStationPointViewers\ServiceCategoryStationPoint_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceCategoryStationPointViewers\ServiceCategoryStationPoint_SearchViewer.Designer.cs">
+      <DependentUpon>ServiceCategoryStationPoint_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceCategoryViewers\ServiceCategory_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceCategoryViewers\ServiceCategory_EditorViewer.Designer.cs">
+      <DependentUpon>ServiceCategory_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceCategoryViewers\ServiceCategory_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceCategoryViewers\ServiceCategory_SearchViewer.Designer.cs">
+      <DependentUpon>ServiceCategory_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ServicePrice_Viewers\ServicePrice_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ServicePrice_Viewers\ServicePrice_EditorViewer.Designer.cs">
+      <DependentUpon>ServicePrice_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ServicePrice_Viewers\ServicePrice_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ServicePrice_Viewers\ServicePrice_SearchViewer.Designer.cs">
+      <DependentUpon>ServicePrice_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceStationPointViewers\ServiceStationPoint_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceStationPointViewers\ServiceStationPoint_EditorViewer.Designer.cs">
+      <DependentUpon>ServiceStationPoint_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceStationPointViewers\ServiceStationPoint_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceStationPointViewers\ServiceStationPoint_SearchViewer.Designer.cs">
+      <DependentUpon>ServiceStationPoint_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceTypeStationPointViewers\ServiceTypeStationPoint_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceTypeStationPointViewers\ServiceTypeStationPoint_EditorViewer.Designer.cs">
+      <DependentUpon>ServiceTypeStationPoint_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceTypeStationPointViewers\ServiceTypeStationPoint_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceTypeStationPointViewers\ServiceTypeStationPoint_SearchViewer.Designer.cs">
+      <DependentUpon>ServiceTypeStationPoint_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceViewers\Service_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceViewers\Service_EditorViewer.Designer.cs">
+      <DependentUpon>Service_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceViewers\Service_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\ServiceViewers\Service_SearchViewer.Designer.cs">
+      <DependentUpon>Service_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\StationPointStageViewers\StationPointStage_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\StationPointStageViewers\StationPointStage_EditorViewer.Designer.cs">
+      <DependentUpon>StationPointStage_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\StationPointStageViewers\StationPointStage_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\StationPointStageViewers\StationPointStage_SearchViewer.Designer.cs">
+      <DependentUpon>StationPointStage_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\StationPointViewers\StationPoint_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\StationPointViewers\StationPoint_EditorViewer.Designer.cs">
+      <DependentUpon>StationPoint_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\StationPointViewers\StationPoint_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\StationPointViewers\StationPoint_SearchViewer.Designer.cs">
+      <DependentUpon>StationPoint_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\SupplierViewers\Supplier_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\SupplierViewers\Supplier_EditorViewer.Designer.cs">
+      <DependentUpon>Supplier_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\SupplierViewers\Supplier_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\SupplierViewers\Supplier_SearchViewer.Designer.cs">
+      <DependentUpon>Supplier_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\UnitMeasurmentTreeLinkViewers\UnitMeasurmentTreeLink_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\UnitMeasurmentTreeLinkViewers\UnitMeasurmentTreeLink_EditorViewer.Designer.cs">
+      <DependentUpon>UnitMeasurmentTreeLink_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\UnitMeasurmentTreeLinkViewers\UnitMeasurmentTreeLink_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\UnitMeasurmentTreeLinkViewers\UnitMeasurmentTreeLink_SearchViewer.Designer.cs">
+      <DependentUpon>UnitMeasurmentTreeLink_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\UnitMeasurmentViewers\UnitMeasurment_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\UnitMeasurmentViewers\UnitMeasurment_EditorViewer.Designer.cs">
+      <DependentUpon>UnitMeasurment_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\UnitMeasurmentViewers\UnitMeasurment_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\UnitMeasurmentViewers\UnitMeasurment_SearchViewer.Designer.cs">
+      <DependentUpon>UnitMeasurment_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\UserGroup\UserGroupEditorViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\UserGroup\UserGroupEditorViewer_UC.Designer.cs">
+      <DependentUpon>UserGroupEditorViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\UserGroup\UserGroupSearchViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\UserGroup\UserGroupSearchViewer_UC.Designer.cs">
+      <DependentUpon>UserGroupSearchViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\UserGroup_ApplicationViewers\UserGroup_Application_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\UserGroup_ApplicationViewers\UserGroup_Application_EditorViewer.Designer.cs">
+      <DependentUpon>UserGroup_Application_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\UserGroup_ApplicationViewers\UserGroup_Application_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\UserGroup_ApplicationViewers\UserGroup_Application_SearchViewer.Designer.cs">
+      <DependentUpon>UserGroup_Application_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\UserViewers\UserEditorViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\UserViewers\UserEditorViewer_UC.Designer.cs">
+      <DependentUpon>UserEditorViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\UserViewers\UserSearchViewer_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\UserViewers\UserSearchViewer_UC.Designer.cs">
+      <DependentUpon>UserSearchViewer_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\User_Application_Viewers\User_Application_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\User_Application_Viewers\User_Application_EditorViewer.Designer.cs">
+      <DependentUpon>User_Application_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\User_Application_Viewers\User_Application_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\User_Application_Viewers\User_Application_SearchViewer.Designer.cs">
+      <DependentUpon>User_Application_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\User_UserGroupViewers\User_UserGroup_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\User_UserGroupViewers\User_UserGroup_EditorViewer.Designer.cs">
+      <DependentUpon>User_UserGroup_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\User_UserGroupViewers\User_UserGroup_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\User_UserGroupViewers\User_UserGroup_SearchViewer.Designer.cs">
+      <DependentUpon>User_UserGroup_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommonGrid.resx">
+      <DependentUpon>CommonGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonViewers\ChangeTheme_UC.resx">
+      <DependentUpon>ChangeTheme_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonViewers\LabRegistration_UC.resx">
+      <DependentUpon>LabRegistration_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonViewers\PaintViewer_UC.resx">
+      <DependentUpon>PaintViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonViewers\PatientListContainer_UC.resx">
+      <DependentUpon>PatientListContainer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonViewers\PatientMedicalServicesActions_UC.resx">
+      <DependentUpon>PatientMedicalServicesActions_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonViewers\PatientNotCompletedPreviousVisits_UC.resx">
+      <DependentUpon>PatientNotCompletedPreviousVisits_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonViewers\ScanFiles_UC.resx">
+      <DependentUpon>ScanFiles_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinancialCommonViewers\AccountingJournalTransactionContainer_UC.resx">
+      <DependentUpon>AccountingJournalTransactionContainer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceViewers\AlreadyCreatedInvoicesActions_UC.resx">
+      <DependentUpon>AlreadyCreatedInvoicesActions_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceViewers\InvoiceContainer_UC.resx">
+      <DependentUpon>InvoiceContainer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceViewers\InPatient_InvoiceDetailsGridViewer_Accommodation.resx">
+      <DependentUpon>InPatient_InvoiceDetailsGridViewer_Accommodation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceViewers\InPatient_InvoiceDetailsViewerContainer.resx">
+      <DependentUpon>InPatient_InvoiceDetailsViewerContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceViewers\InvoiceManagerPatientQueueCard_UC.resx">
+      <DependentUpon>InvoiceManagerPatientQueueCard_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceViewers\InvoiceManagerQeueCardContainer_UC.resx">
+      <DependentUpon>InvoiceManagerQeueCardContainer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceViewers\InvoiceManagerQueueContainerWithHeaderIcons_UC.resx">
+      <DependentUpon>InvoiceManagerQueueContainerWithHeaderIcons_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceViewers\InvoicePayment_UC.resx">
+      <DependentUpon>InvoicePayment_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceViewers\MarketInvoice\MarketCreationFinanceInvoice_UC.resx">
+      <DependentUpon>MarketCreationFinanceInvoice_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceViewers\MedicalAdmissionInvoiceCreationContainer_UC.resx">
+      <DependentUpon>MedicalAdmissionInvoiceCreationContainer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceViewers\OutPatient_InvoiceDetailsViewerContainer.resx">
+      <DependentUpon>OutPatient_InvoiceDetailsViewerContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceViewers\ReadyInvoiceForPayments_UC.resx">
+      <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMRPatientQueueCard.resx">
+      <DependentUpon>PEMRPatientQueueCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMRContainer.resx">
+      <DependentUpon>PEMRContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_AdnexaSegment_UC.resx">
+      <DependentUpon>PEMR_AdnexaSegment_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_AnteriorSegment_UC.resx">
+      <DependentUpon>PEMR_AnteriorSegment_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_ExtraocularMuscles_UC.resx">
+      <DependentUpon>PEMR_ExtraocularMuscles_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_PosteriorSegment_UC.resx">
+      <DependentUpon>PEMR_PosteriorSegment_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_Pupillary_UC.resx">
+      <DependentUpon>PEMR_Pupillary_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_VisionRefractionDetails_UC.resx">
+      <DependentUpon>PEMR_VisionRefractionDetails_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_VisionRefractionGraph_UC.resx">
+      <DependentUpon>PEMR_VisionRefractionGraph_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_DiagnosisFullScreen.resx">
+      <DependentUpon>PEMR_DiagnosisFullScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_LabContainer.resx">
+      <DependentUpon>PEMR_LabContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_MedicalHistory.resx">
+      <DependentUpon>PEMR_MedicalHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SearchPanel_UC.resx">
+      <DependentUpon>PEMR_SearchPanel_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_Diagnosis_UC.resx">
+      <DependentUpon>PEMR_Diagnosis_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_DiagnosisServicesActions.resx">
+      <DependentUpon>PEMR_DiagnosisServicesActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_InvestigationContainer.resx">
+      <DependentUpon>PEMR_InvestigationContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_MedicalRecordContainer.resx">
+      <DependentUpon>PEMR_MedicalRecordContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_VisionRefraction_UC.resx">
+      <DependentUpon>PEMR_VisionRefraction_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_PatientCardContainer_UC.resx">
+      <DependentUpon>PEMR_PatientCardContainer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_PreviousVisitCardContainer_UC.resx">
+      <DependentUpon>PEMR_PreviousVisitCardContainer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_PreviousVisitCard_UC.resx">
+      <DependentUpon>PEMR_PreviousVisitCard_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_PrintOrder_UC.resx">
+      <DependentUpon>PEMR_PrintOrder_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SendToStage_UC.resx">
+      <DependentUpon>PEMR_SendToStage_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_ServingContainer_UC.resx">
+      <DependentUpon>PEMR_ServingContainer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SocialHistory_UC.resx">
+      <DependentUpon>PEMR_SocialHistory_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SurgeryContainer.resx">
+      <DependentUpon>PEMR_SurgeryContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_Symptoms_UC.resx">
+      <DependentUpon>PEMR_Symptoms_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_TreatmentPlan_UC.resx">
+      <DependentUpon>PEMR_TreatmentPlan_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_VitalSigns_UC.resx">
+      <DependentUpon>PEMR_VitalSigns_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_Medication_UC.resx">
+      <DependentUpon>PEMR_Medication_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueueManagerViewers\QueueManagerContainer_UC.resx">
+      <DependentUpon>QueueManagerContainer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueueManagerViewers\QueueManager_Actions_UC.resx">
+      <DependentUpon>QueueManager_Actions_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueueManagerViewers\QueueManager_DoctorCard_UC.resx">
+      <DependentUpon>QueueManager_DoctorCard_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueueManagerViewers\QueueManager_DoctorSelection_UC.resx">
+      <DependentUpon>QueueManager_DoctorSelection_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsContainer\CustomerFinanceInvoices_Report.resx">
+      <DependentUpon>CustomerFinanceInvoices_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsContainer\InvoicePaymentBrief_Report.resx">
+      <DependentUpon>InvoicePaymentBrief_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsContainer\PatientDepositBalance_Report.resx">
+      <DependentUpon>PatientDepositBalance_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsContainer\TotalServiceAndDoctorRevenues_Report.resx">
+      <DependentUpon>TotalServiceAndDoctorRevenues_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MedicalPaymentReceiptTemplate_A5_rpt.resx">
+      <DependentUpon>MedicalPaymentReceiptTemplate_A5_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEMR_Element_Medications_A5_rpt.resx">
+      <DependentUpon>PEMR_Element_Medications_A5_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEMR_HeaderAndFooterTemplate_A4_rpt.resx">
+      <DependentUpon>PEMR_HeaderAndFooterTemplate_A4_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEMR_HeaderAndFooterTemplate_A5_rpt.resx">
+      <DependentUpon>PEMR_HeaderAndFooterTemplate_A5_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEMR_ElementContainer_A5_rpt.resx">
+      <DependentUpon>PEMR_ElementContainer_A5_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEMR_PatientMedicalRecordReportContainer_rpt.resx">
+      <DependentUpon>PEMR_PatientMedicalRecordReportContainer_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEMR_PatientMedicalRecordReportElement_rpt.resx">
+      <DependentUpon>PEMR_PatientMedicalRecordReportElement_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEMR_PatientMedicalRecordReportSub_rpt.resx">
+      <DependentUpon>PEMR_PatientMedicalRecordReportSub_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\BankAccountViewers\BankAccount_EditorViewer.resx">
+      <DependentUpon>BankAccount_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\BankAccountViewers\BankAccount_SearchViewer.resx">
+      <DependentUpon>BankAccount_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\BankViewers\Bank_EditorViewer.resx">
+      <DependentUpon>Bank_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\BankViewers\Bank_SearchViewer.resx">
+      <DependentUpon>Bank_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\CashBoxTranasctionType_GeneralChartOfAccountType_Viewers\CashBoxTranasctionType_GeneralChartOfAccountType_EditorViewer.resx">
+      <DependentUpon>CashBoxTranasctionType_GeneralChartOfAccountType_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\CashBoxViewers\CashBox_EditorViewer.resx">
+      <DependentUpon>CashBox_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\CashBoxViewers\CashBox_SearchViewer.resx">
+      <DependentUpon>CashBox_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ChartOfAccountViewers\ChartOfAccount_EditorViewer.resx">
+      <DependentUpon>ChartOfAccount_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ChartOfAccountViewers\ChartOfAccount_SearchViewer.resx">
+      <DependentUpon>ChartOfAccount_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ChartOfAccount_GeneralChartOfAccountType_Viewers\ChartOfAccount_GeneralChartOfAccountType_EditorViewer.resx">
+      <DependentUpon>ChartOfAccount_GeneralChartOfAccountType_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\CustomersViewers\Customer_EditorViewer.resx">
+      <DependentUpon>Customer_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\CustomersViewers\Customer_SearchViewer.resx">
+      <DependentUpon>Customer_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DiagnosisCategoriesViewers\DiagnosisCategories_EditorViewer.resx">
+      <DependentUpon>DiagnosisCategories_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DiagnosisCategoriesViewers\DiagnosisCategories_SearchViewer.resx">
+      <DependentUpon>DiagnosisCategories_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DiagnosisCategory_Diagnosis_Viewers\DiagnosisCategory_Diagnosis_EditorViewer.resx">
+      <DependentUpon>DiagnosisCategory_Diagnosis_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DiagnosisCategory_Diagnosis_Viewers\DiagnosisCategory_Diagnosis_SearchViewer.resx">
+      <DependentUpon>DiagnosisCategory_Diagnosis_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DiagnosisViewers\Diagnosis_EditorViewer.resx">
+      <DependentUpon>Diagnosis_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DiagnosisViewers\Diagnosis_SearchViewer.resx">
+      <DependentUpon>Diagnosis_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DoctorCategoriesViewers\DoctorCategory_EditorViewer.resx">
+      <DependentUpon>DoctorCategory_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DoctorCategoriesViewers\DoctorCategory_SearchViewer.resx">
+      <DependentUpon>DoctorCategory_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DoctorTaxTypesViewers\DoctorTaxType_EditorViewer.resx">
+      <DependentUpon>DoctorTaxType_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DoctorTaxTypesViewers\DoctorTaxType_SearchViewer.resx">
+      <DependentUpon>DoctorTaxType_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DoctorViewers\Doctor_EditorViewer.resx">
+      <DependentUpon>Doctor_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DoctorViewers\Doctor_SearchViewer.resx">
+      <DependentUpon>Doctor_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DoseViewers\Dose_EditorViewer.resx">
+      <DependentUpon>Dose_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\DoseViewers\Dose_SearchViewer.resx">
+      <DependentUpon>Dose_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\FloorViewers\Floor_EditorViewer.resx">
+      <DependentUpon>Floor_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\FloorViewers\Floor_SearchViewer.resx">
+      <DependentUpon>Floor_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\GeneralChartOfAccountTypeViewers\GeneralChartOfAccountType_EditorViewer.resx">
+      <DependentUpon>GeneralChartOfAccountType_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\GeneralChartOfAccountTypeViewers\GeneralChartOfAccountType_SearchViewer.resx">
+      <DependentUpon>GeneralChartOfAccountType_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InPatientRoomBedViewers\InPatientRoomBedEditorViewer_UC.resx">
+      <DependentUpon>InPatientRoomBedEditorViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InPatientRoomBedViewers\InPatientRoomBedSearchViewer_UC.resx">
+      <DependentUpon>InPatientRoomBedSearchViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InPatientRoomClassificationViewres\InPatientRoomClassificationEditorViewer_UC.resx">
+      <DependentUpon>InPatientRoomClassificationEditorViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InPatientRoomClassificationViewres\InPatientRoomClassificationSearchViewer_UC.resx">
+      <DependentUpon>InPatientRoomClassificationSearchViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InPatientRoomViewers\InPatientRoomEditorViewer_UC.resx">
+      <DependentUpon>InPatientRoomEditorViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InPatientRoomViewers\InPatientRoomSearchViewer_UC.resx">
+      <DependentUpon>InPatientRoomSearchViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InsurancePolicyViewers\InsurancePolicyEditorViewer_UC.resx">
+      <DependentUpon>InsurancePolicyEditorViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InsurancePolicyViewers\InsurancePolicySearchViewer_UC.resx">
+      <DependentUpon>InsurancePolicySearchViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryHousingViewers\InventoryHousing_EditorViewer.resx">
+      <DependentUpon>InventoryHousing_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryHousingViewers\InventoryHousing_SearchViewer.resx">
+      <DependentUpon>InventoryHousing_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItemBrandViewers\InventoryItemBrand_EditorViewer.resx">
+      <DependentUpon>InventoryItemBrand_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItemBrandViewers\InventoryItemBrand_SearchViewer.resx">
+      <DependentUpon>InventoryItemBrand_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItemCategoryViewers\InventoryItemCategory_EditorViewer.resx">
+      <DependentUpon>InventoryItemCategory_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItemCategoryViewers\InventoryItemCategory_SearchViewer.resx">
+      <DependentUpon>InventoryItemCategory_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItemGroupViewers\InventoryItemGroup_EditorViewer.resx">
+      <DependentUpon>InventoryItemGroup_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItemGroupViewers\InventoryItemGroup_SearchViewer.resx">
+      <DependentUpon>InventoryItemGroup_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItemPriceViewers\InventoryItemPrice_EditorViewer.resx">
+      <DependentUpon>InventoryItemPrice_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItemPriceViewers\InventoryItemPrice_SearchViewer.resx">
+      <DependentUpon>InventoryItemPrice_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItemViewers\InventoryItem_EditorViewer.resx">
+      <DependentUpon>InventoryItem_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItemViewers\InventoryItem_SearchViewer.resx">
+      <DependentUpon>InventoryItem_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItem_InventoryHousingViewers\InventoryItem_InventoryHousing_EditorViewer.resx">
+      <DependentUpon>InventoryItem_InventoryHousing_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItem_InventoryHousingViewers\InventoryItem_InventoryHousing_SearchViewer.resx">
+      <DependentUpon>InventoryItem_InventoryHousing_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItem_UnitMeasurmentViewers\InventoryItem_UnitMeasurment_EditorViewer.resx">
+      <DependentUpon>InventoryItem_UnitMeasurment_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItem_UnitMeasurmentViewers\InventoryItem_UnitMeasurment_SearchViewer.resx">
+      <DependentUpon>InventoryItem_UnitMeasurment_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\LocationViewers\Location_EditorViewer_UC.resx">
+      <DependentUpon>Location_EditorViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\LocationViewers\Location_SearchViewer_UC.resx">
+      <DependentUpon>Location_SearchViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\MedicationCategoriesViewers\MedicationCategory_EditorViewer.resx">
+      <DependentUpon>MedicationCategory_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\MedicationCategoriesViewers\MedicationCategory_SearchViewer.resx">
+      <DependentUpon>MedicationCategory_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\MedicationViewers\Medication_EditorViewer.resx">
+      <DependentUpon>Medication_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\MedicationViewers\Medication_SearchViewer.resx">
+      <DependentUpon>Medication_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\Medication_Dose_Viewers\Medication_Dose_EditorViewer.resx">
+      <DependentUpon>Medication_Dose_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\Medication_Dose_Viewers\Medication_Dose_SearchViewer.resx">
+      <DependentUpon>Medication_Dose_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\OrganizationMachineViewers\OrganizationMachine_EditorViewer.resx">
+      <DependentUpon>OrganizationMachine_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\OrganizationMachineViewers\OrganizationMachine_SearchViewer.resx">
+      <DependentUpon>OrganizationMachine_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\PatientViewers\PatientEditorViewer_UC.resx">
+      <DependentUpon>PatientEditorViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonViewers\Login_UC.resx">
+      <DependentUpon>Login_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonViewers\MainPatientInvoiceActions.resx">
+      <DependentUpon>MainPatientInvoiceActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonViewers\PatientTopTitle_UC.resx">
+      <DependentUpon>PatientTopTitle_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LocalizedRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizedRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\PersonType_ChartOfAccount_Viewers\PersonType_ChartOfAccount_EditorViewer.resx">
+      <DependentUpon>PersonType_ChartOfAccount_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\PersonType_ChartOfAccount_Viewers\PersonType_ChartOfAccount_SearchViewer.resx">
+      <DependentUpon>PersonType_ChartOfAccount_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\Person_ChartOfAccount_Viewers\Person_ChartOfAccount_EditorViewer.resx">
+      <DependentUpon>Person_ChartOfAccount_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\Person_ChartOfAccount_Viewers\Person_ChartOfAccount_SearchViewer.resx">
+      <DependentUpon>Person_ChartOfAccount_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\RoleRegistrationViewers\RoleRegistration_EditorViewer.resx">
+      <DependentUpon>RoleRegistration_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ServiceCategoryStationPointViewers\ServiceCategoryStationPoint_EditorViewer.resx">
+      <DependentUpon>ServiceCategoryStationPoint_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ServiceCategoryStationPointViewers\ServiceCategoryStationPoint_SearchViewer.resx">
+      <DependentUpon>ServiceCategoryStationPoint_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ServiceCategoryViewers\ServiceCategory_EditorViewer.resx">
+      <DependentUpon>ServiceCategory_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ServiceCategoryViewers\ServiceCategory_SearchViewer.resx">
+      <DependentUpon>ServiceCategory_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ServicePrice_Viewers\ServicePrice_EditorViewer.resx">
+      <DependentUpon>ServicePrice_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ServicePrice_Viewers\ServicePrice_SearchViewer.resx">
+      <DependentUpon>ServicePrice_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ServiceStationPointViewers\ServiceStationPoint_EditorViewer.resx">
+      <DependentUpon>ServiceStationPoint_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ServiceStationPointViewers\ServiceStationPoint_SearchViewer.resx">
+      <DependentUpon>ServiceStationPoint_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ServiceTypeStationPointViewers\ServiceTypeStationPoint_EditorViewer.resx">
+      <DependentUpon>ServiceTypeStationPoint_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ServiceTypeStationPointViewers\ServiceTypeStationPoint_SearchViewer.resx">
+      <DependentUpon>ServiceTypeStationPoint_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ServiceViewers\Service_EditorViewer.resx">
+      <DependentUpon>Service_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\ServiceViewers\Service_SearchViewer.resx">
+      <DependentUpon>Service_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\StationPointStageViewers\StationPointStage_EditorViewer.resx">
+      <DependentUpon>StationPointStage_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\StationPointStageViewers\StationPointStage_SearchViewer.resx">
+      <DependentUpon>StationPointStage_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\StationPointViewers\StationPoint_EditorViewer.resx">
+      <DependentUpon>StationPoint_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\StationPointViewers\StationPoint_SearchViewer.resx">
+      <DependentUpon>StationPoint_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\SupplierViewers\Supplier_EditorViewer.resx">
+      <DependentUpon>Supplier_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\SupplierViewers\Supplier_SearchViewer.resx">
+      <DependentUpon>Supplier_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\UnitMeasurmentTreeLinkViewers\UnitMeasurmentTreeLink_EditorViewer.resx">
+      <DependentUpon>UnitMeasurmentTreeLink_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\UnitMeasurmentTreeLinkViewers\UnitMeasurmentTreeLink_SearchViewer.resx">
+      <DependentUpon>UnitMeasurmentTreeLink_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\UnitMeasurmentViewers\UnitMeasurment_EditorViewer.resx">
+      <DependentUpon>UnitMeasurment_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\UnitMeasurmentViewers\UnitMeasurment_SearchViewer.resx">
+      <DependentUpon>UnitMeasurment_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\UserGroup\UserGroupEditorViewer_UC.resx">
+      <DependentUpon>UserGroupEditorViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\UserGroup\UserGroupSearchViewer_UC.resx">
+      <DependentUpon>UserGroupSearchViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\UserGroup_ApplicationViewers\UserGroup_Application_EditorViewer.resx">
+      <DependentUpon>UserGroup_Application_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\UserGroup_ApplicationViewers\UserGroup_Application_SearchViewer.resx">
+      <DependentUpon>UserGroup_Application_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\UserViewers\UserEditorViewer_UC.resx">
+      <DependentUpon>UserEditorViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\UserViewers\UserSearchViewer_UC.resx">
+      <DependentUpon>UserSearchViewer_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\User_Application_Viewers\User_Application_EditorViewer.resx">
+      <DependentUpon>User_Application_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\User_UserGroupViewers\User_UserGroup_EditorViewer.resx">
+      <DependentUpon>User_UserGroup_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\User_UserGroupViewers\User_UserGroup_SearchViewer.resx">
+      <DependentUpon>User_UserGroup_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\lyt_TrialBalance.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MerkSolutions\ApplicationConfiguration\ApplicationConfiguration.csproj">
+      <Project>{88767B6B-1BC5-4B0E-8478-AED883E20AB4}</Project>
+      <Name>ApplicationConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MerkSolutions\Common\CommonActions.csproj">
+      <Project>{A0089FDD-02E5-4F79-8B4C-DDEBD76DF570}</Project>
+      <Name>CommonActions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MerkSolutions\MerkDataBaseBusinessLogicProject\MerkDataBaseBusinessLogicProject.csproj">
+      <Project>{01C542D3-1DE3-4F9F-A9A5-0AD614E675F1}</Project>
+      <Name>MerkDataBaseBusinessLogicProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonControlLibrary\CommonControlLibrary.csproj">
+      <Project>{62D00E59-3FCE-454B-8753-B63891FF2A44}</Project>
+      <Name>CommonControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVCBusinessLogicLibrary\MVCBusinessLogicLibrary.csproj">
+      <Project>{C11A9643-68D1-431F-9D73-35D2BB9A08C7}</Project>
+      <Name>MVCBusinessLogicLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_SearchIcon_2_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_ClearIcon_2_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveIcon_16_100.png" />
+    <None Include="Resources\SaveIcon_16_099.png" />
+    <None Include="Resources\SaveIcon_05.png" />
+    <None Include="Resources\IOP_16_01.png" />
+    <None Include="Resources\Pupil_16_01.png" />
+    <None Include="Resources\Graph_16_03.png" />
+    <None Include="Resources\Graph_16_02.png" />
+    <None Include="Resources\Graph_16_01.png" />
+    <None Include="Resources\grd_PEMR_VisionRefraction.xml" />
+    <None Include="Resources\Ignore_16_01.png" />
+    <None Include="Resources\Vision_16_02.png" />
+    <None Include="Resources\Vision_16_01.png" />
+    <None Include="Resources\PostorierSegment_16_01.png" />
+    <None Include="Resources\Eye_OS_16_01.png" />
+    <None Include="Resources\Eye_OD_16_01.png" />
+    <None Include="Resources\lyt_PEMR_Diagnosis_Opthalmology.xml" />
+    <None Include="Resources\lyt_PEMR_Diagnosis_Cardiology.xml" />
+    <None Include="Resources\OtherMedical_16_02.png" />
+    <None Include="Resources\PaintIcon_01_16.png" />
+    <None Include="Resources\grd_VisitTiming_VitalSigns.xml" />
+    <None Include="Resources\Note_01.png" />
+    <None Include="Resources\FollowUp_01.png" />
+    <None Include="Resources\PainScale_02_06_16.png" />
+    <None Include="Resources\PainScale_02_05_16.png" />
+    <None Include="Resources\PainScale_02_04_16.png" />
+    <None Include="Resources\PainScale_02_03_16.png" />
+    <None Include="Resources\PainScale_02_2.png" />
+    <None Include="Resources\PainScale_02_01_16.png" />
+    <None Include="Resources\01_Heart.jpg" />
+    <None Include="Resources\02_Heart.jpg" />
+    <Content Include="Resources\1-ExitIcon_24.png" />
+    <Content Include="Resources\2-AddIcon_24.png" />
+    <Content Include="Resources\3-SaveIcon_2_24.png" />
+    <None Include="Resources\FullScreen_16_01.png" />
+    <None Include="Resources\FullScreen_1_16.png" />
+    <None Include="Resources\FullScreen_1_24.png" />
+    <None Include="Resources\grd_DiagnosisCategory_Diagnosis_SearchViewer.xml" />
+    <None Include="Resources\lyt_DiagnosisCategory_Diagnosis_EditorViewer.xml" />
+    <None Include="Resources\lyt_DiagnosisCategory_Diagnosis_EditorViewer.en-US.xml" />
+    <None Include="Resources\grd_DiagnosisCategory_SearchViewer.xml" />
+    <None Include="Resources\grd_DiagnosisCategory_SearchViewer.en-US.xml" />
+    <None Include="Resources\grd_Diagnosis_SearchViewer.xml" />
+    <None Include="Resources\grd_Diagnosis_SearchViewer.en-US.xml" />
+    <None Include="Resources\lyt_DiagnosisCategories_SearchViewer.xml" />
+    <None Include="Resources\lyt_DiagnosisCategories_SearchViewer.en-US.xml" />
+    <None Include="Resources\lyt_DiagnosisCategories_SearchViewer.en-UD.xml" />
+    <None Include="Resources\lyt_DiagnosisCategories_EditorViewer.xml" />
+    <None Include="Resources\lyt_DiagnosisCategories_EditorViewer.en-US.xml" />
+    <None Include="Resources\lyt_Diagnosis_SearchViewer.xml" />
+    <None Include="Resources\lyt_Diagnosis_SearchViewer.en-US.xml" />
+    <None Include="Resources\lyt_Diagnosis_EditorViewer.xml" />
+    <None Include="Resources\lyt_Diagnosis_EditorViewer.en-US.xml" />
+    <None Include="Resources\grd_PEMR_SearchPanel_Diagnosis.xml" />
+    <None Include="Resources\SearchIcon_05_16.png" />
+    <None Include="Resources\SearchIcon_05_08.png" />
+    <None Include="Resources\Expanded_06.png" />
+    <None Include="Resources\NotExpanded_06.png" />
+    <None Include="Resources\RemoveFromList_066.png" />
+    <None Include="Resources\PainScale_6_08.png" />
+    <None Include="Resources\PainScale_4_08.png" />
+    <None Include="Resources\PainScale_3_08.png" />
+    <None Include="Resources\PainScale_2_08.png" />
+    <None Include="Resources\PainScale_1_01.png" />
+    <None Include="Resources\NewIcon_2_36x36.png" />
+    <None Include="Resources\Folder_16_01.png" />
+    <None Include="Resources\Folder_01.png" />
+    <None Include="Resources\LinPaint_04.png" />
+    <None Include="Resources\LinPaint_03.png" />
+    <None Include="Resources\LinPaint_02.png" />
+    <None Include="Resources\LinPaint_01.png" />
+    <None Include="Resources\grd_PatientsList.xml" />
+    <None Include="Resources\Refresh_24_01.png" />
+    <None Include="Resources\Search_02_24.png" />
+    <None Include="Resources\SearchPatient_01_24.png" />
+    <None Include="Resources\lyt_PatientDeposite_Report.xml" />
+    <None Include="Resources\grd_PatientDepositBalance_Report.xml" />
+    <None Include="Resources\grd_VisitTiming_Medications.xml" />
+    <None Include="Resources\grd_VisitTiming_InvestigationReservation.xml" />
+    <None Include="Resources\grd_Medication_Dose_SearchViewer.xml" />
+    <None Include="Resources\lyt_Medication_Dose_EditorViewer.xml" />
+    <None Include="Resources\lyt_Medication_Dose_EditorViewer.en-US.xml" />
+    <None Include="Resources\grd_Dose_SearchViewer.xml" />
+    <None Include="Resources\grd_Dose_SearchViewer.en-US.xml" />
+    <None Include="Resources\lyt_Dose_SearchViewer.xml" />
+    <None Include="Resources\lyt_Dose_SearchViewer.en-US.xml" />
+    <None Include="Resources\lyt_Dose_EditorViewer.xml" />
+    <None Include="Resources\lyt_Dose_EditorViewer.en-US.xml" />
+    <None Include="Resources\grd_OrganizationMachine_SearchViewer.xml" />
+    <None Include="Resources\lyt_OrganizationMachine_SearchViewer.xml" />
+    <None Include="Resources\lyt_OrganizationMachine_EditorViewer.xml" />
+    <None Include="Resources\grd_InvoicePaymentBrief_Report_VisaOnly.xml" />
+    <None Include="Resources\grd_InvoicePaymentBrief_Report_CheckOnly.xml" />
+    <None Include="Resources\grd_InvoicePaymentBrief_Report_CashOnly.xml" />
+    <None Include="Resources\lyt_ScanFiles_UC.xml" />
+    <None Include="Resources\MedicalIcon_16_02.png" />
+    <None Include="Resources\lyt_ChangeTheme.xml" />
+    <None Include="Resources\lyt_Medication_EditorViewer_en_US.xml" />
+    <None Include="Resources\grd_Medication_SearchViewer.xml" />
+    <None Include="Resources\lyt_Medication_SearchViewer.xml" />
+    <None Include="Resources\lyt_Medication_EditorViewer.xml" />
+    <None Include="Resources\grd_DoctorCategory_SearchViewer.xml" />
+    <None Include="Resources\lyt_DoctorCategory_SearchViewer.xml" />
+    <None Include="Resources\lyt_DoctorCategory_EditorViewer.xml" />
+    <None Include="Resources\grd_MedicationCategory_SearchViewer.xml" />
+    <None Include="Resources\lyt_MedicationCategory_SearchViewer.xml" />
+    <None Include="Resources\lyt_MedicationCategory_EditorViewer.xml" />
+    <None Include="Resources\grd_PEMR_Element_OrderIndex_Internal.xml" />
+    <None Include="Resources\OrderIcon_16_01.png" />
+    <None Include="Resources\PrintOrder_16_011.png" />
+    <None Include="Resources\QuickPrintIcon_16_02.png" />
+    <None Include="Resources\PrintIcon_16_02.png" />
+    <None Include="Resources\Investigation_16_01.png" />
+    <None Include="Resources\LabsIcon_16_01.png" />
+    <None Include="Resources\grd_VisitTiming_TreatmentPlan_Internal.xml" />
+    <None Include="Resources\UpArrow_16_09.png" />
+    <None Include="Resources\RemoveFromList_16_09.png" />
+    <None Include="Resources\Scanner_16_01.png" />
+    <None Include="Resources\FamilyIcon_16_01.png" />
+    <None Include="Resources\SocialHistory_16_01.png" />
+    <None Include="Resources\Plan_16_01.png" />
+    <None Include="Resources\Medicine_08_01.png" />
+    <None Include="Resources\PersonPic_8_01.png" />
+    <None Include="Resources\SocialHistory_08_01.png" />
+    <None Include="Resources\lyt_PersonType_ChartOfAccount_SearchViewer.xml" />
+    <None Include="Resources\lyt_PersonType_ChartOfAccount_EditorViewer.xml" />
+    <None Include="Resources\grd_PersonType_ChartOfAccount_SearchViewer.xml" />
+    <None Include="Resources\grd_BankAccount_SearchViewer.xml" />
+    <None Include="Resources\lyt_BankAccount_SearchViewer.xml" />
+    <None Include="Resources\lyt_BankAccount_EditorViewer.xml" />
+    <None Include="Resources\grd_Bank_SearchViewer.xml" />
+    <None Include="Resources\lyt_Bank_SearchViewer.xml" />
+    <None Include="Resources\lyt_Bank_EditorViewer.xml" />
+    <None Include="Resources\grd_User_UserGroup_SearchViewer.xml" />
+    <None Include="Resources\grd_UserGroup_Application_SearchViewer.xml" />
+    <None Include="Resources\RejectIcon_16_01.png" />
+    <None Include="Resources\InvoiceManagerIcon_16_01.png" />
+    <None Include="Resources\grd_PatientPrviousInvoices.xml" />
+    <None Include="Resources\grd_PaymentsHistory_Cash.xml" />
+    <None Include="Resources\InsurancePolicyIcon_16_01.png" />
+    <None Include="Resources\grd_OutPatientInvoiceDetailItem.xml" />
+    <None Include="Resources\grd_TotalServicesAndDoctorsRevenues.xml" />
+    <None Include="Resources\lyt_TotalServiceAndDoctorRevenues_Report.xml" />
+    <None Include="Resources\grd_InvoicePaymentBrief_Report.xml" />
+    <None Include="Resources\lyt_InvoicePaymentBrief_Report.xml" />
+    <None Include="Resources\InvoiceIcon_16_02.png" />
+    <None Include="Resources\InvoiceIcon_16_01.png" />
+    <None Include="Resources\lyt_MedicalAdmissionInvoiceCreation_UC.xml" />
+    <None Include="Resources\lyt_CashBoxTransactionType_GeneralChartOfAccountType_EditorViewer.xml" />
+    <None Include="Resources\grd_GeneralChartOfAccountType_Internal.xml" />
+    <None Include="Resources\grd_CashBoxTransactionType_GeneralChartOfAccountType_SearchViewer.xml" />
+    <None Include="Resources\grd_GeneralChartOfAccountType_SearchViewer.xml" />
+    <None Include="Resources\lyt_GeneralChartOfAccountType_SearchViewer.xml" />
+    <None Include="Resources\lyt_GeneralChartOfAccountType_EditorViewer.xml" />
+    <None Include="Resources\grd_CashBox_SearchViewer.xml" />
+    <None Include="Resources\lyt_CashBox_SearchViewer.xml" />
+    <None Include="Resources\lyt_CashBox_EditorViewer.xml" />
+    <None Include="Resources\lyt_ChartOfAccount_SearchViewer.xml" />
+    <None Include="Resources\lyt_ChartOfAccount_EditorViewer.xml" />
+    <None Include="Resources\grd_ChartOfAccount_SearchViewer.xml" />
+    <None Include="Resources\grd_CustomerFinanceInvoices_ReportViewer.xml" />
+    <None Include="Resources\Refresh_16_01.png" />
+    <None Include="Resources\MenuIcon_08_01.png" />
+    <None Include="Resources\MenuIcon_6_03.png" />
+    <None Include="Resources\RoundedPoint_6_01.png" />
+    <None Include="Resources\lyt_PEMRHistoryVisits_UC.xml" />
+    <None Include="Resources\lyt_PEMRQueueContainer.xml" />
+    <None Include="Resources\lyt_PEMRPatientQueueCard.xml" />
+    <None Include="Resources\lyt_PEMR_PatientCardContainer_UC.xml" />
+    <None Include="Resources\grd_Doctor_SearchViewer.xml" />
+    <None Include="Resources\lyt_Doctor_EditorViewer.xml" />
+    <None Include="Resources\lyt_InventoryItem_InventoryHousing_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryItem_InventoryHousing_EditorViewer.xml" />
+    <None Include="Resources\grd_InventoryItem_InventoryHousing_SearchViewer.xml" />
+    <None Include="Resources\grd_MarketInvoiceCreation.xml" />
+    <None Include="Resources\lyt_MarketInvoiceCreation.xml" />
+    <None Include="Resources\lyt_InventoryItemPrice_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryItemPrice_EditorViewer.xml" />
+    <None Include="Resources\grd_InventoryItemPrice_SearchViewer.xml" />
+    <None Include="Resources\lyt_Supplier_SearchViewer.xml" />
+    <None Include="Resources\lyt_Supplier_EditorViewer.xml" />
+    <None Include="Resources\lyt_Customer_SearchViewer.xml" />
+    <None Include="Resources\grd_Supplier_SearchViewer.xml" />
+    <None Include="Resources\grd_Customer_SearchViewer.xml" />
+    <None Include="Resources\lyt_Customer_EditorViewer.xml" />
+    <None Include="Resources\RemoveFromList_16_02.png" />
+    <None Include="Resources\lyt_InventoryItem_UnitMeasurment_EditorViewer.xml" />
+    <None Include="Resources\grd_InventoryItem_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryItem_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryItem_EditorViewer.xml" />
+    <None Include="Resources\lyt_UnitMeasurmentTreeLink_SearchViewer.xml" />
+    <None Include="Resources\lyt_UnitMeasurmentTreeLink_EditorViewer.xml" />
+    <None Include="Resources\grd_UnitMeasurmentTreeLink_SearchViewer.xml" />
+    <None Include="Resources\grd_UnitMeasurment_SearchViewer.xml" />
+    <None Include="Resources\lyt_UnitMeasurment_SearchViewer.xml" />
+    <None Include="Resources\lyt_UnitMeasurment_EditorViewer.xml" />
+    <None Include="Resources\grd_InventoryItemGroup_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryItemGroup_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryItemGroup_EditorViewer.xml" />
+    <None Include="Resources\grd_InventoryItemBrand_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryItemBrand_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryItemBrand_EditorViewer.xml" />
+    <None Include="Resources\grd_InventoryItemCategory_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryItemCategory_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryItemCategory_EditorViewer.xml" />
+    <None Include="Resources\New_6_01.png" />
+    <None Include="Resources\lyt_Location_SearchViewer.xml" />
+    <None Include="Resources\lyt_Location_EditorViewer.xml" />
+    <None Include="Resources\grd_Location_SearchViewer.xml" />
+    <None Include="Resources\grd_InventoryHousing_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryHousing_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryHousing_EditorViewer.xml" />
+    <None Include="Resources\lyt_ServiceTypeStationPoint_SearchViewer.xml" />
+    <None Include="Resources\lyt_ServiceTypeStationPoint_EditorViewer.xml" />
+    <None Include="Resources\lyt_ServiceCategoryStationPoint_SearchViewer.xml" />
+    <None Include="Resources\lyt_ServiceCategoryStationPoint_EditorViewer.xml" />
+    <None Include="Resources\lyt_ServiceStationPoint_SearchViewer.xml" />
+    <None Include="Resources\lyt_ServiceStationPoint_EditorViewer.xml" />
+    <None Include="Resources\grd_ServiceType_StationPoint_SearchViewer.xml" />
+    <None Include="Resources\grd_ServiceCategory_StationPoint_SearchViewer.xml" />
+    <None Include="Resources\grd_Service_StationPoint_SearchViewer.xml" />
+    <None Include="Resources\grd_StationPointStage_SearchVeiwer.xml" />
+    <None Include="Resources\lyt_StationPointStage_SearchViewer.xml" />
+    <None Include="Resources\lyt_StationPointStage_EditorViewer.xml" />
+    <None Include="Resources\grd_StationPoint_SearchViewer.xml" />
+    <None Include="Resources\lyt_StationPoint_SearchViewer.xml" />
+    <None Include="Resources\lyt_StationPoint_EditorViewer.xml" />
+    <None Include="Resources\grd_ServicePrice_SearchViewer.xml" />
+    <None Include="Resources\lyt_ServicePrice_SearchViewer.xml" />
+    <None Include="Resources\lyt_ServicePrice_EditorViewer.xml" />
+    <None Include="Resources\lyt_Service_SearchViewer.xml" />
+    <None Include="Resources\lyt_Service_EditorViewer.xml" />
+    <None Include="Resources\grd_Service_SearchViewer.xml" />
+    <None Include="Resources\lyt_ServiceCategory_SearchViewer.xml" />
+    <None Include="Resources\lyt_ServiceCategory_EditorViewer.xml" />
+    <None Include="Resources\grd_ServiceCategory_Search.xml" />
+    <None Include="Resources\grd_User_Application_Internal.xml" />
+    <None Include="Resources\lyt_User_Application_EditorViewer.xml" />
+    <None Include="Resources\lyt_RoleRegistration_EditorViewer.xml" />
+    <None Include="Resources\grd_RoleRegistration_Internal.xml" />
+    <None Include="Resources\grd_UserGroup_Application_Internal.xml" />
+    <None Include="Resources\lyt_UserGroup_Application_EditorViewer.xml" />
+    <None Include="Resources\grd_User_UserGroup_InternalUsers.xml" />
+    <None Include="Resources\lyt_User_UserGroup_EditorViewer.xml" />
+    <None Include="Resources\grd_UserGroupSearchViewer.xml" />
+    <None Include="Resources\lyt_UserGroupEditor_UC.xml" />
+    <None Include="Resources\lyt_UserGroupSearchViewer_UC.xml" />
+    <None Include="Resources\lyt_AdmissionInvoiceCreationDetails_LabServices.xml" />
+    <None Include="Resources\lyt_AdmissionInvoiceCreationDetails_InPatientServices.xml" />
+    <None Include="Resources\lyt_AdmissionInvoiceCreationDetails_GeneralOutPatient.xml" />
+    <None Include="Resources\lyt_AdmissionInvoiceCreationContainer.xml" />
+    <None Include="Resources\lyt_InvoiceManagerQeueCardContainer_UC.xml" />
+    <None Include="Resources\grd_UserSearchViewer_UC.xml" />
+    <None Include="Resources\lyt_UserSearchViewer_UC.xml" />
+    <None Include="Resources\lyt_UserEditorViewer_UC.xml" />
+    <None Include="Resources\grd_InsurancePolicySearchViewer.xml" />
+    <None Include="Resources\lyt_InsurancePolicySearchViewer_UC.xml" />
+    <None Include="Resources\lyt_InsurancePolicyEditorViewer_UC.xml" />
+    <None Include="Resources\InsurancePolicyIcon_08_01.png" />
+    <None Include="Resources\lyt_PatientEditorViewer_UC.xml" />
+    <None Include="Resources\lyt_InvoiceDetailsGrid_Accommodation.xml" />
+    <None Include="Resources\lyt_InvoiceDetailsViewing.xml" />
+    <None Include="Resources\grd_InvoiceDetail_Accommodation.xml" />
+    <None Include="Resources\OtherMedical_16_01.png" />
+    <None Include="Resources\PersonPic_16_01.png" />
+    <None Include="Resources\Medicine_16_01.png" />
+    <None Include="Resources\MedicalServices_16_01.png" />
+    <None Include="Resources\PatientBed_16_01.png" />
+    <None Include="Resources\PatientBed_08_01.png" />
+    <None Include="Resources\MenuIcon_16_02.png" />
+    <None Include="Resources\MenuIcon_16_01.png" />
+    <None Include="Resources\Print_06_16.png" />
+    <None Include="Resources\SaveIcon_05_16.png" />
+    <None Include="Resources\lyt_InvoiceContainer.xml" />
+    <None Include="Resources\Report_01_16.png" />
+    <None Include="Resources\lyt_InvoiceManagerInvoiceDetailsContainer.xml" />
+    <None Include="Resources\PaymentsIcon_16_01.png" />
+    <None Include="Resources\PaymentsIcon_8.png" />
+    <None Include="Resources\Settings_4_24x24.png" />
+    <None Include="Resources\Settings_4_16.png" />
+    <None Include="Resources\ExitPatient_16.png" />
+    <None Include="Resources\PlayIcon_8_RightToLeft.png" />
+    <None Include="Resources\lyt_AdmissionRegistrationContainer.xml" />
+    <None Include="Resources\lyt_AddmissionRegistration_Accommodation.xml" />
+    <None Include="Resources\grd_LabRegistration.xml" />
+    <None Include="Resources\lyt_AddmissionRegistration_Lab.xml" />
+    <None Include="Resources\AddToList_16_01.png" />
+    <None Include="Resources\AddToList_24_02.png" />
+    <None Include="Resources\AddToList_16_02.png" />
+    <None Include="Resources\AcceptIcon_16_01.png" />
+    <None Include="Resources\AcceptIcon_16_02.png" />
+    <None Include="Resources\AddToList_16_09.png" />
+    <None Include="Resources\AddToLisT_066.png" />
+    <None Include="Resources\AnteriorSegment_01.png" />
+    <None Include="Resources\Adnexa_16_01.png" />
+    <Content Include="Resources\BlackDim_Background_01.png" />
+    <None Include="Resources\ConsumablesIcon_16_01.png" />
+    <None Include="Resources\DoctorIcon_08_01.png" />
+    <None Include="Resources\DoctorIcon_16_01.png" />
+    <None Include="Resources\Document_16_01.png" />
+    <None Include="Resources\DownArrow_16_09.png" />
+    <None Include="Resources\Diagnosis_16_01.png" />
+    <None Include="Resources\ColorPaint_Black.png" />
+    <None Include="Resources\ColorPaint_White.png" />
+    <None Include="Resources\ColorPaint_Red.png" />
+    <None Include="Resources\ColorPaint_DarkRed.png" />
+    <None Include="Resources\ColorPaint_DarkBlue.png" />
+    <None Include="Resources\ColorPaint_Blue.png" />
+    <None Include="Resources\ColorPaint_DarkGreen.png" />
+    <None Include="Resources\ColorPaint_Green.png" />
+    <None Include="Resources\ColorPaint_Orange.png" />
+    <None Include="Resources\ColorPaint_Yellow.png" />
+    <None Include="Resources\Clear_1_16 - Copy.png" />
+    <None Include="Resources\ExitFullScreen_08_01.png" />
+    <None Include="Resources\Doctor_06.png" />
+    <None Include="Resources\Cancel_16_09.png" />
+    <None Include="Resources\Error_16_01.png" />
+    <None Include="Resources\Edit_1_24.png" />
+    <None Include="Resources\CopyToOD_16_01.png" />
+    <None Include="Resources\CopyToOS_16_01.png" />
+    <None Include="Resources\EOM_OD_16_01.png" />
+    <None Include="Resources\EOM_OS_16_01.png" />
+    <None Include="Resources\EOM_16_01.png" />
+    <None Include="Resources\EOM_16_02.png" />
+    <Content Include="Resources\ExitIcon_8.png" />
+    <None Include="Resources\RemoveFrom_16_01.png" />
+    <None Include="Resources\StopIcon_8.png" />
+    <None Include="Resources\PauseIcon_8.png" />
+    <None Include="Resources\PlayIcon_8.png" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\LoginIcon_8.png" />
+    <None Include="Resources\ExitIcon_16.png" />
+    <None Include="Resources\LoginIcon_16.png" />
+    <None Include="Resources\LoginIcon.png" />
+    <None Include="Resources\icon2.png" />
+    <None Include="Resources\icon1.png" />
+    <None Include="Resources\BottomLogin.jpg" />
+    <None Include="Resources\TopLogin.jpg" />
+    <None Include="Resources\grd_ReadyInvoicesForPayments.xml" />
+    <None Include="Resources\lyt_InvoicePaymentEditorViewer.xml" />
+    <None Include="Resources\lyt_MainPatientInvoiceActions.xml" />
+    <None Include="Resources\Search_1_16.png" />
+    <None Include="Resources\grd_ReadyInvoicesForActions.xml" />
+    <None Include="Resources\PaymentsIcon_16.png" />
+    <None Include="Resources\lyt_AddmissionRegistration.xml" />
+    <None Include="Resources\lyt_AddmissionContainer.xml" />
+    <None Include="Resources\grd_AddmissionContainer.xml" />
+    <None Include="Resources\PersonPic_24_01.png" />
+    <None Include="Resources\Print_1_16.png" />
+    <None Include="Resources\FullScreen_2_16.png" />
+    <None Include="Resources\Exit_1_16.png" />
+    <None Include="Resources\Clear_1_16.png" />
+    <None Include="Resources\Save_1_16.png" />
+    <None Include="Resources\Delete_1_16.png" />
+    <None Include="Resources\New_1_16.png" />
+    <None Include="Resources\AddpatientIcon_24_01.png" />
+    <None Include="Resources\grd_FloorSearch.xml" />
+    <None Include="Resources\grd_InPatientRoomClassificationSearch.xml" />
+    <None Include="Resources\lyt_InPatientRoomClassificationSearchViewer.xml" />
+    <None Include="Resources\lyt_InPatientRoomClassificationEditorViewer.xml" />
+    <None Include="Resources\grd_InPatientRoomBedSearch.xml" />
+    <None Include="Resources\lyt_InPatientRoomSearch.xml" />
+    <None Include="Resources\lyt_InPatientRoomBedSearch.xml" />
+    <None Include="Resources\lyt_InPatientRoomBedEditor.xml" />
+    <None Include="Resources\grd_InPatientRoomSearch.xml" />
+    <None Include="Resources\lyt_FloorEditor.xml" />
+    <None Include="Resources\lyt_InPatientRoomEditor.xml" />
+    <None Include="Resources\lyt_ChartOfAccountMarginSearchEditor.xml" />
+    <None Include="Resources\lyt_ChartOfAccountMarginEditor.xml" />
+    <None Include="Resources\grd_ChartOfAccountMargin.xml" />
+    <None Include="Resources\grd_ChartOfAccountType.xml" />
+    <None Include="Resources\lyt_ChartOfAccountsType.xml" />
+    <None Include="Resources\2-AddIcon_2_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

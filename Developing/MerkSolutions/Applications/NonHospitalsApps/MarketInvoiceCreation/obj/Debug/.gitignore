@@ -1,0 +1,13 @@
+*.cache
+*.cs
+/MarketInvoiceCreation.AccountingTransactionContainer_UC.resources
+/MarketInvoiceCreation.CashBoxTransactionContainer.resources
+/MarketInvoiceCreation.InvoiceActions_UC.resources
+/MarketInvoiceCreation.InvoiceReportsConatiner_UC.resources
+/MarketInvoiceCreation.MainForm.resources
+/MarketInvoiceCreation.Properties.Resources.resources
+/MarketInvoiceCreation.csproj.FileListAbsolute.txt
+/MarketInvoiceCreation.exe
+/MarketInvoiceCreation.pdb
+/marketinvoicecreation.exe.licenses
+/build.force
