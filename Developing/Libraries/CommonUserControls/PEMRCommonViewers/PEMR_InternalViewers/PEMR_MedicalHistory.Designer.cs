@@ -28,14 +28,15 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_MedicalHistory));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
 			this.btnFullScreen = new DevExpress.XtraEditors.SimpleButton();
 			this.txtTreatmentPlanDetails = new DevExpress.XtraEditors.MemoEdit();
@@ -45,6 +46,27 @@
 			this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
 			this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
 			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+			this.lkeDiabetes_Doses = new DevExpress.XtraEditors.GridLookUpEdit();
+			this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.lkeDiabetes_Medications = new DevExpress.XtraEditors.GridLookUpEdit();
+			this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.chkDiabetes_No = new DevExpress.XtraEditors.CheckButton();
+			this.chkDiabetes_Yes = new DevExpress.XtraEditors.CheckButton();
+			this.chkDiabetes_Yearly = new DevExpress.XtraEditors.CheckButton();
+			this.chkDiabetes_Monthly = new DevExpress.XtraEditors.CheckButton();
+			this.chkDiabetes_Weekly = new DevExpress.XtraEditors.CheckButton();
+			this.chkDiabetes_Daily = new DevExpress.XtraEditors.CheckButton();
+			this.chkDiabetes_Hourly = new DevExpress.XtraEditors.CheckButton();
+			this.spnDiabetes_Duration = new DevExpress.XtraEditors.SpinEdit();
+			this.chkDiabetesMedication_Both = new DevExpress.XtraEditors.CheckButton();
+			this.chkDiabetesMedication_Insulin = new DevExpress.XtraEditors.CheckButton();
+			this.chkDiabetesMedication_Tables = new DevExpress.XtraEditors.CheckButton();
+			this.chkDiabetesControlled_No = new DevExpress.XtraEditors.CheckButton();
+			this.chkDiabetesControlled_Yes = new DevExpress.XtraEditors.CheckButton();
+			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+			this.spnHbA1C = new DevExpress.XtraEditors.SpinEdit();
+			this.chkDiabetes_Type2 = new DevExpress.XtraEditors.CheckButton();
+			this.chkDiabetes_Type1 = new DevExpress.XtraEditors.CheckButton();
 			this.lkeTriggersOfDrugAllergies = new DevExpress.XtraEditors.GridLookUpEdit();
 			this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.chkDrugAllergies_No = new DevExpress.XtraEditors.CheckButton();
@@ -65,29 +87,8 @@
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.chkHypertensionControlled_No = new DevExpress.XtraEditors.CheckButton();
 			this.chkHypertensionControlled_Yes = new DevExpress.XtraEditors.CheckButton();
-			this.lkeDiabetes_Doses = new DevExpress.XtraEditors.GridLookUpEdit();
-			this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.lkeDiabetes_Medications = new DevExpress.XtraEditors.GridLookUpEdit();
-			this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.chkHypertension_No = new DevExpress.XtraEditors.CheckButton();
 			this.chkHypertension_Yes = new DevExpress.XtraEditors.CheckButton();
-			this.chkDiabetes_No = new DevExpress.XtraEditors.CheckButton();
-			this.chkDiabetes_Yes = new DevExpress.XtraEditors.CheckButton();
-			this.chkDiabetes_Yearly = new DevExpress.XtraEditors.CheckButton();
-			this.chkDiabetes_Monthly = new DevExpress.XtraEditors.CheckButton();
-			this.chkDiabetes_Weekly = new DevExpress.XtraEditors.CheckButton();
-			this.chkDiabetes_Daily = new DevExpress.XtraEditors.CheckButton();
-			this.chkDiabetes_Hourly = new DevExpress.XtraEditors.CheckButton();
-			this.spnDiabetes_Duration = new DevExpress.XtraEditors.SpinEdit();
-			this.chkDiabetesMedication_Both = new DevExpress.XtraEditors.CheckButton();
-			this.chkDiabetesMedication_Insulin = new DevExpress.XtraEditors.CheckButton();
-			this.chkDiabetesMedication_Tables = new DevExpress.XtraEditors.CheckButton();
-			this.chkDiabetesControlled_No = new DevExpress.XtraEditors.CheckButton();
-			this.chkDiabetesControlled_Yes = new DevExpress.XtraEditors.CheckButton();
-			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-			this.spnHbA1C = new DevExpress.XtraEditors.SpinEdit();
-			this.chkDiabetes_Type2 = new DevExpress.XtraEditors.CheckButton();
-			this.chkDiabetes_Type1 = new DevExpress.XtraEditors.CheckButton();
 			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -163,10 +164,22 @@
 			this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem43 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem47 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtTreatmentPlanDetails.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lkeDiabetes_Doses.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lkeDiabetes_Medications.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.spnDiabetes_Duration.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.spnHbA1C.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeTriggersOfDrugAllergies.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnHypertension_Duration.Properties)).BeginInit();
@@ -174,12 +187,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeHypertension_Medications.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lkeDiabetes_Doses.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lkeDiabetes_Medications.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.spnDiabetes_Duration.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.spnHbA1C.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -255,10 +262,16 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.btnSearchDiagnosis);
+			this.layoutControl1.Controls.Add(this.btnNewVitalSign);
+			this.layoutControl1.Controls.Add(this.btnSave);
 			this.layoutControl1.Controls.Add(this.btnFullScreen);
 			this.layoutControl1.Controls.Add(this.txtTreatmentPlanDetails);
 			this.layoutControl1.Controls.Add(this.chkNoSocialHistory);
@@ -321,7 +334,7 @@
 			this.btnFullScreen.Appearance.Options.UseFont = true;
 			this.btnFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
 			this.btnFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnFullScreen.Location = new System.Drawing.Point(1064, 6);
+			this.btnFullScreen.Location = new System.Drawing.Point(872, 6);
 			this.btnFullScreen.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnFullScreen.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnFullScreen.Name = "btnFullScreen";
@@ -390,7 +403,7 @@
 			// 
 			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
 			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnPrint.Location = new System.Drawing.Point(951, 3);
+			this.btnPrint.Location = new System.Drawing.Point(759, 3);
 			this.btnPrint.MaximumSize = new System.Drawing.Size(110, 40);
 			this.btnPrint.MinimumSize = new System.Drawing.Size(110, 40);
 			this.btnPrint.Name = "btnPrint";
@@ -422,10 +435,361 @@
 			this.labelControl2.MinimumSize = new System.Drawing.Size(0, 40);
 			this.labelControl2.Name = "labelControl2";
 			this.labelControl2.Padding = new System.Windows.Forms.Padding(10);
-			this.labelControl2.Size = new System.Drawing.Size(911, 40);
+			this.labelControl2.Size = new System.Drawing.Size(719, 40);
 			this.labelControl2.StyleController = this.layoutControl1;
 			this.labelControl2.TabIndex = 6;
 			this.labelControl2.Text = ".... Medical History ....";
+			// 
+			// lkeDiabetes_Doses
+			// 
+			this.lkeDiabetes_Doses.Location = new System.Drawing.Point(748, 398);
+			this.lkeDiabetes_Doses.MaximumSize = new System.Drawing.Size(200, 0);
+			this.lkeDiabetes_Doses.MinimumSize = new System.Drawing.Size(200, 0);
+			this.lkeDiabetes_Doses.Name = "lkeDiabetes_Doses";
+			this.lkeDiabetes_Doses.Properties.Appearance.BackColor = System.Drawing.SystemColors.Info;
+			this.lkeDiabetes_Doses.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.lkeDiabetes_Doses.Properties.Appearance.ForeColor = System.Drawing.Color.Navy;
+			this.lkeDiabetes_Doses.Properties.Appearance.Options.UseBackColor = true;
+			this.lkeDiabetes_Doses.Properties.Appearance.Options.UseFont = true;
+			this.lkeDiabetes_Doses.Properties.Appearance.Options.UseForeColor = true;
+			this.lkeDiabetes_Doses.Properties.Appearance.Options.UseTextOptions = true;
+			this.lkeDiabetes_Doses.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.lkeDiabetes_Doses.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
+			this.lkeDiabetes_Doses.Properties.View = this.gridView2;
+			this.lkeDiabetes_Doses.Size = new System.Drawing.Size(200, 20);
+			this.lkeDiabetes_Doses.StyleController = this.layoutControl1;
+			this.lkeDiabetes_Doses.TabIndex = 7;
+			// 
+			// gridView2
+			// 
+			this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.gridView2.Name = "gridView2";
+			this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.gridView2.OptionsView.ShowGroupPanel = false;
+			// 
+			// lkeDiabetes_Medications
+			// 
+			this.lkeDiabetes_Medications.Location = new System.Drawing.Point(495, 398);
+			this.lkeDiabetes_Medications.MaximumSize = new System.Drawing.Size(200, 0);
+			this.lkeDiabetes_Medications.MinimumSize = new System.Drawing.Size(200, 0);
+			this.lkeDiabetes_Medications.Name = "lkeDiabetes_Medications";
+			this.lkeDiabetes_Medications.Properties.Appearance.BackColor = System.Drawing.SystemColors.Info;
+			this.lkeDiabetes_Medications.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.lkeDiabetes_Medications.Properties.Appearance.ForeColor = System.Drawing.Color.Navy;
+			this.lkeDiabetes_Medications.Properties.Appearance.Options.UseBackColor = true;
+			this.lkeDiabetes_Medications.Properties.Appearance.Options.UseFont = true;
+			this.lkeDiabetes_Medications.Properties.Appearance.Options.UseForeColor = true;
+			this.lkeDiabetes_Medications.Properties.Appearance.Options.UseTextOptions = true;
+			this.lkeDiabetes_Medications.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.lkeDiabetes_Medications.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+			this.lkeDiabetes_Medications.Properties.View = this.gridLookUpEdit1View;
+			this.lkeDiabetes_Medications.Size = new System.Drawing.Size(200, 20);
+			this.lkeDiabetes_Medications.StyleController = this.layoutControl1;
+			this.lkeDiabetes_Medications.TabIndex = 6;
+			// 
+			// gridLookUpEdit1View
+			// 
+			this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+			this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+			// 
+			// chkDiabetes_No
+			// 
+			this.chkDiabetes_No.AllowAllUnchecked = true;
+			this.chkDiabetes_No.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetes_No.Appearance.Options.UseFont = true;
+			this.chkDiabetes_No.GroupIndex = 1;
+			this.chkDiabetes_No.Location = new System.Drawing.Point(104, 312);
+			this.chkDiabetes_No.MaximumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetes_No.MinimumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetes_No.Name = "chkDiabetes_No";
+			this.chkDiabetes_No.Size = new System.Drawing.Size(100, 30);
+			this.chkDiabetes_No.StyleController = this.layoutControl1;
+			this.chkDiabetes_No.TabIndex = 19;
+			this.chkDiabetes_No.TabStop = false;
+			this.chkDiabetes_No.Text = "No";
+			this.chkDiabetes_No.CheckedChanged += new System.EventHandler(this.chkDiabetes_No_CheckedChanged);
+			// 
+			// chkDiabetes_Yes
+			// 
+			this.chkDiabetes_Yes.AllowAllUnchecked = true;
+			this.chkDiabetes_Yes.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetes_Yes.Appearance.Options.UseFont = true;
+			this.chkDiabetes_Yes.GroupIndex = 1;
+			this.chkDiabetes_Yes.Location = new System.Drawing.Point(4, 312);
+			this.chkDiabetes_Yes.MaximumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetes_Yes.MinimumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetes_Yes.Name = "chkDiabetes_Yes";
+			this.chkDiabetes_Yes.Size = new System.Drawing.Size(100, 30);
+			this.chkDiabetes_Yes.StyleController = this.layoutControl1;
+			this.chkDiabetes_Yes.TabIndex = 18;
+			this.chkDiabetes_Yes.TabStop = false;
+			this.chkDiabetes_Yes.Text = "Yes";
+			this.chkDiabetes_Yes.CheckedChanged += new System.EventHandler(this.chkDiabetes_Yes_CheckedChanged);
+			// 
+			// chkDiabetes_Yearly
+			// 
+			this.chkDiabetes_Yearly.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetes_Yearly.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+			this.chkDiabetes_Yearly.Appearance.Options.UseFont = true;
+			this.chkDiabetes_Yearly.Appearance.Options.UseForeColor = true;
+			this.chkDiabetes_Yearly.GroupIndex = 5;
+			this.chkDiabetes_Yearly.Location = new System.Drawing.Point(784, 432);
+			this.chkDiabetes_Yearly.MaximumSize = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Yearly.MinimumSize = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Yearly.Name = "chkDiabetes_Yearly";
+			this.chkDiabetes_Yearly.Size = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Yearly.StyleController = this.layoutControl1;
+			this.chkDiabetes_Yearly.TabIndex = 20;
+			this.chkDiabetes_Yearly.TabStop = false;
+			this.chkDiabetes_Yearly.Text = "Year(s)";
+			// 
+			// chkDiabetes_Monthly
+			// 
+			this.chkDiabetes_Monthly.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetes_Monthly.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+			this.chkDiabetes_Monthly.Appearance.Options.UseFont = true;
+			this.chkDiabetes_Monthly.Appearance.Options.UseForeColor = true;
+			this.chkDiabetes_Monthly.GroupIndex = 5;
+			this.chkDiabetes_Monthly.Location = new System.Drawing.Point(721, 432);
+			this.chkDiabetes_Monthly.MaximumSize = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Monthly.MinimumSize = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Monthly.Name = "chkDiabetes_Monthly";
+			this.chkDiabetes_Monthly.Size = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Monthly.StyleController = this.layoutControl1;
+			this.chkDiabetes_Monthly.TabIndex = 22;
+			this.chkDiabetes_Monthly.TabStop = false;
+			this.chkDiabetes_Monthly.Text = "Month(s)";
+			// 
+			// chkDiabetes_Weekly
+			// 
+			this.chkDiabetes_Weekly.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetes_Weekly.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+			this.chkDiabetes_Weekly.Appearance.Options.UseFont = true;
+			this.chkDiabetes_Weekly.Appearance.Options.UseForeColor = true;
+			this.chkDiabetes_Weekly.GroupIndex = 5;
+			this.chkDiabetes_Weekly.Location = new System.Drawing.Point(661, 432);
+			this.chkDiabetes_Weekly.MaximumSize = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Weekly.MinimumSize = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Weekly.Name = "chkDiabetes_Weekly";
+			this.chkDiabetes_Weekly.Size = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Weekly.StyleController = this.layoutControl1;
+			this.chkDiabetes_Weekly.TabIndex = 18;
+			this.chkDiabetes_Weekly.TabStop = false;
+			this.chkDiabetes_Weekly.Text = "Week(s)";
+			// 
+			// chkDiabetes_Daily
+			// 
+			this.chkDiabetes_Daily.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetes_Daily.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+			this.chkDiabetes_Daily.Appearance.Options.UseFont = true;
+			this.chkDiabetes_Daily.Appearance.Options.UseForeColor = true;
+			this.chkDiabetes_Daily.GroupIndex = 5;
+			this.chkDiabetes_Daily.Location = new System.Drawing.Point(601, 432);
+			this.chkDiabetes_Daily.MaximumSize = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Daily.MinimumSize = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Daily.Name = "chkDiabetes_Daily";
+			this.chkDiabetes_Daily.Size = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Daily.StyleController = this.layoutControl1;
+			this.chkDiabetes_Daily.TabIndex = 17;
+			this.chkDiabetes_Daily.TabStop = false;
+			this.chkDiabetes_Daily.Text = "Day(s)";
+			// 
+			// chkDiabetes_Hourly
+			// 
+			this.chkDiabetes_Hourly.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetes_Hourly.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+			this.chkDiabetes_Hourly.Appearance.Options.UseFont = true;
+			this.chkDiabetes_Hourly.Appearance.Options.UseForeColor = true;
+			this.chkDiabetes_Hourly.Checked = true;
+			this.chkDiabetes_Hourly.GroupIndex = 5;
+			this.chkDiabetes_Hourly.Location = new System.Drawing.Point(541, 432);
+			this.chkDiabetes_Hourly.MaximumSize = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Hourly.MinimumSize = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Hourly.Name = "chkDiabetes_Hourly";
+			this.chkDiabetes_Hourly.Size = new System.Drawing.Size(60, 30);
+			this.chkDiabetes_Hourly.StyleController = this.layoutControl1;
+			this.chkDiabetes_Hourly.TabIndex = 16;
+			this.chkDiabetes_Hourly.Text = "Hour(s)";
+			// 
+			// spnDiabetes_Duration
+			// 
+			this.spnDiabetes_Duration.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+			this.spnDiabetes_Duration.Location = new System.Drawing.Point(427, 439);
+			this.spnDiabetes_Duration.MaximumSize = new System.Drawing.Size(100, 0);
+			this.spnDiabetes_Duration.MinimumSize = new System.Drawing.Size(100, 0);
+			this.spnDiabetes_Duration.Name = "spnDiabetes_Duration";
+			this.spnDiabetes_Duration.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.spnDiabetes_Duration.Properties.Appearance.Options.UseFont = true;
+			this.spnDiabetes_Duration.Properties.Appearance.Options.UseTextOptions = true;
+			this.spnDiabetes_Duration.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.spnDiabetes_Duration.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+			this.spnDiabetes_Duration.Size = new System.Drawing.Size(100, 20);
+			this.spnDiabetes_Duration.StyleController = this.layoutControl1;
+			this.spnDiabetes_Duration.TabIndex = 13;
+			// 
+			// chkDiabetesMedication_Both
+			// 
+			this.chkDiabetesMedication_Both.AllowAllUnchecked = true;
+			this.chkDiabetesMedication_Both.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetesMedication_Both.Appearance.Options.UseFont = true;
+			this.chkDiabetesMedication_Both.GroupIndex = 4;
+			this.chkDiabetesMedication_Both.Location = new System.Drawing.Point(625, 365);
+			this.chkDiabetesMedication_Both.MaximumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetesMedication_Both.MinimumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetesMedication_Both.Name = "chkDiabetesMedication_Both";
+			this.chkDiabetesMedication_Both.Size = new System.Drawing.Size(100, 30);
+			this.chkDiabetesMedication_Both.StyleController = this.layoutControl1;
+			this.chkDiabetesMedication_Both.TabIndex = 20;
+			this.chkDiabetesMedication_Both.TabStop = false;
+			this.chkDiabetesMedication_Both.Text = "Both";
+			// 
+			// chkDiabetesMedication_Insulin
+			// 
+			this.chkDiabetesMedication_Insulin.AllowAllUnchecked = true;
+			this.chkDiabetesMedication_Insulin.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetesMedication_Insulin.Appearance.Options.UseFont = true;
+			this.chkDiabetesMedication_Insulin.GroupIndex = 4;
+			this.chkDiabetesMedication_Insulin.Location = new System.Drawing.Point(525, 365);
+			this.chkDiabetesMedication_Insulin.MaximumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetesMedication_Insulin.MinimumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetesMedication_Insulin.Name = "chkDiabetesMedication_Insulin";
+			this.chkDiabetesMedication_Insulin.Size = new System.Drawing.Size(100, 30);
+			this.chkDiabetesMedication_Insulin.StyleController = this.layoutControl1;
+			this.chkDiabetesMedication_Insulin.TabIndex = 21;
+			this.chkDiabetesMedication_Insulin.TabStop = false;
+			this.chkDiabetesMedication_Insulin.Text = "Insulin";
+			// 
+			// chkDiabetesMedication_Tables
+			// 
+			this.chkDiabetesMedication_Tables.AllowAllUnchecked = true;
+			this.chkDiabetesMedication_Tables.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetesMedication_Tables.Appearance.Options.UseFont = true;
+			this.chkDiabetesMedication_Tables.GroupIndex = 4;
+			this.chkDiabetesMedication_Tables.Location = new System.Drawing.Point(425, 365);
+			this.chkDiabetesMedication_Tables.MaximumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetesMedication_Tables.MinimumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetesMedication_Tables.Name = "chkDiabetesMedication_Tables";
+			this.chkDiabetesMedication_Tables.Size = new System.Drawing.Size(100, 30);
+			this.chkDiabetesMedication_Tables.StyleController = this.layoutControl1;
+			this.chkDiabetesMedication_Tables.TabIndex = 19;
+			this.chkDiabetesMedication_Tables.TabStop = false;
+			this.chkDiabetesMedication_Tables.Text = "Tablets";
+			// 
+			// chkDiabetesControlled_No
+			// 
+			this.chkDiabetesControlled_No.AllowAllUnchecked = true;
+			this.chkDiabetesControlled_No.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetesControlled_No.Appearance.Options.UseFont = true;
+			this.chkDiabetesControlled_No.GroupIndex = 3;
+			this.chkDiabetesControlled_No.Location = new System.Drawing.Point(317, 365);
+			this.chkDiabetesControlled_No.MaximumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetesControlled_No.MinimumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetesControlled_No.Name = "chkDiabetesControlled_No";
+			this.chkDiabetesControlled_No.Size = new System.Drawing.Size(100, 30);
+			this.chkDiabetesControlled_No.StyleController = this.layoutControl1;
+			this.chkDiabetesControlled_No.TabIndex = 20;
+			this.chkDiabetesControlled_No.TabStop = false;
+			this.chkDiabetesControlled_No.Text = "No";
+			// 
+			// chkDiabetesControlled_Yes
+			// 
+			this.chkDiabetesControlled_Yes.AllowAllUnchecked = true;
+			this.chkDiabetesControlled_Yes.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetesControlled_Yes.Appearance.Options.UseFont = true;
+			this.chkDiabetesControlled_Yes.GroupIndex = 3;
+			this.chkDiabetesControlled_Yes.Location = new System.Drawing.Point(217, 365);
+			this.chkDiabetesControlled_Yes.MaximumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetesControlled_Yes.MinimumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetesControlled_Yes.Name = "chkDiabetesControlled_Yes";
+			this.chkDiabetesControlled_Yes.Size = new System.Drawing.Size(100, 30);
+			this.chkDiabetesControlled_Yes.StyleController = this.layoutControl1;
+			this.chkDiabetesControlled_Yes.TabIndex = 18;
+			this.chkDiabetesControlled_Yes.TabStop = false;
+			this.chkDiabetesControlled_Yes.Text = "Yes";
+			// 
+			// labelControl4
+			// 
+			this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+			this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+			this.labelControl4.Location = new System.Drawing.Point(114, 402);
+			this.labelControl4.Name = "labelControl4";
+			this.labelControl4.Size = new System.Drawing.Size(21, 17);
+			this.labelControl4.StyleController = this.layoutControl1;
+			this.labelControl4.TabIndex = 19;
+			this.labelControl4.Text = "%";
+			// 
+			// spnHbA1C
+			// 
+			this.spnHbA1C.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+			this.spnHbA1C.Location = new System.Drawing.Point(8, 420);
+			this.spnHbA1C.MaximumSize = new System.Drawing.Size(100, 0);
+			this.spnHbA1C.MinimumSize = new System.Drawing.Size(100, 0);
+			this.spnHbA1C.Name = "spnHbA1C";
+			this.spnHbA1C.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.spnHbA1C.Properties.Appearance.Options.UseFont = true;
+			this.spnHbA1C.Properties.Appearance.Options.UseTextOptions = true;
+			this.spnHbA1C.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.spnHbA1C.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+			this.spnHbA1C.Properties.MaxValue = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+			this.spnHbA1C.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.spnHbA1C.Size = new System.Drawing.Size(100, 20);
+			this.spnHbA1C.StyleController = this.layoutControl1;
+			this.spnHbA1C.TabIndex = 13;
+			// 
+			// chkDiabetes_Type2
+			// 
+			this.chkDiabetes_Type2.AllowAllUnchecked = true;
+			this.chkDiabetes_Type2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetes_Type2.Appearance.Options.UseFont = true;
+			this.chkDiabetes_Type2.GroupIndex = 2;
+			this.chkDiabetes_Type2.Location = new System.Drawing.Point(109, 365);
+			this.chkDiabetes_Type2.MaximumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetes_Type2.MinimumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetes_Type2.Name = "chkDiabetes_Type2";
+			this.chkDiabetes_Type2.Size = new System.Drawing.Size(100, 30);
+			this.chkDiabetes_Type2.StyleController = this.layoutControl1;
+			this.chkDiabetes_Type2.TabIndex = 18;
+			this.chkDiabetes_Type2.TabStop = false;
+			this.chkDiabetes_Type2.Text = "Type 2";
+			// 
+			// chkDiabetes_Type1
+			// 
+			this.chkDiabetes_Type1.AllowAllUnchecked = true;
+			this.chkDiabetes_Type1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDiabetes_Type1.Appearance.Options.UseFont = true;
+			this.chkDiabetes_Type1.GroupIndex = 2;
+			this.chkDiabetes_Type1.Location = new System.Drawing.Point(9, 365);
+			this.chkDiabetes_Type1.MaximumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetes_Type1.MinimumSize = new System.Drawing.Size(100, 30);
+			this.chkDiabetes_Type1.Name = "chkDiabetes_Type1";
+			this.chkDiabetes_Type1.Size = new System.Drawing.Size(100, 30);
+			this.chkDiabetes_Type1.StyleController = this.layoutControl1;
+			this.chkDiabetes_Type1.TabIndex = 17;
+			this.chkDiabetes_Type1.TabStop = false;
+			this.chkDiabetes_Type1.Text = "Type 1";
 			// 
 			// lkeTriggersOfDrugAllergies
 			// 
@@ -442,7 +806,7 @@
 			this.lkeTriggersOfDrugAllergies.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeTriggersOfDrugAllergies.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeTriggersOfDrugAllergies.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
 			this.lkeTriggersOfDrugAllergies.Properties.View = this.gridView4;
 			this.lkeTriggersOfDrugAllergies.Size = new System.Drawing.Size(200, 20);
 			this.lkeTriggersOfDrugAllergies.StyleController = this.layoutControl1;
@@ -658,7 +1022,7 @@
 			this.spnHypertension_Duration.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnHypertension_Duration.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnHypertension_Duration.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
 			this.spnHypertension_Duration.Size = new System.Drawing.Size(100, 20);
 			this.spnHypertension_Duration.StyleController = this.layoutControl1;
 			this.spnHypertension_Duration.TabIndex = 14;
@@ -678,7 +1042,7 @@
 			this.lkeHypertension_Doses.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeHypertension_Doses.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeHypertension_Doses.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
 			this.lkeHypertension_Doses.Properties.View = this.gridView3;
 			this.lkeHypertension_Doses.Size = new System.Drawing.Size(200, 20);
 			this.lkeHypertension_Doses.StyleController = this.layoutControl1;
@@ -706,7 +1070,7 @@
 			this.lkeHypertension_Medications.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeHypertension_Medications.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeHypertension_Medications.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
 			this.lkeHypertension_Medications.Properties.View = this.gridView1;
 			this.lkeHypertension_Medications.Size = new System.Drawing.Size(200, 20);
 			this.lkeHypertension_Medications.StyleController = this.layoutControl1;
@@ -751,62 +1115,6 @@
 			this.chkHypertensionControlled_Yes.TabStop = false;
 			this.chkHypertensionControlled_Yes.Text = "Yes";
 			// 
-			// lkeDiabetes_Doses
-			// 
-			this.lkeDiabetes_Doses.Location = new System.Drawing.Point(748, 398);
-			this.lkeDiabetes_Doses.MaximumSize = new System.Drawing.Size(200, 0);
-			this.lkeDiabetes_Doses.MinimumSize = new System.Drawing.Size(200, 0);
-			this.lkeDiabetes_Doses.Name = "lkeDiabetes_Doses";
-			this.lkeDiabetes_Doses.Properties.Appearance.BackColor = System.Drawing.SystemColors.Info;
-			this.lkeDiabetes_Doses.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.lkeDiabetes_Doses.Properties.Appearance.ForeColor = System.Drawing.Color.Navy;
-			this.lkeDiabetes_Doses.Properties.Appearance.Options.UseBackColor = true;
-			this.lkeDiabetes_Doses.Properties.Appearance.Options.UseFont = true;
-			this.lkeDiabetes_Doses.Properties.Appearance.Options.UseForeColor = true;
-			this.lkeDiabetes_Doses.Properties.Appearance.Options.UseTextOptions = true;
-			this.lkeDiabetes_Doses.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.lkeDiabetes_Doses.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-			this.lkeDiabetes_Doses.Properties.View = this.gridView2;
-			this.lkeDiabetes_Doses.Size = new System.Drawing.Size(200, 20);
-			this.lkeDiabetes_Doses.StyleController = this.layoutControl1;
-			this.lkeDiabetes_Doses.TabIndex = 7;
-			// 
-			// gridView2
-			// 
-			this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-			this.gridView2.Name = "gridView2";
-			this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
-			this.gridView2.OptionsView.ShowGroupPanel = false;
-			// 
-			// lkeDiabetes_Medications
-			// 
-			this.lkeDiabetes_Medications.Location = new System.Drawing.Point(495, 398);
-			this.lkeDiabetes_Medications.MaximumSize = new System.Drawing.Size(200, 0);
-			this.lkeDiabetes_Medications.MinimumSize = new System.Drawing.Size(200, 0);
-			this.lkeDiabetes_Medications.Name = "lkeDiabetes_Medications";
-			this.lkeDiabetes_Medications.Properties.Appearance.BackColor = System.Drawing.SystemColors.Info;
-			this.lkeDiabetes_Medications.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.lkeDiabetes_Medications.Properties.Appearance.ForeColor = System.Drawing.Color.Navy;
-			this.lkeDiabetes_Medications.Properties.Appearance.Options.UseBackColor = true;
-			this.lkeDiabetes_Medications.Properties.Appearance.Options.UseFont = true;
-			this.lkeDiabetes_Medications.Properties.Appearance.Options.UseForeColor = true;
-			this.lkeDiabetes_Medications.Properties.Appearance.Options.UseTextOptions = true;
-			this.lkeDiabetes_Medications.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.lkeDiabetes_Medications.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
-			this.lkeDiabetes_Medications.Properties.View = this.gridLookUpEdit1View;
-			this.lkeDiabetes_Medications.Size = new System.Drawing.Size(200, 20);
-			this.lkeDiabetes_Medications.StyleController = this.layoutControl1;
-			this.lkeDiabetes_Medications.TabIndex = 6;
-			// 
-			// gridLookUpEdit1View
-			// 
-			this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-			this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
-			this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-			this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-			// 
 			// chkHypertension_No
 			// 
 			this.chkHypertension_No.AllowAllUnchecked = true;
@@ -841,301 +1149,6 @@
 			this.chkHypertension_Yes.Text = "Yes";
 			this.chkHypertension_Yes.CheckedChanged += new System.EventHandler(this.chkHypertension_Yes_CheckedChanged);
 			// 
-			// chkDiabetes_No
-			// 
-			this.chkDiabetes_No.AllowAllUnchecked = true;
-			this.chkDiabetes_No.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetes_No.Appearance.Options.UseFont = true;
-			this.chkDiabetes_No.GroupIndex = 1;
-			this.chkDiabetes_No.Location = new System.Drawing.Point(104, 312);
-			this.chkDiabetes_No.MaximumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetes_No.MinimumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetes_No.Name = "chkDiabetes_No";
-			this.chkDiabetes_No.Size = new System.Drawing.Size(100, 30);
-			this.chkDiabetes_No.StyleController = this.layoutControl1;
-			this.chkDiabetes_No.TabIndex = 19;
-			this.chkDiabetes_No.TabStop = false;
-			this.chkDiabetes_No.Text = "No";
-			this.chkDiabetes_No.CheckedChanged += new System.EventHandler(this.chkDiabetes_No_CheckedChanged);
-			// 
-			// chkDiabetes_Yes
-			// 
-			this.chkDiabetes_Yes.AllowAllUnchecked = true;
-			this.chkDiabetes_Yes.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetes_Yes.Appearance.Options.UseFont = true;
-			this.chkDiabetes_Yes.GroupIndex = 1;
-			this.chkDiabetes_Yes.Location = new System.Drawing.Point(4, 312);
-			this.chkDiabetes_Yes.MaximumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetes_Yes.MinimumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetes_Yes.Name = "chkDiabetes_Yes";
-			this.chkDiabetes_Yes.Size = new System.Drawing.Size(100, 30);
-			this.chkDiabetes_Yes.StyleController = this.layoutControl1;
-			this.chkDiabetes_Yes.TabIndex = 18;
-			this.chkDiabetes_Yes.TabStop = false;
-			this.chkDiabetes_Yes.Text = "Yes";
-			this.chkDiabetes_Yes.CheckedChanged += new System.EventHandler(this.chkDiabetes_Yes_CheckedChanged);
-			// 
-			// chkDiabetes_Yearly
-			// 
-			this.chkDiabetes_Yearly.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetes_Yearly.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-			this.chkDiabetes_Yearly.Appearance.Options.UseFont = true;
-			this.chkDiabetes_Yearly.Appearance.Options.UseForeColor = true;
-			this.chkDiabetes_Yearly.GroupIndex = 5;
-			this.chkDiabetes_Yearly.Location = new System.Drawing.Point(784, 432);
-			this.chkDiabetes_Yearly.MaximumSize = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Yearly.MinimumSize = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Yearly.Name = "chkDiabetes_Yearly";
-			this.chkDiabetes_Yearly.Size = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Yearly.StyleController = this.layoutControl1;
-			this.chkDiabetes_Yearly.TabIndex = 20;
-			this.chkDiabetes_Yearly.TabStop = false;
-			this.chkDiabetes_Yearly.Text = "Year(s)";
-			// 
-			// chkDiabetes_Monthly
-			// 
-			this.chkDiabetes_Monthly.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetes_Monthly.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-			this.chkDiabetes_Monthly.Appearance.Options.UseFont = true;
-			this.chkDiabetes_Monthly.Appearance.Options.UseForeColor = true;
-			this.chkDiabetes_Monthly.GroupIndex = 5;
-			this.chkDiabetes_Monthly.Location = new System.Drawing.Point(721, 432);
-			this.chkDiabetes_Monthly.MaximumSize = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Monthly.MinimumSize = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Monthly.Name = "chkDiabetes_Monthly";
-			this.chkDiabetes_Monthly.Size = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Monthly.StyleController = this.layoutControl1;
-			this.chkDiabetes_Monthly.TabIndex = 22;
-			this.chkDiabetes_Monthly.TabStop = false;
-			this.chkDiabetes_Monthly.Text = "Month(s)";
-			// 
-			// chkDiabetes_Weekly
-			// 
-			this.chkDiabetes_Weekly.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetes_Weekly.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-			this.chkDiabetes_Weekly.Appearance.Options.UseFont = true;
-			this.chkDiabetes_Weekly.Appearance.Options.UseForeColor = true;
-			this.chkDiabetes_Weekly.GroupIndex = 5;
-			this.chkDiabetes_Weekly.Location = new System.Drawing.Point(661, 432);
-			this.chkDiabetes_Weekly.MaximumSize = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Weekly.MinimumSize = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Weekly.Name = "chkDiabetes_Weekly";
-			this.chkDiabetes_Weekly.Size = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Weekly.StyleController = this.layoutControl1;
-			this.chkDiabetes_Weekly.TabIndex = 18;
-			this.chkDiabetes_Weekly.TabStop = false;
-			this.chkDiabetes_Weekly.Text = "Week(s)";
-			// 
-			// chkDiabetes_Daily
-			// 
-			this.chkDiabetes_Daily.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetes_Daily.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-			this.chkDiabetes_Daily.Appearance.Options.UseFont = true;
-			this.chkDiabetes_Daily.Appearance.Options.UseForeColor = true;
-			this.chkDiabetes_Daily.GroupIndex = 5;
-			this.chkDiabetes_Daily.Location = new System.Drawing.Point(601, 432);
-			this.chkDiabetes_Daily.MaximumSize = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Daily.MinimumSize = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Daily.Name = "chkDiabetes_Daily";
-			this.chkDiabetes_Daily.Size = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Daily.StyleController = this.layoutControl1;
-			this.chkDiabetes_Daily.TabIndex = 17;
-			this.chkDiabetes_Daily.TabStop = false;
-			this.chkDiabetes_Daily.Text = "Day(s)";
-			// 
-			// chkDiabetes_Hourly
-			// 
-			this.chkDiabetes_Hourly.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetes_Hourly.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-			this.chkDiabetes_Hourly.Appearance.Options.UseFont = true;
-			this.chkDiabetes_Hourly.Appearance.Options.UseForeColor = true;
-			this.chkDiabetes_Hourly.Checked = true;
-			this.chkDiabetes_Hourly.GroupIndex = 5;
-			this.chkDiabetes_Hourly.Location = new System.Drawing.Point(541, 432);
-			this.chkDiabetes_Hourly.MaximumSize = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Hourly.MinimumSize = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Hourly.Name = "chkDiabetes_Hourly";
-			this.chkDiabetes_Hourly.Size = new System.Drawing.Size(60, 30);
-			this.chkDiabetes_Hourly.StyleController = this.layoutControl1;
-			this.chkDiabetes_Hourly.TabIndex = 16;
-			this.chkDiabetes_Hourly.Text = "Hour(s)";
-			// 
-			// spnDiabetes_Duration
-			// 
-			this.spnDiabetes_Duration.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-			this.spnDiabetes_Duration.Location = new System.Drawing.Point(427, 439);
-			this.spnDiabetes_Duration.MaximumSize = new System.Drawing.Size(100, 0);
-			this.spnDiabetes_Duration.MinimumSize = new System.Drawing.Size(100, 0);
-			this.spnDiabetes_Duration.Name = "spnDiabetes_Duration";
-			this.spnDiabetes_Duration.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.spnDiabetes_Duration.Properties.Appearance.Options.UseFont = true;
-			this.spnDiabetes_Duration.Properties.Appearance.Options.UseTextOptions = true;
-			this.spnDiabetes_Duration.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.spnDiabetes_Duration.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
-			this.spnDiabetes_Duration.Size = new System.Drawing.Size(100, 20);
-			this.spnDiabetes_Duration.StyleController = this.layoutControl1;
-			this.spnDiabetes_Duration.TabIndex = 13;
-			// 
-			// chkDiabetesMedication_Both
-			// 
-			this.chkDiabetesMedication_Both.AllowAllUnchecked = true;
-			this.chkDiabetesMedication_Both.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetesMedication_Both.Appearance.Options.UseFont = true;
-			this.chkDiabetesMedication_Both.GroupIndex = 4;
-			this.chkDiabetesMedication_Both.Location = new System.Drawing.Point(625, 365);
-			this.chkDiabetesMedication_Both.MaximumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetesMedication_Both.MinimumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetesMedication_Both.Name = "chkDiabetesMedication_Both";
-			this.chkDiabetesMedication_Both.Size = new System.Drawing.Size(100, 30);
-			this.chkDiabetesMedication_Both.StyleController = this.layoutControl1;
-			this.chkDiabetesMedication_Both.TabIndex = 20;
-			this.chkDiabetesMedication_Both.TabStop = false;
-			this.chkDiabetesMedication_Both.Text = "Both";
-			// 
-			// chkDiabetesMedication_Insulin
-			// 
-			this.chkDiabetesMedication_Insulin.AllowAllUnchecked = true;
-			this.chkDiabetesMedication_Insulin.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetesMedication_Insulin.Appearance.Options.UseFont = true;
-			this.chkDiabetesMedication_Insulin.GroupIndex = 4;
-			this.chkDiabetesMedication_Insulin.Location = new System.Drawing.Point(525, 365);
-			this.chkDiabetesMedication_Insulin.MaximumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetesMedication_Insulin.MinimumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetesMedication_Insulin.Name = "chkDiabetesMedication_Insulin";
-			this.chkDiabetesMedication_Insulin.Size = new System.Drawing.Size(100, 30);
-			this.chkDiabetesMedication_Insulin.StyleController = this.layoutControl1;
-			this.chkDiabetesMedication_Insulin.TabIndex = 21;
-			this.chkDiabetesMedication_Insulin.TabStop = false;
-			this.chkDiabetesMedication_Insulin.Text = "Insulin";
-			// 
-			// chkDiabetesMedication_Tables
-			// 
-			this.chkDiabetesMedication_Tables.AllowAllUnchecked = true;
-			this.chkDiabetesMedication_Tables.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetesMedication_Tables.Appearance.Options.UseFont = true;
-			this.chkDiabetesMedication_Tables.GroupIndex = 4;
-			this.chkDiabetesMedication_Tables.Location = new System.Drawing.Point(425, 365);
-			this.chkDiabetesMedication_Tables.MaximumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetesMedication_Tables.MinimumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetesMedication_Tables.Name = "chkDiabetesMedication_Tables";
-			this.chkDiabetesMedication_Tables.Size = new System.Drawing.Size(100, 30);
-			this.chkDiabetesMedication_Tables.StyleController = this.layoutControl1;
-			this.chkDiabetesMedication_Tables.TabIndex = 19;
-			this.chkDiabetesMedication_Tables.TabStop = false;
-			this.chkDiabetesMedication_Tables.Text = "Tablets";
-			// 
-			// chkDiabetesControlled_No
-			// 
-			this.chkDiabetesControlled_No.AllowAllUnchecked = true;
-			this.chkDiabetesControlled_No.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetesControlled_No.Appearance.Options.UseFont = true;
-			this.chkDiabetesControlled_No.GroupIndex = 3;
-			this.chkDiabetesControlled_No.Location = new System.Drawing.Point(317, 365);
-			this.chkDiabetesControlled_No.MaximumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetesControlled_No.MinimumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetesControlled_No.Name = "chkDiabetesControlled_No";
-			this.chkDiabetesControlled_No.Size = new System.Drawing.Size(100, 30);
-			this.chkDiabetesControlled_No.StyleController = this.layoutControl1;
-			this.chkDiabetesControlled_No.TabIndex = 20;
-			this.chkDiabetesControlled_No.TabStop = false;
-			this.chkDiabetesControlled_No.Text = "No";
-			// 
-			// chkDiabetesControlled_Yes
-			// 
-			this.chkDiabetesControlled_Yes.AllowAllUnchecked = true;
-			this.chkDiabetesControlled_Yes.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetesControlled_Yes.Appearance.Options.UseFont = true;
-			this.chkDiabetesControlled_Yes.GroupIndex = 3;
-			this.chkDiabetesControlled_Yes.Location = new System.Drawing.Point(217, 365);
-			this.chkDiabetesControlled_Yes.MaximumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetesControlled_Yes.MinimumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetesControlled_Yes.Name = "chkDiabetesControlled_Yes";
-			this.chkDiabetesControlled_Yes.Size = new System.Drawing.Size(100, 30);
-			this.chkDiabetesControlled_Yes.StyleController = this.layoutControl1;
-			this.chkDiabetesControlled_Yes.TabIndex = 18;
-			this.chkDiabetesControlled_Yes.TabStop = false;
-			this.chkDiabetesControlled_Yes.Text = "Yes";
-			// 
-			// labelControl4
-			// 
-			this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-			this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-			this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl4.Location = new System.Drawing.Point(114, 402);
-			this.labelControl4.Name = "labelControl4";
-			this.labelControl4.Size = new System.Drawing.Size(21, 17);
-			this.labelControl4.StyleController = this.layoutControl1;
-			this.labelControl4.TabIndex = 19;
-			this.labelControl4.Text = "%";
-			// 
-			// spnHbA1C
-			// 
-			this.spnHbA1C.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-			this.spnHbA1C.Location = new System.Drawing.Point(8, 420);
-			this.spnHbA1C.MaximumSize = new System.Drawing.Size(100, 0);
-			this.spnHbA1C.MinimumSize = new System.Drawing.Size(100, 0);
-			this.spnHbA1C.Name = "spnHbA1C";
-			this.spnHbA1C.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.spnHbA1C.Properties.Appearance.Options.UseFont = true;
-			this.spnHbA1C.Properties.Appearance.Options.UseTextOptions = true;
-			this.spnHbA1C.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.spnHbA1C.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
-			this.spnHbA1C.Properties.MaxValue = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-			this.spnHbA1C.Properties.MinValue = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.spnHbA1C.Size = new System.Drawing.Size(100, 20);
-			this.spnHbA1C.StyleController = this.layoutControl1;
-			this.spnHbA1C.TabIndex = 13;
-			// 
-			// chkDiabetes_Type2
-			// 
-			this.chkDiabetes_Type2.AllowAllUnchecked = true;
-			this.chkDiabetes_Type2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetes_Type2.Appearance.Options.UseFont = true;
-			this.chkDiabetes_Type2.GroupIndex = 2;
-			this.chkDiabetes_Type2.Location = new System.Drawing.Point(109, 365);
-			this.chkDiabetes_Type2.MaximumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetes_Type2.MinimumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetes_Type2.Name = "chkDiabetes_Type2";
-			this.chkDiabetes_Type2.Size = new System.Drawing.Size(100, 30);
-			this.chkDiabetes_Type2.StyleController = this.layoutControl1;
-			this.chkDiabetes_Type2.TabIndex = 18;
-			this.chkDiabetes_Type2.TabStop = false;
-			this.chkDiabetes_Type2.Text = "Type 2";
-			// 
-			// chkDiabetes_Type1
-			// 
-			this.chkDiabetes_Type1.AllowAllUnchecked = true;
-			this.chkDiabetes_Type1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDiabetes_Type1.Appearance.Options.UseFont = true;
-			this.chkDiabetes_Type1.GroupIndex = 2;
-			this.chkDiabetes_Type1.Location = new System.Drawing.Point(9, 365);
-			this.chkDiabetes_Type1.MaximumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetes_Type1.MinimumSize = new System.Drawing.Size(100, 30);
-			this.chkDiabetes_Type1.Name = "chkDiabetes_Type1";
-			this.chkDiabetes_Type1.Size = new System.Drawing.Size(100, 30);
-			this.chkDiabetes_Type1.StyleController = this.layoutControl1;
-			this.chkDiabetes_Type1.TabIndex = 17;
-			this.chkDiabetes_Type1.TabStop = false;
-			this.chkDiabetes_Type1.Text = "Type 1";
-			// 
 			// layoutControlGroup1
 			// 
 			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -1155,7 +1168,10 @@
             this.lytGroup_Hepatitis,
             this.lytGroup_Asthma,
             this.lytGroup_Allergies,
-            this.layoutControlItem45});
+            this.layoutControlItem45,
+            this.layoutControlItem46,
+            this.layoutControlItem47,
+            this.layoutControlItem48});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -1170,7 +1186,7 @@
 			this.layoutControlItem1.MinSize = new System.Drawing.Size(14, 40);
 			this.layoutControlItem1.Name = "layoutControlItem1";
 			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem1.Size = new System.Drawing.Size(911, 41);
+			this.layoutControlItem1.Size = new System.Drawing.Size(719, 41);
 			this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem1.TextVisible = false;
@@ -1191,7 +1207,7 @@
 			// layoutControlItem3
 			// 
 			this.layoutControlItem3.Control = this.btnPrint;
-			this.layoutControlItem3.Location = new System.Drawing.Point(951, 3);
+			this.layoutControlItem3.Location = new System.Drawing.Point(759, 3);
 			this.layoutControlItem3.Name = "layoutControlItem3";
 			this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem3.Size = new System.Drawing.Size(110, 41);
@@ -2076,13 +2092,88 @@
 			// layoutControlItem45
 			// 
 			this.layoutControlItem45.Control = this.btnFullScreen;
-			this.layoutControlItem45.Location = new System.Drawing.Point(1061, 3);
+			this.layoutControlItem45.Location = new System.Drawing.Point(869, 3);
 			this.layoutControlItem45.Name = "layoutControlItem45";
 			this.layoutControlItem45.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem45.Size = new System.Drawing.Size(41, 41);
 			this.layoutControlItem45.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem45.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem45.TextVisible = false;
+			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSave.Location = new System.Drawing.Point(992, 3);
+			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(110, 40);
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.TabIndex = 13;
+			this.btnSave.Text = "simpleButton1";
+			// 
+			// layoutControlItem46
+			// 
+			this.layoutControlItem46.Control = this.btnSave;
+			this.layoutControlItem46.Location = new System.Drawing.Point(992, 3);
+			this.layoutControlItem46.Name = "layoutControlItem46";
+			this.layoutControlItem46.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem46.Size = new System.Drawing.Size(110, 41);
+			this.layoutControlItem46.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem46.TextVisible = false;
+			// 
+			// btnNewVitalSign
+			// 
+			this.btnNewVitalSign.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnNewVitalSign.Appearance.Options.UseFont = true;
+			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
+			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnNewVitalSign.Location = new System.Drawing.Point(913, 6);
+			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnNewVitalSign.Name = "btnNewVitalSign";
+			this.btnNewVitalSign.Size = new System.Drawing.Size(35, 35);
+			this.btnNewVitalSign.StyleController = this.layoutControl1;
+			this.btnNewVitalSign.TabIndex = 40;
+			this.btnNewVitalSign.Text = "Add New Category";
+			// 
+			// layoutControlItem47
+			// 
+			this.layoutControlItem47.Control = this.btnNewVitalSign;
+			this.layoutControlItem47.Location = new System.Drawing.Point(910, 3);
+			this.layoutControlItem47.Name = "layoutControlItem47";
+			this.layoutControlItem47.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem47.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem47.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem47.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem47.TextVisible = false;
+			// 
+			// btnSearchDiagnosis
+			// 
+			this.btnSearchDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
+			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
+			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSearchDiagnosis.Location = new System.Drawing.Point(954, 6);
+			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
+			this.btnSearchDiagnosis.Size = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.StyleController = this.layoutControl1;
+			this.btnSearchDiagnosis.TabIndex = 43;
+			this.btnSearchDiagnosis.Text = "Add New Diagnosis";
+			// 
+			// layoutControlItem48
+			// 
+			this.layoutControlItem48.Control = this.btnSearchDiagnosis;
+			this.layoutControlItem48.Location = new System.Drawing.Point(951, 3);
+			this.layoutControlItem48.Name = "layoutControlItem48";
+			this.layoutControlItem48.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem48.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem48.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem48.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem48.TextVisible = false;
 			// 
 			// PEMR_MedicalHistory
 			// 
@@ -2097,6 +2188,12 @@
 			this.layoutControl1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.txtTreatmentPlanDetails.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lkeDiabetes_Doses.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lkeDiabetes_Medications.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.spnDiabetes_Duration.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.spnHbA1C.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeTriggersOfDrugAllergies.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnHypertension_Duration.Properties)).EndInit();
@@ -2104,12 +2201,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeHypertension_Medications.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lkeDiabetes_Doses.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lkeDiabetes_Medications.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.spnDiabetes_Duration.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.spnHbA1C.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -2185,6 +2276,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -2318,5 +2412,11 @@
 		private DevExpress.XtraLayout.LayoutControlItem lytGroup_TriggersOfDrugAllergies;
 		private DevExpress.XtraEditors.SimpleButton btnFullScreen;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem45;
+		private DevExpress.XtraEditors.SimpleButton btnSave;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem46;
+		private DevExpress.XtraEditors.SimpleButton btnNewVitalSign;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem47;
+		private DevExpress.XtraEditors.SimpleButton btnSearchDiagnosis;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem48;
 	}
 }

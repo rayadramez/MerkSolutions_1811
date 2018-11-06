@@ -74,6 +74,7 @@
 			this.simpleSeparator6 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.emptySpaceItem13 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.lytFurtherDetails_OS = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
 			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
 			this.btnCopyToOD = new DevExpress.XtraEditors.SimpleButton();
@@ -100,7 +101,6 @@
 			this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
@@ -194,7 +194,7 @@
 			this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.layoutControl1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl1.Name = "layoutControl1";
-			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(166, 120, 308, 433);
+			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(166, 121, 308, 433);
 			this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
 			this.layoutControl1.Root = this.layoutControlGroup1;
 			this.layoutControl1.Size = new System.Drawing.Size(1200, 600);
@@ -432,7 +432,6 @@
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
-            this.layoutControlItem6,
             this.layoutControlItem9,
             this.layoutControlItem7,
             this.emptySpaceItem6,
@@ -470,7 +469,8 @@
             this.emptySpaceItem13,
             this.lytFurtherDetails_OS,
             this.layoutControlItem12,
-            this.layoutControlItem22});
+            this.layoutControlItem22,
+            this.layoutControlItem6});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -835,13 +835,27 @@
 			this.lytFurtherDetails_OS.TextLocation = DevExpress.Utils.Locations.Top;
 			this.lytFurtherDetails_OS.TextSize = new System.Drawing.Size(101, 17);
 			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSave.Location = new System.Drawing.Point(1090, 3);
+			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(110, 40);
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.TabIndex = 11;
+			this.btnSave.Text = "simpleButton1";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+			// 
 			// btnNewVitalSign
 			// 
 			this.btnNewVitalSign.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.btnNewVitalSign.Appearance.Options.UseFont = true;
 			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
 			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnNewVitalSign.Location = new System.Drawing.Point(970, 6);
+			this.btnNewVitalSign.Location = new System.Drawing.Point(1011, 6);
 			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.Name = "btnNewVitalSign";
@@ -981,7 +995,7 @@
 			this.btnFullScreen.Appearance.Options.UseFont = true;
 			this.btnFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
 			this.btnFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnFullScreen.Location = new System.Drawing.Point(1011, 6);
+			this.btnFullScreen.Location = new System.Drawing.Point(970, 6);
 			this.btnFullScreen.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnFullScreen.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnFullScreen.Name = "btnFullScreen";
@@ -1040,7 +1054,7 @@
 			// layoutControlItem6
 			// 
 			this.layoutControlItem6.Control = this.btnFullScreen;
-			this.layoutControlItem6.Location = new System.Drawing.Point(1008, 3);
+			this.layoutControlItem6.Location = new System.Drawing.Point(967, 3);
 			this.layoutControlItem6.Name = "layoutControlItem6";
 			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem6.Size = new System.Drawing.Size(41, 41);
@@ -1154,27 +1168,13 @@
 			// layoutControlItem12
 			// 
 			this.layoutControlItem12.Control = this.btnNewVitalSign;
-			this.layoutControlItem12.Location = new System.Drawing.Point(967, 3);
+			this.layoutControlItem12.Location = new System.Drawing.Point(1008, 3);
 			this.layoutControlItem12.Name = "layoutControlItem12";
 			this.layoutControlItem12.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem12.Size = new System.Drawing.Size(41, 41);
 			this.layoutControlItem12.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem12.TextVisible = false;
-			// 
-			// btnSave
-			// 
-			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_100;
-			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSave.Location = new System.Drawing.Point(1090, 3);
-			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(110, 40);
-			this.btnSave.StyleController = this.layoutControl1;
-			this.btnSave.TabIndex = 11;
-			this.btnSave.Text = "simpleButton1";
-			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// layoutControlItem22
 			// 

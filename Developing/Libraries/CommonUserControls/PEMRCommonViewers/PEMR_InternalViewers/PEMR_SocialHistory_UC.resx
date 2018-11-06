@@ -118,8 +118,153 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnFullScreen.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
+  </data>
+  <data name="btnFullScreen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>691, 6</value>
+  </data>
+  <data name="btnFullScreen.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
+  </data>
+  <data name="btnFullScreen.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
+  </data>
+  <data name="btnFullScreen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnFullScreen.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="btnFullScreen.Text" xml:space="preserve">
+    <value>Add New Diagnosis</value>
+  </data>
+  <data name="&gt;&gt;btnFullScreen.Name" xml:space="preserve">
+    <value>btnFullScreen</value>
+  </data>
+  <data name="&gt;&gt;btnFullScreen.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnFullScreen.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;btnFullScreen.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnSettings.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
+  </data>
+  <data name="btnSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>732, 6</value>
+  </data>
+  <data name="btnSettings.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
+  </data>
+  <data name="btnSettings.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
+  </data>
+  <data name="btnSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
+  </data>
+  <data name="btnSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="btnSettings.Text" xml:space="preserve">
+    <value>Add New Category</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Name" xml:space="preserve">
+    <value>btnSettings</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnSearch.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
+  </data>
+  <data name="btnSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAX
+        EgAAFxIBZ5/SUgAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAIMSURBVDhPY/j/
+        /z8G3i+nJ7BCTad/o7LuOyD7PwyD+CBxkDxMLTbNBkCFH3eqm/xvj8r/n102639u/VIw3RBb+h8kvl1R
+        78ckTW1bDANAJu9S1Pu9ysHjf2Tb1v+lq67979718P/EfU/AuHnL3f/JE/f/B8nvAKpbo6KjjGLAGi29
+        ayAbkiYf+p+/7DIYgwyYc/wVHE858Ox/5qwT/zfpWf+fp6V7Da6ZlZ2DZb+C3r+uvEa4ZlyGgPj1hd3g
+        cEE2gA8kkNuxHsMAbIbkT9qFYYAMSAAkgc0AEG7YdBu/AYcU9P93Fndg1QzDIEOmHXr+v6Zh3n+QemQD
+        hK7pG/7fbmLzP3fReayaYbgYiNe5eP6/oG2AYgDLXBvjp0cU9f4vDQzHaQhIHCQPsn25jckbuAEOtta1
+        wT6enwqCvP/Pt7cEuwTsHVCYQDGIDxIHWfLU0vS/j5ZKN1xzQnTk/6qysv+pCfH/J/g5/btpZPT/uIo+
+        PBmDMIgP8uYbW9P/2cba+0HeZnB2sO0KDw4Aay7Oy/0f5Ov1397U+PlUG6PX7x3M/qPjBbYmH101lGYD
+        NYuCLGewNDc9EBrgB7YZpNnVyf47v4BAJVCBiYKIcLO/tuomT03lAyAaxAeK2wMxH8zrDNramqsDvD3+
+        gzCSZm6QJJBmBylGwuwwjXADgIJaQNwCxalADNZMHP7PAADXCEzHrKj7MAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>773, 6</value>
+  </data>
+  <data name="btnSearch.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
+  </data>
+  <data name="btnSearch.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
+  </data>
+  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 35</value>
+  </data>
+  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="btnSearch.Text" xml:space="preserve">
+    <value>Add New Diagnosis</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
     <value>811, 3</value>
+  </data>
+  <data name="btnSave.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>110, 40</value>
+  </data>
+  <data name="btnSave.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>110, 40</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 40</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>simpleButton1</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>578, 3</value>
   </data>
   <data name="btnPrint.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>110, 40</value>
@@ -130,7 +275,6 @@
   <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 40</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnPrint.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
@@ -147,13 +291,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="txtGeneralDescription.EditValue" xml:space="preserve">
     <value />
   </data>
   <data name="txtGeneralDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 87</value>
+    <value>92, 88</value>
   </data>
   <data name="txtGeneralDescription.Properties.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>Cornsilk</value>
@@ -181,10 +325,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txtGeneralDescription.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="txtAddiction_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 219</value>
+    <value>92, 220</value>
   </data>
   <data name="txtAddiction_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -205,13 +349,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txtAddiction_Details.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="chkAddiction_No.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkAddiction_No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 180</value>
+    <value>80, 181</value>
   </data>
   <data name="chkAddiction_No.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -238,13 +382,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkAddiction_No.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="chkAddiction_Yes.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkAddiction_Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 180</value>
+    <value>0, 181</value>
   </data>
   <data name="chkAddiction_Yes.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -271,10 +415,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkAddiction_Yes.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="txtDrugs_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 253</value>
+    <value>92, 254</value>
   </data>
   <data name="txtDrugs_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -295,13 +439,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txtDrugs_Details.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <data name="chkDrugs_No.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkDrugs_No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 214</value>
+    <value>80, 215</value>
   </data>
   <data name="chkDrugs_No.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -328,13 +472,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkDrugs_No.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>14</value>
   </data>
   <data name="chkDrugs_Yes.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkDrugs_Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 214</value>
+    <value>0, 215</value>
   </data>
   <data name="chkDrugs_Yes.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -361,10 +505,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkDrugs_Yes.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>15</value>
   </data>
   <data name="txtProblemAddiction_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 283</value>
+    <value>92, 284</value>
   </data>
   <data name="txtProblemAddiction_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -385,13 +529,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txtProblemAddiction_Details.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>16</value>
   </data>
   <data name="chkProblemAddiction_No.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkProblemAddiction_No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 244</value>
+    <value>80, 245</value>
   </data>
   <data name="chkProblemAddiction_No.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -418,13 +562,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkProblemAddiction_No.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>17</value>
   </data>
   <data name="chkProblemAddiction_Yes.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkProblemAddiction_Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 244</value>
+    <value>0, 245</value>
   </data>
   <data name="chkProblemAddiction_Yes.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -451,10 +595,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkProblemAddiction_Yes.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>18</value>
   </data>
   <data name="txtProblemAlcohol_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 249</value>
+    <value>92, 250</value>
   </data>
   <data name="txtProblemAlcohol_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -475,13 +619,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txtProblemAlcohol_Details.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>19</value>
   </data>
   <data name="spnProblemAlcohol_When.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spnProblemAlcohol_When.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 213</value>
+    <value>254, 214</value>
   </data>
   <data name="spnProblemAlcohol_When.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -549,13 +693,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spnProblemAlcohol_When.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>20</value>
   </data>
   <data name="spnAlcohol_HowMuch.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spnAlcohol_HowMuch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 149</value>
+    <value>254, 150</value>
   </data>
   <data name="spnAlcohol_HowMuch.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -621,13 +765,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spnAlcohol_HowMuch.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>21</value>
   </data>
   <data name="chkProblemAlcohol_No.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkProblemAlcohol_No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 210</value>
+    <value>80, 211</value>
   </data>
   <data name="chkProblemAlcohol_No.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -654,13 +798,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkProblemAlcohol_No.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="chkProblemAlcohol_Yes.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkProblemAlcohol_Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 210</value>
+    <value>0, 211</value>
   </data>
   <data name="chkProblemAlcohol_Yes.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -687,10 +831,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkProblemAlcohol_Yes.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>23</value>
   </data>
   <data name="txtAlcohol_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 185</value>
+    <value>92, 186</value>
   </data>
   <data name="txtAlcohol_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -711,10 +855,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txtAlcohol_Details.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>24</value>
   </data>
   <data name="txtQuitSmoke_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 215</value>
+    <value>90, 216</value>
   </data>
   <data name="txtQuitSmoke_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -735,13 +879,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txtQuitSmoke_Details.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>25</value>
   </data>
   <data name="txtSmoke_Details.EditValue" xml:space="preserve">
     <value />
   </data>
   <data name="txtSmoke_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 151</value>
+    <value>90, 152</value>
   </data>
   <data name="txtSmoke_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -762,13 +906,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txtSmoke_Details.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>26</value>
   </data>
   <data name="chkAlcohol_No.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkAlcohol_No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 146</value>
+    <value>80, 147</value>
   </data>
   <data name="chkAlcohol_No.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -795,13 +939,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkAlcohol_No.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>27</value>
   </data>
   <data name="chkAlcohol_Yes.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkAlcohol_Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 146</value>
+    <value>0, 147</value>
   </data>
   <data name="chkAlcohol_Yes.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -828,13 +972,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkAlcohol_Yes.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>28</value>
   </data>
   <data name="chkQuitSmoke_LessThan.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkQuitSmoke_LessThan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 176</value>
+    <value>0, 177</value>
   </data>
   <data name="chkQuitSmoke_LessThan.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>120, 30</value>
@@ -861,13 +1005,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkQuitSmoke_LessThan.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>29</value>
   </data>
   <data name="chkQuitSmoke_Bet.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkQuitSmoke_Bet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 176</value>
+    <value>120, 177</value>
   </data>
   <data name="chkQuitSmoke_Bet.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>150, 30</value>
@@ -894,13 +1038,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkQuitSmoke_Bet.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>30</value>
   </data>
   <data name="chkQuitSmoke_MoreThan.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkQuitSmoke_MoreThan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 176</value>
+    <value>270, 177</value>
   </data>
   <data name="chkQuitSmoke_MoreThan.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>120, 30</value>
@@ -930,13 +1074,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkQuitSmoke_MoreThan.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>31</value>
   </data>
   <data name="spnNumberOfYearsSmoke.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spnNumberOfYearsSmoke.Location" type="System.Drawing.Point, System.Drawing">
-    <value>542, 115</value>
+    <value>542, 116</value>
   </data>
   <data name="spnNumberOfYearsSmoke.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -1002,13 +1146,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spnNumberOfYearsSmoke.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>32</value>
   </data>
   <data name="spnNumberOfDailyPacks.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spnNumberOfDailyPacks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 115</value>
+    <value>292, 116</value>
   </data>
   <data name="spnNumberOfDailyPacks.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -1074,13 +1218,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spnNumberOfDailyPacks.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>33</value>
   </data>
   <data name="chkSmoke_No.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkSmoke_No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 112</value>
+    <value>80, 113</value>
   </data>
   <data name="chkSmoke_No.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -1107,13 +1251,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkSmoke_No.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>34</value>
   </data>
   <data name="chkSmoke_Yes.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkSmoke_Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 112</value>
+    <value>0, 113</value>
   </data>
   <data name="chkSmoke_Yes.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -1140,13 +1284,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkSmoke_Yes.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>35</value>
   </data>
   <data name="chkNoSocialHistory.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkNoSocialHistory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 49</value>
+    <value>3, 50</value>
   </data>
   <data name="chkNoSocialHistory.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>200, 30</value>
@@ -1173,10 +1317,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkNoSocialHistory.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>36</value>
   </data>
   <data name="chkAddiction_DetailsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>880, 183</value>
+    <value>880, 184</value>
   </data>
   <data name="chkAddiction_DetailsButton.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1203,10 +1347,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkAddiction_DetailsButton.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>37</value>
   </data>
   <data name="chkDrugs_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>880, 217</value>
+    <value>880, 218</value>
   </data>
   <data name="chkDrugs_Details.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1233,10 +1377,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkDrugs_Details.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>38</value>
   </data>
   <data name="btnProblemAddiction_DetailsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>872, 247</value>
+    <value>872, 248</value>
   </data>
   <data name="btnProblemAddiction_DetailsButton.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1263,10 +1407,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btnProblemAddiction_DetailsButton.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>39</value>
   </data>
   <data name="chkProblemAlcohol_DetailsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>872, 213</value>
+    <value>872, 214</value>
   </data>
   <data name="chkProblemAlcohol_DetailsButton.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1293,10 +1437,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkProblemAlcohol_DetailsButton.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>40</value>
   </data>
   <data name="chkAlcohol_DetailsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>880, 149</value>
+    <value>880, 150</value>
   </data>
   <data name="chkAlcohol_DetailsButton.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1323,10 +1467,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkAlcohol_DetailsButton.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>41</value>
   </data>
   <data name="btnQuitSmoke_DetailsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>872, 179</value>
+    <value>872, 180</value>
   </data>
   <data name="btnQuitSmoke_DetailsButton.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1353,10 +1497,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btnQuitSmoke_DetailsButton.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>42</value>
   </data>
   <data name="chkSmoke_DetailsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>880, 115</value>
+    <value>880, 116</value>
   </data>
   <data name="chkSmoke_DetailsButton.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1383,7 +1527,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;chkSmoke_DetailsButton.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>43</value>
   </data>
   <data name="pictureEdit1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 3</value>
@@ -1404,7 +1548,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;pictureEdit1.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>44</value>
   </data>
   <data name="labelControl3.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>Gold</value>
@@ -1413,7 +1557,7 @@
     <value>None</value>
   </data>
   <data name="labelControl3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 43</value>
+    <value>0, 44</value>
   </data>
   <data name="labelControl3.Size" type="System.Drawing.Size, System.Drawing">
     <value>921, 3</value>
@@ -1431,7 +1575,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;labelControl3.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>45</value>
   </data>
   <data name="labelControl2.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>DimGray</value>
@@ -1458,7 +1602,7 @@
     <value>10, 10, 10, 10</value>
   </data>
   <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>771, 40</value>
+    <value>538, 40</value>
   </data>
   <data name="labelControl2.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1476,7 +1620,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>46</value>
   </data>
   <data name="labelControl1.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>Gold</value>
@@ -1503,7 +1647,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
-    <value>43</value>
+    <value>47</value>
   </data>
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1745,54 +1889,6 @@
   <data name="&gt;&gt;emptySpaceItem2.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;simpleSeparator3.Name" xml:space="preserve">
-    <value>simpleSeparator3</value>
-  </data>
-  <data name="&gt;&gt;simpleSeparator3.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;simpleSeparator4.Name" xml:space="preserve">
-    <value>simpleSeparator4</value>
-  </data>
-  <data name="&gt;&gt;simpleSeparator4.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
-    <value>layoutControlItem5</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;simpleSeparator6.Name" xml:space="preserve">
-    <value>simpleSeparator6</value>
-  </data>
-  <data name="&gt;&gt;simpleSeparator6.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
-    <value>emptySpaceItem1</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;simpleSeparator8.Name" xml:space="preserve">
-    <value>simpleSeparator8</value>
-  </data>
-  <data name="&gt;&gt;simpleSeparator8.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
-    <value>layoutControlItem6</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;simpleSeparator13.Name" xml:space="preserve">
-    <value>simpleSeparator13</value>
-  </data>
-  <data name="&gt;&gt;simpleSeparator13.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;lytContainer_Smoke.Name" xml:space="preserve">
     <value>lytContainer_Smoke</value>
   </data>
@@ -1893,6 +1989,18 @@
     <value>simpleSeparator11</value>
   </data>
   <data name="&gt;&gt;simpleSeparator11.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;simpleSeparator3.Name" xml:space="preserve">
+    <value>simpleSeparator3</value>
+  </data>
+  <data name="&gt;&gt;simpleSeparator3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;simpleSeparator4.Name" xml:space="preserve">
+    <value>simpleSeparator4</value>
+  </data>
+  <data name="&gt;&gt;simpleSeparator4.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;lytContainer_Alcohol.Name" xml:space="preserve">
@@ -1997,11 +2105,29 @@
   <data name="&gt;&gt;simpleSeparator2.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
+    <value>layoutControlItem5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;layoutControlItem4.Name" xml:space="preserve">
     <value>layoutControlItem4</value>
   </data>
   <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;simpleSeparator6.Name" xml:space="preserve">
+    <value>simpleSeparator6</value>
+  </data>
+  <data name="&gt;&gt;simpleSeparator6.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
+    <value>emptySpaceItem1</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;lytContainer_RecreationalDrugs.Name" xml:space="preserve">
     <value>lytContainer_RecreationalDrugs</value>
@@ -2135,10 +2261,52 @@
   <data name="&gt;&gt;simpleSeparator14.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;simpleSeparator8.Name" xml:space="preserve">
+    <value>simpleSeparator8</value>
+  </data>
+  <data name="&gt;&gt;simpleSeparator8.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
+    <value>layoutControlItem6</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;simpleSeparator13.Name" xml:space="preserve">
+    <value>simpleSeparator13</value>
+  </data>
+  <data name="&gt;&gt;simpleSeparator13.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
     <value>layoutControlItem7</value>
   </data>
   <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Name" xml:space="preserve">
+    <value>layoutControlItem11</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

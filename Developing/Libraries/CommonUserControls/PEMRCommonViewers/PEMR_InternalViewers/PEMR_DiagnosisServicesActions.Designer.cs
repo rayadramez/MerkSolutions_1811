@@ -80,7 +80,7 @@
 			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(481, 343, 250, 350);
 			this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
 			this.layoutControl1.Root = this.layoutControlGroup1;
-			this.layoutControl1.Size = new System.Drawing.Size(519, 243);
+			this.layoutControl1.Size = new System.Drawing.Size(854, 400);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
@@ -90,7 +90,7 @@
 			this.btnExit.Appearance.Options.UseFont = true;
 			this.btnExit.Image = global::CommonUserControls.Properties.Resources.ExitIcon_16;
 			this.btnExit.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-			this.btnExit.Location = new System.Drawing.Point(316, 200);
+			this.btnExit.Location = new System.Drawing.Point(651, 357);
 			this.btnExit.MaximumSize = new System.Drawing.Size(200, 40);
 			this.btnExit.MinimumSize = new System.Drawing.Size(200, 40);
 			this.btnExit.Name = "btnExit";
@@ -105,7 +105,7 @@
 			this.btnCheckResult.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.btnCheckResult.Appearance.Options.UseFont = true;
 			this.btnCheckResult.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnCheckResult.Location = new System.Drawing.Point(316, 78);
+			this.btnCheckResult.Location = new System.Drawing.Point(651, 101);
 			this.btnCheckResult.MaximumSize = new System.Drawing.Size(200, 40);
 			this.btnCheckResult.MinimumSize = new System.Drawing.Size(200, 40);
 			this.btnCheckResult.Name = "btnCheckResult";
@@ -120,7 +120,7 @@
 			this.btnScanPicture.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.btnScanPicture.Appearance.Options.UseFont = true;
 			this.btnScanPicture.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnScanPicture.Location = new System.Drawing.Point(3, 78);
+			this.btnScanPicture.Location = new System.Drawing.Point(3, 101);
 			this.btnScanPicture.MaximumSize = new System.Drawing.Size(200, 40);
 			this.btnScanPicture.MinimumSize = new System.Drawing.Size(200, 40);
 			this.btnScanPicture.Name = "btnScanPicture";
@@ -136,7 +136,7 @@
 			this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
 			this.labelControl3.Location = new System.Drawing.Point(0, 43);
 			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(519, 3);
+			this.labelControl3.Size = new System.Drawing.Size(854, 3);
 			this.labelControl3.StyleController = this.layoutControl1;
 			this.labelControl3.TabIndex = 12;
 			// 
@@ -146,7 +146,7 @@
 			this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
 			this.labelControl1.Location = new System.Drawing.Point(0, 0);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(519, 3);
+			this.labelControl1.Size = new System.Drawing.Size(854, 3);
 			this.labelControl1.StyleController = this.layoutControl1;
 			this.labelControl1.TabIndex = 11;
 			// 
@@ -173,7 +173,7 @@
 			this.labelControl2.MinimumSize = new System.Drawing.Size(0, 40);
 			this.labelControl2.Name = "labelControl2";
 			this.labelControl2.Padding = new System.Windows.Forms.Padding(10);
-			this.labelControl2.Size = new System.Drawing.Size(479, 40);
+			this.labelControl2.Size = new System.Drawing.Size(814, 40);
 			this.labelControl2.StyleController = this.layoutControl1;
 			this.labelControl2.TabIndex = 9;
 			this.labelControl2.Text = ".... Investigation Action ....";
@@ -197,7 +197,7 @@
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup1.Size = new System.Drawing.Size(519, 243);
+			this.layoutControlGroup1.Size = new System.Drawing.Size(854, 400);
 			this.layoutControlGroup1.TextVisible = false;
 			// 
 			// layoutControlItem1
@@ -206,7 +206,7 @@
 			this.layoutControlItem1.Location = new System.Drawing.Point(40, 3);
 			this.layoutControlItem1.Name = "layoutControlItem1";
 			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem1.Size = new System.Drawing.Size(479, 40);
+			this.layoutControlItem1.Size = new System.Drawing.Size(814, 40);
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem1.TextVisible = false;
 			// 
@@ -231,7 +231,7 @@
 			this.layoutControlItem3.MinSize = new System.Drawing.Size(14, 3);
 			this.layoutControlItem3.Name = "layoutControlItem3";
 			this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem3.Size = new System.Drawing.Size(519, 3);
+			this.layoutControlItem3.Size = new System.Drawing.Size(854, 3);
 			this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem3.TextVisible = false;
@@ -244,7 +244,7 @@
 			this.layoutControlItem4.MinSize = new System.Drawing.Size(14, 3);
 			this.layoutControlItem4.Name = "layoutControlItem4";
 			this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem4.Size = new System.Drawing.Size(519, 3);
+			this.layoutControlItem4.Size = new System.Drawing.Size(854, 3);
 			this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem4.TextVisible = false;
@@ -252,7 +252,7 @@
 			// layoutControlItem5
 			// 
 			this.layoutControlItem5.Control = this.btnScanPicture;
-			this.layoutControlItem5.Location = new System.Drawing.Point(0, 75);
+			this.layoutControlItem5.Location = new System.Drawing.Point(0, 98);
 			this.layoutControlItem5.Name = "layoutControlItem5";
 			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem5.Size = new System.Drawing.Size(206, 46);
@@ -271,7 +271,7 @@
 			// layoutControlItem6
 			// 
 			this.layoutControlItem6.Control = this.btnCheckResult;
-			this.layoutControlItem6.Location = new System.Drawing.Point(313, 75);
+			this.layoutControlItem6.Location = new System.Drawing.Point(648, 98);
 			this.layoutControlItem6.Name = "layoutControlItem6";
 			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem6.Size = new System.Drawing.Size(206, 46);
@@ -290,7 +290,7 @@
 			// layoutControlItem8
 			// 
 			this.layoutControlItem8.Control = this.btnExit;
-			this.layoutControlItem8.Location = new System.Drawing.Point(313, 197);
+			this.layoutControlItem8.Location = new System.Drawing.Point(648, 354);
 			this.layoutControlItem8.Name = "layoutControlItem8";
 			this.layoutControlItem8.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem8.Size = new System.Drawing.Size(206, 46);
@@ -314,16 +314,17 @@
 			this.emptySpaceItem6.Size = new System.Drawing.Size(519, 29);
 			this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
 			// 
-			// PEMR_InvestigationActions
+			// PEMR_DiagnosisServicesActions
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.LightSlateGray;
 			this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.Controls.Add(this.layoutControl1);
-			this.Name = "PEMR_InvestigationActions";
+			this.MinimumSize = new System.Drawing.Size(0, 400);
+			this.Name = "PEMR_DiagnosisServicesActions";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.Size = new System.Drawing.Size(519, 243);
+			this.Size = new System.Drawing.Size(854, 400);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
 			this.layoutControl1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();

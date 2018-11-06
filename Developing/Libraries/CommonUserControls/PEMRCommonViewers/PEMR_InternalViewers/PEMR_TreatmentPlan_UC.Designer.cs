@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_TreatmentPlan_UC));
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
 			this.btnAddedDiagnosisFullScreen = new DevExpress.XtraEditors.SimpleButton();
 			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
@@ -73,6 +73,8 @@
 			this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtTreatmentPlanDetails.Properties)).BeginInit();
@@ -103,10 +105,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.btnSave);
 			this.layoutControl1.Controls.Add(this.btnAddedDiagnosisFullScreen);
 			this.layoutControl1.Controls.Add(this.btnSearchDiagnosis);
 			this.layoutControl1.Controls.Add(this.btnNewVitalSign);
@@ -139,7 +143,7 @@
 			this.btnAddedDiagnosisFullScreen.Appearance.Options.UseFont = true;
 			this.btnAddedDiagnosisFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
 			this.btnAddedDiagnosisFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnAddedDiagnosisFullScreen.Location = new System.Drawing.Point(723, 6);
+			this.btnAddedDiagnosisFullScreen.Location = new System.Drawing.Point(613, 6);
 			this.btnAddedDiagnosisFullScreen.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnAddedDiagnosisFullScreen.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnAddedDiagnosisFullScreen.Name = "btnAddedDiagnosisFullScreen";
@@ -154,7 +158,7 @@
 			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
 			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
 			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSearchDiagnosis.Location = new System.Drawing.Point(764, 6);
+			this.btnSearchDiagnosis.Location = new System.Drawing.Point(695, 6);
 			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
@@ -169,7 +173,7 @@
 			this.btnNewVitalSign.Appearance.Options.UseFont = true;
 			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
 			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnNewVitalSign.Location = new System.Drawing.Point(805, 6);
+			this.btnNewVitalSign.Location = new System.Drawing.Point(654, 6);
 			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.Name = "btnNewVitalSign";
@@ -182,7 +186,7 @@
 			// 
 			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
 			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnPrint.Location = new System.Drawing.Point(610, 3);
+			this.btnPrint.Location = new System.Drawing.Point(500, 3);
 			this.btnPrint.MaximumSize = new System.Drawing.Size(110, 40);
 			this.btnPrint.MinimumSize = new System.Drawing.Size(110, 40);
 			this.btnPrint.Name = "btnPrint";
@@ -360,7 +364,7 @@
 			this.spnOrderIndex.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnOrderIndex.Properties.AutoHeight = false;
 			this.spnOrderIndex.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
 			this.spnOrderIndex.Properties.MaxValue = new decimal(new int[] {
             1,
             0,
@@ -409,7 +413,7 @@
 			this.labelControl2.MinimumSize = new System.Drawing.Size(0, 40);
 			this.labelControl2.Name = "labelControl2";
 			this.labelControl2.Padding = new System.Windows.Forms.Padding(10);
-			this.labelControl2.Size = new System.Drawing.Size(570, 40);
+			this.labelControl2.Size = new System.Drawing.Size(460, 40);
 			this.labelControl2.StyleController = this.layoutControl1;
 			this.labelControl2.TabIndex = 6;
 			this.labelControl2.Text = ".... Treatment Plan ....";
@@ -449,8 +453,9 @@
             this.layoutControlItem12,
             this.layoutControlItem5,
             this.layoutControlItem13,
+            this.layoutControlItem15,
             this.layoutControlItem14,
-            this.layoutControlItem15});
+            this.layoutControlItem16});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -476,7 +481,7 @@
 			this.layoutControlItem2.Location = new System.Drawing.Point(40, 3);
 			this.layoutControlItem2.Name = "layoutControlItem2";
 			this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem2.Size = new System.Drawing.Size(570, 41);
+			this.layoutControlItem2.Size = new System.Drawing.Size(460, 41);
 			this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem2.TextVisible = false;
 			// 
@@ -661,7 +666,7 @@
 			// layoutControlItem5
 			// 
 			this.layoutControlItem5.Control = this.btnPrint;
-			this.layoutControlItem5.Location = new System.Drawing.Point(610, 3);
+			this.layoutControlItem5.Location = new System.Drawing.Point(500, 3);
 			this.layoutControlItem5.Name = "layoutControlItem5";
 			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem5.Size = new System.Drawing.Size(110, 41);
@@ -671,7 +676,7 @@
 			// layoutControlItem13
 			// 
 			this.layoutControlItem13.Control = this.btnNewVitalSign;
-			this.layoutControlItem13.Location = new System.Drawing.Point(802, 3);
+			this.layoutControlItem13.Location = new System.Drawing.Point(651, 3);
 			this.layoutControlItem13.Name = "layoutControlItem13";
 			this.layoutControlItem13.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem13.Size = new System.Drawing.Size(41, 41);
@@ -682,7 +687,7 @@
 			// layoutControlItem14
 			// 
 			this.layoutControlItem14.Control = this.btnSearchDiagnosis;
-			this.layoutControlItem14.Location = new System.Drawing.Point(761, 3);
+			this.layoutControlItem14.Location = new System.Drawing.Point(692, 3);
 			this.layoutControlItem14.Name = "layoutControlItem14";
 			this.layoutControlItem14.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem14.Size = new System.Drawing.Size(41, 41);
@@ -693,7 +698,7 @@
 			// layoutControlItem15
 			// 
 			this.layoutControlItem15.Control = this.btnAddedDiagnosisFullScreen;
-			this.layoutControlItem15.Location = new System.Drawing.Point(720, 3);
+			this.layoutControlItem15.Location = new System.Drawing.Point(610, 3);
 			this.layoutControlItem15.Name = "layoutControlItem15";
 			this.layoutControlItem15.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem15.Size = new System.Drawing.Size(41, 41);
@@ -717,6 +722,29 @@
 			this.labelControl4.StyleController = this.layoutControl1;
 			this.labelControl4.TabIndex = 8;
 			this.labelControl4.Text = ".... Diagnosis  ....";
+			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSave.Location = new System.Drawing.Point(733, 3);
+			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(110, 40);
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.TabIndex = 17;
+			this.btnSave.Text = "simpleButton1";
+			// 
+			// layoutControlItem16
+			// 
+			this.layoutControlItem16.Control = this.btnSave;
+			this.layoutControlItem16.Location = new System.Drawing.Point(733, 3);
+			this.layoutControlItem16.Name = "layoutControlItem16";
+			this.layoutControlItem16.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem16.Size = new System.Drawing.Size(110, 41);
+			this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem16.TextVisible = false;
 			// 
 			// PEMR_TreatmentPlan_UC
 			// 
@@ -758,6 +786,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -807,5 +836,7 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
 		private DevExpress.XtraEditors.SimpleButton btnAddedDiagnosisFullScreen;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+		private DevExpress.XtraEditors.SimpleButton btnSave;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
 	}
 }

@@ -435,6 +435,7 @@
 			this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.layoutControl1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl1.Name = "layoutControl1";
+			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(283, 256, 250, 350);
 			this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
 			this.layoutControl1.Root = this.layoutControlGroup1;
 			this.layoutControl1.Size = new System.Drawing.Size(1200, 600);
@@ -443,7 +444,7 @@
 			// 
 			// simpleButton2
 			// 
-			this.simpleButton2.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_100;
+			this.simpleButton2.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
 			this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
 			this.simpleButton2.Location = new System.Drawing.Point(1090, 3);
 			this.simpleButton2.MaximumSize = new System.Drawing.Size(110, 40);
@@ -476,7 +477,7 @@
 			this.btnFullScreen.Appearance.Options.UseFont = true;
 			this.btnFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
 			this.btnFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnFullScreen.Location = new System.Drawing.Point(1011, 6);
+			this.btnFullScreen.Location = new System.Drawing.Point(970, 6);
 			this.btnFullScreen.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnFullScreen.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnFullScreen.Name = "btnFullScreen";
@@ -491,7 +492,7 @@
 			this.btnNewVitalSign.Appearance.Options.UseFont = true;
 			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
 			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnNewVitalSign.Location = new System.Drawing.Point(970, 6);
+			this.btnNewVitalSign.Location = new System.Drawing.Point(1011, 6);
 			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.Name = "btnNewVitalSign";
@@ -587,7 +588,7 @@
 			this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.layoutControl3.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl3.Name = "layoutControl3";
-			this.layoutControl3.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(70, 256, 372, 439);
+			this.layoutControl3.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(70, 257, 372, 439);
 			this.layoutControl3.Root = this.layoutControlGroup3;
 			this.layoutControl3.Size = new System.Drawing.Size(1188, 518);
 			this.layoutControl3.TabIndex = 0;
@@ -3701,11 +3702,11 @@
             this.layoutControlItem5,
             this.layoutControlItem47,
             this.layoutControlItem48,
-            this.layoutControlItem49,
             this.layoutControlItem50,
-            this.layoutControlItem51});
+            this.layoutControlItem51,
+            this.layoutControlItem49});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlGroup1.Name = "layoutControlGroup1";
+			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlGroup1.Size = new System.Drawing.Size(1200, 600);
 			this.layoutControlGroup1.TextVisible = false;
@@ -3786,7 +3787,7 @@
 			// layoutControlItem48
 			// 
 			this.layoutControlItem48.Control = this.btnNewVitalSign;
-			this.layoutControlItem48.Location = new System.Drawing.Point(967, 3);
+			this.layoutControlItem48.Location = new System.Drawing.Point(1008, 3);
 			this.layoutControlItem48.Name = "layoutControlItem48";
 			this.layoutControlItem48.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem48.Size = new System.Drawing.Size(41, 41);
@@ -3797,7 +3798,7 @@
 			// layoutControlItem49
 			// 
 			this.layoutControlItem49.Control = this.btnFullScreen;
-			this.layoutControlItem49.Location = new System.Drawing.Point(1008, 3);
+			this.layoutControlItem49.Location = new System.Drawing.Point(967, 3);
 			this.layoutControlItem49.Name = "layoutControlItem49";
 			this.layoutControlItem49.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem49.Size = new System.Drawing.Size(41, 41);

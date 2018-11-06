@@ -34,6 +34,7 @@
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_SocialHistory_UC));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
 			this.txtGeneralDescription = new DevExpress.XtraEditors.TextEdit();
 			this.txtAddiction_Details = new DevExpress.XtraEditors.TextEdit();
 			this.chkAddiction_No = new DevExpress.XtraEditors.CheckButton();
@@ -62,23 +63,6 @@
 			this.chkSmoke_No = new DevExpress.XtraEditors.CheckButton();
 			this.chkSmoke_Yes = new DevExpress.XtraEditors.CheckButton();
 			this.chkNoSocialHistory = new DevExpress.XtraEditors.CheckButton();
-			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.simpleSeparator6 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.simpleSeparator8 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.simpleSeparator13 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
 			this.chkAddiction_DetailsButton = new DevExpress.XtraEditors.CheckButton();
 			this.chkDrugs_Details = new DevExpress.XtraEditors.CheckButton();
 			this.btnProblemAddiction_DetailsButton = new DevExpress.XtraEditors.CheckButton();
@@ -87,6 +71,14 @@
 			this.btnQuitSmoke_DetailsButton = new DevExpress.XtraEditors.CheckButton();
 			this.chkSmoke_DetailsButton = new DevExpress.XtraEditors.CheckButton();
 			this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.lytContainer_Smoke = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.lytSmoke_DetailsButton = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytSmoke_Details = new DevExpress.XtraLayout.LayoutControlItem();
@@ -104,6 +96,8 @@
 			this.lytQuitSmoke_More = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.simpleSeparator11 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.lytContainer_Alcohol = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.lytAlcohol_DetailsButton = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytQuitAlcohol_Details = new DevExpress.XtraLayout.LayoutControlItem();
@@ -121,7 +115,10 @@
 			this.lytProblemAlcohol_When = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.simpleSeparator6 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.lytContainer_RecreationalDrugs = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.lytDrugs_DetailsButtons = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -144,7 +141,18 @@
 			this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.lytProblemAddiction_Details = new DevExpress.XtraLayout.LayoutControlItem();
 			this.simpleSeparator14 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.simpleSeparator8 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.simpleSeparator13 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnSettings = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnFullScreen = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtGeneralDescription.Properties)).BeginInit();
@@ -159,20 +167,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.txtSmoke_Details.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnNumberOfYearsSmoke.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnNumberOfDailyPacks.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator8)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator13)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytContainer_Smoke)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytSmoke_DetailsButton)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytSmoke_Details)).BeginInit();
@@ -190,6 +190,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.lytQuitSmoke_More)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator11)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytContainer_Alcohol)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAlcohol_DetailsButton)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytQuitAlcohol_Details)).BeginInit();
@@ -207,7 +209,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.lytProblemAlcohol_When)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytContainer_RecreationalDrugs)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytDrugs_DetailsButtons)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
@@ -230,11 +235,22 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytProblemAddiction_Details)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator14)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator8)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator13)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.btnFullScreen);
+			this.layoutControl1.Controls.Add(this.btnSettings);
+			this.layoutControl1.Controls.Add(this.btnSearch);
+			this.layoutControl1.Controls.Add(this.btnSave);
 			this.layoutControl1.Controls.Add(this.btnPrint);
 			this.layoutControl1.Controls.Add(this.txtGeneralDescription);
 			this.layoutControl1.Controls.Add(this.txtAddiction_Details);
@@ -280,6 +296,14 @@
 			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(391, 349, 323, 547);
 			this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
 			this.layoutControl1.Root = this.layoutControlGroup1;
+			// 
+			// btnPrint
+			// 
+			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
+			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			resources.ApplyResources(this.btnPrint, "btnPrint");
+			this.btnPrint.Name = "btnPrint";
+			this.btnPrint.StyleController = this.layoutControl1;
 			// 
 			// txtGeneralDescription
 			// 
@@ -606,183 +630,6 @@
 			this.chkNoSocialHistory.StyleController = this.layoutControl1;
 			this.chkNoSocialHistory.CheckedChanged += new System.EventHandler(this.chkNoSocialHistory_CheckedChanged);
 			// 
-			// labelControl3
-			// 
-			this.labelControl3.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl3.Appearance.BackColor")));
-			resources.ApplyResources(this.labelControl3, "labelControl3");
-			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.StyleController = this.layoutControl1;
-			// 
-			// labelControl2
-			// 
-			this.labelControl2.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl2.Appearance.BackColor")));
-			this.labelControl2.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl2.Appearance.Font")));
-			this.labelControl2.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl2.Appearance.ForeColor")));
-			this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			resources.ApplyResources(this.labelControl2, "labelControl2");
-			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.StyleController = this.layoutControl1;
-			// 
-			// labelControl1
-			// 
-			this.labelControl1.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl1.Appearance.BackColor")));
-			resources.ApplyResources(this.labelControl1, "labelControl1");
-			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.StyleController = this.layoutControl1;
-			// 
-			// layoutControlGroup1
-			// 
-			this.layoutControlGroup1.AppearanceGroup.Options.UseTextOptions = true;
-			this.layoutControlGroup1.AppearanceGroup.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-			this.layoutControlGroup1.GroupBordersVisible = false;
-			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.emptySpaceItem2,
-            this.lytContainer_Smoke,
-            this.simpleSeparator3,
-            this.simpleSeparator4,
-            this.lytContainer_Alcohol,
-            this.layoutControlItem5,
-            this.layoutControlItem4,
-            this.simpleSeparator6,
-            this.emptySpaceItem1,
-            this.lytContainer_RecreationalDrugs,
-            this.lytContainer_Addiction,
-            this.simpleSeparator8,
-            this.layoutControlItem6,
-            this.simpleSeparator13,
-            this.layoutControlItem7});
-			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlGroup1.Name = "Root";
-			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup1.Size = new System.Drawing.Size(921, 479);
-			this.layoutControlGroup1.TextVisible = false;
-			// 
-			// layoutControlItem1
-			// 
-			this.layoutControlItem1.Control = this.labelControl1;
-			this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlItem1.MaxSize = new System.Drawing.Size(0, 3);
-			this.layoutControlItem1.MinSize = new System.Drawing.Size(10, 3);
-			this.layoutControlItem1.Name = "layoutControlItem1";
-			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem1.Size = new System.Drawing.Size(921, 3);
-			this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem1.TextVisible = false;
-			// 
-			// layoutControlItem2
-			// 
-			this.layoutControlItem2.Control = this.labelControl2;
-			this.layoutControlItem2.Location = new System.Drawing.Point(40, 3);
-			this.layoutControlItem2.Name = "layoutControlItem2";
-			this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem2.Size = new System.Drawing.Size(771, 40);
-			this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem2.TextVisible = false;
-			// 
-			// layoutControlItem3
-			// 
-			this.layoutControlItem3.Control = this.labelControl3;
-			this.layoutControlItem3.Location = new System.Drawing.Point(0, 43);
-			this.layoutControlItem3.MaxSize = new System.Drawing.Size(0, 3);
-			this.layoutControlItem3.MinSize = new System.Drawing.Size(10, 3);
-			this.layoutControlItem3.Name = "layoutControlItem3";
-			this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem3.Size = new System.Drawing.Size(921, 3);
-			this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem3.TextVisible = false;
-			// 
-			// emptySpaceItem2
-			// 
-			this.emptySpaceItem2.AllowHotTrack = false;
-			this.emptySpaceItem2.Location = new System.Drawing.Point(206, 46);
-			this.emptySpaceItem2.Name = "emptySpaceItem2";
-			this.emptySpaceItem2.Size = new System.Drawing.Size(715, 36);
-			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// simpleSeparator3
-			// 
-			this.simpleSeparator3.AllowHotTrack = false;
-			this.simpleSeparator3.Location = new System.Drawing.Point(0, 110);
-			this.simpleSeparator3.Name = "simpleSeparator3";
-			this.simpleSeparator3.Size = new System.Drawing.Size(921, 2);
-			// 
-			// simpleSeparator4
-			// 
-			this.simpleSeparator4.AllowHotTrack = false;
-			this.simpleSeparator4.Location = new System.Drawing.Point(0, 144);
-			this.simpleSeparator4.Name = "simpleSeparator4";
-			this.simpleSeparator4.Size = new System.Drawing.Size(921, 2);
-			// 
-			// layoutControlItem5
-			// 
-			this.layoutControlItem5.Control = this.chkNoSocialHistory;
-			this.layoutControlItem5.Location = new System.Drawing.Point(0, 46);
-			this.layoutControlItem5.Name = "layoutControlItem5";
-			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem5.Size = new System.Drawing.Size(206, 36);
-			this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem5.TextVisible = false;
-			// 
-			// simpleSeparator6
-			// 
-			this.simpleSeparator6.AllowHotTrack = false;
-			this.simpleSeparator6.Location = new System.Drawing.Point(0, 212);
-			this.simpleSeparator6.Name = "simpleSeparator6";
-			this.simpleSeparator6.Size = new System.Drawing.Size(921, 2);
-			// 
-			// emptySpaceItem1
-			// 
-			this.emptySpaceItem1.AllowHotTrack = false;
-			this.emptySpaceItem1.Location = new System.Drawing.Point(0, 246);
-			this.emptySpaceItem1.Name = "emptySpaceItem1";
-			this.emptySpaceItem1.Size = new System.Drawing.Size(921, 233);
-			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// simpleSeparator8
-			// 
-			this.simpleSeparator8.AllowHotTrack = false;
-			this.simpleSeparator8.Location = new System.Drawing.Point(0, 178);
-			this.simpleSeparator8.Name = "simpleSeparator8";
-			this.simpleSeparator8.Size = new System.Drawing.Size(921, 2);
-			// 
-			// layoutControlItem6
-			// 
-			this.layoutControlItem6.AppearanceItemCaption.Font = ((System.Drawing.Font)(resources.GetObject("layoutControlItem6.AppearanceItemCaption.Font")));
-			this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
-			this.layoutControlItem6.AppearanceItemCaption.Options.UseTextOptions = true;
-			this.layoutControlItem6.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-			this.layoutControlItem6.Control = this.txtGeneralDescription;
-			this.layoutControlItem6.Location = new System.Drawing.Point(0, 84);
-			this.layoutControlItem6.Name = "layoutControlItem6";
-			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem6.Size = new System.Drawing.Size(921, 26);
-			this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-			this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Left;
-			this.layoutControlItem6.TextSize = new System.Drawing.Size(86, 13);
-			// 
-			// simpleSeparator13
-			// 
-			this.simpleSeparator13.AllowHotTrack = false;
-			this.simpleSeparator13.Location = new System.Drawing.Point(0, 82);
-			this.simpleSeparator13.Name = "simpleSeparator13";
-			this.simpleSeparator13.Size = new System.Drawing.Size(921, 2);
-			// 
-			// btnPrint
-			// 
-			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
-			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			resources.ApplyResources(this.btnPrint, "btnPrint");
-			this.btnPrint.Name = "btnPrint";
-			this.btnPrint.StyleController = this.layoutControl1;
-			// 
 			// chkAddiction_DetailsButton
 			// 
 			this.chkAddiction_DetailsButton.Image = global::CommonUserControls.Properties.Resources.MenuIcon_08_01;
@@ -855,6 +702,109 @@
 			this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
 			this.pictureEdit1.StyleController = this.layoutControl1;
 			// 
+			// labelControl3
+			// 
+			this.labelControl3.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl3.Appearance.BackColor")));
+			resources.ApplyResources(this.labelControl3, "labelControl3");
+			this.labelControl3.Name = "labelControl3";
+			this.labelControl3.StyleController = this.layoutControl1;
+			// 
+			// labelControl2
+			// 
+			this.labelControl2.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl2.Appearance.BackColor")));
+			this.labelControl2.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl2.Appearance.Font")));
+			this.labelControl2.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("labelControl2.Appearance.ForeColor")));
+			this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			resources.ApplyResources(this.labelControl2, "labelControl2");
+			this.labelControl2.Name = "labelControl2";
+			this.labelControl2.StyleController = this.layoutControl1;
+			// 
+			// labelControl1
+			// 
+			this.labelControl1.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("labelControl1.Appearance.BackColor")));
+			resources.ApplyResources(this.labelControl1, "labelControl1");
+			this.labelControl1.Name = "labelControl1";
+			this.labelControl1.StyleController = this.layoutControl1;
+			// 
+			// layoutControlGroup1
+			// 
+			this.layoutControlGroup1.AppearanceGroup.Options.UseTextOptions = true;
+			this.layoutControlGroup1.AppearanceGroup.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+			this.layoutControlGroup1.GroupBordersVisible = false;
+			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.emptySpaceItem2,
+            this.lytContainer_Smoke,
+            this.simpleSeparator3,
+            this.simpleSeparator4,
+            this.lytContainer_Alcohol,
+            this.layoutControlItem5,
+            this.layoutControlItem4,
+            this.simpleSeparator6,
+            this.emptySpaceItem1,
+            this.lytContainer_RecreationalDrugs,
+            this.lytContainer_Addiction,
+            this.simpleSeparator8,
+            this.layoutControlItem6,
+            this.simpleSeparator13,
+            this.layoutControlItem7,
+            this.layoutControlItem8,
+            this.layoutControlItem9,
+            this.layoutControlItem10,
+            this.layoutControlItem11});
+			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlGroup1.Name = "Root";
+			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlGroup1.Size = new System.Drawing.Size(921, 479);
+			this.layoutControlGroup1.TextVisible = false;
+			// 
+			// layoutControlItem1
+			// 
+			this.layoutControlItem1.Control = this.labelControl1;
+			this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlItem1.MaxSize = new System.Drawing.Size(0, 3);
+			this.layoutControlItem1.MinSize = new System.Drawing.Size(10, 3);
+			this.layoutControlItem1.Name = "layoutControlItem1";
+			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem1.Size = new System.Drawing.Size(921, 3);
+			this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem1.TextVisible = false;
+			// 
+			// layoutControlItem2
+			// 
+			this.layoutControlItem2.Control = this.labelControl2;
+			this.layoutControlItem2.Location = new System.Drawing.Point(40, 3);
+			this.layoutControlItem2.Name = "layoutControlItem2";
+			this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem2.Size = new System.Drawing.Size(538, 41);
+			this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem2.TextVisible = false;
+			// 
+			// layoutControlItem3
+			// 
+			this.layoutControlItem3.Control = this.labelControl3;
+			this.layoutControlItem3.Location = new System.Drawing.Point(0, 44);
+			this.layoutControlItem3.MaxSize = new System.Drawing.Size(0, 3);
+			this.layoutControlItem3.MinSize = new System.Drawing.Size(10, 3);
+			this.layoutControlItem3.Name = "layoutControlItem3";
+			this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem3.Size = new System.Drawing.Size(921, 3);
+			this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem3.TextVisible = false;
+			// 
+			// emptySpaceItem2
+			// 
+			this.emptySpaceItem2.AllowHotTrack = false;
+			this.emptySpaceItem2.Location = new System.Drawing.Point(206, 47);
+			this.emptySpaceItem2.Name = "emptySpaceItem2";
+			this.emptySpaceItem2.Size = new System.Drawing.Size(715, 36);
+			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+			// 
 			// lytContainer_Smoke
 			// 
 			this.lytContainer_Smoke.AppearanceGroup.Font = ((System.Drawing.Font)(resources.GetObject("lytContainer_Smoke.AppearanceGroup.Font")));
@@ -891,7 +841,7 @@
             this.emptySpaceItem3,
             this.lytContainer_QuitSmoke,
             this.simpleSeparator11});
-			this.lytContainer_Smoke.Location = new System.Drawing.Point(0, 112);
+			this.lytContainer_Smoke.Location = new System.Drawing.Point(0, 113);
 			this.lytContainer_Smoke.Name = "lytContainer_Smoke";
 			this.lytContainer_Smoke.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignModeGroup.AutoSize;
 			this.lytContainer_Smoke.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -1112,6 +1062,20 @@
 			this.simpleSeparator11.Name = "simpleSeparator11";
 			this.simpleSeparator11.Size = new System.Drawing.Size(913, 2);
 			// 
+			// simpleSeparator3
+			// 
+			this.simpleSeparator3.AllowHotTrack = false;
+			this.simpleSeparator3.Location = new System.Drawing.Point(0, 111);
+			this.simpleSeparator3.Name = "simpleSeparator3";
+			this.simpleSeparator3.Size = new System.Drawing.Size(921, 2);
+			// 
+			// simpleSeparator4
+			// 
+			this.simpleSeparator4.AllowHotTrack = false;
+			this.simpleSeparator4.Location = new System.Drawing.Point(0, 145);
+			this.simpleSeparator4.Name = "simpleSeparator4";
+			this.simpleSeparator4.Size = new System.Drawing.Size(921, 2);
+			// 
 			// lytContainer_Alcohol
 			// 
 			this.lytContainer_Alcohol.AppearanceGroup.Font = ((System.Drawing.Font)(resources.GetObject("lytContainer_Alcohol.AppearanceGroup.Font")));
@@ -1138,7 +1102,7 @@
             this.emptySpaceItem5,
             this.lytContainer_ProblemAlcohol,
             this.simpleSeparator2});
-			this.lytContainer_Alcohol.Location = new System.Drawing.Point(0, 146);
+			this.lytContainer_Alcohol.Location = new System.Drawing.Point(0, 147);
 			this.lytContainer_Alcohol.Name = "lytContainer_Alcohol";
 			this.lytContainer_Alcohol.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytContainer_Alcohol.Size = new System.Drawing.Size(921, 32);
@@ -1350,6 +1314,17 @@
 			this.simpleSeparator2.Name = "simpleSeparator2";
 			this.simpleSeparator2.Size = new System.Drawing.Size(913, 2);
 			// 
+			// layoutControlItem5
+			// 
+			this.layoutControlItem5.Control = this.chkNoSocialHistory;
+			this.layoutControlItem5.Location = new System.Drawing.Point(0, 47);
+			this.layoutControlItem5.Name = "layoutControlItem5";
+			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem5.Size = new System.Drawing.Size(206, 36);
+			this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem5.TextVisible = false;
+			// 
 			// layoutControlItem4
 			// 
 			this.layoutControlItem4.AppearanceItemCaption.BackColor = ((System.Drawing.Color)(resources.GetObject("layoutControlItem4.AppearanceItemCaption.BackColor")));
@@ -1361,10 +1336,25 @@
 			this.layoutControlItem4.MinSize = new System.Drawing.Size(40, 40);
 			this.layoutControlItem4.Name = "layoutControlItem4";
 			this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem4.Size = new System.Drawing.Size(40, 40);
+			this.layoutControlItem4.Size = new System.Drawing.Size(40, 41);
 			this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem4.TextVisible = false;
+			// 
+			// simpleSeparator6
+			// 
+			this.simpleSeparator6.AllowHotTrack = false;
+			this.simpleSeparator6.Location = new System.Drawing.Point(0, 213);
+			this.simpleSeparator6.Name = "simpleSeparator6";
+			this.simpleSeparator6.Size = new System.Drawing.Size(921, 2);
+			// 
+			// emptySpaceItem1
+			// 
+			this.emptySpaceItem1.AllowHotTrack = false;
+			this.emptySpaceItem1.Location = new System.Drawing.Point(0, 247);
+			this.emptySpaceItem1.Name = "emptySpaceItem1";
+			this.emptySpaceItem1.Size = new System.Drawing.Size(921, 232);
+			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// lytContainer_RecreationalDrugs
 			// 
@@ -1389,7 +1379,7 @@
             this.lytDrugs_No,
             this.lytDrugs_Yes,
             this.lytDrugs_Details});
-			this.lytContainer_RecreationalDrugs.Location = new System.Drawing.Point(0, 214);
+			this.lytContainer_RecreationalDrugs.Location = new System.Drawing.Point(0, 215);
 			this.lytContainer_RecreationalDrugs.Name = "lytContainer_RecreationalDrugs";
 			this.lytContainer_RecreationalDrugs.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytContainer_RecreationalDrugs.Size = new System.Drawing.Size(921, 32);
@@ -1486,7 +1476,7 @@
             this.simpleSeparator10,
             this.lytContainer_AddictionProblem,
             this.simpleSeparator14});
-			this.lytContainer_Addiction.Location = new System.Drawing.Point(0, 180);
+			this.lytContainer_Addiction.Location = new System.Drawing.Point(0, 181);
 			this.lytContainer_Addiction.Name = "lytContainer_Addiction";
 			this.lytContainer_Addiction.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytContainer_Addiction.Size = new System.Drawing.Size(921, 32);
@@ -1659,15 +1649,126 @@
 			this.simpleSeparator14.Name = "simpleSeparator14";
 			this.simpleSeparator14.Size = new System.Drawing.Size(913, 2);
 			// 
+			// simpleSeparator8
+			// 
+			this.simpleSeparator8.AllowHotTrack = false;
+			this.simpleSeparator8.Location = new System.Drawing.Point(0, 179);
+			this.simpleSeparator8.Name = "simpleSeparator8";
+			this.simpleSeparator8.Size = new System.Drawing.Size(921, 2);
+			// 
+			// layoutControlItem6
+			// 
+			this.layoutControlItem6.AppearanceItemCaption.Font = ((System.Drawing.Font)(resources.GetObject("layoutControlItem6.AppearanceItemCaption.Font")));
+			this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
+			this.layoutControlItem6.AppearanceItemCaption.Options.UseTextOptions = true;
+			this.layoutControlItem6.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+			this.layoutControlItem6.Control = this.txtGeneralDescription;
+			this.layoutControlItem6.Location = new System.Drawing.Point(0, 85);
+			this.layoutControlItem6.Name = "layoutControlItem6";
+			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem6.Size = new System.Drawing.Size(921, 26);
+			this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
+			this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Left;
+			this.layoutControlItem6.TextSize = new System.Drawing.Size(86, 13);
+			// 
+			// simpleSeparator13
+			// 
+			this.simpleSeparator13.AllowHotTrack = false;
+			this.simpleSeparator13.Location = new System.Drawing.Point(0, 83);
+			this.simpleSeparator13.Name = "simpleSeparator13";
+			this.simpleSeparator13.Size = new System.Drawing.Size(921, 2);
+			// 
 			// layoutControlItem7
 			// 
 			this.layoutControlItem7.Control = this.btnPrint;
-			this.layoutControlItem7.Location = new System.Drawing.Point(811, 3);
+			this.layoutControlItem7.Location = new System.Drawing.Point(578, 3);
 			this.layoutControlItem7.Name = "layoutControlItem7";
 			this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem7.Size = new System.Drawing.Size(110, 40);
+			this.layoutControlItem7.Size = new System.Drawing.Size(110, 41);
 			this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem7.TextVisible = false;
+			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			resources.ApplyResources(this.btnSave, "btnSave");
+			this.btnSave.Name = "btnSave";
+			this.btnSave.StyleController = this.layoutControl1;
+			// 
+			// layoutControlItem8
+			// 
+			this.layoutControlItem8.Control = this.btnSave;
+			this.layoutControlItem8.Location = new System.Drawing.Point(811, 3);
+			this.layoutControlItem8.Name = "layoutControlItem8";
+			this.layoutControlItem8.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem8.Size = new System.Drawing.Size(110, 41);
+			this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem8.TextVisible = false;
+			// 
+			// btnSearch
+			// 
+			this.btnSearch.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnSearch.Appearance.Font")));
+			this.btnSearch.Appearance.Options.UseFont = true;
+			this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+			this.btnSearch.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			resources.ApplyResources(this.btnSearch, "btnSearch");
+			this.btnSearch.Name = "btnSearch";
+			this.btnSearch.StyleController = this.layoutControl1;
+			// 
+			// layoutControlItem9
+			// 
+			this.layoutControlItem9.Control = this.btnSearch;
+			this.layoutControlItem9.Location = new System.Drawing.Point(770, 3);
+			this.layoutControlItem9.Name = "layoutControlItem9";
+			this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem9.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem9.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem9.TextVisible = false;
+			// 
+			// btnSettings
+			// 
+			this.btnSettings.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnSettings.Appearance.Font")));
+			this.btnSettings.Appearance.Options.UseFont = true;
+			this.btnSettings.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
+			this.btnSettings.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			resources.ApplyResources(this.btnSettings, "btnSettings");
+			this.btnSettings.Name = "btnSettings";
+			this.btnSettings.StyleController = this.layoutControl1;
+			// 
+			// layoutControlItem10
+			// 
+			this.layoutControlItem10.Control = this.btnSettings;
+			this.layoutControlItem10.Location = new System.Drawing.Point(729, 3);
+			this.layoutControlItem10.Name = "layoutControlItem10";
+			this.layoutControlItem10.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem10.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem10.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem10.TextVisible = false;
+			// 
+			// btnFullScreen
+			// 
+			this.btnFullScreen.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnFullScreen.Appearance.Font")));
+			this.btnFullScreen.Appearance.Options.UseFont = true;
+			this.btnFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
+			this.btnFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			resources.ApplyResources(this.btnFullScreen, "btnFullScreen");
+			this.btnFullScreen.Name = "btnFullScreen";
+			this.btnFullScreen.StyleController = this.layoutControl1;
+			// 
+			// layoutControlItem11
+			// 
+			this.layoutControlItem11.Control = this.btnFullScreen;
+			this.layoutControlItem11.Location = new System.Drawing.Point(688, 3);
+			this.layoutControlItem11.Name = "layoutControlItem11";
+			this.layoutControlItem11.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem11.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem11.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem11.TextVisible = false;
 			// 
 			// PEMR_SocialHistory_UC
 			// 
@@ -1691,20 +1792,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.txtSmoke_Details.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnNumberOfYearsSmoke.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnNumberOfDailyPacks.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator8)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator13)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytContainer_Smoke)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytSmoke_DetailsButton)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytSmoke_Details)).EndInit();
@@ -1722,6 +1815,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.lytQuitSmoke_More)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator11)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytContainer_Alcohol)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAlcohol_DetailsButton)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytQuitAlcohol_Details)).EndInit();
@@ -1739,7 +1834,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.lytProblemAlcohol_When)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytContainer_RecreationalDrugs)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytDrugs_DetailsButtons)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
@@ -1762,7 +1860,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytProblemAddiction_Details)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator14)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator8)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator13)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1881,5 +1986,13 @@
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator13;
 		private DevExpress.XtraEditors.SimpleButton btnPrint;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+		private DevExpress.XtraEditors.SimpleButton btnSave;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+		private DevExpress.XtraEditors.SimpleButton btnSearch;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+		private DevExpress.XtraEditors.SimpleButton btnSettings;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+		private DevExpress.XtraEditors.SimpleButton btnFullScreen;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
 	}
 }

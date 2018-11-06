@@ -28,10 +28,10 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_LabContainer));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
 			this.tabMainLab = new DevExpress.XtraTab.XtraTabControl();
@@ -90,6 +90,8 @@
 			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.tabMainLab)).BeginInit();
@@ -140,10 +142,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.btnSave);
 			this.layoutControl1.Controls.Add(this.tabMainLab);
 			this.layoutControl1.Controls.Add(this.labelControl1);
 			this.layoutControl1.Controls.Add(this.labelControl3);
@@ -362,7 +366,7 @@
 			this.dtRequestedDate.MinimumSize = new System.Drawing.Size(150, 0);
 			this.dtRequestedDate.Name = "dtRequestedDate";
 			this.dtRequestedDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
 			this.dtRequestedDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
 			this.dtRequestedDate.Size = new System.Drawing.Size(150, 20);
@@ -384,7 +388,7 @@
 			this.lkeServices.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeServices.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeServices.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
 			this.lkeServices.Properties.View = this.gridView1;
 			this.lkeServices.Size = new System.Drawing.Size(250, 20);
 			this.lkeServices.StyleController = this.layoutControl2;
@@ -412,7 +416,7 @@
 			this.lkeServiceCategories.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeServiceCategories.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeServiceCategories.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
 			this.lkeServiceCategories.Properties.View = this.gridLookUpEdit1View;
 			this.lkeServiceCategories.Size = new System.Drawing.Size(250, 20);
 			this.lkeServiceCategories.StyleController = this.layoutControl2;
@@ -608,7 +612,7 @@
 			this.lkeResultServices.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeResultServices.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeResultServices.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
 			this.lkeResultServices.Properties.ReadOnly = true;
 			this.lkeResultServices.Properties.View = this.gridView4;
 			this.lkeResultServices.Size = new System.Drawing.Size(250, 20);
@@ -785,7 +789,7 @@
 			this.btnNewVitalSign.Appearance.Options.UseFont = true;
 			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
 			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnNewVitalSign.Location = new System.Drawing.Point(934, 6);
+			this.btnNewVitalSign.Location = new System.Drawing.Point(783, 6);
 			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.Name = "btnNewVitalSign";
@@ -800,7 +804,7 @@
 			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
 			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
 			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSearchDiagnosis.Location = new System.Drawing.Point(893, 6);
+			this.btnSearchDiagnosis.Location = new System.Drawing.Point(824, 6);
 			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
@@ -815,7 +819,7 @@
 			this.btnAddedDiagnosisFullScreen.Appearance.Options.UseFont = true;
 			this.btnAddedDiagnosisFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
 			this.btnAddedDiagnosisFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnAddedDiagnosisFullScreen.Location = new System.Drawing.Point(852, 6);
+			this.btnAddedDiagnosisFullScreen.Location = new System.Drawing.Point(742, 6);
 			this.btnAddedDiagnosisFullScreen.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnAddedDiagnosisFullScreen.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnAddedDiagnosisFullScreen.Name = "btnAddedDiagnosisFullScreen";
@@ -828,7 +832,7 @@
 			// 
 			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
 			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnPrint.Location = new System.Drawing.Point(739, 3);
+			this.btnPrint.Location = new System.Drawing.Point(629, 3);
 			this.btnPrint.MaximumSize = new System.Drawing.Size(110, 40);
 			this.btnPrint.MinimumSize = new System.Drawing.Size(110, 40);
 			this.btnPrint.Name = "btnPrint";
@@ -861,7 +865,7 @@
 			this.labelControl2.MinimumSize = new System.Drawing.Size(0, 40);
 			this.labelControl2.Name = "labelControl2";
 			this.labelControl2.Padding = new System.Windows.Forms.Padding(10);
-			this.labelControl2.Size = new System.Drawing.Size(699, 40);
+			this.labelControl2.Size = new System.Drawing.Size(589, 40);
 			this.labelControl2.StyleController = this.layoutControl1;
 			this.labelControl2.TabIndex = 9;
 			this.labelControl2.Text = ".... Labs ....";
@@ -875,11 +879,12 @@
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem5,
             this.layoutControlItem6,
             this.layoutControlItem7,
             this.layoutControlItem8,
-            this.layoutControlItem20});
+            this.layoutControlItem20,
+            this.layoutControlItem21,
+            this.layoutControlItem5});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -892,7 +897,7 @@
 			this.layoutControlItem1.Location = new System.Drawing.Point(40, 3);
 			this.layoutControlItem1.Name = "layoutControlItem1";
 			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem1.Size = new System.Drawing.Size(699, 41);
+			this.layoutControlItem1.Size = new System.Drawing.Size(589, 41);
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem1.TextVisible = false;
 			// 
@@ -912,7 +917,7 @@
 			// layoutControlItem3
 			// 
 			this.layoutControlItem3.Control = this.btnPrint;
-			this.layoutControlItem3.Location = new System.Drawing.Point(739, 3);
+			this.layoutControlItem3.Location = new System.Drawing.Point(629, 3);
 			this.layoutControlItem3.Name = "layoutControlItem3";
 			this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem3.Size = new System.Drawing.Size(110, 41);
@@ -922,7 +927,7 @@
 			// layoutControlItem4
 			// 
 			this.layoutControlItem4.Control = this.btnAddedDiagnosisFullScreen;
-			this.layoutControlItem4.Location = new System.Drawing.Point(849, 3);
+			this.layoutControlItem4.Location = new System.Drawing.Point(739, 3);
 			this.layoutControlItem4.Name = "layoutControlItem4";
 			this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem4.Size = new System.Drawing.Size(41, 41);
@@ -933,7 +938,7 @@
 			// layoutControlItem5
 			// 
 			this.layoutControlItem5.Control = this.btnSearchDiagnosis;
-			this.layoutControlItem5.Location = new System.Drawing.Point(890, 3);
+			this.layoutControlItem5.Location = new System.Drawing.Point(821, 3);
 			this.layoutControlItem5.Name = "layoutControlItem5";
 			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem5.Size = new System.Drawing.Size(41, 41);
@@ -944,7 +949,7 @@
 			// layoutControlItem6
 			// 
 			this.layoutControlItem6.Control = this.btnNewVitalSign;
-			this.layoutControlItem6.Location = new System.Drawing.Point(931, 3);
+			this.layoutControlItem6.Location = new System.Drawing.Point(780, 3);
 			this.layoutControlItem6.Name = "layoutControlItem6";
 			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem6.Size = new System.Drawing.Size(41, 41);
@@ -987,6 +992,29 @@
 			this.layoutControlItem20.Size = new System.Drawing.Size(972, 497);
 			this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem20.TextVisible = false;
+			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSave.Location = new System.Drawing.Point(862, 3);
+			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(110, 40);
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.TabIndex = 12;
+			this.btnSave.Text = "simpleButton1";
+			// 
+			// layoutControlItem21
+			// 
+			this.layoutControlItem21.Control = this.btnSave;
+			this.layoutControlItem21.Location = new System.Drawing.Point(862, 3);
+			this.layoutControlItem21.Name = "layoutControlItem21";
+			this.layoutControlItem21.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem21.Size = new System.Drawing.Size(110, 41);
+			this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem21.TextVisible = false;
 			// 
 			// PEMR_LabContainer
 			// 
@@ -1047,6 +1075,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1110,5 +1139,7 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
+		private DevExpress.XtraEditors.SimpleButton btnSave;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
 	}
 }

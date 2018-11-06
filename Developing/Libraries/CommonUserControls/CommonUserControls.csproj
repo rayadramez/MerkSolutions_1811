@@ -1770,6 +1770,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\SaveIcon_16_101.png" />
     <None Include="Resources\SaveIcon_16_100.png" />
     <None Include="Resources\SaveIcon_16_099.png" />
     <None Include="Resources\SaveIcon_05.png" />

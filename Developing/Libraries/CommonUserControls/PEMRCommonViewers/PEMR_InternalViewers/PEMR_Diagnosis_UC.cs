@@ -384,6 +384,11 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 		}
 
+		private void btnSave_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
 		#endregion
 
 		#region Check Button Events

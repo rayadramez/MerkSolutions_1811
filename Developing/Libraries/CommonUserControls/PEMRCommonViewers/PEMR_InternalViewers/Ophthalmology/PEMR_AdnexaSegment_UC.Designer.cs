@@ -30,16 +30,30 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_AdnexaSegment_UC));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
 			this.txtReccommednations_OS = new DevExpress.XtraEditors.MemoEdit();
+			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+			this.btnCopyToOD = new DevExpress.XtraEditors.SimpleButton();
+			this.btnCopyToOS = new DevExpress.XtraEditors.SimpleButton();
 			this.txtReccommednations_OD = new DevExpress.XtraEditors.MemoEdit();
 			this.lstAdnexaSegment_OS = new DevExpress.XtraEditors.ListBoxControl();
 			this.lkeAdnexaSegmentCategory_OS = new DevExpress.XtraEditors.GridLookUpEdit();
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.btnRemoveFromList_OS = new DevExpress.XtraEditors.SimpleButton();
+			this.btnRemoveFromList_OD = new DevExpress.XtraEditors.SimpleButton();
+			this.btnAddList_OS = new DevExpress.XtraEditors.SimpleButton();
+			this.btnAddList_OD = new DevExpress.XtraEditors.SimpleButton();
 			this.lstAddedAdnexaSegment_OD = new DevExpress.XtraEditors.ListBoxControl();
 			this.lstAddedAdnexaSegment_OS = new DevExpress.XtraEditors.ListBoxControl();
 			this.lkeAdnexaSegmentCategory_OD = new DevExpress.XtraEditors.GridLookUpEdit();
 			this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
+			this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
 			this.lstAdnexaSegment_OD = new DevExpress.XtraEditors.ListBoxControl();
+			this.btnFullScreen = new DevExpress.XtraEditors.SimpleButton();
+			this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
+			this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -47,17 +61,26 @@
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.lytAddedSign_OD = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytAddedSign_OS = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -65,41 +88,18 @@
 			this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem12 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator5 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator6 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.emptySpaceItem13 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
-			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
-			this.btnCopyToOD = new DevExpress.XtraEditors.SimpleButton();
-			this.btnCopyToOS = new DevExpress.XtraEditors.SimpleButton();
-			this.btnRemoveFromList_OS = new DevExpress.XtraEditors.SimpleButton();
-			this.btnRemoveFromList_OD = new DevExpress.XtraEditors.SimpleButton();
-			this.btnAddList_OS = new DevExpress.XtraEditors.SimpleButton();
-			this.btnAddList_OD = new DevExpress.XtraEditors.SimpleButton();
-			this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
-			this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
-			this.btnFullScreen = new DevExpress.XtraEditors.SimpleButton();
-			this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
-			this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -113,22 +113,34 @@
 			((System.ComponentModel.ISupportInitialize)(this.lstAddedAdnexaSegment_OS)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeAdnexaSegmentCategory_OD.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstAdnexaSegment_OD)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAddedSign_OD)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAddedSign_OS)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
@@ -136,30 +148,18 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
 			this.SuspendLayout();
@@ -201,6 +201,35 @@
 			this.layoutControl1.TabIndex = 2;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_100;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSave.Location = new System.Drawing.Point(1090, 3);
+			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(110, 40);
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.TabIndex = 9;
+			this.btnSave.Text = "simpleButton1";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+			// 
+			// btnNewVitalSign
+			// 
+			this.btnNewVitalSign.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnNewVitalSign.Appearance.Options.UseFont = true;
+			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
+			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnNewVitalSign.Location = new System.Drawing.Point(970, 6);
+			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnNewVitalSign.Name = "btnNewVitalSign";
+			this.btnNewVitalSign.Size = new System.Drawing.Size(35, 35);
+			this.btnNewVitalSign.StyleController = this.layoutControl1;
+			this.btnNewVitalSign.TabIndex = 37;
+			this.btnNewVitalSign.Text = "Add New Category";
+			// 
 			// txtReccommednations_OS
 			// 
 			this.txtReccommednations_OS.EditValue = "";
@@ -223,6 +252,53 @@
 			this.txtReccommednations_OS.Size = new System.Drawing.Size(521, 57);
 			this.txtReccommednations_OS.StyleController = this.layoutControl1;
 			this.txtReccommednations_OS.TabIndex = 18;
+			// 
+			// btnSearchDiagnosis
+			// 
+			this.btnSearchDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
+			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
+			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSearchDiagnosis.Location = new System.Drawing.Point(1052, 6);
+			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
+			this.btnSearchDiagnosis.Size = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.StyleController = this.layoutControl1;
+			this.btnSearchDiagnosis.TabIndex = 40;
+			this.btnSearchDiagnosis.Text = "Add New Diagnosis";
+			// 
+			// btnCopyToOD
+			// 
+			this.btnCopyToOD.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnCopyToOD.Appearance.Options.UseFont = true;
+			this.btnCopyToOD.Image = global::CommonUserControls.Properties.Resources.CopyToOD_16_01;
+			this.btnCopyToOD.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnCopyToOD.Location = new System.Drawing.Point(679, 119);
+			this.btnCopyToOD.MaximumSize = new System.Drawing.Size(80, 50);
+			this.btnCopyToOD.MinimumSize = new System.Drawing.Size(80, 50);
+			this.btnCopyToOD.Name = "btnCopyToOD";
+			this.btnCopyToOD.Size = new System.Drawing.Size(80, 50);
+			this.btnCopyToOD.StyleController = this.layoutControl1;
+			this.btnCopyToOD.TabIndex = 42;
+			this.btnCopyToOD.Text = "All Active Signs";
+			this.btnCopyToOD.Click += new System.EventHandler(this.btnCopyToOD_Click);
+			// 
+			// btnCopyToOS
+			// 
+			this.btnCopyToOS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnCopyToOS.Appearance.Options.UseFont = true;
+			this.btnCopyToOS.Image = global::CommonUserControls.Properties.Resources.CopyToOS_16_01;
+			this.btnCopyToOS.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnCopyToOS.Location = new System.Drawing.Point(441, 119);
+			this.btnCopyToOS.MaximumSize = new System.Drawing.Size(80, 50);
+			this.btnCopyToOS.MinimumSize = new System.Drawing.Size(80, 50);
+			this.btnCopyToOS.Name = "btnCopyToOS";
+			this.btnCopyToOS.Size = new System.Drawing.Size(80, 50);
+			this.btnCopyToOS.StyleController = this.layoutControl1;
+			this.btnCopyToOS.TabIndex = 43;
+			this.btnCopyToOS.Text = "All Active Signs";
+			this.btnCopyToOS.Click += new System.EventHandler(this.btnCopyToOS_Click);
 			// 
 			// txtReccommednations_OD
 			// 
@@ -298,6 +374,58 @@
 			this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
 			this.gridView1.OptionsView.ShowGroupPanel = false;
 			// 
+			// btnRemoveFromList_OS
+			// 
+			this.btnRemoveFromList_OS.Image = global::CommonUserControls.Properties.Resources.AddToList_16_01;
+			this.btnRemoveFromList_OS.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnRemoveFromList_OS.Location = new System.Drawing.Point(918, 259);
+			this.btnRemoveFromList_OS.MaximumSize = new System.Drawing.Size(40, 80);
+			this.btnRemoveFromList_OS.MinimumSize = new System.Drawing.Size(40, 80);
+			this.btnRemoveFromList_OS.Name = "btnRemoveFromList_OS";
+			this.btnRemoveFromList_OS.Size = new System.Drawing.Size(40, 80);
+			this.btnRemoveFromList_OS.StyleController = this.layoutControl1;
+			this.btnRemoveFromList_OS.TabIndex = 13;
+			this.btnRemoveFromList_OS.Click += new System.EventHandler(this.btnRemoveFromList_OS_Click);
+			// 
+			// btnRemoveFromList_OD
+			// 
+			this.btnRemoveFromList_OD.Image = global::CommonUserControls.Properties.Resources.RemoveFromList_066;
+			this.btnRemoveFromList_OD.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnRemoveFromList_OD.Location = new System.Drawing.Point(239, 258);
+			this.btnRemoveFromList_OD.MaximumSize = new System.Drawing.Size(40, 80);
+			this.btnRemoveFromList_OD.MinimumSize = new System.Drawing.Size(40, 80);
+			this.btnRemoveFromList_OD.Name = "btnRemoveFromList_OD";
+			this.btnRemoveFromList_OD.Size = new System.Drawing.Size(40, 80);
+			this.btnRemoveFromList_OD.StyleController = this.layoutControl1;
+			this.btnRemoveFromList_OD.TabIndex = 13;
+			this.btnRemoveFromList_OD.Click += new System.EventHandler(this.btnRemoveFromList_OD_Click);
+			// 
+			// btnAddList_OS
+			// 
+			this.btnAddList_OS.Image = global::CommonUserControls.Properties.Resources.RemoveFrom_16_01;
+			this.btnAddList_OS.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnAddList_OS.Location = new System.Drawing.Point(918, 173);
+			this.btnAddList_OS.MaximumSize = new System.Drawing.Size(40, 80);
+			this.btnAddList_OS.MinimumSize = new System.Drawing.Size(40, 80);
+			this.btnAddList_OS.Name = "btnAddList_OS";
+			this.btnAddList_OS.Size = new System.Drawing.Size(40, 80);
+			this.btnAddList_OS.StyleController = this.layoutControl1;
+			this.btnAddList_OS.TabIndex = 13;
+			this.btnAddList_OS.Click += new System.EventHandler(this.btnAddList_OS_Click);
+			// 
+			// btnAddList_OD
+			// 
+			this.btnAddList_OD.Image = global::CommonUserControls.Properties.Resources.AddToLisT_066;
+			this.btnAddList_OD.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnAddList_OD.Location = new System.Drawing.Point(239, 172);
+			this.btnAddList_OD.MaximumSize = new System.Drawing.Size(40, 80);
+			this.btnAddList_OD.MinimumSize = new System.Drawing.Size(40, 80);
+			this.btnAddList_OD.Name = "btnAddList_OD";
+			this.btnAddList_OD.Size = new System.Drawing.Size(40, 80);
+			this.btnAddList_OD.StyleController = this.layoutControl1;
+			this.btnAddList_OD.TabIndex = 12;
+			this.btnAddList_OD.Click += new System.EventHandler(this.btnAddList_OD_Click);
+			// 
 			// lstAddedAdnexaSegment_OD
 			// 
 			this.lstAddedAdnexaSegment_OD.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -365,6 +493,32 @@
 			this.gridView4.OptionsSelection.EnableAppearanceFocusedCell = false;
 			this.gridView4.OptionsView.ShowGroupPanel = false;
 			// 
+			// pictureEdit2
+			// 
+			this.pictureEdit2.EditValue = global::CommonUserControls.Properties.Resources.Eye_OS_16_01;
+			this.pictureEdit2.Location = new System.Drawing.Point(967, 50);
+			this.pictureEdit2.Name = "pictureEdit2";
+			this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
+			this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+			this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+			this.pictureEdit2.Size = new System.Drawing.Size(84, 64);
+			this.pictureEdit2.StyleController = this.layoutControl1;
+			this.pictureEdit2.TabIndex = 47;
+			// 
+			// pictureEdit4
+			// 
+			this.pictureEdit4.EditValue = global::CommonUserControls.Properties.Resources.Eye_OD_16_01;
+			this.pictureEdit4.Location = new System.Drawing.Point(149, 50);
+			this.pictureEdit4.Name = "pictureEdit4";
+			this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
+			this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+			this.pictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+			this.pictureEdit4.Size = new System.Drawing.Size(84, 64);
+			this.pictureEdit4.StyleController = this.layoutControl1;
+			this.pictureEdit4.TabIndex = 46;
+			// 
 			// lstAdnexaSegment_OD
 			// 
 			this.lstAdnexaSegment_OD.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -384,6 +538,45 @@
 			this.lstAdnexaSegment_OD.TabIndex = 11;
 			this.lstAdnexaSegment_OD.SelectedValueChanged += new System.EventHandler(this.lstAdnexaSegment_OD_SelectedIndexChanged);
 			this.lstAdnexaSegment_OD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstAdnexaSegment_OD_MouseDoubleClick);
+			// 
+			// btnFullScreen
+			// 
+			this.btnFullScreen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnFullScreen.Appearance.Options.UseFont = true;
+			this.btnFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
+			this.btnFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnFullScreen.Location = new System.Drawing.Point(1011, 6);
+			this.btnFullScreen.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnFullScreen.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnFullScreen.Name = "btnFullScreen";
+			this.btnFullScreen.Size = new System.Drawing.Size(35, 35);
+			this.btnFullScreen.StyleController = this.layoutControl1;
+			this.btnFullScreen.TabIndex = 44;
+			this.btnFullScreen.Text = "Add New Diagnosis";
+			// 
+			// btnPrint
+			// 
+			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
+			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnPrint.Location = new System.Drawing.Point(857, 3);
+			this.btnPrint.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnPrint.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnPrint.Name = "btnPrint";
+			this.btnPrint.Size = new System.Drawing.Size(110, 40);
+			this.btnPrint.StyleController = this.layoutControl1;
+			this.btnPrint.TabIndex = 8;
+			this.btnPrint.Text = "simpleButton1";
+			// 
+			// pictureEdit1
+			// 
+			this.pictureEdit1.EditValue = global::CommonUserControls.Properties.Resources.PostorierSegment_16_01;
+			this.pictureEdit1.Location = new System.Drawing.Point(0, 3);
+			this.pictureEdit1.Name = "pictureEdit1";
+			this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+			this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+			this.pictureEdit1.Size = new System.Drawing.Size(40, 40);
+			this.pictureEdit1.StyleController = this.layoutControl1;
+			this.pictureEdit1.TabIndex = 9;
 			// 
 			// labelControl3
 			// 
@@ -516,6 +709,40 @@
 			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem3.TextVisible = false;
 			// 
+			// layoutControlItem4
+			// 
+			this.layoutControlItem4.Control = this.pictureEdit1;
+			this.layoutControlItem4.Location = new System.Drawing.Point(0, 3);
+			this.layoutControlItem4.MaxSize = new System.Drawing.Size(40, 40);
+			this.layoutControlItem4.MinSize = new System.Drawing.Size(40, 40);
+			this.layoutControlItem4.Name = "layoutControlItem4";
+			this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem4.Size = new System.Drawing.Size(40, 41);
+			this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem4.TextVisible = false;
+			// 
+			// layoutControlItem5
+			// 
+			this.layoutControlItem5.Control = this.btnPrint;
+			this.layoutControlItem5.Location = new System.Drawing.Point(857, 3);
+			this.layoutControlItem5.Name = "layoutControlItem5";
+			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem5.Size = new System.Drawing.Size(110, 41);
+			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem5.TextVisible = false;
+			// 
+			// layoutControlItem6
+			// 
+			this.layoutControlItem6.Control = this.btnFullScreen;
+			this.layoutControlItem6.Location = new System.Drawing.Point(1008, 3);
+			this.layoutControlItem6.Name = "layoutControlItem6";
+			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem6.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem6.TextVisible = false;
+			// 
 			// layoutControlItem9
 			// 
 			this.layoutControlItem9.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -584,6 +811,17 @@
 			this.lytAddedSign_OD.TextLocation = DevExpress.Utils.Locations.Top;
 			this.lytAddedSign_OD.TextSize = new System.Drawing.Size(96, 16);
 			// 
+			// layoutControlItem13
+			// 
+			this.layoutControlItem13.Control = this.btnAddList_OD;
+			this.layoutControlItem13.Location = new System.Drawing.Point(236, 169);
+			this.layoutControlItem13.Name = "layoutControlItem13";
+			this.layoutControlItem13.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem13.Size = new System.Drawing.Size(49, 86);
+			this.layoutControlItem13.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem13.TextVisible = false;
+			// 
 			// emptySpaceItem3
 			// 
 			this.emptySpaceItem3.AllowHotTrack = false;
@@ -591,6 +829,31 @@
 			this.emptySpaceItem3.Name = "emptySpaceItem3";
 			this.emptySpaceItem3.Size = new System.Drawing.Size(49, 179);
 			this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// layoutControlItem15
+			// 
+			this.layoutControlItem15.Control = this.btnRemoveFromList_OD;
+			this.layoutControlItem15.Location = new System.Drawing.Point(236, 255);
+			this.layoutControlItem15.Name = "layoutControlItem15";
+			this.layoutControlItem15.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem15.Size = new System.Drawing.Size(49, 86);
+			this.layoutControlItem15.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem15.TextVisible = false;
+			// 
+			// layoutControlItem10
+			// 
+			this.layoutControlItem10.Control = this.pictureEdit4;
+			this.layoutControlItem10.Location = new System.Drawing.Point(146, 47);
+			this.layoutControlItem10.MaxSize = new System.Drawing.Size(90, 70);
+			this.layoutControlItem10.MinSize = new System.Drawing.Size(90, 70);
+			this.layoutControlItem10.Name = "layoutControlItem10";
+			this.layoutControlItem10.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem10.Size = new System.Drawing.Size(90, 70);
+			this.layoutControlItem10.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem10.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem10.TextVisible = false;
 			// 
 			// emptySpaceItem1
 			// 
@@ -610,6 +873,20 @@
 			this.emptySpaceItem5.Name = "emptySpaceItem5";
 			this.emptySpaceItem5.Size = new System.Drawing.Size(146, 70);
 			this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// layoutControlItem14
+			// 
+			this.layoutControlItem14.Control = this.pictureEdit2;
+			this.layoutControlItem14.Location = new System.Drawing.Point(964, 47);
+			this.layoutControlItem14.MaxSize = new System.Drawing.Size(90, 70);
+			this.layoutControlItem14.MinSize = new System.Drawing.Size(90, 70);
+			this.layoutControlItem14.Name = "layoutControlItem14";
+			this.layoutControlItem14.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem14.Size = new System.Drawing.Size(90, 70);
+			this.layoutControlItem14.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem14.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem14.TextVisible = false;
 			// 
 			// layoutControlItem17
 			// 
@@ -669,6 +946,28 @@
 			this.emptySpaceItem8.Size = new System.Drawing.Size(285, 70);
 			this.emptySpaceItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// layoutControlItem8
+			// 
+			this.layoutControlItem8.Control = this.btnAddList_OS;
+			this.layoutControlItem8.Location = new System.Drawing.Point(915, 170);
+			this.layoutControlItem8.Name = "layoutControlItem8";
+			this.layoutControlItem8.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem8.Size = new System.Drawing.Size(49, 86);
+			this.layoutControlItem8.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem8.TextVisible = false;
+			// 
+			// layoutControlItem16
+			// 
+			this.layoutControlItem16.Control = this.btnRemoveFromList_OS;
+			this.layoutControlItem16.Location = new System.Drawing.Point(915, 256);
+			this.layoutControlItem16.Name = "layoutControlItem16";
+			this.layoutControlItem16.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem16.Size = new System.Drawing.Size(49, 86);
+			this.layoutControlItem16.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem16.TextVisible = false;
 			// 
 			// lytAddedSign_OS
 			// 
@@ -753,6 +1052,26 @@
 			this.layoutControlItem19.TextLocation = DevExpress.Utils.Locations.Top;
 			this.layoutControlItem19.TextSize = new System.Drawing.Size(96, 16);
 			// 
+			// layoutControlItem20
+			// 
+			this.layoutControlItem20.Control = this.btnCopyToOS;
+			this.layoutControlItem20.Location = new System.Drawing.Point(441, 119);
+			this.layoutControlItem20.Name = "layoutControlItem20";
+			this.layoutControlItem20.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem20.Size = new System.Drawing.Size(80, 50);
+			this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem20.TextVisible = false;
+			// 
+			// layoutControlItem21
+			// 
+			this.layoutControlItem21.Control = this.btnCopyToOD;
+			this.layoutControlItem21.Location = new System.Drawing.Point(679, 119);
+			this.layoutControlItem21.Name = "layoutControlItem21";
+			this.layoutControlItem21.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem21.Size = new System.Drawing.Size(80, 51);
+			this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem21.TextVisible = false;
+			// 
 			// emptySpaceItem12
 			// 
 			this.emptySpaceItem12.AllowHotTrack = false;
@@ -777,6 +1096,17 @@
 			this.simpleSeparator2.Location = new System.Drawing.Point(523, 47);
 			this.simpleSeparator2.Name = "simpleSeparator2";
 			this.simpleSeparator2.Size = new System.Drawing.Size(2, 473);
+			// 
+			// layoutControlItem24
+			// 
+			this.layoutControlItem24.Control = this.btnSearchDiagnosis;
+			this.layoutControlItem24.Location = new System.Drawing.Point(1049, 3);
+			this.layoutControlItem24.Name = "layoutControlItem24";
+			this.layoutControlItem24.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem24.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem24.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem24.TextVisible = false;
 			// 
 			// simpleSeparator3
 			// 
@@ -833,336 +1163,6 @@
 			this.layoutControlItem11.TextLocation = DevExpress.Utils.Locations.Top;
 			this.layoutControlItem11.TextSize = new System.Drawing.Size(96, 16);
 			// 
-			// btnSave
-			// 
-			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_100;
-			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSave.Location = new System.Drawing.Point(1090, 3);
-			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(110, 40);
-			this.btnSave.StyleController = this.layoutControl1;
-			this.btnSave.TabIndex = 9;
-			this.btnSave.Text = "simpleButton1";
-			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-			// 
-			// btnNewVitalSign
-			// 
-			this.btnNewVitalSign.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnNewVitalSign.Appearance.Options.UseFont = true;
-			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
-			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnNewVitalSign.Location = new System.Drawing.Point(970, 6);
-			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
-			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
-			this.btnNewVitalSign.Name = "btnNewVitalSign";
-			this.btnNewVitalSign.Size = new System.Drawing.Size(35, 35);
-			this.btnNewVitalSign.StyleController = this.layoutControl1;
-			this.btnNewVitalSign.TabIndex = 37;
-			this.btnNewVitalSign.Text = "Add New Category";
-			// 
-			// btnSearchDiagnosis
-			// 
-			this.btnSearchDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
-			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
-			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSearchDiagnosis.Location = new System.Drawing.Point(1052, 6);
-			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
-			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
-			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
-			this.btnSearchDiagnosis.Size = new System.Drawing.Size(35, 35);
-			this.btnSearchDiagnosis.StyleController = this.layoutControl1;
-			this.btnSearchDiagnosis.TabIndex = 40;
-			this.btnSearchDiagnosis.Text = "Add New Diagnosis";
-			// 
-			// btnCopyToOD
-			// 
-			this.btnCopyToOD.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnCopyToOD.Appearance.Options.UseFont = true;
-			this.btnCopyToOD.Image = global::CommonUserControls.Properties.Resources.CopyToOD_16_01;
-			this.btnCopyToOD.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnCopyToOD.Location = new System.Drawing.Point(679, 119);
-			this.btnCopyToOD.MaximumSize = new System.Drawing.Size(80, 50);
-			this.btnCopyToOD.MinimumSize = new System.Drawing.Size(80, 50);
-			this.btnCopyToOD.Name = "btnCopyToOD";
-			this.btnCopyToOD.Size = new System.Drawing.Size(80, 50);
-			this.btnCopyToOD.StyleController = this.layoutControl1;
-			this.btnCopyToOD.TabIndex = 42;
-			this.btnCopyToOD.Text = "All Active Signs";
-			this.btnCopyToOD.Click += new System.EventHandler(this.btnCopyToOD_Click);
-			// 
-			// btnCopyToOS
-			// 
-			this.btnCopyToOS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnCopyToOS.Appearance.Options.UseFont = true;
-			this.btnCopyToOS.Image = global::CommonUserControls.Properties.Resources.CopyToOS_16_01;
-			this.btnCopyToOS.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnCopyToOS.Location = new System.Drawing.Point(441, 119);
-			this.btnCopyToOS.MaximumSize = new System.Drawing.Size(80, 50);
-			this.btnCopyToOS.MinimumSize = new System.Drawing.Size(80, 50);
-			this.btnCopyToOS.Name = "btnCopyToOS";
-			this.btnCopyToOS.Size = new System.Drawing.Size(80, 50);
-			this.btnCopyToOS.StyleController = this.layoutControl1;
-			this.btnCopyToOS.TabIndex = 43;
-			this.btnCopyToOS.Text = "All Active Signs";
-			this.btnCopyToOS.Click += new System.EventHandler(this.btnCopyToOS_Click);
-			// 
-			// btnRemoveFromList_OS
-			// 
-			this.btnRemoveFromList_OS.Image = global::CommonUserControls.Properties.Resources.AddToList_16_01;
-			this.btnRemoveFromList_OS.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnRemoveFromList_OS.Location = new System.Drawing.Point(918, 259);
-			this.btnRemoveFromList_OS.MaximumSize = new System.Drawing.Size(40, 80);
-			this.btnRemoveFromList_OS.MinimumSize = new System.Drawing.Size(40, 80);
-			this.btnRemoveFromList_OS.Name = "btnRemoveFromList_OS";
-			this.btnRemoveFromList_OS.Size = new System.Drawing.Size(40, 80);
-			this.btnRemoveFromList_OS.StyleController = this.layoutControl1;
-			this.btnRemoveFromList_OS.TabIndex = 13;
-			this.btnRemoveFromList_OS.Click += new System.EventHandler(this.btnRemoveFromList_OS_Click);
-			// 
-			// btnRemoveFromList_OD
-			// 
-			this.btnRemoveFromList_OD.Image = global::CommonUserControls.Properties.Resources.RemoveFromList_066;
-			this.btnRemoveFromList_OD.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnRemoveFromList_OD.Location = new System.Drawing.Point(239, 258);
-			this.btnRemoveFromList_OD.MaximumSize = new System.Drawing.Size(40, 80);
-			this.btnRemoveFromList_OD.MinimumSize = new System.Drawing.Size(40, 80);
-			this.btnRemoveFromList_OD.Name = "btnRemoveFromList_OD";
-			this.btnRemoveFromList_OD.Size = new System.Drawing.Size(40, 80);
-			this.btnRemoveFromList_OD.StyleController = this.layoutControl1;
-			this.btnRemoveFromList_OD.TabIndex = 13;
-			this.btnRemoveFromList_OD.Click += new System.EventHandler(this.btnRemoveFromList_OD_Click);
-			// 
-			// btnAddList_OS
-			// 
-			this.btnAddList_OS.Image = global::CommonUserControls.Properties.Resources.RemoveFrom_16_01;
-			this.btnAddList_OS.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnAddList_OS.Location = new System.Drawing.Point(918, 173);
-			this.btnAddList_OS.MaximumSize = new System.Drawing.Size(40, 80);
-			this.btnAddList_OS.MinimumSize = new System.Drawing.Size(40, 80);
-			this.btnAddList_OS.Name = "btnAddList_OS";
-			this.btnAddList_OS.Size = new System.Drawing.Size(40, 80);
-			this.btnAddList_OS.StyleController = this.layoutControl1;
-			this.btnAddList_OS.TabIndex = 13;
-			this.btnAddList_OS.Click += new System.EventHandler(this.btnAddList_OS_Click);
-			// 
-			// btnAddList_OD
-			// 
-			this.btnAddList_OD.Image = global::CommonUserControls.Properties.Resources.AddToLisT_066;
-			this.btnAddList_OD.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnAddList_OD.Location = new System.Drawing.Point(239, 172);
-			this.btnAddList_OD.MaximumSize = new System.Drawing.Size(40, 80);
-			this.btnAddList_OD.MinimumSize = new System.Drawing.Size(40, 80);
-			this.btnAddList_OD.Name = "btnAddList_OD";
-			this.btnAddList_OD.Size = new System.Drawing.Size(40, 80);
-			this.btnAddList_OD.StyleController = this.layoutControl1;
-			this.btnAddList_OD.TabIndex = 12;
-			this.btnAddList_OD.Click += new System.EventHandler(this.btnAddList_OD_Click);
-			// 
-			// pictureEdit2
-			// 
-			this.pictureEdit2.EditValue = global::CommonUserControls.Properties.Resources.Eye_OS_16_01;
-			this.pictureEdit2.Location = new System.Drawing.Point(967, 50);
-			this.pictureEdit2.Name = "pictureEdit2";
-			this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
-			this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-			this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-			this.pictureEdit2.Size = new System.Drawing.Size(84, 64);
-			this.pictureEdit2.StyleController = this.layoutControl1;
-			this.pictureEdit2.TabIndex = 47;
-			// 
-			// pictureEdit4
-			// 
-			this.pictureEdit4.EditValue = global::CommonUserControls.Properties.Resources.Eye_OD_16_01;
-			this.pictureEdit4.Location = new System.Drawing.Point(149, 50);
-			this.pictureEdit4.Name = "pictureEdit4";
-			this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
-			this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-			this.pictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-			this.pictureEdit4.Size = new System.Drawing.Size(84, 64);
-			this.pictureEdit4.StyleController = this.layoutControl1;
-			this.pictureEdit4.TabIndex = 46;
-			// 
-			// btnFullScreen
-			// 
-			this.btnFullScreen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnFullScreen.Appearance.Options.UseFont = true;
-			this.btnFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
-			this.btnFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnFullScreen.Location = new System.Drawing.Point(1011, 6);
-			this.btnFullScreen.MaximumSize = new System.Drawing.Size(35, 35);
-			this.btnFullScreen.MinimumSize = new System.Drawing.Size(35, 35);
-			this.btnFullScreen.Name = "btnFullScreen";
-			this.btnFullScreen.Size = new System.Drawing.Size(35, 35);
-			this.btnFullScreen.StyleController = this.layoutControl1;
-			this.btnFullScreen.TabIndex = 44;
-			this.btnFullScreen.Text = "Add New Diagnosis";
-			// 
-			// btnPrint
-			// 
-			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
-			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnPrint.Location = new System.Drawing.Point(857, 3);
-			this.btnPrint.MaximumSize = new System.Drawing.Size(110, 40);
-			this.btnPrint.MinimumSize = new System.Drawing.Size(110, 40);
-			this.btnPrint.Name = "btnPrint";
-			this.btnPrint.Size = new System.Drawing.Size(110, 40);
-			this.btnPrint.StyleController = this.layoutControl1;
-			this.btnPrint.TabIndex = 8;
-			this.btnPrint.Text = "simpleButton1";
-			// 
-			// pictureEdit1
-			// 
-			this.pictureEdit1.EditValue = global::CommonUserControls.Properties.Resources.PostorierSegment_16_01;
-			this.pictureEdit1.Location = new System.Drawing.Point(0, 3);
-			this.pictureEdit1.Name = "pictureEdit1";
-			this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-			this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-			this.pictureEdit1.Size = new System.Drawing.Size(40, 40);
-			this.pictureEdit1.StyleController = this.layoutControl1;
-			this.pictureEdit1.TabIndex = 9;
-			// 
-			// layoutControlItem4
-			// 
-			this.layoutControlItem4.Control = this.pictureEdit1;
-			this.layoutControlItem4.Location = new System.Drawing.Point(0, 3);
-			this.layoutControlItem4.MaxSize = new System.Drawing.Size(40, 40);
-			this.layoutControlItem4.MinSize = new System.Drawing.Size(40, 40);
-			this.layoutControlItem4.Name = "layoutControlItem4";
-			this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem4.Size = new System.Drawing.Size(40, 41);
-			this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem4.TextVisible = false;
-			// 
-			// layoutControlItem5
-			// 
-			this.layoutControlItem5.Control = this.btnPrint;
-			this.layoutControlItem5.Location = new System.Drawing.Point(857, 3);
-			this.layoutControlItem5.Name = "layoutControlItem5";
-			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem5.Size = new System.Drawing.Size(110, 41);
-			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem5.TextVisible = false;
-			// 
-			// layoutControlItem6
-			// 
-			this.layoutControlItem6.Control = this.btnFullScreen;
-			this.layoutControlItem6.Location = new System.Drawing.Point(1008, 3);
-			this.layoutControlItem6.Name = "layoutControlItem6";
-			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem6.Size = new System.Drawing.Size(41, 41);
-			this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem6.TextVisible = false;
-			// 
-			// layoutControlItem13
-			// 
-			this.layoutControlItem13.Control = this.btnAddList_OD;
-			this.layoutControlItem13.Location = new System.Drawing.Point(236, 169);
-			this.layoutControlItem13.Name = "layoutControlItem13";
-			this.layoutControlItem13.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem13.Size = new System.Drawing.Size(49, 86);
-			this.layoutControlItem13.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem13.TextVisible = false;
-			// 
-			// layoutControlItem15
-			// 
-			this.layoutControlItem15.Control = this.btnRemoveFromList_OD;
-			this.layoutControlItem15.Location = new System.Drawing.Point(236, 255);
-			this.layoutControlItem15.Name = "layoutControlItem15";
-			this.layoutControlItem15.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem15.Size = new System.Drawing.Size(49, 86);
-			this.layoutControlItem15.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem15.TextVisible = false;
-			// 
-			// layoutControlItem10
-			// 
-			this.layoutControlItem10.Control = this.pictureEdit4;
-			this.layoutControlItem10.Location = new System.Drawing.Point(146, 47);
-			this.layoutControlItem10.MaxSize = new System.Drawing.Size(90, 70);
-			this.layoutControlItem10.MinSize = new System.Drawing.Size(90, 70);
-			this.layoutControlItem10.Name = "layoutControlItem10";
-			this.layoutControlItem10.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem10.Size = new System.Drawing.Size(90, 70);
-			this.layoutControlItem10.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem10.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem10.TextVisible = false;
-			// 
-			// layoutControlItem14
-			// 
-			this.layoutControlItem14.Control = this.pictureEdit2;
-			this.layoutControlItem14.Location = new System.Drawing.Point(964, 47);
-			this.layoutControlItem14.MaxSize = new System.Drawing.Size(90, 70);
-			this.layoutControlItem14.MinSize = new System.Drawing.Size(90, 70);
-			this.layoutControlItem14.Name = "layoutControlItem14";
-			this.layoutControlItem14.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem14.Size = new System.Drawing.Size(90, 70);
-			this.layoutControlItem14.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem14.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem14.TextVisible = false;
-			// 
-			// layoutControlItem8
-			// 
-			this.layoutControlItem8.Control = this.btnAddList_OS;
-			this.layoutControlItem8.Location = new System.Drawing.Point(915, 170);
-			this.layoutControlItem8.Name = "layoutControlItem8";
-			this.layoutControlItem8.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem8.Size = new System.Drawing.Size(49, 86);
-			this.layoutControlItem8.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem8.TextVisible = false;
-			// 
-			// layoutControlItem16
-			// 
-			this.layoutControlItem16.Control = this.btnRemoveFromList_OS;
-			this.layoutControlItem16.Location = new System.Drawing.Point(915, 256);
-			this.layoutControlItem16.Name = "layoutControlItem16";
-			this.layoutControlItem16.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem16.Size = new System.Drawing.Size(49, 86);
-			this.layoutControlItem16.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem16.TextVisible = false;
-			// 
-			// layoutControlItem20
-			// 
-			this.layoutControlItem20.Control = this.btnCopyToOS;
-			this.layoutControlItem20.Location = new System.Drawing.Point(441, 119);
-			this.layoutControlItem20.Name = "layoutControlItem20";
-			this.layoutControlItem20.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem20.Size = new System.Drawing.Size(80, 50);
-			this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem20.TextVisible = false;
-			// 
-			// layoutControlItem21
-			// 
-			this.layoutControlItem21.Control = this.btnCopyToOD;
-			this.layoutControlItem21.Location = new System.Drawing.Point(679, 119);
-			this.layoutControlItem21.Name = "layoutControlItem21";
-			this.layoutControlItem21.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem21.Size = new System.Drawing.Size(80, 51);
-			this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem21.TextVisible = false;
-			// 
-			// layoutControlItem24
-			// 
-			this.layoutControlItem24.Control = this.btnSearchDiagnosis;
-			this.layoutControlItem24.Location = new System.Drawing.Point(1049, 3);
-			this.layoutControlItem24.Name = "layoutControlItem24";
-			this.layoutControlItem24.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem24.Size = new System.Drawing.Size(41, 41);
-			this.layoutControlItem24.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem24.TextVisible = false;
-			// 
 			// layoutControlItem22
 			// 
 			this.layoutControlItem22.Control = this.btnNewVitalSign;
@@ -1204,22 +1204,34 @@
 			((System.ComponentModel.ISupportInitialize)(this.lstAddedAdnexaSegment_OS)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeAdnexaSegmentCategory_OD.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstAdnexaSegment_OD)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAddedSign_OD)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAddedSign_OS)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
@@ -1227,30 +1239,18 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
 			this.ResumeLayout(false);

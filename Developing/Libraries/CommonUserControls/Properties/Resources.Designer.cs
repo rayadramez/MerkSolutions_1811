@@ -1553,6 +1553,16 @@ namespace CommonUserControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SaveIcon_16_101 {
+            get {
+                object obj = ResourceManager.GetObject("SaveIcon_16_101", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Scanner_16_01 {
             get {
                 object obj = ResourceManager.GetObject("Scanner_16_01", resourceCulture);

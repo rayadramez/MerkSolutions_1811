@@ -154,17 +154,11 @@
   <data name="ExitPatient_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ExitPatient_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Print_06_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Print_06_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Eye_OU_01_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Eye_OU_01_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Scanner_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Scanner_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Medicine_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Medicine_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FollowUp_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FollowUp_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,11 +172,14 @@
   <data name="PersonPic_24_011" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PersonPic_24_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SaveIcon_16_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveIcon_16_100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Plan_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Plan_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AcceptIcon_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AcceptIcon_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FullScreen_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FullScreen_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SaveIcon_05" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SaveIcon_05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -195,9 +192,6 @@
   </data>
   <data name="ColorPaint_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ColorPaint_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Adnexa_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Adnexa_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LinPaint_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LinPaint_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -222,9 +216,6 @@
   </data>
   <data name="PainScale_3_08" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PainScale_3_08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuIcon_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuIcon_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PatientBed_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PatientBed_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,6 +256,9 @@
   <data name="PainScale_6_08" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PainScale_6_08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BottomLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BottomLogin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FullScreen_1_161" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FullScreen_1_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -286,17 +280,14 @@
   <data name="RemoveFromList_16_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RemoveFromList_16_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LoginIcon_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginIcon_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FullScreen_1_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FullScreen_1_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PersonPic_8_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PersonPic_8_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Refresh_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Refresh_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FullScreen_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FullScreen_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Settings_4_24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings_4_24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,11 +319,11 @@
   <data name="PaymentsIcon_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PaymentsIcon_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LinPaint_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LinPaint_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CopyToOS_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CopyToOS_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginIcon_81" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginIcon_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AcceptIcon_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AcceptIcon_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vision_16_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vision_16_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -346,8 +337,8 @@
   <data name="ConsumablesIcon_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ConsumablesIcon_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PaymentsIcon_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PaymentsIcon_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Print_06_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Print_06_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Diagnosis_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Diagnosis_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -379,8 +370,8 @@
   <data name="FullScreen_1_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FullScreen_1_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OtherMedical_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OtherMedical_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LoginIcon_81" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginIcon_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search_02_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search_02_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -393,6 +384,9 @@
   </data>
   <data name="EOM_OS_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EOM_OS_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RoundedPoint_6_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RoundedPoint_6_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LabsIcon_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LabsIcon_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -421,11 +415,17 @@
   <data name="Eye_OS_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Eye_OS_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PersonPic_24_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PersonPic_24_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="RemoveFromList_16_09" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RemoveFromList_16_09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Settings_4_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings_4_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Graph_16_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graph_16_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QuickPrintIcon_16_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QuickPrintIcon_16_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -462,6 +462,9 @@
   </data>
   <data name="PainScale_02_03_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PainScale_02_03_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PaymentsIcon_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PaymentsIcon_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OrderIcon_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OrderIcon_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -505,6 +508,9 @@
   <data name="PaintIcon_01_08" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PaintIcon_01_08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Clear_1_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Clear_1_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PainScale_02_04_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PainScale_02_04_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -535,23 +541,23 @@
   <data name="ColorPaint_DarkGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ColorPaint_DarkGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PersonPic_24_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PersonPic_24_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Adnexa_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Adnexa_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MedicalIcon_16_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MedicalIcon_16_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CopyToOS_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CopyToOS_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Refresh_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Refresh_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Graph_16_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Graph_16_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Medicine_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medicine_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PainScale_1_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PainScale_1_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RoundedPoint_6_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RoundedPoint_6_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="OtherMedical_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OtherMedical_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AddToList_24_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddToList_24_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -574,11 +580,8 @@
   <data name="Search_1_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search_1_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PaymentsIcon_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PaymentsIcon_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BottomLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BottomLogin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MenuIcon_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuIcon_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cancel_16_09" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cancel_16_09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -586,8 +589,8 @@
   <data name="PlayIcon_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayIcon_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Clear_1_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Clear_1_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PaymentsIcon_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PaymentsIcon_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DoctorIcon_08_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DoctorIcon_08_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -598,8 +601,8 @@
   <data name="RemoveFromList_066" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RemoveFromList_066.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginIcon_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginIcon_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LinPaint_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LinPaint_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AddToLisT_066" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddToLisT_066.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -607,7 +610,7 @@
   <data name="ColorPaint_DarkBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ColorPaint_DarkBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SaveIcon_16_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SaveIcon_16_100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SaveIcon_16_101" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveIcon_16_101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_VisionRefraction_UC));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
 			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
 			this.btnGraph = new DevExpress.XtraEditors.SimpleButton();
@@ -235,6 +236,10 @@
 			this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytGraph = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.spnAdd_OS.Properties)).BeginInit();
@@ -400,10 +405,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytGraph)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.btnSearchDiagnosis);
+			this.layoutControl1.Controls.Add(this.simpleButton2);
 			this.layoutControl1.Controls.Add(this.btnNewVitalSign);
 			this.layoutControl1.Controls.Add(this.btnGraph);
 			this.layoutControl1.Controls.Add(this.spnAdd_OS);
@@ -464,7 +473,7 @@
 			this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.layoutControl1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl1.Name = "layoutControl1";
-			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(89, 167, 370, 542);
+			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(89, 168, 370, 542);
 			this.layoutControl1.OptionsFocus.EnableAutoTabOrder = false;
 			this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
 			this.layoutControl1.Root = this.layoutControlGroup1;
@@ -478,7 +487,7 @@
 			this.btnNewVitalSign.Appearance.Options.UseFont = true;
 			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
 			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnNewVitalSign.Location = new System.Drawing.Point(1091, 6);
+			this.btnNewVitalSign.Location = new System.Drawing.Point(981, 6);
 			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.Name = "btnNewVitalSign";
@@ -627,7 +636,7 @@
 			// 
 			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
 			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnPrint.Location = new System.Drawing.Point(978, 3);
+			this.btnPrint.Location = new System.Drawing.Point(827, 3);
 			this.btnPrint.MaximumSize = new System.Drawing.Size(110, 40);
 			this.btnPrint.MinimumSize = new System.Drawing.Size(110, 40);
 			this.btnPrint.Name = "btnPrint";
@@ -1683,7 +1692,7 @@
 			this.btnFullScreen.Appearance.Options.UseFont = true;
 			this.btnFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
 			this.btnFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnFullScreen.Location = new System.Drawing.Point(1132, 6);
+			this.btnFullScreen.Location = new System.Drawing.Point(940, 6);
 			this.btnFullScreen.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnFullScreen.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnFullScreen.Name = "btnFullScreen";
@@ -1735,7 +1744,7 @@
 			this.labelControl2.MinimumSize = new System.Drawing.Size(0, 40);
 			this.labelControl2.Name = "labelControl2";
 			this.labelControl2.Padding = new System.Windows.Forms.Padding(10);
-			this.labelControl2.Size = new System.Drawing.Size(938, 40);
+			this.labelControl2.Size = new System.Drawing.Size(787, 40);
 			this.labelControl2.StyleController = this.layoutControl1;
 			this.labelControl2.TabIndex = 7;
 			this.labelControl2.Text = ".... Vision && Refraction ....";
@@ -2273,7 +2282,6 @@
             this.layoutControlItem2,
             this.layoutControlItem4,
             this.layoutControlItem3,
-            this.layoutControlItem5,
             this.lytNewReadings,
             this.lytViewAllReadings,
             this.emptySpaceItem2,
@@ -2284,7 +2292,10 @@
             this.simpleSeparator15,
             this.layoutControlItem48,
             this.lytGraph,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.layoutControlItem9,
+            this.layoutControlItem5,
+            this.layoutControlItem37});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -2300,7 +2311,7 @@
 			this.layoutControlItem1.MinSize = new System.Drawing.Size(14, 40);
 			this.layoutControlItem1.Name = "layoutControlItem1";
 			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem1.Size = new System.Drawing.Size(938, 41);
+			this.layoutControlItem1.Size = new System.Drawing.Size(787, 41);
 			this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem1.TextVisible = false;
@@ -2351,7 +2362,7 @@
 			// 
 			this.layoutControlItem5.Control = this.btnFullScreen;
 			this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
-			this.layoutControlItem5.Location = new System.Drawing.Point(1129, 3);
+			this.layoutControlItem5.Location = new System.Drawing.Point(937, 3);
 			this.layoutControlItem5.Name = "layoutControlItem5";
 			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem5.Size = new System.Drawing.Size(41, 41);
@@ -3835,7 +3846,7 @@
 			// 
 			this.layoutControlItem48.Control = this.btnPrint;
 			this.layoutControlItem48.CustomizationFormText = "layoutControlItem48";
-			this.layoutControlItem48.Location = new System.Drawing.Point(978, 3);
+			this.layoutControlItem48.Location = new System.Drawing.Point(827, 3);
 			this.layoutControlItem48.Name = "layoutControlItem48";
 			this.layoutControlItem48.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem48.Size = new System.Drawing.Size(110, 41);
@@ -3856,13 +3867,62 @@
 			// layoutControlItem6
 			// 
 			this.layoutControlItem6.Control = this.btnNewVitalSign;
-			this.layoutControlItem6.Location = new System.Drawing.Point(1088, 3);
+			this.layoutControlItem6.Location = new System.Drawing.Point(978, 3);
 			this.layoutControlItem6.Name = "layoutControlItem6";
 			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem6.Size = new System.Drawing.Size(41, 41);
 			this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem6.TextVisible = false;
+			// 
+			// simpleButton2
+			// 
+			this.simpleButton2.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.simpleButton2.Location = new System.Drawing.Point(1060, 3);
+			this.simpleButton2.MaximumSize = new System.Drawing.Size(110, 40);
+			this.simpleButton2.MinimumSize = new System.Drawing.Size(110, 40);
+			this.simpleButton2.Name = "simpleButton2";
+			this.simpleButton2.Size = new System.Drawing.Size(110, 40);
+			this.simpleButton2.StyleController = this.layoutControl1;
+			this.simpleButton2.TabIndex = 12;
+			this.simpleButton2.Text = "simpleButton1";
+			// 
+			// layoutControlItem9
+			// 
+			this.layoutControlItem9.Control = this.simpleButton2;
+			this.layoutControlItem9.Location = new System.Drawing.Point(1060, 3);
+			this.layoutControlItem9.Name = "layoutControlItem9";
+			this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem9.Size = new System.Drawing.Size(110, 41);
+			this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem9.TextVisible = false;
+			// 
+			// btnSearchDiagnosis
+			// 
+			this.btnSearchDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
+			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
+			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSearchDiagnosis.Location = new System.Drawing.Point(1022, 6);
+			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
+			this.btnSearchDiagnosis.Size = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.StyleController = this.layoutControl1;
+			this.btnSearchDiagnosis.TabIndex = 42;
+			this.btnSearchDiagnosis.Text = "Add New Diagnosis";
+			// 
+			// layoutControlItem37
+			// 
+			this.layoutControlItem37.Control = this.btnSearchDiagnosis;
+			this.layoutControlItem37.Location = new System.Drawing.Point(1019, 3);
+			this.layoutControlItem37.Name = "layoutControlItem37";
+			this.layoutControlItem37.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem37.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem37.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem37.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem37.TextVisible = false;
 			// 
 			// PEMR_VisionRefraction_UC
 			// 
@@ -4039,6 +4099,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytGraph)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -4252,5 +4314,9 @@
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator28;
 		private DevExpress.XtraEditors.SimpleButton btnNewVitalSign;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+		private DevExpress.XtraEditors.SimpleButton simpleButton2;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+		private DevExpress.XtraEditors.SimpleButton btnSearchDiagnosis;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem37;
 	}
 }

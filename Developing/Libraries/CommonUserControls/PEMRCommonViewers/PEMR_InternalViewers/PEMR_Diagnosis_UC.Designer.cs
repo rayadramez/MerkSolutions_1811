@@ -31,39 +31,46 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_Diagnosis_UC));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
 			this.chkAll = new DevExpress.XtraEditors.CheckButton();
-			this.chkEye_OS = new DevExpress.XtraEditors.CheckButton();
-			this.chkEye_OD = new DevExpress.XtraEditors.CheckButton();
-			this.chkEye_OU = new DevExpress.XtraEditors.CheckButton();
 			this.chkFinal = new DevExpress.XtraEditors.CheckButton();
 			this.chkDifferential = new DevExpress.XtraEditors.CheckButton();
 			this.chkProvisional = new DevExpress.XtraEditors.CheckButton();
-			this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
-			this.btnAddedDiagnosisFullScreen = new DevExpress.XtraEditors.SimpleButton();
 			this.txtReccommednations = new DevExpress.XtraEditors.MemoEdit();
-			this.btnClearDiagnosisCategories = new DevExpress.XtraEditors.SimpleButton();
-			this.btnClearAddedDiagnosis = new DevExpress.XtraEditors.SimpleButton();
-			this.btnClearDiagnosis = new DevExpress.XtraEditors.SimpleButton();
 			this.lblCount = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
 			this.lstAddedDiagnosis = new DevExpress.XtraEditors.ListBoxControl();
-			this.btnRemoveFromList = new DevExpress.XtraEditors.SimpleButton();
-			this.btnAddList = new DevExpress.XtraEditors.SimpleButton();
-			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
 			this.lstDiagnosis = new DevExpress.XtraEditors.ListBoxControl();
-			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
 			this.lstDiagnosisCategories = new DevExpress.XtraEditors.ListBoxControl();
-			this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
 			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-			this.btnClearDoctorDiagnosis = new DevExpress.XtraEditors.SimpleButton();
 			this.lstDoctorDiagnosis = new DevExpress.XtraEditors.ListBoxControl();
-			this.btnClearDoctorDiagnosisCategories = new DevExpress.XtraEditors.SimpleButton();
 			this.lstDoctorDiagnosisCategories = new DevExpress.XtraEditors.ListBoxControl();
 			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+			this.chkEye_OS = new DevExpress.XtraEditors.CheckButton();
+			this.chkEye_OD = new DevExpress.XtraEditors.CheckButton();
+			this.chkEye_OU = new DevExpress.XtraEditors.CheckButton();
+			this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
+			this.btnAddedDiagnosisFullScreen = new DevExpress.XtraEditors.SimpleButton();
+			this.btnClearDiagnosisCategories = new DevExpress.XtraEditors.SimpleButton();
+			this.btnClearAddedDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+			this.btnClearDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+			this.btnRemoveFromList = new DevExpress.XtraEditors.SimpleButton();
+			this.btnAddList = new DevExpress.XtraEditors.SimpleButton();
+			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
+			this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+			this.btnClearDoctorDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+			this.btnClearDoctorDiagnosisCategories = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -83,10 +90,6 @@
 			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -100,7 +103,6 @@
 			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytAddedDiagnosisFullScreen = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -109,8 +111,6 @@
 			this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
@@ -118,12 +118,18 @@
 			((System.ComponentModel.ISupportInitialize)(this.lstAddedDiagnosis)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDiagnosis)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDiagnosisCategories)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDoctorDiagnosis)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDoctorDiagnosisCategories)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -143,10 +149,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
@@ -160,7 +162,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAddedDiagnosisFullScreen)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
@@ -169,7 +170,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -210,7 +210,7 @@
 			this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.layoutControl1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl1.Name = "layoutControl1";
-			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(262, 272, 368, 445);
+			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(262, 273, 368, 445);
 			this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
 			this.layoutControl1.Root = this.layoutControlGroup1;
 			this.layoutControl1.Size = new System.Drawing.Size(1104, 523);
@@ -234,6 +234,370 @@
 			this.chkAll.TabStop = false;
 			this.chkAll.Text = "ALL";
 			this.chkAll.CheckedChanged += new System.EventHandler(this.chkAll_CheckedChanged);
+			// 
+			// chkFinal
+			// 
+			this.chkFinal.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkFinal.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+			this.chkFinal.Appearance.Options.UseFont = true;
+			this.chkFinal.Appearance.Options.UseForeColor = true;
+			this.chkFinal.GroupIndex = 10;
+			this.chkFinal.Location = new System.Drawing.Point(601, 69);
+			this.chkFinal.MaximumSize = new System.Drawing.Size(300, 40);
+			this.chkFinal.MinimumSize = new System.Drawing.Size(300, 40);
+			this.chkFinal.Name = "chkFinal";
+			this.chkFinal.Size = new System.Drawing.Size(300, 40);
+			this.chkFinal.StyleController = this.layoutControl1;
+			this.chkFinal.TabIndex = 17;
+			this.chkFinal.TabStop = false;
+			this.chkFinal.Text = "Final";
+			// 
+			// chkDifferential
+			// 
+			this.chkDifferential.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkDifferential.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+			this.chkDifferential.Appearance.Options.UseFont = true;
+			this.chkDifferential.Appearance.Options.UseForeColor = true;
+			this.chkDifferential.GroupIndex = 10;
+			this.chkDifferential.Location = new System.Drawing.Point(301, 69);
+			this.chkDifferential.MaximumSize = new System.Drawing.Size(300, 40);
+			this.chkDifferential.MinimumSize = new System.Drawing.Size(300, 40);
+			this.chkDifferential.Name = "chkDifferential";
+			this.chkDifferential.Size = new System.Drawing.Size(300, 40);
+			this.chkDifferential.StyleController = this.layoutControl1;
+			this.chkDifferential.TabIndex = 16;
+			this.chkDifferential.TabStop = false;
+			this.chkDifferential.Text = "Differential";
+			// 
+			// chkProvisional
+			// 
+			this.chkProvisional.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkProvisional.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+			this.chkProvisional.Appearance.Options.UseFont = true;
+			this.chkProvisional.Appearance.Options.UseForeColor = true;
+			this.chkProvisional.Checked = true;
+			this.chkProvisional.GroupIndex = 10;
+			this.chkProvisional.Location = new System.Drawing.Point(1, 69);
+			this.chkProvisional.MaximumSize = new System.Drawing.Size(300, 40);
+			this.chkProvisional.MinimumSize = new System.Drawing.Size(300, 40);
+			this.chkProvisional.Name = "chkProvisional";
+			this.chkProvisional.Size = new System.Drawing.Size(300, 40);
+			this.chkProvisional.StyleController = this.layoutControl1;
+			this.chkProvisional.TabIndex = 15;
+			this.chkProvisional.Text = "Provisional";
+			// 
+			// txtReccommednations
+			// 
+			this.txtReccommednations.EditValue = "";
+			this.txtReccommednations.Location = new System.Drawing.Point(687, 452);
+			this.txtReccommednations.Name = "txtReccommednations";
+			this.txtReccommednations.Properties.Appearance.BackColor = System.Drawing.Color.Cornsilk;
+			this.txtReccommednations.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.txtReccommednations.Properties.Appearance.ForeColor = System.Drawing.Color.Navy;
+			this.txtReccommednations.Properties.Appearance.Options.UseBackColor = true;
+			this.txtReccommednations.Properties.Appearance.Options.UseFont = true;
+			this.txtReccommednations.Properties.Appearance.Options.UseForeColor = true;
+			this.txtReccommednations.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.txtReccommednations.Properties.AppearanceFocused.ForeColor = System.Drawing.Color.Navy;
+			this.txtReccommednations.Properties.AppearanceFocused.Options.UseFont = true;
+			this.txtReccommednations.Properties.AppearanceFocused.Options.UseForeColor = true;
+			this.txtReccommednations.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.txtReccommednations.Size = new System.Drawing.Size(413, 67);
+			this.txtReccommednations.StyleController = this.layoutControl1;
+			this.txtReccommednations.TabIndex = 16;
+			this.txtReccommednations.EditValueChanged += new System.EventHandler(this.txtReccommednations_EditValueChanged);
+			// 
+			// lblCount
+			// 
+			this.lblCount.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+			this.lblCount.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+			this.lblCount.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			this.lblCount.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+			this.lblCount.Location = new System.Drawing.Point(767, 148);
+			this.lblCount.Name = "lblCount";
+			this.lblCount.Size = new System.Drawing.Size(160, 16);
+			this.lblCount.StyleController = this.layoutControl1;
+			this.lblCount.TabIndex = 42;
+			this.lblCount.Text = "0";
+			// 
+			// labelControl5
+			// 
+			this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+			this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+			this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+			this.labelControl5.Location = new System.Drawing.Point(739, 148);
+			this.labelControl5.Name = "labelControl5";
+			this.labelControl5.Size = new System.Drawing.Size(22, 17);
+			this.labelControl5.StyleController = this.layoutControl1;
+			this.labelControl5.TabIndex = 41;
+			this.labelControl5.Text = "=";
+			// 
+			// labelControl4
+			// 
+			this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+			this.labelControl4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+			this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+			this.labelControl4.Location = new System.Drawing.Point(687, 148);
+			this.labelControl4.Name = "labelControl4";
+			this.labelControl4.Size = new System.Drawing.Size(46, 17);
+			this.labelControl4.StyleController = this.layoutControl1;
+			this.labelControl4.TabIndex = 40;
+			this.labelControl4.Text = "Count";
+			// 
+			// lstAddedDiagnosis
+			// 
+			this.lstAddedDiagnosis.Appearance.BackColor = System.Drawing.Color.LightCyan;
+			this.lstAddedDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+			this.lstAddedDiagnosis.Appearance.Options.UseBackColor = true;
+			this.lstAddedDiagnosis.Appearance.Options.UseFont = true;
+			this.lstAddedDiagnosis.HighlightedItemStyle = DevExpress.XtraEditors.HighlightStyle.Skinned;
+			this.lstAddedDiagnosis.HorizontalScrollbar = true;
+			this.lstAddedDiagnosis.HotTrackItems = true;
+			this.lstAddedDiagnosis.ItemAutoHeight = true;
+			this.lstAddedDiagnosis.ItemHeight = 25;
+			this.lstAddedDiagnosis.Location = new System.Drawing.Point(687, 171);
+			this.lstAddedDiagnosis.MultiColumn = true;
+			this.lstAddedDiagnosis.Name = "lstAddedDiagnosis";
+			this.lstAddedDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.lstAddedDiagnosis.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+			this.lstAddedDiagnosis.Size = new System.Drawing.Size(413, 255);
+			this.lstAddedDiagnosis.StyleController = this.layoutControl1;
+			this.lstAddedDiagnosis.TabIndex = 11;
+			// 
+			// lstDiagnosis
+			// 
+			this.lstDiagnosis.Appearance.BackColor = System.Drawing.SystemColors.Info;
+			this.lstDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+			this.lstDiagnosis.Appearance.Options.UseBackColor = true;
+			this.lstDiagnosis.Appearance.Options.UseFont = true;
+			this.lstDiagnosis.HorizontalScrollbar = true;
+			this.lstDiagnosis.ItemHeight = 25;
+			this.lstDiagnosis.Location = new System.Drawing.Point(312, 196);
+			this.lstDiagnosis.MaximumSize = new System.Drawing.Size(320, 0);
+			this.lstDiagnosis.MinimumSize = new System.Drawing.Size(320, 0);
+			this.lstDiagnosis.Name = "lstDiagnosis";
+			this.lstDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.lstDiagnosis.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+			this.lstDiagnosis.Size = new System.Drawing.Size(320, 323);
+			this.lstDiagnosis.StyleController = this.layoutControl1;
+			this.lstDiagnosis.TabIndex = 10;
+			this.lstDiagnosis.SelectedIndexChanged += new System.EventHandler(this.lstDiagnosis_SelectedIndexChanged);
+			this.lstDiagnosis.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstDiagnosis_MouseDoubleClick);
+			// 
+			// lstDiagnosisCategories
+			// 
+			this.lstDiagnosisCategories.Appearance.BackColor = System.Drawing.SystemColors.Info;
+			this.lstDiagnosisCategories.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+			this.lstDiagnosisCategories.Appearance.Options.UseBackColor = true;
+			this.lstDiagnosisCategories.Appearance.Options.UseFont = true;
+			this.lstDiagnosisCategories.HorizontalScrollbar = true;
+			this.lstDiagnosisCategories.ItemHeight = 25;
+			this.lstDiagnosisCategories.Location = new System.Drawing.Point(4, 196);
+			this.lstDiagnosisCategories.MaximumSize = new System.Drawing.Size(300, 0);
+			this.lstDiagnosisCategories.MinimumSize = new System.Drawing.Size(300, 0);
+			this.lstDiagnosisCategories.Name = "lstDiagnosisCategories";
+			this.lstDiagnosisCategories.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.lstDiagnosisCategories.Size = new System.Drawing.Size(300, 323);
+			this.lstDiagnosisCategories.StyleController = this.layoutControl1;
+			this.lstDiagnosisCategories.TabIndex = 9;
+			this.lstDiagnosisCategories.SelectedIndexChanged += new System.EventHandler(this.lstDiagnosisCategories_SelectedIndexChanged);
+			// 
+			// labelControl1
+			// 
+			this.labelControl1.Appearance.BackColor = System.Drawing.Color.Gold;
+			this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+			this.labelControl1.Location = new System.Drawing.Point(0, 44);
+			this.labelControl1.Name = "labelControl1";
+			this.labelControl1.Size = new System.Drawing.Size(1104, 3);
+			this.labelControl1.StyleController = this.layoutControl1;
+			this.labelControl1.TabIndex = 7;
+			// 
+			// labelControl3
+			// 
+			this.labelControl3.Appearance.BackColor = System.Drawing.Color.Gold;
+			this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+			this.labelControl3.Location = new System.Drawing.Point(0, 0);
+			this.labelControl3.Name = "labelControl3";
+			this.labelControl3.Size = new System.Drawing.Size(1104, 3);
+			this.labelControl3.StyleController = this.layoutControl1;
+			this.labelControl3.TabIndex = 6;
+			// 
+			// labelControl2
+			// 
+			this.labelControl2.Appearance.BackColor = System.Drawing.Color.DimGray;
+			this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+			this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Yellow;
+			this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+			this.labelControl2.Location = new System.Drawing.Point(40, 3);
+			this.labelControl2.MaximumSize = new System.Drawing.Size(0, 40);
+			this.labelControl2.MinimumSize = new System.Drawing.Size(0, 40);
+			this.labelControl2.Name = "labelControl2";
+			this.labelControl2.Padding = new System.Windows.Forms.Padding(10);
+			this.labelControl2.Size = new System.Drawing.Size(721, 40);
+			this.labelControl2.StyleController = this.layoutControl1;
+			this.labelControl2.TabIndex = 7;
+			this.labelControl2.Text = ".... Diagnosis  ....";
+			// 
+			// lstDoctorDiagnosis
+			// 
+			this.lstDoctorDiagnosis.Appearance.BackColor = System.Drawing.SystemColors.Info;
+			this.lstDoctorDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+			this.lstDoctorDiagnosis.Appearance.Options.UseBackColor = true;
+			this.lstDoctorDiagnosis.Appearance.Options.UseFont = true;
+			this.lstDoctorDiagnosis.Appearance.Options.UseTextOptions = true;
+			this.lstDoctorDiagnosis.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			this.lstDoctorDiagnosis.HorizontalScrollbar = true;
+			this.lstDoctorDiagnosis.Location = new System.Drawing.Point(312, 171);
+			this.lstDoctorDiagnosis.MaximumSize = new System.Drawing.Size(320, 200);
+			this.lstDoctorDiagnosis.MinimumSize = new System.Drawing.Size(320, 200);
+			this.lstDoctorDiagnosis.Name = "lstDoctorDiagnosis";
+			this.lstDoctorDiagnosis.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+			this.lstDoctorDiagnosis.Size = new System.Drawing.Size(320, 200);
+			this.lstDoctorDiagnosis.StyleController = this.layoutControl1;
+			this.lstDoctorDiagnosis.TabIndex = 11;
+			this.lstDoctorDiagnosis.SelectedIndexChanged += new System.EventHandler(this.lstDoctorDiagnosis_SelectedIndexChanged);
+			this.lstDoctorDiagnosis.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstDoctorDiagnosis_MouseDoubleClick);
+			// 
+			// lstDoctorDiagnosisCategories
+			// 
+			this.lstDoctorDiagnosisCategories.Appearance.BackColor = System.Drawing.SystemColors.Info;
+			this.lstDoctorDiagnosisCategories.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+			this.lstDoctorDiagnosisCategories.Appearance.Options.UseBackColor = true;
+			this.lstDoctorDiagnosisCategories.Appearance.Options.UseFont = true;
+			this.lstDoctorDiagnosisCategories.Appearance.Options.UseTextOptions = true;
+			this.lstDoctorDiagnosisCategories.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			this.lstDoctorDiagnosisCategories.HorizontalScrollbar = true;
+			this.lstDoctorDiagnosisCategories.Location = new System.Drawing.Point(4, 171);
+			this.lstDoctorDiagnosisCategories.MaximumSize = new System.Drawing.Size(300, 200);
+			this.lstDoctorDiagnosisCategories.MinimumSize = new System.Drawing.Size(300, 200);
+			this.lstDoctorDiagnosisCategories.Name = "lstDoctorDiagnosisCategories";
+			this.lstDoctorDiagnosisCategories.Size = new System.Drawing.Size(300, 200);
+			this.lstDoctorDiagnosisCategories.StyleController = this.layoutControl1;
+			this.lstDoctorDiagnosisCategories.TabIndex = 10;
+			this.lstDoctorDiagnosisCategories.SelectedIndexChanged += new System.EventHandler(this.lstDoctorDiagnosisCategories_SelectedIndexChanged);
+			// 
+			// layoutControlGroup1
+			// 
+			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+			this.layoutControlGroup1.GroupBordersVisible = false;
+			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem4,
+            this.layoutControlGroup2,
+            this.layoutControlGroup3,
+            this.layoutControlItem6,
+            this.layoutControlItem8,
+            this.simpleSeparator1,
+            this.emptySpaceItem2,
+            this.emptySpaceItem5,
+            this.simpleSeparator2,
+            this.layoutControlGroup4,
+            this.layoutControlItem7,
+            this.lytAddedDiagnosisFullScreen,
+            this.layoutControlItem12,
+            this.layoutControlItem3,
+            this.layoutControlGroup5,
+            this.lytGroup_EyeSelection,
+            this.emptySpaceItem7,
+            this.layoutControlItem31,
+            this.layoutControlItem13});
+			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlGroup1.Name = "Root";
+			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlGroup1.Size = new System.Drawing.Size(1104, 523);
+			this.layoutControlGroup1.TextVisible = false;
+			// 
+			// layoutControlItem1
+			// 
+			this.layoutControlItem1.Control = this.labelControl2;
+			this.layoutControlItem1.Location = new System.Drawing.Point(40, 3);
+			this.layoutControlItem1.Name = "layoutControlItem1";
+			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem1.Size = new System.Drawing.Size(721, 41);
+			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem1.TextVisible = false;
+			// 
+			// layoutControlItem2
+			// 
+			this.layoutControlItem2.Control = this.labelControl3;
+			this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlItem2.MaxSize = new System.Drawing.Size(0, 3);
+			this.layoutControlItem2.MinSize = new System.Drawing.Size(10, 3);
+			this.layoutControlItem2.Name = "layoutControlItem2";
+			this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem2.Size = new System.Drawing.Size(1104, 3);
+			this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem2.TextVisible = false;
+			// 
+			// simpleSeparator1
+			// 
+			this.simpleSeparator1.AllowHotTrack = false;
+			this.simpleSeparator1.Location = new System.Drawing.Point(636, 110);
+			this.simpleSeparator1.Name = "simpleSeparator1";
+			this.simpleSeparator1.Size = new System.Drawing.Size(2, 413);
+			// 
+			// emptySpaceItem2
+			// 
+			this.emptySpaceItem2.AllowHotTrack = false;
+			this.emptySpaceItem2.Location = new System.Drawing.Point(638, 347);
+			this.emptySpaceItem2.Name = "emptySpaceItem2";
+			this.emptySpaceItem2.Size = new System.Drawing.Size(43, 176);
+			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem5
+			// 
+			this.emptySpaceItem5.AllowHotTrack = false;
+			this.emptySpaceItem5.Location = new System.Drawing.Point(638, 110);
+			this.emptySpaceItem5.Name = "emptySpaceItem5";
+			this.emptySpaceItem5.Size = new System.Drawing.Size(43, 77);
+			this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// simpleSeparator2
+			// 
+			this.simpleSeparator2.AllowHotTrack = false;
+			this.simpleSeparator2.Location = new System.Drawing.Point(681, 110);
+			this.simpleSeparator2.Name = "simpleSeparator2";
+			this.simpleSeparator2.Size = new System.Drawing.Size(2, 413);
+			// 
+			// layoutControlItem3
+			// 
+			this.layoutControlItem3.Control = this.labelControl1;
+			this.layoutControlItem3.Location = new System.Drawing.Point(0, 44);
+			this.layoutControlItem3.MaxSize = new System.Drawing.Size(0, 3);
+			this.layoutControlItem3.MinSize = new System.Drawing.Size(10, 3);
+			this.layoutControlItem3.Name = "layoutControlItem3";
+			this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem3.Size = new System.Drawing.Size(1104, 3);
+			this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem3.TextVisible = false;
+			// 
+			// emptySpaceItem7
+			// 
+			this.emptySpaceItem7.AllowHotTrack = false;
+			this.emptySpaceItem7.Location = new System.Drawing.Point(902, 47);
+			this.emptySpaceItem7.Name = "emptySpaceItem7";
+			this.emptySpaceItem7.Size = new System.Drawing.Size(36, 63);
+			this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSave.Location = new System.Drawing.Point(994, 3);
+			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(110, 40);
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.TabIndex = 10;
+			this.btnSave.Text = "simpleButton1";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
 			// 
 			// chkEye_OS
 			// 
@@ -295,62 +659,11 @@
 			this.chkEye_OU.Text = "Final";
 			this.chkEye_OU.CheckedChanged += new System.EventHandler(this.chkEye_OU_CheckedChanged);
 			// 
-			// chkFinal
-			// 
-			this.chkFinal.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkFinal.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-			this.chkFinal.Appearance.Options.UseFont = true;
-			this.chkFinal.Appearance.Options.UseForeColor = true;
-			this.chkFinal.GroupIndex = 10;
-			this.chkFinal.Location = new System.Drawing.Point(601, 69);
-			this.chkFinal.MaximumSize = new System.Drawing.Size(300, 40);
-			this.chkFinal.MinimumSize = new System.Drawing.Size(300, 40);
-			this.chkFinal.Name = "chkFinal";
-			this.chkFinal.Size = new System.Drawing.Size(300, 40);
-			this.chkFinal.StyleController = this.layoutControl1;
-			this.chkFinal.TabIndex = 17;
-			this.chkFinal.TabStop = false;
-			this.chkFinal.Text = "Final";
-			// 
-			// chkDifferential
-			// 
-			this.chkDifferential.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkDifferential.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-			this.chkDifferential.Appearance.Options.UseFont = true;
-			this.chkDifferential.Appearance.Options.UseForeColor = true;
-			this.chkDifferential.GroupIndex = 10;
-			this.chkDifferential.Location = new System.Drawing.Point(301, 69);
-			this.chkDifferential.MaximumSize = new System.Drawing.Size(300, 40);
-			this.chkDifferential.MinimumSize = new System.Drawing.Size(300, 40);
-			this.chkDifferential.Name = "chkDifferential";
-			this.chkDifferential.Size = new System.Drawing.Size(300, 40);
-			this.chkDifferential.StyleController = this.layoutControl1;
-			this.chkDifferential.TabIndex = 16;
-			this.chkDifferential.TabStop = false;
-			this.chkDifferential.Text = "Differential";
-			// 
-			// chkProvisional
-			// 
-			this.chkProvisional.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkProvisional.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-			this.chkProvisional.Appearance.Options.UseFont = true;
-			this.chkProvisional.Appearance.Options.UseForeColor = true;
-			this.chkProvisional.Checked = true;
-			this.chkProvisional.GroupIndex = 10;
-			this.chkProvisional.Location = new System.Drawing.Point(1, 69);
-			this.chkProvisional.MaximumSize = new System.Drawing.Size(300, 40);
-			this.chkProvisional.MinimumSize = new System.Drawing.Size(300, 40);
-			this.chkProvisional.Name = "chkProvisional";
-			this.chkProvisional.Size = new System.Drawing.Size(300, 40);
-			this.chkProvisional.StyleController = this.layoutControl1;
-			this.chkProvisional.TabIndex = 15;
-			this.chkProvisional.Text = "Provisional";
-			// 
 			// btnPrint
 			// 
 			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
 			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnPrint.Location = new System.Drawing.Point(830, 3);
+			this.btnPrint.Location = new System.Drawing.Point(761, 3);
 			this.btnPrint.MaximumSize = new System.Drawing.Size(110, 40);
 			this.btnPrint.MinimumSize = new System.Drawing.Size(110, 40);
 			this.btnPrint.Name = "btnPrint";
@@ -365,7 +678,7 @@
 			this.btnAddedDiagnosisFullScreen.Appearance.Options.UseFont = true;
 			this.btnAddedDiagnosisFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
 			this.btnAddedDiagnosisFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnAddedDiagnosisFullScreen.Location = new System.Drawing.Point(943, 6);
+			this.btnAddedDiagnosisFullScreen.Location = new System.Drawing.Point(874, 6);
 			this.btnAddedDiagnosisFullScreen.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnAddedDiagnosisFullScreen.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnAddedDiagnosisFullScreen.Name = "btnAddedDiagnosisFullScreen";
@@ -374,27 +687,6 @@
 			this.btnAddedDiagnosisFullScreen.TabIndex = 40;
 			this.btnAddedDiagnosisFullScreen.Text = "Add New Diagnosis";
 			this.btnAddedDiagnosisFullScreen.Click += new System.EventHandler(this.btnAddedDiagnosisFullScreen_Click);
-			// 
-			// txtReccommednations
-			// 
-			this.txtReccommednations.EditValue = "";
-			this.txtReccommednations.Location = new System.Drawing.Point(687, 452);
-			this.txtReccommednations.Name = "txtReccommednations";
-			this.txtReccommednations.Properties.Appearance.BackColor = System.Drawing.Color.Cornsilk;
-			this.txtReccommednations.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.txtReccommednations.Properties.Appearance.ForeColor = System.Drawing.Color.Navy;
-			this.txtReccommednations.Properties.Appearance.Options.UseBackColor = true;
-			this.txtReccommednations.Properties.Appearance.Options.UseFont = true;
-			this.txtReccommednations.Properties.Appearance.Options.UseForeColor = true;
-			this.txtReccommednations.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.txtReccommednations.Properties.AppearanceFocused.ForeColor = System.Drawing.Color.Navy;
-			this.txtReccommednations.Properties.AppearanceFocused.Options.UseFont = true;
-			this.txtReccommednations.Properties.AppearanceFocused.Options.UseForeColor = true;
-			this.txtReccommednations.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.txtReccommednations.Size = new System.Drawing.Size(413, 67);
-			this.txtReccommednations.StyleController = this.layoutControl1;
-			this.txtReccommednations.TabIndex = 16;
-			this.txtReccommednations.EditValueChanged += new System.EventHandler(this.txtReccommednations_EditValueChanged);
 			// 
 			// btnClearDiagnosisCategories
 			// 
@@ -444,65 +736,6 @@
 			this.btnClearDiagnosis.Text = "Clear Selection";
 			this.btnClearDiagnosis.Click += new System.EventHandler(this.btnClearDiagnosis_Click);
 			// 
-			// lblCount
-			// 
-			this.lblCount.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-			this.lblCount.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-			this.lblCount.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-			this.lblCount.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.lblCount.Location = new System.Drawing.Point(767, 148);
-			this.lblCount.Name = "lblCount";
-			this.lblCount.Size = new System.Drawing.Size(160, 16);
-			this.lblCount.StyleController = this.layoutControl1;
-			this.lblCount.TabIndex = 42;
-			this.lblCount.Text = "0";
-			// 
-			// labelControl5
-			// 
-			this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-			this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-			this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-			this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl5.Location = new System.Drawing.Point(739, 148);
-			this.labelControl5.Name = "labelControl5";
-			this.labelControl5.Size = new System.Drawing.Size(22, 17);
-			this.labelControl5.StyleController = this.layoutControl1;
-			this.labelControl5.TabIndex = 41;
-			this.labelControl5.Text = "=";
-			// 
-			// labelControl4
-			// 
-			this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-			this.labelControl4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-			this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-			this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl4.Location = new System.Drawing.Point(687, 148);
-			this.labelControl4.Name = "labelControl4";
-			this.labelControl4.Size = new System.Drawing.Size(46, 17);
-			this.labelControl4.StyleController = this.layoutControl1;
-			this.labelControl4.TabIndex = 40;
-			this.labelControl4.Text = "Count";
-			// 
-			// lstAddedDiagnosis
-			// 
-			this.lstAddedDiagnosis.Appearance.BackColor = System.Drawing.Color.LightCyan;
-			this.lstAddedDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-			this.lstAddedDiagnosis.Appearance.Options.UseBackColor = true;
-			this.lstAddedDiagnosis.Appearance.Options.UseFont = true;
-			this.lstAddedDiagnosis.HighlightedItemStyle = DevExpress.XtraEditors.HighlightStyle.Skinned;
-			this.lstAddedDiagnosis.HorizontalScrollbar = true;
-			this.lstAddedDiagnosis.HotTrackItems = true;
-			this.lstAddedDiagnosis.ItemAutoHeight = true;
-			this.lstAddedDiagnosis.ItemHeight = 25;
-			this.lstAddedDiagnosis.Location = new System.Drawing.Point(687, 171);
-			this.lstAddedDiagnosis.MultiColumn = true;
-			this.lstAddedDiagnosis.Name = "lstAddedDiagnosis";
-			this.lstAddedDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.lstAddedDiagnosis.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-			this.lstAddedDiagnosis.Size = new System.Drawing.Size(413, 255);
-			this.lstAddedDiagnosis.StyleController = this.layoutControl1;
-			this.lstAddedDiagnosis.TabIndex = 11;
-			// 
 			// btnRemoveFromList
 			// 
 			this.btnRemoveFromList.Image = global::CommonUserControls.Properties.Resources.RemoveFromList_066;
@@ -535,7 +768,7 @@
 			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
 			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
 			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSearchDiagnosis.Location = new System.Drawing.Point(984, 6);
+			this.btnSearchDiagnosis.Location = new System.Drawing.Point(956, 6);
 			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
@@ -545,33 +778,13 @@
 			this.btnSearchDiagnosis.Text = "Add New Diagnosis";
 			this.btnSearchDiagnosis.Click += new System.EventHandler(this.btnSearchDiagnosis_Click);
 			// 
-			// lstDiagnosis
-			// 
-			this.lstDiagnosis.Appearance.BackColor = System.Drawing.SystemColors.Info;
-			this.lstDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-			this.lstDiagnosis.Appearance.Options.UseBackColor = true;
-			this.lstDiagnosis.Appearance.Options.UseFont = true;
-			this.lstDiagnosis.HorizontalScrollbar = true;
-			this.lstDiagnosis.ItemHeight = 25;
-			this.lstDiagnosis.Location = new System.Drawing.Point(312, 196);
-			this.lstDiagnosis.MaximumSize = new System.Drawing.Size(320, 0);
-			this.lstDiagnosis.MinimumSize = new System.Drawing.Size(320, 0);
-			this.lstDiagnosis.Name = "lstDiagnosis";
-			this.lstDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.lstDiagnosis.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-			this.lstDiagnosis.Size = new System.Drawing.Size(320, 323);
-			this.lstDiagnosis.StyleController = this.layoutControl1;
-			this.lstDiagnosis.TabIndex = 10;
-			this.lstDiagnosis.SelectedIndexChanged += new System.EventHandler(this.lstDiagnosis_SelectedIndexChanged);
-			this.lstDiagnosis.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstDiagnosis_MouseDoubleClick);
-			// 
 			// btnNewVitalSign
 			// 
 			this.btnNewVitalSign.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.btnNewVitalSign.Appearance.Options.UseFont = true;
 			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
 			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnNewVitalSign.Location = new System.Drawing.Point(1025, 6);
+			this.btnNewVitalSign.Location = new System.Drawing.Point(915, 6);
 			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.Name = "btnNewVitalSign";
@@ -579,24 +792,6 @@
 			this.btnNewVitalSign.StyleController = this.layoutControl1;
 			this.btnNewVitalSign.TabIndex = 36;
 			this.btnNewVitalSign.Text = "Add New Category";
-			// 
-			// lstDiagnosisCategories
-			// 
-			this.lstDiagnosisCategories.Appearance.BackColor = System.Drawing.SystemColors.Info;
-			this.lstDiagnosisCategories.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-			this.lstDiagnosisCategories.Appearance.Options.UseBackColor = true;
-			this.lstDiagnosisCategories.Appearance.Options.UseFont = true;
-			this.lstDiagnosisCategories.HorizontalScrollbar = true;
-			this.lstDiagnosisCategories.ItemHeight = 25;
-			this.lstDiagnosisCategories.Location = new System.Drawing.Point(4, 196);
-			this.lstDiagnosisCategories.MaximumSize = new System.Drawing.Size(300, 0);
-			this.lstDiagnosisCategories.MinimumSize = new System.Drawing.Size(300, 0);
-			this.lstDiagnosisCategories.Name = "lstDiagnosisCategories";
-			this.lstDiagnosisCategories.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.lstDiagnosisCategories.Size = new System.Drawing.Size(300, 323);
-			this.lstDiagnosisCategories.StyleController = this.layoutControl1;
-			this.lstDiagnosisCategories.TabIndex = 9;
-			this.lstDiagnosisCategories.SelectedIndexChanged += new System.EventHandler(this.lstDiagnosisCategories_SelectedIndexChanged);
 			// 
 			// pictureEdit1
 			// 
@@ -608,43 +803,6 @@
 			this.pictureEdit1.Size = new System.Drawing.Size(40, 40);
 			this.pictureEdit1.StyleController = this.layoutControl1;
 			this.pictureEdit1.TabIndex = 8;
-			// 
-			// labelControl1
-			// 
-			this.labelControl1.Appearance.BackColor = System.Drawing.Color.Gold;
-			this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl1.Location = new System.Drawing.Point(0, 44);
-			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(1104, 3);
-			this.labelControl1.StyleController = this.layoutControl1;
-			this.labelControl1.TabIndex = 7;
-			// 
-			// labelControl3
-			// 
-			this.labelControl3.Appearance.BackColor = System.Drawing.Color.Gold;
-			this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl3.Location = new System.Drawing.Point(0, 0);
-			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(1104, 3);
-			this.labelControl3.StyleController = this.layoutControl1;
-			this.labelControl3.TabIndex = 6;
-			// 
-			// labelControl2
-			// 
-			this.labelControl2.Appearance.BackColor = System.Drawing.Color.DimGray;
-			this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-			this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Yellow;
-			this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl2.Location = new System.Drawing.Point(40, 3);
-			this.labelControl2.MaximumSize = new System.Drawing.Size(0, 40);
-			this.labelControl2.MinimumSize = new System.Drawing.Size(0, 40);
-			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Padding = new System.Windows.Forms.Padding(10);
-			this.labelControl2.Size = new System.Drawing.Size(790, 40);
-			this.labelControl2.StyleController = this.layoutControl1;
-			this.labelControl2.TabIndex = 7;
-			this.labelControl2.Text = ".... Diagnosis  ....";
 			// 
 			// btnClearDoctorDiagnosis
 			// 
@@ -662,26 +820,6 @@
 			this.btnClearDoctorDiagnosis.Text = "Clear Selection";
 			this.btnClearDoctorDiagnosis.Click += new System.EventHandler(this.btnClearDoctorDiagnosis_Click);
 			// 
-			// lstDoctorDiagnosis
-			// 
-			this.lstDoctorDiagnosis.Appearance.BackColor = System.Drawing.SystemColors.Info;
-			this.lstDoctorDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-			this.lstDoctorDiagnosis.Appearance.Options.UseBackColor = true;
-			this.lstDoctorDiagnosis.Appearance.Options.UseFont = true;
-			this.lstDoctorDiagnosis.Appearance.Options.UseTextOptions = true;
-			this.lstDoctorDiagnosis.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-			this.lstDoctorDiagnosis.HorizontalScrollbar = true;
-			this.lstDoctorDiagnosis.Location = new System.Drawing.Point(312, 171);
-			this.lstDoctorDiagnosis.MaximumSize = new System.Drawing.Size(320, 200);
-			this.lstDoctorDiagnosis.MinimumSize = new System.Drawing.Size(320, 200);
-			this.lstDoctorDiagnosis.Name = "lstDoctorDiagnosis";
-			this.lstDoctorDiagnosis.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-			this.lstDoctorDiagnosis.Size = new System.Drawing.Size(320, 200);
-			this.lstDoctorDiagnosis.StyleController = this.layoutControl1;
-			this.lstDoctorDiagnosis.TabIndex = 11;
-			this.lstDoctorDiagnosis.SelectedIndexChanged += new System.EventHandler(this.lstDoctorDiagnosis_SelectedIndexChanged);
-			this.lstDoctorDiagnosis.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstDoctorDiagnosis_MouseDoubleClick);
-			// 
 			// btnClearDoctorDiagnosisCategories
 			// 
 			this.btnClearDoctorDiagnosisCategories.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
@@ -697,79 +835,6 @@
 			this.btnClearDoctorDiagnosisCategories.TabIndex = 42;
 			this.btnClearDoctorDiagnosisCategories.Text = "Clear Selection";
 			this.btnClearDoctorDiagnosisCategories.Click += new System.EventHandler(this.btnClearDoctorDiagnosisCategories_Click);
-			// 
-			// lstDoctorDiagnosisCategories
-			// 
-			this.lstDoctorDiagnosisCategories.Appearance.BackColor = System.Drawing.SystemColors.Info;
-			this.lstDoctorDiagnosisCategories.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-			this.lstDoctorDiagnosisCategories.Appearance.Options.UseBackColor = true;
-			this.lstDoctorDiagnosisCategories.Appearance.Options.UseFont = true;
-			this.lstDoctorDiagnosisCategories.Appearance.Options.UseTextOptions = true;
-			this.lstDoctorDiagnosisCategories.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-			this.lstDoctorDiagnosisCategories.HorizontalScrollbar = true;
-			this.lstDoctorDiagnosisCategories.Location = new System.Drawing.Point(4, 171);
-			this.lstDoctorDiagnosisCategories.MaximumSize = new System.Drawing.Size(300, 200);
-			this.lstDoctorDiagnosisCategories.MinimumSize = new System.Drawing.Size(300, 200);
-			this.lstDoctorDiagnosisCategories.Name = "lstDoctorDiagnosisCategories";
-			this.lstDoctorDiagnosisCategories.Size = new System.Drawing.Size(300, 200);
-			this.lstDoctorDiagnosisCategories.StyleController = this.layoutControl1;
-			this.lstDoctorDiagnosisCategories.TabIndex = 10;
-			this.lstDoctorDiagnosisCategories.SelectedIndexChanged += new System.EventHandler(this.lstDoctorDiagnosisCategories_SelectedIndexChanged);
-			// 
-			// layoutControlGroup1
-			// 
-			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-			this.layoutControlGroup1.GroupBordersVisible = false;
-			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem4,
-            this.layoutControlGroup2,
-            this.layoutControlGroup3,
-            this.layoutControlItem6,
-            this.layoutControlItem8,
-            this.simpleSeparator1,
-            this.emptySpaceItem2,
-            this.emptySpaceItem5,
-            this.simpleSeparator2,
-            this.layoutControlGroup4,
-            this.layoutControlItem7,
-            this.layoutControlItem13,
-            this.lytAddedDiagnosisFullScreen,
-            this.layoutControlItem12,
-            this.layoutControlItem3,
-            this.layoutControlGroup5,
-            this.lytGroup_EyeSelection,
-            this.emptySpaceItem7,
-            this.layoutControlItem31});
-			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlGroup1.Name = "Root";
-			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup1.Size = new System.Drawing.Size(1104, 523);
-			this.layoutControlGroup1.TextVisible = false;
-			// 
-			// layoutControlItem1
-			// 
-			this.layoutControlItem1.Control = this.labelControl2;
-			this.layoutControlItem1.Location = new System.Drawing.Point(40, 3);
-			this.layoutControlItem1.Name = "layoutControlItem1";
-			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem1.Size = new System.Drawing.Size(790, 41);
-			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem1.TextVisible = false;
-			// 
-			// layoutControlItem2
-			// 
-			this.layoutControlItem2.Control = this.labelControl3;
-			this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlItem2.MaxSize = new System.Drawing.Size(0, 3);
-			this.layoutControlItem2.MinSize = new System.Drawing.Size(10, 3);
-			this.layoutControlItem2.Name = "layoutControlItem2";
-			this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem2.Size = new System.Drawing.Size(1104, 3);
-			this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem2.TextVisible = false;
 			// 
 			// layoutControlItem4
 			// 
@@ -1014,36 +1079,6 @@
 			this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem8.TextVisible = false;
 			// 
-			// simpleSeparator1
-			// 
-			this.simpleSeparator1.AllowHotTrack = false;
-			this.simpleSeparator1.Location = new System.Drawing.Point(636, 110);
-			this.simpleSeparator1.Name = "simpleSeparator1";
-			this.simpleSeparator1.Size = new System.Drawing.Size(2, 413);
-			// 
-			// emptySpaceItem2
-			// 
-			this.emptySpaceItem2.AllowHotTrack = false;
-			this.emptySpaceItem2.Location = new System.Drawing.Point(638, 347);
-			this.emptySpaceItem2.Name = "emptySpaceItem2";
-			this.emptySpaceItem2.Size = new System.Drawing.Size(43, 176);
-			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem5
-			// 
-			this.emptySpaceItem5.AllowHotTrack = false;
-			this.emptySpaceItem5.Location = new System.Drawing.Point(638, 110);
-			this.emptySpaceItem5.Name = "emptySpaceItem5";
-			this.emptySpaceItem5.Size = new System.Drawing.Size(43, 77);
-			this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// simpleSeparator2
-			// 
-			this.simpleSeparator2.AllowHotTrack = false;
-			this.simpleSeparator2.Location = new System.Drawing.Point(681, 110);
-			this.simpleSeparator2.Name = "simpleSeparator2";
-			this.simpleSeparator2.Size = new System.Drawing.Size(2, 413);
-			// 
 			// layoutControlGroup4
 			// 
 			this.layoutControlGroup4.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -1173,7 +1208,7 @@
 			this.layoutControlItem7.AppearanceItemCaption.BackColor = System.Drawing.Color.DimGray;
 			this.layoutControlItem7.AppearanceItemCaption.Options.UseBackColor = true;
 			this.layoutControlItem7.Control = this.btnNewVitalSign;
-			this.layoutControlItem7.Location = new System.Drawing.Point(1022, 3);
+			this.layoutControlItem7.Location = new System.Drawing.Point(912, 3);
 			this.layoutControlItem7.Name = "layoutControlItem7";
 			this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem7.Size = new System.Drawing.Size(41, 41);
@@ -1186,7 +1221,7 @@
 			this.layoutControlItem13.AppearanceItemCaption.BackColor = System.Drawing.Color.DimGray;
 			this.layoutControlItem13.AppearanceItemCaption.Options.UseBackColor = true;
 			this.layoutControlItem13.Control = this.btnSearchDiagnosis;
-			this.layoutControlItem13.Location = new System.Drawing.Point(981, 3);
+			this.layoutControlItem13.Location = new System.Drawing.Point(953, 3);
 			this.layoutControlItem13.Name = "layoutControlItem13";
 			this.layoutControlItem13.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem13.Size = new System.Drawing.Size(41, 41);
@@ -1197,7 +1232,7 @@
 			// lytAddedDiagnosisFullScreen
 			// 
 			this.lytAddedDiagnosisFullScreen.Control = this.btnAddedDiagnosisFullScreen;
-			this.lytAddedDiagnosisFullScreen.Location = new System.Drawing.Point(940, 3);
+			this.lytAddedDiagnosisFullScreen.Location = new System.Drawing.Point(871, 3);
 			this.lytAddedDiagnosisFullScreen.Name = "lytAddedDiagnosisFullScreen";
 			this.lytAddedDiagnosisFullScreen.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytAddedDiagnosisFullScreen.Size = new System.Drawing.Size(41, 41);
@@ -1208,25 +1243,12 @@
 			// layoutControlItem12
 			// 
 			this.layoutControlItem12.Control = this.btnPrint;
-			this.layoutControlItem12.Location = new System.Drawing.Point(830, 3);
+			this.layoutControlItem12.Location = new System.Drawing.Point(761, 3);
 			this.layoutControlItem12.Name = "layoutControlItem12";
 			this.layoutControlItem12.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem12.Size = new System.Drawing.Size(110, 41);
 			this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem12.TextVisible = false;
-			// 
-			// layoutControlItem3
-			// 
-			this.layoutControlItem3.Control = this.labelControl1;
-			this.layoutControlItem3.Location = new System.Drawing.Point(0, 44);
-			this.layoutControlItem3.MaxSize = new System.Drawing.Size(0, 3);
-			this.layoutControlItem3.MinSize = new System.Drawing.Size(10, 3);
-			this.layoutControlItem3.Name = "layoutControlItem3";
-			this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem3.Size = new System.Drawing.Size(1104, 3);
-			this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem3.TextVisible = false;
 			// 
 			// layoutControlGroup5
 			// 
@@ -1330,37 +1352,13 @@
 			this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem27.TextVisible = false;
 			// 
-			// emptySpaceItem7
-			// 
-			this.emptySpaceItem7.AllowHotTrack = false;
-			this.emptySpaceItem7.Location = new System.Drawing.Point(902, 47);
-			this.emptySpaceItem7.Name = "emptySpaceItem7";
-			this.emptySpaceItem7.Size = new System.Drawing.Size(36, 63);
-			this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// btnSave
-			// 
-			this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnSave.Appearance.Options.UseFont = true;
-			this.btnSave.Image = global::CommonUserControls.Properties.Resources.Save_1_16;
-			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSave.Location = new System.Drawing.Point(1066, 6);
-			this.btnSave.MaximumSize = new System.Drawing.Size(35, 35);
-			this.btnSave.MinimumSize = new System.Drawing.Size(35, 35);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(35, 35);
-			this.btnSave.StyleController = this.layoutControl1;
-			this.btnSave.TabIndex = 50;
-			this.btnSave.Text = "Add New Diagnosis";
-			// 
 			// layoutControlItem31
 			// 
 			this.layoutControlItem31.Control = this.btnSave;
-			this.layoutControlItem31.Location = new System.Drawing.Point(1063, 3);
+			this.layoutControlItem31.Location = new System.Drawing.Point(994, 3);
 			this.layoutControlItem31.Name = "layoutControlItem31";
 			this.layoutControlItem31.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem31.Size = new System.Drawing.Size(41, 41);
-			this.layoutControlItem31.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem31.Size = new System.Drawing.Size(110, 41);
 			this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem31.TextVisible = false;
 			// 
@@ -1380,12 +1378,18 @@
 			((System.ComponentModel.ISupportInitialize)(this.lstAddedDiagnosis)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDiagnosis)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDiagnosisCategories)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDoctorDiagnosis)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDoctorDiagnosisCategories)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
@@ -1405,10 +1409,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
@@ -1422,7 +1422,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAddedDiagnosisFullScreen)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
@@ -1431,7 +1430,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
 			this.ResumeLayout(false);
 

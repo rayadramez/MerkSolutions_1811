@@ -148,10 +148,6 @@ namespace CommonUserControls.PEMRCommonViewers
 			switch (result)
 			{
 				case DialogResult.Yes:
-					//if (_socialHistory != null)
-					//	PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, _socialHistory,
-					//		ApplicationStaticConfiguration.ActiveLoginUser.ID);
-
 					PEMRBusinessLogic.SavePEMRObject();
 					MerkDBBusinessLogicEngine.UpdateAndSave_QueueManagerStatus(QueueResult.QueueManagerID,
 						DB_QueueManagerStatus.Served);
