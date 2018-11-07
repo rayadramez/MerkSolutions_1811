@@ -12,6 +12,7 @@ using DevExpress.XtraLayout.HitInfo;
 using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
+using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.PEMRBusinessLogic;
 using MVCBusinessLogicLibrary.BaseViewers;
 
 namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
@@ -22,10 +23,16 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 		NotFullScreen = 2
 	}
 
-	public partial class PEMR_Diagnosis_UC : UserControl, IPEMR_Viewer
+	public partial class PEMR_Diagnosis_UC : UserControl, IPEMR_Viewer, IPEMR_Diagnosis
 	{
 		private List<Diagnosis_cu> TempDiagnosisListToBeAdded { get; set; }
-		private List<Diagnosis_cu> AddedDiagnosisList { get; set; }
+		public object FurtherDetails
+		{
+			get { return txtReccommednations.EditValue; }
+			set { txtReccommednations.EditValue = value; }
+		}
+
+		public List<Diagnosis_cu> AddedDiagnosisList { get; set; }
 		public static Diagnosis_cu SelectedDiagnosisFromSearch { get; set; }
 		public FullScreenMode FullScreenMode { get; set; }
 		private PEMR_Diagnosis_UC _pemrDiagnosis;
@@ -75,6 +82,8 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 			txtReccommednations.EditValue = PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis[0]
 				.GeneralDescription;
+
+			AddedDiagnosisList = null;
 			foreach (VisitTiming_Diagnosis timingDiagnosi in PEMRBusinessLogic.ActivePEMRObject
 				.List_VisitTiming_Diagnosis.FindAll(item =>
 					!Convert.ToInt32(item.PEMRElementStatus).Equals(Convert.ToInt32(PEMRElementStatus.Removed))))
@@ -87,7 +96,10 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 				AddedDiagnosisList.Add(diagnosis);
 			}
 
+			ClearControls(false);
 			CommonViewsActions.FillListBoxControl(lstAddedDiagnosis, AddedDiagnosisList, "DiagnosisFullName");
+
+			PEMRBusinessLogic.PEMR_Diagnosis = this;
 		}
 
 		#region IPEMR_Viewer
@@ -148,7 +160,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 					case DB_DiagnosisType.Final:
 						chkFinal.Checked = true;
 						break;
-				} 
+				}
 			}
 		}
 
@@ -224,10 +236,8 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 						{
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis =
 								new List<VisitTiming_MainDiagnosis>();
-							_mainVisitDiagnosis = PEMRBusinessLogic.CreateNew_VisitTiming_MainDiagnosis(DiagnosisType,
-								txtReccommednations.EditValue,
-								ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
-								ApplicationStaticConfiguration.PEMRSavingMode);
+							_mainVisitDiagnosis = PEMRBusinessLogic.CreateNew_VisitTiming_MainDiagnosis(FurtherDetails,
+								DiagnosisType, ApplicationStaticConfiguration.PEMRSavingMode);
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis.Add(_mainVisitDiagnosis);
 						}
 
@@ -248,7 +258,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 						_visitDiagnosis = PEMRBusinessLogic.CreateNew_VisitTiming_Diagnosis(
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis[0], diagnosisCu, EyeType,
-							ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 							ApplicationStaticConfiguration.PEMRSavingMode);
 						if (_visitDiagnosis != null)
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Diagnosis.Add(_visitDiagnosis);
@@ -384,9 +393,30 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 		}
 
-		private void btnSave_Click_1(object sender, EventArgs e)
+		private void btnSave_Click(object sender, EventArgs e)
 		{
-
+			if (PEMRBusinessLogic.ActivePEMRObject != null)
+				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis == null ||
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis.Count == 0)
+				{
+					_mainVisitDiagnosis = PEMRBusinessLogic.CreateNew_VisitTiming_MainDiagnosis(FurtherDetails,
+						DiagnosisType, DB_PEMRSavingMode.SaveImmediately);
+					if (_mainVisitDiagnosis == null)
+						return;
+					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis == null)
+						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis = new List<VisitTiming_MainDiagnosis>();
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis.Add(_mainVisitDiagnosis);
+					XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+						MessageBoxIcon.Information);
+				}
+				else
+				{
+					if (_mainVisitDiagnosis == null)
+						return;
+					if (PEMRBusinessLogic.Update_VisitTiming_MainDiagnosis(this, _mainVisitDiagnosis))
+						XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+							MessageBoxIcon.Information);
+				}
 		}
 
 		#endregion
@@ -442,7 +472,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Diagnosis.FindAll(item =>
 							!Convert.ToInt32(item.PEMRElementStatus)
 								.Equals(Convert.ToInt32(PEMRElementStatus.Removed))),
-						chkAll.Checked ? DB_EyeType_p.All : (DB_EyeType_p) EyeType);
+						chkAll.Checked ? DB_EyeType_p.All : (DB_EyeType_p)EyeType);
 					CommonViewsActions.FillListBoxControl(lstAddedDiagnosis, AddedDiagnosisList, "DiagnosisFullName");
 					lstAddedDiagnosis.Refresh();
 					SetDiagnosisCount(AddedDiagnosisList);
@@ -461,7 +491,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Diagnosis.FindAll(item =>
 							!Convert.ToInt32(item.PEMRElementStatus)
 								.Equals(Convert.ToInt32(PEMRElementStatus.Removed))),
-						chkAll.Checked ? DB_EyeType_p.All : (DB_EyeType_p) EyeType);
+						chkAll.Checked ? DB_EyeType_p.All : (DB_EyeType_p)EyeType);
 					CommonViewsActions.FillListBoxControl(lstAddedDiagnosis, AddedDiagnosisList, "DiagnosisFullName");
 					lstAddedDiagnosis.Refresh();
 					SetDiagnosisCount(AddedDiagnosisList);
@@ -476,12 +506,12 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 		private void txtReccommednations_EditValueChanged(object sender, EventArgs e)
 		{
 			if (PEMRBusinessLogic.ActivePEMRObject != null &&
-			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis != null &&
-			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis.Count > 0 &&
-			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis[0] != null)
+				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis != null &&
+				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis.Count > 0 &&
+				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis[0] != null)
 			{
 				if (!string.IsNullOrEmpty(txtReccommednations.Text) ||
-				    !string.IsNullOrWhiteSpace(txtReccommednations.Text))
+					!string.IsNullOrWhiteSpace(txtReccommednations.Text))
 					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis[0].GeneralDescription =
 						txtReccommednations.Text;
 				else

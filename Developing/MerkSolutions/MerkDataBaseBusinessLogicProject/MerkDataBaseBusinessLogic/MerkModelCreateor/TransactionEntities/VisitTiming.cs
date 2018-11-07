@@ -75,6 +75,8 @@ namespace MerkDataBaseBusinessLogicProject
 
 		public List<VisitTiming_SocialHistory> List_VisitTiming_SocialHistory { get; set; }
 
+		public List<VisitTiming_MedicalHistory> List_VisitTiming_MedicalHistory { get; set; }
+
 		public List<VisitTiming_TreatmentPlan> List_VisitTiming_TreatmentPlan { get; set; }
 
 		public List<VisitTiming_Attachment> List_VisitTiming_Attachment { get; set; }

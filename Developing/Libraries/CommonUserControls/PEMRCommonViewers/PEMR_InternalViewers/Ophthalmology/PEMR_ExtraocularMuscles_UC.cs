@@ -35,9 +35,11 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 		public PEMR_ExtraocularMuscles_UC()
 		{
 			InitializeComponent();
-			ParentControl = this.Parent;
+			ParentControl = Parent;
 			ClearControls(false);
 			FillControls();
+			CommonViewsActions.Decorate(spnSR_OD, spnSR_OS, spnLR_OD, spnLR_OS, spnIR_OD, spnIR_OS, spnIO_OD, spnIO_OS,
+				spnMR_OD, spnMR_OS, spnSO_OD, spnSO_OS, lkeEOMSignCategory_OD, lkeEOMSignCategory_OS);
 		}
 
 		private void PEMR_ExtraocularMuscles_UC_Load(object sender, System.EventArgs e)
@@ -99,6 +101,9 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 				.List_VisitTiming_MainEOMSign[0].GeneralDescription_OD;
 			txtReccommednations_OS.EditValue = PEMRBusinessLogic.ActivePEMRObject
 				.List_VisitTiming_MainEOMSign[0].GeneralDescription_OS;
+
+			AddedEOMSign_OD = null;
+			AddedEOMSign_OS = null;
 			foreach (VisitTiming_EOMSign visitTimingAnterior in PEMRBusinessLogic.ActivePEMRObject
 				.List_VisitTiming_EOMSign.FindAll(item =>
 					!Convert.ToInt32(item.PEMRElementStatus).Equals(Convert.ToInt32(PEMRElementStatus.Removed))))
@@ -124,10 +129,15 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 				}
 			}
 
-			CommonViewsActions.FillGridlookupEdit(lkeEOMSignCategory_OD, AddedEOMSign_OD);
-			CommonViewsActions.FillGridlookupEdit(lkeEOMSignCategory_OS, AddedEOMSign_OS);
+			ClearControls(false);
+			CommonViewsActions.FillListBoxControl(lstAddedEOMSign_OD, AddedEOMSign_OD);
+			CommonViewsActions.FillListBoxControl(lstAddedEOMSign_OS, AddedEOMSign_OS);
+			lstAddedEOMSign_OD.Refresh();
+			lstAddedEOMSign_OS.Refresh();
 			SetCount_OD();
 			SetCount_OS();
+
+			PEMRBusinessLogic.PEMR_EOMSign = this;
 		}
 
 		public void SetCount_OD()
@@ -310,7 +320,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_MainEOMSign>();
 							_mainEOMSign = PEMRBusinessLogic.CreateNew_VisitTiming_MainEOMSign(
 								FurtherDetails_OD, FurtherDetails_OS,
-								ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 								ApplicationStaticConfiguration.PEMRSavingMode);
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainEOMSign.Add(
 								_mainEOMSign);
@@ -428,7 +437,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_MainEOMSign>();
 							_mainEOMSign = PEMRBusinessLogic.CreateNew_VisitTiming_MainEOMSign(
 								FurtherDetails_OD, FurtherDetails_OS,
-								ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 								ApplicationStaticConfiguration.PEMRSavingMode);
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainEOMSign.Add(
 								_mainEOMSign);
@@ -522,10 +530,27 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 		private void btnSave_Click(object sender, EventArgs e)
 		{
 			if (PEMRBusinessLogic.ActivePEMRObject != null)
-				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainEOMSign != null &&
-					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainEOMSign.Count > 0)
-					PEMRBusinessLogic.Update_VisitTiming_MainEOMSign(this, _mainEOMSign,
-						ApplicationStaticConfiguration.ActiveLoginUser.ID);
+				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign == null ||
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign.Count == 0)
+				{
+					_mainEOMSign = PEMRBusinessLogic.CreateNew_VisitTiming_MainEOMSign(FurtherDetails_OD, FurtherDetails_OD,
+						ApplicationStaticConfiguration.PEMRSavingMode);
+					if (_mainEOMSign == null)
+						return;
+					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainEOMSign == null)
+						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainEOMSign = new List<VisitTiming_MainEOMSign>();
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainEOMSign.Add(_mainEOMSign);
+					XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+						MessageBoxIcon.Information);
+				}
+				else
+				{
+					if (_mainEOMSign == null)
+						return;
+					if(PEMRBusinessLogic.Update_VisitTiming_MainEOMSign(this, _mainEOMSign))
+						XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+							MessageBoxIcon.Information);
+				}
 		}
 
 		private void btnNewReading_Click(object sender, EventArgs e)
@@ -580,7 +605,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 				case DialogResult.Yes:
 					VisitTiming_EOMReading visitTiming_EOMReading =
 						PEMRBusinessLogic.CreateNew_VisitTiming_EOMReading(this,
-							ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 							ApplicationStaticConfiguration.PEMRSavingMode);
 					if (visitTiming_EOMReading != null)
 					{

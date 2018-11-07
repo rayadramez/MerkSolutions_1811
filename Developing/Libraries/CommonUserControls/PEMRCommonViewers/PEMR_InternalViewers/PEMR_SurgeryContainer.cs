@@ -127,7 +127,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			VisitTiming_SurgeryReservation surgeryReservation =
 				PEMRBusinessLogic.CreateNew_VisitTiming_SurgeryReservation(lkeServices.EditValue,
 					dtRequestedDate.EditValue, txtDescription.EditValue,
-					ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 					ApplicationStaticConfiguration.PEMRSavingMode);
 			if (surgeryReservation != null)
 				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SurgeryReservation.Add(surgeryReservation);

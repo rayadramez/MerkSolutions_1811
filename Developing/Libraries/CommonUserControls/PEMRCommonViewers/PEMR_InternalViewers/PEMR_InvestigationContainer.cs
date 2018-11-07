@@ -124,7 +124,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			VisitTiming_InvestigationReservation investigationReservation =
 				PEMRBusinessLogic.CreateNew_VisitTiming_InvestigationReservation(lkeServices.EditValue,
 					dtRequestedDate.EditValue, txtDescription.EditValue,
-					ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 					ApplicationStaticConfiguration.PEMRSavingMode);
 			if (investigationReservation != null)
 			{

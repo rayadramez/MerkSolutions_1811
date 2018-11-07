@@ -1,37 +1,67 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using ApplicationConfiguration;
+using CommonControlLibrary;
 using CommonUserControls.PEMRCommonViewers.PEMR_Interfaces;
+using DevExpress.XtraEditors;
 using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.HitInfo;
 using DevExpress.XtraLayout.Utils;
+using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
+using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.PEMRBusinessLogic;
 
 namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 {
-	public partial class PEMR_MedicalHistory : UserControl, IPEMR_Viewer
+	public partial class PEMR_MedicalHistory : UserControl, IPEMR_Viewer, IPEMR_MedicalHistory
 	{
+		private VisitTiming_MedicalHistory Active_VisitTiming_MedicalHistory { get; set; }
+
 		public PEMR_MedicalHistory()
 		{
 			InitializeComponent();
-			Initialize();
 		}
 
 		public void Initialize()
 		{
 			lytGroup_Diabetes.Expanded = false;
 			lytGroup_Hypertension.Expanded = false;
+			ClearControls(true);
+			FillControls();
 		}
 
 		#region Implementation of IPEMR_Viewer
 
 		public void ClearControls(bool clearAll)
 		{
-			throw new NotImplementedException();
+			HasDiabetes = null;
+			DiabetesType = null;
+			HbA1C = null;
+			IsDiabetesControlled = null;
+			DiabetesMedicationType = null;
+			DiabetesMedicationDuration = null;
+			DiabetesMedicationDurationType = null;
+			DiabetesMedication = null;
+			DiabetesDosage = null;
+			HasHypertension = null;
+			IsHypertensionControlled = null;
+			HypertensionMedicationDurationType = null;
+			HypertensionMedicationDuration = null;
+			HypertensionMedication = null;
+			HypertensionDosage = null;
+			HasDrugAllergies = null;
+			TriggersDrugAllergies = null;
+			HasHepatitis = null;
+			HasAsthma = null;
 		}
 
 		public void FillControls()
 		{
-			throw new NotImplementedException();
+			CommonViewsActions.FillGridlookupEdit(lkeDiabetes_Medications, Medication_cu.ItemsList);
+			CommonViewsActions.FillGridlookupEdit(lkeDiabetes_Doses, Dose_cu.ItemsList);
+			CommonViewsActions.FillGridlookupEdit(lkeHypertension_Medications, Medication_cu.ItemsList);
+			CommonViewsActions.FillGridlookupEdit(lkeHypertension_Doses, Dose_cu.ItemsList);
 		}
 
 		#endregion
@@ -57,7 +87,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			{
 				DiabetesType = null;
 				HbA1C = null;
-				IsDiabetedControlled = null;
+				IsDiabetesControlled = null;
 				DiabetesMedicationType = null;
 				DiabetesMedicationDuration = null;
 				DiabetesMedicationDurationType = null;
@@ -132,7 +162,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			{
 				DiabetesType = null;
 				HbA1C = null;
-				IsDiabetedControlled = null;
+				IsDiabetesControlled = null;
 				DiabetesMedicationType = null;
 				DiabetesMedicationDuration = null;
 				DiabetesMedicationDurationType = null;
@@ -308,9 +338,43 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 		#endregion
 
+		#region Button Events
+
+		private void btnSave_Click(object sender, EventArgs e)
+		{
+			if (PEMRBusinessLogic.ActivePEMRObject != null)
+				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MedicalHistory == null)
+				{
+					Active_VisitTiming_MedicalHistory = PEMRBusinessLogic.CreateNew_VisitTiming_MedicalHistory(this, DB_PEMRSavingMode.SaveImmediately);
+					if (Active_VisitTiming_MedicalHistory == null)
+						return;
+					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MedicalHistory == null)
+						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MedicalHistory = new List<VisitTiming_MedicalHistory>();
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MedicalHistory.Add(Active_VisitTiming_MedicalHistory);
+					XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+						MessageBoxIcon.Information);
+				}
+				else
+				{
+					if (Active_VisitTiming_MedicalHistory == null)
+						return;
+					if(PEMRBusinessLogic.Update_VisitTiming_MedicalHistory(this, Active_VisitTiming_MedicalHistory))
+						XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+							MessageBoxIcon.Information);
+				}
+		}
+
+		#endregion
+
 		#endregion
 
 		#region Implementation of IPEMR_MedicalHistory
+
+		public object FurtherDetails
+		{
+			get { return txtTreatmentPlanDetails.EditValue; }
+			set { txtTreatmentPlanDetails.EditValue = value; }
+		}
 
 		public object HasDiabetes
 		{
@@ -375,7 +439,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			set { spnHbA1C.EditValue = value; }
 		}
 
-		public object IsDiabetedControlled
+		public object IsDiabetesControlled
 		{
 			get
 			{
@@ -711,5 +775,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 		}
 
 		#endregion
+
 	}
 }

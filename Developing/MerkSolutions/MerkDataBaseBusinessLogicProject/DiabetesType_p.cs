@@ -12,14 +12,12 @@ namespace MerkDataBaseBusinessLogicProject
     using System;
     using System.Collections.Generic;
     
-    public partial class TimeDuration_p
+    public partial class DiabetesType_p
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TimeDuration_p()
+        public DiabetesType_p()
         {
             this.VisitTiming_MedicalHistory = new HashSet<VisitTiming_MedicalHistory>();
-            this.VisitTiming_MedicalHistory1 = new HashSet<VisitTiming_MedicalHistory>();
-            this.VisitTiming_Medication = new HashSet<VisitTiming_Medication>();
         }
     
         public int ID { get; set; }
@@ -29,9 +27,5 @@ namespace MerkDataBaseBusinessLogicProject
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VisitTiming_MedicalHistory> VisitTiming_MedicalHistory { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VisitTiming_MedicalHistory> VisitTiming_MedicalHistory1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VisitTiming_Medication> VisitTiming_Medication { get; set; }
     }
 }

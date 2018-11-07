@@ -32,8 +32,6 @@ namespace CommonUserControls.PEMRCommonViewers
 				return;
 
 			MerkDBBusinessLogicEngine.LoadDefaultStationPointStage();
-
-			List<StationPointStage_cu> list = MerkDBBusinessLogicEngine.GetAllStationPointStages();
 			CommonViewsActions.FillGridlookupEdit(lkeStationPointStages,
 				MerkDBBusinessLogicEngine.GetOrganizationMachineStationPointStages(
 					ApplicationStaticConfiguration.OrganizationMachine,

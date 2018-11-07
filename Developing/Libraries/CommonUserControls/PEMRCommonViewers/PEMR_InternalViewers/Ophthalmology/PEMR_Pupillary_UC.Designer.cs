@@ -30,6 +30,9 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_Pupillary_UC));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.txtReccommednations_OS = new DevExpress.XtraEditors.MemoEdit();
 			this.txtReccommednations_OD = new DevExpress.XtraEditors.MemoEdit();
 			this.lkeAbnormalitiesCauses_OS = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -38,8 +41,13 @@
 			this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.chkNoAbnormalitiesFound_OD = new DevExpress.XtraEditors.CheckButton();
 			this.chkNoAbnormalitiesFound_OS = new DevExpress.XtraEditors.CheckButton();
+			this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
+			this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+			this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
+			this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
 			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
 			this.spnScotopic_OS = new DevExpress.XtraEditors.SpinEdit();
 			this.spnHighPhotopic_OS = new DevExpress.XtraEditors.SpinEdit();
@@ -87,19 +95,80 @@
 			this.chkSize_Miosis_OD = new DevExpress.XtraEditors.CheckButton();
 			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.lytGroup_Size_OD = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lytGroup_Size_OS = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.lytGroup_RAPD_OS = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.lytGroup_RAPDGradingScale_OS = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lytRAPDCauses_OS = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem12 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.lytGroup_RAPD_OD = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.lytGroup_RAPDGradingScale_OD = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lytRAPDCauses_OD = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem14 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.lytGroup_Shape_OD = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem39 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem38 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lytGroup_Shape_OS = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem43 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem42 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem41 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem15 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.lytGroup_Pupillometry_OS = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem54 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem53 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem52 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem51 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem50 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lytGroup_Pupillometry_OD = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem47 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytAbnormalitiesCasuses_OD = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytAbnormalitiesCasuses_OS = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem55 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -132,77 +201,8 @@
 			this.simpleSeparator15 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator16 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator17 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-			this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
-			this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
-			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-			this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
-			this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.lytGroup_Size_OD = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.lytGroup_Size_OS = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.lytGroup_RAPD_OS = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.lytGroup_RAPDGradingScale_OS = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.lytRAPDCauses_OS = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem12 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.lytGroup_RAPD_OD = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.lytGroup_RAPDGradingScale_OD = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.lytRAPDCauses_OD = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.lytGroup_Shape_OD = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem39 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem38 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.lytGroup_Shape_OS = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem43 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem42 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem41 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.lytGroup_Pupillometry_OS = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem54 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem53 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem52 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem51 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem50 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.lytGroup_Pupillometry_OD = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem47 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
@@ -212,6 +212,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeAbnormalitiesCauses_OD.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnScotopic_OS.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnHighPhotopic_OS.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnLowPhotopic_OS.Properties)).BeginInit();
@@ -228,19 +231,80 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Size_OD)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Size_OS)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPD_OS)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPDGradingScale_OS)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytRAPDCauses_OS)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPD_OD)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPDGradingScale_OD)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytRAPDCauses_OD)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Shape_OD)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Shape_OS)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem15)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Pupillometry_OS)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem54)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem53)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem52)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Pupillometry_OD)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAbnormalitiesCasuses_OD)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAbnormalitiesCasuses_OS)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem55)).BeginInit();
@@ -273,70 +337,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator15)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator16)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator17)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Size_OD)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Size_OS)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPD_OS)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPDGradingScale_OS)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytRAPDCauses_OS)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPD_OD)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPDGradingScale_OD)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytRAPDCauses_OD)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Shape_OD)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Shape_OS)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Pupillometry_OS)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem54)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem53)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem52)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Pupillometry_OD)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
@@ -412,6 +412,50 @@
 			this.layoutControl1.Size = new System.Drawing.Size(1200, 600);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
+			// 
+			// btnSearchDiagnosis
+			// 
+			this.btnSearchDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
+			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
+			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSearchDiagnosis.Location = new System.Drawing.Point(1052, 6);
+			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
+			this.btnSearchDiagnosis.Size = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.StyleController = this.layoutControl1;
+			this.btnSearchDiagnosis.TabIndex = 41;
+			this.btnSearchDiagnosis.Text = "Add New Diagnosis";
+			// 
+			// btnNewVitalSign
+			// 
+			this.btnNewVitalSign.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnNewVitalSign.Appearance.Options.UseFont = true;
+			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
+			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnNewVitalSign.Location = new System.Drawing.Point(1011, 6);
+			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnNewVitalSign.Name = "btnNewVitalSign";
+			this.btnNewVitalSign.Size = new System.Drawing.Size(35, 35);
+			this.btnNewVitalSign.StyleController = this.layoutControl1;
+			this.btnNewVitalSign.TabIndex = 40;
+			this.btnNewVitalSign.Text = "Add New Category";
+			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSave.Location = new System.Drawing.Point(1090, 3);
+			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(110, 40);
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.TabIndex = 11;
+			this.btnSave.Text = "simpleButton1";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// txtReccommednations_OS
 			// 
@@ -557,6 +601,32 @@
 			this.chkNoAbnormalitiesFound_OS.Text = "No Abnormalities found";
 			this.chkNoAbnormalitiesFound_OS.CheckedChanged += new System.EventHandler(this.chkNoAbnormalitiesFound_OS_CheckedChanged);
 			// 
+			// pictureEdit3
+			// 
+			this.pictureEdit3.EditValue = global::CommonUserControls.Properties.Resources.Eye_OS_16_01;
+			this.pictureEdit3.Location = new System.Drawing.Point(1011, 50);
+			this.pictureEdit3.Name = "pictureEdit3";
+			this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
+			this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+			this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+			this.pictureEdit3.Size = new System.Drawing.Size(84, 64);
+			this.pictureEdit3.StyleController = this.layoutControl1;
+			this.pictureEdit3.TabIndex = 46;
+			// 
+			// pictureEdit2
+			// 
+			this.pictureEdit2.EditValue = global::CommonUserControls.Properties.Resources.Eye_OD_16_01;
+			this.pictureEdit2.Location = new System.Drawing.Point(103, 50);
+			this.pictureEdit2.Name = "pictureEdit2";
+			this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
+			this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+			this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+			this.pictureEdit2.Size = new System.Drawing.Size(84, 64);
+			this.pictureEdit2.StyleController = this.layoutControl1;
+			this.pictureEdit2.TabIndex = 45;
+			// 
 			// labelControl3
 			// 
 			this.labelControl3.Appearance.BackColor = System.Drawing.Color.Gold;
@@ -576,6 +646,45 @@
 			this.labelControl1.Size = new System.Drawing.Size(1200, 3);
 			this.labelControl1.StyleController = this.layoutControl1;
 			this.labelControl1.TabIndex = 8;
+			// 
+			// simpleButton1
+			// 
+			this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.simpleButton1.Appearance.Options.UseFont = true;
+			this.simpleButton1.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
+			this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.simpleButton1.Location = new System.Drawing.Point(970, 6);
+			this.simpleButton1.MaximumSize = new System.Drawing.Size(35, 35);
+			this.simpleButton1.MinimumSize = new System.Drawing.Size(35, 35);
+			this.simpleButton1.Name = "simpleButton1";
+			this.simpleButton1.Size = new System.Drawing.Size(35, 35);
+			this.simpleButton1.StyleController = this.layoutControl1;
+			this.simpleButton1.TabIndex = 45;
+			this.simpleButton1.Text = "Add New Diagnosis";
+			// 
+			// btnPrint
+			// 
+			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
+			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnPrint.Location = new System.Drawing.Point(857, 3);
+			this.btnPrint.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnPrint.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnPrint.Name = "btnPrint";
+			this.btnPrint.Size = new System.Drawing.Size(110, 40);
+			this.btnPrint.StyleController = this.layoutControl1;
+			this.btnPrint.TabIndex = 8;
+			this.btnPrint.Text = "simpleButton1";
+			// 
+			// pictureEdit1
+			// 
+			this.pictureEdit1.EditValue = global::CommonUserControls.Properties.Resources.Pupil_16_01;
+			this.pictureEdit1.Location = new System.Drawing.Point(0, 3);
+			this.pictureEdit1.Name = "pictureEdit1";
+			this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+			this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+			this.pictureEdit1.Size = new System.Drawing.Size(40, 40);
+			this.pictureEdit1.StyleController = this.layoutControl1;
+			this.pictureEdit1.TabIndex = 9;
 			// 
 			// labelControl2
 			// 
@@ -601,7 +710,7 @@
             0,
             0,
             0});
-			this.spnScotopic_OS.Location = new System.Drawing.Point(716, 298);
+			this.spnScotopic_OS.Location = new System.Drawing.Point(620, 298);
 			this.spnScotopic_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnScotopic_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnScotopic_OS.Name = "spnScotopic_OS";
@@ -645,7 +754,7 @@
             0,
             0,
             0});
-			this.spnHighPhotopic_OS.Location = new System.Drawing.Point(834, 298);
+			this.spnHighPhotopic_OS.Location = new System.Drawing.Point(738, 298);
 			this.spnHighPhotopic_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnHighPhotopic_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnHighPhotopic_OS.Name = "spnHighPhotopic_OS";
@@ -689,7 +798,7 @@
             0,
             0,
             0});
-			this.spnLowPhotopic_OS.Location = new System.Drawing.Point(952, 298);
+			this.spnLowPhotopic_OS.Location = new System.Drawing.Point(856, 298);
 			this.spnLowPhotopic_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnLowPhotopic_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnLowPhotopic_OS.Name = "spnLowPhotopic_OS";
@@ -733,7 +842,7 @@
             0,
             0,
             0});
-			this.spnHighMesopic_OS.Location = new System.Drawing.Point(1070, 298);
+			this.spnHighMesopic_OS.Location = new System.Drawing.Point(974, 298);
 			this.spnHighMesopic_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnHighMesopic_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnHighMesopic_OS.Name = "spnHighMesopic_OS";
@@ -777,7 +886,7 @@
             0,
             0,
             0});
-			this.spnLowMesopic_OS.Location = new System.Drawing.Point(1188, 298);
+			this.spnLowMesopic_OS.Location = new System.Drawing.Point(1092, 298);
 			this.spnLowMesopic_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnLowMesopic_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnLowMesopic_OS.Name = "spnLowMesopic_OS";
@@ -1039,7 +1148,7 @@
 			this.chkShape_Peaked_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkShape_Peaked_OS.Appearance.Options.UseFont = true;
 			this.chkShape_Peaked_OS.GroupIndex = 8;
-			this.chkShape_Peaked_OS.Location = new System.Drawing.Point(1213, 248);
+			this.chkShape_Peaked_OS.Location = new System.Drawing.Point(1131, 248);
 			this.chkShape_Peaked_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkShape_Peaked_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkShape_Peaked_OS.Name = "chkShape_Peaked_OS";
@@ -1054,7 +1163,7 @@
 			this.chkShape_Irruglar_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkShape_Irruglar_OS.Appearance.Options.UseFont = true;
 			this.chkShape_Irruglar_OS.GroupIndex = 8;
-			this.chkShape_Irruglar_OS.Location = new System.Drawing.Point(1107, 248);
+			this.chkShape_Irruglar_OS.Location = new System.Drawing.Point(1025, 248);
 			this.chkShape_Irruglar_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkShape_Irruglar_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkShape_Irruglar_OS.Name = "chkShape_Irruglar_OS";
@@ -1069,7 +1178,7 @@
 			this.chkShape_Sector_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkShape_Sector_OS.Appearance.Options.UseFont = true;
 			this.chkShape_Sector_OS.GroupIndex = 8;
-			this.chkShape_Sector_OS.Location = new System.Drawing.Point(1001, 248);
+			this.chkShape_Sector_OS.Location = new System.Drawing.Point(919, 248);
 			this.chkShape_Sector_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkShape_Sector_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkShape_Sector_OS.Name = "chkShape_Sector_OS";
@@ -1084,7 +1193,7 @@
 			this.chkShape_Oval_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkShape_Oval_OS.Appearance.Options.UseFont = true;
 			this.chkShape_Oval_OS.GroupIndex = 8;
-			this.chkShape_Oval_OS.Location = new System.Drawing.Point(895, 248);
+			this.chkShape_Oval_OS.Location = new System.Drawing.Point(813, 248);
 			this.chkShape_Oval_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkShape_Oval_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkShape_Oval_OS.Name = "chkShape_Oval_OS";
@@ -1099,7 +1208,7 @@
 			this.chkShape_Rounded_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkShape_Rounded_OS.Appearance.Options.UseFont = true;
 			this.chkShape_Rounded_OS.GroupIndex = 8;
-			this.chkShape_Rounded_OS.Location = new System.Drawing.Point(789, 248);
+			this.chkShape_Rounded_OS.Location = new System.Drawing.Point(707, 248);
 			this.chkShape_Rounded_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkShape_Rounded_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkShape_Rounded_OS.Name = "chkShape_Rounded_OS";
@@ -1191,7 +1300,7 @@
 			// 
 			// lkeRAPDCauses_OS
 			// 
-			this.lkeRAPDCauses_OS.Location = new System.Drawing.Point(778, 296);
+			this.lkeRAPDCauses_OS.Location = new System.Drawing.Point(694, 296);
 			this.lkeRAPDCauses_OS.MaximumSize = new System.Drawing.Size(200, 0);
 			this.lkeRAPDCauses_OS.MinimumSize = new System.Drawing.Size(200, 0);
 			this.lkeRAPDCauses_OS.Name = "lkeRAPDCauses_OS";
@@ -1256,7 +1365,7 @@
 			this.chkGrade1_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkGrade1_OS.Appearance.Options.UseFont = true;
 			this.chkGrade1_OS.GroupIndex = 4;
-			this.chkGrade1_OS.Location = new System.Drawing.Point(1206, 238);
+			this.chkGrade1_OS.Location = new System.Drawing.Point(1122, 238);
 			this.chkGrade1_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkGrade1_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkGrade1_OS.Name = "chkGrade1_OS";
@@ -1272,7 +1381,7 @@
 			this.chkGrade2_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkGrade2_OS.Appearance.Options.UseFont = true;
 			this.chkGrade2_OS.GroupIndex = 4;
-			this.chkGrade2_OS.Location = new System.Drawing.Point(1100, 238);
+			this.chkGrade2_OS.Location = new System.Drawing.Point(1016, 238);
 			this.chkGrade2_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkGrade2_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkGrade2_OS.Name = "chkGrade2_OS";
@@ -1288,7 +1397,7 @@
 			this.chkGrade3_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkGrade3_OS.Appearance.Options.UseFont = true;
 			this.chkGrade3_OS.GroupIndex = 4;
-			this.chkGrade3_OS.Location = new System.Drawing.Point(994, 238);
+			this.chkGrade3_OS.Location = new System.Drawing.Point(910, 238);
 			this.chkGrade3_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkGrade3_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkGrade3_OS.Name = "chkGrade3_OS";
@@ -1304,7 +1413,7 @@
 			this.chkGrade4_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkGrade4_OS.Appearance.Options.UseFont = true;
 			this.chkGrade4_OS.GroupIndex = 4;
-			this.chkGrade4_OS.Location = new System.Drawing.Point(888, 238);
+			this.chkGrade4_OS.Location = new System.Drawing.Point(804, 238);
 			this.chkGrade4_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkGrade4_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkGrade4_OS.Name = "chkGrade4_OS";
@@ -1320,7 +1429,7 @@
 			this.chkGrade5_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkGrade5_OS.Appearance.Options.UseFont = true;
 			this.chkGrade5_OS.GroupIndex = 4;
-			this.chkGrade5_OS.Location = new System.Drawing.Point(782, 238);
+			this.chkGrade5_OS.Location = new System.Drawing.Point(698, 238);
 			this.chkGrade5_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkGrade5_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkGrade5_OS.Name = "chkGrade5_OS";
@@ -1422,7 +1531,7 @@
 			this.chkNegativeRAPD_OS.Appearance.Options.UseFont = true;
 			this.chkNegativeRAPD_OS.Checked = true;
 			this.chkNegativeRAPD_OS.GroupIndex = 2;
-			this.chkNegativeRAPD_OS.Location = new System.Drawing.Point(1210, 180);
+			this.chkNegativeRAPD_OS.Location = new System.Drawing.Point(1126, 180);
 			this.chkNegativeRAPD_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkNegativeRAPD_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkNegativeRAPD_OS.Name = "chkNegativeRAPD_OS";
@@ -1437,7 +1546,7 @@
 			this.chkPositiveRAPD_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkPositiveRAPD_OS.Appearance.Options.UseFont = true;
 			this.chkPositiveRAPD_OS.GroupIndex = 2;
-			this.chkPositiveRAPD_OS.Location = new System.Drawing.Point(1104, 180);
+			this.chkPositiveRAPD_OS.Location = new System.Drawing.Point(1020, 180);
 			this.chkPositiveRAPD_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkPositiveRAPD_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkPositiveRAPD_OS.Name = "chkPositiveRAPD_OS";
@@ -1485,7 +1594,7 @@
 			this.chkSize_Mediuim_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkSize_Mediuim_OS.Appearance.Options.UseFont = true;
 			this.chkSize_Mediuim_OS.GroupIndex = 6;
-			this.chkSize_Mediuim_OS.Location = new System.Drawing.Point(1147, 214);
+			this.chkSize_Mediuim_OS.Location = new System.Drawing.Point(1115, 214);
 			this.chkSize_Mediuim_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkSize_Mediuim_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkSize_Mediuim_OS.Name = "chkSize_Mediuim_OS";
@@ -1516,7 +1625,7 @@
 			this.chkSize_Mydrisasis_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkSize_Mydrisasis_OS.Appearance.Options.UseFont = true;
 			this.chkSize_Mydrisasis_OS.GroupIndex = 6;
-			this.chkSize_Mydrisasis_OS.Location = new System.Drawing.Point(1253, 214);
+			this.chkSize_Mydrisasis_OS.Location = new System.Drawing.Point(1221, 214);
 			this.chkSize_Mydrisasis_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkSize_Mydrisasis_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkSize_Mydrisasis_OS.Name = "chkSize_Mydrisasis_OS";
@@ -1547,7 +1656,7 @@
 			this.chkSize_Miosis_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkSize_Miosis_OS.Appearance.Options.UseFont = true;
 			this.chkSize_Miosis_OS.GroupIndex = 6;
-			this.chkSize_Miosis_OS.Location = new System.Drawing.Point(1041, 214);
+			this.chkSize_Miosis_OS.Location = new System.Drawing.Point(1009, 214);
 			this.chkSize_Miosis_OS.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkSize_Miosis_OS.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkSize_Miosis_OS.Name = "chkSize_Miosis_OS";
@@ -1659,500 +1768,6 @@
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem1.TextVisible = false;
 			// 
-			// layoutControlItem5
-			// 
-			this.layoutControlItem5.Control = this.labelControl1;
-			this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlItem5.MaxSize = new System.Drawing.Size(0, 3);
-			this.layoutControlItem5.MinSize = new System.Drawing.Size(10, 3);
-			this.layoutControlItem5.Name = "layoutControlItem5";
-			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem5.Size = new System.Drawing.Size(1200, 3);
-			this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem5.TextVisible = false;
-			// 
-			// layoutControlItem6
-			// 
-			this.layoutControlItem6.Control = this.labelControl3;
-			this.layoutControlItem6.Location = new System.Drawing.Point(0, 44);
-			this.layoutControlItem6.MaxSize = new System.Drawing.Size(0, 3);
-			this.layoutControlItem6.MinSize = new System.Drawing.Size(14, 3);
-			this.layoutControlItem6.Name = "layoutControlItem6";
-			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem6.Size = new System.Drawing.Size(1200, 3);
-			this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem6.TextVisible = false;
-			// 
-			// emptySpaceItem2
-			// 
-			this.emptySpaceItem2.AllowHotTrack = false;
-			this.emptySpaceItem2.Location = new System.Drawing.Point(678, 47);
-			this.emptySpaceItem2.Name = "emptySpaceItem2";
-			this.emptySpaceItem2.Size = new System.Drawing.Size(33, 70);
-			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem3
-			// 
-			this.emptySpaceItem3.AllowHotTrack = false;
-			this.emptySpaceItem3.Location = new System.Drawing.Point(0, 47);
-			this.emptySpaceItem3.MaxSize = new System.Drawing.Size(100, 0);
-			this.emptySpaceItem3.MinSize = new System.Drawing.Size(100, 10);
-			this.emptySpaceItem3.Name = "emptySpaceItem3";
-			this.emptySpaceItem3.Size = new System.Drawing.Size(100, 70);
-			this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem4
-			// 
-			this.emptySpaceItem4.AllowHotTrack = false;
-			this.emptySpaceItem4.Location = new System.Drawing.Point(713, 47);
-			this.emptySpaceItem4.Name = "emptySpaceItem4";
-			this.emptySpaceItem4.Size = new System.Drawing.Size(295, 70);
-			this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem5
-			// 
-			this.emptySpaceItem5.AllowHotTrack = false;
-			this.emptySpaceItem5.Location = new System.Drawing.Point(1098, 47);
-			this.emptySpaceItem5.MaxSize = new System.Drawing.Size(102, 0);
-			this.emptySpaceItem5.MinSize = new System.Drawing.Size(102, 10);
-			this.emptySpaceItem5.Name = "emptySpaceItem5";
-			this.emptySpaceItem5.Size = new System.Drawing.Size(102, 70);
-			this.emptySpaceItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem7
-			// 
-			this.emptySpaceItem7.AllowHotTrack = false;
-			this.emptySpaceItem7.Location = new System.Drawing.Point(713, 177);
-			this.emptySpaceItem7.Name = "emptySpaceItem7";
-			this.emptySpaceItem7.Size = new System.Drawing.Size(62, 32);
-			this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem1
-			// 
-			this.emptySpaceItem1.AllowHotTrack = false;
-			this.emptySpaceItem1.Location = new System.Drawing.Point(678, 210);
-			this.emptySpaceItem1.Name = "emptySpaceItem1";
-			this.emptySpaceItem1.Size = new System.Drawing.Size(33, 32);
-			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// layoutControlItem29
-			// 
-			this.layoutControlItem29.Control = this.chkNoAbnormalitiesFound_OS;
-			this.layoutControlItem29.Location = new System.Drawing.Point(994, 119);
-			this.layoutControlItem29.Name = "layoutControlItem29";
-			this.layoutControlItem29.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem29.Size = new System.Drawing.Size(206, 56);
-			this.layoutControlItem29.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem29.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem29.TextVisible = false;
-			// 
-			// emptySpaceItem10
-			// 
-			this.emptySpaceItem10.AllowHotTrack = false;
-			this.emptySpaceItem10.Location = new System.Drawing.Point(678, 117);
-			this.emptySpaceItem10.Name = "emptySpaceItem10";
-			this.emptySpaceItem10.Size = new System.Drawing.Size(33, 58);
-			this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// layoutControlItem30
-			// 
-			this.layoutControlItem30.Control = this.chkNoAbnormalitiesFound_OD;
-			this.layoutControlItem30.Location = new System.Drawing.Point(0, 119);
-			this.layoutControlItem30.Name = "layoutControlItem30";
-			this.layoutControlItem30.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem30.Size = new System.Drawing.Size(206, 56);
-			this.layoutControlItem30.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem30.TextVisible = false;
-			// 
-			// emptySpaceItem14
-			// 
-			this.emptySpaceItem14.AllowHotTrack = false;
-			this.emptySpaceItem14.Location = new System.Drawing.Point(678, 242);
-			this.emptySpaceItem14.Name = "emptySpaceItem14";
-			this.emptySpaceItem14.Size = new System.Drawing.Size(33, 37);
-			this.emptySpaceItem14.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem15
-			// 
-			this.emptySpaceItem15.AllowHotTrack = false;
-			this.emptySpaceItem15.Location = new System.Drawing.Point(678, 279);
-			this.emptySpaceItem15.Name = "emptySpaceItem15";
-			this.emptySpaceItem15.Size = new System.Drawing.Size(33, 32);
-			this.emptySpaceItem15.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// lytAbnormalitiesCasuses_OD
-			// 
-			this.lytAbnormalitiesCasuses_OD.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.lytAbnormalitiesCasuses_OD.AppearanceItemCaption.Options.UseFont = true;
-			this.lytAbnormalitiesCasuses_OD.AppearanceItemCaption.Options.UseTextOptions = true;
-			this.lytAbnormalitiesCasuses_OD.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.lytAbnormalitiesCasuses_OD.Control = this.lkeAbnormalitiesCauses_OD;
-			this.lytAbnormalitiesCasuses_OD.Location = new System.Drawing.Point(208, 119);
-			this.lytAbnormalitiesCasuses_OD.Name = "lytAbnormalitiesCasuses_OD";
-			this.lytAbnormalitiesCasuses_OD.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytAbnormalitiesCasuses_OD.Size = new System.Drawing.Size(206, 56);
-			this.lytAbnormalitiesCasuses_OD.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.lytAbnormalitiesCasuses_OD.Text = "Abnormalities Casuses";
-			this.lytAbnormalitiesCasuses_OD.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-			this.lytAbnormalitiesCasuses_OD.TextLocation = DevExpress.Utils.Locations.Top;
-			this.lytAbnormalitiesCasuses_OD.TextSize = new System.Drawing.Size(128, 13);
-			this.lytAbnormalitiesCasuses_OD.TextToControlDistance = 5;
-			// 
-			// lytAbnormalitiesCasuses_OS
-			// 
-			this.lytAbnormalitiesCasuses_OS.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.lytAbnormalitiesCasuses_OS.AppearanceItemCaption.Options.UseFont = true;
-			this.lytAbnormalitiesCasuses_OS.AppearanceItemCaption.Options.UseTextOptions = true;
-			this.lytAbnormalitiesCasuses_OS.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.lytAbnormalitiesCasuses_OS.Control = this.lkeAbnormalitiesCauses_OS;
-			this.lytAbnormalitiesCasuses_OS.Location = new System.Drawing.Point(788, 119);
-			this.lytAbnormalitiesCasuses_OS.Name = "lytAbnormalitiesCasuses_OS";
-			this.lytAbnormalitiesCasuses_OS.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytAbnormalitiesCasuses_OS.Size = new System.Drawing.Size(206, 56);
-			this.lytAbnormalitiesCasuses_OS.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.lytAbnormalitiesCasuses_OS.Text = "Abnormalities Casuses";
-			this.lytAbnormalitiesCasuses_OS.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-			this.lytAbnormalitiesCasuses_OS.TextLocation = DevExpress.Utils.Locations.Top;
-			this.lytAbnormalitiesCasuses_OS.TextSize = new System.Drawing.Size(128, 13);
-			this.lytAbnormalitiesCasuses_OS.TextToControlDistance = 5;
-			// 
-			// layoutControlItem55
-			// 
-			this.layoutControlItem55.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.layoutControlItem55.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-			this.layoutControlItem55.AppearanceItemCaption.ForeColor = System.Drawing.Color.DarkCyan;
-			this.layoutControlItem55.AppearanceItemCaption.Options.UseBackColor = true;
-			this.layoutControlItem55.AppearanceItemCaption.Options.UseFont = true;
-			this.layoutControlItem55.AppearanceItemCaption.Options.UseForeColor = true;
-			this.layoutControlItem55.AppearanceItemCaption.Options.UseTextOptions = true;
-			this.layoutControlItem55.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.layoutControlItem55.Control = this.txtReccommednations_OD;
-			this.layoutControlItem55.Location = new System.Drawing.Point(0, 520);
-			this.layoutControlItem55.MaxSize = new System.Drawing.Size(0, 80);
-			this.layoutControlItem55.MinSize = new System.Drawing.Size(118, 80);
-			this.layoutControlItem55.Name = "layoutControlItem55";
-			this.layoutControlItem55.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem55.Size = new System.Drawing.Size(679, 80);
-			this.layoutControlItem55.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem55.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem55.Text = "Further Details";
-			this.layoutControlItem55.TextLocation = DevExpress.Utils.Locations.Top;
-			this.layoutControlItem55.TextSize = new System.Drawing.Size(112, 17);
-			// 
-			// layoutControlItem56
-			// 
-			this.layoutControlItem56.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.layoutControlItem56.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-			this.layoutControlItem56.AppearanceItemCaption.ForeColor = System.Drawing.Color.DarkCyan;
-			this.layoutControlItem56.AppearanceItemCaption.Options.UseBackColor = true;
-			this.layoutControlItem56.AppearanceItemCaption.Options.UseFont = true;
-			this.layoutControlItem56.AppearanceItemCaption.Options.UseForeColor = true;
-			this.layoutControlItem56.AppearanceItemCaption.Options.UseTextOptions = true;
-			this.layoutControlItem56.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.layoutControlItem56.Control = this.txtReccommednations_OS;
-			this.layoutControlItem56.Location = new System.Drawing.Point(714, 520);
-			this.layoutControlItem56.MaxSize = new System.Drawing.Size(0, 80);
-			this.layoutControlItem56.MinSize = new System.Drawing.Size(118, 80);
-			this.layoutControlItem56.Name = "layoutControlItem56";
-			this.layoutControlItem56.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem56.Size = new System.Drawing.Size(486, 80);
-			this.layoutControlItem56.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem56.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem56.Text = "Further Details";
-			this.layoutControlItem56.TextLocation = DevExpress.Utils.Locations.Top;
-			this.layoutControlItem56.TextSize = new System.Drawing.Size(112, 17);
-			// 
-			// emptySpaceItem6
-			// 
-			this.emptySpaceItem6.AllowHotTrack = false;
-			this.emptySpaceItem6.Location = new System.Drawing.Point(681, 520);
-			this.emptySpaceItem6.Name = "emptySpaceItem6";
-			this.emptySpaceItem6.Size = new System.Drawing.Size(31, 80);
-			this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem13
-			// 
-			this.emptySpaceItem13.AllowHotTrack = false;
-			this.emptySpaceItem13.Location = new System.Drawing.Point(636, 245);
-			this.emptySpaceItem13.Name = "emptySpaceItem13";
-			this.emptySpaceItem13.Size = new System.Drawing.Size(40, 32);
-			this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem16
-			// 
-			this.emptySpaceItem16.AllowHotTrack = false;
-			this.emptySpaceItem16.Location = new System.Drawing.Point(713, 245);
-			this.emptySpaceItem16.Name = "emptySpaceItem16";
-			this.emptySpaceItem16.Size = new System.Drawing.Size(73, 32);
-			this.emptySpaceItem16.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem17
-			// 
-			this.emptySpaceItem17.AllowHotTrack = false;
-			this.emptySpaceItem17.Location = new System.Drawing.Point(385, 211);
-			this.emptySpaceItem17.Name = "emptySpaceItem17";
-			this.emptySpaceItem17.Size = new System.Drawing.Size(291, 32);
-			this.emptySpaceItem17.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem18
-			// 
-			this.emptySpaceItem18.AllowHotTrack = false;
-			this.emptySpaceItem18.Location = new System.Drawing.Point(713, 211);
-			this.emptySpaceItem18.Name = "emptySpaceItem18";
-			this.emptySpaceItem18.Size = new System.Drawing.Size(325, 32);
-			this.emptySpaceItem18.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem19
-			// 
-			this.emptySpaceItem19.AllowHotTrack = false;
-			this.emptySpaceItem19.Location = new System.Drawing.Point(678, 175);
-			this.emptySpaceItem19.Name = "emptySpaceItem19";
-			this.emptySpaceItem19.Size = new System.Drawing.Size(33, 35);
-			this.emptySpaceItem19.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem20
-			// 
-			this.emptySpaceItem20.AllowHotTrack = false;
-			this.emptySpaceItem20.Location = new System.Drawing.Point(645, 177);
-			this.emptySpaceItem20.Name = "emptySpaceItem20";
-			this.emptySpaceItem20.Size = new System.Drawing.Size(31, 32);
-			this.emptySpaceItem20.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem21
-			// 
-			this.emptySpaceItem21.AllowHotTrack = false;
-			this.emptySpaceItem21.Location = new System.Drawing.Point(414, 119);
-			this.emptySpaceItem21.Name = "emptySpaceItem21";
-			this.emptySpaceItem21.Size = new System.Drawing.Size(262, 56);
-			this.emptySpaceItem21.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem22
-			// 
-			this.emptySpaceItem22.AllowHotTrack = false;
-			this.emptySpaceItem22.Location = new System.Drawing.Point(713, 119);
-			this.emptySpaceItem22.Name = "emptySpaceItem22";
-			this.emptySpaceItem22.Size = new System.Drawing.Size(75, 56);
-			this.emptySpaceItem22.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem24
-			// 
-			this.emptySpaceItem24.AllowHotTrack = false;
-			this.emptySpaceItem24.Location = new System.Drawing.Point(190, 47);
-			this.emptySpaceItem24.Name = "emptySpaceItem24";
-			this.emptySpaceItem24.Size = new System.Drawing.Size(486, 70);
-			this.emptySpaceItem24.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem25
-			// 
-			this.emptySpaceItem25.AllowHotTrack = false;
-			this.emptySpaceItem25.Location = new System.Drawing.Point(0, 313);
-			this.emptySpaceItem25.Name = "emptySpaceItem25";
-			this.emptySpaceItem25.Size = new System.Drawing.Size(1200, 205);
-			this.emptySpaceItem25.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// simpleSeparator7
-			// 
-			this.simpleSeparator7.AllowHotTrack = false;
-			this.simpleSeparator7.Location = new System.Drawing.Point(206, 119);
-			this.simpleSeparator7.Name = "simpleSeparator7";
-			this.simpleSeparator7.Size = new System.Drawing.Size(2, 56);
-			// 
-			// simpleSeparator1
-			// 
-			this.simpleSeparator1.AllowHotTrack = false;
-			this.simpleSeparator1.Location = new System.Drawing.Point(676, 47);
-			this.simpleSeparator1.Name = "simpleSeparator1";
-			this.simpleSeparator1.Size = new System.Drawing.Size(2, 264);
-			// 
-			// simpleSeparator2
-			// 
-			this.simpleSeparator2.AllowHotTrack = false;
-			this.simpleSeparator2.Location = new System.Drawing.Point(711, 47);
-			this.simpleSeparator2.Name = "simpleSeparator2";
-			this.simpleSeparator2.Size = new System.Drawing.Size(2, 264);
-			// 
-			// simpleSeparator3
-			// 
-			this.simpleSeparator3.AllowHotTrack = false;
-			this.simpleSeparator3.Location = new System.Drawing.Point(0, 117);
-			this.simpleSeparator3.Name = "simpleSeparator3";
-			this.simpleSeparator3.Size = new System.Drawing.Size(676, 2);
-			// 
-			// simpleSeparator4
-			// 
-			this.simpleSeparator4.AllowHotTrack = false;
-			this.simpleSeparator4.Location = new System.Drawing.Point(713, 117);
-			this.simpleSeparator4.Name = "simpleSeparator4";
-			this.simpleSeparator4.Size = new System.Drawing.Size(487, 2);
-			// 
-			// simpleSeparator5
-			// 
-			this.simpleSeparator5.AllowHotTrack = false;
-			this.simpleSeparator5.Location = new System.Drawing.Point(0, 175);
-			this.simpleSeparator5.Name = "simpleSeparator5";
-			this.simpleSeparator5.Size = new System.Drawing.Size(676, 2);
-			// 
-			// simpleSeparator6
-			// 
-			this.simpleSeparator6.AllowHotTrack = false;
-			this.simpleSeparator6.Location = new System.Drawing.Point(713, 175);
-			this.simpleSeparator6.Name = "simpleSeparator6";
-			this.simpleSeparator6.Size = new System.Drawing.Size(487, 2);
-			// 
-			// simpleSeparator8
-			// 
-			this.simpleSeparator8.AllowHotTrack = false;
-			this.simpleSeparator8.Location = new System.Drawing.Point(0, 209);
-			this.simpleSeparator8.Name = "simpleSeparator8";
-			this.simpleSeparator8.Size = new System.Drawing.Size(676, 2);
-			// 
-			// simpleSeparator9
-			// 
-			this.simpleSeparator9.AllowHotTrack = false;
-			this.simpleSeparator9.Location = new System.Drawing.Point(713, 209);
-			this.simpleSeparator9.Name = "simpleSeparator9";
-			this.simpleSeparator9.Size = new System.Drawing.Size(487, 2);
-			// 
-			// simpleSeparator10
-			// 
-			this.simpleSeparator10.AllowHotTrack = false;
-			this.simpleSeparator10.Location = new System.Drawing.Point(0, 243);
-			this.simpleSeparator10.Name = "simpleSeparator10";
-			this.simpleSeparator10.Size = new System.Drawing.Size(676, 2);
-			// 
-			// simpleSeparator11
-			// 
-			this.simpleSeparator11.AllowHotTrack = false;
-			this.simpleSeparator11.Location = new System.Drawing.Point(713, 243);
-			this.simpleSeparator11.Name = "simpleSeparator11";
-			this.simpleSeparator11.Size = new System.Drawing.Size(487, 2);
-			// 
-			// simpleSeparator12
-			// 
-			this.simpleSeparator12.AllowHotTrack = false;
-			this.simpleSeparator12.Location = new System.Drawing.Point(0, 277);
-			this.simpleSeparator12.Name = "simpleSeparator12";
-			this.simpleSeparator12.Size = new System.Drawing.Size(676, 2);
-			// 
-			// simpleSeparator13
-			// 
-			this.simpleSeparator13.AllowHotTrack = false;
-			this.simpleSeparator13.Location = new System.Drawing.Point(713, 277);
-			this.simpleSeparator13.Name = "simpleSeparator13";
-			this.simpleSeparator13.Size = new System.Drawing.Size(487, 2);
-			// 
-			// simpleSeparator14
-			// 
-			this.simpleSeparator14.AllowHotTrack = false;
-			this.simpleSeparator14.Location = new System.Drawing.Point(0, 311);
-			this.simpleSeparator14.Name = "simpleSeparator14";
-			this.simpleSeparator14.Size = new System.Drawing.Size(1200, 2);
-			// 
-			// simpleSeparator15
-			// 
-			this.simpleSeparator15.AllowHotTrack = false;
-			this.simpleSeparator15.Location = new System.Drawing.Point(0, 518);
-			this.simpleSeparator15.Name = "simpleSeparator15";
-			this.simpleSeparator15.Size = new System.Drawing.Size(1200, 2);
-			// 
-			// simpleSeparator16
-			// 
-			this.simpleSeparator16.AllowHotTrack = false;
-			this.simpleSeparator16.Location = new System.Drawing.Point(712, 520);
-			this.simpleSeparator16.Name = "simpleSeparator16";
-			this.simpleSeparator16.Size = new System.Drawing.Size(2, 80);
-			// 
-			// simpleSeparator17
-			// 
-			this.simpleSeparator17.AllowHotTrack = false;
-			this.simpleSeparator17.Location = new System.Drawing.Point(679, 520);
-			this.simpleSeparator17.Name = "simpleSeparator17";
-			this.simpleSeparator17.Size = new System.Drawing.Size(2, 80);
-			// 
-			// btnSave
-			// 
-			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
-			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSave.Location = new System.Drawing.Point(1090, 3);
-			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(110, 40);
-			this.btnSave.StyleController = this.layoutControl1;
-			this.btnSave.TabIndex = 11;
-			this.btnSave.Text = "simpleButton1";
-			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-			// 
-			// pictureEdit3
-			// 
-			this.pictureEdit3.EditValue = global::CommonUserControls.Properties.Resources.Eye_OS_16_01;
-			this.pictureEdit3.Location = new System.Drawing.Point(1011, 50);
-			this.pictureEdit3.Name = "pictureEdit3";
-			this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
-			this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-			this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-			this.pictureEdit3.Size = new System.Drawing.Size(84, 64);
-			this.pictureEdit3.StyleController = this.layoutControl1;
-			this.pictureEdit3.TabIndex = 46;
-			// 
-			// pictureEdit2
-			// 
-			this.pictureEdit2.EditValue = global::CommonUserControls.Properties.Resources.Eye_OD_16_01;
-			this.pictureEdit2.Location = new System.Drawing.Point(103, 50);
-			this.pictureEdit2.Name = "pictureEdit2";
-			this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
-			this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-			this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-			this.pictureEdit2.Size = new System.Drawing.Size(84, 64);
-			this.pictureEdit2.StyleController = this.layoutControl1;
-			this.pictureEdit2.TabIndex = 45;
-			// 
-			// simpleButton1
-			// 
-			this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.simpleButton1.Appearance.Options.UseFont = true;
-			this.simpleButton1.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
-			this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.simpleButton1.Location = new System.Drawing.Point(970, 6);
-			this.simpleButton1.MaximumSize = new System.Drawing.Size(35, 35);
-			this.simpleButton1.MinimumSize = new System.Drawing.Size(35, 35);
-			this.simpleButton1.Name = "simpleButton1";
-			this.simpleButton1.Size = new System.Drawing.Size(35, 35);
-			this.simpleButton1.StyleController = this.layoutControl1;
-			this.simpleButton1.TabIndex = 45;
-			this.simpleButton1.Text = "Add New Diagnosis";
-			// 
-			// btnPrint
-			// 
-			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
-			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnPrint.Location = new System.Drawing.Point(857, 3);
-			this.btnPrint.MaximumSize = new System.Drawing.Size(110, 40);
-			this.btnPrint.MinimumSize = new System.Drawing.Size(110, 40);
-			this.btnPrint.Name = "btnPrint";
-			this.btnPrint.Size = new System.Drawing.Size(110, 40);
-			this.btnPrint.StyleController = this.layoutControl1;
-			this.btnPrint.TabIndex = 8;
-			this.btnPrint.Text = "simpleButton1";
-			// 
-			// pictureEdit1
-			// 
-			this.pictureEdit1.EditValue = global::CommonUserControls.Properties.Resources.Pupil_16_01;
-			this.pictureEdit1.Location = new System.Drawing.Point(0, 3);
-			this.pictureEdit1.Name = "pictureEdit1";
-			this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-			this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-			this.pictureEdit1.Size = new System.Drawing.Size(40, 40);
-			this.pictureEdit1.StyleController = this.layoutControl1;
-			this.pictureEdit1.TabIndex = 9;
-			// 
 			// layoutControlItem2
 			// 
 			this.layoutControlItem2.Control = this.pictureEdit1;
@@ -2187,6 +1802,32 @@
 			this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem4.TextVisible = false;
 			// 
+			// layoutControlItem5
+			// 
+			this.layoutControlItem5.Control = this.labelControl1;
+			this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlItem5.MaxSize = new System.Drawing.Size(0, 3);
+			this.layoutControlItem5.MinSize = new System.Drawing.Size(10, 3);
+			this.layoutControlItem5.Name = "layoutControlItem5";
+			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem5.Size = new System.Drawing.Size(1200, 3);
+			this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem5.TextVisible = false;
+			// 
+			// layoutControlItem6
+			// 
+			this.layoutControlItem6.Control = this.labelControl3;
+			this.layoutControlItem6.Location = new System.Drawing.Point(0, 44);
+			this.layoutControlItem6.MaxSize = new System.Drawing.Size(0, 3);
+			this.layoutControlItem6.MinSize = new System.Drawing.Size(14, 3);
+			this.layoutControlItem6.Name = "layoutControlItem6";
+			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem6.Size = new System.Drawing.Size(1200, 3);
+			this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem6.TextVisible = false;
+			// 
 			// layoutControlItem7
 			// 
 			this.layoutControlItem7.Control = this.pictureEdit2;
@@ -2215,6 +1856,44 @@
 			this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem8.TextVisible = false;
 			// 
+			// emptySpaceItem2
+			// 
+			this.emptySpaceItem2.AllowHotTrack = false;
+			this.emptySpaceItem2.Location = new System.Drawing.Point(576, 47);
+			this.emptySpaceItem2.Name = "emptySpaceItem2";
+			this.emptySpaceItem2.Size = new System.Drawing.Size(39, 70);
+			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem3
+			// 
+			this.emptySpaceItem3.AllowHotTrack = false;
+			this.emptySpaceItem3.Location = new System.Drawing.Point(0, 47);
+			this.emptySpaceItem3.MaxSize = new System.Drawing.Size(100, 0);
+			this.emptySpaceItem3.MinSize = new System.Drawing.Size(100, 10);
+			this.emptySpaceItem3.Name = "emptySpaceItem3";
+			this.emptySpaceItem3.Size = new System.Drawing.Size(100, 70);
+			this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem4
+			// 
+			this.emptySpaceItem4.AllowHotTrack = false;
+			this.emptySpaceItem4.Location = new System.Drawing.Point(617, 47);
+			this.emptySpaceItem4.Name = "emptySpaceItem4";
+			this.emptySpaceItem4.Size = new System.Drawing.Size(391, 70);
+			this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem5
+			// 
+			this.emptySpaceItem5.AllowHotTrack = false;
+			this.emptySpaceItem5.Location = new System.Drawing.Point(1098, 47);
+			this.emptySpaceItem5.MaxSize = new System.Drawing.Size(102, 0);
+			this.emptySpaceItem5.MinSize = new System.Drawing.Size(102, 10);
+			this.emptySpaceItem5.Name = "emptySpaceItem5";
+			this.emptySpaceItem5.Size = new System.Drawing.Size(102, 70);
+			this.emptySpaceItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+			// 
 			// lytGroup_Size_OD
 			// 
 			this.lytGroup_Size_OD.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -2233,7 +1912,7 @@
 			this.lytGroup_Size_OD.Location = new System.Drawing.Point(0, 211);
 			this.lytGroup_Size_OD.Name = "lytGroup_Size_OD";
 			this.lytGroup_Size_OD.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_Size_OD.Size = new System.Drawing.Size(385, 32);
+			this.lytGroup_Size_OD.Size = new System.Drawing.Size(327, 32);
 			this.lytGroup_Size_OD.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lytGroup_Size_OD.Text = "Size";
 			this.lytGroup_Size_OD.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_Size_OD_MouseUp);
@@ -2286,10 +1965,10 @@
             this.layoutControlItem12,
             this.layoutControlItem14,
             this.layoutControlItem13});
-			this.lytGroup_Size_OS.Location = new System.Drawing.Point(1038, 211);
+			this.lytGroup_Size_OS.Location = new System.Drawing.Point(1006, 211);
 			this.lytGroup_Size_OS.Name = "lytGroup_Size_OS";
 			this.lytGroup_Size_OS.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_Size_OS.Size = new System.Drawing.Size(162, 32);
+			this.lytGroup_Size_OS.Size = new System.Drawing.Size(194, 32);
 			this.lytGroup_Size_OS.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lytGroup_Size_OS.Text = "Size";
 			this.lytGroup_Size_OS.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_Size_OS_MouseUp);
@@ -2327,6 +2006,14 @@
 			this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem13.TextVisible = false;
 			// 
+			// emptySpaceItem7
+			// 
+			this.emptySpaceItem7.AllowHotTrack = false;
+			this.emptySpaceItem7.Location = new System.Drawing.Point(617, 177);
+			this.emptySpaceItem7.Name = "emptySpaceItem7";
+			this.emptySpaceItem7.Size = new System.Drawing.Size(74, 32);
+			this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
+			// 
 			// lytGroup_RAPD_OS
 			// 
 			this.lytGroup_RAPD_OS.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -2345,10 +2032,10 @@
             this.lytGroup_RAPDGradingScale_OS,
             this.lytRAPDCauses_OS,
             this.emptySpaceItem12});
-			this.lytGroup_RAPD_OS.Location = new System.Drawing.Point(775, 177);
+			this.lytGroup_RAPD_OS.Location = new System.Drawing.Point(691, 177);
 			this.lytGroup_RAPD_OS.Name = "lytGroup_RAPD_OS";
 			this.lytGroup_RAPD_OS.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_RAPD_OS.Size = new System.Drawing.Size(425, 32);
+			this.lytGroup_RAPD_OS.Size = new System.Drawing.Size(509, 32);
 			this.lytGroup_RAPD_OS.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lytGroup_RAPD_OS.Text = "RAPD";
 			this.lytGroup_RAPD_OS.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_RAPD_OS_MouseUp);
@@ -2529,7 +2216,7 @@
 			this.lytGroup_RAPD_OD.Location = new System.Drawing.Point(0, 177);
 			this.lytGroup_RAPD_OD.Name = "lytGroup_RAPD_OD";
 			this.lytGroup_RAPD_OD.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_RAPD_OD.Size = new System.Drawing.Size(645, 32);
+			this.lytGroup_RAPD_OD.Size = new System.Drawing.Size(548, 32);
 			this.lytGroup_RAPD_OD.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lytGroup_RAPD_OD.Text = "RAPD";
 			this.lytGroup_RAPD_OD.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_RAPD_OD_MouseUp);
@@ -2669,6 +2356,52 @@
 			this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
 			this.emptySpaceItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 			// 
+			// emptySpaceItem1
+			// 
+			this.emptySpaceItem1.AllowHotTrack = false;
+			this.emptySpaceItem1.Location = new System.Drawing.Point(576, 210);
+			this.emptySpaceItem1.Name = "emptySpaceItem1";
+			this.emptySpaceItem1.Size = new System.Drawing.Size(39, 32);
+			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// layoutControlItem29
+			// 
+			this.layoutControlItem29.Control = this.chkNoAbnormalitiesFound_OS;
+			this.layoutControlItem29.Location = new System.Drawing.Point(994, 119);
+			this.layoutControlItem29.Name = "layoutControlItem29";
+			this.layoutControlItem29.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem29.Size = new System.Drawing.Size(206, 56);
+			this.layoutControlItem29.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem29.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem29.TextVisible = false;
+			// 
+			// emptySpaceItem10
+			// 
+			this.emptySpaceItem10.AllowHotTrack = false;
+			this.emptySpaceItem10.Location = new System.Drawing.Point(576, 117);
+			this.emptySpaceItem10.Name = "emptySpaceItem10";
+			this.emptySpaceItem10.Size = new System.Drawing.Size(39, 58);
+			this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// layoutControlItem30
+			// 
+			this.layoutControlItem30.Control = this.chkNoAbnormalitiesFound_OD;
+			this.layoutControlItem30.Location = new System.Drawing.Point(0, 119);
+			this.layoutControlItem30.Name = "layoutControlItem30";
+			this.layoutControlItem30.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem30.Size = new System.Drawing.Size(206, 56);
+			this.layoutControlItem30.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem30.TextVisible = false;
+			// 
+			// emptySpaceItem14
+			// 
+			this.emptySpaceItem14.AllowHotTrack = false;
+			this.emptySpaceItem14.Location = new System.Drawing.Point(576, 242);
+			this.emptySpaceItem14.Name = "emptySpaceItem14";
+			this.emptySpaceItem14.Size = new System.Drawing.Size(39, 37);
+			this.emptySpaceItem14.TextSize = new System.Drawing.Size(0, 0);
+			// 
 			// lytGroup_Shape_OD
 			// 
 			this.lytGroup_Shape_OD.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -2689,7 +2422,7 @@
 			this.lytGroup_Shape_OD.Location = new System.Drawing.Point(0, 245);
 			this.lytGroup_Shape_OD.Name = "lytGroup_Shape_OD";
 			this.lytGroup_Shape_OD.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_Shape_OD.Size = new System.Drawing.Size(636, 32);
+			this.lytGroup_Shape_OD.Size = new System.Drawing.Size(540, 32);
 			this.lytGroup_Shape_OD.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lytGroup_Shape_OD.Text = "Shape";
 			this.lytGroup_Shape_OD.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_Shape_OD_MouseUp);
@@ -2766,10 +2499,10 @@
             this.layoutControlItem42,
             this.layoutControlItem41,
             this.layoutControlItem40});
-			this.lytGroup_Shape_OS.Location = new System.Drawing.Point(786, 245);
+			this.lytGroup_Shape_OS.Location = new System.Drawing.Point(704, 245);
 			this.lytGroup_Shape_OS.Name = "lytGroup_Shape_OS";
 			this.lytGroup_Shape_OS.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_Shape_OS.Size = new System.Drawing.Size(414, 32);
+			this.lytGroup_Shape_OS.Size = new System.Drawing.Size(496, 32);
 			this.lytGroup_Shape_OS.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lytGroup_Shape_OS.Text = "Shape";
 			this.lytGroup_Shape_OS.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_Shape_OS_MouseUp);
@@ -2829,6 +2562,14 @@
 			this.layoutControlItem40.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem40.TextVisible = false;
 			// 
+			// emptySpaceItem15
+			// 
+			this.emptySpaceItem15.AllowHotTrack = false;
+			this.emptySpaceItem15.Location = new System.Drawing.Point(576, 279);
+			this.emptySpaceItem15.Name = "emptySpaceItem15";
+			this.emptySpaceItem15.Size = new System.Drawing.Size(39, 32);
+			this.emptySpaceItem15.TextSize = new System.Drawing.Size(0, 0);
+			// 
 			// lytGroup_Pupillometry_OS
 			// 
 			this.lytGroup_Pupillometry_OS.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -2848,10 +2589,10 @@
             this.layoutControlItem52,
             this.layoutControlItem51,
             this.layoutControlItem50});
-			this.lytGroup_Pupillometry_OS.Location = new System.Drawing.Point(713, 279);
+			this.lytGroup_Pupillometry_OS.Location = new System.Drawing.Point(617, 279);
 			this.lytGroup_Pupillometry_OS.Name = "lytGroup_Pupillometry_OS";
 			this.lytGroup_Pupillometry_OS.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_Pupillometry_OS.Size = new System.Drawing.Size(487, 32);
+			this.lytGroup_Pupillometry_OS.Size = new System.Drawing.Size(583, 32);
 			this.lytGroup_Pupillometry_OS.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lytGroup_Pupillometry_OS.Text = "Pupillometry";
 			this.lytGroup_Pupillometry_OS.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_Pupillometry_OS_MouseUp);
@@ -2973,7 +2714,7 @@
 			this.lytGroup_Pupillometry_OD.Location = new System.Drawing.Point(0, 279);
 			this.lytGroup_Pupillometry_OD.Name = "lytGroup_Pupillometry_OD";
 			this.lytGroup_Pupillometry_OD.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_Pupillometry_OD.Size = new System.Drawing.Size(676, 32);
+			this.lytGroup_Pupillometry_OD.Size = new System.Drawing.Size(574, 32);
 			this.lytGroup_Pupillometry_OD.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lytGroup_Pupillometry_OD.Text = "Pupillometry";
 			this.lytGroup_Pupillometry_OD.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_Pupillometry_OD_MouseUp);
@@ -3083,6 +2824,295 @@
 			this.layoutControlItem45.TextSize = new System.Drawing.Size(83, 13);
 			this.layoutControlItem45.TextToControlDistance = 5;
 			// 
+			// lytAbnormalitiesCasuses_OD
+			// 
+			this.lytAbnormalitiesCasuses_OD.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.lytAbnormalitiesCasuses_OD.AppearanceItemCaption.Options.UseFont = true;
+			this.lytAbnormalitiesCasuses_OD.AppearanceItemCaption.Options.UseTextOptions = true;
+			this.lytAbnormalitiesCasuses_OD.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.lytAbnormalitiesCasuses_OD.Control = this.lkeAbnormalitiesCauses_OD;
+			this.lytAbnormalitiesCasuses_OD.Location = new System.Drawing.Point(208, 119);
+			this.lytAbnormalitiesCasuses_OD.Name = "lytAbnormalitiesCasuses_OD";
+			this.lytAbnormalitiesCasuses_OD.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.lytAbnormalitiesCasuses_OD.Size = new System.Drawing.Size(206, 56);
+			this.lytAbnormalitiesCasuses_OD.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.lytAbnormalitiesCasuses_OD.Text = "Abnormalities Casuses";
+			this.lytAbnormalitiesCasuses_OD.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+			this.lytAbnormalitiesCasuses_OD.TextLocation = DevExpress.Utils.Locations.Top;
+			this.lytAbnormalitiesCasuses_OD.TextSize = new System.Drawing.Size(128, 13);
+			this.lytAbnormalitiesCasuses_OD.TextToControlDistance = 5;
+			// 
+			// lytAbnormalitiesCasuses_OS
+			// 
+			this.lytAbnormalitiesCasuses_OS.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.lytAbnormalitiesCasuses_OS.AppearanceItemCaption.Options.UseFont = true;
+			this.lytAbnormalitiesCasuses_OS.AppearanceItemCaption.Options.UseTextOptions = true;
+			this.lytAbnormalitiesCasuses_OS.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.lytAbnormalitiesCasuses_OS.Control = this.lkeAbnormalitiesCauses_OS;
+			this.lytAbnormalitiesCasuses_OS.Location = new System.Drawing.Point(788, 119);
+			this.lytAbnormalitiesCasuses_OS.Name = "lytAbnormalitiesCasuses_OS";
+			this.lytAbnormalitiesCasuses_OS.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.lytAbnormalitiesCasuses_OS.Size = new System.Drawing.Size(206, 56);
+			this.lytAbnormalitiesCasuses_OS.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.lytAbnormalitiesCasuses_OS.Text = "Abnormalities Casuses";
+			this.lytAbnormalitiesCasuses_OS.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+			this.lytAbnormalitiesCasuses_OS.TextLocation = DevExpress.Utils.Locations.Top;
+			this.lytAbnormalitiesCasuses_OS.TextSize = new System.Drawing.Size(128, 13);
+			this.lytAbnormalitiesCasuses_OS.TextToControlDistance = 5;
+			// 
+			// layoutControlItem55
+			// 
+			this.layoutControlItem55.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.layoutControlItem55.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+			this.layoutControlItem55.AppearanceItemCaption.ForeColor = System.Drawing.Color.DarkCyan;
+			this.layoutControlItem55.AppearanceItemCaption.Options.UseBackColor = true;
+			this.layoutControlItem55.AppearanceItemCaption.Options.UseFont = true;
+			this.layoutControlItem55.AppearanceItemCaption.Options.UseForeColor = true;
+			this.layoutControlItem55.AppearanceItemCaption.Options.UseTextOptions = true;
+			this.layoutControlItem55.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.layoutControlItem55.Control = this.txtReccommednations_OD;
+			this.layoutControlItem55.Location = new System.Drawing.Point(0, 520);
+			this.layoutControlItem55.MaxSize = new System.Drawing.Size(0, 80);
+			this.layoutControlItem55.MinSize = new System.Drawing.Size(118, 80);
+			this.layoutControlItem55.Name = "layoutControlItem55";
+			this.layoutControlItem55.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem55.Size = new System.Drawing.Size(679, 80);
+			this.layoutControlItem55.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem55.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem55.Text = "Further Details";
+			this.layoutControlItem55.TextLocation = DevExpress.Utils.Locations.Top;
+			this.layoutControlItem55.TextSize = new System.Drawing.Size(112, 17);
+			// 
+			// layoutControlItem56
+			// 
+			this.layoutControlItem56.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.layoutControlItem56.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+			this.layoutControlItem56.AppearanceItemCaption.ForeColor = System.Drawing.Color.DarkCyan;
+			this.layoutControlItem56.AppearanceItemCaption.Options.UseBackColor = true;
+			this.layoutControlItem56.AppearanceItemCaption.Options.UseFont = true;
+			this.layoutControlItem56.AppearanceItemCaption.Options.UseForeColor = true;
+			this.layoutControlItem56.AppearanceItemCaption.Options.UseTextOptions = true;
+			this.layoutControlItem56.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.layoutControlItem56.Control = this.txtReccommednations_OS;
+			this.layoutControlItem56.Location = new System.Drawing.Point(714, 520);
+			this.layoutControlItem56.MaxSize = new System.Drawing.Size(0, 80);
+			this.layoutControlItem56.MinSize = new System.Drawing.Size(118, 80);
+			this.layoutControlItem56.Name = "layoutControlItem56";
+			this.layoutControlItem56.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem56.Size = new System.Drawing.Size(486, 80);
+			this.layoutControlItem56.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem56.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem56.Text = "Further Details";
+			this.layoutControlItem56.TextLocation = DevExpress.Utils.Locations.Top;
+			this.layoutControlItem56.TextSize = new System.Drawing.Size(112, 17);
+			// 
+			// emptySpaceItem6
+			// 
+			this.emptySpaceItem6.AllowHotTrack = false;
+			this.emptySpaceItem6.Location = new System.Drawing.Point(681, 520);
+			this.emptySpaceItem6.Name = "emptySpaceItem6";
+			this.emptySpaceItem6.Size = new System.Drawing.Size(31, 80);
+			this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem13
+			// 
+			this.emptySpaceItem13.AllowHotTrack = false;
+			this.emptySpaceItem13.Location = new System.Drawing.Point(540, 245);
+			this.emptySpaceItem13.Name = "emptySpaceItem13";
+			this.emptySpaceItem13.Size = new System.Drawing.Size(34, 32);
+			this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem16
+			// 
+			this.emptySpaceItem16.AllowHotTrack = false;
+			this.emptySpaceItem16.Location = new System.Drawing.Point(617, 245);
+			this.emptySpaceItem16.Name = "emptySpaceItem16";
+			this.emptySpaceItem16.Size = new System.Drawing.Size(87, 32);
+			this.emptySpaceItem16.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem17
+			// 
+			this.emptySpaceItem17.AllowHotTrack = false;
+			this.emptySpaceItem17.Location = new System.Drawing.Point(327, 211);
+			this.emptySpaceItem17.Name = "emptySpaceItem17";
+			this.emptySpaceItem17.Size = new System.Drawing.Size(247, 32);
+			this.emptySpaceItem17.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem18
+			// 
+			this.emptySpaceItem18.AllowHotTrack = false;
+			this.emptySpaceItem18.Location = new System.Drawing.Point(617, 211);
+			this.emptySpaceItem18.Name = "emptySpaceItem18";
+			this.emptySpaceItem18.Size = new System.Drawing.Size(389, 32);
+			this.emptySpaceItem18.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem19
+			// 
+			this.emptySpaceItem19.AllowHotTrack = false;
+			this.emptySpaceItem19.Location = new System.Drawing.Point(576, 175);
+			this.emptySpaceItem19.Name = "emptySpaceItem19";
+			this.emptySpaceItem19.Size = new System.Drawing.Size(39, 35);
+			this.emptySpaceItem19.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem20
+			// 
+			this.emptySpaceItem20.AllowHotTrack = false;
+			this.emptySpaceItem20.Location = new System.Drawing.Point(548, 177);
+			this.emptySpaceItem20.Name = "emptySpaceItem20";
+			this.emptySpaceItem20.Size = new System.Drawing.Size(26, 32);
+			this.emptySpaceItem20.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem21
+			// 
+			this.emptySpaceItem21.AllowHotTrack = false;
+			this.emptySpaceItem21.Location = new System.Drawing.Point(414, 119);
+			this.emptySpaceItem21.Name = "emptySpaceItem21";
+			this.emptySpaceItem21.Size = new System.Drawing.Size(160, 56);
+			this.emptySpaceItem21.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem22
+			// 
+			this.emptySpaceItem22.AllowHotTrack = false;
+			this.emptySpaceItem22.Location = new System.Drawing.Point(617, 119);
+			this.emptySpaceItem22.Name = "emptySpaceItem22";
+			this.emptySpaceItem22.Size = new System.Drawing.Size(171, 56);
+			this.emptySpaceItem22.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem24
+			// 
+			this.emptySpaceItem24.AllowHotTrack = false;
+			this.emptySpaceItem24.Location = new System.Drawing.Point(190, 47);
+			this.emptySpaceItem24.Name = "emptySpaceItem24";
+			this.emptySpaceItem24.Size = new System.Drawing.Size(384, 70);
+			this.emptySpaceItem24.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem25
+			// 
+			this.emptySpaceItem25.AllowHotTrack = false;
+			this.emptySpaceItem25.Location = new System.Drawing.Point(0, 313);
+			this.emptySpaceItem25.Name = "emptySpaceItem25";
+			this.emptySpaceItem25.Size = new System.Drawing.Size(1200, 205);
+			this.emptySpaceItem25.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// simpleSeparator7
+			// 
+			this.simpleSeparator7.AllowHotTrack = false;
+			this.simpleSeparator7.Location = new System.Drawing.Point(206, 119);
+			this.simpleSeparator7.Name = "simpleSeparator7";
+			this.simpleSeparator7.Size = new System.Drawing.Size(2, 56);
+			// 
+			// simpleSeparator1
+			// 
+			this.simpleSeparator1.AllowHotTrack = false;
+			this.simpleSeparator1.Location = new System.Drawing.Point(574, 47);
+			this.simpleSeparator1.Name = "simpleSeparator1";
+			this.simpleSeparator1.Size = new System.Drawing.Size(2, 264);
+			// 
+			// simpleSeparator2
+			// 
+			this.simpleSeparator2.AllowHotTrack = false;
+			this.simpleSeparator2.Location = new System.Drawing.Point(615, 47);
+			this.simpleSeparator2.Name = "simpleSeparator2";
+			this.simpleSeparator2.Size = new System.Drawing.Size(2, 264);
+			// 
+			// simpleSeparator3
+			// 
+			this.simpleSeparator3.AllowHotTrack = false;
+			this.simpleSeparator3.Location = new System.Drawing.Point(0, 117);
+			this.simpleSeparator3.Name = "simpleSeparator3";
+			this.simpleSeparator3.Size = new System.Drawing.Size(574, 2);
+			// 
+			// simpleSeparator4
+			// 
+			this.simpleSeparator4.AllowHotTrack = false;
+			this.simpleSeparator4.Location = new System.Drawing.Point(617, 117);
+			this.simpleSeparator4.Name = "simpleSeparator4";
+			this.simpleSeparator4.Size = new System.Drawing.Size(583, 2);
+			// 
+			// simpleSeparator5
+			// 
+			this.simpleSeparator5.AllowHotTrack = false;
+			this.simpleSeparator5.Location = new System.Drawing.Point(0, 175);
+			this.simpleSeparator5.Name = "simpleSeparator5";
+			this.simpleSeparator5.Size = new System.Drawing.Size(574, 2);
+			// 
+			// simpleSeparator6
+			// 
+			this.simpleSeparator6.AllowHotTrack = false;
+			this.simpleSeparator6.Location = new System.Drawing.Point(617, 175);
+			this.simpleSeparator6.Name = "simpleSeparator6";
+			this.simpleSeparator6.Size = new System.Drawing.Size(583, 2);
+			// 
+			// simpleSeparator8
+			// 
+			this.simpleSeparator8.AllowHotTrack = false;
+			this.simpleSeparator8.Location = new System.Drawing.Point(0, 209);
+			this.simpleSeparator8.Name = "simpleSeparator8";
+			this.simpleSeparator8.Size = new System.Drawing.Size(574, 2);
+			// 
+			// simpleSeparator9
+			// 
+			this.simpleSeparator9.AllowHotTrack = false;
+			this.simpleSeparator9.Location = new System.Drawing.Point(617, 209);
+			this.simpleSeparator9.Name = "simpleSeparator9";
+			this.simpleSeparator9.Size = new System.Drawing.Size(583, 2);
+			// 
+			// simpleSeparator10
+			// 
+			this.simpleSeparator10.AllowHotTrack = false;
+			this.simpleSeparator10.Location = new System.Drawing.Point(0, 243);
+			this.simpleSeparator10.Name = "simpleSeparator10";
+			this.simpleSeparator10.Size = new System.Drawing.Size(574, 2);
+			// 
+			// simpleSeparator11
+			// 
+			this.simpleSeparator11.AllowHotTrack = false;
+			this.simpleSeparator11.Location = new System.Drawing.Point(617, 243);
+			this.simpleSeparator11.Name = "simpleSeparator11";
+			this.simpleSeparator11.Size = new System.Drawing.Size(583, 2);
+			// 
+			// simpleSeparator12
+			// 
+			this.simpleSeparator12.AllowHotTrack = false;
+			this.simpleSeparator12.Location = new System.Drawing.Point(0, 277);
+			this.simpleSeparator12.Name = "simpleSeparator12";
+			this.simpleSeparator12.Size = new System.Drawing.Size(574, 2);
+			// 
+			// simpleSeparator13
+			// 
+			this.simpleSeparator13.AllowHotTrack = false;
+			this.simpleSeparator13.Location = new System.Drawing.Point(617, 277);
+			this.simpleSeparator13.Name = "simpleSeparator13";
+			this.simpleSeparator13.Size = new System.Drawing.Size(583, 2);
+			// 
+			// simpleSeparator14
+			// 
+			this.simpleSeparator14.AllowHotTrack = false;
+			this.simpleSeparator14.Location = new System.Drawing.Point(0, 311);
+			this.simpleSeparator14.Name = "simpleSeparator14";
+			this.simpleSeparator14.Size = new System.Drawing.Size(1200, 2);
+			// 
+			// simpleSeparator15
+			// 
+			this.simpleSeparator15.AllowHotTrack = false;
+			this.simpleSeparator15.Location = new System.Drawing.Point(0, 518);
+			this.simpleSeparator15.Name = "simpleSeparator15";
+			this.simpleSeparator15.Size = new System.Drawing.Size(1200, 2);
+			// 
+			// simpleSeparator16
+			// 
+			this.simpleSeparator16.AllowHotTrack = false;
+			this.simpleSeparator16.Location = new System.Drawing.Point(712, 520);
+			this.simpleSeparator16.Name = "simpleSeparator16";
+			this.simpleSeparator16.Size = new System.Drawing.Size(2, 80);
+			// 
+			// simpleSeparator17
+			// 
+			this.simpleSeparator17.AllowHotTrack = false;
+			this.simpleSeparator17.Location = new System.Drawing.Point(679, 520);
+			this.simpleSeparator17.Name = "simpleSeparator17";
+			this.simpleSeparator17.Size = new System.Drawing.Size(2, 80);
+			// 
 			// layoutControlItem31
 			// 
 			this.layoutControlItem31.Control = this.btnSave;
@@ -3092,21 +3122,6 @@
 			this.layoutControlItem31.Size = new System.Drawing.Size(110, 41);
 			this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem31.TextVisible = false;
-			// 
-			// btnNewVitalSign
-			// 
-			this.btnNewVitalSign.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnNewVitalSign.Appearance.Options.UseFont = true;
-			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
-			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnNewVitalSign.Location = new System.Drawing.Point(1011, 6);
-			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
-			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
-			this.btnNewVitalSign.Name = "btnNewVitalSign";
-			this.btnNewVitalSign.Size = new System.Drawing.Size(35, 35);
-			this.btnNewVitalSign.StyleController = this.layoutControl1;
-			this.btnNewVitalSign.TabIndex = 40;
-			this.btnNewVitalSign.Text = "Add New Category";
 			// 
 			// layoutControlItem32
 			// 
@@ -3118,21 +3133,6 @@
 			this.layoutControlItem32.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem32.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem32.TextVisible = false;
-			// 
-			// btnSearchDiagnosis
-			// 
-			this.btnSearchDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
-			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
-			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSearchDiagnosis.Location = new System.Drawing.Point(1052, 6);
-			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
-			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
-			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
-			this.btnSearchDiagnosis.Size = new System.Drawing.Size(35, 35);
-			this.btnSearchDiagnosis.StyleController = this.layoutControl1;
-			this.btnSearchDiagnosis.TabIndex = 41;
-			this.btnSearchDiagnosis.Text = "Add New Diagnosis";
 			// 
 			// layoutControlItem33
 			// 
@@ -3162,6 +3162,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeAbnormalitiesCauses_OD.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnScotopic_OS.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnHighPhotopic_OS.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnLowPhotopic_OS.Properties)).EndInit();
@@ -3178,19 +3181,80 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Size_OD)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Size_OS)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPD_OS)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPDGradingScale_OS)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytRAPDCauses_OS)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPD_OD)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPDGradingScale_OD)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytRAPDCauses_OD)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Shape_OD)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Shape_OS)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem15)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Pupillometry_OS)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem54)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem53)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem52)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Pupillometry_OD)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAbnormalitiesCasuses_OD)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAbnormalitiesCasuses_OS)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem55)).EndInit();
@@ -3223,70 +3287,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator15)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator16)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator17)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Size_OD)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Size_OS)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPD_OS)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPDGradingScale_OS)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytRAPDCauses_OS)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPD_OD)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_RAPDGradingScale_OD)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytRAPDCauses_OD)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Shape_OD)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Shape_OS)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Pupillometry_OS)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem54)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem53)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem52)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Pupillometry_OD)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();

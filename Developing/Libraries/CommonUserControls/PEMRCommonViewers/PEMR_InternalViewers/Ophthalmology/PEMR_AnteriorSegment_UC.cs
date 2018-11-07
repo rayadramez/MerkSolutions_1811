@@ -45,6 +45,8 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 		public PEMR_AnteriorSegment_UC()
 		{
 			InitializeComponent();
+
+			CommonViewsActions.Decorate(lkeAnteriorSegmentCategory_OD, lkeAnteriorSegmentCategory_OS);
 		}
 
 		private void PEMR_AnteriorSegment_UC_Load(object sender, EventArgs e)
@@ -66,10 +68,14 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AnteriorSegmentSign == null ||
 				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AnteriorSegmentSign.Count == 0)
 				return;
+
 			txtReccommednations_OD.EditValue = PEMRBusinessLogic.ActivePEMRObject
 				.List_VisitTiming_MainAnteriorSegmentSign[0].GeneralDescription_OD;
 			txtReccommednations_OS.EditValue = PEMRBusinessLogic.ActivePEMRObject
 				.List_VisitTiming_MainAnteriorSegmentSign[0].GeneralDescription_OS;
+
+			AddedAnteriorSegmentSign_OD = null;
+			AddedAnteriorSegmentSign_OS = null;
 			foreach (VisitTiming_AnteriorSegmentSign visitTimingAnterior in PEMRBusinessLogic.ActivePEMRObject
 				.List_VisitTiming_AnteriorSegmentSign.FindAll(item =>
 					!Convert.ToInt32(item.PEMRElementStatus).Equals(Convert.ToInt32(PEMRElementStatus.Removed))))
@@ -78,8 +84,8 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(visitTimingAnterior.SegmentSignID)));
 				if (segmentSign != null)
 				{
-					DB_EyeType_p eyeTpe = (DB_EyeType_p) visitTimingAnterior.Eye_P_ID;
-					switch (eyeTpe)
+					DB_EyeType_p eyeType = (DB_EyeType_p) visitTimingAnterior.Eye_P_ID;
+					switch (eyeType)
 					{
 						case DB_EyeType_p.OD:
 							if (AddedAnteriorSegmentSign_OD == null)
@@ -95,10 +101,14 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 				}
 			}
 
-			CommonViewsActions.FillGridlookupEdit(lkeAnteriorSegmentCategory_OD, AddedAnteriorSegmentSign_OD);
-			CommonViewsActions.FillGridlookupEdit(lkeAnteriorSegmentCategory_OS, AddedAnteriorSegmentSign_OS);
+			ClearControls(false);
+			CommonViewsActions.FillListBoxControl(lstAddedAnteriorSegment_OD, AddedAnteriorSegmentSign_OD);
+			CommonViewsActions.FillListBoxControl(lstAddedAnteriorSegment_OS, AddedAnteriorSegmentSign_OS);
+			lstAddedAnteriorSegment_OD.Refresh();
+			lstAddedAnteriorSegment_OS.Refresh();
 			SetCount_OD();
 			SetCount_OS();
+			PEMRBusinessLogic.PEMR_AnteriorSegmentSign = this;
 		}
 
 		public void SetCount_OD()
@@ -172,7 +182,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_MainAnteriorSegmentSign>();
 							_mainAnteriorSegmentSign = PEMRBusinessLogic.CreateNew_VisitTiming_MainAnteriorSegmentSign(
 								FurtherDetails_OD, FurtherDetails_OS,
-								ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 								ApplicationStaticConfiguration.PEMRSavingMode);
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign.Add(
 								_mainAnteriorSegmentSign);
@@ -194,8 +203,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_AnteriorSegmentSign>();
 						_visitTimingAnteriorSegment = PEMRBusinessLogic.CreateNew_VisitTiming_AnteriorSegmentSign(
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign[0], segmentSign,
-							DB_EyeType_p.OD, ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
-							DB_PEMRSavingMode.SaveImmediately);
+							DB_EyeType_p.OD, DB_PEMRSavingMode.SaveImmediately);
 						if (_visitTimingAnteriorSegment != null)
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AnteriorSegmentSign.Add(
 								_visitTimingAnteriorSegment);
@@ -290,7 +298,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_MainAnteriorSegmentSign>();
 							_mainAnteriorSegmentSign = PEMRBusinessLogic.CreateNew_VisitTiming_MainAnteriorSegmentSign(
 								FurtherDetails_OD, FurtherDetails_OS,
-								ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 								ApplicationStaticConfiguration.PEMRSavingMode);
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign.Add(
 								_mainAnteriorSegmentSign);
@@ -312,8 +319,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_AnteriorSegmentSign>();
 						_visitTimingAnteriorSegment = PEMRBusinessLogic.CreateNew_VisitTiming_AnteriorSegmentSign(
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign[0], segmentSign,
-							DB_EyeType_p.OS, ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
-							DB_PEMRSavingMode.SaveImmediately);
+							DB_EyeType_p.OS, DB_PEMRSavingMode.SaveImmediately);
 						if (_visitTimingAnteriorSegment != null)
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AnteriorSegmentSign.Add(
 								_visitTimingAnteriorSegment);
@@ -383,11 +389,28 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
-			if(PEMRBusinessLogic.ActivePEMRObject != null )
-				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign != null &&
-				    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign.Count > 0)
-					PEMRBusinessLogic.Update_VisitTiming_MainAnteriorSegmentSign(this, _mainAnteriorSegmentSign,
-						ApplicationStaticConfiguration.ActiveLoginUser.ID);
+			if (PEMRBusinessLogic.ActivePEMRObject != null)
+				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign == null ||
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign.Count == 0)
+				{
+					_mainAnteriorSegmentSign = PEMRBusinessLogic.CreateNew_VisitTiming_MainAnteriorSegmentSign(FurtherDetails_OD, FurtherDetails_OD,
+						ApplicationStaticConfiguration.PEMRSavingMode);
+					if (_mainAnteriorSegmentSign == null)
+						return;
+					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign == null)
+						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign = new List<VisitTiming_MainAnteriorSegmentSign>();
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign.Add(_mainAnteriorSegmentSign);
+					XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+						MessageBoxIcon.Information);
+				}
+				else
+				{
+					if (_mainAnteriorSegmentSign == null)
+						return;
+					if (PEMRBusinessLogic.Update_VisitTiming_MainAnteriorSegmentSign(this, _mainAnteriorSegmentSign))
+						XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+							MessageBoxIcon.Information);
+				}
 		}
 
 		#endregion

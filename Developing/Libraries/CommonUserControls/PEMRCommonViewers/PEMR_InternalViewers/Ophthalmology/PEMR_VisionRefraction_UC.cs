@@ -439,7 +439,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 				case DialogResult.Yes:
 					VisitTiming_VisionRefractionReading visitTimingVisionRefraction =
 						PEMRBusinessLogic.CreateNew_VisitTiming_VisionRefractionReading(this,
-							ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 							ApplicationStaticConfiguration.PEMRSavingMode);
 					if (visitTimingVisionRefraction != null)
 					{

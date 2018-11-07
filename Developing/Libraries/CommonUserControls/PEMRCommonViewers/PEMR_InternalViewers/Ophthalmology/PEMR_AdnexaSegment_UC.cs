@@ -45,6 +45,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 		public PEMR_AdnexaSegment_UC()
 		{
 			InitializeComponent();
+			CommonViewsActions.Decorate(lkeAdnexaSegmentCategory_OD, lkeAdnexaSegmentCategory_OS);
 		}
 
 		private void PEMR_AdnexaSegment_UC_Load(object sender, EventArgs e)
@@ -70,6 +71,9 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 				.List_VisitTiming_MainAdnexaSegmentSign[0].GeneralDescription_OD;
 			txtReccommednations_OS.EditValue = PEMRBusinessLogic.ActivePEMRObject
 				.List_VisitTiming_MainAdnexaSegmentSign[0].GeneralDescription_OS;
+
+			AddedAdnexaSegmentSign_OD = null;
+			AddedAdnexaSegmentSign_OS = null;
 			foreach (VisitTiming_AdnexaSegmentSign visitTimingAdnexa in PEMRBusinessLogic.ActivePEMRObject
 				.List_VisitTiming_AdnexaSegmentSign.FindAll(item =>
 					!Convert.ToInt32(item.PEMRElementStatus).Equals(Convert.ToInt32(PEMRElementStatus.Removed))))
@@ -95,10 +99,15 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 				}
 			}
 
-			CommonViewsActions.FillGridlookupEdit(lkeAdnexaSegmentCategory_OD, AddedAdnexaSegmentSign_OD);
-			CommonViewsActions.FillGridlookupEdit(lkeAdnexaSegmentCategory_OS, AddedAdnexaSegmentSign_OS);
+			ClearControls(false);
+			CommonViewsActions.FillListBoxControl(lstAddedAdnexaSegment_OD, AddedAdnexaSegmentSign_OD);
+			CommonViewsActions.FillListBoxControl(lstAddedAdnexaSegment_OS, AddedAdnexaSegmentSign_OS);
+			lstAddedAdnexaSegment_OD.Refresh();
+			lstAddedAdnexaSegment_OS.Refresh();
 			SetCount_OD();
 			SetCount_OS();
+
+			PEMRBusinessLogic.PEMR_Adnexa = this;
 		}
 
 		public void SetCount_OD()
@@ -172,7 +181,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_MainAdnexaSegmentSign>();
 							_mainAdnexaSegmentSign = PEMRBusinessLogic.CreateNew_VisitTiming_MainAdnexaSegmentSign(
 								FurtherDetails_OD, FurtherDetails_OD,
-								ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 								ApplicationStaticConfiguration.PEMRSavingMode);
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign.Add(
 								_mainAdnexaSegmentSign);
@@ -194,8 +202,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_AdnexaSegmentSign>();
 						_visitTimingAdnexaSegment = PEMRBusinessLogic.CreateNew_VisitTiming_AdnexaSegmentSign(
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign[0], segmentSign,
-							DB_EyeType_p.OD, ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
-							DB_PEMRSavingMode.SaveImmediately);
+							DB_EyeType_p.OD, DB_PEMRSavingMode.SaveImmediately);
 						if (_visitTimingAdnexaSegment != null)
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AdnexaSegmentSign.Add(
 								_visitTimingAdnexaSegment);
@@ -290,7 +297,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_MainAdnexaSegmentSign>();
 							_mainAdnexaSegmentSign = PEMRBusinessLogic.CreateNew_VisitTiming_MainAdnexaSegmentSign(
 								FurtherDetails_OD, FurtherDetails_OD,
-								ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 								ApplicationStaticConfiguration.PEMRSavingMode);
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign.Add(
 								_mainAdnexaSegmentSign);
@@ -312,8 +318,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_AdnexaSegmentSign>();
 						_visitTimingAdnexaSegment = PEMRBusinessLogic.CreateNew_VisitTiming_AdnexaSegmentSign(
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign[0], segmentSign,
-							DB_EyeType_p.OS, ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
-							DB_PEMRSavingMode.SaveImmediately);
+							DB_EyeType_p.OS, DB_PEMRSavingMode.SaveImmediately);
 						if (_visitTimingAdnexaSegment != null)
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AdnexaSegmentSign.Add(
 								_visitTimingAdnexaSegment);
@@ -348,10 +353,27 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 		private void btnSave_Click(object sender, EventArgs e)
 		{
 			if (PEMRBusinessLogic.ActivePEMRObject != null)
-				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign != null &&
-					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign.Count > 0)
-					PEMRBusinessLogic.Update_VisitTiming_MainAdnexaSegmentSign(this, _mainAdnexaSegmentSign,
-						ApplicationStaticConfiguration.ActiveLoginUser.ID);
+				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign == null ||
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign.Count == 0)
+				{
+					_mainAdnexaSegmentSign = PEMRBusinessLogic.CreateNew_VisitTiming_MainAdnexaSegmentSign(FurtherDetails_OD, FurtherDetails_OD,
+						ApplicationStaticConfiguration.PEMRSavingMode);
+					if (_mainAdnexaSegmentSign == null)
+						return;
+					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign == null)
+						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign = new List<VisitTiming_MainAdnexaSegmentSign>();
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign.Add(_mainAdnexaSegmentSign);
+					XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+						MessageBoxIcon.Information);
+				}
+				else
+				{
+					if (_mainAdnexaSegmentSign == null)
+						return;
+					if (PEMRBusinessLogic.Update_VisitTiming_MainAdnexaSegmentSign(this, _mainAdnexaSegmentSign))
+						XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+							MessageBoxIcon.Information);
+				}
 		}
 
 		#endregion

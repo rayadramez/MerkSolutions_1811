@@ -11,6 +11,16 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		public static InvoiceDetail ActiveInvoiceDetail { get; set; }
 		public static PEMRObject ActivePEMRObject { get; set; }
 		public static VisitTiming ActiveVisitTimming { get; set; }
+		public static User_cu ActiveLoggedInUser { get; set; }
+		public static IPEMR_Adnexa PEMR_Adnexa { get; set; }
+		public static IPEMR_AnteriorSegmentSign PEMR_AnteriorSegmentSign { get; set; }
+		public static IPEMR_EOMSign PEMR_EOMSign { get; set; }
+		public static IPEMR_MedicalHistory PEMR_MedicalHistory { get; set; }
+		public static IPEMR_PosteriorSegment PEMR_PosteriorSegment { get; set; }
+		public static IPEMR_Diagnosis PEMR_Diagnosis { get; set; }
+		public static IPEMR_Pupillary PEMR_Pupillary { get; set; }
+		public static IPEMR_SocialHistory PEMR_SocialHistory { get; set; }
+		public static IPEMR_VitalSign PEMR_VitalSign { get; set; }
 
 		public static PEMRObject GetPEMRObject(int invoiceDetailId)
 		{
@@ -465,6 +475,27 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 			#endregion
 
+			#region VisitTiming_MedicalHistory
+
+			List<VisitTiming_MedicalHistory> list_VisitTiming_MedicalHistory = DBCommon.DBContext_External.VisitTiming_MedicalHistory
+				.Where(item =>
+					item.VisitTimingID.Equals(visitTiming.ID) && item.IsOnDuty).ToList();
+			if (list_VisitTiming_MedicalHistory != null && list_VisitTiming_MedicalHistory.Count > 0)
+			{
+				if (newPEMR.List_VisitTiming_MedicalHistory == null)
+					newPEMR.List_VisitTiming_MedicalHistory = new List<VisitTiming_MedicalHistory>();
+				newPEMR.List_VisitTiming_MedicalHistory.AddRange(list_VisitTiming_MedicalHistory);
+
+				if (visitTiming.List_VisitTiming_MedicalHistory == null)
+					visitTiming.List_VisitTiming_MedicalHistory = new List<VisitTiming_MedicalHistory>();
+				visitTiming.List_VisitTiming_MedicalHistory.AddRange(list_VisitTiming_MedicalHistory);
+
+				foreach (VisitTiming_MedicalHistory visitTiming_MedicalHistory in newPEMR.List_VisitTiming_MedicalHistory)
+					visitTiming_MedicalHistory.PEMRElementStatus = PEMRElementStatus.AlreadyExists;
+			}
+
+			#endregion
+
 			#region VisitTiming_Attachment
 			List<VisitTiming_Attachment> visitTimingAttachementsList = DBCommon.DBContext_External
 				.VisitTiming_Attachment.Where(item => item.VisitTimingID.Equals(visitTiming.ID) && item.IsOnDuty).ToList();
@@ -588,16 +619,16 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		#region Create Anterior Segment
 
 		public static VisitTiming_MainAnteriorSegmentSign CreateNew_VisitTiming_MainAnteriorSegmentSign(
-			object generalDescription_OD, object generalDescription_OS, int userID, DB_PEMRSavingMode savingMode)
+			object generalDescription_OD, object generalDescription_OS, DB_PEMRSavingMode savingMode)
 		{
 			VisitTiming_MainAnteriorSegmentSign mainSegmentSign = null;
 			switch (savingMode)
 			{
 				case DB_PEMRSavingMode.PostponeSaving:
-					return CreateNew_VisitTiming_MainAnteriorSegmentSign(generalDescription_OD, generalDescription_OS, userID);
+					return CreateNew_VisitTiming_MainAnteriorSegmentSign(generalDescription_OD, generalDescription_OS);
 				case DB_PEMRSavingMode.SaveImmediately:
 					mainSegmentSign = CreateNew_VisitTiming_MainAnteriorSegmentSign(ActivePEMRObject.Active_VisitTiming,
-						generalDescription_OD, generalDescription_OS, userID);
+						generalDescription_OD, generalDescription_OS);
 					if (mainSegmentSign == null || !Save_VisitTiming_MainAnteriorSegmentSign(mainSegmentSign))
 						return null;
 					return mainSegmentSign;
@@ -607,12 +638,12 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_MainAnteriorSegmentSign CreateNew_VisitTiming_MainAnteriorSegmentSign(VisitTiming visitTiming,
-			object generalDescription_OD, object generalDescription_OS, int userID)
+			object generalDescription_OD, object generalDescription_OS)
 		{
 			if (visitTiming == null)
 				return null;
 			VisitTiming_MainAnteriorSegmentSign mainSegmentSign =
-				CreateNew_VisitTiming_MainAnteriorSegmentSign(generalDescription_OD, generalDescription_OS, userID);
+				CreateNew_VisitTiming_MainAnteriorSegmentSign(generalDescription_OD, generalDescription_OS);
 			if (mainSegmentSign == null)
 				return null;
 			mainSegmentSign.VisitTimingID = visitTiming.ID;
@@ -620,7 +651,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_MainAnteriorSegmentSign CreateNew_VisitTiming_MainAnteriorSegmentSign(
-			object generalDescription_OD, object generalDescription_OS, int userID)
+			object generalDescription_OD, object generalDescription_OS)
 		{
 			VisitTiming_MainAnteriorSegmentSign mainDiagnosis = DBCommon.CreateNewDBEntity<VisitTiming_MainAnteriorSegmentSign>();
 			if (generalDescription_OD != null)
@@ -628,14 +659,14 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (generalDescription_OS != null)
 				mainDiagnosis.GeneralDescription_OS = generalDescription_OS.ToString();
 			mainDiagnosis.IsOnDuty = true;
-			mainDiagnosis.InsertedBy = userID;
+			mainDiagnosis.InsertedBy = ActiveLoggedInUser.ID;
 			mainDiagnosis.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			return mainDiagnosis;
 		}
 
 		public static VisitTiming_AnteriorSegmentSign CreateNew_VisitTiming_AnteriorSegmentSign(
 			VisitTiming_MainAnteriorSegmentSign mainSegmentSign,
-			SegmentSign_cu segmentSign, DB_EyeType_p eyeType, int userID, DB_PEMRSavingMode savingMode)
+			SegmentSign_cu segmentSign, DB_EyeType_p eyeType, DB_PEMRSavingMode savingMode)
 		{
 			if (mainSegmentSign == null || segmentSign == null)
 				return null;
@@ -654,7 +685,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			visitSegmentSign.SegmentSignID = segmentSign.ID;
 			visitSegmentSign.Eye_P_ID = (int) eyeType;
 			visitSegmentSign.IsOnDuty = true;
-			visitSegmentSign.InsertedBy = userID;
+			visitSegmentSign.InsertedBy = ActiveLoggedInUser.ID;
 			visitSegmentSign.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			if (savingMode == DB_PEMRSavingMode.SaveImmediately)
 				if (!Save_VisitTiming_AnteriorSegmentSign(visitSegmentSign))
@@ -667,17 +698,16 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		#region Create Posterior Segment
 
 		public static VisitTiming_MainPosteriorSegmentSign CreateNew_VisitTiming_MainPosteriorSegmentSign(
-			object generalDescription_OD, object generalDescription_OS, int userID, DB_PEMRSavingMode savingMode)
+			object generalDescription_OD, object generalDescription_OS, DB_PEMRSavingMode savingMode)
 		{
 			VisitTiming_MainPosteriorSegmentSign mainSegmentSign = null;
 			switch (savingMode)
 			{
 				case DB_PEMRSavingMode.PostponeSaving:
-					return CreateNew_VisitTiming_MainPosteriorSegmentSign(generalDescription_OD, generalDescription_OS,
-						userID);
+					return CreateNew_VisitTiming_MainPosteriorSegmentSign(generalDescription_OD, generalDescription_OS);
 				case DB_PEMRSavingMode.SaveImmediately:
 					mainSegmentSign = CreateNew_VisitTiming_MainPosteriorSegmentSign(
-						ActivePEMRObject.Active_VisitTiming, generalDescription_OD, generalDescription_OS, userID);
+						ActivePEMRObject.Active_VisitTiming, generalDescription_OD, generalDescription_OS);
 					if (mainSegmentSign == null || !Save_VisitTiming_MainPosteriorSegmentSign(mainSegmentSign))
 						return null;
 					return mainSegmentSign;
@@ -687,12 +717,12 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_MainPosteriorSegmentSign CreateNew_VisitTiming_MainPosteriorSegmentSign(VisitTiming visitTiming,
-			object generalDescription_OD, object generalDescription_OS, int userID)
+			object generalDescription_OD, object generalDescription_OS)
 		{
 			if (visitTiming == null)
 				return null;
 			VisitTiming_MainPosteriorSegmentSign mainSegmentSign =
-				CreateNew_VisitTiming_MainPosteriorSegmentSign(generalDescription_OD, generalDescription_OS, userID);
+				CreateNew_VisitTiming_MainPosteriorSegmentSign(generalDescription_OD, generalDescription_OS);
 			if (mainSegmentSign == null)
 				return null;
 			mainSegmentSign.VisitTimingID = visitTiming.ID;
@@ -700,7 +730,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_MainPosteriorSegmentSign CreateNew_VisitTiming_MainPosteriorSegmentSign(
-			object generalDescription_OD, object generalDescription_OS, int userID)
+			object generalDescription_OD, object generalDescription_OS)
 		{
 			VisitTiming_MainPosteriorSegmentSign mainDiagnosis = DBCommon.CreateNewDBEntity<VisitTiming_MainPosteriorSegmentSign>();
 			if (generalDescription_OD != null)
@@ -708,14 +738,14 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (generalDescription_OS != null)
 				mainDiagnosis.GeneralDescription_OS = generalDescription_OS.ToString();
 			mainDiagnosis.IsOnDuty = true;
-			mainDiagnosis.InsertedBy = userID;
+			mainDiagnosis.InsertedBy = ActiveLoggedInUser.ID;
 			mainDiagnosis.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			return mainDiagnosis;
 		}
 
 		public static VisitTiming_PosteriorSegmentSign CreateNew_VisitTiming_PosteriorSegmentSign(
 			VisitTiming_MainPosteriorSegmentSign mainSegmentSign,
-			SegmentSign_cu segmentSign, DB_EyeType_p eyeType, int userID, DB_PEMRSavingMode savingMode)
+			SegmentSign_cu segmentSign, DB_EyeType_p eyeType, DB_PEMRSavingMode savingMode)
 		{
 			if (mainSegmentSign == null || segmentSign == null)
 				return null;
@@ -734,7 +764,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			visitSegmentSign.SegmentSign_CU_ID = segmentSign.ID;
 			visitSegmentSign.Eye_P_ID = (int)eyeType;
 			visitSegmentSign.IsOnDuty = true;
-			visitSegmentSign.InsertedBy = userID;
+			visitSegmentSign.InsertedBy = ActiveLoggedInUser.ID;
 			visitSegmentSign.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			if (savingMode == DB_PEMRSavingMode.SaveImmediately)
 				if (!Save_VisitTiming_PosteriorSegmentSign(visitSegmentSign))
@@ -747,17 +777,16 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		#region Create Adnexa Segment
 
 		public static VisitTiming_MainAdnexaSegmentSign CreateNew_VisitTiming_MainAdnexaSegmentSign(
-			object generalDescription_OD, object generalDescription_OS, int userID, DB_PEMRSavingMode savingMode)
+			object generalDescription_OD, object generalDescription_OS, DB_PEMRSavingMode savingMode)
 		{
 			VisitTiming_MainAdnexaSegmentSign mainSegmentSign = null;
 			switch (savingMode)
 			{
 				case DB_PEMRSavingMode.PostponeSaving:
-					return CreateNew_VisitTiming_MainAdnexaSegmentSign(generalDescription_OD, generalDescription_OS,
-						userID);
+					return CreateNew_VisitTiming_MainAdnexaSegmentSign(generalDescription_OD, generalDescription_OS);
 				case DB_PEMRSavingMode.SaveImmediately:
 					mainSegmentSign = CreateNew_VisitTiming_MainAdnexaSegmentSign(ActivePEMRObject.Active_VisitTiming,
-						generalDescription_OD, generalDescription_OS, userID);
+						generalDescription_OD, generalDescription_OS);
 					if (mainSegmentSign == null || !Save_VisitTiming_MainAdnexaSegmentSign(mainSegmentSign))
 						return null;
 					return mainSegmentSign;
@@ -767,12 +796,12 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_MainAdnexaSegmentSign CreateNew_VisitTiming_MainAdnexaSegmentSign(VisitTiming visitTiming,
-			object generalDescription_OD, object generalDescription_OS, int userID)
+			object generalDescription_OD, object generalDescription_OS)
 		{
 			if (visitTiming == null)
 				return null;
 			VisitTiming_MainAdnexaSegmentSign mainSegmentSign =
-				CreateNew_VisitTiming_MainAdnexaSegmentSign(generalDescription_OD, generalDescription_OS, userID);
+				CreateNew_VisitTiming_MainAdnexaSegmentSign(generalDescription_OD, generalDescription_OS);
 			if (mainSegmentSign == null)
 				return null;
 			mainSegmentSign.VisitTimingID = visitTiming.ID;
@@ -780,7 +809,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_MainAdnexaSegmentSign CreateNew_VisitTiming_MainAdnexaSegmentSign(
-			object generalDescription_OD, object generalDescription_OS, int userID)
+			object generalDescription_OD, object generalDescription_OS)
 		{
 			VisitTiming_MainAdnexaSegmentSign mainDiagnosis = DBCommon.CreateNewDBEntity<VisitTiming_MainAdnexaSegmentSign>();
 			if (generalDescription_OD != null)
@@ -788,14 +817,14 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (generalDescription_OS != null)
 				mainDiagnosis.GeneralDescription_OS = generalDescription_OS.ToString();
 			mainDiagnosis.IsOnDuty = true;
-			mainDiagnosis.InsertedBy = userID;
+			mainDiagnosis.InsertedBy = ActiveLoggedInUser.ID;
 			mainDiagnosis.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			return mainDiagnosis;
 		}
 
 		public static VisitTiming_AdnexaSegmentSign CreateNew_VisitTiming_AdnexaSegmentSign(
 			VisitTiming_MainAdnexaSegmentSign mainSegmentSign,
-			SegmentSign_cu segmentSign, DB_EyeType_p eyeType, int userID, DB_PEMRSavingMode savingMode)
+			SegmentSign_cu segmentSign, DB_EyeType_p eyeType, DB_PEMRSavingMode savingMode)
 		{
 			if (mainSegmentSign == null || segmentSign == null)
 				return null;
@@ -814,7 +843,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			visitSegmentSign.SegmentSign_CU_ID = segmentSign.ID;
 			visitSegmentSign.Eye_P_ID = (int)eyeType;
 			visitSegmentSign.IsOnDuty = true;
-			visitSegmentSign.InsertedBy = userID;
+			visitSegmentSign.InsertedBy = ActiveLoggedInUser.ID;
 			visitSegmentSign.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			if (savingMode == DB_PEMRSavingMode.SaveImmediately)
 				if (!Save_VisitTiming_AdnexaSegmentSign(visitSegmentSign))
@@ -827,16 +856,16 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		#region Create EOM Sign
 
 		public static VisitTiming_MainEOMSign CreateNew_VisitTiming_MainEOMSign(
-			object generalDescription_OD, object generalDescription_OS, int userID, DB_PEMRSavingMode savingMode)
+			object generalDescription_OD, object generalDescription_OS, DB_PEMRSavingMode savingMode)
 		{
 			VisitTiming_MainEOMSign mainSegmentSign = null;
 			switch (savingMode)
 			{
 				case DB_PEMRSavingMode.PostponeSaving:
-					return CreateNew_VisitTiming_MainEOMSign(generalDescription_OD, generalDescription_OS, userID);
+					return CreateNew_VisitTiming_MainEOMSign(generalDescription_OD, generalDescription_OS);
 				case DB_PEMRSavingMode.SaveImmediately:
 					mainSegmentSign = CreateNew_VisitTiming_MainEOMSign(ActivePEMRObject.Active_VisitTiming,
-						generalDescription_OD, generalDescription_OS, userID);
+						generalDescription_OD, generalDescription_OS);
 					if (mainSegmentSign == null || !Save_VisitTiming_MainEOMSign(mainSegmentSign))
 						return null;
 					return mainSegmentSign;
@@ -846,12 +875,12 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_MainEOMSign CreateNew_VisitTiming_MainEOMSign(VisitTiming visitTiming,
-			object generalDescription_OD, object generalDescription_OS, int userID)
+			object generalDescription_OD, object generalDescription_OS)
 		{
 			if (visitTiming == null)
 				return null;
 			VisitTiming_MainEOMSign mainSegmentSign =
-				CreateNew_VisitTiming_MainEOMSign(generalDescription_OD, generalDescription_OS, userID);
+				CreateNew_VisitTiming_MainEOMSign(generalDescription_OD, generalDescription_OS);
 			if (mainSegmentSign == null)
 				return null;
 			mainSegmentSign.VisitTimingID = visitTiming.ID;
@@ -859,7 +888,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_MainEOMSign CreateNew_VisitTiming_MainEOMSign(
-			object generalDescription_OD, object generalDescription_OS, int userID)
+			object generalDescription_OD, object generalDescription_OS)
 		{
 			VisitTiming_MainEOMSign mainDiagnosis = DBCommon.CreateNewDBEntity<VisitTiming_MainEOMSign>();
 			if (generalDescription_OD != null)
@@ -867,7 +896,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (generalDescription_OS != null)
 				mainDiagnosis.GeneralDescription_OS = generalDescription_OS.ToString();
 			mainDiagnosis.IsOnDuty = true;
-			mainDiagnosis.InsertedBy = userID;
+			mainDiagnosis.InsertedBy = ActiveLoggedInUser.ID;
 			mainDiagnosis.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			return mainDiagnosis;
 		}
@@ -902,10 +931,88 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 		#endregion
 
+		#region VisitTiming_MainDiagnosis
+
+		public static VisitTiming_MainDiagnosis CreateNew_VisitTiming_MainDiagnosis(object generalDescription,
+			DB_DiagnosisType diagnosisType, DB_PEMRSavingMode savingMode)
+		{
+			VisitTiming_MainDiagnosis mainDiagnosis = null;
+			switch (savingMode)
+			{
+				case DB_PEMRSavingMode.PostponeSaving:
+					return CreateNew_VisitTiming_MainDiagnosis(generalDescription, diagnosisType);
+				case DB_PEMRSavingMode.SaveImmediately:
+					mainDiagnosis = CreateNew_VisitTiming_MainDiagnosis(ActivePEMRObject.Active_VisitTiming,
+						generalDescription, diagnosisType);
+					if (mainDiagnosis == null || !Save_VisitTiming_MainDiagnosis(mainDiagnosis))
+						return null;
+					return mainDiagnosis;
+			}
+
+			return null;
+		}
+
+		public static VisitTiming_MainDiagnosis CreateNew_VisitTiming_MainDiagnosis(VisitTiming visitTiming,
+			object generalDescription, DB_DiagnosisType diagnosisType)
+		{
+			if (visitTiming == null)
+				return null;
+			VisitTiming_MainDiagnosis mainDiagnosis =
+				CreateNew_VisitTiming_MainDiagnosis(generalDescription, diagnosisType);
+			if (mainDiagnosis == null)
+				return null;
+			mainDiagnosis.VisitTimingID = visitTiming.ID;
+			return mainDiagnosis;
+		}
+
+		public static VisitTiming_MainDiagnosis CreateNew_VisitTiming_MainDiagnosis(object generalDescription,
+			DB_DiagnosisType diagnosisType)
+		{
+			VisitTiming_MainDiagnosis mainDiagnosis = DBCommon.CreateNewDBEntity<VisitTiming_MainDiagnosis>();
+			if (generalDescription != null)
+				mainDiagnosis.GeneralDescription = generalDescription.ToString();
+
+			mainDiagnosis.DiagnosisType_P_ID = (int)diagnosisType;
+			mainDiagnosis.IsOnDuty = true;
+			mainDiagnosis.InsertedBy = ActiveLoggedInUser.ID;
+			mainDiagnosis.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
+			return mainDiagnosis;
+		}
+
+		public static VisitTiming_Diagnosis CreateNew_VisitTiming_Diagnosis(VisitTiming_MainDiagnosis mainDiagnosis,
+			Diagnosis_cu diagnosis, object eyeType, DB_PEMRSavingMode savingMode)
+		{
+			if (mainDiagnosis == null || diagnosis == null)
+				return null;
+			VisitTiming_Diagnosis visit_Diagnosis = DBCommon.CreateNewDBEntity<VisitTiming_Diagnosis>();
+			switch (savingMode)
+			{
+				case DB_PEMRSavingMode.PostponeSaving:
+					mainDiagnosis.VisitTiming_Diagnosis.Add(visit_Diagnosis);
+					break;
+				case DB_PEMRSavingMode.SaveImmediately:
+					visit_Diagnosis.VisitTiming_MainDiagnosisID = mainDiagnosis.ID;
+					break;
+			}
+
+			visit_Diagnosis.Diagnosis_CU_ID = diagnosis.ID;
+			if (eyeType != null)
+				visit_Diagnosis.Eye_P_ID = (int) eyeType;
+			visit_Diagnosis.IsOnDuty = true;
+			visit_Diagnosis.InsertedBy = ActiveLoggedInUser.ID;
+			visit_Diagnosis.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
+			if (savingMode == DB_PEMRSavingMode.SaveImmediately)
+				if (!Save_VisitTiming_Diagnosis(visit_Diagnosis))
+					return null;
+			return visit_Diagnosis;
+		}
+
+		#endregion
+
 		#region Create EOM Reading
 
 		public static VisitTiming_EOMReading CreateNew_VisitTiming_EOMReading(
-			IPEMR_EOMReading eomReadingObject, int userID, DB_PEMRSavingMode savingMode)
+			IPEMR_EOMReading eomReadingObject, DB_PEMRSavingMode savingMode)
 		{
 			if (eomReadingObject == null || eomReadingObject.TakenDateTime == null)
 				return null;
@@ -913,10 +1020,10 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			switch (savingMode)
 			{
 				case DB_PEMRSavingMode.PostponeSaving:
-					return CreateNew_VisitTiming_EOMReading(eomReadingObject, userID);
+					return CreateNew_VisitTiming_EOMReading(eomReadingObject);
 				case DB_PEMRSavingMode.SaveImmediately:
 					visitTiming_EOMReading = CreateNew_VisitTiming_EOMReading(
-						ActivePEMRObject.Active_VisitTiming, eomReadingObject, userID);
+						ActivePEMRObject.Active_VisitTiming, eomReadingObject);
 					if (visitTiming_EOMReading == null || !Save_VisitTiming_EOMReading(visitTiming_EOMReading))
 						return null;
 					return visitTiming_EOMReading;
@@ -925,18 +1032,18 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_EOMReading CreateNew_VisitTiming_EOMReading(
-			VisitTiming visitTiming, IPEMR_EOMReading eomReadingObject, int userID)
+			VisitTiming visitTiming, IPEMR_EOMReading eomReadingObject)
 		{
 			if (visitTiming == null || eomReadingObject == null || eomReadingObject.TakenDateTime == null)
 				return null;
-			VisitTiming_EOMReading visitTIming_EOMReading = CreateNew_VisitTiming_EOMReading(eomReadingObject, userID);
+			VisitTiming_EOMReading visitTIming_EOMReading = CreateNew_VisitTiming_EOMReading(eomReadingObject);
 			if (visitTIming_EOMReading == null)
 				return null;
 			visitTIming_EOMReading.VisitTimingID = visitTiming.ID;
 			return visitTIming_EOMReading;
 		}
 
-		public static VisitTiming_EOMReading CreateNew_VisitTiming_EOMReading(IPEMR_EOMReading eomReadingObject, int userID)
+		public static VisitTiming_EOMReading CreateNew_VisitTiming_EOMReading(IPEMR_EOMReading eomReadingObject)
 		{
 			if (eomReadingObject == null || eomReadingObject.TakenDateTime == null)
 				return null;
@@ -948,44 +1055,39 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 				visitTiming_EOMReading.SR_OD = Convert.ToInt32(eomReadingObject.SR_OD);
 			if (eomReadingObject.SR_OS != null)
 				visitTiming_EOMReading.SR_OS = Convert.ToInt32(eomReadingObject.SR_OS);
-
 			if (eomReadingObject.LR_OD != null)
 				visitTiming_EOMReading.LR_OD = Convert.ToInt32(eomReadingObject.LR_OD);
 			if (eomReadingObject.LR_OS != null)
 				visitTiming_EOMReading.LR_OS = Convert.ToInt32(eomReadingObject.LR_OS);
-
 			if (eomReadingObject.IR_OD != null)
 				visitTiming_EOMReading.IR_OD = Convert.ToInt32(eomReadingObject.IR_OD);
 			if (eomReadingObject.IR_OS != null)
 				visitTiming_EOMReading.IR_OS = Convert.ToInt32(eomReadingObject.IR_OS);
-
 			if (eomReadingObject.IO_OD != null)
 				visitTiming_EOMReading.IO_OD = Convert.ToInt32(eomReadingObject.IO_OD);
 			if (eomReadingObject.IO_OS != null)
 				visitTiming_EOMReading.IO_OS = Convert.ToInt32(eomReadingObject.IO_OS);
-
 			if (eomReadingObject.MR_OD != null)
 				visitTiming_EOMReading.MR_OD = Convert.ToInt32(eomReadingObject.MR_OD);
 			if (eomReadingObject.MR_OS != null)
 				visitTiming_EOMReading.MR_OS = Convert.ToInt32(eomReadingObject.MR_OS);
-
 			if (eomReadingObject.SO_OD != null)
 				visitTiming_EOMReading.SO_OD = Convert.ToInt32(eomReadingObject.SO_OD);
 			if (eomReadingObject.SO_OS != null)
 				visitTiming_EOMReading.SO_OS = Convert.ToInt32(eomReadingObject.SO_OS);
 
 			visitTiming_EOMReading.IsOnDuty = true;
-			visitTiming_EOMReading.InsertedBy = userID;
+			visitTiming_EOMReading.InsertedBy = ActiveLoggedInUser.ID;
 			visitTiming_EOMReading.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			return visitTiming_EOMReading;
 		}
 
 		#endregion
 
-		#region Create Pupillary
+		#region VisitTiming_Pupillary
 
 		public static VisitTiming_Pupillary CreateNew_VisitTiming_Pupillary(
-			IPEMR_Pupillary visitTimingPupillary, int userID, DB_PEMRSavingMode savingMode)
+			IPEMR_Pupillary visitTimingPupillary, DB_PEMRSavingMode savingMode)
 		{
 			if (visitTimingPupillary == null)
 				return null;
@@ -993,10 +1095,10 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			switch (savingMode)
 			{
 				case DB_PEMRSavingMode.PostponeSaving:
-					return CreateNew_VisitTiming_Pupillary(visitTimingPupillary, userID);
+					return CreateNew_VisitTiming_Pupillary(visitTimingPupillary);
 				case DB_PEMRSavingMode.SaveImmediately:
-					visit_Pupilary = CreateNew_VisitTiming_Pupillary(
-						ActivePEMRObject.Active_VisitTiming, visitTimingPupillary, userID);
+					visit_Pupilary =
+						CreateNew_VisitTiming_Pupillary(ActivePEMRObject.Active_VisitTiming, visitTimingPupillary);
 					if (visit_Pupilary == null ||
 						!Save_VisitTiming_Pupillary(visit_Pupilary))
 						return null;
@@ -1006,19 +1108,18 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_Pupillary CreateNew_VisitTiming_Pupillary(
-			VisitTiming visitTiming, IPEMR_Pupillary visitTimingPupillary, int userID)
+			VisitTiming visitTiming, IPEMR_Pupillary visitTimingPupillary)
 		{
 			if (visitTiming == null || visitTimingPupillary == null)
 				return null;
-			VisitTiming_Pupillary visit_Pupilary = CreateNew_VisitTiming_Pupillary(visitTimingPupillary, userID);
+			VisitTiming_Pupillary visit_Pupilary = CreateNew_VisitTiming_Pupillary(visitTimingPupillary);
 			if (visit_Pupilary == null)
 				return null;
 			visit_Pupilary.VisitTimingID = visitTiming.ID;
 			return visit_Pupilary;
 		}
 
-		public static VisitTiming_Pupillary CreateNew_VisitTiming_Pupillary(
-			IPEMR_Pupillary visitTimingPupillary, int userID)
+		public static VisitTiming_Pupillary CreateNew_VisitTiming_Pupillary(IPEMR_Pupillary visitTimingPupillary)
 		{
 			if (visitTimingPupillary == null)
 				return null;
@@ -1101,17 +1202,17 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (visitTimingPupillary.FurtherDetails_OS != null)
 				visit_Pupilary.FurtherDetails_OS = visitTimingPupillary.FurtherDetails_OS.ToString();
 			visit_Pupilary.IsOnDuty = true;
-			visit_Pupilary.InsertedBy = userID;
+			visit_Pupilary.InsertedBy = ActiveLoggedInUser.ID;
 			visit_Pupilary.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			return visit_Pupilary;
 		}
 
 		#endregion
 
-		#region Create Pupillary
+		#region VisitTiming_SocialHistory
 
 		public static VisitTiming_SocialHistory CreateNew_VisitTiming_SocialHistory(
-			IPEMR_SocialHistory pemrSocialHistory, int userID, DB_PEMRSavingMode savingMode)
+			IPEMR_SocialHistory pemrSocialHistory, DB_PEMRSavingMode savingMode)
 		{
 			if (pemrSocialHistory == null)
 				return null;
@@ -1119,10 +1220,10 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			switch (savingMode)
 			{
 				case DB_PEMRSavingMode.PostponeSaving:
-					return CreateNew_VisitTiming_SocialHistory(pemrSocialHistory, userID);
+					return CreateNew_VisitTiming_SocialHistory(pemrSocialHistory);
 				case DB_PEMRSavingMode.SaveImmediately:
 					visit_SOcialHistory = CreateNew_VisitTiming_SocialHistory(
-						ActivePEMRObject.Active_VisitTiming, pemrSocialHistory, userID);
+						ActivePEMRObject.Active_VisitTiming, pemrSocialHistory);
 					if (visit_SOcialHistory == null ||
 						!Save_VisitTiming_SocialHistory(visit_SOcialHistory))
 						return null;
@@ -1132,19 +1233,18 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_SocialHistory CreateNew_VisitTiming_SocialHistory(
-			VisitTiming visitTiming, IPEMR_SocialHistory pemrSocialHistory, int userID)
+			VisitTiming visitTiming, IPEMR_SocialHistory pemrSocialHistory)
 		{
 			if (visitTiming == null || pemrSocialHistory == null)
 				return null;
-			VisitTiming_SocialHistory visit_SOcialHistory = CreateNew_VisitTiming_SocialHistory(pemrSocialHistory, userID);
+			VisitTiming_SocialHistory visit_SOcialHistory = CreateNew_VisitTiming_SocialHistory(pemrSocialHistory);
 			if (visit_SOcialHistory == null)
 				return null;
 			visit_SOcialHistory.VisitTimingID = visitTiming.ID;
 			return visit_SOcialHistory;
 		}
 
-		public static VisitTiming_SocialHistory CreateNew_VisitTiming_SocialHistory(
-			IPEMR_SocialHistory pemrSocialHistory, int userID)
+		public static VisitTiming_SocialHistory CreateNew_VisitTiming_SocialHistory(IPEMR_SocialHistory pemrSocialHistory)
 		{
 			if (pemrSocialHistory == null)
 				return null;
@@ -1156,96 +1256,76 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 				!string.IsNullOrWhiteSpace(pemrSocialHistory.GeneralDescription.ToString()))
 				visitTimmingSocialHistory.GeneralDescription =
 					pemrSocialHistory.GeneralDescription.ToString();
-
 			if (pemrSocialHistory.NegativeSocialHistory != null &&
 				Convert.ToBoolean(pemrSocialHistory.NegativeSocialHistory))
 				visitTimmingSocialHistory.NegativeSocialHistory =
 					Convert.ToBoolean(pemrSocialHistory.NegativeSocialHistory);
-
 			if (pemrSocialHistory.DidYouEverSmoke != null)
 				visitTimmingSocialHistory.DidYouEverSmoke =
 					Convert.ToBoolean(pemrSocialHistory.DidYouEverSmoke);
-
 			if (pemrSocialHistory.NumberOfPacks != null)
 				visitTimmingSocialHistory.NumberOfPacks =
 					Convert.ToDouble(pemrSocialHistory.NumberOfPacks);
-
 			if (pemrSocialHistory.NumberOfYears != null)
 				visitTimmingSocialHistory.NumberOfYears =
 					Convert.ToDouble(pemrSocialHistory.NumberOfYears);
-
 			if (pemrSocialHistory.SmokeFurtherDetails != null &&
 				!string.IsNullOrEmpty(pemrSocialHistory.SmokeFurtherDetails.ToString()) &&
 				!string.IsNullOrWhiteSpace(pemrSocialHistory.SmokeFurtherDetails.ToString()))
 				visitTimmingSocialHistory.SmokeFurtherDetails =
 					pemrSocialHistory.SmokeFurtherDetails.ToString();
-
 			if (pemrSocialHistory.QuitingSmokeLessThan != null)
 				visitTimmingSocialHistory.QuitingSmokeLessThan =
 					Convert.ToBoolean(pemrSocialHistory.QuitingSmokeLessThan);
-
 			if (pemrSocialHistory.QuitingSmokeBetween != null)
 				visitTimmingSocialHistory.QuitingSmokeBetween =
 					Convert.ToBoolean(pemrSocialHistory.QuitingSmokeBetween);
-
 			if (pemrSocialHistory.QuitingSmokeMoreThan != null)
 				visitTimmingSocialHistory.QuitingSmokeMoreThan =
 					Convert.ToBoolean(pemrSocialHistory.QuitingSmokeMoreThan);
-
 			if (pemrSocialHistory.QuitingSmokeFurtherDetails != null &&
 				!string.IsNullOrEmpty(pemrSocialHistory.QuitingSmokeFurtherDetails.ToString()) &&
 				!string.IsNullOrWhiteSpace(pemrSocialHistory.QuitingSmokeFurtherDetails.ToString()))
 				visitTimmingSocialHistory.QuitingSmokeFurtherDetails =
 					pemrSocialHistory.QuitingSmokeFurtherDetails.ToString();
-
 			if (pemrSocialHistory.DrinkAlcohol != null)
 				visitTimmingSocialHistory.DrinkAlcohol =
 					Convert.ToBoolean(pemrSocialHistory.DrinkAlcohol);
-
 			if (pemrSocialHistory.HowMuchAlcohol != null)
 				visitTimmingSocialHistory.HowMuchAlcohol =
 					Convert.ToDouble(pemrSocialHistory.HowMuchAlcohol);
-
 			if (pemrSocialHistory.AlcoholFurtherDetails != null &&
 				!string.IsNullOrEmpty(pemrSocialHistory.AlcoholFurtherDetails.ToString()) &&
 				!string.IsNullOrWhiteSpace(pemrSocialHistory.AlcoholFurtherDetails.ToString()))
 				visitTimmingSocialHistory.AlcoholFurtherDetails =
 					pemrSocialHistory.AlcoholFurtherDetails.ToString();
-
 			if (pemrSocialHistory.HadProblemWithAlcohol != null)
 				visitTimmingSocialHistory.HadProblemWithAlcohol =
 					Convert.ToBoolean(pemrSocialHistory.HadProblemWithAlcohol);
-
 			if (pemrSocialHistory.WhenHadProblemWIthAlcohol != null)
 				visitTimmingSocialHistory.WhenHadProblemWIthAlcohol =
 					Convert.ToDouble(pemrSocialHistory.WhenHadProblemWIthAlcohol);
-
 			if (pemrSocialHistory.HadProblemWithAlcoholFurtherDetails != null &&
 				!string.IsNullOrEmpty(pemrSocialHistory.HadProblemWithAlcoholFurtherDetails.ToString()) &&
 				!string.IsNullOrWhiteSpace(pemrSocialHistory.HadProblemWithAlcoholFurtherDetails.ToString()))
 				visitTimmingSocialHistory.HadProblemWithAlcoholFurtherDetails =
 					pemrSocialHistory.HadProblemWithAlcoholFurtherDetails.ToString();
-
 			if (pemrSocialHistory.Addicted != null)
 				visitTimmingSocialHistory.Addicted =
 					Convert.ToBoolean(pemrSocialHistory.Addicted);
-
 			if (pemrSocialHistory.AddictionFurtherDetails != null &&
 				!string.IsNullOrEmpty(pemrSocialHistory.AddictionFurtherDetails.ToString()) &&
 				!string.IsNullOrWhiteSpace(pemrSocialHistory.AddictionFurtherDetails.ToString()))
 				visitTimmingSocialHistory.AddictionFurtherDetails =
 					pemrSocialHistory.AddictionFurtherDetails.ToString();
-
 			if (pemrSocialHistory.HadProblemWithAddiction != null)
 				visitTimmingSocialHistory.HadProblemWithAddiction =
 					Convert.ToBoolean(pemrSocialHistory.HadProblemWithAddiction);
-
 			if (pemrSocialHistory.HadProblemWithAddictionFurtherDetails != null &&
 				!string.IsNullOrEmpty(pemrSocialHistory.HadProblemWithAddictionFurtherDetails.ToString()) &&
 				!string.IsNullOrWhiteSpace(pemrSocialHistory.HadProblemWithAddictionFurtherDetails.ToString()))
 				visitTimmingSocialHistory.HadProblemWithAddictionFurtherDetails =
 					pemrSocialHistory.HadProblemWithAddictionFurtherDetails.ToString();
-
 			if (pemrSocialHistory.UseRecreationalDrugs != null)
 				visitTimmingSocialHistory.UseRecreationalDrugs =
 					Convert.ToBoolean(pemrSocialHistory.UseRecreationalDrugs);
@@ -1257,9 +1337,104 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 					pemrSocialHistory.UseRecreationalDrugsFurtherDetails.ToString();
 
 			visitTimmingSocialHistory.IsOnDuty = true;
-			visitTimmingSocialHistory.InsertedBy = userID;
+			visitTimmingSocialHistory.InsertedBy = ActiveLoggedInUser.ID;
 			visitTimmingSocialHistory.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			return visitTimmingSocialHistory;
+		}
+
+		#endregion
+
+		#region VisitTiming_MedicalHistory
+
+		public static VisitTiming_MedicalHistory CreateNew_VisitTiming_MedicalHistory(
+			IPEMR_MedicalHistory pemrMedicalHistory, DB_PEMRSavingMode savingMode)
+		{
+			if (pemrMedicalHistory == null)
+				return null;
+			VisitTiming_MedicalHistory visit_MedicalHistory = null;
+			switch (savingMode)
+			{
+				case DB_PEMRSavingMode.PostponeSaving:
+					return CreateNew_VisitTiming_MedicalHistory(pemrMedicalHistory);
+				case DB_PEMRSavingMode.SaveImmediately:
+					visit_MedicalHistory = CreateNew_VisitTiming_MedicalHistory(
+						ActivePEMRObject.Active_VisitTiming, pemrMedicalHistory);
+					if (visit_MedicalHistory == null ||
+						!Save_VisitTiming_MedicalHistory(visit_MedicalHistory))
+						return null;
+					return visit_MedicalHistory;
+			}
+			return null;
+		}
+
+		public static VisitTiming_MedicalHistory CreateNew_VisitTiming_MedicalHistory(
+			VisitTiming visitTiming, IPEMR_MedicalHistory pemrMedicalHistory)
+		{
+			if (visitTiming == null || pemrMedicalHistory == null)
+				return null;
+			VisitTiming_MedicalHistory visit_MedicalHistory = CreateNew_VisitTiming_MedicalHistory(pemrMedicalHistory);
+			if (visit_MedicalHistory == null)
+				return null;
+			visit_MedicalHistory.VisitTimingID = visitTiming.ID;
+			return visit_MedicalHistory;
+		}
+
+		public static VisitTiming_MedicalHistory CreateNew_VisitTiming_MedicalHistory(
+			IPEMR_MedicalHistory pemrMedicalHistory)
+		{
+			if (pemrMedicalHistory == null)
+				return null;
+			VisitTiming_MedicalHistory visitTiming_MedicalHistory =
+				DBCommon.CreateNewDBEntity<VisitTiming_MedicalHistory>();
+
+			if (pemrMedicalHistory.FurtherDetails != null &&
+			    !string.IsNullOrEmpty(pemrMedicalHistory.FurtherDetails.ToString()) &&
+			    !string.IsNullOrWhiteSpace(pemrMedicalHistory.FurtherDetails.ToString()))
+				visitTiming_MedicalHistory.FurtherDetails = pemrMedicalHistory.FurtherDetails.ToString();
+			if (pemrMedicalHistory.HasDiabetes != null &&
+			    Convert.ToBoolean(pemrMedicalHistory.HasDiabetes))
+				visitTiming_MedicalHistory.HasDiabetes = Convert.ToBoolean(pemrMedicalHistory.HasDiabetes);
+			if (pemrMedicalHistory.DiabetesType != null)
+				visitTiming_MedicalHistory.DiabetesType_P_ID = Convert.ToInt32(pemrMedicalHistory.DiabetesType);
+			if (pemrMedicalHistory.IsDiabetesControlled != null)
+				visitTiming_MedicalHistory.IsDiabetesControlled = Convert.ToBoolean(pemrMedicalHistory.IsDiabetesControlled);
+			if (pemrMedicalHistory.HbA1C != null)
+				visitTiming_MedicalHistory.HbA1c = Convert.ToInt32(pemrMedicalHistory.HbA1C);
+			if (pemrMedicalHistory.DiabetesMedicationType != null)
+				visitTiming_MedicalHistory.DiabetesMedicationType_P_ID = Convert.ToInt32(pemrMedicalHistory.DiabetesMedicationType);
+			if (pemrMedicalHistory.DiabetesMedication != null)
+				visitTiming_MedicalHistory.DiabetesMedication_CU_ID = Convert.ToInt32(pemrMedicalHistory.DiabetesMedication);
+			if (pemrMedicalHistory.DiabetesDosage != null)
+				visitTiming_MedicalHistory.DiabetesDose_CU_ID = Convert.ToInt32(pemrMedicalHistory.DiabetesDosage);
+			if (pemrMedicalHistory.DiabetesMedicationDuration != null)
+				visitTiming_MedicalHistory.DiabetesMedicationDuration = Convert.ToInt32(pemrMedicalHistory.DiabetesMedicationDuration);
+			if (pemrMedicalHistory.DiabetesMedicationDurationType != null)
+				visitTiming_MedicalHistory.DiabetesTimeDurationType_P_ID = Convert.ToInt32(pemrMedicalHistory.DiabetesMedicationDurationType);
+			if (pemrMedicalHistory.HasHypertension != null)
+				visitTiming_MedicalHistory.IsHypertension = Convert.ToBoolean(pemrMedicalHistory.HasHypertension);
+			if (pemrMedicalHistory.IsHypertensionControlled != null)
+				visitTiming_MedicalHistory.IsHypertensionControlled = Convert.ToBoolean(pemrMedicalHistory.IsHypertensionControlled);
+			if (pemrMedicalHistory.HypertensionMedication != null)
+				visitTiming_MedicalHistory.HypertensionMedication_CU_ID = Convert.ToInt32(pemrMedicalHistory.HypertensionMedication);
+			if (pemrMedicalHistory.HypertensionDosage != null)
+				visitTiming_MedicalHistory.HypertensionDose_CU_ID = Convert.ToInt32(pemrMedicalHistory.HypertensionDosage);
+			if (pemrMedicalHistory.HypertensionMedicationDuration != null)
+				visitTiming_MedicalHistory.HypertensionMedicationDuration = Convert.ToInt32(pemrMedicalHistory.HypertensionMedicationDuration);
+			if (pemrMedicalHistory.HypertensionMedicationDurationType != null)
+				visitTiming_MedicalHistory.HypertensionTimeDurationType_P_ID = Convert.ToInt32(pemrMedicalHistory.HypertensionMedicationDurationType);
+			if (pemrMedicalHistory.HasDrugAllergies != null)
+				visitTiming_MedicalHistory.IsDrugAllergy = Convert.ToBoolean(pemrMedicalHistory.HasDrugAllergies);
+			if (pemrMedicalHistory.TriggersDrugAllergies != null)
+				visitTiming_MedicalHistory.TriggerOfDrugAllergy_CU_ID = Convert.ToInt32(pemrMedicalHistory.TriggersDrugAllergies);
+			if (pemrMedicalHistory.HasHepatitis != null)
+				visitTiming_MedicalHistory.IsHepatitis = Convert.ToBoolean(pemrMedicalHistory.HasHepatitis);
+			if (pemrMedicalHistory.HasAsthma != null)
+				visitTiming_MedicalHistory.IsAsthma = Convert.ToBoolean(pemrMedicalHistory.HasAsthma);
+
+			visitTiming_MedicalHistory.IsOnDuty = true;
+			visitTiming_MedicalHistory.InsertedBy = ActiveLoggedInUser.ID;
+			visitTiming_MedicalHistory.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
+			return visitTiming_MedicalHistory;
 		}
 
 		#endregion
@@ -1267,7 +1442,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		#region Create VisionRefractionReadings
 
 		public static VisitTiming_VisionRefractionReading CreateNew_VisitTiming_VisionRefractionReading(
-			IPEMR_VisionRefractionReading visitonRefractionReading, int userID, DB_PEMRSavingMode savingMode)
+			IPEMR_VisionRefractionReading visitonRefractionReading, DB_PEMRSavingMode savingMode)
 		{
 			if (visitonRefractionReading == null)
 				return null;
@@ -1275,10 +1450,10 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			switch (savingMode)
 			{
 				case DB_PEMRSavingMode.PostponeSaving:
-					return CreateNew_VisitTiming_VisionRefractionReading(visitonRefractionReading, userID);
+					return CreateNew_VisitTiming_VisionRefractionReading(visitonRefractionReading);
 				case DB_PEMRSavingMode.SaveImmediately:
 					visionRefraction = CreateNew_VisitTiming_VisionRefractionReading(
-						ActivePEMRObject.Active_VisitTiming, visitonRefractionReading, userID);
+						ActivePEMRObject.Active_VisitTiming, visitonRefractionReading);
 					if (visionRefraction == null ||
 						!Save_VisitTiming_VisionRefractionReading(visionRefraction))
 						return null;
@@ -1288,12 +1463,12 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_VisionRefractionReading CreateNew_VisitTiming_VisionRefractionReading(
-			VisitTiming visitTiming, IPEMR_VisionRefractionReading visitonRefractionReading, int userID)
+			VisitTiming visitTiming, IPEMR_VisionRefractionReading visitonRefractionReading)
 		{
 			if (visitTiming == null || visitonRefractionReading == null)
 				return null;
 			VisitTiming_VisionRefractionReading visionRefractionObject =
-				CreateNew_VisitTiming_VisionRefractionReading(visitonRefractionReading, userID);
+				CreateNew_VisitTiming_VisionRefractionReading(visitonRefractionReading);
 			if (visionRefractionObject == null)
 				return null;
 			visionRefractionObject.VisitTimingID = visitTiming.ID;
@@ -1301,7 +1476,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_VisionRefractionReading CreateNew_VisitTiming_VisionRefractionReading(
-			IPEMR_VisionRefractionReading visitonRefractionReading, int userID)
+			IPEMR_VisionRefractionReading visitonRefractionReading)
 		{
 			if (visitonRefractionReading == null || visitonRefractionReading.TakenDate == null ||
 			    visitonRefractionReading.TakenTime == null ||
@@ -1376,7 +1551,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 				visionRefractionObject.Rating_OS = Convert.ToInt32(visitonRefractionReading.RatingAmount_OS);
 
 			visionRefractionObject.IsOnDuty = true;
-			visionRefractionObject.InsertedBy = userID;
+			visionRefractionObject.InsertedBy = ActiveLoggedInUser.ID;
 			visionRefractionObject.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			return visionRefractionObject;
 		}
@@ -1387,9 +1562,9 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 		public static VisitTiming_Medication CreateNew_VisitTiming_Medication(object medicationID, object dosageID,
 			object timesperDuration, object timeDurationID, object startDate, object endDate, object description,
-			object userID, DB_PEMRSavingMode savingMode)
+			DB_PEMRSavingMode savingMode)
 		{
-			if (medicationID == null || dosageID == null || userID == null)
+			if (medicationID == null || dosageID == null)
 				return null;
 
 			VisitTiming_Medication medication = null;
@@ -1397,10 +1572,10 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			{
 				case DB_PEMRSavingMode.PostponeSaving:
 					return CreateNew_VisitTiming_Medication(medicationID, dosageID, timesperDuration, timeDurationID,
-						startDate, endDate, description, userID);
+						startDate, endDate, description);
 				case DB_PEMRSavingMode.SaveImmediately:
 					medication = CreateNew_VisitTiming_Medication(ActivePEMRObject.Active_VisitTiming, medicationID, dosageID,
-						timesperDuration, timesperDuration, timeDurationID, startDate, description, userID);
+						timesperDuration, timesperDuration, timeDurationID, startDate, description);
 					if (medication == null || !Save_VisitTiming_Medication(medication))
 						return null;
 					return medication;
@@ -1411,12 +1586,12 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 		public static VisitTiming_Medication CreateNew_VisitTiming_Medication(VisitTiming visitTiming,
 			object medicationID, object dosageID, object timesperDuration, object timeDurationID, object startDate,
-			object endDate, object description, object userID)
+			object endDate, object description)
 		{
 			if (visitTiming == null)
 				return null;
 			VisitTiming_Medication medication = CreateNew_VisitTiming_Medication(medicationID, dosageID,
-				timesperDuration, timeDurationID, startDate, endDate, description, userID);
+				timesperDuration, timeDurationID, startDate, endDate, description);
 			if (medication == null)
 				return null;
 			medication.VisitTimingID = visitTiming.ID;
@@ -1424,8 +1599,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_Medication CreateNew_VisitTiming_Medication(object medicationID, object dosageID,
-			object timesperDuration, object timeDurationID, object startDate, object endDate, object description,
-			object userID)
+			object timesperDuration, object timeDurationID, object startDate, object endDate, object description)
 		{
 			VisitTiming_Medication medication = DBCommon.CreateNewDBEntity<VisitTiming_Medication>();
 			medication.Medication_CU_ID = Convert.ToInt32(medicationID);
@@ -1441,7 +1615,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (description != null)
 				medication.Description = description.ToString();
 			medication.IsOnDuty = true;
-			medication.InsertedBy = Convert.ToInt32(userID);
+			medication.InsertedBy = ActiveLoggedInUser.ID;
 			medication.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			return medication;
 		}
@@ -1451,7 +1625,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		#region Create Investiagations
 
 		public static VisitTiming_InvestigationReservation CreateNew_VisitTiming_InvestigationReservation(
-			 object investigationServiceID, object date, object description, int userID, DB_PEMRSavingMode savingMode)
+			 object investigationServiceID, object date, object description, DB_PEMRSavingMode savingMode)
 		{
 			if (investigationServiceID == null)
 				return null;
@@ -1459,11 +1633,10 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			switch (savingMode)
 			{
 				case DB_PEMRSavingMode.PostponeSaving:
-					return CreateNew_VisitTiming_InvestigationReservation(investigationServiceID, date, description,
-						userID);
+					return CreateNew_VisitTiming_InvestigationReservation(investigationServiceID, date, description);
 				case DB_PEMRSavingMode.SaveImmediately:
 					investigationReservation = CreateNew_VisitTiming_InvestigationReservation(
-						ActivePEMRObject.Active_VisitTiming, investigationServiceID, date, description, userID);
+						ActivePEMRObject.Active_VisitTiming, investigationServiceID, date, description);
 					if (investigationReservation == null ||
 						!Save_VisitTiming_InvestigationReservation(investigationReservation))
 						return null;
@@ -1473,12 +1646,12 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_InvestigationReservation CreateNew_VisitTiming_InvestigationReservation(
-			VisitTiming visitTiming, object investigationServiceID, object date, object description, int userID)
+			VisitTiming visitTiming, object investigationServiceID, object date, object description)
 		{
 			if (investigationServiceID == null)
 				return null;
 			VisitTiming_InvestigationReservation investigationReservation =
-				CreateNew_VisitTiming_InvestigationReservation(investigationServiceID, date, description, userID);
+				CreateNew_VisitTiming_InvestigationReservation(investigationServiceID, date, description);
 			if (investigationReservation == null)
 				return null;
 			investigationReservation.VisitTimingID = visitTiming.ID;
@@ -1486,7 +1659,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_InvestigationReservation CreateNew_VisitTiming_InvestigationReservation(
-			object investigationServiceID, object date, object description, int userID)
+			object investigationServiceID, object date, object description)
 		{
 			if (investigationServiceID == null)
 				return null;
@@ -1496,7 +1669,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			investigationReservation.Service_CU_ID = Convert.ToInt32(investigationServiceID);
 			if (date != null)
 				investigationReservation.Date = Convert.ToDateTime(date);
-			investigationReservation.InsertedBy = userID;
+			investigationReservation.InsertedBy = ActiveLoggedInUser.ID;
 			investigationReservation.IsOnDuty = true;
 			if (description != null)
 				investigationReservation.Description = description.ToString();
@@ -1509,7 +1682,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		#region Create Lab
 
 		public static VisitTiming_LabReservation CreateNew_VisitTiming_LabReservation(
-			 object labServiceID, object date, object description, int userID, DB_PEMRSavingMode savingMode)
+			 object labServiceID, object date, object description, DB_PEMRSavingMode savingMode)
 		{
 			if (labServiceID == null)
 				return null;
@@ -1517,11 +1690,10 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			switch (savingMode)
 			{
 				case DB_PEMRSavingMode.PostponeSaving:
-					return CreateNew_VisitTiming_LabReservation(labServiceID, date, description,
-						userID);
+					return CreateNew_VisitTiming_LabReservation(labServiceID, date, description);
 				case DB_PEMRSavingMode.SaveImmediately:
 					labReservation = CreateNew_VisitTiming_LabReservation(
-						ActivePEMRObject.Active_VisitTiming, labServiceID, date, description, userID);
+						ActivePEMRObject.Active_VisitTiming, labServiceID, date, description);
 					if (labReservation == null ||
 						!Save_VisitTiming_LabReservation(labReservation))
 						return null;
@@ -1531,12 +1703,12 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_LabReservation CreateNew_VisitTiming_LabReservation(
-			VisitTiming visitTiming, object labServiceID, object date, object description, int userID)
+			VisitTiming visitTiming, object labServiceID, object date, object description)
 		{
 			if (labServiceID == null)
 				return null;
 			VisitTiming_LabReservation labReservation =
-				CreateNew_VisitTiming_LabReservation(labServiceID, date, description, userID);
+				CreateNew_VisitTiming_LabReservation(labServiceID, date, description);
 			if (labReservation == null)
 				return null;
 			labReservation.VisitTimingID = visitTiming.ID;
@@ -1544,7 +1716,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_LabReservation CreateNew_VisitTiming_LabReservation(
-			object labServiceID, object date, object description, int userID)
+			object labServiceID, object date, object description)
 		{
 			if (labServiceID == null)
 				return null;
@@ -1554,7 +1726,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			labReservation.Service_CU_ID = Convert.ToInt32(labServiceID);
 			if (date != null)
 				labReservation.Date = Convert.ToDateTime(date);
-			labReservation.InsertedBy = userID;
+			labReservation.InsertedBy = ActiveLoggedInUser.ID;
 			labReservation.IsOnDuty = true;
 			if (description != null)
 				labReservation.Description = description.ToString();
@@ -1567,7 +1739,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		#region Create Surgery
 
 		public static VisitTiming_SurgeryReservation CreateNew_VisitTiming_SurgeryReservation(
-			 object SurgeryServiceID, object date, object description, int userID, DB_PEMRSavingMode savingMode)
+			 object SurgeryServiceID, object date, object description, DB_PEMRSavingMode savingMode)
 		{
 			if (SurgeryServiceID == null)
 				return null;
@@ -1575,11 +1747,10 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			switch (savingMode)
 			{
 				case DB_PEMRSavingMode.PostponeSaving:
-					return CreateNew_VisitTiming_SurgeryReservation(SurgeryServiceID, date, description,
-						userID);
+					return CreateNew_VisitTiming_SurgeryReservation(SurgeryServiceID, date, description);
 				case DB_PEMRSavingMode.SaveImmediately:
 					SurgeryReservation = CreateNew_VisitTiming_SurgeryReservation(
-						ActivePEMRObject.Active_VisitTiming, SurgeryServiceID, date, description, userID);
+						ActivePEMRObject.Active_VisitTiming, SurgeryServiceID, date, description);
 					if (SurgeryReservation == null ||
 						!Save_VisitTiming_SurgeryReservation(SurgeryReservation))
 						return null;
@@ -1589,12 +1760,12 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_SurgeryReservation CreateNew_VisitTiming_SurgeryReservation(
-			VisitTiming visitTiming, object SurgeryServiceID, object date, object description, int userID)
+			VisitTiming visitTiming, object SurgeryServiceID, object date, object description)
 		{
 			if (SurgeryServiceID == null)
 				return null;
 			VisitTiming_SurgeryReservation SurgeryReservation =
-				CreateNew_VisitTiming_SurgeryReservation(SurgeryServiceID, date, description, userID);
+				CreateNew_VisitTiming_SurgeryReservation(SurgeryServiceID, date, description);
 			if (SurgeryReservation == null)
 				return null;
 			SurgeryReservation.VisitTimingID = visitTiming.ID;
@@ -1602,7 +1773,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static VisitTiming_SurgeryReservation CreateNew_VisitTiming_SurgeryReservation(
-			object SurgeryServiceID, object date, object description, int userID)
+			object SurgeryServiceID, object date, object description)
 		{
 			if (SurgeryServiceID == null)
 				return null;
@@ -1612,88 +1783,12 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			SurgeryReservation.Service_CU_ID = Convert.ToInt32(SurgeryServiceID);
 			if (date != null)
 				SurgeryReservation.Date = Convert.ToDateTime(date);
-			SurgeryReservation.InsertedBy = userID;
+			SurgeryReservation.InsertedBy = ActiveLoggedInUser.ID;
 			SurgeryReservation.IsOnDuty = true;
 			if (description != null)
 				SurgeryReservation.Description = description.ToString();
 			SurgeryReservation.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			return SurgeryReservation;
-		}
-
-		#endregion
-
-		#region Create Diagnosis
-
-		public static VisitTiming_MainDiagnosis CreateNew_VisitTiming_MainDiagnosis(DB_DiagnosisType diagnosisType,
-			object generalDescription, int userID, DB_PEMRSavingMode savingMode)
-		{
-			VisitTiming_MainDiagnosis mainDiagnosis = null;
-			switch (savingMode)
-			{
-				case DB_PEMRSavingMode.PostponeSaving:
-					return CreateNew_VisitTiming_MainDiagnosis(diagnosisType, generalDescription, userID);
-				case DB_PEMRSavingMode.SaveImmediately:
-					mainDiagnosis = CreateNew_VisitTiming_MainDiagnosis(ActivePEMRObject.Active_VisitTiming, diagnosisType,
-						generalDescription, userID);
-					if (mainDiagnosis == null || !Save_VisitTiming_MainDiagnosis(mainDiagnosis))
-						return null;
-					return mainDiagnosis;
-			}
-
-			return null;
-		}
-
-		public static VisitTiming_MainDiagnosis CreateNew_VisitTiming_MainDiagnosis(VisitTiming visitTiming,
-			DB_DiagnosisType diagnosisType, object generalDescription, int userID)
-		{
-			if (visitTiming == null)
-				return null;
-			VisitTiming_MainDiagnosis mainDiagnosis =
-				CreateNew_VisitTiming_MainDiagnosis(diagnosisType, generalDescription, userID);
-			if (mainDiagnosis == null)
-				return null;
-			mainDiagnosis.VisitTimingID = visitTiming.ID;
-			return mainDiagnosis;
-		}
-
-		public static VisitTiming_MainDiagnosis CreateNew_VisitTiming_MainDiagnosis(DB_DiagnosisType diagnosisType,
-			object generalDescription, int userID)
-		{
-			VisitTiming_MainDiagnosis mainDiagnosis = DBCommon.CreateNewDBEntity<VisitTiming_MainDiagnosis>();
-			if (generalDescription != null)
-				mainDiagnosis.GeneralDescription = generalDescription.ToString();
-			mainDiagnosis.DiagnosisType_P_ID = (int)diagnosisType;
-			mainDiagnosis.IsOnDuty = true;
-			mainDiagnosis.InsertedBy = userID;
-			mainDiagnosis.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
-			return mainDiagnosis;
-		}
-
-		public static VisitTiming_Diagnosis CreateNew_VisitTiming_Diagnosis(VisitTiming_MainDiagnosis mainDiagnosis,
-			Diagnosis_cu diagnosis, object eyeType, int userID, DB_PEMRSavingMode savingMode)
-		{
-			if (mainDiagnosis == null || diagnosis == null)
-				return null;
-			VisitTiming_Diagnosis visitDiagnosis = DBCommon.CreateNewDBEntity<VisitTiming_Diagnosis>();
-			switch (savingMode)
-			{
-				case DB_PEMRSavingMode.PostponeSaving:
-					mainDiagnosis.VisitTiming_Diagnosis.Add(visitDiagnosis);
-					break;
-				case DB_PEMRSavingMode.SaveImmediately:
-					visitDiagnosis.VisitTiming_MainDiagnosisID = mainDiagnosis.ID;
-					break;
-			}
-			visitDiagnosis.Diagnosis_CU_ID = diagnosis.ID;
-			if (eyeType != null)
-				visitDiagnosis.Eye_P_ID = (int)eyeType;
-			visitDiagnosis.IsOnDuty = true;
-			visitDiagnosis.InsertedBy = userID;
-			visitDiagnosis.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
-			if (savingMode == DB_PEMRSavingMode.SaveImmediately)
-				if (!Save_VisitTiming_Diagnosis(visitDiagnosis))
-					return null;
-			return visitDiagnosis;
 		}
 
 		#endregion
@@ -2074,6 +2169,13 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			return itemToBeSaved.SaveChanges();
 		}
 
+		public static bool Save_VisitTiming_MedicalHistory(VisitTiming_MedicalHistory itemToBeSaved)
+		{
+			if (itemToBeSaved == null)
+				return false;
+			return itemToBeSaved.SaveChanges();
+		}
+
 		public static bool Save_VisitTiming_TreatmentPlan(VisitTiming_TreatmentPlan itemToBeSaved)
 		{
 			if (itemToBeSaved == null)
@@ -2113,13 +2215,43 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 		#region Update PEMR VisitTiming Objects
 
-		public static bool UpdateVisitTimming(VisitTiming visitTiming, DateTime signOutDateTime, int userID)
+		public static bool UpdateAll(PEMRObject pemrObject)
+		{
+			if (pemrObject == null)
+				return false;
+
+			if (pemrObject.List_VisitTiming_MainAdnexaSegmentSign != null && pemrObject.List_VisitTiming_MainAdnexaSegmentSign.Count > 0)
+				foreach (VisitTiming_MainAdnexaSegmentSign itemToBeSaved in pemrObject.List_VisitTiming_MainAdnexaSegmentSign)
+					Update_VisitTiming_MainAdnexaSegmentSign(PEMR_Adnexa, itemToBeSaved);
+
+			if (pemrObject.List_VisitTiming_MainAnteriorSegmentSign != null && pemrObject.List_VisitTiming_MainAnteriorSegmentSign.Count > 0)
+				foreach (VisitTiming_MainAnteriorSegmentSign itemToBeSaved in pemrObject.List_VisitTiming_MainAnteriorSegmentSign)
+					Update_VisitTiming_MainAnteriorSegmentSign(PEMR_AnteriorSegmentSign, itemToBeSaved);
+
+			if (pemrObject.List_VisitTiming_MainEOMSign != null && pemrObject.List_VisitTiming_MainEOMSign.Count > 0)
+				foreach (VisitTiming_MainEOMSign itemToBeSaved in pemrObject.List_VisitTiming_MainEOMSign)
+					Update_VisitTiming_MainEOMSign(PEMR_EOMSign, itemToBeSaved);
+
+			if (pemrObject.List_VisitTiming_MedicalHistory != null && pemrObject.List_VisitTiming_MedicalHistory.Count > 0)
+				foreach (VisitTiming_MedicalHistory itemToBeSaved in pemrObject.List_VisitTiming_MedicalHistory)
+					Update_VisitTiming_MedicalHistory(PEMR_MedicalHistory, itemToBeSaved);
+
+			if (pemrObject.List_VisitTiming_SocialHistory != null && pemrObject.List_VisitTiming_SocialHistory.Count > 0)
+				foreach (VisitTiming_SocialHistory itemToBeSaved in pemrObject.List_VisitTiming_SocialHistory)
+					Update_VisitTiming_SocialHistory(PEMR_SocialHistory, itemToBeSaved);
+
+			UpdateVisitTimming(ActivePEMRObject.Active_VisitTiming, DateTime.Now);
+
+			return true;
+		}
+
+		public static bool UpdateVisitTimming(VisitTiming visitTiming, DateTime signOutDateTime)
 		{
 			if (visitTiming == null)
 				return false;
 
 			visitTiming.SignOutDateTime = signOutDateTime;
-			visitTiming.InsertedBy = userID;
+			visitTiming.InsertedBy = ActiveLoggedInUser.ID;
 			visitTiming.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
 
 			return visitTiming.SaveChanges();
@@ -2155,7 +2287,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static bool Update_VisitTiming_MainAnteriorSegmentSign(IPEMR_AnteriorSegmentSign anteriorSegmentObject,
-			VisitTiming_MainAnteriorSegmentSign visitTimingMainanterior, int userID)
+			VisitTiming_MainAnteriorSegmentSign visitTimingMainanterior)
 		{
 			if (visitTimingMainanterior == null || anteriorSegmentObject == null)
 				return false;
@@ -2164,11 +2296,15 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (anteriorSegmentObject.FurtherDetails_OS != null)
 				visitTimingMainanterior.GeneralDescription_OS = anteriorSegmentObject.FurtherDetails_OS.ToString();
 			visitTimingMainanterior.IsOnDuty = true;
-			visitTimingMainanterior.InsertedBy = userID;
+			visitTimingMainanterior.InsertedBy = ActiveLoggedInUser.ID;
 			visitTimingMainanterior.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			visitTimingMainanterior.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
 			return visitTimingMainanterior.SaveChanges();
 		}
+
+		#endregion
+
+		#region VisitTiming_AnteriorSegmentSign
 
 		public static bool Update_VisitTiming_AnteriorSegmentSign(List<VisitTiming_AnteriorSegmentSign> list)
 		{
@@ -2198,7 +2334,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		#region Update Posterior Segment
 
 		public static bool Update_VisitTiming_MainPosteriorSegmentSign(IPEMR_PosteriorSegment posteriorSegmentObject,
-			VisitTiming_MainPosteriorSegmentSign visitTimingMainPosterior, int userID)
+			VisitTiming_MainPosteriorSegmentSign visitTimingMainPosterior)
 		{
 			if (visitTimingMainPosterior == null || posteriorSegmentObject == null)
 				return false;
@@ -2207,11 +2343,15 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (posteriorSegmentObject.FurtherDetails_OS != null)
 				visitTimingMainPosterior.GeneralDescription_OS = posteriorSegmentObject.FurtherDetails_OS.ToString();
 			visitTimingMainPosterior.IsOnDuty = true;
-			visitTimingMainPosterior.InsertedBy = userID;
+			visitTimingMainPosterior.InsertedBy = ActiveLoggedInUser.ID;
 			visitTimingMainPosterior.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			visitTimingMainPosterior.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
 			return visitTimingMainPosterior.SaveChanges();
 		}
+
+		#endregion
+
+		#region VisitTiming_PosteriorSegmentSign
 
 		public static bool Update_VisitTiming_PosteriorSegmentSign(List<VisitTiming_PosteriorSegmentSign> list)
 		{
@@ -2241,7 +2381,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		#region Update Adnexa
 
 		public static bool Update_VisitTiming_MainAdnexaSegmentSign(IPEMR_Adnexa adnexaObject,
-			VisitTiming_MainAdnexaSegmentSign visitTimingAdnexa, int userID)
+			VisitTiming_MainAdnexaSegmentSign visitTimingAdnexa)
 		{
 			if (visitTimingAdnexa == null || adnexaObject == null)
 				return false;
@@ -2250,11 +2390,15 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (adnexaObject.FurtherDetails_OS != null)
 				visitTimingAdnexa.GeneralDescription_OS = adnexaObject.FurtherDetails_OS.ToString();
 			visitTimingAdnexa.IsOnDuty = true;
-			visitTimingAdnexa.InsertedBy = userID;
+			visitTimingAdnexa.InsertedBy = ActiveLoggedInUser.ID;
 			visitTimingAdnexa.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			visitTimingAdnexa.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
 			return visitTimingAdnexa.SaveChanges();
 		}
+
+		#endregion
+
+		#region VisitTiming_AdnexaSegmentSign
 
 		public static bool Update_VisitTiming_AdnexaSegmentSign(List<VisitTiming_AdnexaSegmentSign> list)
 		{
@@ -2281,10 +2425,10 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 		#endregion
 
-		#region Pupillary
+		#region VisitTiming_Pupillary
 
 		public static bool Update_VisitTiming_Pupillary(IPEMR_Pupillary visitTimingPupillary,
-			VisitTiming_Pupillary visitTiming_Pupillary, int userID)
+			VisitTiming_Pupillary visitTiming_Pupillary)
 		{
 			if (visitTimingPupillary == null || visitTimingPupillary == null)
 				return false;
@@ -2365,11 +2509,15 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (visitTimingPupillary.FurtherDetails_OS != null)
 				visitTiming_Pupillary.FurtherDetails_OS = visitTimingPupillary.FurtherDetails_OS.ToString();
 			visitTiming_Pupillary.IsOnDuty = true;
-			visitTiming_Pupillary.InsertedBy = userID;
+			visitTiming_Pupillary.InsertedBy = ActiveLoggedInUser.ID;
 			visitTiming_Pupillary.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			visitTiming_Pupillary.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
 			return visitTiming_Pupillary.SaveChanges();
 		}
+
+		#endregion
+
+		#region VisitTiming_Pupillary
 
 		public static bool Update_VisitTiming_Pupillary(VisitTiming_Pupillary visitTimingPupillary)
 		{
@@ -2382,10 +2530,10 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 		#endregion
 
-		#region Update Adnexa
+		#region VisitTiming_MainEOMSign
 
 		public static bool Update_VisitTiming_MainEOMSign(IPEMR_EOMSign eomSign,
-			VisitTiming_MainEOMSign visitTiming_MainEOMSign, int userID)
+			VisitTiming_MainEOMSign visitTiming_MainEOMSign)
 		{
 			if (visitTiming_MainEOMSign == null || eomSign == null)
 				return false;
@@ -2394,11 +2542,15 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (eomSign.FurtherDetails_OS != null)
 				visitTiming_MainEOMSign.GeneralDescription_OS = eomSign.FurtherDetails_OS.ToString();
 			visitTiming_MainEOMSign.IsOnDuty = true;
-			visitTiming_MainEOMSign.InsertedBy = userID;
+			visitTiming_MainEOMSign.InsertedBy = ActiveLoggedInUser.ID;
 			visitTiming_MainEOMSign.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			visitTiming_MainEOMSign.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
 			return visitTiming_MainEOMSign.SaveChanges();
 		}
+
+		#endregion
+
+		#region VisitTiming_EOMSign
 
 		public static bool Update_VisitTiming_EOMSign(List<VisitTiming_EOMSign> list)
 		{
@@ -2425,10 +2577,30 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 		#endregion
 
-		#region Social History
+		#region VisitTiming_MainDiagnosis
+
+		public static bool Update_VisitTiming_MainDiagnosis(IPEMR_Diagnosis pemrDiagnosis,
+			VisitTiming_MainDiagnosis visitTiming_MainDiagnosis)
+		{
+			if (visitTiming_MainDiagnosis == null || pemrDiagnosis == null)
+				return false;
+			if (pemrDiagnosis.FurtherDetails != null)
+				visitTiming_MainDiagnosis.GeneralDescription = pemrDiagnosis.FurtherDetails.ToString();
+
+			visitTiming_MainDiagnosis.DiagnosisType_P_ID = (int) pemrDiagnosis.DiagnosisType;
+			visitTiming_MainDiagnosis.IsOnDuty = true;
+			visitTiming_MainDiagnosis.InsertedBy = ActiveLoggedInUser.ID;
+			visitTiming_MainDiagnosis.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
+			visitTiming_MainDiagnosis.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
+			return visitTiming_MainDiagnosis.SaveChanges();
+		}
+
+		#endregion
+
+		#region VisitTiming_SocialHistory
 
 		public static bool Update_VisitTiming_SocialHistory(IPEMR_SocialHistory socialHistory,
-			VisitTiming_SocialHistory visitTiming_SocialHistory, int userID)
+			VisitTiming_SocialHistory visitTiming_SocialHistory)
 		{
 			if (socialHistory == null || visitTiming_SocialHistory == null)
 				return false;
@@ -2486,10 +2658,71 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 				visitTiming_SocialHistory.UseRecreationalDrugsFurtherDetails =
 					socialHistory.UseRecreationalDrugsFurtherDetails.ToString();
 			visitTiming_SocialHistory.IsOnDuty = true;
-			visitTiming_SocialHistory.InsertedBy = userID;
+			visitTiming_SocialHistory.InsertedBy = ActiveLoggedInUser.ID;
 			visitTiming_SocialHistory.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			visitTiming_SocialHistory.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
 			return visitTiming_SocialHistory.SaveChanges();
+		}
+
+		#endregion
+
+		#region VisitTiming_MedicalHistory
+
+		public static bool Update_VisitTiming_MedicalHistory(IPEMR_MedicalHistory pemrMedicalHistory,
+			VisitTiming_MedicalHistory visitTiming_MedicalHistory)
+		{
+			if (pemrMedicalHistory == null || visitTiming_MedicalHistory == null)
+				return false;
+
+			if (pemrMedicalHistory.FurtherDetails != null &&
+				!string.IsNullOrEmpty(pemrMedicalHistory.FurtherDetails.ToString()) &&
+				!string.IsNullOrWhiteSpace(pemrMedicalHistory.FurtherDetails.ToString()))
+				visitTiming_MedicalHistory.FurtherDetails = pemrMedicalHistory.FurtherDetails.ToString();
+			if (pemrMedicalHistory.HasDiabetes != null &&
+				Convert.ToBoolean(pemrMedicalHistory.HasDiabetes))
+				visitTiming_MedicalHistory.HasDiabetes = Convert.ToBoolean(pemrMedicalHistory.HasDiabetes);
+			if (pemrMedicalHistory.DiabetesType != null)
+				visitTiming_MedicalHistory.DiabetesType_P_ID = Convert.ToInt32(pemrMedicalHistory.DiabetesType);
+			if (pemrMedicalHistory.IsDiabetesControlled != null)
+				visitTiming_MedicalHistory.IsDiabetesControlled = Convert.ToBoolean(pemrMedicalHistory.IsDiabetesControlled);
+			if (pemrMedicalHistory.HbA1C != null)
+				visitTiming_MedicalHistory.HbA1c = Convert.ToInt32(pemrMedicalHistory.HbA1C);
+			if (pemrMedicalHistory.DiabetesMedicationType != null)
+				visitTiming_MedicalHistory.DiabetesMedicationType_P_ID = Convert.ToInt32(pemrMedicalHistory.DiabetesMedicationType);
+			if (pemrMedicalHistory.DiabetesMedication != null)
+				visitTiming_MedicalHistory.DiabetesMedication_CU_ID = Convert.ToInt32(pemrMedicalHistory.DiabetesMedication);
+			if (pemrMedicalHistory.DiabetesDosage != null)
+				visitTiming_MedicalHistory.DiabetesDose_CU_ID = Convert.ToInt32(pemrMedicalHistory.DiabetesDosage);
+			if (pemrMedicalHistory.DiabetesMedicationDuration != null)
+				visitTiming_MedicalHistory.DiabetesMedicationDuration = Convert.ToInt32(pemrMedicalHistory.DiabetesMedicationDuration);
+			if (pemrMedicalHistory.DiabetesMedicationDurationType != null)
+				visitTiming_MedicalHistory.DiabetesTimeDurationType_P_ID = Convert.ToInt32(pemrMedicalHistory.DiabetesMedicationDurationType);
+			if (pemrMedicalHistory.HasHypertension != null)
+				visitTiming_MedicalHistory.IsHypertension = Convert.ToBoolean(pemrMedicalHistory.HasHypertension);
+			if (pemrMedicalHistory.IsHypertensionControlled != null)
+				visitTiming_MedicalHistory.IsHypertensionControlled = Convert.ToBoolean(pemrMedicalHistory.IsHypertensionControlled);
+			if (pemrMedicalHistory.HypertensionMedication != null)
+				visitTiming_MedicalHistory.HypertensionMedication_CU_ID = Convert.ToInt32(pemrMedicalHistory.HypertensionMedication);
+			if (pemrMedicalHistory.HypertensionDosage != null)
+				visitTiming_MedicalHistory.HypertensionDose_CU_ID = Convert.ToInt32(pemrMedicalHistory.HypertensionDosage);
+			if (pemrMedicalHistory.HypertensionMedicationDuration != null)
+				visitTiming_MedicalHistory.HypertensionMedicationDuration = Convert.ToInt32(pemrMedicalHistory.HypertensionMedicationDuration);
+			if (pemrMedicalHistory.HypertensionMedicationDurationType != null)
+				visitTiming_MedicalHistory.HypertensionTimeDurationType_P_ID = Convert.ToInt32(pemrMedicalHistory.HypertensionMedicationDurationType);
+			if (pemrMedicalHistory.HasDrugAllergies != null)
+				visitTiming_MedicalHistory.IsDrugAllergy = Convert.ToBoolean(pemrMedicalHistory.HasDrugAllergies);
+			if (pemrMedicalHistory.TriggersDrugAllergies != null)
+				visitTiming_MedicalHistory.TriggerOfDrugAllergy_CU_ID = Convert.ToInt32(pemrMedicalHistory.TriggersDrugAllergies);
+			if (pemrMedicalHistory.HasHepatitis != null)
+				visitTiming_MedicalHistory.IsHepatitis = Convert.ToBoolean(pemrMedicalHistory.HasHepatitis);
+			if (pemrMedicalHistory.HasAsthma != null)
+				visitTiming_MedicalHistory.IsAsthma = Convert.ToBoolean(pemrMedicalHistory.HasAsthma);
+
+			visitTiming_MedicalHistory.IsOnDuty = true;
+			visitTiming_MedicalHistory.InsertedBy = ActiveLoggedInUser.ID;
+			visitTiming_MedicalHistory.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
+			visitTiming_MedicalHistory.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
+			return visitTiming_MedicalHistory.SaveChanges();
 		}
 
 		#endregion

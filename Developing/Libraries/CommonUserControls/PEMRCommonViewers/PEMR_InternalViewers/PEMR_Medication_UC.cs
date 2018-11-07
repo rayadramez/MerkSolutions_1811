@@ -138,8 +138,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 			VisitTiming_Medication medication = PEMRBusinessLogic.CreateNew_VisitTiming_Medication(
 				lkeMedications.EditValue, lkeDoses.EditValue, spnTimePerDay.EditValue, TimeDuration, dtFrom.EditValue,
-				dtTo.EditValue, txtDescription.EditValue, ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
-				ApplicationStaticConfiguration.PEMRSavingMode);
+				dtTo.EditValue, txtDescription.EditValue, ApplicationStaticConfiguration.PEMRSavingMode);
 			if (medication != null)
 				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Medication.Add(medication);
 			grdTreatmentPlans.DataSource = PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Medication.FindAll(

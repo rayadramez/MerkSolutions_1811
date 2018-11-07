@@ -150,7 +150,7 @@
     <value>No</value>
   </data>
   <data name="txtGeneralDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>915, 78</value>
+    <value>915, 236</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtGeneralDescription.TabIndex" type="System.Int32, mscorlib">
@@ -343,7 +343,7 @@
     <value>9</value>
   </data>
   <data name="txtAddiction_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 294</value>
+    <value>90, 452</value>
   </data>
   <data name="txtAddiction_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -370,7 +370,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkAddiction_No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 255</value>
+    <value>80, 413</value>
   </data>
   <data name="chkAddiction_No.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -403,7 +403,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkAddiction_Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 255</value>
+    <value>0, 413</value>
   </data>
   <data name="chkAddiction_Yes.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -433,7 +433,7 @@
     <value>12</value>
   </data>
   <data name="txtDrugs_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 328</value>
+    <value>90, 486</value>
   </data>
   <data name="txtDrugs_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -460,7 +460,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkDrugs_No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 289</value>
+    <value>80, 447</value>
   </data>
   <data name="chkDrugs_No.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -493,7 +493,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkDrugs_Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 289</value>
+    <value>0, 447</value>
   </data>
   <data name="chkDrugs_Yes.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -523,7 +523,7 @@
     <value>15</value>
   </data>
   <data name="txtProblemAddiction_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 358</value>
+    <value>90, 516</value>
   </data>
   <data name="txtProblemAddiction_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -550,7 +550,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkProblemAddiction_No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 319</value>
+    <value>80, 477</value>
   </data>
   <data name="chkProblemAddiction_No.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -583,7 +583,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkProblemAddiction_Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 319</value>
+    <value>0, 477</value>
   </data>
   <data name="chkProblemAddiction_Yes.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -613,7 +613,7 @@
     <value>18</value>
   </data>
   <data name="txtProblemAlcohol_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 324</value>
+    <value>90, 482</value>
   </data>
   <data name="txtProblemAlcohol_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -640,7 +640,7 @@
     <value>0</value>
   </data>
   <data name="spnProblemAlcohol_When.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 288</value>
+    <value>252, 446</value>
   </data>
   <data name="spnProblemAlcohol_When.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -714,7 +714,7 @@
     <value>0</value>
   </data>
   <data name="spnAlcohol_HowMuch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 224</value>
+    <value>252, 382</value>
   </data>
   <data name="spnAlcohol_HowMuch.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -786,7 +786,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkProblemAlcohol_No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 285</value>
+    <value>80, 443</value>
   </data>
   <data name="chkProblemAlcohol_No.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -819,7 +819,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkProblemAlcohol_Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 285</value>
+    <value>0, 443</value>
   </data>
   <data name="chkProblemAlcohol_Yes.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -849,7 +849,7 @@
     <value>23</value>
   </data>
   <data name="txtAlcohol_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 260</value>
+    <value>90, 418</value>
   </data>
   <data name="txtAlcohol_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -873,7 +873,7 @@
     <value>24</value>
   </data>
   <data name="txtQuitSmoke_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 290</value>
+    <value>90, 448</value>
   </data>
   <data name="txtQuitSmoke_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -900,7 +900,7 @@
     <value />
   </data>
   <data name="txtSmoke_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 226</value>
+    <value>90, 384</value>
   </data>
   <data name="txtSmoke_Details.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -927,7 +927,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkAlcohol_No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 221</value>
+    <value>80, 379</value>
   </data>
   <data name="chkAlcohol_No.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -960,7 +960,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkAlcohol_Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 221</value>
+    <value>0, 379</value>
   </data>
   <data name="chkAlcohol_Yes.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -993,7 +993,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkQuitSmoke_LessThan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 251</value>
+    <value>0, 409</value>
   </data>
   <data name="chkQuitSmoke_LessThan.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>120, 30</value>
@@ -1026,7 +1026,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkQuitSmoke_Bet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 251</value>
+    <value>120, 409</value>
   </data>
   <data name="chkQuitSmoke_Bet.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>150, 30</value>
@@ -1059,7 +1059,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkQuitSmoke_MoreThan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 251</value>
+    <value>270, 409</value>
   </data>
   <data name="chkQuitSmoke_MoreThan.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>120, 30</value>
@@ -1095,7 +1095,7 @@
     <value>0</value>
   </data>
   <data name="spnNumberOfYearsSmoke.Location" type="System.Drawing.Point, System.Drawing">
-    <value>542, 190</value>
+    <value>542, 348</value>
   </data>
   <data name="spnNumberOfYearsSmoke.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -1167,7 +1167,7 @@
     <value>0</value>
   </data>
   <data name="spnNumberOfDailyPacks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 190</value>
+    <value>292, 348</value>
   </data>
   <data name="spnNumberOfDailyPacks.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -1239,7 +1239,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkSmoke_No.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 187</value>
+    <value>80, 345</value>
   </data>
   <data name="chkSmoke_No.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -1272,7 +1272,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="chkSmoke_Yes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 187</value>
+    <value>0, 345</value>
   </data>
   <data name="chkSmoke_Yes.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>80, 30</value>
@@ -1335,7 +1335,7 @@
     <value>36</value>
   </data>
   <data name="chkAddiction_DetailsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>880, 258</value>
+    <value>880, 416</value>
   </data>
   <data name="chkAddiction_DetailsButton.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1365,7 +1365,7 @@
     <value>37</value>
   </data>
   <data name="chkDrugs_Details.Location" type="System.Drawing.Point, System.Drawing">
-    <value>880, 292</value>
+    <value>880, 450</value>
   </data>
   <data name="chkDrugs_Details.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1395,7 +1395,7 @@
     <value>38</value>
   </data>
   <data name="btnProblemAddiction_DetailsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>872, 322</value>
+    <value>872, 480</value>
   </data>
   <data name="btnProblemAddiction_DetailsButton.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1425,7 +1425,7 @@
     <value>39</value>
   </data>
   <data name="chkProblemAlcohol_DetailsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>872, 288</value>
+    <value>872, 446</value>
   </data>
   <data name="chkProblemAlcohol_DetailsButton.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1455,7 +1455,7 @@
     <value>40</value>
   </data>
   <data name="chkAlcohol_DetailsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>880, 224</value>
+    <value>880, 382</value>
   </data>
   <data name="chkAlcohol_DetailsButton.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1485,7 +1485,7 @@
     <value>41</value>
   </data>
   <data name="btnQuitSmoke_DetailsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>872, 254</value>
+    <value>872, 412</value>
   </data>
   <data name="btnQuitSmoke_DetailsButton.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -1515,7 +1515,7 @@
     <value>42</value>
   </data>
   <data name="chkSmoke_DetailsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>880, 190</value>
+    <value>880, 348</value>
   </data>
   <data name="chkSmoke_DetailsButton.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -2137,12 +2137,6 @@
   </data>
   <data name="&gt;&gt;simpleSeparator6.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.SimpleSeparator, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
-    <value>emptySpaceItem1</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;lytContainer_RecreationalDrugs.Name" xml:space="preserve">
     <value>lytContainer_RecreationalDrugs</value>

@@ -163,6 +163,7 @@ namespace MerkDataBaseBusinessLogicProject
             this.VisitTiming_MainAnteriorSegmentSign = new HashSet<VisitTiming_MainAnteriorSegmentSign>();
             this.VisitTiming_MainEOMSign = new HashSet<VisitTiming_MainEOMSign>();
             this.VisitTiming_MainPosteriorSegmentSign = new HashSet<VisitTiming_MainPosteriorSegmentSign>();
+            this.VisitTiming_MedicalHistory = new HashSet<VisitTiming_MedicalHistory>();
             this.VisitTiming_Medication = new HashSet<VisitTiming_Medication>();
             this.VisitTiming_PosteriorSegmentSign = new HashSet<VisitTiming_PosteriorSegmentSign>();
             this.VisitTiming_Pupillary = new HashSet<VisitTiming_Pupillary>();
@@ -477,6 +478,8 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual ICollection<VisitTiming_MainEOMSign> VisitTiming_MainEOMSign { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VisitTiming_MainPosteriorSegmentSign> VisitTiming_MainPosteriorSegmentSign { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VisitTiming_MedicalHistory> VisitTiming_MedicalHistory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VisitTiming_Medication> VisitTiming_Medication { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -150,6 +150,12 @@
     <Compile Include="Department_JobTitle_WorkingShiftTitle_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="DiabetedMedicationType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiabetesType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="DiagnosisCategory_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
@@ -663,6 +669,7 @@
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_MainEOMSign.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_MainPosteriorSegmentSign.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_MainSymptoms.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_MedicalHistory.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_Medication.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_PosteriorSegmentSign.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_Pupillary.cs" />
@@ -675,8 +682,10 @@
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTimming_SocialHistory.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_Adnexa.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_AnteriorSegmentSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_Diagnosis.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_EOMReading.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_EOMSign.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_MedicalHistory.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_PosteriorSegment.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_SocialHistory.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_VisionRefractionReading.cs" />
@@ -914,6 +923,9 @@
     <Compile Include="TrialBalanceTransactionType_p.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="TriggerOfDrugAllergy_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="UncorrectedDistanceVisualAcuityUnit_p.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
@@ -999,6 +1011,9 @@
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="VisitTiming_MainSymptoms.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitTiming_MedicalHistory.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="VisitTiming_Medication.cs">

@@ -371,6 +371,24 @@
           <Property Name="Name_S" Type="nvarchar" MaxLength="150" />
           <Property Name="Description" Type="ntext" />
         </EntityType>
+        <EntityType Name="DiabetedMedicationType_p">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name_P" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name_S" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DiabetesType_p">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name_P" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name_S" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Diagnosis_cu">
           <Key>
             <PropertyRef Name="ID" />
@@ -2297,6 +2315,15 @@
           <Property Name="Name_AR" Type="nvarchar" MaxLength="200" />
           <Property Name="Description" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="TriggerOfDrugAllergy_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name_P" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Name_S" Type="nvarchar" MaxLength="200" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
         <EntityType Name="UncorrectedDistanceVisualAcuity_cu">
           <Key>
             <PropertyRef Name="ID" />
@@ -2625,6 +2652,35 @@
           <Property Name="GeneralDescription" Type="ntext" />
           <Property Name="PainLevel_P_ID" Type="int" />
           <Property Name="PainLevelDescription" Type="ntext" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
+          <Property Name="InsertedBy" Type="int" />
+        </EntityType>
+        <EntityType Name="VisitTiming_MedicalHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VisitTimingID" Type="int" Nullable="false" />
+          <Property Name="FurtherDetails" Type="ntext" />
+          <Property Name="HasDiabetes" Type="bit" />
+          <Property Name="DiabetesType_P_ID" Type="int" />
+          <Property Name="IsDiabetesControlled" Type="bit" />
+          <Property Name="HbA1c" Type="float" />
+          <Property Name="DiabetesMedicationType_P_ID" Type="int" />
+          <Property Name="DiabetesMedication_CU_ID" Type="int" />
+          <Property Name="DiabetesDose_CU_ID" Type="int" />
+          <Property Name="DiabetesMedicationDuration" Type="int" />
+          <Property Name="DiabetesTimeDurationType_P_ID" Type="int" />
+          <Property Name="IsHypertension" Type="bit" />
+          <Property Name="IsHypertensionControlled" Type="bit" />
+          <Property Name="HypertensionMedication_CU_ID" Type="int" />
+          <Property Name="HypertensionDose_CU_ID" Type="int" />
+          <Property Name="HypertensionMedicationDuration" Type="int" />
+          <Property Name="HypertensionTimeDurationType_P_ID" Type="int" />
+          <Property Name="IsDrugAllergy" Type="bit" />
+          <Property Name="TriggerOfDrugAllergy_CU_ID" Type="int" />
+          <Property Name="IsHepatitis" Type="bit" />
+          <Property Name="IsAsthma" Type="bit" />
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="InsertedBy" Type="int" />
         </EntityType>
@@ -8460,6 +8516,138 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_DiabetedMedicationType_p">
+          <End Role="DiabetedMedicationType_p" Type="Self.DiabetedMedicationType_p" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DiabetedMedicationType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="DiabetesMedicationType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_DiabetesType_p">
+          <End Role="DiabetesType_p" Type="Self.DiabetesType_p" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DiabetesType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="DiabetesType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_Dose_cu">
+          <End Role="Dose_cu" Type="Self.Dose_cu" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dose_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="DiabetesDose_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_Dose_cu1">
+          <End Role="Dose_cu" Type="Self.Dose_cu" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dose_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="HypertensionDose_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_Medication_cu">
+          <End Role="Medication_cu" Type="Self.Medication_cu" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medication_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="DiabetesMedication_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_Medication_cu1">
+          <End Role="Medication_cu" Type="Self.Medication_cu" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medication_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="HypertensionMedication_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_TimeDuration_p">
+          <End Role="TimeDuration_p" Type="Self.TimeDuration_p" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimeDuration_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="DiabetesTimeDurationType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_TimeDuration_p1">
+          <End Role="TimeDuration_p" Type="Self.TimeDuration_p" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimeDuration_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="HypertensionTimeDurationType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_TriggerOfDrugAllergy_cu">
+          <End Role="TriggerOfDrugAllergy_cu" Type="Self.TriggerOfDrugAllergy_cu" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TriggerOfDrugAllergy_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="TriggerOfDrugAllergy_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_VisitTiming">
+          <End Role="VisitTiming" Type="Self.VisitTiming" Multiplicity="1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VisitTiming">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="VisitTimingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_VisitTiming_Medication_Dose_cu">
           <End Role="Dose_cu" Type="Self.Dose_cu" Multiplicity="0..1" />
           <End Role="VisitTiming_Medication" Type="Self.VisitTiming_Medication" Multiplicity="*" />
@@ -9202,6 +9390,8 @@
           <EntitySet Name="Department_JobTitle_cu" EntityType="Self.Department_JobTitle_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Department_JobTitle_WorkingShiftTitle_cu" EntityType="Self.Department_JobTitle_WorkingShiftTitle_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DepartmentType_p" EntityType="Self.DepartmentType_p" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DiabetedMedicationType_p" EntityType="Self.DiabetedMedicationType_p" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DiabetesType_p" EntityType="Self.DiabetesType_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Diagnosis_cu" EntityType="Self.Diagnosis_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DiagnosisCategory_cu" EntityType="Self.DiagnosisCategory_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DiagnosisCategory_Diagnosis_cu" EntityType="Self.DiagnosisCategory_Diagnosis_cu" Schema="dbo" store:Type="Tables" />
@@ -9361,6 +9551,7 @@
           <EntitySet Name="ToBeInserted_cu" EntityType="Self.ToBeInserted_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TrialBalanceTransaction" EntityType="Self.TrialBalanceTransaction" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TrialBalanceTransactionType_p" EntityType="Self.TrialBalanceTransactionType_p" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TriggerOfDrugAllergy_cu" EntityType="Self.TriggerOfDrugAllergy_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UncorrectedDistanceVisualAcuity_cu" EntityType="Self.UncorrectedDistanceVisualAcuity_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UncorrectedDistanceVisualAcuityUnit_p" EntityType="Self.UncorrectedDistanceVisualAcuityUnit_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UnitMeasurment_cu" EntityType="Self.UnitMeasurment_cu" Schema="dbo" store:Type="Tables" />
@@ -9390,6 +9581,7 @@
           <EntitySet Name="VisitTiming_MainEOMSign" EntityType="Self.VisitTiming_MainEOMSign" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VisitTiming_MainPosteriorSegmentSign" EntityType="Self.VisitTiming_MainPosteriorSegmentSign" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VisitTiming_MainSymptoms" EntityType="Self.VisitTiming_MainSymptoms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VisitTiming_MedicalHistory" EntityType="Self.VisitTiming_MedicalHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VisitTiming_Medication" EntityType="Self.VisitTiming_Medication" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VisitTiming_PosteriorSegmentSign" EntityType="Self.VisitTiming_PosteriorSegmentSign" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VisitTiming_Pupillary" EntityType="Self.VisitTiming_Pupillary" Schema="dbo" store:Type="Tables" />
@@ -11270,6 +11462,50 @@
             <End Role="VisitTiming" EntitySet="VisitTiming" />
             <End Role="VisitTiming_MainSymptoms" EntitySet="VisitTiming_MainSymptoms" />
           </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_DiabetedMedicationType_p" Association="Self.FK_VisitTiming_MedicalHistory_DiabetedMedicationType_p">
+            <End Role="DiabetedMedicationType_p" EntitySet="DiabetedMedicationType_p" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_DiabetesType_p" Association="Self.FK_VisitTiming_MedicalHistory_DiabetesType_p">
+            <End Role="DiabetesType_p" EntitySet="DiabetesType_p" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_Dose_cu" Association="Self.FK_VisitTiming_MedicalHistory_Dose_cu">
+            <End Role="Dose_cu" EntitySet="Dose_cu" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_Dose_cu1" Association="Self.FK_VisitTiming_MedicalHistory_Dose_cu1">
+            <End Role="Dose_cu" EntitySet="Dose_cu" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_Medication_cu" Association="Self.FK_VisitTiming_MedicalHistory_Medication_cu">
+            <End Role="Medication_cu" EntitySet="Medication_cu" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_Medication_cu1" Association="Self.FK_VisitTiming_MedicalHistory_Medication_cu1">
+            <End Role="Medication_cu" EntitySet="Medication_cu" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_TimeDuration_p" Association="Self.FK_VisitTiming_MedicalHistory_TimeDuration_p">
+            <End Role="TimeDuration_p" EntitySet="TimeDuration_p" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_TimeDuration_p1" Association="Self.FK_VisitTiming_MedicalHistory_TimeDuration_p1">
+            <End Role="TimeDuration_p" EntitySet="TimeDuration_p" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_TriggerOfDrugAllergy_cu" Association="Self.FK_VisitTiming_MedicalHistory_TriggerOfDrugAllergy_cu">
+            <End Role="TriggerOfDrugAllergy_cu" EntitySet="TriggerOfDrugAllergy_cu" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_User_cu" Association="Self.FK_VisitTiming_MedicalHistory_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_VisitTiming" Association="Self.FK_VisitTiming_MedicalHistory_VisitTiming">
+            <End Role="VisitTiming" EntitySet="VisitTiming" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
           <AssociationSet Name="FK_VisitTiming_Medication_Dose_cu" Association="Self.FK_VisitTiming_Medication_Dose_cu">
             <End Role="Dose_cu" EntitySet="Dose_cu" />
             <End Role="VisitTiming_Medication" EntitySet="VisitTiming_Medication" />
@@ -11970,6 +12206,26 @@
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Department_cu" Relationship="Self.FK_Department_cu_DepartmentType_p" FromRole="DepartmentType_p" ToRole="Department_cu" />
         </EntityType>
+        <EntityType Name="DiabetedMedicationType_p">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name_P" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_S" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VisitTiming_MedicalHistory" Relationship="Self.FK_VisitTiming_MedicalHistory_DiabetedMedicationType_p" FromRole="DiabetedMedicationType_p" ToRole="VisitTiming_MedicalHistory" />
+        </EntityType>
+        <EntityType Name="DiabetesType_p">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name_P" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_S" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VisitTiming_MedicalHistory" Relationship="Self.FK_VisitTiming_MedicalHistory_DiabetesType_p" FromRole="DiabetesType_p" ToRole="VisitTiming_MedicalHistory" />
+        </EntityType>
         <EntityType Name="Diagnosis_cu">
           <Key>
             <PropertyRef Name="ID" />
@@ -12241,6 +12497,8 @@
           <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_Dose_cu_User_cu" FromRole="Dose_cu" ToRole="User_cu" />
           <NavigationProperty Name="Medication_Dose_cu" Relationship="Self.FK_Medication_Dose_cu_Dose_cu" FromRole="Dose_cu" ToRole="Medication_Dose_cu" />
+          <NavigationProperty Name="VisitTiming_MedicalHistory" Relationship="Self.FK_VisitTiming_MedicalHistory_Dose_cu" FromRole="Dose_cu" ToRole="VisitTiming_MedicalHistory" />
+          <NavigationProperty Name="VisitTiming_MedicalHistory1" Relationship="Self.FK_VisitTiming_MedicalHistory_Dose_cu1" FromRole="Dose_cu" ToRole="VisitTiming_MedicalHistory" />
           <NavigationProperty Name="VisitTiming_Medication" Relationship="Self.FK_VisitTiming_Medication_Dose_cu" FromRole="Dose_cu" ToRole="VisitTiming_Medication" />
         </EntityType>
         <EntityType Name="Employee_cu">
@@ -13407,6 +13665,8 @@
           <NavigationProperty Name="MedicationCategory_cu" Relationship="Self.FK_Medication_cu_MedicationCategory_cu" FromRole="Medication_cu" ToRole="MedicationCategory_cu" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_Medication_cu_User_cu" FromRole="Medication_cu" ToRole="User_cu" />
           <NavigationProperty Name="Medication_Dose_cu" Relationship="Self.FK_Medication_Dose_cu_Medication_cu" FromRole="Medication_cu" ToRole="Medication_Dose_cu" />
+          <NavigationProperty Name="VisitTiming_MedicalHistory" Relationship="Self.FK_VisitTiming_MedicalHistory_Medication_cu" FromRole="Medication_cu" ToRole="VisitTiming_MedicalHistory" />
+          <NavigationProperty Name="VisitTiming_MedicalHistory1" Relationship="Self.FK_VisitTiming_MedicalHistory_Medication_cu1" FromRole="Medication_cu" ToRole="VisitTiming_MedicalHistory" />
           <NavigationProperty Name="VisitTiming_Medication" Relationship="Self.FK_VisitTiming_Medication_Medication_cu" FromRole="Medication_cu" ToRole="VisitTiming_Medication" />
         </EntityType>
         <EntityType Name="Medication_Dose_cu">
@@ -14430,6 +14690,8 @@
           <Property Name="Name_P" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Name_S" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VisitTiming_MedicalHistory" Relationship="Self.FK_VisitTiming_MedicalHistory_TimeDuration_p" FromRole="TimeDuration_p" ToRole="VisitTiming_MedicalHistory" />
+          <NavigationProperty Name="VisitTiming_MedicalHistory1" Relationship="Self.FK_VisitTiming_MedicalHistory_TimeDuration_p1" FromRole="TimeDuration_p" ToRole="VisitTiming_MedicalHistory" />
           <NavigationProperty Name="VisitTiming_Medication" Relationship="Self.FK_VisitTiming_Medication_TimeDuration_p" FromRole="TimeDuration_p" ToRole="VisitTiming_Medication" />
         </EntityType>
         <EntityType Name="ToBeInserted_cu">
@@ -14468,6 +14730,16 @@
           <Property Name="Name_EN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Name_AR" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TriggerOfDrugAllergy_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name_P" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_S" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VisitTiming_MedicalHistory" Relationship="Self.FK_VisitTiming_MedicalHistory_TriggerOfDrugAllergy_cu" FromRole="TriggerOfDrugAllergy_cu" ToRole="VisitTiming_MedicalHistory" />
         </EntityType>
         <EntityType Name="UncorrectedDistanceVisualAcuity_cu">
           <Key>
@@ -14713,6 +14985,7 @@
           <NavigationProperty Name="VisitTiming_MainAnteriorSegmentSign" Relationship="Self.FK_VisitTiming_MainAnteriorSegmentSign_User_cu" FromRole="User_cu" ToRole="VisitTiming_MainAnteriorSegmentSign" />
           <NavigationProperty Name="VisitTiming_MainEOMSign" Relationship="Self.FK_VisitTiming_MainEOMSign_User_cu" FromRole="User_cu" ToRole="VisitTiming_MainEOMSign" />
           <NavigationProperty Name="VisitTiming_MainPosteriorSegmentSign" Relationship="Self.FK_VisitTiming_MainPosteriorSegmentSign_User_cu" FromRole="User_cu" ToRole="VisitTiming_MainPosteriorSegmentSign" />
+          <NavigationProperty Name="VisitTiming_MedicalHistory" Relationship="Self.FK_VisitTiming_MedicalHistory_User_cu" FromRole="User_cu" ToRole="VisitTiming_MedicalHistory" />
           <NavigationProperty Name="VisitTiming_Medication" Relationship="Self.FK_VisitTiming_Medication_User_cu" FromRole="User_cu" ToRole="VisitTiming_Medication" />
           <NavigationProperty Name="VisitTiming_PosteriorSegmentSign" Relationship="Self.FK_VisitTiming_PosteriorSegmentSign_User_cu" FromRole="User_cu" ToRole="VisitTiming_PosteriorSegmentSign" />
           <NavigationProperty Name="VisitTiming_Pupillary" Relationship="Self.FK_VisitTiming_Pupillary_User_cu" FromRole="User_cu" ToRole="VisitTiming_Pupillary" />
@@ -14816,6 +15089,7 @@
           <NavigationProperty Name="VisitTiming_MainEOMSign" Relationship="Self.FK_VisitTiming_MainEOMSign_VisitTiming" FromRole="VisitTiming" ToRole="VisitTiming_MainEOMSign" />
           <NavigationProperty Name="VisitTiming_MainPosteriorSegmentSign" Relationship="Self.FK_VisitTiming_MainPosteriorSegmentSign_VisitTiming" FromRole="VisitTiming" ToRole="VisitTiming_MainPosteriorSegmentSign" />
           <NavigationProperty Name="VisitTiming_MainSymptoms" Relationship="Self.FK_VisitTiming_MainSymptoms_VisitTiming" FromRole="VisitTiming" ToRole="VisitTiming_MainSymptoms" />
+          <NavigationProperty Name="VisitTiming_MedicalHistory" Relationship="Self.FK_VisitTiming_MedicalHistory_VisitTiming" FromRole="VisitTiming" ToRole="VisitTiming_MedicalHistory" />
           <NavigationProperty Name="VisitTiming_Medication" Relationship="Self.FK_VisitTiming_Medication_VisitTiming" FromRole="VisitTiming" ToRole="VisitTiming_Medication" />
           <NavigationProperty Name="VisitTiming_Pupillary" Relationship="Self.FK_VisitTiming_Pupillary_VisitTiming" FromRole="VisitTiming" ToRole="VisitTiming_Pupillary" />
           <NavigationProperty Name="VisitTiming_SurgeryReservation" Relationship="Self.FK_VisitTiming_SurgeryReservation_VisitTiming" FromRole="VisitTiming" ToRole="VisitTiming_SurgeryReservation" />
@@ -15067,6 +15341,46 @@
           <NavigationProperty Name="PainLevel_p" Relationship="Self.FK_VisitTiming_MainSymptoms_PainLevel_p" FromRole="VisitTiming_MainSymptoms" ToRole="PainLevel_p" />
           <NavigationProperty Name="VisitTiming" Relationship="Self.FK_VisitTiming_MainSymptoms_VisitTiming" FromRole="VisitTiming_MainSymptoms" ToRole="VisitTiming" />
           <NavigationProperty Name="VisitTiming_Symptoms" Relationship="Self.FK_VisitTiming_Symptoms_VisitTiming_MainSymptoms" FromRole="VisitTiming_MainSymptoms" ToRole="VisitTiming_Symptoms" />
+        </EntityType>
+        <EntityType Name="VisitTiming_MedicalHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VisitTimingID" Type="Int32" Nullable="false" />
+          <Property Name="FurtherDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HasDiabetes" Type="Boolean" />
+          <Property Name="DiabetesType_P_ID" Type="Int32" />
+          <Property Name="IsDiabetesControlled" Type="Boolean" />
+          <Property Name="HbA1c" Type="Double" />
+          <Property Name="DiabetesMedicationType_P_ID" Type="Int32" />
+          <Property Name="DiabetesMedication_CU_ID" Type="Int32" />
+          <Property Name="DiabetesDose_CU_ID" Type="Int32" />
+          <Property Name="DiabetesMedicationDuration" Type="Int32" />
+          <Property Name="DiabetesTimeDurationType_P_ID" Type="Int32" />
+          <Property Name="IsHypertension" Type="Boolean" />
+          <Property Name="IsHypertensionControlled" Type="Boolean" />
+          <Property Name="HypertensionMedication_CU_ID" Type="Int32" />
+          <Property Name="HypertensionDose_CU_ID" Type="Int32" />
+          <Property Name="HypertensionMedicationDuration" Type="Int32" />
+          <Property Name="HypertensionTimeDurationType_P_ID" Type="Int32" />
+          <Property Name="IsDrugAllergy" Type="Boolean" />
+          <Property Name="TriggerOfDrugAllergy_CU_ID" Type="Int32" />
+          <Property Name="IsHepatitis" Type="Boolean" />
+          <Property Name="IsAsthma" Type="Boolean" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <Property Name="InsertedBy" Type="Int32" />
+          <NavigationProperty Name="DiabetedMedicationType_p" Relationship="Self.FK_VisitTiming_MedicalHistory_DiabetedMedicationType_p" FromRole="VisitTiming_MedicalHistory" ToRole="DiabetedMedicationType_p" />
+          <NavigationProperty Name="DiabetesType_p" Relationship="Self.FK_VisitTiming_MedicalHistory_DiabetesType_p" FromRole="VisitTiming_MedicalHistory" ToRole="DiabetesType_p" />
+          <NavigationProperty Name="Dose_cu" Relationship="Self.FK_VisitTiming_MedicalHistory_Dose_cu" FromRole="VisitTiming_MedicalHistory" ToRole="Dose_cu" />
+          <NavigationProperty Name="Dose_cu1" Relationship="Self.FK_VisitTiming_MedicalHistory_Dose_cu1" FromRole="VisitTiming_MedicalHistory" ToRole="Dose_cu" />
+          <NavigationProperty Name="Medication_cu" Relationship="Self.FK_VisitTiming_MedicalHistory_Medication_cu" FromRole="VisitTiming_MedicalHistory" ToRole="Medication_cu" />
+          <NavigationProperty Name="Medication_cu1" Relationship="Self.FK_VisitTiming_MedicalHistory_Medication_cu1" FromRole="VisitTiming_MedicalHistory" ToRole="Medication_cu" />
+          <NavigationProperty Name="TimeDuration_p" Relationship="Self.FK_VisitTiming_MedicalHistory_TimeDuration_p" FromRole="VisitTiming_MedicalHistory" ToRole="TimeDuration_p" />
+          <NavigationProperty Name="TimeDuration_p1" Relationship="Self.FK_VisitTiming_MedicalHistory_TimeDuration_p1" FromRole="VisitTiming_MedicalHistory" ToRole="TimeDuration_p" />
+          <NavigationProperty Name="TriggerOfDrugAllergy_cu" Relationship="Self.FK_VisitTiming_MedicalHistory_TriggerOfDrugAllergy_cu" FromRole="VisitTiming_MedicalHistory" ToRole="TriggerOfDrugAllergy_cu" />
+          <NavigationProperty Name="User_cu" Relationship="Self.FK_VisitTiming_MedicalHistory_User_cu" FromRole="VisitTiming_MedicalHistory" ToRole="User_cu" />
+          <NavigationProperty Name="VisitTiming" Relationship="Self.FK_VisitTiming_MedicalHistory_VisitTiming" FromRole="VisitTiming_MedicalHistory" ToRole="VisitTiming" />
         </EntityType>
         <EntityType Name="VisitTiming_Medication">
           <Key>
@@ -16585,6 +16899,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_DiabetedMedicationType_p">
+          <End Role="DiabetedMedicationType_p" Type="Self.DiabetedMedicationType_p" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DiabetedMedicationType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="DiabetesMedicationType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_DiabetesType_p">
+          <End Role="DiabetesType_p" Type="Self.DiabetesType_p" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DiabetesType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="DiabetesType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Diagnosis_cu_Diagnosis_cu">
           <End Role="Diagnosis_cu" Type="Self.Diagnosis_cu" Multiplicity="0..1" />
           <End Role="Diagnosis_cu1" Type="Self.Diagnosis_cu" Multiplicity="*" />
@@ -17194,6 +17532,30 @@
             </Principal>
             <Dependent Role="Medication_Dose_cu">
               <PropertyRef Name="Dose_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_Dose_cu">
+          <End Role="Dose_cu" Type="Self.Dose_cu" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dose_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="DiabetesDose_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_Dose_cu1">
+          <End Role="Dose_cu" Type="Self.Dose_cu" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dose_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="HypertensionDose_CU_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -19093,6 +19455,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_Medication_cu">
+          <End Role="Medication_cu" Type="Self.Medication_cu" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medication_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="DiabetesMedication_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_Medication_cu1">
+          <End Role="Medication_cu" Type="Self.Medication_cu" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medication_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="HypertensionMedication_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_VisitTiming_Medication_Medication_cu">
           <End Role="Medication_cu" Type="Self.Medication_cu" Multiplicity="1" />
           <End Role="VisitTiming_Medication" Type="Self.VisitTiming_Medication" Multiplicity="*" />
@@ -20617,6 +21003,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_TimeDuration_p">
+          <End Role="TimeDuration_p" Type="Self.TimeDuration_p" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimeDuration_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="DiabetesTimeDurationType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_TimeDuration_p1">
+          <End Role="TimeDuration_p" Type="Self.TimeDuration_p" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimeDuration_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="HypertensionTimeDurationType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_VisitTiming_Medication_TimeDuration_p">
           <End Role="TimeDuration_p" Type="Self.TimeDuration_p" Multiplicity="0..1" />
           <End Role="VisitTiming_Medication" Type="Self.VisitTiming_Medication" Multiplicity="*" />
@@ -20662,6 +21072,18 @@
             </Principal>
             <Dependent Role="TrialBalanceTransaction">
               <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_TriggerOfDrugAllergy_cu">
+          <End Role="TriggerOfDrugAllergy_cu" Type="Self.TriggerOfDrugAllergy_cu" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TriggerOfDrugAllergy_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="TriggerOfDrugAllergy_CU_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -21013,6 +21435,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_VisitTiming_Medication_User_cu">
           <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
           <End Role="VisitTiming_Medication" Type="Self.VisitTiming_Medication" Multiplicity="*" />
@@ -21289,6 +21723,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_VisitTiming_MedicalHistory_VisitTiming">
+          <End Role="VisitTiming" Type="Self.VisitTiming" Multiplicity="1" />
+          <End Role="VisitTiming_MedicalHistory" Type="Self.VisitTiming_MedicalHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VisitTiming">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VisitTiming_MedicalHistory">
+              <PropertyRef Name="VisitTimingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_VisitTiming_Medication_VisitTiming">
           <End Role="VisitTiming" Type="Self.VisitTiming" Multiplicity="1" />
           <End Role="VisitTiming_Medication" Type="Self.VisitTiming_Medication" Multiplicity="*" />
@@ -21561,6 +22007,8 @@
           <EntitySet Name="Department_JobTitle_cu" EntityType="Self.Department_JobTitle_cu" />
           <EntitySet Name="Department_JobTitle_WorkingShiftTitle_cu" EntityType="Self.Department_JobTitle_WorkingShiftTitle_cu" />
           <EntitySet Name="DepartmentType_p" EntityType="Self.DepartmentType_p" />
+          <EntitySet Name="DiabetedMedicationType_p" EntityType="Self.DiabetedMedicationType_p" />
+          <EntitySet Name="DiabetesType_p" EntityType="Self.DiabetesType_p" />
           <EntitySet Name="Diagnosis_cu" EntityType="Self.Diagnosis_cu" />
           <EntitySet Name="DiagnosisCategory_cu" EntityType="Self.DiagnosisCategory_cu" />
           <EntitySet Name="DiagnosisCategory_Diagnosis_cu" EntityType="Self.DiagnosisCategory_Diagnosis_cu" />
@@ -21720,6 +22168,7 @@
           <EntitySet Name="ToBeInserted_cu" EntityType="Self.ToBeInserted_cu" />
           <EntitySet Name="TrialBalanceTransactions" EntityType="Self.TrialBalanceTransaction" />
           <EntitySet Name="TrialBalanceTransactionType_p" EntityType="Self.TrialBalanceTransactionType_p" />
+          <EntitySet Name="TriggerOfDrugAllergy_cu" EntityType="Self.TriggerOfDrugAllergy_cu" />
           <EntitySet Name="UncorrectedDistanceVisualAcuity_cu" EntityType="Self.UncorrectedDistanceVisualAcuity_cu" />
           <EntitySet Name="UncorrectedDistanceVisualAcuityUnit_p" EntityType="Self.UncorrectedDistanceVisualAcuityUnit_p" />
           <EntitySet Name="UnitMeasurment_cu" EntityType="Self.UnitMeasurment_cu" />
@@ -21749,6 +22198,7 @@
           <EntitySet Name="VisitTiming_MainEOMSign" EntityType="Self.VisitTiming_MainEOMSign" />
           <EntitySet Name="VisitTiming_MainPosteriorSegmentSign" EntityType="Self.VisitTiming_MainPosteriorSegmentSign" />
           <EntitySet Name="VisitTiming_MainSymptoms" EntityType="Self.VisitTiming_MainSymptoms" />
+          <EntitySet Name="VisitTiming_MedicalHistory" EntityType="Self.VisitTiming_MedicalHistory" />
           <EntitySet Name="VisitTiming_Medication" EntityType="Self.VisitTiming_Medication" />
           <EntitySet Name="VisitTiming_PosteriorSegmentSign" EntityType="Self.VisitTiming_PosteriorSegmentSign" />
           <EntitySet Name="VisitTiming_Pupillary" EntityType="Self.VisitTiming_Pupillary" />
@@ -22173,6 +22623,14 @@
             <End Role="WorkingShiftTitle_cu" EntitySet="WorkingShiftTitle_cu" />
             <End Role="Department_JobTitle_WorkingShiftTitle_cu" EntitySet="Department_JobTitle_WorkingShiftTitle_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_DiabetedMedicationType_p" Association="Self.FK_VisitTiming_MedicalHistory_DiabetedMedicationType_p">
+            <End Role="DiabetedMedicationType_p" EntitySet="DiabetedMedicationType_p" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_DiabetesType_p" Association="Self.FK_VisitTiming_MedicalHistory_DiabetesType_p">
+            <End Role="DiabetesType_p" EntitySet="DiabetesType_p" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
           <AssociationSet Name="FK_Diagnosis_cu_Diagnosis_cu" Association="Self.FK_Diagnosis_cu_Diagnosis_cu">
             <End Role="Diagnosis_cu" EntitySet="Diagnosis_cu" />
             <End Role="Diagnosis_cu1" EntitySet="Diagnosis_cu" />
@@ -22376,6 +22834,14 @@
           <AssociationSet Name="FK_Medication_Dose_cu_Dose_cu" Association="Self.FK_Medication_Dose_cu_Dose_cu">
             <End Role="Dose_cu" EntitySet="Dose_cu" />
             <End Role="Medication_Dose_cu" EntitySet="Medication_Dose_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_Dose_cu" Association="Self.FK_VisitTiming_MedicalHistory_Dose_cu">
+            <End Role="Dose_cu" EntitySet="Dose_cu" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_Dose_cu1" Association="Self.FK_VisitTiming_MedicalHistory_Dose_cu1">
+            <End Role="Dose_cu" EntitySet="Dose_cu" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
           </AssociationSet>
           <AssociationSet Name="FK_VisitTiming_Medication_Dose_cu" Association="Self.FK_VisitTiming_Medication_Dose_cu">
             <End Role="Dose_cu" EntitySet="Dose_cu" />
@@ -23009,6 +23475,14 @@
             <End Role="Medication_cu" EntitySet="Medication_cu" />
             <End Role="Medication_Dose_cu" EntitySet="Medication_Dose_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_Medication_cu" Association="Self.FK_VisitTiming_MedicalHistory_Medication_cu">
+            <End Role="Medication_cu" EntitySet="Medication_cu" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_Medication_cu1" Association="Self.FK_VisitTiming_MedicalHistory_Medication_cu1">
+            <End Role="Medication_cu" EntitySet="Medication_cu" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
           <AssociationSet Name="FK_VisitTiming_Medication_Medication_cu" Association="Self.FK_VisitTiming_Medication_Medication_cu">
             <End Role="Medication_cu" EntitySet="Medication_cu" />
             <End Role="VisitTiming_Medication" EntitySet="VisitTiming_Medication" />
@@ -23517,6 +23991,14 @@
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="Terriotry_cu" EntitySet="Terriotry_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_TimeDuration_p" Association="Self.FK_VisitTiming_MedicalHistory_TimeDuration_p">
+            <End Role="TimeDuration_p" EntitySet="TimeDuration_p" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_TimeDuration_p1" Association="Self.FK_VisitTiming_MedicalHistory_TimeDuration_p1">
+            <End Role="TimeDuration_p" EntitySet="TimeDuration_p" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
           <AssociationSet Name="FK_VisitTiming_Medication_TimeDuration_p" Association="Self.FK_VisitTiming_Medication_TimeDuration_p">
             <End Role="TimeDuration_p" EntitySet="TimeDuration_p" />
             <End Role="VisitTiming_Medication" EntitySet="VisitTiming_Medication" />
@@ -23532,6 +24014,10 @@
           <AssociationSet Name="FK_TrialBalanceTransaction_User_cu" Association="Self.FK_TrialBalanceTransaction_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="TrialBalanceTransaction" EntitySet="TrialBalanceTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_TriggerOfDrugAllergy_cu" Association="Self.FK_VisitTiming_MedicalHistory_TriggerOfDrugAllergy_cu">
+            <End Role="TriggerOfDrugAllergy_cu" EntitySet="TriggerOfDrugAllergy_cu" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
           </AssociationSet>
           <AssociationSet Name="FK_UncorrectedDistanceVisualAcuity_cu_UncorrectedDistanceVisualAcuityUnit_p" Association="Self.FK_UncorrectedDistanceVisualAcuity_cu_UncorrectedDistanceVisualAcuityUnit_p">
             <End Role="UncorrectedDistanceVisualAcuityUnit_p" EntitySet="UncorrectedDistanceVisualAcuityUnit_p" />
@@ -23649,6 +24135,10 @@
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="VisitTiming_MainPosteriorSegmentSign" EntitySet="VisitTiming_MainPosteriorSegmentSign" />
           </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_User_cu" Association="Self.FK_VisitTiming_MedicalHistory_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
+          </AssociationSet>
           <AssociationSet Name="FK_VisitTiming_Medication_User_cu" Association="Self.FK_VisitTiming_Medication_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="VisitTiming_Medication" EntitySet="VisitTiming_Medication" />
@@ -23740,6 +24230,10 @@
           <AssociationSet Name="FK_VisitTiming_MainSymptoms_VisitTiming" Association="Self.FK_VisitTiming_MainSymptoms_VisitTiming">
             <End Role="VisitTiming" EntitySet="VisitTimings" />
             <End Role="VisitTiming_MainSymptoms" EntitySet="VisitTiming_MainSymptoms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VisitTiming_MedicalHistory_VisitTiming" Association="Self.FK_VisitTiming_MedicalHistory_VisitTiming">
+            <End Role="VisitTiming" EntitySet="VisitTimings" />
+            <End Role="VisitTiming_MedicalHistory" EntitySet="VisitTiming_MedicalHistory" />
           </AssociationSet>
           <AssociationSet Name="FK_VisitTiming_Medication_VisitTiming" Association="Self.FK_VisitTiming_Medication_VisitTiming">
             <End Role="VisitTiming" EntitySet="VisitTimings" />
@@ -24520,6 +25014,26 @@
           <EntitySetMapping Name="DepartmentType_p">
             <EntityTypeMapping TypeName="MerkFinanceModel.DepartmentType_p">
               <MappingFragment StoreEntitySet="DepartmentType_p">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name_P" ColumnName="Name_P" />
+                <ScalarProperty Name="Name_S" ColumnName="Name_S" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DiabetedMedicationType_p">
+            <EntityTypeMapping TypeName="MerkFinanceModel.DiabetedMedicationType_p">
+              <MappingFragment StoreEntitySet="DiabetedMedicationType_p">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name_P" ColumnName="Name_P" />
+                <ScalarProperty Name="Name_S" ColumnName="Name_S" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DiabetesType_p">
+            <EntityTypeMapping TypeName="MerkFinanceModel.DiabetesType_p">
+              <MappingFragment StoreEntitySet="DiabetesType_p">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name_P" ColumnName="Name_P" />
                 <ScalarProperty Name="Name_S" ColumnName="Name_S" />
@@ -26612,6 +27126,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="TriggerOfDrugAllergy_cu">
+            <EntityTypeMapping TypeName="MerkFinanceModel.TriggerOfDrugAllergy_cu">
+              <MappingFragment StoreEntitySet="TriggerOfDrugAllergy_cu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name_P" ColumnName="Name_P" />
+                <ScalarProperty Name="Name_S" ColumnName="Name_S" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="UncorrectedDistanceVisualAcuity_cu">
             <EntityTypeMapping TypeName="MerkFinanceModel.UncorrectedDistanceVisualAcuity_cu">
               <MappingFragment StoreEntitySet="UncorrectedDistanceVisualAcuity_cu">
@@ -26967,6 +27491,36 @@
                 <ScalarProperty Name="GeneralDescription" ColumnName="GeneralDescription" />
                 <ScalarProperty Name="PainLevel_P_ID" ColumnName="PainLevel_P_ID" />
                 <ScalarProperty Name="PainLevelDescription" ColumnName="PainLevelDescription" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
+                <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VisitTiming_MedicalHistory">
+            <EntityTypeMapping TypeName="MerkFinanceModel.VisitTiming_MedicalHistory">
+              <MappingFragment StoreEntitySet="VisitTiming_MedicalHistory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="VisitTimingID" ColumnName="VisitTimingID" />
+                <ScalarProperty Name="FurtherDetails" ColumnName="FurtherDetails" />
+                <ScalarProperty Name="HasDiabetes" ColumnName="HasDiabetes" />
+                <ScalarProperty Name="DiabetesType_P_ID" ColumnName="DiabetesType_P_ID" />
+                <ScalarProperty Name="IsDiabetesControlled" ColumnName="IsDiabetesControlled" />
+                <ScalarProperty Name="HbA1c" ColumnName="HbA1c" />
+                <ScalarProperty Name="DiabetesMedicationType_P_ID" ColumnName="DiabetesMedicationType_P_ID" />
+                <ScalarProperty Name="DiabetesMedication_CU_ID" ColumnName="DiabetesMedication_CU_ID" />
+                <ScalarProperty Name="DiabetesDose_CU_ID" ColumnName="DiabetesDose_CU_ID" />
+                <ScalarProperty Name="DiabetesMedicationDuration" ColumnName="DiabetesMedicationDuration" />
+                <ScalarProperty Name="DiabetesTimeDurationType_P_ID" ColumnName="DiabetesTimeDurationType_P_ID" />
+                <ScalarProperty Name="IsHypertension" ColumnName="IsHypertension" />
+                <ScalarProperty Name="IsHypertensionControlled" ColumnName="IsHypertensionControlled" />
+                <ScalarProperty Name="HypertensionMedication_CU_ID" ColumnName="HypertensionMedication_CU_ID" />
+                <ScalarProperty Name="HypertensionDose_CU_ID" ColumnName="HypertensionDose_CU_ID" />
+                <ScalarProperty Name="HypertensionMedicationDuration" ColumnName="HypertensionMedicationDuration" />
+                <ScalarProperty Name="HypertensionTimeDurationType_P_ID" ColumnName="HypertensionTimeDurationType_P_ID" />
+                <ScalarProperty Name="IsDrugAllergy" ColumnName="IsDrugAllergy" />
+                <ScalarProperty Name="TriggerOfDrugAllergy_CU_ID" ColumnName="TriggerOfDrugAllergy_CU_ID" />
+                <ScalarProperty Name="IsHepatitis" ColumnName="IsHepatitis" />
+                <ScalarProperty Name="IsAsthma" ColumnName="IsAsthma" />
                 <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
                 <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
               </MappingFragment>

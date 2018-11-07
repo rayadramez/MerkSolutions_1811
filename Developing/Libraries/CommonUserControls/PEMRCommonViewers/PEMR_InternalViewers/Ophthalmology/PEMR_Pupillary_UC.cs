@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using ApplicationConfiguration;
 using CommonControlLibrary;
 using CommonUserControls.PEMRCommonViewers.PEMR_Interfaces;
+using DevExpress.XtraEditors;
 using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.HitInfo;
 using DevExpress.XtraLayout.Utils;
@@ -20,8 +21,18 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 		public PEMR_Pupillary_UC()
 		{
 			InitializeComponent();
+		}
+
+		public void Initialize()
+		{
 			ClearControls(true);
 			FillControls();
+
+			PEMRBusinessLogic.PEMR_Pupillary = this;
+			CommonViewsActions.Decorate(lkeAbnormalitiesCauses_OD, lkeAbnormalitiesCauses_OS, lkeRAPDCauses_OD,
+				lkeRAPDCauses_OS, spnScotopic_OD, spnScotopic_OS, spnHighPhotopic_OD, spnHighPhotopic_OS,
+				spnLowPhotopic_OD, spnLowPhotopic_OS, spnHighMesopic_OD, spnHighMesopic_OS, spnLowMesopic_OD,
+				spnLowMesopic_OS);
 		}
 
 		#region Implementation of IPEMR_Viewer
@@ -184,20 +195,22 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary == null ||
 				    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary.Count == 0)
 				{
-					Active_VisitTiming_Pupillary = PEMRBusinessLogic.CreateNew_VisitTiming_Pupillary(this,
-						ApplicationStaticConfiguration.ActiveLoginUser.ID, DB_PEMRSavingMode.SaveImmediately);
+					Active_VisitTiming_Pupillary = PEMRBusinessLogic.CreateNew_VisitTiming_Pupillary(this, DB_PEMRSavingMode.SaveImmediately);
 					if (Active_VisitTiming_Pupillary == null)
 						return;
 					if(PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary == null)
 						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary = new List<VisitTiming_Pupillary>();
 					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary.Add(Active_VisitTiming_Pupillary);
+					XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+						MessageBoxIcon.Information);
 				}
 				else
 				{
 					if (Active_VisitTiming_Pupillary == null)
 						return;
-					PEMRBusinessLogic.Update_VisitTiming_Pupillary(this, Active_VisitTiming_Pupillary,
-						ApplicationStaticConfiguration.ActiveLoginUser.ID);
+					if (PEMRBusinessLogic.Update_VisitTiming_Pupillary(this, Active_VisitTiming_Pupillary))
+						XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+							MessageBoxIcon.Information);
 				}
 		}
 

@@ -239,9 +239,9 @@
 			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem47 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem50 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem51 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -415,9 +415,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
@@ -3795,17 +3795,6 @@
 			this.layoutControlItem48.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem48.TextVisible = false;
 			// 
-			// layoutControlItem49
-			// 
-			this.layoutControlItem49.Control = this.btnFullScreen;
-			this.layoutControlItem49.Location = new System.Drawing.Point(967, 3);
-			this.layoutControlItem49.Name = "layoutControlItem49";
-			this.layoutControlItem49.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem49.Size = new System.Drawing.Size(41, 41);
-			this.layoutControlItem49.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem49.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem49.TextVisible = false;
-			// 
 			// layoutControlItem50
 			// 
 			this.layoutControlItem50.Control = this.btnSearchDiagnosis;
@@ -3826,6 +3815,17 @@
 			this.layoutControlItem51.Size = new System.Drawing.Size(110, 41);
 			this.layoutControlItem51.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem51.TextVisible = false;
+			// 
+			// layoutControlItem49
+			// 
+			this.layoutControlItem49.Control = this.btnFullScreen;
+			this.layoutControlItem49.Location = new System.Drawing.Point(967, 3);
+			this.layoutControlItem49.Name = "layoutControlItem49";
+			this.layoutControlItem49.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem49.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem49.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem49.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem49.TextVisible = false;
 			// 
 			// PEMR_ExtraocularMuscles_UC
 			// 
@@ -4010,9 +4010,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).EndInit();
 			this.ResumeLayout(false);
 
 		}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using ApplicationConfiguration;
 using CommonUserControls.PEMRCommonViewers.PEMR_Interfaces;
+using DevExpress.XtraEditors;
 using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.HitInfo;
 using DevExpress.XtraLayout.Utils;
@@ -24,6 +25,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 		private void PEMR_SocialHistory_UC_Load(object sender, EventArgs e)
 		{
 			ClearControls(true);
+			txtGeneralDescription.EnterMoveNextControl = false;
 		}
 
 		public void ClearControls(bool clearAll)
@@ -528,20 +530,22 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			if (PEMRBusinessLogic.ActivePEMRObject != null)
 				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory == null)
 				{
-					Active_VisitTiming_SocialHistory = PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(this,
-						ApplicationStaticConfiguration.ActiveLoginUser.ID, DB_PEMRSavingMode.SaveImmediately);
+					Active_VisitTiming_SocialHistory = PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(this, DB_PEMRSavingMode.SaveImmediately);
 					if (Active_VisitTiming_SocialHistory == null)
 						return;
-					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary == null)
-						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary = new List<VisitTiming_Pupillary>();
+					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory == null)
+						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory = new List<VisitTiming_SocialHistory>();
 					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory.Add(Active_VisitTiming_SocialHistory);
+					XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+						MessageBoxIcon.Information);
 				}
 				else
 				{
 					if (Active_VisitTiming_SocialHistory == null)
 						return;
-					PEMRBusinessLogic.Update_VisitTiming_SocialHistory(this, Active_VisitTiming_SocialHistory,
-						ApplicationStaticConfiguration.ActiveLoginUser.ID);
+					if(PEMRBusinessLogic.Update_VisitTiming_SocialHistory(this, Active_VisitTiming_SocialHistory))
+						XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+							MessageBoxIcon.Information);
 				}
 		}
 

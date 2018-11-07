@@ -45,6 +45,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 		public PEMR_PosteriorSegment_UC()
 		{
 			InitializeComponent();
+			CommonViewsActions.Decorate(lkePosteriorSegmentCategory_OD, lkePosteriorSegmentCategory_OD);
 		}
 
 		private void PEMR_PosteriorSegment_UC_Load(object sender, System.EventArgs e)
@@ -70,6 +71,9 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 				.List_VisitTiming_MainPosteriorSegmentSign[0].GeneralDescription_OD;
 			txtReccommednations_OS.EditValue = PEMRBusinessLogic.ActivePEMRObject
 				.List_VisitTiming_MainPosteriorSegmentSign[0].GeneralDescription_OS;
+
+			AddedPosteriorSegmentSign_OD = null;
+			AddedPosteriorSegmentSign_OS = null;
 			foreach (VisitTiming_PosteriorSegmentSign visitTimingPosterior in PEMRBusinessLogic.ActivePEMRObject
 				.List_VisitTiming_PosteriorSegmentSign.FindAll(item =>
 					!Convert.ToInt32(item.PEMRElementStatus).Equals(Convert.ToInt32(PEMRElementStatus.Removed))))
@@ -95,10 +99,15 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 				}
 			}
 
-			CommonViewsActions.FillGridlookupEdit(lkePosteriorSegmentCategory_OD, AddedPosteriorSegmentSign_OD);
-			CommonViewsActions.FillGridlookupEdit(lkePosteriorSegmentCategory_OS, AddedPosteriorSegmentSign_OS);
+			ClearControls(false);
+			CommonViewsActions.FillListBoxControl(lstAddedPosteriorSegment_OD, AddedPosteriorSegmentSign_OD);
+			CommonViewsActions.FillListBoxControl(lstAddedPosteriorSegment_OS, AddedPosteriorSegmentSign_OS);
+			lstAddedPosteriorSegment_OD.Refresh();
+			lstAddedPosteriorSegment_OS.Refresh();
 			SetCount_OD();
 			SetCount_OS();
+
+			PEMRBusinessLogic.PEMR_PosteriorSegment = this;
 		}
 
 		public void SetCount_OD()
@@ -172,7 +181,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_MainPosteriorSegmentSign>();
 							_mainPosteriorSegmentSign = PEMRBusinessLogic.CreateNew_VisitTiming_MainPosteriorSegmentSign(
 								FurtherDetails_OD,FurtherDetails_OS,
-								ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 								ApplicationStaticConfiguration.PEMRSavingMode);
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainPosteriorSegmentSign.Add(
 								_mainPosteriorSegmentSign);
@@ -194,8 +202,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_PosteriorSegmentSign>();
 						_visitTimingPosteriorSegment = PEMRBusinessLogic.CreateNew_VisitTiming_PosteriorSegmentSign(
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainPosteriorSegmentSign[0], segmentSign,
-							DB_EyeType_p.OD, ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
-							DB_PEMRSavingMode.SaveImmediately);
+							DB_EyeType_p.OD, DB_PEMRSavingMode.SaveImmediately);
 						if (_visitTimingPosteriorSegment != null)
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_PosteriorSegmentSign.Add(
 								_visitTimingPosteriorSegment);
@@ -290,7 +297,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_MainPosteriorSegmentSign>();
 							_mainPosteriorSegmentSign = PEMRBusinessLogic.CreateNew_VisitTiming_MainPosteriorSegmentSign(
 								FurtherDetails_OD,FurtherDetails_OS,
-								ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 								ApplicationStaticConfiguration.PEMRSavingMode);
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainPosteriorSegmentSign.Add(
 								_mainPosteriorSegmentSign);
@@ -312,8 +318,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 								new List<VisitTiming_PosteriorSegmentSign>();
 						_visitTimingPosteriorSegment = PEMRBusinessLogic.CreateNew_VisitTiming_PosteriorSegmentSign(
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainPosteriorSegmentSign[0], segmentSign,
-							DB_EyeType_p.OS, ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
-							DB_PEMRSavingMode.SaveImmediately);
+							DB_EyeType_p.OS, DB_PEMRSavingMode.SaveImmediately);
 						if (_visitTimingPosteriorSegment != null)
 							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_PosteriorSegmentSign.Add(
 								_visitTimingPosteriorSegment);
@@ -384,10 +389,27 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 		private void btnSave_Click(object sender, EventArgs e)
 		{
 			if (PEMRBusinessLogic.ActivePEMRObject != null)
-				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainPosteriorSegmentSign != null &&
-					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainPosteriorSegmentSign.Count > 0)
-					PEMRBusinessLogic.Update_VisitTiming_MainPosteriorSegmentSign(this, _mainPosteriorSegmentSign,
-						ApplicationStaticConfiguration.ActiveLoginUser.ID);
+				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainPosteriorSegmentSign == null ||
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainPosteriorSegmentSign.Count == 0)
+				{
+					_mainPosteriorSegmentSign = PEMRBusinessLogic.CreateNew_VisitTiming_MainPosteriorSegmentSign(FurtherDetails_OD, FurtherDetails_OD,
+						ApplicationStaticConfiguration.PEMRSavingMode);
+					if (_mainPosteriorSegmentSign == null)
+						return;
+					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainPosteriorSegmentSign == null)
+						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainPosteriorSegmentSign = new List<VisitTiming_MainPosteriorSegmentSign>();
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainPosteriorSegmentSign.Add(_mainPosteriorSegmentSign);
+					XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+						MessageBoxIcon.Information);
+				}
+				else
+				{
+					if (_mainPosteriorSegmentSign == null)
+						return;
+					if(PEMRBusinessLogic.Update_VisitTiming_MainPosteriorSegmentSign(this, _mainPosteriorSegmentSign))
+						XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+							MessageBoxIcon.Information);
+				}
 		}
 
 		#endregion

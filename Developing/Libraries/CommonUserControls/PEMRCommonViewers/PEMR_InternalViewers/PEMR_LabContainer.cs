@@ -126,7 +126,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 			VisitTiming_LabReservation labReservation = PEMRBusinessLogic.CreateNew_VisitTiming_LabReservation(
 				lkeServices.EditValue, dtRequestedDate.EditValue, txtDescription.EditValue,
-				ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
 				ApplicationStaticConfiguration.PEMRSavingMode);
 			if (labReservation != null)
 				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_LabReservation.Add(labReservation);

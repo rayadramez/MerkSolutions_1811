@@ -544,14 +544,14 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		public static List<StationPointStage_cu> GetOrganizationMachineStationPointStages(
 			OrganizationMachine_cu organizationMachine, DB_Application application)
 		{
-			if (organizationMachine == null || organizationMachine.StationPoint_CU_ID == null)
+			if (organizationMachine == null || organizationMachine.StationPointStage_CU_ID == null)
 				return null;
 
-			List<StationPointStage_cu> stationPointStages = StationPointStage_cu.ItemsList.FindAll(
-				item => Convert.ToInt32(item.StationPoint_CU_ID)
-					.Equals(Convert.ToInt32(organizationMachine.StationPoint_CU_ID)));
-			return stationPointStages.FindAll(item => Convert.ToInt32(item.ServingApplication_P_ID)
-				                                  .Equals((int) application));
+			List<StationPointStage_cu> stationPointStages = StationPointStage_cu.ItemsList.FindAll(item =>
+				Convert.ToInt32(item.ID)
+					.Equals(Convert.ToInt32(organizationMachine.StationPointStage_CU_ID)));
+			return stationPointStages.FindAll(item =>
+				Convert.ToInt32(item.ServingApplication_P_ID).Equals((int) application));
 		}
 
 		public static PatientAttachment_cu CreateNewPatientAttachement(int patientID, string imageName,

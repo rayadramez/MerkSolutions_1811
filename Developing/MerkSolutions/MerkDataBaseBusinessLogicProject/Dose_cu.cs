@@ -18,6 +18,8 @@ namespace MerkDataBaseBusinessLogicProject
         public Dose_cu()
         {
             this.Medication_Dose_cu = new HashSet<Medication_Dose_cu>();
+            this.VisitTiming_MedicalHistory = new HashSet<VisitTiming_MedicalHistory>();
+            this.VisitTiming_MedicalHistory1 = new HashSet<VisitTiming_MedicalHistory>();
             this.VisitTiming_Medication = new HashSet<VisitTiming_Medication>();
         }
     
@@ -31,6 +33,10 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual User_cu User_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Medication_Dose_cu> Medication_Dose_cu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VisitTiming_MedicalHistory> VisitTiming_MedicalHistory { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VisitTiming_MedicalHistory> VisitTiming_MedicalHistory1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VisitTiming_Medication> VisitTiming_Medication { get; set; }
     }

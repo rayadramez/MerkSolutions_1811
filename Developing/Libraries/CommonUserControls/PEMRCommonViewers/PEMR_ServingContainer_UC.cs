@@ -59,6 +59,8 @@ namespace CommonUserControls.PEMRCommonViewers
 				tabPage.Text = string.Empty;
 
 			CommonViewsActions.ShowUserControl(ref _medicationHistory, tabGeneralHistory);
+			if (_medicationHistory != null)
+				_medicationHistory.Initialize();
 
 			switch (ApplicationStaticConfiguration.Organization)
 			{
@@ -69,6 +71,9 @@ namespace CommonUserControls.PEMRCommonViewers
 					tabOpth_Vision.PageVisible = true;
 					break;
 			}
+
+			if (ApplicationStaticConfiguration.ActiveLoginUser != null)
+				PEMRBusinessLogic.ActiveLoggedInUser = ApplicationStaticConfiguration.ActiveLoginUser;
 		}
 
 		private void chkMenu_CheckedChanged(object sender, EventArgs e)
@@ -148,7 +153,8 @@ namespace CommonUserControls.PEMRCommonViewers
 			switch (result)
 			{
 				case DialogResult.Yes:
-					PEMRBusinessLogic.SavePEMRObject();
+					//PEMRBusinessLogic.SavePEMRObject();
+					PEMRBusinessLogic.UpdateAll(PEMRBusinessLogic.ActivePEMRObject);
 					MerkDBBusinessLogicEngine.UpdateAndSave_QueueManagerStatus(QueueResult.QueueManagerID,
 						DB_QueueManagerStatus.Served);
 					PEMRContainer.ShowLeftQueuePanel(false);
@@ -352,11 +358,16 @@ namespace CommonUserControls.PEMRCommonViewers
 			if (tabExaminationMain.SelectedTabPage.Name == "tabOpth_EOM")
 			{
 				CommonViewsActions.ShowUserControl(ref _extraOcularMuscles, tabOpth_EOM);
-				_extraOcularMuscles.Initialize(ReadingsMode.ViewingActiveAllReadings, null);
+				if (_extraOcularMuscles != null)
+					_extraOcularMuscles.Initialize(ReadingsMode.ViewingActiveAllReadings, null);
 			}
 
 			if (tabExaminationMain.SelectedTabPage.Name == "tabOpth_Pupil")
+			{
 				CommonViewsActions.ShowUserControl(ref _pupillary, tabOpth_Pupil);
+				if (_pupillary != null)
+					_pupillary.Initialize();
+			}
 		}
 
 		private void tabSubServices_MouseHover(object sender, EventArgs e)

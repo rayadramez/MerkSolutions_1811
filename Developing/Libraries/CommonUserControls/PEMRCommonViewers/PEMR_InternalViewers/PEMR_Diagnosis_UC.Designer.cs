@@ -30,47 +30,41 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_Diagnosis_UC));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.chkAll = new DevExpress.XtraEditors.CheckButton();
+			this.chkEye_OS = new DevExpress.XtraEditors.CheckButton();
+			this.chkEye_OD = new DevExpress.XtraEditors.CheckButton();
+			this.chkEye_OU = new DevExpress.XtraEditors.CheckButton();
 			this.chkFinal = new DevExpress.XtraEditors.CheckButton();
 			this.chkDifferential = new DevExpress.XtraEditors.CheckButton();
 			this.chkProvisional = new DevExpress.XtraEditors.CheckButton();
+			this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
+			this.btnAddedDiagnosisFullScreen = new DevExpress.XtraEditors.SimpleButton();
 			this.txtReccommednations = new DevExpress.XtraEditors.MemoEdit();
+			this.btnClearDiagnosisCategories = new DevExpress.XtraEditors.SimpleButton();
+			this.btnClearAddedDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+			this.btnClearDiagnosis = new DevExpress.XtraEditors.SimpleButton();
 			this.lblCount = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
 			this.lstAddedDiagnosis = new DevExpress.XtraEditors.ListBoxControl();
+			this.btnRemoveFromList = new DevExpress.XtraEditors.SimpleButton();
+			this.btnAddList = new DevExpress.XtraEditors.SimpleButton();
+			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
 			this.lstDiagnosis = new DevExpress.XtraEditors.ListBoxControl();
+			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
 			this.lstDiagnosisCategories = new DevExpress.XtraEditors.ListBoxControl();
+			this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
 			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+			this.btnClearDoctorDiagnosis = new DevExpress.XtraEditors.SimpleButton();
 			this.lstDoctorDiagnosis = new DevExpress.XtraEditors.ListBoxControl();
+			this.btnClearDoctorDiagnosisCategories = new DevExpress.XtraEditors.SimpleButton();
 			this.lstDoctorDiagnosisCategories = new DevExpress.XtraEditors.ListBoxControl();
 			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-			this.chkEye_OS = new DevExpress.XtraEditors.CheckButton();
-			this.chkEye_OD = new DevExpress.XtraEditors.CheckButton();
-			this.chkEye_OU = new DevExpress.XtraEditors.CheckButton();
-			this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
-			this.btnAddedDiagnosisFullScreen = new DevExpress.XtraEditors.SimpleButton();
-			this.btnClearDiagnosisCategories = new DevExpress.XtraEditors.SimpleButton();
-			this.btnClearAddedDiagnosis = new DevExpress.XtraEditors.SimpleButton();
-			this.btnClearDiagnosis = new DevExpress.XtraEditors.SimpleButton();
-			this.btnRemoveFromList = new DevExpress.XtraEditors.SimpleButton();
-			this.btnAddList = new DevExpress.XtraEditors.SimpleButton();
-			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
-			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
-			this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-			this.btnClearDoctorDiagnosis = new DevExpress.XtraEditors.SimpleButton();
-			this.btnClearDoctorDiagnosisCategories = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -90,6 +84,10 @@
 			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -100,9 +98,9 @@
 			this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytAddedDiagnosisFullScreen = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -111,25 +109,21 @@
 			this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtReccommednations.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstAddedDiagnosis)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDiagnosis)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDiagnosisCategories)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDoctorDiagnosis)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDoctorDiagnosisCategories)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -149,6 +143,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
@@ -159,9 +157,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAddedDiagnosisFullScreen)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
@@ -170,7 +168,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
@@ -217,6 +217,20 @@
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSave.Location = new System.Drawing.Point(994, 3);
+			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(110, 40);
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.TabIndex = 10;
+			this.btnSave.Text = "simpleButton1";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+			// 
 			// chkAll
 			// 
 			this.chkAll.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
@@ -234,6 +248,66 @@
 			this.chkAll.TabStop = false;
 			this.chkAll.Text = "ALL";
 			this.chkAll.CheckedChanged += new System.EventHandler(this.chkAll_CheckedChanged);
+			// 
+			// chkEye_OS
+			// 
+			this.chkEye_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkEye_OS.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+			this.chkEye_OS.Appearance.Options.UseFont = true;
+			this.chkEye_OS.Appearance.Options.UseForeColor = true;
+			this.chkEye_OS.GroupIndex = 15;
+			this.chkEye_OS.Image = global::CommonUserControls.Properties.Resources.Eye_OS_16_01;
+			this.chkEye_OS.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.chkEye_OS.Location = new System.Drawing.Point(1061, 69);
+			this.chkEye_OS.MaximumSize = new System.Drawing.Size(40, 40);
+			this.chkEye_OS.MinimumSize = new System.Drawing.Size(40, 40);
+			this.chkEye_OS.Name = "chkEye_OS";
+			this.chkEye_OS.Size = new System.Drawing.Size(40, 40);
+			this.chkEye_OS.StyleController = this.layoutControl1;
+			this.chkEye_OS.TabIndex = 19;
+			this.chkEye_OS.TabStop = false;
+			this.chkEye_OS.Text = "Final";
+			this.chkEye_OS.CheckedChanged += new System.EventHandler(this.chkEye_OS_CheckedChanged);
+			// 
+			// chkEye_OD
+			// 
+			this.chkEye_OD.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkEye_OD.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+			this.chkEye_OD.Appearance.Options.UseFont = true;
+			this.chkEye_OD.Appearance.Options.UseForeColor = true;
+			this.chkEye_OD.GroupIndex = 15;
+			this.chkEye_OD.Image = global::CommonUserControls.Properties.Resources.Eye_OD_16_01;
+			this.chkEye_OD.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.chkEye_OD.Location = new System.Drawing.Point(939, 69);
+			this.chkEye_OD.MaximumSize = new System.Drawing.Size(40, 40);
+			this.chkEye_OD.MinimumSize = new System.Drawing.Size(40, 40);
+			this.chkEye_OD.Name = "chkEye_OD";
+			this.chkEye_OD.Size = new System.Drawing.Size(40, 40);
+			this.chkEye_OD.StyleController = this.layoutControl1;
+			this.chkEye_OD.TabIndex = 18;
+			this.chkEye_OD.TabStop = false;
+			this.chkEye_OD.Text = "Final";
+			this.chkEye_OD.CheckedChanged += new System.EventHandler(this.chkEye_OD_CheckedChanged);
+			// 
+			// chkEye_OU
+			// 
+			this.chkEye_OU.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkEye_OU.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+			this.chkEye_OU.Appearance.Options.UseFont = true;
+			this.chkEye_OU.Appearance.Options.UseForeColor = true;
+			this.chkEye_OU.Checked = true;
+			this.chkEye_OU.GroupIndex = 15;
+			this.chkEye_OU.Image = global::CommonUserControls.Properties.Resources.Eye_OU_01_16;
+			this.chkEye_OU.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.chkEye_OU.Location = new System.Drawing.Point(981, 69);
+			this.chkEye_OU.MaximumSize = new System.Drawing.Size(80, 40);
+			this.chkEye_OU.MinimumSize = new System.Drawing.Size(80, 40);
+			this.chkEye_OU.Name = "chkEye_OU";
+			this.chkEye_OU.Size = new System.Drawing.Size(80, 40);
+			this.chkEye_OU.StyleController = this.layoutControl1;
+			this.chkEye_OU.TabIndex = 19;
+			this.chkEye_OU.Text = "Final";
+			this.chkEye_OU.CheckedChanged += new System.EventHandler(this.chkEye_OU_CheckedChanged);
 			// 
 			// chkFinal
 			// 
@@ -286,6 +360,35 @@
 			this.chkProvisional.TabIndex = 15;
 			this.chkProvisional.Text = "Provisional";
 			// 
+			// btnPrint
+			// 
+			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
+			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnPrint.Location = new System.Drawing.Point(761, 3);
+			this.btnPrint.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnPrint.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnPrint.Name = "btnPrint";
+			this.btnPrint.Size = new System.Drawing.Size(110, 40);
+			this.btnPrint.StyleController = this.layoutControl1;
+			this.btnPrint.TabIndex = 7;
+			this.btnPrint.Text = "simpleButton1";
+			// 
+			// btnAddedDiagnosisFullScreen
+			// 
+			this.btnAddedDiagnosisFullScreen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnAddedDiagnosisFullScreen.Appearance.Options.UseFont = true;
+			this.btnAddedDiagnosisFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
+			this.btnAddedDiagnosisFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnAddedDiagnosisFullScreen.Location = new System.Drawing.Point(874, 6);
+			this.btnAddedDiagnosisFullScreen.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnAddedDiagnosisFullScreen.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnAddedDiagnosisFullScreen.Name = "btnAddedDiagnosisFullScreen";
+			this.btnAddedDiagnosisFullScreen.Size = new System.Drawing.Size(35, 35);
+			this.btnAddedDiagnosisFullScreen.StyleController = this.layoutControl1;
+			this.btnAddedDiagnosisFullScreen.TabIndex = 40;
+			this.btnAddedDiagnosisFullScreen.Text = "Add New Diagnosis";
+			this.btnAddedDiagnosisFullScreen.Click += new System.EventHandler(this.btnAddedDiagnosisFullScreen_Click);
+			// 
 			// txtReccommednations
 			// 
 			this.txtReccommednations.EditValue = "";
@@ -306,6 +409,54 @@
 			this.txtReccommednations.StyleController = this.layoutControl1;
 			this.txtReccommednations.TabIndex = 16;
 			this.txtReccommednations.EditValueChanged += new System.EventHandler(this.txtReccommednations_EditValueChanged);
+			// 
+			// btnClearDiagnosisCategories
+			// 
+			this.btnClearDiagnosisCategories.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnClearDiagnosisCategories.Appearance.Options.UseFont = true;
+			this.btnClearDiagnosisCategories.Image = global::CommonUserControls.Properties.Resources.Clear_1_16;
+			this.btnClearDiagnosisCategories.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+			this.btnClearDiagnosisCategories.Location = new System.Drawing.Point(184, 160);
+			this.btnClearDiagnosisCategories.MaximumSize = new System.Drawing.Size(120, 30);
+			this.btnClearDiagnosisCategories.MinimumSize = new System.Drawing.Size(120, 30);
+			this.btnClearDiagnosisCategories.Name = "btnClearDiagnosisCategories";
+			this.btnClearDiagnosisCategories.Size = new System.Drawing.Size(120, 30);
+			this.btnClearDiagnosisCategories.StyleController = this.layoutControl1;
+			this.btnClearDiagnosisCategories.TabIndex = 41;
+			this.btnClearDiagnosisCategories.Text = "Clear Selection";
+			this.btnClearDiagnosisCategories.Click += new System.EventHandler(this.btnClearDiagnosisCategories_Click);
+			// 
+			// btnClearAddedDiagnosis
+			// 
+			this.btnClearAddedDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnClearAddedDiagnosis.Appearance.Options.UseFont = true;
+			this.btnClearAddedDiagnosis.Image = global::CommonUserControls.Properties.Resources.Clear_1_16;
+			this.btnClearAddedDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+			this.btnClearAddedDiagnosis.Location = new System.Drawing.Point(933, 135);
+			this.btnClearAddedDiagnosis.MaximumSize = new System.Drawing.Size(120, 30);
+			this.btnClearAddedDiagnosis.MinimumSize = new System.Drawing.Size(120, 30);
+			this.btnClearAddedDiagnosis.Name = "btnClearAddedDiagnosis";
+			this.btnClearAddedDiagnosis.Size = new System.Drawing.Size(120, 30);
+			this.btnClearAddedDiagnosis.StyleController = this.layoutControl1;
+			this.btnClearAddedDiagnosis.TabIndex = 41;
+			this.btnClearAddedDiagnosis.Text = "Clear Selection";
+			this.btnClearAddedDiagnosis.Click += new System.EventHandler(this.btnClearAddedDiagnosis_Click);
+			// 
+			// btnClearDiagnosis
+			// 
+			this.btnClearDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnClearDiagnosis.Appearance.Options.UseFont = true;
+			this.btnClearDiagnosis.Image = global::CommonUserControls.Properties.Resources.Clear_1_16;
+			this.btnClearDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+			this.btnClearDiagnosis.Location = new System.Drawing.Point(512, 160);
+			this.btnClearDiagnosis.MaximumSize = new System.Drawing.Size(120, 30);
+			this.btnClearDiagnosis.MinimumSize = new System.Drawing.Size(120, 30);
+			this.btnClearDiagnosis.Name = "btnClearDiagnosis";
+			this.btnClearDiagnosis.Size = new System.Drawing.Size(120, 30);
+			this.btnClearDiagnosis.StyleController = this.layoutControl1;
+			this.btnClearDiagnosis.TabIndex = 40;
+			this.btnClearDiagnosis.Text = "Clear Selection";
+			this.btnClearDiagnosis.Click += new System.EventHandler(this.btnClearDiagnosis_Click);
 			// 
 			// lblCount
 			// 
@@ -366,6 +517,48 @@
 			this.lstAddedDiagnosis.StyleController = this.layoutControl1;
 			this.lstAddedDiagnosis.TabIndex = 11;
 			// 
+			// btnRemoveFromList
+			// 
+			this.btnRemoveFromList.Image = global::CommonUserControls.Properties.Resources.RemoveFromList_066;
+			this.btnRemoveFromList.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnRemoveFromList.Location = new System.Drawing.Point(638, 267);
+			this.btnRemoveFromList.MaximumSize = new System.Drawing.Size(40, 80);
+			this.btnRemoveFromList.MinimumSize = new System.Drawing.Size(40, 80);
+			this.btnRemoveFromList.Name = "btnRemoveFromList";
+			this.btnRemoveFromList.Size = new System.Drawing.Size(40, 80);
+			this.btnRemoveFromList.StyleController = this.layoutControl1;
+			this.btnRemoveFromList.TabIndex = 12;
+			this.btnRemoveFromList.Click += new System.EventHandler(this.btnRemoveFromList_Click);
+			// 
+			// btnAddList
+			// 
+			this.btnAddList.Image = global::CommonUserControls.Properties.Resources.AddToLisT_066;
+			this.btnAddList.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnAddList.Location = new System.Drawing.Point(638, 187);
+			this.btnAddList.MaximumSize = new System.Drawing.Size(40, 80);
+			this.btnAddList.MinimumSize = new System.Drawing.Size(40, 80);
+			this.btnAddList.Name = "btnAddList";
+			this.btnAddList.Size = new System.Drawing.Size(40, 80);
+			this.btnAddList.StyleController = this.layoutControl1;
+			this.btnAddList.TabIndex = 11;
+			this.btnAddList.Click += new System.EventHandler(this.btnAddList_Click);
+			// 
+			// btnSearchDiagnosis
+			// 
+			this.btnSearchDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
+			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
+			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSearchDiagnosis.Location = new System.Drawing.Point(956, 6);
+			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
+			this.btnSearchDiagnosis.Size = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.StyleController = this.layoutControl1;
+			this.btnSearchDiagnosis.TabIndex = 39;
+			this.btnSearchDiagnosis.Text = "Add New Diagnosis";
+			this.btnSearchDiagnosis.Click += new System.EventHandler(this.btnSearchDiagnosis_Click);
+			// 
 			// lstDiagnosis
 			// 
 			this.lstDiagnosis.Appearance.BackColor = System.Drawing.SystemColors.Info;
@@ -386,6 +579,21 @@
 			this.lstDiagnosis.SelectedIndexChanged += new System.EventHandler(this.lstDiagnosis_SelectedIndexChanged);
 			this.lstDiagnosis.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstDiagnosis_MouseDoubleClick);
 			// 
+			// btnNewVitalSign
+			// 
+			this.btnNewVitalSign.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnNewVitalSign.Appearance.Options.UseFont = true;
+			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
+			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnNewVitalSign.Location = new System.Drawing.Point(915, 6);
+			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnNewVitalSign.Name = "btnNewVitalSign";
+			this.btnNewVitalSign.Size = new System.Drawing.Size(35, 35);
+			this.btnNewVitalSign.StyleController = this.layoutControl1;
+			this.btnNewVitalSign.TabIndex = 36;
+			this.btnNewVitalSign.Text = "Add New Category";
+			// 
 			// lstDiagnosisCategories
 			// 
 			this.lstDiagnosisCategories.Appearance.BackColor = System.Drawing.SystemColors.Info;
@@ -403,6 +611,17 @@
 			this.lstDiagnosisCategories.StyleController = this.layoutControl1;
 			this.lstDiagnosisCategories.TabIndex = 9;
 			this.lstDiagnosisCategories.SelectedIndexChanged += new System.EventHandler(this.lstDiagnosisCategories_SelectedIndexChanged);
+			// 
+			// pictureEdit1
+			// 
+			this.pictureEdit1.EditValue = global::CommonUserControls.Properties.Resources.Diagnosis_16_01;
+			this.pictureEdit1.Location = new System.Drawing.Point(0, 3);
+			this.pictureEdit1.Name = "pictureEdit1";
+			this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+			this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+			this.pictureEdit1.Size = new System.Drawing.Size(40, 40);
+			this.pictureEdit1.StyleController = this.layoutControl1;
+			this.pictureEdit1.TabIndex = 8;
 			// 
 			// labelControl1
 			// 
@@ -441,6 +660,22 @@
 			this.labelControl2.TabIndex = 7;
 			this.labelControl2.Text = ".... Diagnosis  ....";
 			// 
+			// btnClearDoctorDiagnosis
+			// 
+			this.btnClearDoctorDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnClearDoctorDiagnosis.Appearance.Options.UseFont = true;
+			this.btnClearDoctorDiagnosis.Image = global::CommonUserControls.Properties.Resources.Clear_1_16;
+			this.btnClearDoctorDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+			this.btnClearDoctorDiagnosis.Location = new System.Drawing.Point(512, 135);
+			this.btnClearDoctorDiagnosis.MaximumSize = new System.Drawing.Size(120, 30);
+			this.btnClearDoctorDiagnosis.MinimumSize = new System.Drawing.Size(120, 30);
+			this.btnClearDoctorDiagnosis.Name = "btnClearDoctorDiagnosis";
+			this.btnClearDoctorDiagnosis.Size = new System.Drawing.Size(120, 30);
+			this.btnClearDoctorDiagnosis.StyleController = this.layoutControl1;
+			this.btnClearDoctorDiagnosis.TabIndex = 41;
+			this.btnClearDoctorDiagnosis.Text = "Clear Selection";
+			this.btnClearDoctorDiagnosis.Click += new System.EventHandler(this.btnClearDoctorDiagnosis_Click);
+			// 
 			// lstDoctorDiagnosis
 			// 
 			this.lstDoctorDiagnosis.Appearance.BackColor = System.Drawing.SystemColors.Info;
@@ -460,6 +695,22 @@
 			this.lstDoctorDiagnosis.TabIndex = 11;
 			this.lstDoctorDiagnosis.SelectedIndexChanged += new System.EventHandler(this.lstDoctorDiagnosis_SelectedIndexChanged);
 			this.lstDoctorDiagnosis.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstDoctorDiagnosis_MouseDoubleClick);
+			// 
+			// btnClearDoctorDiagnosisCategories
+			// 
+			this.btnClearDoctorDiagnosisCategories.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnClearDoctorDiagnosisCategories.Appearance.Options.UseFont = true;
+			this.btnClearDoctorDiagnosisCategories.Image = global::CommonUserControls.Properties.Resources.Clear_1_16;
+			this.btnClearDoctorDiagnosisCategories.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+			this.btnClearDoctorDiagnosisCategories.Location = new System.Drawing.Point(184, 135);
+			this.btnClearDoctorDiagnosisCategories.MaximumSize = new System.Drawing.Size(120, 30);
+			this.btnClearDoctorDiagnosisCategories.MinimumSize = new System.Drawing.Size(120, 30);
+			this.btnClearDoctorDiagnosisCategories.Name = "btnClearDoctorDiagnosisCategories";
+			this.btnClearDoctorDiagnosisCategories.Size = new System.Drawing.Size(120, 30);
+			this.btnClearDoctorDiagnosisCategories.StyleController = this.layoutControl1;
+			this.btnClearDoctorDiagnosisCategories.TabIndex = 42;
+			this.btnClearDoctorDiagnosisCategories.Text = "Clear Selection";
+			this.btnClearDoctorDiagnosisCategories.Click += new System.EventHandler(this.btnClearDoctorDiagnosisCategories_Click);
 			// 
 			// lstDoctorDiagnosisCategories
 			// 
@@ -533,308 +784,6 @@
 			this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem2.TextVisible = false;
-			// 
-			// simpleSeparator1
-			// 
-			this.simpleSeparator1.AllowHotTrack = false;
-			this.simpleSeparator1.Location = new System.Drawing.Point(636, 110);
-			this.simpleSeparator1.Name = "simpleSeparator1";
-			this.simpleSeparator1.Size = new System.Drawing.Size(2, 413);
-			// 
-			// emptySpaceItem2
-			// 
-			this.emptySpaceItem2.AllowHotTrack = false;
-			this.emptySpaceItem2.Location = new System.Drawing.Point(638, 347);
-			this.emptySpaceItem2.Name = "emptySpaceItem2";
-			this.emptySpaceItem2.Size = new System.Drawing.Size(43, 176);
-			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// emptySpaceItem5
-			// 
-			this.emptySpaceItem5.AllowHotTrack = false;
-			this.emptySpaceItem5.Location = new System.Drawing.Point(638, 110);
-			this.emptySpaceItem5.Name = "emptySpaceItem5";
-			this.emptySpaceItem5.Size = new System.Drawing.Size(43, 77);
-			this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// simpleSeparator2
-			// 
-			this.simpleSeparator2.AllowHotTrack = false;
-			this.simpleSeparator2.Location = new System.Drawing.Point(681, 110);
-			this.simpleSeparator2.Name = "simpleSeparator2";
-			this.simpleSeparator2.Size = new System.Drawing.Size(2, 413);
-			// 
-			// layoutControlItem3
-			// 
-			this.layoutControlItem3.Control = this.labelControl1;
-			this.layoutControlItem3.Location = new System.Drawing.Point(0, 44);
-			this.layoutControlItem3.MaxSize = new System.Drawing.Size(0, 3);
-			this.layoutControlItem3.MinSize = new System.Drawing.Size(10, 3);
-			this.layoutControlItem3.Name = "layoutControlItem3";
-			this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem3.Size = new System.Drawing.Size(1104, 3);
-			this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem3.TextVisible = false;
-			// 
-			// emptySpaceItem7
-			// 
-			this.emptySpaceItem7.AllowHotTrack = false;
-			this.emptySpaceItem7.Location = new System.Drawing.Point(902, 47);
-			this.emptySpaceItem7.Name = "emptySpaceItem7";
-			this.emptySpaceItem7.Size = new System.Drawing.Size(36, 63);
-			this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// btnSave
-			// 
-			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
-			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSave.Location = new System.Drawing.Point(994, 3);
-			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(110, 40);
-			this.btnSave.StyleController = this.layoutControl1;
-			this.btnSave.TabIndex = 10;
-			this.btnSave.Text = "simpleButton1";
-			this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
-			// 
-			// chkEye_OS
-			// 
-			this.chkEye_OS.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkEye_OS.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-			this.chkEye_OS.Appearance.Options.UseFont = true;
-			this.chkEye_OS.Appearance.Options.UseForeColor = true;
-			this.chkEye_OS.GroupIndex = 15;
-			this.chkEye_OS.Image = global::CommonUserControls.Properties.Resources.Eye_OS_16_01;
-			this.chkEye_OS.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.chkEye_OS.Location = new System.Drawing.Point(1061, 69);
-			this.chkEye_OS.MaximumSize = new System.Drawing.Size(40, 40);
-			this.chkEye_OS.MinimumSize = new System.Drawing.Size(40, 40);
-			this.chkEye_OS.Name = "chkEye_OS";
-			this.chkEye_OS.Size = new System.Drawing.Size(40, 40);
-			this.chkEye_OS.StyleController = this.layoutControl1;
-			this.chkEye_OS.TabIndex = 19;
-			this.chkEye_OS.TabStop = false;
-			this.chkEye_OS.Text = "Final";
-			this.chkEye_OS.CheckedChanged += new System.EventHandler(this.chkEye_OS_CheckedChanged);
-			// 
-			// chkEye_OD
-			// 
-			this.chkEye_OD.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkEye_OD.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-			this.chkEye_OD.Appearance.Options.UseFont = true;
-			this.chkEye_OD.Appearance.Options.UseForeColor = true;
-			this.chkEye_OD.GroupIndex = 15;
-			this.chkEye_OD.Image = global::CommonUserControls.Properties.Resources.Eye_OD_16_01;
-			this.chkEye_OD.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.chkEye_OD.Location = new System.Drawing.Point(939, 69);
-			this.chkEye_OD.MaximumSize = new System.Drawing.Size(40, 40);
-			this.chkEye_OD.MinimumSize = new System.Drawing.Size(40, 40);
-			this.chkEye_OD.Name = "chkEye_OD";
-			this.chkEye_OD.Size = new System.Drawing.Size(40, 40);
-			this.chkEye_OD.StyleController = this.layoutControl1;
-			this.chkEye_OD.TabIndex = 18;
-			this.chkEye_OD.TabStop = false;
-			this.chkEye_OD.Text = "Final";
-			this.chkEye_OD.CheckedChanged += new System.EventHandler(this.chkEye_OD_CheckedChanged);
-			// 
-			// chkEye_OU
-			// 
-			this.chkEye_OU.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkEye_OU.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-			this.chkEye_OU.Appearance.Options.UseFont = true;
-			this.chkEye_OU.Appearance.Options.UseForeColor = true;
-			this.chkEye_OU.Checked = true;
-			this.chkEye_OU.GroupIndex = 15;
-			this.chkEye_OU.Image = global::CommonUserControls.Properties.Resources.Eye_OU_01_16;
-			this.chkEye_OU.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.chkEye_OU.Location = new System.Drawing.Point(981, 69);
-			this.chkEye_OU.MaximumSize = new System.Drawing.Size(80, 40);
-			this.chkEye_OU.MinimumSize = new System.Drawing.Size(80, 40);
-			this.chkEye_OU.Name = "chkEye_OU";
-			this.chkEye_OU.Size = new System.Drawing.Size(80, 40);
-			this.chkEye_OU.StyleController = this.layoutControl1;
-			this.chkEye_OU.TabIndex = 19;
-			this.chkEye_OU.Text = "Final";
-			this.chkEye_OU.CheckedChanged += new System.EventHandler(this.chkEye_OU_CheckedChanged);
-			// 
-			// btnPrint
-			// 
-			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
-			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnPrint.Location = new System.Drawing.Point(761, 3);
-			this.btnPrint.MaximumSize = new System.Drawing.Size(110, 40);
-			this.btnPrint.MinimumSize = new System.Drawing.Size(110, 40);
-			this.btnPrint.Name = "btnPrint";
-			this.btnPrint.Size = new System.Drawing.Size(110, 40);
-			this.btnPrint.StyleController = this.layoutControl1;
-			this.btnPrint.TabIndex = 7;
-			this.btnPrint.Text = "simpleButton1";
-			// 
-			// btnAddedDiagnosisFullScreen
-			// 
-			this.btnAddedDiagnosisFullScreen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnAddedDiagnosisFullScreen.Appearance.Options.UseFont = true;
-			this.btnAddedDiagnosisFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
-			this.btnAddedDiagnosisFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnAddedDiagnosisFullScreen.Location = new System.Drawing.Point(874, 6);
-			this.btnAddedDiagnosisFullScreen.MaximumSize = new System.Drawing.Size(35, 35);
-			this.btnAddedDiagnosisFullScreen.MinimumSize = new System.Drawing.Size(35, 35);
-			this.btnAddedDiagnosisFullScreen.Name = "btnAddedDiagnosisFullScreen";
-			this.btnAddedDiagnosisFullScreen.Size = new System.Drawing.Size(35, 35);
-			this.btnAddedDiagnosisFullScreen.StyleController = this.layoutControl1;
-			this.btnAddedDiagnosisFullScreen.TabIndex = 40;
-			this.btnAddedDiagnosisFullScreen.Text = "Add New Diagnosis";
-			this.btnAddedDiagnosisFullScreen.Click += new System.EventHandler(this.btnAddedDiagnosisFullScreen_Click);
-			// 
-			// btnClearDiagnosisCategories
-			// 
-			this.btnClearDiagnosisCategories.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnClearDiagnosisCategories.Appearance.Options.UseFont = true;
-			this.btnClearDiagnosisCategories.Image = global::CommonUserControls.Properties.Resources.Clear_1_16;
-			this.btnClearDiagnosisCategories.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-			this.btnClearDiagnosisCategories.Location = new System.Drawing.Point(184, 160);
-			this.btnClearDiagnosisCategories.MaximumSize = new System.Drawing.Size(120, 30);
-			this.btnClearDiagnosisCategories.MinimumSize = new System.Drawing.Size(120, 30);
-			this.btnClearDiagnosisCategories.Name = "btnClearDiagnosisCategories";
-			this.btnClearDiagnosisCategories.Size = new System.Drawing.Size(120, 30);
-			this.btnClearDiagnosisCategories.StyleController = this.layoutControl1;
-			this.btnClearDiagnosisCategories.TabIndex = 41;
-			this.btnClearDiagnosisCategories.Text = "Clear Selection";
-			this.btnClearDiagnosisCategories.Click += new System.EventHandler(this.btnClearDiagnosisCategories_Click);
-			// 
-			// btnClearAddedDiagnosis
-			// 
-			this.btnClearAddedDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnClearAddedDiagnosis.Appearance.Options.UseFont = true;
-			this.btnClearAddedDiagnosis.Image = global::CommonUserControls.Properties.Resources.Clear_1_16;
-			this.btnClearAddedDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-			this.btnClearAddedDiagnosis.Location = new System.Drawing.Point(933, 135);
-			this.btnClearAddedDiagnosis.MaximumSize = new System.Drawing.Size(120, 30);
-			this.btnClearAddedDiagnosis.MinimumSize = new System.Drawing.Size(120, 30);
-			this.btnClearAddedDiagnosis.Name = "btnClearAddedDiagnosis";
-			this.btnClearAddedDiagnosis.Size = new System.Drawing.Size(120, 30);
-			this.btnClearAddedDiagnosis.StyleController = this.layoutControl1;
-			this.btnClearAddedDiagnosis.TabIndex = 41;
-			this.btnClearAddedDiagnosis.Text = "Clear Selection";
-			this.btnClearAddedDiagnosis.Click += new System.EventHandler(this.btnClearAddedDiagnosis_Click);
-			// 
-			// btnClearDiagnosis
-			// 
-			this.btnClearDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnClearDiagnosis.Appearance.Options.UseFont = true;
-			this.btnClearDiagnosis.Image = global::CommonUserControls.Properties.Resources.Clear_1_16;
-			this.btnClearDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-			this.btnClearDiagnosis.Location = new System.Drawing.Point(512, 160);
-			this.btnClearDiagnosis.MaximumSize = new System.Drawing.Size(120, 30);
-			this.btnClearDiagnosis.MinimumSize = new System.Drawing.Size(120, 30);
-			this.btnClearDiagnosis.Name = "btnClearDiagnosis";
-			this.btnClearDiagnosis.Size = new System.Drawing.Size(120, 30);
-			this.btnClearDiagnosis.StyleController = this.layoutControl1;
-			this.btnClearDiagnosis.TabIndex = 40;
-			this.btnClearDiagnosis.Text = "Clear Selection";
-			this.btnClearDiagnosis.Click += new System.EventHandler(this.btnClearDiagnosis_Click);
-			// 
-			// btnRemoveFromList
-			// 
-			this.btnRemoveFromList.Image = global::CommonUserControls.Properties.Resources.RemoveFromList_066;
-			this.btnRemoveFromList.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnRemoveFromList.Location = new System.Drawing.Point(638, 267);
-			this.btnRemoveFromList.MaximumSize = new System.Drawing.Size(40, 80);
-			this.btnRemoveFromList.MinimumSize = new System.Drawing.Size(40, 80);
-			this.btnRemoveFromList.Name = "btnRemoveFromList";
-			this.btnRemoveFromList.Size = new System.Drawing.Size(40, 80);
-			this.btnRemoveFromList.StyleController = this.layoutControl1;
-			this.btnRemoveFromList.TabIndex = 12;
-			this.btnRemoveFromList.Click += new System.EventHandler(this.btnRemoveFromList_Click);
-			// 
-			// btnAddList
-			// 
-			this.btnAddList.Image = global::CommonUserControls.Properties.Resources.AddToLisT_066;
-			this.btnAddList.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnAddList.Location = new System.Drawing.Point(638, 187);
-			this.btnAddList.MaximumSize = new System.Drawing.Size(40, 80);
-			this.btnAddList.MinimumSize = new System.Drawing.Size(40, 80);
-			this.btnAddList.Name = "btnAddList";
-			this.btnAddList.Size = new System.Drawing.Size(40, 80);
-			this.btnAddList.StyleController = this.layoutControl1;
-			this.btnAddList.TabIndex = 11;
-			this.btnAddList.Click += new System.EventHandler(this.btnAddList_Click);
-			// 
-			// btnSearchDiagnosis
-			// 
-			this.btnSearchDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
-			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
-			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSearchDiagnosis.Location = new System.Drawing.Point(956, 6);
-			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
-			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
-			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
-			this.btnSearchDiagnosis.Size = new System.Drawing.Size(35, 35);
-			this.btnSearchDiagnosis.StyleController = this.layoutControl1;
-			this.btnSearchDiagnosis.TabIndex = 39;
-			this.btnSearchDiagnosis.Text = "Add New Diagnosis";
-			this.btnSearchDiagnosis.Click += new System.EventHandler(this.btnSearchDiagnosis_Click);
-			// 
-			// btnNewVitalSign
-			// 
-			this.btnNewVitalSign.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnNewVitalSign.Appearance.Options.UseFont = true;
-			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
-			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnNewVitalSign.Location = new System.Drawing.Point(915, 6);
-			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
-			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
-			this.btnNewVitalSign.Name = "btnNewVitalSign";
-			this.btnNewVitalSign.Size = new System.Drawing.Size(35, 35);
-			this.btnNewVitalSign.StyleController = this.layoutControl1;
-			this.btnNewVitalSign.TabIndex = 36;
-			this.btnNewVitalSign.Text = "Add New Category";
-			// 
-			// pictureEdit1
-			// 
-			this.pictureEdit1.EditValue = global::CommonUserControls.Properties.Resources.Diagnosis_16_01;
-			this.pictureEdit1.Location = new System.Drawing.Point(0, 3);
-			this.pictureEdit1.Name = "pictureEdit1";
-			this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-			this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-			this.pictureEdit1.Size = new System.Drawing.Size(40, 40);
-			this.pictureEdit1.StyleController = this.layoutControl1;
-			this.pictureEdit1.TabIndex = 8;
-			// 
-			// btnClearDoctorDiagnosis
-			// 
-			this.btnClearDoctorDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnClearDoctorDiagnosis.Appearance.Options.UseFont = true;
-			this.btnClearDoctorDiagnosis.Image = global::CommonUserControls.Properties.Resources.Clear_1_16;
-			this.btnClearDoctorDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-			this.btnClearDoctorDiagnosis.Location = new System.Drawing.Point(512, 135);
-			this.btnClearDoctorDiagnosis.MaximumSize = new System.Drawing.Size(120, 30);
-			this.btnClearDoctorDiagnosis.MinimumSize = new System.Drawing.Size(120, 30);
-			this.btnClearDoctorDiagnosis.Name = "btnClearDoctorDiagnosis";
-			this.btnClearDoctorDiagnosis.Size = new System.Drawing.Size(120, 30);
-			this.btnClearDoctorDiagnosis.StyleController = this.layoutControl1;
-			this.btnClearDoctorDiagnosis.TabIndex = 41;
-			this.btnClearDoctorDiagnosis.Text = "Clear Selection";
-			this.btnClearDoctorDiagnosis.Click += new System.EventHandler(this.btnClearDoctorDiagnosis_Click);
-			// 
-			// btnClearDoctorDiagnosisCategories
-			// 
-			this.btnClearDoctorDiagnosisCategories.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnClearDoctorDiagnosisCategories.Appearance.Options.UseFont = true;
-			this.btnClearDoctorDiagnosisCategories.Image = global::CommonUserControls.Properties.Resources.Clear_1_16;
-			this.btnClearDoctorDiagnosisCategories.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-			this.btnClearDoctorDiagnosisCategories.Location = new System.Drawing.Point(184, 135);
-			this.btnClearDoctorDiagnosisCategories.MaximumSize = new System.Drawing.Size(120, 30);
-			this.btnClearDoctorDiagnosisCategories.MinimumSize = new System.Drawing.Size(120, 30);
-			this.btnClearDoctorDiagnosisCategories.Name = "btnClearDoctorDiagnosisCategories";
-			this.btnClearDoctorDiagnosisCategories.Size = new System.Drawing.Size(120, 30);
-			this.btnClearDoctorDiagnosisCategories.StyleController = this.layoutControl1;
-			this.btnClearDoctorDiagnosisCategories.TabIndex = 42;
-			this.btnClearDoctorDiagnosisCategories.Text = "Clear Selection";
-			this.btnClearDoctorDiagnosisCategories.Click += new System.EventHandler(this.btnClearDoctorDiagnosisCategories_Click);
 			// 
 			// layoutControlItem4
 			// 
@@ -1079,6 +1028,36 @@
 			this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem8.TextVisible = false;
 			// 
+			// simpleSeparator1
+			// 
+			this.simpleSeparator1.AllowHotTrack = false;
+			this.simpleSeparator1.Location = new System.Drawing.Point(636, 110);
+			this.simpleSeparator1.Name = "simpleSeparator1";
+			this.simpleSeparator1.Size = new System.Drawing.Size(2, 413);
+			// 
+			// emptySpaceItem2
+			// 
+			this.emptySpaceItem2.AllowHotTrack = false;
+			this.emptySpaceItem2.Location = new System.Drawing.Point(638, 347);
+			this.emptySpaceItem2.Name = "emptySpaceItem2";
+			this.emptySpaceItem2.Size = new System.Drawing.Size(43, 176);
+			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem5
+			// 
+			this.emptySpaceItem5.AllowHotTrack = false;
+			this.emptySpaceItem5.Location = new System.Drawing.Point(638, 110);
+			this.emptySpaceItem5.Name = "emptySpaceItem5";
+			this.emptySpaceItem5.Size = new System.Drawing.Size(43, 77);
+			this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// simpleSeparator2
+			// 
+			this.simpleSeparator2.AllowHotTrack = false;
+			this.simpleSeparator2.Location = new System.Drawing.Point(681, 110);
+			this.simpleSeparator2.Name = "simpleSeparator2";
+			this.simpleSeparator2.Size = new System.Drawing.Size(2, 413);
+			// 
 			// layoutControlGroup4
 			// 
 			this.layoutControlGroup4.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -1219,19 +1198,6 @@
 			this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem7.TextVisible = false;
 			// 
-			// layoutControlItem13
-			// 
-			this.layoutControlItem13.AppearanceItemCaption.BackColor = System.Drawing.Color.DimGray;
-			this.layoutControlItem13.AppearanceItemCaption.Options.UseBackColor = true;
-			this.layoutControlItem13.Control = this.btnSearchDiagnosis;
-			this.layoutControlItem13.Location = new System.Drawing.Point(953, 3);
-			this.layoutControlItem13.Name = "layoutControlItem13";
-			this.layoutControlItem13.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem13.Size = new System.Drawing.Size(41, 41);
-			this.layoutControlItem13.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem13.TextVisible = false;
-			// 
 			// lytAddedDiagnosisFullScreen
 			// 
 			this.lytAddedDiagnosisFullScreen.Control = this.btnAddedDiagnosisFullScreen;
@@ -1252,6 +1218,19 @@
 			this.layoutControlItem12.Size = new System.Drawing.Size(110, 41);
 			this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem12.TextVisible = false;
+			// 
+			// layoutControlItem3
+			// 
+			this.layoutControlItem3.Control = this.labelControl1;
+			this.layoutControlItem3.Location = new System.Drawing.Point(0, 44);
+			this.layoutControlItem3.MaxSize = new System.Drawing.Size(0, 3);
+			this.layoutControlItem3.MinSize = new System.Drawing.Size(10, 3);
+			this.layoutControlItem3.Name = "layoutControlItem3";
+			this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem3.Size = new System.Drawing.Size(1104, 3);
+			this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem3.TextVisible = false;
 			// 
 			// layoutControlGroup5
 			// 
@@ -1355,6 +1334,14 @@
 			this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem27.TextVisible = false;
 			// 
+			// emptySpaceItem7
+			// 
+			this.emptySpaceItem7.AllowHotTrack = false;
+			this.emptySpaceItem7.Location = new System.Drawing.Point(902, 47);
+			this.emptySpaceItem7.Name = "emptySpaceItem7";
+			this.emptySpaceItem7.Size = new System.Drawing.Size(36, 63);
+			this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
+			// 
 			// layoutControlItem31
 			// 
 			this.layoutControlItem31.Control = this.btnSave;
@@ -1364,6 +1351,19 @@
 			this.layoutControlItem31.Size = new System.Drawing.Size(110, 41);
 			this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem31.TextVisible = false;
+			// 
+			// layoutControlItem13
+			// 
+			this.layoutControlItem13.AppearanceItemCaption.BackColor = System.Drawing.Color.DimGray;
+			this.layoutControlItem13.AppearanceItemCaption.Options.UseBackColor = true;
+			this.layoutControlItem13.Control = this.btnSearchDiagnosis;
+			this.layoutControlItem13.Location = new System.Drawing.Point(953, 3);
+			this.layoutControlItem13.Name = "layoutControlItem13";
+			this.layoutControlItem13.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem13.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem13.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem13.TextVisible = false;
 			// 
 			// PEMR_Diagnosis_UC
 			// 
@@ -1381,18 +1381,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.lstAddedDiagnosis)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDiagnosis)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDiagnosisCategories)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDoctorDiagnosis)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lstDoctorDiagnosisCategories)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
@@ -1412,6 +1406,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
@@ -1422,9 +1420,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytAddedDiagnosisFullScreen)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
@@ -1433,7 +1431,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
 			this.ResumeLayout(false);
 
 		}

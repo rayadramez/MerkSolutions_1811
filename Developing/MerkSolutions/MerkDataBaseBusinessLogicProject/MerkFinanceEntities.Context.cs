@@ -58,6 +58,8 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual DbSet<Department_JobTitle_cu> Department_JobTitle_cu { get; set; }
         public virtual DbSet<Department_JobTitle_WorkingShiftTitle_cu> Department_JobTitle_WorkingShiftTitle_cu { get; set; }
         public virtual DbSet<DepartmentType_p> DepartmentType_p { get; set; }
+        public virtual DbSet<DiabetedMedicationType_p> DiabetedMedicationType_p { get; set; }
+        public virtual DbSet<DiabetesType_p> DiabetesType_p { get; set; }
         public virtual DbSet<Diagnosis_cu> Diagnosis_cu { get; set; }
         public virtual DbSet<DiagnosisCategory_cu> DiagnosisCategory_cu { get; set; }
         public virtual DbSet<DiagnosisCategory_Diagnosis_cu> DiagnosisCategory_Diagnosis_cu { get; set; }
@@ -217,6 +219,7 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual DbSet<ToBeInserted_cu> ToBeInserted_cu { get; set; }
         public virtual DbSet<TrialBalanceTransaction> TrialBalanceTransactions { get; set; }
         public virtual DbSet<TrialBalanceTransactionType_p> TrialBalanceTransactionType_p { get; set; }
+        public virtual DbSet<TriggerOfDrugAllergy_cu> TriggerOfDrugAllergy_cu { get; set; }
         public virtual DbSet<UncorrectedDistanceVisualAcuity_cu> UncorrectedDistanceVisualAcuity_cu { get; set; }
         public virtual DbSet<UncorrectedDistanceVisualAcuityUnit_p> UncorrectedDistanceVisualAcuityUnit_p { get; set; }
         public virtual DbSet<UnitMeasurment_cu> UnitMeasurment_cu { get; set; }
@@ -246,6 +249,7 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual DbSet<VisitTiming_MainEOMSign> VisitTiming_MainEOMSign { get; set; }
         public virtual DbSet<VisitTiming_MainPosteriorSegmentSign> VisitTiming_MainPosteriorSegmentSign { get; set; }
         public virtual DbSet<VisitTiming_MainSymptoms> VisitTiming_MainSymptoms { get; set; }
+        public virtual DbSet<VisitTiming_MedicalHistory> VisitTiming_MedicalHistory { get; set; }
         public virtual DbSet<VisitTiming_Medication> VisitTiming_Medication { get; set; }
         public virtual DbSet<VisitTiming_PosteriorSegmentSign> VisitTiming_PosteriorSegmentSign { get; set; }
         public virtual DbSet<VisitTiming_Pupillary> VisitTiming_Pupillary { get; set; }

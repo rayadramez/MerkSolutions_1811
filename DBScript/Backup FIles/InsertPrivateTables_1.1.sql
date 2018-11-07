@@ -467,6 +467,21 @@ INSERT INTO dbo.Eye_p( ID, Name_P, Name_S, Description)VALUES  ( 1,N'OS',N'OS',N
 ,(3, N'OU',N'OU',NULL)
 -- ///////////// END :: Eye_p
 
+-- ///////////// BEGIN :: DiabetesType_p
+PRINT 'DiabetesType_p'
+IF NOT EXISTS (SELECT 1 FROM [dbo].DiabetesType_p WHERE ID BETWEEN 1 AND 2)
+INSERT INTO dbo.DiabetesType_p( ID, Name_P, Name_S, Description)VALUES  ( 1,N'Type 1',N'Type 1',NULL)
+,(2, N'Type 2',N'Type 2',NULL)
+-- ///////////// END :: DiabetesType_p
+
+-- ///////////// BEGIN :: DiabetedMedicationType_p
+PRINT 'DiabetedMedicationType_p'
+IF NOT EXISTS (SELECT 1 FROM [dbo].DiabetedMedicationType_p WHERE ID BETWEEN 1 AND 3)
+INSERT INTO dbo.DiabetedMedicationType_p( ID, Name_P, Name_S, Description)VALUES  ( 1,N'Both',N'Both',NULL)
+,(2, N'Tablets',N'Tablets',NULL)
+,(3, N'Insulin',N'Insulin',NULL)
+-- ///////////// END :: DiabetedMedicationType_p
+
 -- ///////////// BEGIN :: PupillarySize_p
 PRINT 'PupillarySize_p'
 IF NOT EXISTS (SELECT 1 FROM [dbo].PupillarySize_p WHERE ID BETWEEN 1 AND 3)
