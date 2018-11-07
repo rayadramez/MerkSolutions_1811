@@ -33,6 +33,7 @@ namespace MerkDataBaseBusinessLogicProject
             this.VisitTiming_TreatmentPlan = new HashSet<VisitTiming_TreatmentPlan>();
             this.VisitTiming_VisionRefractionReading = new HashSet<VisitTiming_VisionRefractionReading>();
             this.VisitTiming_VitalSign = new HashSet<VisitTiming_VitalSign>();
+            this.VisitTiming_SocialHistory = new HashSet<VisitTiming_SocialHistory>();
         }
     
         public int ID { get; set; }
@@ -82,6 +83,7 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual ICollection<VisitTiming_VisionRefractionReading> VisitTiming_VisionRefractionReading { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VisitTiming_VitalSign> VisitTiming_VitalSign { get; set; }
-        public virtual VisitTiming_SocialHistory VisitTiming_SocialHistory { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VisitTiming_SocialHistory> VisitTiming_SocialHistory { get; set; }
     }
 }

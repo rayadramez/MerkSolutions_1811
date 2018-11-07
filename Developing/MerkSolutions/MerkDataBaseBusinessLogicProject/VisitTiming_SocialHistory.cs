@@ -14,6 +14,7 @@ namespace MerkDataBaseBusinessLogicProject
     
     public partial class VisitTiming_SocialHistory
     {
+        public int ID { get; set; }
         public int VisitTimingID { get; set; }
         public Nullable<bool> NegativeSocialHistory { get; set; }
         public Nullable<bool> DidYouEverSmoke { get; set; }

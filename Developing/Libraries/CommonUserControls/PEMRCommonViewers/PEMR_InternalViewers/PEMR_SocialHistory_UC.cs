@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using ApplicationConfiguration;
 using CommonUserControls.PEMRCommonViewers.PEMR_Interfaces;
 using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.HitInfo;
 using DevExpress.XtraLayout.Utils;
+using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.PEMRBusinessLogic;
 
@@ -12,6 +14,8 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 {
 	public partial class PEMR_SocialHistory_UC : UserControl, IPEMR_SocialHistory, IPEMR_Viewer
 	{
+		public VisitTiming_SocialHistory Active_VisitTiming_SocialHistory { get; set; }
+
 		public PEMR_SocialHistory_UC()
 		{
 			InitializeComponent();
@@ -61,58 +65,42 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 		private void txtGeneralDescription_EditValueChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkSmoke_DetailsButton_CheckedChanged(object sender, EventArgs e)
 		{
 			lytSmoke_Details.Visibility =
 				chkSmoke_DetailsButton.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void btnQuitSmoke_DetailsButton_CheckedChanged(object sender, EventArgs e)
 		{
 			lytQuitSmoking_Details.Visibility = btnQuitSmoke_DetailsButton.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkAlcohol_DetailsButton_CheckedChanged(object sender, EventArgs e)
 		{
 			lytQuitAlcohol_Details.Visibility = chkAlcohol_DetailsButton.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkProblemAlcohol_DetailsButton_CheckedChanged(object sender, EventArgs e)
 		{
 			lytProblemAlcohol_Details.Visibility = chkProblemAlcohol_DetailsButton.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkAddiction_DetailsButton_CheckedChanged(object sender, EventArgs e)
 		{
 			lytAddiction_Details.Visibility = chkAddiction_DetailsButton.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void btnProblemAddiction_DetailsButton_CheckedChanged(object sender, EventArgs e)
 		{
 			lytProblemAddiction_Details.Visibility = btnProblemAddiction_DetailsButton.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkDrugs_Details_CheckedChanged(object sender, EventArgs e)
 		{
 			lytDrugs_Details.Visibility = chkDrugs_Details.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		#endregion
@@ -138,8 +126,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 				: Properties.Resources.RoundedPoint_6_01;
 			NumberOfPacks = null;
 			NumberOfYears = null;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkAlcohol_Yes_CheckedChanged(object sender, EventArgs e)
@@ -156,8 +142,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			lytContainer_Alcohol.CaptionImage = DrinkAlcohol != null && Convert.ToBoolean(DrinkAlcohol)
 				? Properties.Resources.AcceptIcon_16_02
 				: Properties.Resources.RoundedPoint_6_01;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkProblemAlcohol_Yes_CheckedChanged(object sender, EventArgs e)
@@ -174,8 +158,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 				HadProblemWithAlcohol != null && Convert.ToBoolean(HadProblemWithAlcohol)
 					? Properties.Resources.AcceptIcon_16_02
 					: Properties.Resources.RoundedPoint_6_01;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkAddiction_Yes_CheckedChanged(object sender, EventArgs e)
@@ -189,8 +171,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			lytContainer_Addiction.CaptionImage = Addicted != null && Convert.ToBoolean(Addicted)
 				? Properties.Resources.AcceptIcon_16_02
 				: Properties.Resources.RoundedPoint_6_01;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkProblemAddiction_Yes_CheckedChanged(object sender, EventArgs e)
@@ -201,8 +181,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			lytContainer_AddictionProblem.CaptionImage = HadProblemWithAddiction != null && Convert.ToBoolean(HadProblemWithAddiction)
 				? Properties.Resources.AcceptIcon_16_02
 				: Properties.Resources.RoundedPoint_6_01;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkDrugs_Yes_CheckedChanged(object sender, EventArgs e)
@@ -213,8 +191,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			lytContainer_RecreationalDrugs.CaptionImage = UseRecreationalDrugs != null && Convert.ToBoolean(UseRecreationalDrugs)
 				? Properties.Resources.AcceptIcon_16_02
 				: Properties.Resources.RoundedPoint_6_01;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		#endregion
@@ -242,8 +218,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			lytContainer_Smoke.CaptionImage = DidYouEverSmoke != null && !Convert.ToBoolean(DidYouEverSmoke)
 				? Properties.Resources.RejectIcon_16_01
 				: Properties.Resources.RoundedPoint_6_01;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkAlcohol_No_CheckedChanged(object sender, EventArgs e)
@@ -261,8 +235,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 				? Properties.Resources.RejectIcon_16_01
 				: Properties.Resources.RoundedPoint_6_01;
 			chkAlcohol_DetailsButton.Checked = false;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkProblemAlcohol_No_CheckedChanged(object sender, EventArgs e)
@@ -277,8 +249,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 				? Properties.Resources.RejectIcon_16_01
 				: Properties.Resources.RoundedPoint_6_01;
 			chkProblemAlcohol_DetailsButton.Checked = false;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkAddiction_No_CheckedChanged(object sender, EventArgs e)
@@ -293,8 +263,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 				? Properties.Resources.RejectIcon_16_01
 				: Properties.Resources.RoundedPoint_6_01;
 			chkAddiction_DetailsButton.Checked = false;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkProblemAddiction_No_CheckedChanged(object sender, EventArgs e)
@@ -306,8 +274,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 				? Properties.Resources.RejectIcon_16_01
 				: Properties.Resources.RoundedPoint_6_01;
 			btnProblemAddiction_DetailsButton.Checked = false;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkDrugs_No_CheckedChanged(object sender, EventArgs e)
@@ -319,8 +285,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 				? Properties.Resources.RejectIcon_16_01
 				: Properties.Resources.RoundedPoint_6_01;
 			chkDrugs_Details.Checked = false;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		#endregion
@@ -361,26 +325,18 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			lytContainer_Addiction.CaptionImage = Properties.Resources.RoundedPoint_6_01;
 			lytContainer_AddictionProblem.CaptionImage = Properties.Resources.RoundedPoint_6_01;
 			lytContainer_RecreationalDrugs.CaptionImage = Properties.Resources.RoundedPoint_6_01;
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkQuitSmoke_LessThan_CheckedChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkQuitSmoke_Bet_CheckedChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void chkQuitSmoke_MoreThan_CheckedChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-				ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 		#endregion
 
@@ -390,44 +346,30 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 		private void txtSmoke_Details_EditValueChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void txtQuitSmoke_Details_EditValueChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void txtAlcohol_Details_EditValueChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void txtProblemAlcohol_Details_EditValueChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void txtAddiction_Details_EditValueChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void txtProblemAddiction_Details_EditValueChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void txtDrugs_Details_EditValueChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		#endregion
@@ -436,26 +378,18 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 		private void spnNumberOfYearsSmoke_EditValueChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void spnNumberOfDailyPacks_EditValueChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void spnAlcohol_HowMuch_EditValueChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		private void spnProblemAlcohol_When_EditValueChanged(object sender, EventArgs e)
 		{
-			PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(PEMRBusinessLogic.ActiveVisitTimming, this,
-													 ApplicationStaticConfiguration.ActiveLoginUser.ID);
 		}
 
 		#endregion
@@ -864,5 +798,27 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 		}
 
 		#endregion
+
+		private void btnSave_Click(object sender, EventArgs e)
+		{
+			if (PEMRBusinessLogic.ActivePEMRObject != null)
+				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory == null)
+				{
+					Active_VisitTiming_SocialHistory = PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(this,
+						ApplicationStaticConfiguration.ActiveLoginUser.ID, DB_PEMRSavingMode.SaveImmediately);
+					if (Active_VisitTiming_SocialHistory == null)
+						return;
+					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary == null)
+						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary = new List<VisitTiming_Pupillary>();
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory.Add(Active_VisitTiming_SocialHistory);
+				}
+				else
+				{
+					if (Active_VisitTiming_SocialHistory == null)
+						return;
+					PEMRBusinessLogic.Update_VisitTiming_SocialHistory(this, Active_VisitTiming_SocialHistory,
+						ApplicationStaticConfiguration.ActiveLoginUser.ID);
+				}
+		}
 	}
 }

@@ -31,6 +31,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_TreatmentPlan_UC));
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.btnAddedDiagnosisFullScreen = new DevExpress.XtraEditors.SimpleButton();
 			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
 			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
@@ -70,11 +71,10 @@
 			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtTreatmentPlanDetails.Properties)).BeginInit();
@@ -103,8 +103,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -136,6 +136,19 @@
 			this.layoutControl1.Size = new System.Drawing.Size(843, 528);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
+			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSave.Location = new System.Drawing.Point(733, 3);
+			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(110, 40);
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.TabIndex = 17;
+			this.btnSave.Text = "simpleButton1";
 			// 
 			// btnAddedDiagnosisFullScreen
 			// 
@@ -206,14 +219,11 @@
 			this.txtTreatmentPlanDetails.Properties.Appearance.Options.UseBackColor = true;
 			this.txtTreatmentPlanDetails.Properties.Appearance.Options.UseFont = true;
 			this.txtTreatmentPlanDetails.Properties.Appearance.Options.UseForeColor = true;
-			this.txtTreatmentPlanDetails.Properties.Appearance.Options.UseTextOptions = true;
-			this.txtTreatmentPlanDetails.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
 			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.ForeColor = System.Drawing.Color.Navy;
 			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.Options.UseFont = true;
 			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.Options.UseForeColor = true;
-			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.Options.UseTextOptions = true;
-			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			this.txtTreatmentPlanDetails.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.txtTreatmentPlanDetails.Size = new System.Drawing.Size(837, 156);
 			this.txtTreatmentPlanDetails.StyleController = this.layoutControl1;
 			this.txtTreatmentPlanDetails.TabIndex = 15;
@@ -684,6 +694,17 @@
 			this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem13.TextVisible = false;
 			// 
+			// layoutControlItem15
+			// 
+			this.layoutControlItem15.Control = this.btnAddedDiagnosisFullScreen;
+			this.layoutControlItem15.Location = new System.Drawing.Point(610, 3);
+			this.layoutControlItem15.Name = "layoutControlItem15";
+			this.layoutControlItem15.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem15.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem15.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem15.TextVisible = false;
+			// 
 			// layoutControlItem14
 			// 
 			this.layoutControlItem14.Control = this.btnSearchDiagnosis;
@@ -695,16 +716,15 @@
 			this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem14.TextVisible = false;
 			// 
-			// layoutControlItem15
+			// layoutControlItem16
 			// 
-			this.layoutControlItem15.Control = this.btnAddedDiagnosisFullScreen;
-			this.layoutControlItem15.Location = new System.Drawing.Point(610, 3);
-			this.layoutControlItem15.Name = "layoutControlItem15";
-			this.layoutControlItem15.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem15.Size = new System.Drawing.Size(41, 41);
-			this.layoutControlItem15.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem15.TextVisible = false;
+			this.layoutControlItem16.Control = this.btnSave;
+			this.layoutControlItem16.Location = new System.Drawing.Point(733, 3);
+			this.layoutControlItem16.Name = "layoutControlItem16";
+			this.layoutControlItem16.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem16.Size = new System.Drawing.Size(110, 41);
+			this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem16.TextVisible = false;
 			// 
 			// labelControl4
 			// 
@@ -722,29 +742,6 @@
 			this.labelControl4.StyleController = this.layoutControl1;
 			this.labelControl4.TabIndex = 8;
 			this.labelControl4.Text = ".... Diagnosis  ....";
-			// 
-			// btnSave
-			// 
-			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
-			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSave.Location = new System.Drawing.Point(733, 3);
-			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(110, 40);
-			this.btnSave.StyleController = this.layoutControl1;
-			this.btnSave.TabIndex = 17;
-			this.btnSave.Text = "simpleButton1";
-			// 
-			// layoutControlItem16
-			// 
-			this.layoutControlItem16.Control = this.btnSave;
-			this.layoutControlItem16.Location = new System.Drawing.Point(733, 3);
-			this.layoutControlItem16.Name = "layoutControlItem16";
-			this.layoutControlItem16.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem16.Size = new System.Drawing.Size(110, 41);
-			this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem16.TextVisible = false;
 			// 
 			// PEMR_TreatmentPlan_UC
 			// 
@@ -784,8 +781,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
 			this.ResumeLayout(false);
 

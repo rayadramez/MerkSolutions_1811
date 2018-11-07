@@ -17,7 +17,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		public Patient_cu Active_Patient { get; set; }
 		public VisitTiming Active_VisitTiming { get; set; }
 		public List<VisitTiming> Active_List_VisitTiming { get; set; }
-		public VisitTiming_SocialHistory Active_VisitTiming_SocialHistory { get; set; }
+		public List<VisitTiming_SocialHistory> List_VisitTiming_SocialHistory { get; set; }
 		public List<VisitTiming_TreatmentPlan> List_VisitTiming_TreatmentPlan { get; set; }
 		public List<VisitTiming_Attachment> List_VisitTiming_Attachment { get; set; }
 		public List<VisitTiming_InvestigationReservation> List_VisitTiming_InvestigationReservation { get; set; }

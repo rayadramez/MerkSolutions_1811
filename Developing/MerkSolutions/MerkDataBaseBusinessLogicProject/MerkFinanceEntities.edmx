@@ -2692,8 +2692,9 @@
         </EntityType>
         <EntityType Name="VisitTiming_SocialHistory">
           <Key>
-            <PropertyRef Name="VisitTimingID" />
+            <PropertyRef Name="ID" />
           </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="VisitTimingID" Type="int" Nullable="false" />
           <Property Name="NegativeSocialHistory" Type="bit" />
           <Property Name="DidYouEverSmoke" Type="bit" />
@@ -9013,7 +9014,7 @@
         </Association>
         <Association Name="FK_VisitTimming_SocialHistory_VisitTiming">
           <End Role="VisitTiming" Type="Self.VisitTiming" Multiplicity="1" />
-          <End Role="VisitTiming_SocialHistory" Type="Self.VisitTiming_SocialHistory" Multiplicity="0..1" />
+          <End Role="VisitTiming_SocialHistory" Type="Self.VisitTiming_SocialHistory" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VisitTiming">
               <PropertyRef Name="ID" />
@@ -15152,8 +15153,9 @@
         </EntityType>
         <EntityType Name="VisitTiming_SocialHistory">
           <Key>
-            <PropertyRef Name="VisitTimingID" />
+            <PropertyRef Name="ID" />
           </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="VisitTimingID" Type="Int32" Nullable="false" />
           <Property Name="NegativeSocialHistory" Type="Boolean" />
           <Property Name="DidYouEverSmoke" Type="Boolean" />
@@ -21361,7 +21363,7 @@
         </Association>
         <Association Name="FK_VisitTimming_SocialHistory_VisitTiming">
           <End Role="VisitTiming" Type="Self.VisitTiming" Multiplicity="1" />
-          <End Role="VisitTiming_SocialHistory" Type="Self.VisitTiming_SocialHistory" Multiplicity="0..1" />
+          <End Role="VisitTiming_SocialHistory" Type="Self.VisitTiming_SocialHistory" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VisitTiming">
               <PropertyRef Name="ID" />
@@ -27038,6 +27040,7 @@
           <EntitySetMapping Name="VisitTiming_SocialHistory">
             <EntityTypeMapping TypeName="MerkFinanceModel.VisitTiming_SocialHistory">
               <MappingFragment StoreEntitySet="VisitTiming_SocialHistory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="VisitTimingID" ColumnName="VisitTimingID" />
                 <ScalarProperty Name="NegativeSocialHistory" ColumnName="NegativeSocialHistory" />
                 <ScalarProperty Name="DidYouEverSmoke" ColumnName="DidYouEverSmoke" />

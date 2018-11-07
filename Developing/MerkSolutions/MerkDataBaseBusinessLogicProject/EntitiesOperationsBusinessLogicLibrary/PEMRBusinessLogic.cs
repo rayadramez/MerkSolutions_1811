@@ -67,18 +67,18 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 			#region VisitTiming_Pupillary
 
-			List<VisitTiming_Pupillary> list_visitTiming_Pupillary = DBCommon.DBContext_External.VisitTiming_Pupillary
+			List<VisitTiming_Pupillary> list_VisitTiming_Pupillary = DBCommon.DBContext_External.VisitTiming_Pupillary
 				.Where(item =>
 					item.VisitTimingID.Equals(visitTiming.ID) && item.IsOnDuty).ToList();
-			if (list_visitTiming_Pupillary != null && list_visitTiming_Pupillary.Count > 0)
+			if (list_VisitTiming_Pupillary != null && list_VisitTiming_Pupillary.Count > 0)
 			{
 				if (newPEMR.List_VisitTiming_Pupillary == null)
 					newPEMR.List_VisitTiming_Pupillary = new List<VisitTiming_Pupillary>();
-				newPEMR.List_VisitTiming_Pupillary.AddRange(list_visitTiming_Pupillary);
+				newPEMR.List_VisitTiming_Pupillary.AddRange(list_VisitTiming_Pupillary);
 
 				if (visitTiming.List_VisitTiming_Pupillary == null)
 					visitTiming.List_VisitTiming_Pupillary = new List<VisitTiming_Pupillary>();
-				visitTiming.List_VisitTiming_Pupillary.AddRange(list_visitTiming_Pupillary);
+				visitTiming.List_VisitTiming_Pupillary.AddRange(list_VisitTiming_Pupillary);
 
 				foreach (VisitTiming_Pupillary visitTiming_Pupillary in newPEMR.List_VisitTiming_Pupillary)
 					visitTiming_Pupillary.PEMRElementStatus = PEMRElementStatus.AlreadyExists;
@@ -301,7 +301,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 			#endregion
 
-			#region Medications List
+			#region VisitTiming_Medication
 			List<VisitTiming_Medication> visitTimingMedicationsList = DBCommon.DBContext_External.VisitTiming_Medication
 				.Where(item => item.VisitTimingID.Equals(visitTiming.ID) && item.IsOnDuty).ToList();
 			if (visitTimingMedicationsList != null && visitTimingMedicationsList.Count > 0)
@@ -319,7 +319,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			}
 			#endregion
 
-			#region Main Diagnosis List
+			#region VisitTiming_MainDiagnosis
 			List<VisitTiming_MainDiagnosis> visitTimingMainDiagnosisList = DBCommon.DBContext_External.VisitTiming_MainDiagnosis
 				.Where(item => item.VisitTimingID.Equals(visitTiming.ID) && item.IsOnDuty).ToList();
 			if (visitTimingMainDiagnosisList != null && visitTimingMainDiagnosisList.Count > 0)
@@ -337,7 +337,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			}
 			#endregion
 
-			#region Diagnosis List
+			#region VisitTiming_Diagnosis
 			List<VisitTiming_Diagnosis> visitTimingDiagnosisList = null;
 			if (visitTimingMainDiagnosisList != null && visitTimingMainDiagnosisList.Count > 0)
 			{
@@ -361,7 +361,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			}
 			#endregion
 
-			#region Investigations Reservations List
+			#region VisitTiming_InvestigationReservation
 			List<VisitTiming_InvestigationReservation> visitTimingInvestigationReservations =
 				DBCommon.DBContext_External.VisitTiming_InvestigationReservation
 					.Where(item => item.VisitTimingID.Equals(visitTiming.ID) && item.IsOnDuty).ToList();
@@ -382,7 +382,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			}
 			#endregion
 
-			#region Labs Reservations List
+			#region VisitTiming_LabReservation
 			List<VisitTiming_LabReservation> visitTimingLabReservations =
 				DBCommon.DBContext_External.VisitTiming_LabReservation
 					.Where(item => item.VisitTimingID.Equals(visitTiming.ID) && item.IsOnDuty).ToList();
@@ -403,7 +403,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			}
 			#endregion
 
-			#region Surgeries Reservations List
+			#region VisitTiming_SurgeryReservation
 			List<VisitTiming_SurgeryReservation> visitTimingSurgeryReservations =
 				DBCommon.DBContext_External.VisitTiming_SurgeryReservation
 					.Where(item => item.VisitTimingID.Equals(visitTiming.ID) && item.IsOnDuty).ToList();
@@ -423,7 +423,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			}
 			#endregion
 
-			#region Treatment Plans List
+			#region VisitTiming_TreatmentPlan
 
 			List<VisitTiming_TreatmentPlan> visitTimingTreatmentPlans = DBCommon.DBContext_External
 				.VisitTiming_TreatmentPlan.Where(item => item.VisitTimingID.Equals(visitTiming.ID) && item.IsOnDuty)
@@ -444,20 +444,28 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 			#endregion
 
-			#region Social Histories List
-			List<VisitTiming_SocialHistory> visitTimingSocialHistories = null;
-			if (visitTiming.VisitTiming_SocialHistory != null)
+			#region VisitTiming_SocialHistory
+
+			List<VisitTiming_SocialHistory> list_VisitTiming_SocialHistory = DBCommon.DBContext_External.VisitTiming_SocialHistory
+				.Where(item =>
+					item.VisitTimingID.Equals(visitTiming.ID) && item.IsOnDuty).ToList();
+			if (list_VisitTiming_SocialHistory != null && list_VisitTiming_SocialHistory.Count > 0)
 			{
-				visitTimingSocialHistories = new List<VisitTiming_SocialHistory>();
-				if (visitTiming.VisitTiming_SocialHistory.IsOnDuty)
-				{
-					visitTimingSocialHistories.Add(visitTiming.VisitTiming_SocialHistory);
-					newPEMR.Active_VisitTiming_SocialHistory = visitTiming.VisitTiming_SocialHistory;
-				}
+				if (newPEMR.List_VisitTiming_SocialHistory == null)
+					newPEMR.List_VisitTiming_SocialHistory = new List<VisitTiming_SocialHistory>();
+				newPEMR.List_VisitTiming_SocialHistory.AddRange(list_VisitTiming_SocialHistory);
+
+				if (visitTiming.List_VisitTiming_SocialHistory == null)
+					visitTiming.List_VisitTiming_SocialHistory = new List<VisitTiming_SocialHistory>();
+				visitTiming.List_VisitTiming_SocialHistory.AddRange(list_VisitTiming_SocialHistory);
+
+				foreach (VisitTiming_SocialHistory visitTiming_SocialHistory in newPEMR.List_VisitTiming_SocialHistory)
+					visitTiming_SocialHistory.PEMRElementStatus = PEMRElementStatus.AlreadyExists;
 			}
+
 			#endregion
 
-			#region Attachments List
+			#region VisitTiming_Attachment
 			List<VisitTiming_Attachment> visitTimingAttachementsList = DBCommon.DBContext_External
 				.VisitTiming_Attachment.Where(item => item.VisitTimingID.Equals(visitTiming.ID) && item.IsOnDuty).ToList();
 			if (visitTimingAttachementsList != null && visitTimingAttachementsList.Count > 0)
@@ -470,7 +478,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			}
 			#endregion
 
-			#region Investigations Results List
+			#region VisitTiming_InvestigationResult
 			List<VisitTiming_InvestigationResult> visitTimingInvestigationResults = null;
 			if (visitTimingInvestigationReservations.Count > 0)
 			{
@@ -495,7 +503,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			}
 			#endregion
 
-			#region Labs Results List
+			#region VisitTiming_LabResult
 			List<VisitTiming_LabResult> visitTimingLabsResults = null;
 			if (visitTimingLabReservations.Count > 0)
 			{
@@ -520,7 +528,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			}
 			#endregion
 
-			#region Surgery Results List
+			#region VisitTiming_SurgeryResult
 			List<VisitTiming_SurgeryResult> visitTimingSurgerysResults = null;
 			if (visitTimingLabReservations.Count > 0)
 			{
@@ -1100,6 +1108,162 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 		#endregion
 
+		#region Create Pupillary
+
+		public static VisitTiming_SocialHistory CreateNew_VisitTiming_SocialHistory(
+			IPEMR_SocialHistory pemrSocialHistory, int userID, DB_PEMRSavingMode savingMode)
+		{
+			if (pemrSocialHistory == null)
+				return null;
+			VisitTiming_SocialHistory visit_SOcialHistory = null;
+			switch (savingMode)
+			{
+				case DB_PEMRSavingMode.PostponeSaving:
+					return CreateNew_VisitTiming_SocialHistory(pemrSocialHistory, userID);
+				case DB_PEMRSavingMode.SaveImmediately:
+					visit_SOcialHistory = CreateNew_VisitTiming_SocialHistory(
+						ActivePEMRObject.Active_VisitTiming, pemrSocialHistory, userID);
+					if (visit_SOcialHistory == null ||
+						!Save_VisitTiming_SocialHistory(visit_SOcialHistory))
+						return null;
+					return visit_SOcialHistory;
+			}
+			return null;
+		}
+
+		public static VisitTiming_SocialHistory CreateNew_VisitTiming_SocialHistory(
+			VisitTiming visitTiming, IPEMR_SocialHistory pemrSocialHistory, int userID)
+		{
+			if (visitTiming == null || pemrSocialHistory == null)
+				return null;
+			VisitTiming_SocialHistory visit_SOcialHistory = CreateNew_VisitTiming_SocialHistory(pemrSocialHistory, userID);
+			if (visit_SOcialHistory == null)
+				return null;
+			visit_SOcialHistory.VisitTimingID = visitTiming.ID;
+			return visit_SOcialHistory;
+		}
+
+		public static VisitTiming_SocialHistory CreateNew_VisitTiming_SocialHistory(
+			IPEMR_SocialHistory pemrSocialHistory, int userID)
+		{
+			if (pemrSocialHistory == null)
+				return null;
+			VisitTiming_SocialHistory visitTimmingSocialHistory =
+				DBCommon.CreateNewDBEntity<VisitTiming_SocialHistory>();
+
+			if (pemrSocialHistory.GeneralDescription != null &&
+				!string.IsNullOrEmpty(pemrSocialHistory.GeneralDescription.ToString()) &&
+				!string.IsNullOrWhiteSpace(pemrSocialHistory.GeneralDescription.ToString()))
+				visitTimmingSocialHistory.GeneralDescription =
+					pemrSocialHistory.GeneralDescription.ToString();
+
+			if (pemrSocialHistory.NegativeSocialHistory != null &&
+				Convert.ToBoolean(pemrSocialHistory.NegativeSocialHistory))
+				visitTimmingSocialHistory.NegativeSocialHistory =
+					Convert.ToBoolean(pemrSocialHistory.NegativeSocialHistory);
+
+			if (pemrSocialHistory.DidYouEverSmoke != null)
+				visitTimmingSocialHistory.DidYouEverSmoke =
+					Convert.ToBoolean(pemrSocialHistory.DidYouEverSmoke);
+
+			if (pemrSocialHistory.NumberOfPacks != null)
+				visitTimmingSocialHistory.NumberOfPacks =
+					Convert.ToDouble(pemrSocialHistory.NumberOfPacks);
+
+			if (pemrSocialHistory.NumberOfYears != null)
+				visitTimmingSocialHistory.NumberOfYears =
+					Convert.ToDouble(pemrSocialHistory.NumberOfYears);
+
+			if (pemrSocialHistory.SmokeFurtherDetails != null &&
+				!string.IsNullOrEmpty(pemrSocialHistory.SmokeFurtherDetails.ToString()) &&
+				!string.IsNullOrWhiteSpace(pemrSocialHistory.SmokeFurtherDetails.ToString()))
+				visitTimmingSocialHistory.SmokeFurtherDetails =
+					pemrSocialHistory.SmokeFurtherDetails.ToString();
+
+			if (pemrSocialHistory.QuitingSmokeLessThan != null)
+				visitTimmingSocialHistory.QuitingSmokeLessThan =
+					Convert.ToBoolean(pemrSocialHistory.QuitingSmokeLessThan);
+
+			if (pemrSocialHistory.QuitingSmokeBetween != null)
+				visitTimmingSocialHistory.QuitingSmokeBetween =
+					Convert.ToBoolean(pemrSocialHistory.QuitingSmokeBetween);
+
+			if (pemrSocialHistory.QuitingSmokeMoreThan != null)
+				visitTimmingSocialHistory.QuitingSmokeMoreThan =
+					Convert.ToBoolean(pemrSocialHistory.QuitingSmokeMoreThan);
+
+			if (pemrSocialHistory.QuitingSmokeFurtherDetails != null &&
+				!string.IsNullOrEmpty(pemrSocialHistory.QuitingSmokeFurtherDetails.ToString()) &&
+				!string.IsNullOrWhiteSpace(pemrSocialHistory.QuitingSmokeFurtherDetails.ToString()))
+				visitTimmingSocialHistory.QuitingSmokeFurtherDetails =
+					pemrSocialHistory.QuitingSmokeFurtherDetails.ToString();
+
+			if (pemrSocialHistory.DrinkAlcohol != null)
+				visitTimmingSocialHistory.DrinkAlcohol =
+					Convert.ToBoolean(pemrSocialHistory.DrinkAlcohol);
+
+			if (pemrSocialHistory.HowMuchAlcohol != null)
+				visitTimmingSocialHistory.HowMuchAlcohol =
+					Convert.ToDouble(pemrSocialHistory.HowMuchAlcohol);
+
+			if (pemrSocialHistory.AlcoholFurtherDetails != null &&
+				!string.IsNullOrEmpty(pemrSocialHistory.AlcoholFurtherDetails.ToString()) &&
+				!string.IsNullOrWhiteSpace(pemrSocialHistory.AlcoholFurtherDetails.ToString()))
+				visitTimmingSocialHistory.AlcoholFurtherDetails =
+					pemrSocialHistory.AlcoholFurtherDetails.ToString();
+
+			if (pemrSocialHistory.HadProblemWithAlcohol != null)
+				visitTimmingSocialHistory.HadProblemWithAlcohol =
+					Convert.ToBoolean(pemrSocialHistory.HadProblemWithAlcohol);
+
+			if (pemrSocialHistory.WhenHadProblemWIthAlcohol != null)
+				visitTimmingSocialHistory.WhenHadProblemWIthAlcohol =
+					Convert.ToDouble(pemrSocialHistory.WhenHadProblemWIthAlcohol);
+
+			if (pemrSocialHistory.HadProblemWithAlcoholFurtherDetails != null &&
+				!string.IsNullOrEmpty(pemrSocialHistory.HadProblemWithAlcoholFurtherDetails.ToString()) &&
+				!string.IsNullOrWhiteSpace(pemrSocialHistory.HadProblemWithAlcoholFurtherDetails.ToString()))
+				visitTimmingSocialHistory.HadProblemWithAlcoholFurtherDetails =
+					pemrSocialHistory.HadProblemWithAlcoholFurtherDetails.ToString();
+
+			if (pemrSocialHistory.Addicted != null)
+				visitTimmingSocialHistory.Addicted =
+					Convert.ToBoolean(pemrSocialHistory.Addicted);
+
+			if (pemrSocialHistory.AddictionFurtherDetails != null &&
+				!string.IsNullOrEmpty(pemrSocialHistory.AddictionFurtherDetails.ToString()) &&
+				!string.IsNullOrWhiteSpace(pemrSocialHistory.AddictionFurtherDetails.ToString()))
+				visitTimmingSocialHistory.AddictionFurtherDetails =
+					pemrSocialHistory.AddictionFurtherDetails.ToString();
+
+			if (pemrSocialHistory.HadProblemWithAddiction != null)
+				visitTimmingSocialHistory.HadProblemWithAddiction =
+					Convert.ToBoolean(pemrSocialHistory.HadProblemWithAddiction);
+
+			if (pemrSocialHistory.HadProblemWithAddictionFurtherDetails != null &&
+				!string.IsNullOrEmpty(pemrSocialHistory.HadProblemWithAddictionFurtherDetails.ToString()) &&
+				!string.IsNullOrWhiteSpace(pemrSocialHistory.HadProblemWithAddictionFurtherDetails.ToString()))
+				visitTimmingSocialHistory.HadProblemWithAddictionFurtherDetails =
+					pemrSocialHistory.HadProblemWithAddictionFurtherDetails.ToString();
+
+			if (pemrSocialHistory.UseRecreationalDrugs != null)
+				visitTimmingSocialHistory.UseRecreationalDrugs =
+					Convert.ToBoolean(pemrSocialHistory.UseRecreationalDrugs);
+
+			if (pemrSocialHistory.UseRecreationalDrugsFurtherDetails != null &&
+				!string.IsNullOrEmpty(pemrSocialHistory.UseRecreationalDrugsFurtherDetails.ToString()) &&
+				!string.IsNullOrWhiteSpace(pemrSocialHistory.UseRecreationalDrugsFurtherDetails.ToString()))
+				visitTimmingSocialHistory.UseRecreationalDrugsFurtherDetails =
+					pemrSocialHistory.UseRecreationalDrugsFurtherDetails.ToString();
+
+			visitTimmingSocialHistory.IsOnDuty = true;
+			visitTimmingSocialHistory.InsertedBy = userID;
+			visitTimmingSocialHistory.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
+			return visitTimmingSocialHistory;
+		}
+
+		#endregion
+
 		#region Create VisionRefractionReadings
 
 		public static VisitTiming_VisionRefractionReading CreateNew_VisitTiming_VisionRefractionReading(
@@ -1533,206 +1697,6 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		#endregion
-
-		public static VisitTiming_SocialHistory CreateNew_VisitTiming_SocialHistory(VisitTiming visitTiming,
-			IPEMR_SocialHistory socialHitoryObject, int userID)
-		{
-			if (visitTiming == null || socialHitoryObject == null)
-				return null;
-
-			VisitTiming_SocialHistory visitTimmingSocialHistory =
-				DBCommon.CreateNewDBEntity<VisitTiming_SocialHistory>();
-
-			if (socialHitoryObject.GeneralDescription != null &&
-				!string.IsNullOrEmpty(socialHitoryObject.GeneralDescription.ToString()) &&
-				!string.IsNullOrWhiteSpace(socialHitoryObject.GeneralDescription.ToString()))
-				visitTimmingSocialHistory.GeneralDescription =
-					socialHitoryObject.GeneralDescription.ToString();
-
-			if (socialHitoryObject.NegativeSocialHistory != null &&
-				Convert.ToBoolean(socialHitoryObject.NegativeSocialHistory))
-				visitTimmingSocialHistory.NegativeSocialHistory =
-					Convert.ToBoolean(socialHitoryObject.NegativeSocialHistory);
-
-			if (socialHitoryObject.DidYouEverSmoke != null)
-				visitTimmingSocialHistory.DidYouEverSmoke =
-					Convert.ToBoolean(socialHitoryObject.DidYouEverSmoke);
-
-			if (socialHitoryObject.NumberOfPacks != null)
-				visitTimmingSocialHistory.NumberOfPacks =
-					Convert.ToDouble(socialHitoryObject.NumberOfPacks);
-
-			if (socialHitoryObject.NumberOfYears != null)
-				visitTimmingSocialHistory.NumberOfYears =
-					Convert.ToDouble(socialHitoryObject.NumberOfYears);
-
-			if (socialHitoryObject.SmokeFurtherDetails != null &&
-				!string.IsNullOrEmpty(socialHitoryObject.SmokeFurtherDetails.ToString()) &&
-				!string.IsNullOrWhiteSpace(socialHitoryObject.SmokeFurtherDetails.ToString()))
-				visitTimmingSocialHistory.SmokeFurtherDetails =
-					socialHitoryObject.SmokeFurtherDetails.ToString();
-
-			if (socialHitoryObject.QuitingSmokeLessThan != null)
-				visitTimmingSocialHistory.QuitingSmokeLessThan =
-					Convert.ToBoolean(socialHitoryObject.QuitingSmokeLessThan);
-
-			if (socialHitoryObject.QuitingSmokeBetween != null)
-				visitTimmingSocialHistory.QuitingSmokeBetween =
-					Convert.ToBoolean(socialHitoryObject.QuitingSmokeBetween);
-
-			if (socialHitoryObject.QuitingSmokeMoreThan != null)
-				visitTimmingSocialHistory.QuitingSmokeMoreThan =
-					Convert.ToBoolean(socialHitoryObject.QuitingSmokeMoreThan);
-
-			if (socialHitoryObject.QuitingSmokeFurtherDetails != null &&
-				!string.IsNullOrEmpty(socialHitoryObject.QuitingSmokeFurtherDetails.ToString()) &&
-				!string.IsNullOrWhiteSpace(socialHitoryObject.QuitingSmokeFurtherDetails.ToString()))
-				visitTimmingSocialHistory.QuitingSmokeFurtherDetails =
-					socialHitoryObject.QuitingSmokeFurtherDetails.ToString();
-
-			if (socialHitoryObject.DrinkAlcohol != null)
-				visitTimmingSocialHistory.DrinkAlcohol =
-					Convert.ToBoolean(socialHitoryObject.DrinkAlcohol);
-
-			if (socialHitoryObject.HowMuchAlcohol != null)
-				visitTimmingSocialHistory.HowMuchAlcohol =
-					Convert.ToDouble(socialHitoryObject.HowMuchAlcohol);
-
-			if (socialHitoryObject.AlcoholFurtherDetails != null &&
-				!string.IsNullOrEmpty(socialHitoryObject.AlcoholFurtherDetails.ToString()) &&
-				!string.IsNullOrWhiteSpace(socialHitoryObject.AlcoholFurtherDetails.ToString()))
-				visitTimmingSocialHistory.AlcoholFurtherDetails =
-					socialHitoryObject.AlcoholFurtherDetails.ToString();
-
-			if (socialHitoryObject.HadProblemWithAlcohol != null)
-				visitTimmingSocialHistory.HadProblemWithAlcohol =
-					Convert.ToBoolean(socialHitoryObject.HadProblemWithAlcohol);
-
-			if (socialHitoryObject.WhenHadProblemWIthAlcohol != null)
-				visitTimmingSocialHistory.WhenHadProblemWIthAlcohol =
-					Convert.ToDouble(socialHitoryObject.WhenHadProblemWIthAlcohol);
-
-			if (socialHitoryObject.HadProblemWithAlcoholFurtherDetails != null &&
-				!string.IsNullOrEmpty(socialHitoryObject.HadProblemWithAlcoholFurtherDetails.ToString()) &&
-				!string.IsNullOrWhiteSpace(socialHitoryObject.HadProblemWithAlcoholFurtherDetails.ToString()))
-				visitTimmingSocialHistory.HadProblemWithAlcoholFurtherDetails =
-					socialHitoryObject.HadProblemWithAlcoholFurtherDetails.ToString();
-
-			if (socialHitoryObject.Addicted != null)
-				visitTimmingSocialHistory.Addicted =
-					Convert.ToBoolean(socialHitoryObject.Addicted);
-
-			if (socialHitoryObject.AddictionFurtherDetails != null &&
-				!string.IsNullOrEmpty(socialHitoryObject.AddictionFurtherDetails.ToString()) &&
-				!string.IsNullOrWhiteSpace(socialHitoryObject.AddictionFurtherDetails.ToString()))
-				visitTimmingSocialHistory.AddictionFurtherDetails =
-					socialHitoryObject.AddictionFurtherDetails.ToString();
-
-			if (socialHitoryObject.HadProblemWithAddiction != null)
-				visitTimmingSocialHistory.HadProblemWithAddiction =
-					Convert.ToBoolean(socialHitoryObject.HadProblemWithAddiction);
-
-			if (socialHitoryObject.HadProblemWithAddictionFurtherDetails != null &&
-				!string.IsNullOrEmpty(socialHitoryObject.HadProblemWithAddictionFurtherDetails.ToString()) &&
-				!string.IsNullOrWhiteSpace(socialHitoryObject.HadProblemWithAddictionFurtherDetails.ToString()))
-				visitTimmingSocialHistory.HadProblemWithAddictionFurtherDetails =
-					socialHitoryObject.HadProblemWithAddictionFurtherDetails.ToString();
-
-			if (socialHitoryObject.UseRecreationalDrugs != null)
-				visitTimmingSocialHistory.UseRecreationalDrugs =
-					Convert.ToBoolean(socialHitoryObject.UseRecreationalDrugs);
-
-			if (socialHitoryObject.UseRecreationalDrugsFurtherDetails != null &&
-				!string.IsNullOrEmpty(socialHitoryObject.UseRecreationalDrugsFurtherDetails.ToString()) &&
-				!string.IsNullOrWhiteSpace(socialHitoryObject.UseRecreationalDrugsFurtherDetails.ToString()))
-				visitTimmingSocialHistory.UseRecreationalDrugsFurtherDetails =
-					socialHitoryObject.UseRecreationalDrugsFurtherDetails.ToString();
-
-			visitTimmingSocialHistory.IsOnDuty = true;
-			visitTimmingSocialHistory.InsertedBy = userID;
-			visitTimmingSocialHistory.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
-
-			visitTiming.VisitTiming_SocialHistory = visitTimmingSocialHistory;
-			ActivePEMRObject.Active_VisitTiming_SocialHistory = visitTimmingSocialHistory;
-			return visitTimmingSocialHistory;
-		}
-
-		public static VisitTiming_SocialHistory CreateNewSocialHistory(int visitTimingID,
-			IPEMR_SocialHistory socialHitoryObject, int userID)
-		{
-			if (socialHitoryObject == null)
-				return null;
-			VisitTiming_SocialHistory visitTimmingSocialHistory =
-				DBCommon.CreateNewDBEntity<VisitTiming_SocialHistory>();
-
-			if (socialHitoryObject.NegativeSocialHistory != null)
-				visitTimmingSocialHistory.NegativeSocialHistory =
-					Convert.ToBoolean(socialHitoryObject.NegativeSocialHistory);
-			if (socialHitoryObject.DidYouEverSmoke != null)
-				visitTimmingSocialHistory.DidYouEverSmoke =
-					Convert.ToBoolean(socialHitoryObject.DidYouEverSmoke);
-			if (socialHitoryObject.NumberOfPacks != null)
-				visitTimmingSocialHistory.NumberOfPacks =
-					Convert.ToDouble(socialHitoryObject.NumberOfPacks);
-			if (socialHitoryObject.NumberOfYears != null)
-				visitTimmingSocialHistory.NumberOfYears =
-					Convert.ToDouble(socialHitoryObject.NumberOfYears);
-			if (socialHitoryObject.SmokeFurtherDetails != null)
-				visitTimmingSocialHistory.SmokeFurtherDetails =
-					socialHitoryObject.SmokeFurtherDetails.ToString();
-			if (socialHitoryObject.QuitingSmokeLessThan != null)
-				visitTimmingSocialHistory.QuitingSmokeLessThan =
-					Convert.ToBoolean(socialHitoryObject.QuitingSmokeLessThan);
-			if (socialHitoryObject.QuitingSmokeBetween != null)
-				visitTimmingSocialHistory.QuitingSmokeBetween =
-					Convert.ToBoolean(socialHitoryObject.QuitingSmokeBetween);
-			if (socialHitoryObject.QuitingSmokeMoreThan != null)
-				visitTimmingSocialHistory.QuitingSmokeMoreThan =
-					Convert.ToBoolean(socialHitoryObject.QuitingSmokeMoreThan);
-			if (socialHitoryObject.QuitingSmokeFurtherDetails != null)
-				visitTimmingSocialHistory.QuitingSmokeFurtherDetails =
-					socialHitoryObject.QuitingSmokeFurtherDetails.ToString();
-			if (socialHitoryObject.DrinkAlcohol != null)
-				visitTimmingSocialHistory.DrinkAlcohol =
-					Convert.ToBoolean(socialHitoryObject.DrinkAlcohol);
-			if (socialHitoryObject.HowMuchAlcohol != null)
-				visitTimmingSocialHistory.HowMuchAlcohol =
-					Convert.ToDouble(socialHitoryObject.HowMuchAlcohol);
-			if (socialHitoryObject.AlcoholFurtherDetails != null)
-				visitTimmingSocialHistory.AlcoholFurtherDetails =
-					socialHitoryObject.AlcoholFurtherDetails.ToString();
-			if (socialHitoryObject.HadProblemWithAlcohol != null)
-				visitTimmingSocialHistory.HadProblemWithAlcohol =
-					Convert.ToBoolean(socialHitoryObject.HadProblemWithAlcohol);
-			if (socialHitoryObject.WhenHadProblemWIthAlcohol != null)
-				visitTimmingSocialHistory.WhenHadProblemWIthAlcohol =
-					Convert.ToDouble(socialHitoryObject.WhenHadProblemWIthAlcohol);
-			if (socialHitoryObject.HadProblemWithAlcoholFurtherDetails != null)
-				visitTimmingSocialHistory.HadProblemWithAlcoholFurtherDetails =
-					socialHitoryObject.HadProblemWithAlcoholFurtherDetails.ToString();
-			if (socialHitoryObject.Addicted != null)
-				visitTimmingSocialHistory.Addicted =
-					Convert.ToBoolean(socialHitoryObject.Addicted);
-			if (socialHitoryObject.AddictionFurtherDetails != null)
-				visitTimmingSocialHistory.AddictionFurtherDetails =
-					socialHitoryObject.AddictionFurtherDetails.ToString();
-			if (socialHitoryObject.HadProblemWithAddiction != null)
-				visitTimmingSocialHistory.HadProblemWithAddiction =
-					Convert.ToBoolean(socialHitoryObject.HadProblemWithAddiction);
-			if (socialHitoryObject.HadProblemWithAddictionFurtherDetails != null)
-				visitTimmingSocialHistory.HadProblemWithAddictionFurtherDetails =
-					socialHitoryObject.HadProblemWithAddictionFurtherDetails.ToString();
-			if (socialHitoryObject.UseRecreationalDrugs != null)
-				visitTimmingSocialHistory.UseRecreationalDrugs =
-					Convert.ToBoolean(socialHitoryObject.UseRecreationalDrugs);
-			if (socialHitoryObject.UseRecreationalDrugsFurtherDetails != null)
-				visitTimmingSocialHistory.UseRecreationalDrugsFurtherDetails =
-					socialHitoryObject.UseRecreationalDrugsFurtherDetails.ToString();
-			visitTimmingSocialHistory.IsOnDuty = true;
-			visitTimmingSocialHistory.InsertedBy = userID;
-			visitTimmingSocialHistory.VisitTimingID = visitTimingID;
-			return visitTimmingSocialHistory;
-		}
 
 		public static VisitTiming_TreatmentPlan CreateNew_VisitTiming_TreatmentPlan(object treatmentPlanDetails,
 			object orderIndex, int userID)
@@ -2457,6 +2421,75 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 				visitTiming_EOMSign.SaveChanges();
 			}
 			return true;
+		}
+
+		#endregion
+
+		#region Social History
+
+		public static bool Update_VisitTiming_SocialHistory(IPEMR_SocialHistory socialHistory,
+			VisitTiming_SocialHistory visitTiming_SocialHistory, int userID)
+		{
+			if (socialHistory == null || visitTiming_SocialHistory == null)
+				return false;
+
+			if (socialHistory.NegativeSocialHistory != null)
+				visitTiming_SocialHistory.NegativeSocialHistory =
+					Convert.ToBoolean(socialHistory.NegativeSocialHistory);
+			if (socialHistory.GeneralDescription != null)
+				visitTiming_SocialHistory.GeneralDescription = socialHistory.GeneralDescription.ToString();
+			if (socialHistory.DidYouEverSmoke != null)
+				visitTiming_SocialHistory.DidYouEverSmoke = Convert.ToBoolean(socialHistory.DidYouEverSmoke);
+			if (socialHistory.NumberOfPacks != null)
+				visitTiming_SocialHistory.NumberOfPacks = Convert.ToInt32(socialHistory.NumberOfPacks);
+			if (socialHistory.NumberOfYears != null)
+				visitTiming_SocialHistory.NumberOfYears = Convert.ToInt32(socialHistory.NumberOfYears);
+			if (socialHistory.SmokeFurtherDetails != null)
+				visitTiming_SocialHistory.SmokeFurtherDetails = socialHistory.SmokeFurtherDetails.ToString();
+			if (socialHistory.QuitingSmokeLessThan != null)
+				visitTiming_SocialHistory.QuitingSmokeLessThan = Convert.ToBoolean(socialHistory.QuitingSmokeLessThan);
+			if (socialHistory.QuitingSmokeBetween != null)
+				visitTiming_SocialHistory.QuitingSmokeBetween = Convert.ToBoolean(socialHistory.QuitingSmokeBetween);
+			if (socialHistory.QuitingSmokeMoreThan != null)
+				visitTiming_SocialHistory.QuitingSmokeMoreThan = Convert.ToBoolean(socialHistory.QuitingSmokeMoreThan);
+			if (socialHistory.QuitingSmokeFurtherDetails != null)
+				visitTiming_SocialHistory.QuitingSmokeFurtherDetails =
+					socialHistory.QuitingSmokeFurtherDetails.ToString();
+			if (socialHistory.DrinkAlcohol != null)
+				visitTiming_SocialHistory.DrinkAlcohol = Convert.ToBoolean(socialHistory.DrinkAlcohol);
+			if (socialHistory.HowMuchAlcohol != null)
+				visitTiming_SocialHistory.HowMuchAlcohol = Convert.ToInt32(socialHistory.HowMuchAlcohol);
+			if (socialHistory.AlcoholFurtherDetails != null)
+				visitTiming_SocialHistory.AlcoholFurtherDetails = socialHistory.AlcoholFurtherDetails.ToString();
+			if (socialHistory.HadProblemWithAlcohol != null)
+				visitTiming_SocialHistory.HadProblemWithAlcohol =
+					Convert.ToBoolean(socialHistory.HadProblemWithAlcohol);
+			if (socialHistory.WhenHadProblemWIthAlcohol != null)
+				visitTiming_SocialHistory.WhenHadProblemWIthAlcohol =
+					Convert.ToInt32(socialHistory.WhenHadProblemWIthAlcohol);
+			if (socialHistory.HadProblemWithAlcoholFurtherDetails != null)
+				visitTiming_SocialHistory.HadProblemWithAlcoholFurtherDetails =
+					socialHistory.HadProblemWithAlcoholFurtherDetails.ToString();
+			if (socialHistory.Addicted != null)
+				visitTiming_SocialHistory.Addicted = Convert.ToBoolean(socialHistory.Addicted);
+			if (socialHistory.AddictionFurtherDetails != null)
+				visitTiming_SocialHistory.AddictionFurtherDetails = socialHistory.AddictionFurtherDetails.ToString();
+			if (socialHistory.HadProblemWithAddiction != null)
+				visitTiming_SocialHistory.HadProblemWithAddiction =
+					Convert.ToBoolean(socialHistory.HadProblemWithAddiction);
+			if (socialHistory.HadProblemWithAddictionFurtherDetails != null)
+				visitTiming_SocialHistory.HadProblemWithAddictionFurtherDetails =
+					socialHistory.HadProblemWithAddictionFurtherDetails.ToString();
+			if (socialHistory.UseRecreationalDrugs != null)
+				visitTiming_SocialHistory.UseRecreationalDrugs = Convert.ToBoolean(socialHistory.UseRecreationalDrugs);
+			if (socialHistory.UseRecreationalDrugsFurtherDetails != null)
+				visitTiming_SocialHistory.UseRecreationalDrugsFurtherDetails =
+					socialHistory.UseRecreationalDrugsFurtherDetails.ToString();
+			visitTiming_SocialHistory.IsOnDuty = true;
+			visitTiming_SocialHistory.InsertedBy = userID;
+			visitTiming_SocialHistory.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
+			visitTiming_SocialHistory.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
+			return visitTiming_SocialHistory.SaveChanges();
 		}
 
 		#endregion

@@ -28,14 +28,18 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_SocialHistory_UC));
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_SocialHistory_UC));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.txtGeneralDescription = new DevExpress.XtraEditors.MemoEdit();
+			this.btnFullScreen = new DevExpress.XtraEditors.SimpleButton();
+			this.btnSettings = new DevExpress.XtraEditors.SimpleButton();
+			this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
-			this.txtGeneralDescription = new DevExpress.XtraEditors.TextEdit();
 			this.txtAddiction_Details = new DevExpress.XtraEditors.TextEdit();
 			this.chkAddiction_No = new DevExpress.XtraEditors.CheckButton();
 			this.chkAddiction_Yes = new DevExpress.XtraEditors.CheckButton();
@@ -142,17 +146,13 @@
 			this.lytProblemAddiction_Details = new DevExpress.XtraLayout.LayoutControlItem();
 			this.simpleSeparator14 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator8 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.simpleSeparator13 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.btnSettings = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.btnFullScreen = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtGeneralDescription.Properties)).BeginInit();
@@ -236,23 +236,23 @@
 			((System.ComponentModel.ISupportInitialize)(this.lytProblemAddiction_Details)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator14)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator8)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator13)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.txtGeneralDescription);
 			this.layoutControl1.Controls.Add(this.btnFullScreen);
 			this.layoutControl1.Controls.Add(this.btnSettings);
 			this.layoutControl1.Controls.Add(this.btnSearch);
 			this.layoutControl1.Controls.Add(this.btnSave);
 			this.layoutControl1.Controls.Add(this.btnPrint);
-			this.layoutControl1.Controls.Add(this.txtGeneralDescription);
 			this.layoutControl1.Controls.Add(this.txtAddiction_Details);
 			this.layoutControl1.Controls.Add(this.chkAddiction_No);
 			this.layoutControl1.Controls.Add(this.chkAddiction_Yes);
@@ -297,6 +297,65 @@
 			this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
 			this.layoutControl1.Root = this.layoutControlGroup1;
 			// 
+			// txtGeneralDescription
+			// 
+			resources.ApplyResources(this.txtGeneralDescription, "txtGeneralDescription");
+			this.txtGeneralDescription.Name = "txtGeneralDescription";
+			this.txtGeneralDescription.Properties.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("txtGeneralDescription.Properties.Appearance.BackColor")));
+			this.txtGeneralDescription.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("txtGeneralDescription.Properties.Appearance.Font")));
+			this.txtGeneralDescription.Properties.Appearance.ForeColor = ((System.Drawing.Color)(resources.GetObject("txtGeneralDescription.Properties.Appearance.ForeColor")));
+			this.txtGeneralDescription.Properties.Appearance.Options.UseBackColor = true;
+			this.txtGeneralDescription.Properties.Appearance.Options.UseFont = true;
+			this.txtGeneralDescription.Properties.Appearance.Options.UseForeColor = true;
+			this.txtGeneralDescription.Properties.AppearanceDisabled.Font = ((System.Drawing.Font)(resources.GetObject("txtGeneralDescription.Properties.AppearanceDisabled.Font")));
+			this.txtGeneralDescription.Properties.AppearanceDisabled.Options.UseFont = true;
+			this.txtGeneralDescription.Properties.AppearanceFocused.Font = ((System.Drawing.Font)(resources.GetObject("txtGeneralDescription.Properties.AppearanceFocused.Font")));
+			this.txtGeneralDescription.Properties.AppearanceFocused.ForeColor = ((System.Drawing.Color)(resources.GetObject("txtGeneralDescription.Properties.AppearanceFocused.ForeColor")));
+			this.txtGeneralDescription.Properties.AppearanceFocused.Options.UseFont = true;
+			this.txtGeneralDescription.Properties.AppearanceFocused.Options.UseForeColor = true;
+			this.txtGeneralDescription.Properties.AppearanceReadOnly.Font = ((System.Drawing.Font)(resources.GetObject("txtGeneralDescription.Properties.AppearanceReadOnly.Font")));
+			this.txtGeneralDescription.Properties.AppearanceReadOnly.Options.UseFont = true;
+			this.txtGeneralDescription.StyleController = this.layoutControl1;
+			// 
+			// btnFullScreen
+			// 
+			this.btnFullScreen.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnFullScreen.Appearance.Font")));
+			this.btnFullScreen.Appearance.Options.UseFont = true;
+			this.btnFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
+			this.btnFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			resources.ApplyResources(this.btnFullScreen, "btnFullScreen");
+			this.btnFullScreen.Name = "btnFullScreen";
+			this.btnFullScreen.StyleController = this.layoutControl1;
+			// 
+			// btnSettings
+			// 
+			this.btnSettings.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnSettings.Appearance.Font")));
+			this.btnSettings.Appearance.Options.UseFont = true;
+			this.btnSettings.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
+			this.btnSettings.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			resources.ApplyResources(this.btnSettings, "btnSettings");
+			this.btnSettings.Name = "btnSettings";
+			this.btnSettings.StyleController = this.layoutControl1;
+			// 
+			// btnSearch
+			// 
+			this.btnSearch.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnSearch.Appearance.Font")));
+			this.btnSearch.Appearance.Options.UseFont = true;
+			this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+			this.btnSearch.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			resources.ApplyResources(this.btnSearch, "btnSearch");
+			this.btnSearch.Name = "btnSearch";
+			this.btnSearch.StyleController = this.layoutControl1;
+			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			resources.ApplyResources(this.btnSave, "btnSave");
+			this.btnSave.Name = "btnSave";
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+			// 
 			// btnPrint
 			// 
 			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
@@ -304,19 +363,6 @@
 			resources.ApplyResources(this.btnPrint, "btnPrint");
 			this.btnPrint.Name = "btnPrint";
 			this.btnPrint.StyleController = this.layoutControl1;
-			// 
-			// txtGeneralDescription
-			// 
-			resources.ApplyResources(this.txtGeneralDescription, "txtGeneralDescription");
-			this.txtGeneralDescription.Name = "txtGeneralDescription";
-			this.txtGeneralDescription.Properties.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("txtGeneralDescription.Properties.Appearance.BackColor")));
-			this.txtGeneralDescription.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("txtGeneralDescription.Properties.Appearance.Font")));
-			this.txtGeneralDescription.Properties.Appearance.Options.UseBackColor = true;
-			this.txtGeneralDescription.Properties.Appearance.Options.UseFont = true;
-			this.txtGeneralDescription.Properties.Appearance.Options.UseTextOptions = true;
-			this.txtGeneralDescription.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.txtGeneralDescription.StyleController = this.layoutControl1;
-			this.txtGeneralDescription.EditValueChanged += new System.EventHandler(this.txtGeneralDescription_EditValueChanged);
 			// 
 			// txtAddiction_Details
 			// 
@@ -437,7 +483,7 @@
 			this.spnProblemAlcohol_When.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnProblemAlcohol_When.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnProblemAlcohol_When.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons"))), resources.GetString("spnProblemAlcohol_When.Properties.Buttons1"), ((int)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons2"))), ((bool)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons3"))), ((bool)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons4"))), ((bool)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("spnProblemAlcohol_When.Properties.Buttons8"), ((object)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons10"))), ((bool)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons11"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons"))), resources.GetString("spnProblemAlcohol_When.Properties.Buttons1"), ((int)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons2"))), ((bool)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons3"))), ((bool)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons4"))), ((bool)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, resources.GetString("spnProblemAlcohol_When.Properties.Buttons8"), ((object)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons10"))), ((bool)(resources.GetObject("spnProblemAlcohol_When.Properties.Buttons11"))))});
 			this.spnProblemAlcohol_When.StyleController = this.layoutControl1;
 			this.spnProblemAlcohol_When.EditValueChanged += new System.EventHandler(this.spnProblemAlcohol_When_EditValueChanged);
 			// 
@@ -452,7 +498,7 @@
 			this.spnAlcohol_HowMuch.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnAlcohol_HowMuch.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnAlcohol_HowMuch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons"))), resources.GetString("spnAlcohol_HowMuch.Properties.Buttons1"), ((int)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons2"))), ((bool)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons3"))), ((bool)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons4"))), ((bool)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, resources.GetString("spnAlcohol_HowMuch.Properties.Buttons8"), ((object)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons10"))), ((bool)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons11"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons"))), resources.GetString("spnAlcohol_HowMuch.Properties.Buttons1"), ((int)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons2"))), ((bool)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons3"))), ((bool)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons4"))), ((bool)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("spnAlcohol_HowMuch.Properties.Buttons8"), ((object)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons10"))), ((bool)(resources.GetObject("spnAlcohol_HowMuch.Properties.Buttons11"))))});
 			this.spnAlcohol_HowMuch.StyleController = this.layoutControl1;
 			this.spnAlcohol_HowMuch.EditValueChanged += new System.EventHandler(this.spnAlcohol_HowMuch_EditValueChanged);
 			// 
@@ -578,7 +624,7 @@
 			this.spnNumberOfYearsSmoke.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnNumberOfYearsSmoke.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnNumberOfYearsSmoke.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons"))), resources.GetString("spnNumberOfYearsSmoke.Properties.Buttons1"), ((int)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons2"))), ((bool)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons3"))), ((bool)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons4"))), ((bool)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, resources.GetString("spnNumberOfYearsSmoke.Properties.Buttons8"), ((object)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons10"))), ((bool)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons11"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons"))), resources.GetString("spnNumberOfYearsSmoke.Properties.Buttons1"), ((int)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons2"))), ((bool)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons3"))), ((bool)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons4"))), ((bool)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, resources.GetString("spnNumberOfYearsSmoke.Properties.Buttons8"), ((object)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons10"))), ((bool)(resources.GetObject("spnNumberOfYearsSmoke.Properties.Buttons11"))))});
 			this.spnNumberOfYearsSmoke.StyleController = this.layoutControl1;
 			this.spnNumberOfYearsSmoke.EditValueChanged += new System.EventHandler(this.spnNumberOfYearsSmoke_EditValueChanged);
 			// 
@@ -593,7 +639,7 @@
 			this.spnNumberOfDailyPacks.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnNumberOfDailyPacks.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnNumberOfDailyPacks.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons"))), resources.GetString("spnNumberOfDailyPacks.Properties.Buttons1"), ((int)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons2"))), ((bool)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons3"))), ((bool)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons4"))), ((bool)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, resources.GetString("spnNumberOfDailyPacks.Properties.Buttons8"), ((object)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons10"))), ((bool)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons11"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons"))), resources.GetString("spnNumberOfDailyPacks.Properties.Buttons1"), ((int)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons2"))), ((bool)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons3"))), ((bool)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons4"))), ((bool)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, resources.GetString("spnNumberOfDailyPacks.Properties.Buttons8"), ((object)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons10"))), ((bool)(resources.GetObject("spnNumberOfDailyPacks.Properties.Buttons11"))))});
 			this.spnNumberOfDailyPacks.StyleController = this.layoutControl1;
 			this.spnNumberOfDailyPacks.EditValueChanged += new System.EventHandler(this.spnNumberOfDailyPacks_EditValueChanged);
 			// 
@@ -748,13 +794,13 @@
             this.lytContainer_RecreationalDrugs,
             this.lytContainer_Addiction,
             this.simpleSeparator8,
-            this.layoutControlItem6,
             this.simpleSeparator13,
             this.layoutControlItem7,
             this.layoutControlItem8,
             this.layoutControlItem9,
             this.layoutControlItem10,
-            this.layoutControlItem11});
+            this.layoutControlItem11,
+            this.layoutControlItem12});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -841,7 +887,7 @@
             this.emptySpaceItem3,
             this.lytContainer_QuitSmoke,
             this.simpleSeparator11});
-			this.lytContainer_Smoke.Location = new System.Drawing.Point(0, 113);
+			this.lytContainer_Smoke.Location = new System.Drawing.Point(0, 187);
 			this.lytContainer_Smoke.Name = "lytContainer_Smoke";
 			this.lytContainer_Smoke.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignModeGroup.AutoSize;
 			this.lytContainer_Smoke.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -1065,14 +1111,14 @@
 			// simpleSeparator3
 			// 
 			this.simpleSeparator3.AllowHotTrack = false;
-			this.simpleSeparator3.Location = new System.Drawing.Point(0, 111);
+			this.simpleSeparator3.Location = new System.Drawing.Point(0, 185);
 			this.simpleSeparator3.Name = "simpleSeparator3";
 			this.simpleSeparator3.Size = new System.Drawing.Size(921, 2);
 			// 
 			// simpleSeparator4
 			// 
 			this.simpleSeparator4.AllowHotTrack = false;
-			this.simpleSeparator4.Location = new System.Drawing.Point(0, 145);
+			this.simpleSeparator4.Location = new System.Drawing.Point(0, 219);
 			this.simpleSeparator4.Name = "simpleSeparator4";
 			this.simpleSeparator4.Size = new System.Drawing.Size(921, 2);
 			// 
@@ -1102,7 +1148,7 @@
             this.emptySpaceItem5,
             this.lytContainer_ProblemAlcohol,
             this.simpleSeparator2});
-			this.lytContainer_Alcohol.Location = new System.Drawing.Point(0, 147);
+			this.lytContainer_Alcohol.Location = new System.Drawing.Point(0, 221);
 			this.lytContainer_Alcohol.Name = "lytContainer_Alcohol";
 			this.lytContainer_Alcohol.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytContainer_Alcohol.Size = new System.Drawing.Size(921, 32);
@@ -1136,7 +1182,7 @@
 			this.lytQuitAlcohol_Details.Size = new System.Drawing.Size(913, 26);
 			this.lytQuitAlcohol_Details.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			resources.ApplyResources(this.lytQuitAlcohol_Details, "lytQuitAlcohol_Details");
-			this.lytQuitAlcohol_Details.TextSize = new System.Drawing.Size(86, 13);
+			this.lytQuitAlcohol_Details.TextSize = new System.Drawing.Size(84, 13);
 			this.lytQuitAlcohol_Details.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 			// 
 			// lytAlcohol_Yes
@@ -1180,7 +1226,7 @@
 			this.lytAlcohol_HowMuch.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			resources.ApplyResources(this.lytAlcohol_HowMuch, "lytAlcohol_HowMuch");
 			this.lytAlcohol_HowMuch.TextLocation = DevExpress.Utils.Locations.Left;
-			this.lytAlcohol_HowMuch.TextSize = new System.Drawing.Size(86, 13);
+			this.lytAlcohol_HowMuch.TextSize = new System.Drawing.Size(84, 13);
 			this.lytAlcohol_HowMuch.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 			// 
 			// emptySpaceItem5
@@ -1250,7 +1296,7 @@
 			this.lytProblemAlcohol_Details.Size = new System.Drawing.Size(905, 26);
 			this.lytProblemAlcohol_Details.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			resources.ApplyResources(this.lytProblemAlcohol_Details, "lytProblemAlcohol_Details");
-			this.lytProblemAlcohol_Details.TextSize = new System.Drawing.Size(86, 13);
+			this.lytProblemAlcohol_Details.TextSize = new System.Drawing.Size(84, 13);
 			this.lytProblemAlcohol_Details.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 			// 
 			// lytProblemAlcohol_Yes
@@ -1296,7 +1342,7 @@
 			this.lytProblemAlcohol_When.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			resources.ApplyResources(this.lytProblemAlcohol_When, "lytProblemAlcohol_When");
 			this.lytProblemAlcohol_When.TextLocation = DevExpress.Utils.Locations.Left;
-			this.lytProblemAlcohol_When.TextSize = new System.Drawing.Size(86, 13);
+			this.lytProblemAlcohol_When.TextSize = new System.Drawing.Size(84, 13);
 			this.lytProblemAlcohol_When.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 			// 
 			// emptySpaceItem6
@@ -1344,16 +1390,16 @@
 			// simpleSeparator6
 			// 
 			this.simpleSeparator6.AllowHotTrack = false;
-			this.simpleSeparator6.Location = new System.Drawing.Point(0, 213);
+			this.simpleSeparator6.Location = new System.Drawing.Point(0, 287);
 			this.simpleSeparator6.Name = "simpleSeparator6";
 			this.simpleSeparator6.Size = new System.Drawing.Size(921, 2);
 			// 
 			// emptySpaceItem1
 			// 
 			this.emptySpaceItem1.AllowHotTrack = false;
-			this.emptySpaceItem1.Location = new System.Drawing.Point(0, 247);
+			this.emptySpaceItem1.Location = new System.Drawing.Point(0, 321);
 			this.emptySpaceItem1.Name = "emptySpaceItem1";
-			this.emptySpaceItem1.Size = new System.Drawing.Size(921, 232);
+			this.emptySpaceItem1.Size = new System.Drawing.Size(921, 158);
 			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// lytContainer_RecreationalDrugs
@@ -1379,7 +1425,7 @@
             this.lytDrugs_No,
             this.lytDrugs_Yes,
             this.lytDrugs_Details});
-			this.lytContainer_RecreationalDrugs.Location = new System.Drawing.Point(0, 215);
+			this.lytContainer_RecreationalDrugs.Location = new System.Drawing.Point(0, 289);
 			this.lytContainer_RecreationalDrugs.Name = "lytContainer_RecreationalDrugs";
 			this.lytContainer_RecreationalDrugs.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytContainer_RecreationalDrugs.Size = new System.Drawing.Size(921, 32);
@@ -1448,7 +1494,7 @@
 			this.lytDrugs_Details.Size = new System.Drawing.Size(913, 26);
 			this.lytDrugs_Details.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			resources.ApplyResources(this.lytDrugs_Details, "lytDrugs_Details");
-			this.lytDrugs_Details.TextSize = new System.Drawing.Size(86, 13);
+			this.lytDrugs_Details.TextSize = new System.Drawing.Size(84, 13);
 			this.lytDrugs_Details.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 			// 
 			// lytContainer_Addiction
@@ -1476,7 +1522,7 @@
             this.simpleSeparator10,
             this.lytContainer_AddictionProblem,
             this.simpleSeparator14});
-			this.lytContainer_Addiction.Location = new System.Drawing.Point(0, 181);
+			this.lytContainer_Addiction.Location = new System.Drawing.Point(0, 255);
 			this.lytContainer_Addiction.Name = "lytContainer_Addiction";
 			this.lytContainer_Addiction.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytContainer_Addiction.Size = new System.Drawing.Size(921, 32);
@@ -1497,7 +1543,7 @@
 			this.lytAddiction_Details.Size = new System.Drawing.Size(913, 26);
 			this.lytAddiction_Details.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			resources.ApplyResources(this.lytAddiction_Details, "lytAddiction_Details");
-			this.lytAddiction_Details.TextSize = new System.Drawing.Size(86, 13);
+			this.lytAddiction_Details.TextSize = new System.Drawing.Size(84, 13);
 			this.lytAddiction_Details.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 			// 
 			// lytAddiction_DetailsButton
@@ -1639,7 +1685,7 @@
 			this.lytProblemAddiction_Details.Size = new System.Drawing.Size(905, 26);
 			this.lytProblemAddiction_Details.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			resources.ApplyResources(this.lytProblemAddiction_Details, "lytProblemAddiction_Details");
-			this.lytProblemAddiction_Details.TextSize = new System.Drawing.Size(86, 13);
+			this.lytProblemAddiction_Details.TextSize = new System.Drawing.Size(84, 13);
 			this.lytProblemAddiction_Details.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 			// 
 			// simpleSeparator14
@@ -1652,25 +1698,9 @@
 			// simpleSeparator8
 			// 
 			this.simpleSeparator8.AllowHotTrack = false;
-			this.simpleSeparator8.Location = new System.Drawing.Point(0, 179);
+			this.simpleSeparator8.Location = new System.Drawing.Point(0, 253);
 			this.simpleSeparator8.Name = "simpleSeparator8";
 			this.simpleSeparator8.Size = new System.Drawing.Size(921, 2);
-			// 
-			// layoutControlItem6
-			// 
-			this.layoutControlItem6.AppearanceItemCaption.Font = ((System.Drawing.Font)(resources.GetObject("layoutControlItem6.AppearanceItemCaption.Font")));
-			this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
-			this.layoutControlItem6.AppearanceItemCaption.Options.UseTextOptions = true;
-			this.layoutControlItem6.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-			this.layoutControlItem6.Control = this.txtGeneralDescription;
-			this.layoutControlItem6.Location = new System.Drawing.Point(0, 85);
-			this.layoutControlItem6.Name = "layoutControlItem6";
-			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem6.Size = new System.Drawing.Size(921, 26);
-			this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-			this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Left;
-			this.layoutControlItem6.TextSize = new System.Drawing.Size(86, 13);
 			// 
 			// simpleSeparator13
 			// 
@@ -1689,14 +1719,6 @@
 			this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem7.TextVisible = false;
 			// 
-			// btnSave
-			// 
-			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
-			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			resources.ApplyResources(this.btnSave, "btnSave");
-			this.btnSave.Name = "btnSave";
-			this.btnSave.StyleController = this.layoutControl1;
-			// 
 			// layoutControlItem8
 			// 
 			this.layoutControlItem8.Control = this.btnSave;
@@ -1706,16 +1728,6 @@
 			this.layoutControlItem8.Size = new System.Drawing.Size(110, 41);
 			this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem8.TextVisible = false;
-			// 
-			// btnSearch
-			// 
-			this.btnSearch.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnSearch.Appearance.Font")));
-			this.btnSearch.Appearance.Options.UseFont = true;
-			this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-			this.btnSearch.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			resources.ApplyResources(this.btnSearch, "btnSearch");
-			this.btnSearch.Name = "btnSearch";
-			this.btnSearch.StyleController = this.layoutControl1;
 			// 
 			// layoutControlItem9
 			// 
@@ -1728,16 +1740,6 @@
 			this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem9.TextVisible = false;
 			// 
-			// btnSettings
-			// 
-			this.btnSettings.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnSettings.Appearance.Font")));
-			this.btnSettings.Appearance.Options.UseFont = true;
-			this.btnSettings.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
-			this.btnSettings.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			resources.ApplyResources(this.btnSettings, "btnSettings");
-			this.btnSettings.Name = "btnSettings";
-			this.btnSettings.StyleController = this.layoutControl1;
-			// 
 			// layoutControlItem10
 			// 
 			this.layoutControlItem10.Control = this.btnSettings;
@@ -1749,16 +1751,6 @@
 			this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem10.TextVisible = false;
 			// 
-			// btnFullScreen
-			// 
-			this.btnFullScreen.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnFullScreen.Appearance.Font")));
-			this.btnFullScreen.Appearance.Options.UseFont = true;
-			this.btnFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
-			this.btnFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			resources.ApplyResources(this.btnFullScreen, "btnFullScreen");
-			this.btnFullScreen.Name = "btnFullScreen";
-			this.btnFullScreen.StyleController = this.layoutControl1;
-			// 
 			// layoutControlItem11
 			// 
 			this.layoutControlItem11.Control = this.btnFullScreen;
@@ -1769,6 +1761,23 @@
 			this.layoutControlItem11.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem11.TextVisible = false;
+			// 
+			// layoutControlItem12
+			// 
+			this.layoutControlItem12.AppearanceItemCaption.Font = ((System.Drawing.Font)(resources.GetObject("layoutControlItem12.AppearanceItemCaption.Font")));
+			this.layoutControlItem12.AppearanceItemCaption.Options.UseFont = true;
+			this.layoutControlItem12.Control = this.txtGeneralDescription;
+			this.layoutControlItem12.Location = new System.Drawing.Point(0, 85);
+			this.layoutControlItem12.MaxSize = new System.Drawing.Size(0, 100);
+			this.layoutControlItem12.MinSize = new System.Drawing.Size(90, 100);
+			this.layoutControlItem12.Name = "layoutControlItem12";
+			this.layoutControlItem12.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem12.Size = new System.Drawing.Size(921, 100);
+			this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem12.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
+			this.layoutControlItem12.TextLocation = DevExpress.Utils.Locations.Top;
+			this.layoutControlItem12.TextSize = new System.Drawing.Size(84, 13);
 			// 
 			// PEMR_SocialHistory_UC
 			// 
@@ -1861,13 +1870,13 @@
 			((System.ComponentModel.ISupportInitialize)(this.lytProblemAddiction_Details)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator14)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator8)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator13)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1981,8 +1990,6 @@
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator10;
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator11;
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator2;
-		private DevExpress.XtraEditors.TextEdit txtGeneralDescription;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator13;
 		private DevExpress.XtraEditors.SimpleButton btnPrint;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
@@ -1994,5 +2001,7 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
 		private DevExpress.XtraEditors.SimpleButton btnFullScreen;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+		private DevExpress.XtraEditors.MemoEdit txtGeneralDescription;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
 	}
 }

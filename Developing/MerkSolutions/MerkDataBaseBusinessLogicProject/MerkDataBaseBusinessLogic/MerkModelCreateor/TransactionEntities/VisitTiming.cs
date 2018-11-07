@@ -73,17 +73,7 @@ namespace MerkDataBaseBusinessLogicProject
 			return context.VisitTimings.FirstOrDefault(item => item.ID.Equals(id));
 		}
 
-		private VisitTiming_SocialHistory _visitTiming_SocialHistory;
-
-		public VisitTiming_SocialHistory VisitTiming_SocialHistoryObject
-		{
-			get
-			{
-				if (_visitTiming_SocialHistory == null)
-					_visitTiming_SocialHistory = VisitTiming_SocialHistory;
-				return _visitTiming_SocialHistory;
-			}
-		}
+		public List<VisitTiming_SocialHistory> List_VisitTiming_SocialHistory { get; set; }
 
 		public List<VisitTiming_TreatmentPlan> List_VisitTiming_TreatmentPlan { get; set; }
 

@@ -289,7 +289,7 @@
 			// txtReccommednations
 			// 
 			this.txtReccommednations.EditValue = "";
-			this.txtReccommednations.Location = new System.Drawing.Point(687, 452);
+			this.txtReccommednations.Location = new System.Drawing.Point(687, 445);
 			this.txtReccommednations.Name = "txtReccommednations";
 			this.txtReccommednations.Properties.Appearance.BackColor = System.Drawing.Color.Cornsilk;
 			this.txtReccommednations.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
@@ -302,7 +302,7 @@
 			this.txtReccommednations.Properties.AppearanceFocused.Options.UseFont = true;
 			this.txtReccommednations.Properties.AppearanceFocused.Options.UseForeColor = true;
 			this.txtReccommednations.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.txtReccommednations.Size = new System.Drawing.Size(413, 67);
+			this.txtReccommednations.Size = new System.Drawing.Size(413, 74);
 			this.txtReccommednations.StyleController = this.layoutControl1;
 			this.txtReccommednations.TabIndex = 16;
 			this.txtReccommednations.EditValueChanged += new System.EventHandler(this.txtReccommednations_EditValueChanged);
@@ -362,7 +362,7 @@
 			this.lstAddedDiagnosis.Name = "lstAddedDiagnosis";
 			this.lstAddedDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.lstAddedDiagnosis.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-			this.lstAddedDiagnosis.Size = new System.Drawing.Size(413, 255);
+			this.lstAddedDiagnosis.Size = new System.Drawing.Size(413, 248);
 			this.lstAddedDiagnosis.StyleController = this.layoutControl1;
 			this.lstAddedDiagnosis.TabIndex = 11;
 			// 
@@ -1111,7 +1111,7 @@
 			this.layoutControlItem9.Location = new System.Drawing.Point(0, 36);
 			this.layoutControlItem9.Name = "layoutControlItem9";
 			this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem9.Size = new System.Drawing.Size(419, 261);
+			this.layoutControlItem9.Size = new System.Drawing.Size(419, 254);
 			this.layoutControlItem9.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem9.TextVisible = false;
@@ -1164,10 +1164,13 @@
 			this.layoutControlItem11.AppearanceItemCaption.Options.UseTextOptions = true;
 			this.layoutControlItem11.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			this.layoutControlItem11.Control = this.txtReccommednations;
-			this.layoutControlItem11.Location = new System.Drawing.Point(0, 297);
+			this.layoutControlItem11.Location = new System.Drawing.Point(0, 290);
+			this.layoutControlItem11.MaxSize = new System.Drawing.Size(0, 100);
+			this.layoutControlItem11.MinSize = new System.Drawing.Size(134, 100);
 			this.layoutControlItem11.Name = "layoutControlItem11";
 			this.layoutControlItem11.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem11.Size = new System.Drawing.Size(419, 93);
+			this.layoutControlItem11.Size = new System.Drawing.Size(419, 100);
+			this.layoutControlItem11.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			this.layoutControlItem11.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem11.Text = "Recommendations";
 			this.layoutControlItem11.TextLocation = DevExpress.Utils.Locations.Top;
