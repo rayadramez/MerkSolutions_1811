@@ -521,6 +521,32 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 		#endregion
 
+		#region Button Events
+
+		private void btnSave_Click(object sender, EventArgs e)
+		{
+			if (PEMRBusinessLogic.ActivePEMRObject != null)
+				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory == null)
+				{
+					Active_VisitTiming_SocialHistory = PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(this,
+						ApplicationStaticConfiguration.ActiveLoginUser.ID, DB_PEMRSavingMode.SaveImmediately);
+					if (Active_VisitTiming_SocialHistory == null)
+						return;
+					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary == null)
+						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary = new List<VisitTiming_Pupillary>();
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory.Add(Active_VisitTiming_SocialHistory);
+				}
+				else
+				{
+					if (Active_VisitTiming_SocialHistory == null)
+						return;
+					PEMRBusinessLogic.Update_VisitTiming_SocialHistory(this, Active_VisitTiming_SocialHistory,
+						ApplicationStaticConfiguration.ActiveLoginUser.ID);
+				}
+		}
+
+		#endregion
+
 		#endregion
 
 		#region Implementation of IPEMR_SocialHistory
@@ -798,27 +824,5 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 		}
 
 		#endregion
-
-		private void btnSave_Click(object sender, EventArgs e)
-		{
-			if (PEMRBusinessLogic.ActivePEMRObject != null)
-				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory == null)
-				{
-					Active_VisitTiming_SocialHistory = PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(this,
-						ApplicationStaticConfiguration.ActiveLoginUser.ID, DB_PEMRSavingMode.SaveImmediately);
-					if (Active_VisitTiming_SocialHistory == null)
-						return;
-					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary == null)
-						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Pupillary = new List<VisitTiming_Pupillary>();
-					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory.Add(Active_VisitTiming_SocialHistory);
-				}
-				else
-				{
-					if (Active_VisitTiming_SocialHistory == null)
-						return;
-					PEMRBusinessLogic.Update_VisitTiming_SocialHistory(this, Active_VisitTiming_SocialHistory,
-						ApplicationStaticConfiguration.ActiveLoginUser.ID);
-				}
-		}
 	}
 }
