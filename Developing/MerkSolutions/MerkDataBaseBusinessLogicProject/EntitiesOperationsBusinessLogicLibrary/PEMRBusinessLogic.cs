@@ -69,9 +69,9 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			PEMRObject newPEMR = new PEMRObject();
 			newPEMR.Active_VisitTiming = visitTiming;
 
-			if (newPEMR.Active_List_VisitTiming == null)
-				newPEMR.Active_List_VisitTiming = new List<VisitTiming>();
-			newPEMR.Active_List_VisitTiming.Add(visitTiming);
+			if (newPEMR.List_VisitTiming == null)
+				newPEMR.List_VisitTiming = new List<VisitTiming>();
+			newPEMR.List_VisitTiming.Add(visitTiming);
 
 			newPEMR.PEMRStatus = PEMRStatus.UpdateExistingVisit;
 
@@ -180,6 +180,16 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 					list_VisitTiming_AnteriorSegmentSign.AddRange(visitTiming_MainAnteriorSegmentSign
 						.VisitTiming_AnteriorSegmentSign);
 				}
+
+				if (list_VisitTiming_AnteriorSegmentSign.Count > 0)
+				{
+					if (newPEMR.List_VisitTiming_AnteriorSegmentSign == null)
+						newPEMR.List_VisitTiming_AnteriorSegmentSign = new List<VisitTiming_AnteriorSegmentSign>();
+					newPEMR.List_VisitTiming_AnteriorSegmentSign.AddRange(list_VisitTiming_AnteriorSegmentSign);
+
+					foreach (VisitTiming_AnteriorSegmentSign visitTimingAnteriorSegment in newPEMR.List_VisitTiming_AnteriorSegmentSign)
+						visitTimingAnteriorSegment.PEMRElementStatus = PEMRElementStatus.AlreadyExists;
+				}
 			}
 
 			#endregion
@@ -223,6 +233,16 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 						visitTiming_MainPosteriorSegmentSign.VisitTiming_PosteriorSegmentSign);
 					list_VisitTiming_PosteriorSegmentSign.AddRange(visitTiming_MainPosteriorSegmentSign
 						.VisitTiming_PosteriorSegmentSign);
+				}
+
+				if (list_VisitTiming_PosteriorSegmentSign.Count > 0)
+				{
+					if (newPEMR.List_VisitTiming_PosteriorSegmentSign == null)
+						newPEMR.List_VisitTiming_PosteriorSegmentSign = new List<VisitTiming_PosteriorSegmentSign>();
+					newPEMR.List_VisitTiming_PosteriorSegmentSign.AddRange(list_VisitTiming_PosteriorSegmentSign);
+
+					foreach (VisitTiming_PosteriorSegmentSign visitTimingPosteriorSegment in newPEMR.List_VisitTiming_PosteriorSegmentSign)
+						visitTimingPosteriorSegment.PEMRElementStatus = PEMRElementStatus.AlreadyExists;
 				}
 			}
 
@@ -285,6 +305,16 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 						visitTiming_MainEOMSign.List_VisitTiming_EOMSign = new List<VisitTiming_EOMSign>();
 					visitTiming_MainEOMSign.List_VisitTiming_EOMSign.AddRange(visitTiming_MainEOMSign.VisitTiming_EOMSign);
 					list_VisitTiming_EOMSign.AddRange(visitTiming_MainEOMSign.VisitTiming_EOMSign);
+				}
+
+				if (list_VisitTiming_EOMSign.Count > 0)
+				{
+					if (newPEMR.List_VisitTiming_EOMSign == null)
+						newPEMR.List_VisitTiming_EOMSign = new List<VisitTiming_EOMSign>();
+					newPEMR.List_VisitTiming_EOMSign.AddRange(list_VisitTiming_EOMSign);
+
+					foreach (VisitTiming_EOMSign visitTimingEomSign in newPEMR.List_VisitTiming_EOMSign)
+						visitTimingEomSign.PEMRElementStatus = PEMRElementStatus.AlreadyExists;
 				}
 			}
 

@@ -17,7 +17,7 @@ namespace MerkDataBaseBusinessLogicProject
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public StationPoint_cu()
         {
-            this.OrganizationMachine_cu = new HashSet<OrganizationMachine_cu>();
+            this.OrganizationMachine_StationPoint_cu = new HashSet<OrganizationMachine_StationPoint_cu>();
             this.QueueManagers = new HashSet<QueueManager>();
             this.Service_StationPoint_cu = new HashSet<Service_StationPoint_cu>();
             this.ServiceCategory_StationPoint_cu = new HashSet<ServiceCategory_StationPoint_cu>();
@@ -36,7 +36,7 @@ namespace MerkDataBaseBusinessLogicProject
         public Nullable<int> InsertedBy { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrganizationMachine_cu> OrganizationMachine_cu { get; set; }
+        public virtual ICollection<OrganizationMachine_StationPoint_cu> OrganizationMachine_StationPoint_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QueueManager> QueueManagers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

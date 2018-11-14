@@ -51,6 +51,8 @@
 			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.lkeStationPointStages.Properties)).BeginInit();
@@ -68,6 +70,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
@@ -113,6 +117,22 @@
 			this.lkeStationPointStages.Properties.Appearance.Options.UseForeColor = true;
 			this.lkeStationPointStages.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeStationPointStages.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.lkeStationPointStages.Properties.AppearanceDisabled.Font = ((System.Drawing.Font)(resources.GetObject("lkeStationPointStages.Properties.AppearanceDisabled.Font")));
+			this.lkeStationPointStages.Properties.AppearanceDisabled.Options.UseFont = true;
+			this.lkeStationPointStages.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+			this.lkeStationPointStages.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.lkeStationPointStages.Properties.AppearanceDropDown.Font = ((System.Drawing.Font)(resources.GetObject("lkeStationPointStages.Properties.AppearanceDropDown.Font")));
+			this.lkeStationPointStages.Properties.AppearanceDropDown.Options.UseFont = true;
+			this.lkeStationPointStages.Properties.AppearanceDropDown.Options.UseTextOptions = true;
+			this.lkeStationPointStages.Properties.AppearanceDropDown.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.lkeStationPointStages.Properties.AppearanceFocused.Font = ((System.Drawing.Font)(resources.GetObject("lkeStationPointStages.Properties.AppearanceFocused.Font")));
+			this.lkeStationPointStages.Properties.AppearanceFocused.Options.UseFont = true;
+			this.lkeStationPointStages.Properties.AppearanceFocused.Options.UseTextOptions = true;
+			this.lkeStationPointStages.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.lkeStationPointStages.Properties.AppearanceReadOnly.Font = ((System.Drawing.Font)(resources.GetObject("lkeStationPointStages.Properties.AppearanceReadOnly.Font")));
+			this.lkeStationPointStages.Properties.AppearanceReadOnly.Options.UseFont = true;
+			this.lkeStationPointStages.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+			this.lkeStationPointStages.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeStationPointStages.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lkeStationPointStages.Properties.Buttons"))))});
 			this.lkeStationPointStages.Properties.ReadOnly = true;
@@ -159,7 +179,13 @@
 			// 
 			// tabWaiting
 			// 
+			this.tabWaiting.Appearance.Header.BackColor = ((System.Drawing.Color)(resources.GetObject("tabWaiting.Appearance.Header.BackColor")));
+			this.tabWaiting.Appearance.Header.Font = ((System.Drawing.Font)(resources.GetObject("tabWaiting.Appearance.Header.Font")));
+			this.tabWaiting.Appearance.Header.Options.UseBackColor = true;
+			this.tabWaiting.Appearance.Header.Options.UseFont = true;
+			this.tabWaiting.Appearance.HeaderActive.BackColor = ((System.Drawing.Color)(resources.GetObject("tabWaiting.Appearance.HeaderActive.BackColor")));
 			this.tabWaiting.Appearance.HeaderActive.Font = ((System.Drawing.Font)(resources.GetObject("tabWaiting.Appearance.HeaderActive.Font")));
+			this.tabWaiting.Appearance.HeaderActive.Options.UseBackColor = true;
 			this.tabWaiting.Appearance.HeaderActive.Options.UseFont = true;
 			this.tabWaiting.Appearance.PageClient.BackColor = ((System.Drawing.Color)(resources.GetObject("tabWaiting.Appearance.PageClient.BackColor")));
 			this.tabWaiting.Appearance.PageClient.Options.UseBackColor = true;
@@ -168,11 +194,27 @@
 			// 
 			// tabServed
 			// 
+			this.tabServed.Appearance.Header.BackColor = ((System.Drawing.Color)(resources.GetObject("tabServed.Appearance.Header.BackColor")));
+			this.tabServed.Appearance.Header.Font = ((System.Drawing.Font)(resources.GetObject("tabServed.Appearance.Header.Font")));
+			this.tabServed.Appearance.Header.Options.UseBackColor = true;
+			this.tabServed.Appearance.Header.Options.UseFont = true;
+			this.tabServed.Appearance.HeaderActive.BackColor = ((System.Drawing.Color)(resources.GetObject("tabServed.Appearance.HeaderActive.BackColor")));
+			this.tabServed.Appearance.HeaderActive.Font = ((System.Drawing.Font)(resources.GetObject("tabServed.Appearance.HeaderActive.Font")));
+			this.tabServed.Appearance.HeaderActive.Options.UseBackColor = true;
+			this.tabServed.Appearance.HeaderActive.Options.UseFont = true;
 			resources.ApplyResources(this.tabServed, "tabServed");
 			this.tabServed.Name = "tabServed";
 			// 
 			// tabPaused
 			// 
+			this.tabPaused.Appearance.Header.BackColor = ((System.Drawing.Color)(resources.GetObject("tabPaused.Appearance.Header.BackColor")));
+			this.tabPaused.Appearance.Header.Font = ((System.Drawing.Font)(resources.GetObject("tabPaused.Appearance.Header.Font")));
+			this.tabPaused.Appearance.Header.Options.UseBackColor = true;
+			this.tabPaused.Appearance.Header.Options.UseFont = true;
+			this.tabPaused.Appearance.HeaderActive.BackColor = ((System.Drawing.Color)(resources.GetObject("tabPaused.Appearance.HeaderActive.BackColor")));
+			this.tabPaused.Appearance.HeaderActive.Font = ((System.Drawing.Font)(resources.GetObject("tabPaused.Appearance.HeaderActive.Font")));
+			this.tabPaused.Appearance.HeaderActive.Options.UseBackColor = true;
+			this.tabPaused.Appearance.HeaderActive.Options.UseFont = true;
 			resources.ApplyResources(this.tabPaused, "tabPaused");
 			this.tabPaused.Name = "tabPaused";
 			// 
@@ -208,11 +250,13 @@
             this.lytName,
             this.layoutControlItem2,
             this.layoutControlItem6,
-            this.layoutControlItem7});
+            this.layoutControlItem7,
+            this.emptySpaceItem1,
+            this.emptySpaceItem2});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup1.Size = new System.Drawing.Size(445, 482);
+			this.layoutControlGroup1.Size = new System.Drawing.Size(511, 470);
 			this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlGroup1.TextVisible = false;
 			// 
@@ -224,7 +268,7 @@
 			this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem1.Name = "layoutControlItem1";
 			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem1.Size = new System.Drawing.Size(137, 28);
+			this.layoutControlItem1.Size = new System.Drawing.Size(155, 28);
 			this.layoutControlItem1.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
 			this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Left;
@@ -233,10 +277,10 @@
 			// layoutControlItem3
 			// 
 			this.layoutControlItem3.Control = this.xtraTabControl1;
-			this.layoutControlItem3.Location = new System.Drawing.Point(0, 85);
+			this.layoutControlItem3.Location = new System.Drawing.Point(0, 92);
 			this.layoutControlItem3.Name = "layoutControlItem3";
 			this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem3.Size = new System.Drawing.Size(439, 391);
+			this.layoutControlItem3.Size = new System.Drawing.Size(505, 372);
 			this.layoutControlItem3.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem3.TextVisible = false;
@@ -247,17 +291,17 @@
 			this.layoutControlItem5.Location = new System.Drawing.Point(0, 28);
 			this.layoutControlItem5.Name = "layoutControlItem5";
 			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem5.Size = new System.Drawing.Size(439, 3);
+			this.layoutControlItem5.Size = new System.Drawing.Size(505, 3);
 			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem5.TextVisible = false;
 			// 
 			// layoutControlItem4
 			// 
 			this.layoutControlItem4.Control = this.btnSearch;
-			this.layoutControlItem4.Location = new System.Drawing.Point(371, 0);
+			this.layoutControlItem4.Location = new System.Drawing.Point(425, 0);
 			this.layoutControlItem4.Name = "layoutControlItem4";
 			this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem4.Size = new System.Drawing.Size(68, 28);
+			this.layoutControlItem4.Size = new System.Drawing.Size(80, 28);
 			this.layoutControlItem4.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem4.TextVisible = false;
@@ -267,10 +311,10 @@
 			this.lytName.AppearanceItemCaption.Font = ((System.Drawing.Font)(resources.GetObject("lytName.AppearanceItemCaption.Font")));
 			this.lytName.AppearanceItemCaption.Options.UseFont = true;
 			this.lytName.Control = this.txtPatientName;
-			this.lytName.Location = new System.Drawing.Point(137, 0);
+			this.lytName.Location = new System.Drawing.Point(155, 0);
 			this.lytName.Name = "lytName";
 			this.lytName.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytName.Size = new System.Drawing.Size(234, 28);
+			this.lytName.Size = new System.Drawing.Size(270, 28);
 			this.lytName.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			resources.ApplyResources(this.lytName, "lytName");
 			this.lytName.TextLocation = DevExpress.Utils.Locations.Left;
@@ -287,7 +331,7 @@
 			this.layoutControlItem2.Location = new System.Drawing.Point(0, 31);
 			this.layoutControlItem2.Name = "layoutControlItem2";
 			this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem2.Size = new System.Drawing.Size(371, 51);
+			this.layoutControlItem2.Size = new System.Drawing.Size(432, 58);
 			this.layoutControlItem2.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
 			this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
@@ -296,26 +340,44 @@
 			// layoutControlItem6
 			// 
 			this.layoutControlItem6.Control = this.label1;
-			this.layoutControlItem6.Location = new System.Drawing.Point(0, 82);
+			this.layoutControlItem6.Location = new System.Drawing.Point(0, 89);
 			this.layoutControlItem6.Name = "layoutControlItem6";
 			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem6.Size = new System.Drawing.Size(439, 3);
+			this.layoutControlItem6.Size = new System.Drawing.Size(505, 3);
 			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem6.TextVisible = false;
 			// 
 			// layoutControlItem7
 			// 
 			this.layoutControlItem7.Control = this.btnRefresh;
-			this.layoutControlItem7.Location = new System.Drawing.Point(371, 31);
+			this.layoutControlItem7.Location = new System.Drawing.Point(453, 41);
 			this.layoutControlItem7.Name = "layoutControlItem7";
 			this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem7.Size = new System.Drawing.Size(68, 51);
+			this.layoutControlItem7.Size = new System.Drawing.Size(52, 48);
 			this.layoutControlItem7.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem7.TextVisible = false;
 			// 
+			// emptySpaceItem1
+			// 
+			this.emptySpaceItem1.AllowHotTrack = false;
+			this.emptySpaceItem1.Location = new System.Drawing.Point(432, 31);
+			this.emptySpaceItem1.Name = "emptySpaceItem1";
+			this.emptySpaceItem1.Size = new System.Drawing.Size(21, 58);
+			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem2
+			// 
+			this.emptySpaceItem2.AllowHotTrack = false;
+			this.emptySpaceItem2.Location = new System.Drawing.Point(453, 31);
+			this.emptySpaceItem2.Name = "emptySpaceItem2";
+			this.emptySpaceItem2.Size = new System.Drawing.Size(52, 10);
+			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+			// 
 			// PEMR_PatientCardContainer_UC
 			// 
+			this.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("PEMR_PatientCardContainer_UC.Appearance.BackColor")));
+			this.Appearance.Options.UseBackColor = true;
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -338,6 +400,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -366,6 +430,8 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
 		private DevExpress.XtraEditors.SimpleButton btnRefresh;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
 
 
 	}

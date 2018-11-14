@@ -224,7 +224,7 @@ namespace ApplicationConfiguration
 
 		public static string GetOrganizationMachineName()
 		{
-			return System.Environment.MachineName;
+			return Environment.MachineName;
 		}
 
 		public static OrganizationMachine_cu GetOrganizationMachine(int organizationID)
@@ -237,7 +237,8 @@ namespace ApplicationConfiguration
 			if (string.IsNullOrEmpty(machineName) || string.IsNullOrWhiteSpace(machineName))
 				return null;
 
-			return organizationMachinesList.Find(item => item.Name_P.Equals(machineName,  StringComparison.InvariantCultureIgnoreCase));
+			return organizationMachinesList.Find(item =>
+				item.Name_P.Equals(machineName, StringComparison.InvariantCultureIgnoreCase));
 		}
 	}
 }

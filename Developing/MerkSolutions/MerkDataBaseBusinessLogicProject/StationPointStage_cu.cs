@@ -17,7 +17,6 @@ namespace MerkDataBaseBusinessLogicProject
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public StationPointStage_cu()
         {
-            this.OrganizationMachine_cu = new HashSet<OrganizationMachine_cu>();
             this.QueueManagers = new HashSet<QueueManager>();
             this.VisitTimings = new HashSet<VisitTiming>();
         }
@@ -36,8 +35,6 @@ namespace MerkDataBaseBusinessLogicProject
     
         public virtual Application_p Application_p { get; set; }
         public virtual Floor_cu Floor_cu { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrganizationMachine_cu> OrganizationMachine_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QueueManager> QueueManagers { get; set; }
         public virtual StationPoint_cu StationPoint_cu { get; set; }

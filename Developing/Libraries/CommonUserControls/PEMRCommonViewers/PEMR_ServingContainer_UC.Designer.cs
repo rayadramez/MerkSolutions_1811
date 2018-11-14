@@ -35,9 +35,9 @@
 			this.tabMain = new DevExpress.XtraTab.XtraTabControl();
 			this.tabActiveVisit = new DevExpress.XtraTab.XtraTabPage();
 			this.tabSubServices = new DevExpress.XtraTab.XtraTabControl();
-			this.tabMedicalHistory = new DevExpress.XtraTab.XtraTabPage();
+			this.tabMedicalHistory_Main = new DevExpress.XtraTab.XtraTabPage();
 			this.tabMedicalHistory_Sub = new DevExpress.XtraTab.XtraTabControl();
-			this.tabGeneralHistory = new DevExpress.XtraTab.XtraTabPage();
+			this.tabMedicalHistory = new DevExpress.XtraTab.XtraTabPage();
 			this.tabFamilyHistory = new DevExpress.XtraTab.XtraTabPage();
 			this.tabSocialHistory = new DevExpress.XtraTab.XtraTabPage();
 			this.tabExamination = new DevExpress.XtraTab.XtraTabPage();
@@ -125,7 +125,7 @@
 			this.tabActiveVisit.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.tabSubServices)).BeginInit();
 			this.tabSubServices.SuspendLayout();
-			this.tabMedicalHistory.SuspendLayout();
+			this.tabMedicalHistory_Main.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.tabMedicalHistory_Sub)).BeginInit();
 			this.tabMedicalHistory_Sub.SuspendLayout();
 			this.tabExamination.SuspendLayout();
@@ -277,11 +277,11 @@
 			this.tabSubServices.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
 			this.tabSubServices.Location = new System.Drawing.Point(0, 0);
 			this.tabSubServices.Name = "tabSubServices";
-			this.tabSubServices.SelectedTabPage = this.tabMedicalHistory;
+			this.tabSubServices.SelectedTabPage = this.tabMedicalHistory_Main;
 			this.tabSubServices.Size = new System.Drawing.Size(1250, 587);
 			this.tabSubServices.TabIndex = 29;
 			this.tabSubServices.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.tabMedicalHistory,
+            this.tabMedicalHistory_Main,
             this.tabExamination,
             this.tabDiagnosisMain,
             this.tabReferral,
@@ -293,32 +293,32 @@
 			this.tabSubServices.MouseLeave += new System.EventHandler(this.tabSubServices_MouseLeave);
 			this.tabSubServices.MouseHover += new System.EventHandler(this.tabSubServices_MouseHover);
 			// 
-			// tabMedicalHistory
+			// tabMedicalHistory_Main
 			// 
-			this.tabMedicalHistory.Appearance.Header.BackColor = System.Drawing.Color.White;
-			this.tabMedicalHistory.Appearance.Header.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.tabMedicalHistory.Appearance.Header.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.tabMedicalHistory.Appearance.Header.Options.UseBackColor = true;
-			this.tabMedicalHistory.Appearance.Header.Options.UseBorderColor = true;
-			this.tabMedicalHistory.Appearance.Header.Options.UseFont = true;
-			this.tabMedicalHistory.Appearance.Header.Options.UseTextOptions = true;
-			this.tabMedicalHistory.Appearance.Header.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-			this.tabMedicalHistory.Appearance.HeaderActive.BackColor = System.Drawing.Color.DarkCyan;
-			this.tabMedicalHistory.Appearance.HeaderActive.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-			this.tabMedicalHistory.Appearance.HeaderActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-			this.tabMedicalHistory.Appearance.HeaderActive.Options.UseBackColor = true;
-			this.tabMedicalHistory.Appearance.HeaderActive.Options.UseFont = true;
-			this.tabMedicalHistory.Appearance.HeaderActive.Options.UseForeColor = true;
-			this.tabMedicalHistory.Appearance.HeaderActive.Options.UseTextOptions = true;
-			this.tabMedicalHistory.Appearance.HeaderActive.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-			this.tabMedicalHistory.Appearance.HeaderHotTracked.BackColor = System.Drawing.Color.Yellow;
-			this.tabMedicalHistory.Appearance.HeaderHotTracked.Options.UseBackColor = true;
-			this.tabMedicalHistory.AutoScroll = true;
-			this.tabMedicalHistory.Controls.Add(this.tabMedicalHistory_Sub);
-			this.tabMedicalHistory.Image = global::CommonUserControls.Properties.Resources.MedicalIcon_16_02;
-			this.tabMedicalHistory.Name = "tabMedicalHistory";
-			this.tabMedicalHistory.Size = new System.Drawing.Size(1096, 579);
-			this.tabMedicalHistory.Text = "Medical History";
+			this.tabMedicalHistory_Main.Appearance.Header.BackColor = System.Drawing.Color.White;
+			this.tabMedicalHistory_Main.Appearance.Header.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.tabMedicalHistory_Main.Appearance.Header.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.tabMedicalHistory_Main.Appearance.Header.Options.UseBackColor = true;
+			this.tabMedicalHistory_Main.Appearance.Header.Options.UseBorderColor = true;
+			this.tabMedicalHistory_Main.Appearance.Header.Options.UseFont = true;
+			this.tabMedicalHistory_Main.Appearance.Header.Options.UseTextOptions = true;
+			this.tabMedicalHistory_Main.Appearance.Header.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			this.tabMedicalHistory_Main.Appearance.HeaderActive.BackColor = System.Drawing.Color.DarkCyan;
+			this.tabMedicalHistory_Main.Appearance.HeaderActive.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+			this.tabMedicalHistory_Main.Appearance.HeaderActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+			this.tabMedicalHistory_Main.Appearance.HeaderActive.Options.UseBackColor = true;
+			this.tabMedicalHistory_Main.Appearance.HeaderActive.Options.UseFont = true;
+			this.tabMedicalHistory_Main.Appearance.HeaderActive.Options.UseForeColor = true;
+			this.tabMedicalHistory_Main.Appearance.HeaderActive.Options.UseTextOptions = true;
+			this.tabMedicalHistory_Main.Appearance.HeaderActive.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+			this.tabMedicalHistory_Main.Appearance.HeaderHotTracked.BackColor = System.Drawing.Color.Yellow;
+			this.tabMedicalHistory_Main.Appearance.HeaderHotTracked.Options.UseBackColor = true;
+			this.tabMedicalHistory_Main.AutoScroll = true;
+			this.tabMedicalHistory_Main.Controls.Add(this.tabMedicalHistory_Sub);
+			this.tabMedicalHistory_Main.Image = global::CommonUserControls.Properties.Resources.MedicalIcon_16_02;
+			this.tabMedicalHistory_Main.Name = "tabMedicalHistory_Main";
+			this.tabMedicalHistory_Main.Size = new System.Drawing.Size(1096, 579);
+			this.tabMedicalHistory_Main.Text = "Medical History";
 			// 
 			// tabMedicalHistory_Sub
 			// 
@@ -327,35 +327,35 @@
 			this.tabMedicalHistory_Sub.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tabMedicalHistory_Sub.Location = new System.Drawing.Point(0, 0);
 			this.tabMedicalHistory_Sub.Name = "tabMedicalHistory_Sub";
-			this.tabMedicalHistory_Sub.SelectedTabPage = this.tabGeneralHistory;
+			this.tabMedicalHistory_Sub.SelectedTabPage = this.tabMedicalHistory;
 			this.tabMedicalHistory_Sub.ShowTabHeader = DevExpress.Utils.DefaultBoolean.True;
 			this.tabMedicalHistory_Sub.Size = new System.Drawing.Size(1096, 579);
 			this.tabMedicalHistory_Sub.TabIndex = 0;
 			this.tabMedicalHistory_Sub.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabFamilyHistory,
             this.tabSocialHistory,
-            this.tabGeneralHistory});
+            this.tabMedicalHistory});
 			this.tabMedicalHistory_Sub.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.tabSubControl_SelectedPageChanged);
 			// 
-			// tabGeneralHistory
+			// tabMedicalHistory
 			// 
-			this.tabGeneralHistory.Appearance.Header.BackColor = System.Drawing.Color.White;
-			this.tabGeneralHistory.Appearance.Header.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-			this.tabGeneralHistory.Appearance.Header.Options.UseBackColor = true;
-			this.tabGeneralHistory.Appearance.Header.Options.UseFont = true;
-			this.tabGeneralHistory.Appearance.HeaderActive.BackColor = System.Drawing.Color.DarkCyan;
-			this.tabGeneralHistory.Appearance.HeaderActive.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-			this.tabGeneralHistory.Appearance.HeaderActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.tabGeneralHistory.Appearance.HeaderActive.Options.UseBackColor = true;
-			this.tabGeneralHistory.Appearance.HeaderActive.Options.UseFont = true;
-			this.tabGeneralHistory.Appearance.HeaderActive.Options.UseForeColor = true;
-			this.tabGeneralHistory.Appearance.HeaderHotTracked.BackColor = System.Drawing.Color.Yellow;
-			this.tabGeneralHistory.Appearance.HeaderHotTracked.Options.UseBackColor = true;
-			this.tabGeneralHistory.AutoScroll = true;
-			this.tabGeneralHistory.Image = global::CommonUserControls.Properties.Resources.MedicalIcon_16_02;
-			this.tabGeneralHistory.Name = "tabGeneralHistory";
-			this.tabGeneralHistory.Size = new System.Drawing.Size(1090, 531);
-			this.tabGeneralHistory.Text = "Medical History";
+			this.tabMedicalHistory.Appearance.Header.BackColor = System.Drawing.Color.White;
+			this.tabMedicalHistory.Appearance.Header.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+			this.tabMedicalHistory.Appearance.Header.Options.UseBackColor = true;
+			this.tabMedicalHistory.Appearance.Header.Options.UseFont = true;
+			this.tabMedicalHistory.Appearance.HeaderActive.BackColor = System.Drawing.Color.DarkCyan;
+			this.tabMedicalHistory.Appearance.HeaderActive.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+			this.tabMedicalHistory.Appearance.HeaderActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.tabMedicalHistory.Appearance.HeaderActive.Options.UseBackColor = true;
+			this.tabMedicalHistory.Appearance.HeaderActive.Options.UseFont = true;
+			this.tabMedicalHistory.Appearance.HeaderActive.Options.UseForeColor = true;
+			this.tabMedicalHistory.Appearance.HeaderHotTracked.BackColor = System.Drawing.Color.Yellow;
+			this.tabMedicalHistory.Appearance.HeaderHotTracked.Options.UseBackColor = true;
+			this.tabMedicalHistory.AutoScroll = true;
+			this.tabMedicalHistory.Image = global::CommonUserControls.Properties.Resources.MedicalIcon_16_02;
+			this.tabMedicalHistory.Name = "tabMedicalHistory";
+			this.tabMedicalHistory.Size = new System.Drawing.Size(1090, 531);
+			this.tabMedicalHistory.Text = "Medical History";
 			// 
 			// tabFamilyHistory
 			// 
@@ -1648,7 +1648,7 @@
 			this.tabActiveVisit.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.tabSubServices)).EndInit();
 			this.tabSubServices.ResumeLayout(false);
-			this.tabMedicalHistory.ResumeLayout(false);
+			this.tabMedicalHistory_Main.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.tabMedicalHistory_Sub)).EndInit();
 			this.tabMedicalHistory_Sub.ResumeLayout(false);
 			this.tabExamination.ResumeLayout(false);
@@ -1743,14 +1743,14 @@
 		private DevExpress.XtraEditors.SimpleButton simpleButton5;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
 		private DevExpress.XtraTab.XtraTabControl tabSubServices;
-		private DevExpress.XtraTab.XtraTabPage tabMedicalHistory;
+		private DevExpress.XtraTab.XtraTabPage tabMedicalHistory_Main;
 		private DevExpress.XtraTab.XtraTabPage tabExamination;
 		private DevExpress.XtraTab.XtraTabPage tabDiagnosisMain;
 		private DevExpress.XtraTab.XtraTabPage tabScannedFiles;
 		private DevExpress.XtraTab.XtraTabControl tabMedicalHistory_Sub;
 		private DevExpress.XtraTab.XtraTabPage tabSocialHistory;
 		private DevExpress.XtraTab.XtraTabPage tabFamilyHistory;
-		private DevExpress.XtraTab.XtraTabPage tabGeneralHistory;
+		private DevExpress.XtraTab.XtraTabPage tabMedicalHistory;
 		private DevExpress.XtraTab.XtraTabControl tabDiagnosis_Main;
 		private DevExpress.XtraTab.XtraTabPage tabMedication;
 		private DevExpress.XtraTab.XtraTabPage tabDiagnosis;

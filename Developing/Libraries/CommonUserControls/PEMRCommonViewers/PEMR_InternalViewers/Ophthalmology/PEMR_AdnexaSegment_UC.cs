@@ -62,10 +62,11 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 			FullScreenMode = FullScreenMode.NotFullScreen;
 			txtReccommednations_OD.EnterMoveNextControl = false;
 
-			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign == null ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign.Count == 0 ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AdnexaSegmentSign == null ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AdnexaSegmentSign.Count == 0)
+			if (PEMRBusinessLogic.ActivePEMRObject == null ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign == null ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAdnexaSegmentSign.Count == 0 ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AdnexaSegmentSign == null ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AdnexaSegmentSign.Count == 0)
 				return;
 			txtReccommednations_OD.EditValue = PEMRBusinessLogic.ActivePEMRObject
 				.List_VisitTiming_MainAdnexaSegmentSign[0].GeneralDescription_OD;
@@ -133,7 +134,11 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 			lstAddedAdnexaSegment_OD.DataSource = null;
 			lstAddedAdnexaSegment_OS.DataSource = null;
 			if (clearAll)
+			{
 				txtReccommednations_OD.EditValue = null;
+				txtReccommednations_OS.EditValue = null;
+				lytAddedSign_OD.Text = lytAddedSign_OS.Text = "Added Sign" + "(0)";
+			}
 		}
 
 		public void FillControls()
@@ -220,6 +225,10 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 
 		private void btnRemoveFromList_OD_Click(object sender, EventArgs e)
 		{
+			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AdnexaSegmentSign == null ||
+				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AdnexaSegmentSign.Count == 0)
+				return;
+
 			if (AddedAdnexaSegmentSign_OD == null || AddedAdnexaSegmentSign_OD.Count == 0)
 			{
 				XtraMessageBox.Show(

@@ -31,11 +31,11 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			if (Name_P != null)
 				((OrganizationMachine_cu)ActiveDBItem).Name_P = Name_P.ToString();
 
-			if (StationPoint_CU_ID != null)
-				((OrganizationMachine_cu)ActiveDBItem).StationPoint_CU_ID = Convert.ToInt32(StationPoint_CU_ID);
+			//if (StationPoint_CU_ID != null)
+			//	((OrganizationMachine_cu)ActiveDBItem).StationPoint_CU_ID = Convert.ToInt32(StationPoint_CU_ID);
 
-			if (StationPointStage_CU_ID != null)
-				((OrganizationMachine_cu)ActiveDBItem).StationPointStage_CU_ID = Convert.ToInt32(StationPointStage_CU_ID);
+			//if (StationPointStage_CU_ID != null)
+			//	((OrganizationMachine_cu)ActiveDBItem).StationPointStage_CU_ID = Convert.ToInt32(StationPointStage_CU_ID);
 
 			((OrganizationMachine_cu)ActiveDBItem).OrganizationID = Convert.ToInt32(ApplicationStaticConfiguration.Organization);
 
@@ -150,8 +150,8 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 		public override void Edit(IDBCommon entity)
 		{
 			Name_P = ((OrganizationMachine_cu)ActiveDBItem).Name_P;
-			StationPoint_CU_ID = ((OrganizationMachine_cu)ActiveDBItem).StationPoint_CU_ID;
-			StationPointStage_CU_ID = ((OrganizationMachine_cu)ActiveDBItem).StationPointStage_CU_ID;
+			//StationPoint_CU_ID = ((OrganizationMachine_cu)ActiveDBItem).StationPoint_CU_ID;
+			//StationPointStage_CU_ID = ((OrganizationMachine_cu)ActiveDBItem).StationPointStage_CU_ID;
 			SkinName = ((OrganizationMachine_cu)ActiveDBItem).SkinName;
 			Color = ((OrganizationMachine_cu)ActiveDBItem).Color;
 

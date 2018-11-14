@@ -44,7 +44,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 
 		private void PEMR_ExtraocularMuscles_UC_Load(object sender, System.EventArgs e)
 		{
-			
+
 		}
 
 		public void Initialize(ReadingsMode readingMode,
@@ -82,19 +82,24 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 					break;
 			}
 
-			List<GetPreviousVisitTiming_EOMReading_Result> list =
-				PEMRBusinessLogic.GetPrevious_VisitTiming_EOMReading_Result(
-					PEMRBusinessLogic.ActivePEMRObject.Active_Patient.ID, dtSearchFrom.EditValue, dtSearchTo.EditValue);
-			if (list != null)
-				list = list.OrderByDescending(item => item.TakenDateTime).ToList();
-			grdControl.DataSource = list;
-			grdControl.RefreshDataSource();
-			SetToolTip(list);
+			if (PEMRBusinessLogic.ActivePEMRObject != null)
+			{
+				List<GetPreviousVisitTiming_EOMReading_Result> list =
+					PEMRBusinessLogic.GetPrevious_VisitTiming_EOMReading_Result(
+						PEMRBusinessLogic.ActivePEMRObject.Active_Patient.ID, dtSearchFrom.EditValue,
+						dtSearchTo.EditValue);
+				if (list != null)
+					list = list.OrderByDescending(item => item.TakenDateTime).ToList();
+				grdControl.DataSource = list;
+				grdControl.RefreshDataSource();
+				SetToolTip(list);
+			}
 
-			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainEOMSign == null ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainEOMSign.Count == 0 ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_EOMSign == null ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_EOMSign.Count == 0)
+			if (PEMRBusinessLogic.ActivePEMRObject == null ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainEOMSign == null ||
+			     PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainEOMSign.Count == 0 ||
+			     PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_EOMSign == null ||
+			     PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_EOMSign.Count == 0)
 				return;
 
 			txtReccommednations_OD.EditValue = PEMRBusinessLogic.ActivePEMRObject
@@ -248,6 +253,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 			{
 				txtReccommednations_OD.EditValue = null;
 				txtReccommednations_OS.EditValue = null;
+				lytAddedSign_OD.Text = lytAddedSign_OS.Text = "Added Sign" + "(0)";
 
 				ReadingsMode = ReadingsMode.ViewingActiveAllReadings;
 				lytGroup_AllReadings.Visibility = LayoutVisibility.Always;
@@ -360,6 +366,10 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 
 		private void btnRemoveFromList_OD_Click(object sender, EventArgs e)
 		{
+			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_EOMSign == null ||
+				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_EOMSign.Count == 0)
+				return;
+
 			if (AddedEOMSign_OD == null || AddedEOMSign_OD.Count == 0)
 			{
 				XtraMessageBox.Show(
@@ -547,7 +557,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 				{
 					if (_mainEOMSign == null)
 						return;
-					if(PEMRBusinessLogic.Update_VisitTiming_MainEOMSign(this, _mainEOMSign))
+					if (PEMRBusinessLogic.Update_VisitTiming_MainEOMSign(this, _mainEOMSign))
 						XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
 							MessageBoxIcon.Information);
 				}

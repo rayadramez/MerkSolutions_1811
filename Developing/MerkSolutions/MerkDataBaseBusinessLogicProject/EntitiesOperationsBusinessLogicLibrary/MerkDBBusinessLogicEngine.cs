@@ -310,9 +310,8 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static InvoiceDetail CreateNew_InvoiceDetail(InvoiceDetail parentInvoiceDetail, object serviceId,
-			object servicePrice, bool useCustomPrice, object serviceCount,
-			object serviceDate, object doctorId, object isServiceIncludedInInsurance, object insurancePercetnage,
-			object isSurchargeApplied,
+			object servicePrice, bool useCustomPrice, object serviceCount, object serviceDate, object doctorId,
+			object isServiceIncludedInInsurance, object insurancePercetnage, object isSurchargeApplied,
 			object isTaxApplied, object serviceDescription)
 		{
 			InvoiceDetail serviceDetailObject = new InvoiceDetail();
@@ -328,8 +327,10 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 			if (Convert.ToBoolean(isServiceIncludedInInsurance) && insurancePercetnage != null)
 			{
-				serviceDetailObject.PatientShare = (100 - Convert.ToDouble(insurancePercetnage))/100 * Convert.ToDouble(servicePrice);
-				serviceDetailObject.InsuranceShare = Convert.ToDouble(insurancePercetnage)/100 * Convert.ToDouble(servicePrice);
+				serviceDetailObject.PatientShare =
+					(100 - Convert.ToDouble(insurancePercetnage)) / 100 * Convert.ToDouble(servicePrice);
+				serviceDetailObject.InsuranceShare =
+					Convert.ToDouble(insurancePercetnage) / 100 * Convert.ToDouble(servicePrice);
 				serviceDetailObject.IsInsuranceApplied = true;
 			}
 			else
@@ -505,28 +506,6 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			return true;
 		}
 
-		public static void LoadDefaultStationPointStage()
-		{
-			StationPoint_cu stationPoint =
-				StationPoint_cu.ItemsList.Find(
-					item => Convert.ToInt32(item.Station_P_ID).Equals(Convert.ToInt32(Private_StationPoint)));
-			if (stationPoint == null)
-				return;
-
-			ActiveStationPoint = stationPoint;
-
-			List<StationPointStage_cu> stages =
-				StationPointStage_cu.ItemsList.FindAll(
-					item => Convert.ToInt32(item.StationPoint_CU_ID).Equals(Convert.ToInt32(stationPoint.ID)))
-					.OrderBy(item => Convert.ToInt32(item.OrderIndex))
-					.ToList();
-			if (stages.Count == 0)
-				return;
-
-			StationPointStage_cu firstStage = stages.FirstOrDefault();
-			ActiveStationPointStage = firstStage;
-		}
-
 		public static List<StationPointStage_cu> GetAllStationPointStages()
 		{
 			StationPoint_cu stationPoint =
@@ -544,14 +523,40 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		public static List<StationPointStage_cu> GetOrganizationMachineStationPointStages(
 			OrganizationMachine_cu organizationMachine, DB_Application application)
 		{
-			if (organizationMachine == null || organizationMachine.StationPointStage_CU_ID == null)
+			if (organizationMachine == null)
+				return null;
+			List<OrganizationMachine_StationPoint_cu> list_OrganizationMachine_StationPoint_cu =
+				OrganizationMachine_StationPoint_cu.ItemsList.FindAll(item =>
+					Convert.ToInt32(item.OrganizationMachine_CU_ID).Equals(Convert.ToInt32(organizationMachine.ID)));
+			List<StationPoint_cu> list_StationPoint_cu = new List<StationPoint_cu>();
+			foreach (OrganizationMachine_StationPoint_cu organizationMachineStationPointCu in list_OrganizationMachine_StationPoint_cu)
+			{
+				StationPoint_cu stationPoint = StationPoint_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID)
+						.Equals(Convert.ToInt32(organizationMachineStationPointCu.StationPoint_CU_ID)));
+				if(stationPoint != null)
+					list_StationPoint_cu.Add(stationPoint);
+			}
+
+			if (list_StationPoint_cu == null || list_StationPoint_cu.Count == 0)
 				return null;
 
-			List<StationPointStage_cu> stationPointStages = StationPointStage_cu.ItemsList.FindAll(item =>
-				Convert.ToInt32(item.ID)
-					.Equals(Convert.ToInt32(organizationMachine.StationPointStage_CU_ID)));
-			return stationPointStages.FindAll(item =>
-				Convert.ToInt32(item.ServingApplication_P_ID).Equals((int) application));
+			List<StationPointStage_cu> list_StationPointStage_cu = new List<StationPointStage_cu>();
+			foreach (StationPoint_cu stationPointCu in list_StationPoint_cu)
+			{
+				List<StationPointStage_cu> tempStagesList = new List<StationPointStage_cu>();
+				if (application.Equals(DB_Application.All))
+					tempStagesList = StationPointStage_cu.ItemsList.FindAll(item =>
+						Convert.ToInt32(item.StationPoint_CU_ID).Equals(Convert.ToInt32(stationPointCu.ID)));
+				else
+					tempStagesList = StationPointStage_cu.ItemsList.FindAll(item =>
+						Convert.ToInt32(item.StationPoint_CU_ID).Equals(Convert.ToInt32(stationPointCu.ID)) &&
+						Convert.ToInt32(item.ServingApplication_P_ID).Equals(Convert.ToInt32(application)));
+				if (tempStagesList.Count > 0)
+					list_StationPointStage_cu.AddRange(tempStagesList);
+			}
+
+			return list_StationPointStage_cu;
 		}
 
 		public static PatientAttachment_cu CreateNewPatientAttachement(int patientID, string imageName,

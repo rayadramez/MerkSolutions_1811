@@ -76,15 +76,18 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 					break;
 			}
 
-			List<GetPreviousVisitTiming_VisionRefractionReading_Result> list =
-				PEMRBusinessLogic.GetPrevious_VisitTiming_VisionRefractionReading(
-					PEMRBusinessLogic.ActivePEMRObject.Active_Patient.ID, dtSearchFrom.EditValue,
-					dtSearchTo.EditValue);
-			if (list != null)
-				list = list.OrderByDescending(item => item.TakenDateTime).ToList();
-			grdControl.DataSource = list;
-			grdControl.RefreshDataSource();
-			SetToolTip(list);
+			if (PEMRBusinessLogic.ActivePEMRObject != null)
+			{
+				List<GetPreviousVisitTiming_VisionRefractionReading_Result> list =
+					PEMRBusinessLogic.GetPrevious_VisitTiming_VisionRefractionReading(
+						PEMRBusinessLogic.ActivePEMRObject.Active_Patient.ID, dtSearchFrom.EditValue,
+						dtSearchTo.EditValue);
+				if (list != null)
+					list = list.OrderByDescending(item => item.TakenDateTime).ToList();
+				grdControl.DataSource = list;
+				grdControl.RefreshDataSource();
+				SetToolTip(list);
+			}
 		}
 
 		public void ReadyForNewOrEditing(bool enableControls)

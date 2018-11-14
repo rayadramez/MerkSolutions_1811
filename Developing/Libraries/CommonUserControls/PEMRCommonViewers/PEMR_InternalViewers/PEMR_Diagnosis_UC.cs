@@ -74,10 +74,11 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			FullScreenMode = FullScreenMode.NotFullScreen;
 			txtReccommednations.EnterMoveNextControl = false;
 
-			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis == null ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis.Count == 0 ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Diagnosis == null ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Diagnosis.Count == 0)
+			if (PEMRBusinessLogic.ActivePEMRObject == null ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis == null ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis.Count == 0 ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Diagnosis == null ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Diagnosis.Count == 0)
 				return;
 
 			txtReccommednations.EditValue = PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainDiagnosis[0]

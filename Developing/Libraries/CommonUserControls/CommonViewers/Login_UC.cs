@@ -105,18 +105,19 @@ namespace CommonUserControls.CommonViewers
 								.OrganizationMachine.Color);
 					else
 						ApplicationStaticConfiguration.SkinColor = null;
-					StationPoint_cu stationPoint = StationPoint_cu.ItemsList.Find(item =>
-						Convert.ToInt32(item.ID).Equals(Convert.ToInt32(organizationmachine.StationPoint_CU_ID)));
-					if (stationPoint != null)
-						ApplicationStaticConfiguration.StationPoint = (DB_Station) stationPoint.Station_P_ID;
-					else
-					{
-						if (ParentForm != null)
-						{
-							ParentForm.DialogResult = DialogResult.Cancel;
-							ParentForm.Close();
-						}
-					}
+
+					//StationPoint_cu stationPoint = StationPoint_cu.ItemsList.Find(item =>
+					//	Convert.ToInt32(item.ID).Equals(Convert.ToInt32(organizationmachine.StationPoint_CU_ID)));
+					//if (stationPoint != null)
+					//	ApplicationStaticConfiguration.StationPoint = (DB_Station) stationPoint.Station_P_ID;
+					//else
+					//{
+					//	if (ParentForm != null)
+					//	{
+					//		ParentForm.DialogResult = DialogResult.Cancel;
+					//		ParentForm.Close();
+					//	}
+					//}
 
 					if (ParentForm != null)
 					{

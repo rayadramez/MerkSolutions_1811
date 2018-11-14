@@ -100,7 +100,7 @@
 			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(523, 276, 284, 350);
 			this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
 			this.layoutControl1.Root = this.layoutControlGroup1;
-			this.layoutControl1.Size = new System.Drawing.Size(414, 100);
+			this.layoutControl1.Size = new System.Drawing.Size(414, 110);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
@@ -248,7 +248,7 @@
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup1.Size = new System.Drawing.Size(414, 100);
+			this.layoutControlGroup1.Size = new System.Drawing.Size(414, 110);
 			this.layoutControlGroup1.TextVisible = false;
 			// 
 			// layoutControlItem3
@@ -299,7 +299,7 @@
 			this.emptySpaceItem2.AllowHotTrack = false;
 			this.emptySpaceItem2.Location = new System.Drawing.Point(69, 70);
 			this.emptySpaceItem2.Name = "emptySpaceItem2";
-			this.emptySpaceItem2.Size = new System.Drawing.Size(287, 30);
+			this.emptySpaceItem2.Size = new System.Drawing.Size(287, 40);
 			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem9
@@ -391,7 +391,7 @@
 			this.emptySpaceItem3.AllowHotTrack = false;
 			this.emptySpaceItem3.Location = new System.Drawing.Point(358, 87);
 			this.emptySpaceItem3.Name = "emptySpaceItem3";
-			this.emptySpaceItem3.Size = new System.Drawing.Size(56, 13);
+			this.emptySpaceItem3.Size = new System.Drawing.Size(56, 23);
 			this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// simpleSeparator5
@@ -399,14 +399,14 @@
 			this.simpleSeparator5.AllowHotTrack = false;
 			this.simpleSeparator5.Location = new System.Drawing.Point(356, 0);
 			this.simpleSeparator5.Name = "simpleSeparator5";
-			this.simpleSeparator5.Size = new System.Drawing.Size(2, 100);
+			this.simpleSeparator5.Size = new System.Drawing.Size(2, 110);
 			// 
 			// emptySpaceItem4
 			// 
 			this.emptySpaceItem4.AllowHotTrack = false;
 			this.emptySpaceItem4.Location = new System.Drawing.Point(0, 87);
 			this.emptySpaceItem4.Name = "emptySpaceItem4";
-			this.emptySpaceItem4.Size = new System.Drawing.Size(67, 13);
+			this.emptySpaceItem4.Size = new System.Drawing.Size(67, 23);
 			this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// simpleSeparator4
@@ -414,7 +414,7 @@
 			this.simpleSeparator4.AllowHotTrack = false;
 			this.simpleSeparator4.Location = new System.Drawing.Point(67, 0);
 			this.simpleSeparator4.Name = "simpleSeparator4";
-			this.simpleSeparator4.Size = new System.Drawing.Size(2, 100);
+			this.simpleSeparator4.Size = new System.Drawing.Size(2, 110);
 			// 
 			// simpleSeparator6
 			// 
@@ -438,9 +438,9 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.Controls.Add(this.layoutControl1);
-			this.MinimumSize = new System.Drawing.Size(2, 100);
+			this.MinimumSize = new System.Drawing.Size(2, 110);
 			this.Name = "PEMRPatientQueueCard";
-			this.Size = new System.Drawing.Size(414, 100);
+			this.Size = new System.Drawing.Size(414, 110);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
 			this.layoutControl1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();

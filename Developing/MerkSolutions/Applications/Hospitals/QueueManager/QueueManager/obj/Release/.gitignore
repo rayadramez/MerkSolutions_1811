@@ -9,3 +9,4 @@
 /queuemanager.exe.licenses
 /DesignTimeResolveAssemblyReferencesInput.cache
 *.force
+/CoreCompileInputs.cache

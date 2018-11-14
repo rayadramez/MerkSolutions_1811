@@ -31,13 +31,24 @@ namespace CommonUserControls.PEMRCommonViewers
 			if (ApplicationStaticConfiguration.ActiveLoginUser == null)
 				return;
 
-			MerkDBBusinessLogicEngine.LoadDefaultStationPointStage();
-			CommonViewsActions.FillGridlookupEdit(lkeStationPointStages,
+			List<StationPointStage_cu> stationPointStagesList =
 				MerkDBBusinessLogicEngine.GetOrganizationMachineStationPointStages(
-					ApplicationStaticConfiguration.OrganizationMachine,
-					ApplicationStaticConfiguration.Application), "Name_S");
+					ApplicationStaticConfiguration.OrganizationMachine, ApplicationStaticConfiguration.Application);
+			if (stationPointStagesList != null && stationPointStagesList.Count > 0)
+			{
+				stationPointStagesList = stationPointStagesList.OrderBy(item => item.OrderIndex).ToList();
+				MerkDBBusinessLogicEngine.ActiveStationPointStage = stationPointStagesList.FirstOrDefault();
+			}
+			
+			CommonViewsActions.FillGridlookupEdit(lkeStationPointStages, stationPointStagesList, "Name_S");
 			if (MerkDBBusinessLogicEngine.ActiveStationPointStage != null)
+			{
+				StationPoint_cu stationPoint = StationPoint_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID)
+						.Equals(Convert.ToInt32(MerkDBBusinessLogicEngine.ActiveStationPointStage.StationPoint_CU_ID)));
+				MerkDBBusinessLogicEngine.ActiveStationPoint = stationPoint;
 				lkeStationPointStages.EditValue = MerkDBBusinessLogicEngine.ActiveStationPointStage.ID;
+			}
 		}
 
 		public void Initialize(StationPointStage_cu stationPointStage)
@@ -128,13 +139,13 @@ namespace CommonUserControls.PEMRCommonViewers
 			tabPaused.Controls.Clear();
 			tabServed.Controls.Clear();
 
-			StationPointStage_cu stationPointStage =
-				StationPointStage_cu.ItemsList.Find(
-					item => Convert.ToInt32(item.ID).Equals(Convert.ToInt32(lkeStationPointStages.EditValue)));
-			if (stationPointStage == null)
-				return;
+			//StationPointStage_cu stationPointStage =
+			//	StationPointStage_cu.ItemsList.Find(
+			//		item => Convert.ToInt32(item.ID).Equals(Convert.ToInt32(lkeStationPointStages.EditValue)));
+			//if (stationPointStage == null)
+			//	return;
 
-			MerkDBBusinessLogicEngine.ActiveStationPointStage = stationPointStage;
+			//MerkDBBusinessLogicEngine.ActiveStationPointStage = stationPointStage;
 
 			Initialize(MerkDBBusinessLogicEngine.ActiveStationPointStage);
 		}

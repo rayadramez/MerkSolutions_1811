@@ -28,6 +28,11 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			txtGeneralDescription.EnterMoveNextControl = false;
 		}
 
+		public void Initialize()
+		{
+
+		}
+
 		public void ClearControls(bool clearAll)
 		{
 			NegativeSocialHistory = null;

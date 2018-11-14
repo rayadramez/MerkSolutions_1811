@@ -202,7 +202,7 @@
 
 	public enum DB_Application
 	{
-		None = 0,
+		All = 0,
 		ClinicReception = 1,
 		AdmissionReception = 2,
 		AllReception = 3,
@@ -434,7 +434,8 @@
 		VisitTiming_MainEOMSign = 152,
 		VisitTiming_EOMReading = 153,
 		VisitTiming_EOMSign,
-		VisitTiming_MedicalHistory
+		VisitTiming_MedicalHistory,
+		OrganizationMachine_StationPoint_cu
 	}
 
 	public enum DB_Station

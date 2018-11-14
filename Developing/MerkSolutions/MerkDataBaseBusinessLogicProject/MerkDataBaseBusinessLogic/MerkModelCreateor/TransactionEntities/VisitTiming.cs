@@ -49,16 +49,16 @@ namespace MerkDataBaseBusinessLogicProject
 			get
 			{
 				List<string> list = new List<string>();
-				list.Add("VisitTiming_Attachement");
-				list.Add("VisitTiming_InvestigationReservation");
-				list.Add("VisitTiming_LabReservation");
-				list.Add("VisitTiming_MainDiagnosis");
-				list.Add("VisitTiming_MainSymptoms");
-				list.Add("VisitTiming_Medication");
-				list.Add("VisitTiming_SocialHistory");
-				list.Add("VisitTiming_SurgeryReservation");
-				list.Add("VisitTiming_TreatmentPlan");
-				list.Add("VisitTiming_VitalSign");
+				//list.Add("VisitTiming_Attachement");
+				//list.Add("VisitTiming_InvestigationReservation");
+				//list.Add("VisitTiming_LabReservation");
+				//list.Add("VisitTiming_MainDiagnosis");
+				//list.Add("VisitTiming_MainSymptoms");
+				//list.Add("VisitTiming_Medication");
+				//list.Add("VisitTiming_SocialHistory");
+				//list.Add("VisitTiming_SurgeryReservation");
+				//list.Add("VisitTiming_TreatmentPlan");
+				//list.Add("VisitTiming_VitalSign");
 				return list;
 			}
 		}

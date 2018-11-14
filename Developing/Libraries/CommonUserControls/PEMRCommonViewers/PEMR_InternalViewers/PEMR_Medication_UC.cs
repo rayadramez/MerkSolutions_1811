@@ -41,8 +41,9 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 				!chkDateInterval.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
 			chkDateInterval.Checked = true;
 
-			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Medication == null ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Medication.Count == 0)
+			if (PEMRBusinessLogic.ActivePEMRObject == null ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Medication == null ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Medication.Count == 0)
 				return;
 			grdTreatmentPlans.DataSource = PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Medication.FindAll(
 				item => !Convert.ToInt32(item.PEMRElementStatus).Equals(Convert.ToInt32(PEMRElementStatus.Removed)));

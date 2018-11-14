@@ -41,11 +41,12 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			btnAddToList.Enabled = IsEditingMode;
 			btnRemove.Enabled = IsEditingMode;
 
-			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_InvestigationReservation != null &&
+			if (PEMRBusinessLogic.ActivePEMRObject != null &&
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_InvestigationReservation != null &&
 			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_InvestigationReservation.Count > 0)
 				grdTreatmentPlans.DataSource =
-					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_InvestigationReservation.FindAll(
-						item => !Convert.ToInt32(item.PEMRElementStatus).Equals(Convert.ToInt32(PEMRElementStatus.Removed)));
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_InvestigationReservation.FindAll(item =>
+						!Convert.ToInt32(item.PEMRElementStatus).Equals(Convert.ToInt32(PEMRElementStatus.Removed)));
 			FillControls();
 		}
 

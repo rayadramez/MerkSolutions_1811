@@ -16,6 +16,11 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			txtReccommednations.EnterMoveNextControl = false;
 		}
 
+		public void Initialize()
+		{
+
+		}
+
 		public void ClearControls(bool clearAll)
 		{
 

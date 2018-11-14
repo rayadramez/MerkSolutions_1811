@@ -21,6 +21,11 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 		public PEMR_Pupillary_UC()
 		{
 			InitializeComponent();
+
+			CommonViewsActions.Decorate(lkeAbnormalitiesCauses_OD, lkeAbnormalitiesCauses_OS, lkeRAPDCauses_OD,
+				lkeRAPDCauses_OS, spnScotopic_OD, spnScotopic_OS, spnHighPhotopic_OD, spnHighPhotopic_OS,
+				spnLowPhotopic_OD, spnLowPhotopic_OS, spnHighMesopic_OD, spnHighMesopic_OS, spnLowMesopic_OD,
+				spnLowMesopic_OS);
 		}
 
 		public void Initialize()
@@ -29,10 +34,6 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 			FillControls();
 
 			PEMRBusinessLogic.PEMR_Pupillary = this;
-			CommonViewsActions.Decorate(lkeAbnormalitiesCauses_OD, lkeAbnormalitiesCauses_OS, lkeRAPDCauses_OD,
-				lkeRAPDCauses_OS, spnScotopic_OD, spnScotopic_OS, spnHighPhotopic_OD, spnHighPhotopic_OS,
-				spnLowPhotopic_OD, spnLowPhotopic_OS, spnHighMesopic_OD, spnHighMesopic_OS, spnLowMesopic_OD,
-				spnLowMesopic_OS);
 		}
 
 		#region Implementation of IPEMR_Viewer

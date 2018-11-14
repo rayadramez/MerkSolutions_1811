@@ -233,7 +233,7 @@
 			// txtReccommednations_OS
 			// 
 			this.txtReccommednations_OS.EditValue = "";
-			this.txtReccommednations_OS.Location = new System.Drawing.Point(677, 541);
+			this.txtReccommednations_OS.Location = new System.Drawing.Point(679, 541);
 			this.txtReccommednations_OS.Name = "txtReccommednations_OS";
 			this.txtReccommednations_OS.Properties.Appearance.BackColor = System.Drawing.Color.Cornsilk;
 			this.txtReccommednations_OS.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
@@ -249,7 +249,7 @@
 			this.txtReccommednations_OS.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			this.txtReccommednations_OS.Properties.NullValuePrompt = "NA";
 			this.txtReccommednations_OS.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.txtReccommednations_OS.Size = new System.Drawing.Size(521, 57);
+			this.txtReccommednations_OS.Size = new System.Drawing.Size(519, 57);
 			this.txtReccommednations_OS.StyleController = this.layoutControl1;
 			this.txtReccommednations_OS.TabIndex = 18;
 			// 
@@ -496,7 +496,7 @@
 			// pictureEdit2
 			// 
 			this.pictureEdit2.EditValue = global::CommonUserControls.Properties.Resources.Eye_OS_16_01;
-			this.pictureEdit2.Location = new System.Drawing.Point(967, 50);
+			this.pictureEdit2.Location = new System.Drawing.Point(968, 50);
 			this.pictureEdit2.Name = "pictureEdit2";
 			this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
@@ -654,16 +654,16 @@
             this.layoutControlItem21,
             this.emptySpaceItem12,
             this.simpleSeparator1,
-            this.simpleSeparator2,
             this.layoutControlItem24,
             this.simpleSeparator3,
             this.simpleSeparator4,
             this.simpleSeparator5,
-            this.simpleSeparator6,
             this.emptySpaceItem13,
             this.layoutControlItem11,
             this.layoutControlItem22,
-            this.layoutControlItem23});
+            this.layoutControlItem23,
+            this.simpleSeparator2,
+            this.simpleSeparator6});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -877,7 +877,7 @@
 			// layoutControlItem14
 			// 
 			this.layoutControlItem14.Control = this.pictureEdit2;
-			this.layoutControlItem14.Location = new System.Drawing.Point(964, 47);
+			this.layoutControlItem14.Location = new System.Drawing.Point(965, 47);
 			this.layoutControlItem14.MaxSize = new System.Drawing.Size(90, 70);
 			this.layoutControlItem14.MinSize = new System.Drawing.Size(90, 70);
 			this.layoutControlItem14.Name = "layoutControlItem14";
@@ -931,9 +931,9 @@
 			// emptySpaceItem7
 			// 
 			this.emptySpaceItem7.AllowHotTrack = false;
-			this.emptySpaceItem7.Location = new System.Drawing.Point(1054, 47);
+			this.emptySpaceItem7.Location = new System.Drawing.Point(1055, 47);
 			this.emptySpaceItem7.Name = "emptySpaceItem7";
-			this.emptySpaceItem7.Size = new System.Drawing.Size(146, 70);
+			this.emptySpaceItem7.Size = new System.Drawing.Size(145, 70);
 			this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// emptySpaceItem8
@@ -943,7 +943,7 @@
 			this.emptySpaceItem8.MaxSize = new System.Drawing.Size(0, 70);
 			this.emptySpaceItem8.MinSize = new System.Drawing.Size(10, 70);
 			this.emptySpaceItem8.Name = "emptySpaceItem8";
-			this.emptySpaceItem8.Size = new System.Drawing.Size(285, 70);
+			this.emptySpaceItem8.Size = new System.Drawing.Size(286, 70);
 			this.emptySpaceItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
 			// 
@@ -1086,16 +1086,16 @@
 			// simpleSeparator1
 			// 
 			this.simpleSeparator1.AllowHotTrack = false;
-			this.simpleSeparator1.Location = new System.Drawing.Point(675, 47);
+			this.simpleSeparator1.Location = new System.Drawing.Point(677, 47);
 			this.simpleSeparator1.Name = "simpleSeparator1";
 			this.simpleSeparator1.Size = new System.Drawing.Size(2, 473);
 			// 
 			// simpleSeparator2
 			// 
 			this.simpleSeparator2.AllowHotTrack = false;
-			this.simpleSeparator2.Location = new System.Drawing.Point(523, 47);
+			this.simpleSeparator2.Location = new System.Drawing.Point(521, 47);
 			this.simpleSeparator2.Name = "simpleSeparator2";
-			this.simpleSeparator2.Size = new System.Drawing.Size(2, 473);
+			this.simpleSeparator2.Size = new System.Drawing.Size(2, 553);
 			// 
 			// layoutControlItem24
 			// 
@@ -1125,39 +1125,41 @@
 			// simpleSeparator5
 			// 
 			this.simpleSeparator5.AllowHotTrack = false;
-			this.simpleSeparator5.Location = new System.Drawing.Point(521, 47);
+			this.simpleSeparator5.Location = new System.Drawing.Point(523, 47);
 			this.simpleSeparator5.Name = "simpleSeparator5";
 			this.simpleSeparator5.Size = new System.Drawing.Size(2, 473);
 			// 
 			// simpleSeparator6
 			// 
 			this.simpleSeparator6.AllowHotTrack = false;
-			this.simpleSeparator6.Location = new System.Drawing.Point(677, 47);
+			this.simpleSeparator6.Location = new System.Drawing.Point(675, 47);
 			this.simpleSeparator6.Name = "simpleSeparator6";
-			this.simpleSeparator6.Size = new System.Drawing.Size(2, 473);
+			this.simpleSeparator6.Size = new System.Drawing.Size(2, 553);
 			// 
 			// emptySpaceItem13
 			// 
 			this.emptySpaceItem13.AllowHotTrack = false;
-			this.emptySpaceItem13.Location = new System.Drawing.Point(521, 520);
+			this.emptySpaceItem13.Location = new System.Drawing.Point(523, 520);
 			this.emptySpaceItem13.Name = "emptySpaceItem13";
-			this.emptySpaceItem13.Size = new System.Drawing.Size(154, 80);
+			this.emptySpaceItem13.Size = new System.Drawing.Size(152, 80);
 			this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem11
 			// 
 			this.layoutControlItem11.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.layoutControlItem11.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+			this.layoutControlItem11.AppearanceItemCaption.ForeColor = System.Drawing.Color.DarkCyan;
 			this.layoutControlItem11.AppearanceItemCaption.Options.UseBackColor = true;
 			this.layoutControlItem11.AppearanceItemCaption.Options.UseFont = true;
+			this.layoutControlItem11.AppearanceItemCaption.Options.UseForeColor = true;
 			this.layoutControlItem11.AppearanceItemCaption.Options.UseTextOptions = true;
 			this.layoutControlItem11.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.layoutControlItem11.Control = this.txtReccommednations_OS;
-			this.layoutControlItem11.Location = new System.Drawing.Point(675, 520);
+			this.layoutControlItem11.Location = new System.Drawing.Point(677, 520);
 			this.layoutControlItem11.MaxSize = new System.Drawing.Size(0, 80);
 			this.layoutControlItem11.MinSize = new System.Drawing.Size(100, 80);
 			this.layoutControlItem11.Name = "layoutControlItem11";
-			this.layoutControlItem11.Size = new System.Drawing.Size(525, 80);
+			this.layoutControlItem11.Size = new System.Drawing.Size(523, 80);
 			this.layoutControlItem11.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			this.layoutControlItem11.Text = "Further Details";
 			this.layoutControlItem11.TextLocation = DevExpress.Utils.Locations.Top;

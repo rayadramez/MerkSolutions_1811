@@ -16,3 +16,4 @@
 /CommonControlLibrary.csproj.ResolveComReference.cache
 /Interop.WIA.dll
 /build.force
+*.cache

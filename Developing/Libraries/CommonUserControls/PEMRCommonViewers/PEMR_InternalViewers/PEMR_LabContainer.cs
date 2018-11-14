@@ -40,7 +40,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			btnAddToList.Enabled = IsEditingMode;
 			btnRemove.Enabled = IsEditingMode;
 
-			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_LabReservation != null &&
+			if (PEMRBusinessLogic.ActivePEMRObject != null &&  PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_LabReservation != null &&
 				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_LabReservation.Count > 0)
 				grdTreatmentPlans.DataSource =
 					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_LabReservation.FindAll(

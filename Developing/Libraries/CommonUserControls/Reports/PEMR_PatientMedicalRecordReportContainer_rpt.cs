@@ -16,6 +16,8 @@ namespace CommonUserControls.Reports
 		public void Initialize(PEMRObject pemrObject)
 		{
 			ActivePEMRObject = pemrObject;
+			if (ActivePEMRObject == null)
+				return;
 			lblElementHeaderTitle.EvaluateBinding += ElementHeaderTitle_EvaluateBinding;
 			lblPatientID.Text = ActivePEMRObject.Active_Patient.ID.ToString();
 			lblPatientName.Text = ActivePEMRObject.Active_Patient.PatientFullName;

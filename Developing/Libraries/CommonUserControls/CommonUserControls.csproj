@@ -226,6 +226,12 @@
     <Compile Include="InvoiceViewers\ReadyInvoiceForPayments_UC.Designer.cs">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_DoneServingChoosing_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_DoneServingChoosing_UC.Designer.cs">
+      <DependentUpon>PEMR_DoneServingChoosing_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="PEMRCommonViewers\PEMR_Interfaces\IPEMRDiagnosisServicesRequet.cs" />
     <Compile Include="PEMRCommonViewers\PEMR_Interfaces\IPEMR_Viewer.cs" />
     <Compile Include="PEMRCommonViewers\PEMRPatientQueueCard.cs">
@@ -360,10 +366,10 @@
     <Compile Include="PEMRCommonViewers\PEMR_PrintOrder_UC.Designer.cs">
       <DependentUpon>PEMR_PrintOrder_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SendToStage_UC.cs">
+    <Compile Include="PEMRCommonViewers\PEMR_SendToStage_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SendToStage_UC.Designer.cs">
+    <Compile Include="PEMRCommonViewers\PEMR_SendToStage_UC.Designer.cs">
       <DependentUpon>PEMR_SendToStage_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="PEMRCommonViewers\PEMR_ServingContainer_UC.cs">
@@ -407,6 +413,12 @@
     </Compile>
     <Compile Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_Medication_UC.Designer.cs">
       <DependentUpon>PEMR_Medication_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\SendToStageCard_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\SendToStageCard_UC.Designer.cs">
+      <DependentUpon>SendToStageCard_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1269,6 +1281,9 @@
     <EmbeddedResource Include="PEMRCommonViewers\PEMRContainer.resx">
       <DependentUpon>PEMRContainer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_DoneServingChoosing_UC.resx">
+      <DependentUpon>PEMR_DoneServingChoosing_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\Ophthalmology\PEMR_AdnexaSegment_UC.resx">
       <DependentUpon>PEMR_AdnexaSegment_UC.cs</DependentUpon>
     </EmbeddedResource>
@@ -1329,7 +1344,7 @@
     <EmbeddedResource Include="PEMRCommonViewers\PEMR_PrintOrder_UC.resx">
       <DependentUpon>PEMR_PrintOrder_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_SendToStage_UC.resx">
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_SendToStage_UC.resx">
       <DependentUpon>PEMR_SendToStage_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PEMRCommonViewers\PEMR_ServingContainer_UC.resx">
@@ -1352,6 +1367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PEMRCommonViewers\PEMR_InternalViewers\PEMR_Medication_UC.resx">
       <DependentUpon>PEMR_Medication_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\SendToStageCard_UC.resx">
+      <DependentUpon>SendToStageCard_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1564,12 +1564,20 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name_P" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="StationPoint_CU_ID" Type="int" />
-          <Property Name="StationPointStage_CU_ID" Type="int" />
           <Property Name="OrganizationID" Type="int" Nullable="false" />
-          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="SkinName" Type="nvarchar" MaxLength="100" />
           <Property Name="Color" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
+          <Property Name="InsertedBy" Type="int" />
+        </EntityType>
+        <EntityType Name="OrganizationMachine_StationPoint_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrganizationMachine_CU_ID" Type="int" />
+          <Property Name="StationPoint_CU_ID" Type="int" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="InsertedBy" Type="int" />
         </EntityType>
         <EntityType Name="PainLevel_p">
@@ -6272,30 +6280,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_OrganizationMachine_cu_StationPoint_cu">
-          <End Role="StationPoint_cu" Type="Self.StationPoint_cu" Multiplicity="0..1" />
-          <End Role="OrganizationMachine_cu" Type="Self.OrganizationMachine_cu" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="StationPoint_cu">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="OrganizationMachine_cu">
-              <PropertyRef Name="StationPoint_CU_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_OrganizationMachine_cu_StationPointStage_cu">
-          <End Role="StationPointStage_cu" Type="Self.StationPointStage_cu" Multiplicity="0..1" />
-          <End Role="OrganizationMachine_cu" Type="Self.OrganizationMachine_cu" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="StationPointStage_cu">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="OrganizationMachine_cu">
-              <PropertyRef Name="StationPointStage_CU_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_OrganizationMachine_cu_User_UserGroup_cu">
           <End Role="User_UserGroup_cu" Type="Self.User_UserGroup_cu" Multiplicity="0..1" />
           <End Role="OrganizationMachine_cu" Type="Self.OrganizationMachine_cu" Multiplicity="*" />
@@ -6305,6 +6289,42 @@
             </Principal>
             <Dependent Role="OrganizationMachine_cu">
               <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_cu">
+          <End Role="OrganizationMachine_cu" Type="Self.OrganizationMachine_cu" Multiplicity="0..1" />
+          <End Role="OrganizationMachine_StationPoint_cu" Type="Self.OrganizationMachine_StationPoint_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganizationMachine_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrganizationMachine_StationPoint_cu">
+              <PropertyRef Name="OrganizationMachine_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_StationPoint_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="OrganizationMachine_StationPoint_cu" Type="Self.OrganizationMachine_StationPoint_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="OrganizationMachine_StationPoint_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganizationMachine_StationPoint_cu_StationPoint_cu">
+          <End Role="StationPoint_cu" Type="Self.StationPoint_cu" Multiplicity="0..1" />
+          <End Role="OrganizationMachine_StationPoint_cu" Type="Self.OrganizationMachine_StationPoint_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationPoint_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrganizationMachine_StationPoint_cu">
+              <PropertyRef Name="StationPoint_CU_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -9486,6 +9506,7 @@
           <EntitySet Name="NearVisiong_p" EntityType="Self.NearVisiong_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Organization_p" EntityType="Self.Organization_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OrganizationMachine_cu" EntityType="Self.OrganizationMachine_cu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrganizationMachine_StationPoint_cu" EntityType="Self.OrganizationMachine_StationPoint_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PainLevel_p" EntityType="Self.PainLevel_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Patient_cu" EntityType="Self.Patient_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PatientAttachment_cu" EntityType="Self.PatientAttachment_cu" Schema="dbo" store:Type="Tables" />
@@ -10714,17 +10735,21 @@
             <End Role="Organization_p" EntitySet="Organization_p" />
             <End Role="OrganizationMachine_cu" EntitySet="OrganizationMachine_cu" />
           </AssociationSet>
-          <AssociationSet Name="FK_OrganizationMachine_cu_StationPoint_cu" Association="Self.FK_OrganizationMachine_cu_StationPoint_cu">
-            <End Role="StationPoint_cu" EntitySet="StationPoint_cu" />
-            <End Role="OrganizationMachine_cu" EntitySet="OrganizationMachine_cu" />
-          </AssociationSet>
-          <AssociationSet Name="FK_OrganizationMachine_cu_StationPointStage_cu" Association="Self.FK_OrganizationMachine_cu_StationPointStage_cu">
-            <End Role="StationPointStage_cu" EntitySet="StationPointStage_cu" />
-            <End Role="OrganizationMachine_cu" EntitySet="OrganizationMachine_cu" />
-          </AssociationSet>
           <AssociationSet Name="FK_OrganizationMachine_cu_User_UserGroup_cu" Association="Self.FK_OrganizationMachine_cu_User_UserGroup_cu">
             <End Role="User_UserGroup_cu" EntitySet="User_UserGroup_cu" />
             <End Role="OrganizationMachine_cu" EntitySet="OrganizationMachine_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_cu" Association="Self.FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_cu">
+            <End Role="OrganizationMachine_cu" EntitySet="OrganizationMachine_cu" />
+            <End Role="OrganizationMachine_StationPoint_cu" EntitySet="OrganizationMachine_StationPoint_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_StationPoint_cu" Association="Self.FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_StationPoint_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="OrganizationMachine_StationPoint_cu" EntitySet="OrganizationMachine_StationPoint_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganizationMachine_StationPoint_cu_StationPoint_cu" Association="Self.FK_OrganizationMachine_StationPoint_cu_StationPoint_cu">
+            <End Role="StationPoint_cu" EntitySet="StationPoint_cu" />
+            <End Role="OrganizationMachine_StationPoint_cu" EntitySet="OrganizationMachine_StationPoint_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_Patient_cu_InsuranceCarrier_InsuranceLevel_cu" Association="Self.FK_Patient_cu_InsuranceCarrier_InsuranceLevel_cu">
             <End Role="InsuranceCarrier_InsuranceLevel_cu" EntitySet="InsuranceCarrier_InsuranceLevel_cu" />
@@ -13749,17 +13774,27 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name_P" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="StationPoint_CU_ID" Type="Int32" />
-          <Property Name="StationPointStage_CU_ID" Type="Int32" />
           <Property Name="OrganizationID" Type="Int32" Nullable="false" />
-          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
           <Property Name="SkinName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Color" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
           <Property Name="InsertedBy" Type="Int32" />
           <NavigationProperty Name="Organization_p" Relationship="Self.FK_OrganizationMachine_cu_Organization_p" FromRole="OrganizationMachine_cu" ToRole="Organization_p" />
-          <NavigationProperty Name="StationPoint_cu" Relationship="Self.FK_OrganizationMachine_cu_StationPoint_cu" FromRole="OrganizationMachine_cu" ToRole="StationPoint_cu" />
-          <NavigationProperty Name="StationPointStage_cu" Relationship="Self.FK_OrganizationMachine_cu_StationPointStage_cu" FromRole="OrganizationMachine_cu" ToRole="StationPointStage_cu" />
           <NavigationProperty Name="User_UserGroup_cu" Relationship="Self.FK_OrganizationMachine_cu_User_UserGroup_cu" FromRole="OrganizationMachine_cu" ToRole="User_UserGroup_cu" />
+          <NavigationProperty Name="OrganizationMachine_StationPoint_cu" Relationship="Self.FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_cu" FromRole="OrganizationMachine_cu" ToRole="OrganizationMachine_StationPoint_cu" />
+        </EntityType>
+        <EntityType Name="OrganizationMachine_StationPoint_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrganizationMachine_CU_ID" Type="Int32" />
+          <Property Name="StationPoint_CU_ID" Type="Int32" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <Property Name="InsertedBy" Type="Int32" />
+          <NavigationProperty Name="OrganizationMachine_cu" Relationship="Self.FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_cu" FromRole="OrganizationMachine_StationPoint_cu" ToRole="OrganizationMachine_cu" />
+          <NavigationProperty Name="User_cu" Relationship="Self.FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_StationPoint_cu" FromRole="OrganizationMachine_StationPoint_cu" ToRole="User_cu" />
+          <NavigationProperty Name="StationPoint_cu" Relationship="Self.FK_OrganizationMachine_StationPoint_cu_StationPoint_cu" FromRole="OrganizationMachine_StationPoint_cu" ToRole="StationPoint_cu" />
         </EntityType>
         <EntityType Name="PainLevel_p">
           <Key>
@@ -14496,7 +14531,7 @@
           <Property Name="InternalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="InsertedBy" Type="Int32" />
-          <NavigationProperty Name="OrganizationMachine_cu" Relationship="Self.FK_OrganizationMachine_cu_StationPoint_cu" FromRole="StationPoint_cu" ToRole="OrganizationMachine_cu" />
+          <NavigationProperty Name="OrganizationMachine_StationPoint_cu" Relationship="Self.FK_OrganizationMachine_StationPoint_cu_StationPoint_cu" FromRole="StationPoint_cu" ToRole="OrganizationMachine_StationPoint_cu" />
           <NavigationProperty Name="QueueManagers" Relationship="Self.FK_QueueManager_StationPoint_cu" FromRole="StationPoint_cu" ToRole="QueueManager" />
           <NavigationProperty Name="Service_StationPoint_cu" Relationship="Self.FK_Service_StationPoint_cu_StationPoint_cu" FromRole="StationPoint_cu" ToRole="Service_StationPoint_cu" />
           <NavigationProperty Name="ServiceCategory_StationPoint_cu" Relationship="Self.FK_ServiceCategory_StationPoint_cu_StationPoint_cu" FromRole="StationPoint_cu" ToRole="ServiceCategory_StationPoint_cu" />
@@ -14523,7 +14558,6 @@
           <Property Name="InsertedBy" Type="Int32" />
           <NavigationProperty Name="Application_p" Relationship="Self.FK_StationPointStage_cu_Application_p" FromRole="StationPointStage_cu" ToRole="Application_p" />
           <NavigationProperty Name="Floor_cu" Relationship="Self.FK_StationPointStage_cu_Floor_cu" FromRole="StationPointStage_cu" ToRole="Floor_cu" />
-          <NavigationProperty Name="OrganizationMachine_cu" Relationship="Self.FK_OrganizationMachine_cu_StationPointStage_cu" FromRole="StationPointStage_cu" ToRole="OrganizationMachine_cu" />
           <NavigationProperty Name="QueueManagers" Relationship="Self.FK_QueueManager_StationPointStage_cu" FromRole="StationPointStage_cu" ToRole="QueueManager" />
           <NavigationProperty Name="StationPoint_cu" Relationship="Self.FK_StationPointStage_cu_StationPoint_cu" FromRole="StationPointStage_cu" ToRole="StationPoint_cu" />
           <NavigationProperty Name="VisitTimings" Relationship="Self.FK_PatientVisitTiming_StationPointStage_cu" FromRole="StationPointStage_cu" ToRole="VisitTiming" />
@@ -14925,6 +14959,7 @@
           <NavigationProperty Name="MedicationCategory_cu" Relationship="Self.FK_MedicationCategory_cu_User_cu" FromRole="User_cu" ToRole="MedicationCategory_cu" />
           <NavigationProperty Name="Organization_p" Relationship="Self.FK_Organization_cu_User_cu" FromRole="User_cu" ToRole="Organization_p" />
           <NavigationProperty Name="Organization_p1" Relationship="Self.FK_User_cu_Organization_cu" FromRole="User_cu" ToRole="Organization_p" />
+          <NavigationProperty Name="OrganizationMachine_StationPoint_cu" Relationship="Self.FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_StationPoint_cu" FromRole="User_cu" ToRole="OrganizationMachine_StationPoint_cu" />
           <NavigationProperty Name="Patient_cu" Relationship="Self.FK_Patient_cu_User_cu" FromRole="User_cu" ToRole="Patient_cu" />
           <NavigationProperty Name="PatientAttachment_cu" Relationship="Self.FK_PatientAttachment_User_cu" FromRole="User_cu" ToRole="PatientAttachment_cu" />
           <NavigationProperty Name="PatientDepositeBalances" Relationship="Self.FK_PatientDepositeBalance_User_cu" FromRole="User_cu" ToRole="PatientDepositeBalance" />
@@ -19587,30 +19622,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_OrganizationMachine_cu_StationPoint_cu">
-          <End Role="StationPoint_cu" Type="Self.StationPoint_cu" Multiplicity="0..1" />
-          <End Role="OrganizationMachine_cu" Type="Self.OrganizationMachine_cu" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="StationPoint_cu">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="OrganizationMachine_cu">
-              <PropertyRef Name="StationPoint_CU_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_OrganizationMachine_cu_StationPointStage_cu">
-          <End Role="StationPointStage_cu" Type="Self.StationPointStage_cu" Multiplicity="0..1" />
-          <End Role="OrganizationMachine_cu" Type="Self.OrganizationMachine_cu" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="StationPointStage_cu">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="OrganizationMachine_cu">
-              <PropertyRef Name="StationPointStage_CU_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_OrganizationMachine_cu_User_UserGroup_cu">
           <End Role="User_UserGroup_cu" Type="Self.User_UserGroup_cu" Multiplicity="0..1" />
           <End Role="OrganizationMachine_cu" Type="Self.OrganizationMachine_cu" Multiplicity="*" />
@@ -19620,6 +19631,42 @@
             </Principal>
             <Dependent Role="OrganizationMachine_cu">
               <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_cu">
+          <End Role="OrganizationMachine_cu" Type="Self.OrganizationMachine_cu" Multiplicity="0..1" />
+          <End Role="OrganizationMachine_StationPoint_cu" Type="Self.OrganizationMachine_StationPoint_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganizationMachine_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrganizationMachine_StationPoint_cu">
+              <PropertyRef Name="OrganizationMachine_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_StationPoint_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="OrganizationMachine_StationPoint_cu" Type="Self.OrganizationMachine_StationPoint_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="OrganizationMachine_StationPoint_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganizationMachine_StationPoint_cu_StationPoint_cu">
+          <End Role="StationPoint_cu" Type="Self.StationPoint_cu" Multiplicity="0..1" />
+          <End Role="OrganizationMachine_StationPoint_cu" Type="Self.OrganizationMachine_StationPoint_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationPoint_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrganizationMachine_StationPoint_cu">
+              <PropertyRef Name="StationPoint_CU_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -22103,6 +22150,7 @@
           <EntitySet Name="NearVisiong_p" EntityType="Self.NearVisiong_p" />
           <EntitySet Name="Organization_p" EntityType="Self.Organization_p" />
           <EntitySet Name="OrganizationMachine_cu" EntityType="Self.OrganizationMachine_cu" />
+          <EntitySet Name="OrganizationMachine_StationPoint_cu" EntityType="Self.OrganizationMachine_StationPoint_cu" />
           <EntitySet Name="PainLevel_p" EntityType="Self.PainLevel_p" />
           <EntitySet Name="Patient_cu" EntityType="Self.Patient_cu" />
           <EntitySet Name="PatientAttachment_cu" EntityType="Self.PatientAttachment_cu" />
@@ -23519,17 +23567,21 @@
             <End Role="Organization_p" EntitySet="Organization_p" />
             <End Role="User_cu" EntitySet="User_cu" />
           </AssociationSet>
-          <AssociationSet Name="FK_OrganizationMachine_cu_StationPoint_cu" Association="Self.FK_OrganizationMachine_cu_StationPoint_cu">
-            <End Role="StationPoint_cu" EntitySet="StationPoint_cu" />
-            <End Role="OrganizationMachine_cu" EntitySet="OrganizationMachine_cu" />
-          </AssociationSet>
-          <AssociationSet Name="FK_OrganizationMachine_cu_StationPointStage_cu" Association="Self.FK_OrganizationMachine_cu_StationPointStage_cu">
-            <End Role="StationPointStage_cu" EntitySet="StationPointStage_cu" />
-            <End Role="OrganizationMachine_cu" EntitySet="OrganizationMachine_cu" />
-          </AssociationSet>
           <AssociationSet Name="FK_OrganizationMachine_cu_User_UserGroup_cu" Association="Self.FK_OrganizationMachine_cu_User_UserGroup_cu">
             <End Role="User_UserGroup_cu" EntitySet="User_UserGroup_cu" />
             <End Role="OrganizationMachine_cu" EntitySet="OrganizationMachine_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_cu" Association="Self.FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_cu">
+            <End Role="OrganizationMachine_cu" EntitySet="OrganizationMachine_cu" />
+            <End Role="OrganizationMachine_StationPoint_cu" EntitySet="OrganizationMachine_StationPoint_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_StationPoint_cu" Association="Self.FK_OrganizationMachine_StationPoint_cu_OrganizationMachine_StationPoint_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="OrganizationMachine_StationPoint_cu" EntitySet="OrganizationMachine_StationPoint_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganizationMachine_StationPoint_cu_StationPoint_cu" Association="Self.FK_OrganizationMachine_StationPoint_cu_StationPoint_cu">
+            <End Role="StationPoint_cu" EntitySet="StationPoint_cu" />
+            <End Role="OrganizationMachine_StationPoint_cu" EntitySet="OrganizationMachine_StationPoint_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_VisitTiming_MainSymptoms_PainLevel_p" Association="Self.FK_VisitTiming_MainSymptoms_PainLevel_p">
             <End Role="PainLevel_p" EntitySet="PainLevel_p" />
@@ -26308,12 +26360,21 @@
               <MappingFragment StoreEntitySet="OrganizationMachine_cu">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name_P" ColumnName="Name_P" />
-                <ScalarProperty Name="StationPoint_CU_ID" ColumnName="StationPoint_CU_ID" />
-                <ScalarProperty Name="StationPointStage_CU_ID" ColumnName="StationPointStage_CU_ID" />
                 <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
-                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
                 <ScalarProperty Name="SkinName" ColumnName="SkinName" />
                 <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
+                <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrganizationMachine_StationPoint_cu">
+            <EntityTypeMapping TypeName="MerkFinanceModel.OrganizationMachine_StationPoint_cu">
+              <MappingFragment StoreEntitySet="OrganizationMachine_StationPoint_cu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OrganizationMachine_CU_ID" ColumnName="OrganizationMachine_CU_ID" />
+                <ScalarProperty Name="StationPoint_CU_ID" ColumnName="StationPoint_CU_ID" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
                 <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
               </MappingFragment>
             </EntityTypeMapping>

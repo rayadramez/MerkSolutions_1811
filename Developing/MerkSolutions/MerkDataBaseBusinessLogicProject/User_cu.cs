@@ -104,6 +104,7 @@ namespace MerkDataBaseBusinessLogicProject
             this.Medication_Dose_cu = new HashSet<Medication_Dose_cu>();
             this.MedicationCategory_cu = new HashSet<MedicationCategory_cu>();
             this.Organization_p = new HashSet<Organization_p>();
+            this.OrganizationMachine_StationPoint_cu = new HashSet<OrganizationMachine_StationPoint_cu>();
             this.Patient_cu = new HashSet<Patient_cu>();
             this.PatientAttachment_cu = new HashSet<PatientAttachment_cu>();
             this.PatientDepositeBalances = new HashSet<PatientDepositeBalance>();
@@ -359,6 +360,8 @@ namespace MerkDataBaseBusinessLogicProject
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Organization_p> Organization_p { get; set; }
         public virtual Organization_p Organization_p1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrganizationMachine_StationPoint_cu> OrganizationMachine_StationPoint_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Patient_cu> Patient_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

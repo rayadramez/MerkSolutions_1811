@@ -63,10 +63,11 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 			FullScreenMode = FullScreenMode.NotFullScreen;
 			txtReccommednations_OD.EnterMoveNextControl = false;
 
-			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign == null ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign.Count == 0 ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AnteriorSegmentSign == null ||
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AnteriorSegmentSign.Count == 0)
+			if (PEMRBusinessLogic.ActivePEMRObject == null ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign == null ||
+			     PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_MainAnteriorSegmentSign.Count == 0 ||
+			     PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AnteriorSegmentSign == null ||
+			     PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AnteriorSegmentSign.Count == 0)
 				return;
 
 			txtReccommednations_OD.EditValue = PEMRBusinessLogic.ActivePEMRObject
@@ -134,7 +135,11 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 			lstAddedAnteriorSegment_OD.DataSource = null;
 			lstAddedAnteriorSegment_OS.DataSource = null;
 			if (clearAll)
+			{
 				txtReccommednations_OD.EditValue = null;
+				txtReccommednations_OS.EditValue = null;
+				lytAddedSign_OD.Text = lytAddedSign_OS.Text = "Added Sign" + "(0)";
+			}
 		}
 
 		public void FillControls()
@@ -221,6 +226,9 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 
 		private void btnRemoveFromList_OD_Click(object sender, EventArgs e)
 		{
+			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AnteriorSegmentSign == null ||
+			    PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_AnteriorSegmentSign.Count == 0)
+				return;
 			if (AddedAnteriorSegmentSign_OD == null || AddedAnteriorSegmentSign_OD.Count == 0)
 			{
 				XtraMessageBox.Show(
