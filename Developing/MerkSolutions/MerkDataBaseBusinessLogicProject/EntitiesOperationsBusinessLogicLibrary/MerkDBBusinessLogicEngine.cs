@@ -14,6 +14,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		All = 3
 	}
 
+
 	public class MerkDBBusinessLogicEngine
 	{
 		public static DB_Station Private_StationPoint { get; set; }
