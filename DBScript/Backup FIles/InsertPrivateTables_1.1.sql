@@ -246,7 +246,7 @@ INSERT INTO dbo.MedicalFlow_p( ID, Name_P, Name_S, Description )VALUES  ( 1,N'خ
 PRINT 'Organization_p'
 IF NOT EXISTS (SELECT 1 FROM [dbo].Organization_p WHERE ID BETWEEN 1 AND 3)
 INSERT INTO dbo.Organization_p( ID, Name_P, Name_S, Description )VALUES  ( 1,N'الأنبا إبرآم',N'Ava Abraam',NULL)
-,( 2,N'د. مصطفى',N'Dental_Mostafa',NULL)
+,( 2,N'Dental_Clinic',N'Dental_Clinic',NULL)
 ,( 3,N'Cardiovascular_Clinic',N'Cardiovascular_Clinic',NULL)
 -- ///////////// END :: Organization_p
 
