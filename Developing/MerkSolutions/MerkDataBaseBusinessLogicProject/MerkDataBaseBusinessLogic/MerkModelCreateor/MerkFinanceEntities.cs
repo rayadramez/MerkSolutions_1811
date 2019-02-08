@@ -17,7 +17,7 @@ namespace MerkDataBaseBusinessLogicProject
 		public MerkFinanceEntities(string connectionString)
 			: base(connectionString)
 		{
-			((IObjectContextAdapter)this).ObjectContext.SavingChanges += new EventHandler(objContext_SavingChanges);
+			//((IObjectContextAdapter)this).ObjectContext.SavingChanges += new EventHandler(objContext_SavingChanges);
 		}
 
 		public void objContext_SavingChanges(object sender, EventArgs e)

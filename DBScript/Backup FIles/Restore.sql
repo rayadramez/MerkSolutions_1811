@@ -1,7 +1,7 @@
 USE [master]
-RESTORE DATABASE [EMR_Ebsar_20180618_01] FROM 
-	DISK = N'D:\Work\Comrec\EMR.Code-NonMedical\EMR_BM_20180614_01.bak' WITH FILE = 1,
-	MOVE N'MerkFinance' TO N'd:\ComrecFiles\Backups\ToBeDeleted\EMR_Ebsar_20180618_01.mdf',
-	MOVE N'MerkFinance_log' TO N'd:\ComrecFiles\Backups\ToBeDeleted\EMR_Ebsar_20180618_01.ldf',
+RESTORE DATABASE [MerkFinance] FROM 
+	DISK = N'd:\Work\StepMarket1.4\DBScript\Backup FIles\MerkFinance20190207_01\MerkFinance_20190207_01.bak' WITH FILE = 1,
+	MOVE N'MerkFinance' TO N'd:\Work\DataBases_Backups\5\MerkFinance.mdf',
+	MOVE N'MerkFinance_log' TO N'd:\Work\DataBases_Backups\5\MerkFinance.ldf',
 	NOUNLOAD, REPLACE,  STATS = 5
 GO

@@ -86,6 +86,18 @@
       <Project>{62D00E59-3FCE-454B-8753-B63891FF2A44}</Project>
       <Name>CommonControlLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\CommonUserControls\CommonUserControls.csproj">
+      <Project>{7EAA41E3-3785-4AF9-B18D-209F882E7FD8}</Project>
+      <Name>CommonUserControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ApplicationConfiguration\ApplicationConfiguration.csproj">
+      <Project>{88767B6B-1BC5-4B0E-8478-AED883E20AB4}</Project>
+      <Name>ApplicationConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MerkDataBaseBusinessLogicProject\MerkDataBaseBusinessLogicProject.csproj">
+      <Project>{01C542D3-1DE3-4F9F-A9A5-0AD614E675F1}</Project>
+      <Name>MerkDataBaseBusinessLogicProject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
