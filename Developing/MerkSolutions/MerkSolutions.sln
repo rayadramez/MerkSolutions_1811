@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PEMR", "Dental_EMR\PEMR.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueManager", "Applications\Hospitals\QueueManager\QueueManager\QueueManager.csproj", "{685CD4C0-BDA3-4B5D-A184-5AA5E5E36A21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerkFinance", "MerkFinance\MerkFinance.csproj", "{D5193E59-3615-4445-A7A3-8679A648EB12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,6 +100,10 @@ Global
 		{685CD4C0-BDA3-4B5D-A184-5AA5E5E36A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{685CD4C0-BDA3-4B5D-A184-5AA5E5E36A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{685CD4C0-BDA3-4B5D-A184-5AA5E5E36A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5193E59-3615-4445-A7A3-8679A648EB12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5193E59-3615-4445-A7A3-8679A648EB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5193E59-3615-4445-A7A3-8679A648EB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5193E59-3615-4445-A7A3-8679A648EB12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,5 +128,6 @@ Global
 		{F9EDFF49-5C87-45CE-811F-BA97ED0C9995} = {B05BE537-B6D5-457C-87E3-ED5649C5939C}
 		{002FFFC4-190B-4CA3-9E73-A59EB4A24943} = {07637649-3C62-40C7-8D07-4FECA004D355}
 		{7EE62B50-B69C-46DC-8CA0-260F7F2081E1} = {989966D0-EFCE-4162-9376-3040A8E2E85D}
+		{D5193E59-3615-4445-A7A3-8679A648EB12} = {989966D0-EFCE-4162-9376-3040A8E2E85D}
 	EndGlobalSection
 EndGlobal

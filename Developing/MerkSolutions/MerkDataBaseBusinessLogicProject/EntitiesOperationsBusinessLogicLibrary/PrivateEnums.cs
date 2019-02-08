@@ -209,7 +209,8 @@
 		PEMR = 4,
 		InvoiceManager = 5,
 		Settings = 6,
-		QueueManager = 7
+		QueueManager = 7,
+		FinanceInvoiceCreation = 8
 	}
 
 	public enum DB_GeneralChartOfAccountType

@@ -663,6 +663,7 @@ namespace CommonControlLibrary
 									((PopupBaseEdit) parentContainer).Properties.NullValuePrompt = "إختــــار";
 								break;
 							case DB_Application.PEMR:
+							case DB_Application.FinanceInvoiceCreation:
 								if (String.IsNullOrEmpty(((PopupBaseEdit) parentContainer).Properties.NullValuePrompt))
 									((PopupBaseEdit) parentContainer).Properties.NullValuePrompt = "Select";
 								break;
@@ -671,6 +672,7 @@ namespace CommonControlLibrary
 						switch (ApplicationStaticConfiguration.Application)
 						{
 							case DB_Application.PEMR:
+							case DB_Application.FinanceInvoiceCreation:
 								((PopupBaseEdit) parentContainer).Properties.Buttons[0].IsLeft = true;
 								break;
 						}
@@ -727,6 +729,7 @@ namespace CommonControlLibrary
 								((SimpleButton) parentContainer).ImageLocation = ImageLocation.MiddleRight;
 							break;
 						case DB_Application.PEMR:
+						case DB_Application.FinanceInvoiceCreation:
 							((SimpleButton)parentContainer).ForeColor = Color.Black;
 							if (((SimpleButton) parentContainer).ImageLocation != ImageLocation.MiddleCenter)
 								((SimpleButton) parentContainer).ImageLocation = ImageLocation.MiddleLeft;
@@ -783,6 +786,7 @@ namespace CommonControlLibrary
 								//	((PopupBaseEdit) parentContainer).Properties.NullValuePrompt = "إختــــار";
 								break;
 							case DB_Application.PEMR:
+							case DB_Application.FinanceInvoiceCreation:
 								//if (String.IsNullOrEmpty(((PopupBaseEdit) parentContainer).Properties.NullValuePrompt))
 								//	((PopupBaseEdit) parentContainer).Properties.NullValuePrompt = "Select";
 								break;
@@ -921,6 +925,7 @@ namespace CommonControlLibrary
 						btnClear.Image = Resources.LocaizedRes.ClearIcon_16X16;
 						break;
 					case DB_Application.PEMR:
+					case DB_Application.FinanceInvoiceCreation:
 						btnClear.Image = Resources.LocaizedRes.ClearIcon_16X16_en_US;
 						break;
 				}

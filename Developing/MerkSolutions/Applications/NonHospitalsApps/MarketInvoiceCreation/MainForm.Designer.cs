@@ -31,26 +31,26 @@
 			this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
 			this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-			this.btnFinancialInterval = new DevExpress.XtraEditors.DropDownButton();
-			this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.pnlMain = new DevExpress.XtraEditors.PanelControl();
-			this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.btnAccountingTransactions = new DevExpress.XtraEditors.SimpleButton();
 			this.btnCashBoxTransactionConatiner = new DevExpress.XtraEditors.SimpleButton();
 			this.btnInvoiceReport = new DevExpress.XtraEditors.SimpleButton();
 			this.btnInvoiceActions = new DevExpress.XtraEditors.SimpleButton();
+			this.btnFinancialInterval = new DevExpress.XtraEditors.DropDownButton();
+			this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.pnlMain = new DevExpress.XtraEditors.PanelControl();
+			this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
 			this.layoutControl2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -60,18 +60,18 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pnlMain)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl2
@@ -102,6 +102,7 @@
 			this.panelControl2.Name = "panelControl2";
 			this.panelControl2.Size = new System.Drawing.Size(1350, 50);
 			this.panelControl2.TabIndex = 8;
+			this.panelControl2.Visible = false;
 			// 
 			// layoutControl1
 			// 
@@ -119,130 +120,6 @@
 			this.layoutControl1.Size = new System.Drawing.Size(1346, 46);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
-			// 
-			// btnFinancialInterval
-			// 
-			this.btnFinancialInterval.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnFinancialInterval.Appearance.ForeColor = System.Drawing.Color.Yellow;
-			this.btnFinancialInterval.Appearance.Options.UseFont = true;
-			this.btnFinancialInterval.Appearance.Options.UseForeColor = true;
-			this.btnFinancialInterval.Appearance.Options.UseTextOptions = true;
-			this.btnFinancialInterval.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.btnFinancialInterval.Location = new System.Drawing.Point(3, 3);
-			this.btnFinancialInterval.MaximumSize = new System.Drawing.Size(200, 40);
-			this.btnFinancialInterval.MinimumSize = new System.Drawing.Size(200, 40);
-			this.btnFinancialInterval.Name = "btnFinancialInterval";
-			this.btnFinancialInterval.Size = new System.Drawing.Size(200, 40);
-			this.btnFinancialInterval.StyleController = this.layoutControl1;
-			this.btnFinancialInterval.TabIndex = 4;
-			this.btnFinancialInterval.Text = "dropDownButton1";
-			// 
-			// layoutControlGroup2
-			// 
-			this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-			this.layoutControlGroup2.GroupBordersVisible = false;
-			this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem8,
-            this.emptySpaceItem4,
-            this.layoutControlItem9,
-            this.layoutControlItem1,
-            this.simpleSeparator1,
-            this.simpleSeparator2,
-            this.layoutControlItem2,
-            this.simpleSeparator3,
-            this.layoutControlItem3,
-            this.simpleSeparator4});
-			this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlGroup2.Name = "Root";
-			this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup2.Size = new System.Drawing.Size(1346, 46);
-			this.layoutControlGroup2.TextVisible = false;
-			// 
-			// layoutControlItem8
-			// 
-			this.layoutControlItem8.Control = this.btnFinancialInterval;
-			this.layoutControlItem8.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlItem8.Name = "layoutControlItem8";
-			this.layoutControlItem8.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem8.Size = new System.Drawing.Size(206, 46);
-			this.layoutControlItem8.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem8.TextVisible = false;
-			// 
-			// emptySpaceItem4
-			// 
-			this.emptySpaceItem4.AllowHotTrack = false;
-			this.emptySpaceItem4.Location = new System.Drawing.Point(206, 0);
-			this.emptySpaceItem4.Name = "emptySpaceItem4";
-			this.emptySpaceItem4.Size = new System.Drawing.Size(458, 46);
-			this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// simpleSeparator1
-			// 
-			this.simpleSeparator1.AllowHotTrack = false;
-			this.simpleSeparator1.Location = new System.Drawing.Point(1138, 0);
-			this.simpleSeparator1.Name = "simpleSeparator1";
-			this.simpleSeparator1.Size = new System.Drawing.Size(2, 46);
-			// 
-			// simpleSeparator2
-			// 
-			this.simpleSeparator2.AllowHotTrack = false;
-			this.simpleSeparator2.Location = new System.Drawing.Point(664, 0);
-			this.simpleSeparator2.Name = "simpleSeparator2";
-			this.simpleSeparator2.Size = new System.Drawing.Size(2, 46);
-			// 
-			// simpleSeparator3
-			// 
-			this.simpleSeparator3.AllowHotTrack = false;
-			this.simpleSeparator3.Location = new System.Drawing.Point(980, 0);
-			this.simpleSeparator3.Name = "simpleSeparator3";
-			this.simpleSeparator3.Size = new System.Drawing.Size(2, 46);
-			// 
-			// pnlMain
-			// 
-			this.pnlMain.Location = new System.Drawing.Point(2, 52);
-			this.pnlMain.Name = "pnlMain";
-			this.pnlMain.Size = new System.Drawing.Size(1346, 675);
-			this.pnlMain.TabIndex = 7;
-			// 
-			// layoutControlGroup3
-			// 
-			this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-			this.layoutControlGroup3.GroupBordersVisible = false;
-			this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem6,
-            this.layoutControlItem7});
-			this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlGroup3.Name = "Root";
-			this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup3.Size = new System.Drawing.Size(1350, 729);
-			this.layoutControlGroup3.TextVisible = false;
-			// 
-			// layoutControlItem6
-			// 
-			this.layoutControlItem6.Control = this.pnlMain;
-			this.layoutControlItem6.Location = new System.Drawing.Point(0, 50);
-			this.layoutControlItem6.Name = "layoutControlItem6";
-			this.layoutControlItem6.Size = new System.Drawing.Size(1350, 679);
-			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem6.TextVisible = false;
-			// 
-			// layoutControlItem7
-			// 
-			this.layoutControlItem7.Control = this.panelControl2;
-			this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlItem7.Name = "layoutControlItem7";
-			this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem7.Size = new System.Drawing.Size(1350, 50);
-			this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem7.TextVisible = false;
-			// 
-			// simpleSeparator4
-			// 
-			this.simpleSeparator4.AllowHotTrack = false;
-			this.simpleSeparator4.Location = new System.Drawing.Point(822, 0);
-			this.simpleSeparator4.Name = "simpleSeparator4";
-			this.simpleSeparator4.Size = new System.Drawing.Size(2, 46);
 			// 
 			// btnAccountingTransactions
 			// 
@@ -316,6 +193,63 @@
 			this.btnInvoiceActions.Text = "فواتير بيع وشراء الأصناف";
 			this.btnInvoiceActions.Click += new System.EventHandler(this.btnInvoiceActions_Click);
 			// 
+			// btnFinancialInterval
+			// 
+			this.btnFinancialInterval.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnFinancialInterval.Appearance.ForeColor = System.Drawing.Color.Yellow;
+			this.btnFinancialInterval.Appearance.Options.UseFont = true;
+			this.btnFinancialInterval.Appearance.Options.UseForeColor = true;
+			this.btnFinancialInterval.Appearance.Options.UseTextOptions = true;
+			this.btnFinancialInterval.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.btnFinancialInterval.Location = new System.Drawing.Point(3, 3);
+			this.btnFinancialInterval.MaximumSize = new System.Drawing.Size(200, 40);
+			this.btnFinancialInterval.MinimumSize = new System.Drawing.Size(200, 40);
+			this.btnFinancialInterval.Name = "btnFinancialInterval";
+			this.btnFinancialInterval.Size = new System.Drawing.Size(200, 40);
+			this.btnFinancialInterval.StyleController = this.layoutControl1;
+			this.btnFinancialInterval.TabIndex = 4;
+			this.btnFinancialInterval.Text = "dropDownButton1";
+			// 
+			// layoutControlGroup2
+			// 
+			this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+			this.layoutControlGroup2.GroupBordersVisible = false;
+			this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem8,
+            this.emptySpaceItem4,
+            this.layoutControlItem9,
+            this.layoutControlItem1,
+            this.simpleSeparator1,
+            this.simpleSeparator2,
+            this.layoutControlItem2,
+            this.simpleSeparator3,
+            this.layoutControlItem3,
+            this.simpleSeparator4});
+			this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlGroup2.Name = "Root";
+			this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlGroup2.Size = new System.Drawing.Size(1346, 46);
+			this.layoutControlGroup2.TextVisible = false;
+			// 
+			// layoutControlItem8
+			// 
+			this.layoutControlItem8.Control = this.btnFinancialInterval;
+			this.layoutControlItem8.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlItem8.Name = "layoutControlItem8";
+			this.layoutControlItem8.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem8.Size = new System.Drawing.Size(206, 46);
+			this.layoutControlItem8.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem8.TextVisible = false;
+			// 
+			// emptySpaceItem4
+			// 
+			this.emptySpaceItem4.AllowHotTrack = false;
+			this.emptySpaceItem4.Location = new System.Drawing.Point(206, 0);
+			this.emptySpaceItem4.Name = "emptySpaceItem4";
+			this.emptySpaceItem4.Size = new System.Drawing.Size(458, 46);
+			this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+			// 
 			// layoutControlItem9
 			// 
 			this.layoutControlItem9.Control = this.btnInvoiceActions;
@@ -338,6 +272,20 @@
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem1.TextVisible = false;
 			// 
+			// simpleSeparator1
+			// 
+			this.simpleSeparator1.AllowHotTrack = false;
+			this.simpleSeparator1.Location = new System.Drawing.Point(1138, 0);
+			this.simpleSeparator1.Name = "simpleSeparator1";
+			this.simpleSeparator1.Size = new System.Drawing.Size(2, 46);
+			// 
+			// simpleSeparator2
+			// 
+			this.simpleSeparator2.AllowHotTrack = false;
+			this.simpleSeparator2.Location = new System.Drawing.Point(664, 0);
+			this.simpleSeparator2.Name = "simpleSeparator2";
+			this.simpleSeparator2.Size = new System.Drawing.Size(2, 46);
+			// 
 			// layoutControlItem2
 			// 
 			this.layoutControlItem2.Control = this.btnCashBoxTransactionConatiner;
@@ -348,6 +296,13 @@
 			this.layoutControlItem2.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem2.TextVisible = false;
+			// 
+			// simpleSeparator3
+			// 
+			this.simpleSeparator3.AllowHotTrack = false;
+			this.simpleSeparator3.Location = new System.Drawing.Point(980, 0);
+			this.simpleSeparator3.Name = "simpleSeparator3";
+			this.simpleSeparator3.Size = new System.Drawing.Size(2, 46);
 			// 
 			// layoutControlItem3
 			// 
@@ -360,6 +315,52 @@
 			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem3.TextVisible = false;
 			// 
+			// simpleSeparator4
+			// 
+			this.simpleSeparator4.AllowHotTrack = false;
+			this.simpleSeparator4.Location = new System.Drawing.Point(822, 0);
+			this.simpleSeparator4.Name = "simpleSeparator4";
+			this.simpleSeparator4.Size = new System.Drawing.Size(2, 46);
+			// 
+			// pnlMain
+			// 
+			this.pnlMain.Location = new System.Drawing.Point(2, 52);
+			this.pnlMain.Name = "pnlMain";
+			this.pnlMain.Size = new System.Drawing.Size(1346, 675);
+			this.pnlMain.TabIndex = 7;
+			// 
+			// layoutControlGroup3
+			// 
+			this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+			this.layoutControlGroup3.GroupBordersVisible = false;
+			this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem6,
+            this.layoutControlItem7});
+			this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlGroup3.Name = "Root";
+			this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlGroup3.Size = new System.Drawing.Size(1350, 729);
+			this.layoutControlGroup3.TextVisible = false;
+			// 
+			// layoutControlItem6
+			// 
+			this.layoutControlItem6.Control = this.pnlMain;
+			this.layoutControlItem6.Location = new System.Drawing.Point(0, 50);
+			this.layoutControlItem6.Name = "layoutControlItem6";
+			this.layoutControlItem6.Size = new System.Drawing.Size(1350, 679);
+			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem6.TextVisible = false;
+			// 
+			// layoutControlItem7
+			// 
+			this.layoutControlItem7.Control = this.panelControl2;
+			this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlItem7.Name = "layoutControlItem7";
+			this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem7.Size = new System.Drawing.Size(1350, 50);
+			this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem7.TextVisible = false;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,7 +370,7 @@
 			this.Name = "MainForm";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;
-			this.Text = "MainForm";
+			this.Text = "Merk Finance";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
 			this.layoutControl2.ResumeLayout(false);
@@ -380,18 +381,18 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pnlMain)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
 			this.ResumeLayout(false);
 
 		}

@@ -17,7 +17,11 @@ namespace MarketInvoiceCreation
 
 			FinancialInterval_cu financialInterval =
 				FinancialInterval_cu.ItemsList.Find(item => Convert.ToDateTime(item.StartDate).Year.Equals(DateTime.Now.Year));
+			if (financialInterval == null)
+				return;
 			btnFinancialInterval.Text = financialInterval.Name_P;
+
+			CommonViewsActions.SetupSyle(this);
 		}
 
 		private void btnInvoiceActions_Click(object sender, EventArgs e)
