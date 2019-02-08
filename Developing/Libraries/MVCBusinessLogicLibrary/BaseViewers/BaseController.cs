@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 using CommonControlLibrary;
-using DevExpress.Utils;
-using DevExpress.XtraEditors;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
 using MVCBusinessLogicLibrary.Controller;

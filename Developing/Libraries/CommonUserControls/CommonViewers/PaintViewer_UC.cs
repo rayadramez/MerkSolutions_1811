@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
@@ -9,7 +8,6 @@ using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
-using ImageFormat = System.Drawing.Imaging.ImageFormat;
 
 namespace CommonUserControls.CommonViewers
 {

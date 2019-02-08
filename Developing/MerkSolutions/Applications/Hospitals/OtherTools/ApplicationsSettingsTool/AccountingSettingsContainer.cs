@@ -1,5 +1,4 @@
-﻿using System.Windows.Forms;
-using CommonUserControls.SettingsViewers.BankAccountViewers;
+﻿using CommonUserControls.SettingsViewers.BankAccountViewers;
 using CommonUserControls.SettingsViewers.BankViewers;
 using CommonUserControls.SettingsViewers.CashBoxTranasctionType_GeneralChartOfAccountType_Viewers;
 using CommonUserControls.SettingsViewers.CashBoxViewers;
@@ -49,15 +48,9 @@ namespace ApplicationsSettingsTool
 
 		private void btnChartOfAccount_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
 		{
-			BaseController<ChartOfAccount_cu>.ShowControl(ref _chartOfAccountEditorViewer,
-			                                              ref _chartOfAccountSearchViewer,
-			                                              splitContainerControl2.Panel1,
-			                                              EditorContainerType.Settings,
-			                                              ViewerName.ChartOfAccountViewer,
-			                                              DB_CommonTransactionType.CreateNew,
-			                                              "شجـــرة الحسـابـــــات",
-			                                              AbstractViewerType.SearchViewer,
-			                                              true);
+			BaseController<ChartOfAccount_cu>.ShowControl(ref _chartOfAccountEditorViewer, ref _chartOfAccountSearchViewer,
+				splitContainerControl2.Panel1, EditorContainerType.Settings, ViewerName.ChartOfAccountViewer,
+				DB_CommonTransactionType.CreateNew, "شجـــرة الحسـابـــــات", AbstractViewerType.SearchViewer, true);
 		}
 
 		private void btnCashBox_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)

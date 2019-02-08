@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using MerkDataBaseBusinessLogicProject;
-
-namespace MVCBusinessLogicLibrary.Viewers
+﻿namespace MVCBusinessLogicLibrary.Viewers
 {
 	public interface ICustomerViewer : IViewer
 	{

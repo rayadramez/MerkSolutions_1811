@@ -1,5 +1,4 @@
-﻿using System;
-using CommonControlLibrary;
+﻿using CommonControlLibrary;
 using MerkDataBaseBusinessLogicProject;
 using MVCBusinessLogicLibrary.BaseViewers;
 using MVCBusinessLogicLibrary.MVCFactories;

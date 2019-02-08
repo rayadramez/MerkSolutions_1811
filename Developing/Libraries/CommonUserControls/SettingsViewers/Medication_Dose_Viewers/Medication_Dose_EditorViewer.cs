@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using ApplicationConfiguration;
 using CommonControlLibrary;
 using DevExpress.XtraEditors;
-using DevExpress.XtraGrid.Views.Grid;
 using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MVCBusinessLogicLibrary.BaseViewers;

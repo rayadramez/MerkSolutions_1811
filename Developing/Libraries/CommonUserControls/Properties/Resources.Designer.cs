@@ -783,9 +783,29 @@ namespace CommonUserControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap InvoiceInIcon_01 {
+            get {
+                object obj = ResourceManager.GetObject("InvoiceInIcon_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap InvoiceManagerIcon_16_01 {
             get {
                 object obj = ResourceManager.GetObject("InvoiceManagerIcon_16_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InvoiceOutIcon_01 {
+            get {
+                object obj = ResourceManager.GetObject("InvoiceOutIcon_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using CommonControlLibrary;
 using DevExpress.XtraLayout.Utils;
 using DevExpress.XtraTab;
-using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
 using MVCBusinessLogicLibrary.Controller;

@@ -11,9 +11,6 @@ using DevExpress.XtraLayout.Utils;
 using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
-using MVCBusinessLogicLibrary.BaseViewers;
-using MVCBusinessLogicLibrary.MVCFactories;
-using MVCBusinessLogicLibrary.Viewers;
 
 namespace CommonUserControls.CommonViewers
 {

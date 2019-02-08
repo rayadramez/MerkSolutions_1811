@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using CommonControlLibrary;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
 using MerkDataBaseBusinessLogicProject;
-using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
-using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
 
 namespace CommonUserControls.InvoiceViewers
 {

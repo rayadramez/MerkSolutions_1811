@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using DevExpress.XtraBars.Customization.Helpers;
 using MerkDataBaseBusinessLogicProject;
 using CheckButton = DevExpress.XtraEditors.CheckButton;
 

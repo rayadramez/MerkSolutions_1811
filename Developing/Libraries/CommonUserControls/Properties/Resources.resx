@@ -151,6 +151,9 @@
   <data name="SearchIcon_05_08" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SearchIcon_05_08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="InvoiceInIcon_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InvoiceInIcon_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ExitPatient_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ExitPatient_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -159,6 +162,9 @@
   </data>
   <data name="Scanner_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Scanner_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Medicine_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medicine_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FollowUp_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FollowUp_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -424,9 +430,6 @@
   <data name="Settings_4_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings_4_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Graph_16_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Graph_16_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="QuickPrintIcon_16_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QuickPrintIcon_16_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -532,6 +535,9 @@
   <data name="SocialHistory_08_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SocialHistory_08_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="01_Heart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\01_Heart.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="InvoiceIcon_16_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InvoiceIcon_16_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -550,8 +556,8 @@
   <data name="Refresh_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refresh_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Medicine_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Medicine_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Graph_16_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graph_16_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PainScale_1_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PainScale_1_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -568,8 +574,8 @@
   <data name="MenuIcon_08_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuIcon_08_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="01_Heart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\01_Heart.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SaveIcon_16_101" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveIcon_16_101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DoctorIcon_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DoctorIcon_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -610,7 +616,7 @@
   <data name="ColorPaint_DarkBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ColorPaint_DarkBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SaveIcon_16_101" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SaveIcon_16_101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="InvoiceOutIcon_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InvoiceOutIcon_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

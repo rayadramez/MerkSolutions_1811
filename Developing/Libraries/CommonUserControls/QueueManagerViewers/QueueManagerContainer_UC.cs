@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using ApplicationConfiguration;
-using CommonControlLibrary;
 using CommonUserControls.InvoiceViewers;
-using CommonUserControls.PEMRCommonViewers;
-using DevExpress.XtraEditors;
 using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;

@@ -226,6 +226,12 @@
     <Compile Include="InvoiceViewers\ReadyInvoiceForPayments_UC.Designer.cs">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="MerkFinanceCommonViewers\MainHomeScreen_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkFinanceCommonViewers\MainHomeScreen_UC.Designer.cs">
+      <DependentUpon>MainHomeScreen_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="PEMRCommonViewers\PEMR_DoneServingChoosing_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1275,6 +1281,9 @@
     <EmbeddedResource Include="InvoiceViewers\ReadyInvoiceForPayments_UC.resx">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MerkFinanceCommonViewers\MainHomeScreen_UC.resx">
+      <DependentUpon>MainHomeScreen_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PEMRCommonViewers\PEMRPatientQueueCard.resx">
       <DependentUpon>PEMRPatientQueueCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -1788,6 +1797,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\InvoiceOutIcon_01.png" />
+    <None Include="Resources\InvoiceInIcon_01.png" />
     <None Include="Resources\SaveIcon_16_101.png" />
     <None Include="Resources\SaveIcon_16_100.png" />
     <None Include="Resources\SaveIcon_16_099.png" />

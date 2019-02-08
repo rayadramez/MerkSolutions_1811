@@ -7,7 +7,6 @@ using CommonControlLibrary;
 using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using MerkDataBaseBusinessLogicProject;
-using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
 
 namespace CommonUserControls.PEMRCommonViewers

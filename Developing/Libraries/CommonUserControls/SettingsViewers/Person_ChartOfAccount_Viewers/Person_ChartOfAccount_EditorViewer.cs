@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using ApplicationConfiguration;
 using CommonControlLibrary;
 using CommonUserControls.SettingsViewers.ChartOfAccountViewers;

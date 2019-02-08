@@ -1,9 +1,7 @@
-﻿using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
-using System.Data.Entity.Core;
 using System.Data.Entity.Core.Objects;
 using EntityKey = System.Data.Entity.Core.EntityKey;
 using EntityState = System.Data.Entity.EntityState;

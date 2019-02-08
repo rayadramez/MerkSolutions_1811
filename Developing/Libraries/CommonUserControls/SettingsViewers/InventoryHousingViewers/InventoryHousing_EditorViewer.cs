@@ -1,7 +1,6 @@
 ﻿using System;
 using CommonControlLibrary;
 using CommonUserControls.SettingsViewers.FloorViewers;
-using CommonUserControls.SettingsViewers.LocationViewers;
 using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MVCBusinessLogicLibrary.BaseViewers;

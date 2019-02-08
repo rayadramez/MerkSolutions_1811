@@ -1,5 +1,4 @@
-﻿using System.Windows.Forms;
-using ApplicationConfiguration;
+﻿using ApplicationConfiguration;
 using CommonControlLibrary;
 using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;

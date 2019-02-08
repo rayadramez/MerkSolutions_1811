@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using CommonControlLibrary;
 using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.HitInfo;
 using MerkDataBaseBusinessLogicProject;

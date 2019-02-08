@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using ApplicationConfiguration;
-using CommonControlLibrary;
-using CommonUserControls.CommonViewers;
 using CommonUserControls.QueueManagerViewers;
 using DevExpress.XtraLayout.Utils;
 using MerkDataBaseBusinessLogicProject;

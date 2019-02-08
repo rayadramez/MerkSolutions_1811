@@ -7,7 +7,6 @@ using ApplicationConfiguration;
 using CommonControlLibrary;
 using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
-using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
 using Timer = System.Windows.Forms.Timer;
 
 namespace CommonUserControls.PEMRCommonViewers

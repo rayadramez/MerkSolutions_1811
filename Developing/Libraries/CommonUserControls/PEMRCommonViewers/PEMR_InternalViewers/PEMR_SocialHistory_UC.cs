@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using ApplicationConfiguration;
 using CommonUserControls.PEMRCommonViewers.PEMR_Interfaces;
 using DevExpress.XtraEditors;
 using DevExpress.XtraLayout;

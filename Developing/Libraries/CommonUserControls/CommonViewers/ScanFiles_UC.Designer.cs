@@ -28,20 +28,21 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
-			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
+			DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScanFiles_UC));
-			DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
-			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
-			DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
-			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
-			DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
-			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
-			DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
-			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem17 = new DevExpress.Utils.ToolTipTitleItem();
-			DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
-			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem18 = new DevExpress.Utils.ToolTipTitleItem();
+			DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+			DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+			DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+			DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+			DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.chkSurgery = new DevExpress.XtraEditors.CheckButton();
 			this.chkPersonalPhoto = new DevExpress.XtraEditors.CheckButton();
 			this.chkSelectAll = new DevExpress.XtraEditors.CheckButton();
 			this.btnClose = new DevExpress.XtraEditors.SimpleButton();
@@ -99,6 +100,7 @@
 			this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.simpleSeparator5 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -111,8 +113,6 @@
 			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.lytSelectAll = new DevExpress.XtraLayout.LayoutControlItem();
-			this.chkSurgery = new DevExpress.XtraEditors.CheckButton();
-			this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.lstImageNames)).BeginInit();
@@ -150,6 +150,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
@@ -162,7 +163,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytSelectAll)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
@@ -204,6 +204,20 @@
 			this.layoutControl1.Size = new System.Drawing.Size(1198, 648);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
+			// 
+			// chkSurgery
+			// 
+			this.chkSurgery.GroupIndex = 1;
+			this.chkSurgery.Location = new System.Drawing.Point(1041, 383);
+			this.chkSurgery.MaximumSize = new System.Drawing.Size(150, 30);
+			this.chkSurgery.MinimumSize = new System.Drawing.Size(150, 30);
+			this.chkSurgery.Name = "chkSurgery";
+			this.chkSurgery.Size = new System.Drawing.Size(150, 30);
+			this.chkSurgery.StyleController = this.layoutControl1;
+			this.chkSurgery.TabIndex = 28;
+			this.chkSurgery.TabStop = false;
+			this.chkSurgery.Text = "تقريــر عمليــــة";
+			this.chkSurgery.CheckedChanged += new System.EventHandler(this.chkSurgery_CheckedChanged);
 			// 
 			// chkPersonalPhoto
 			// 
@@ -341,19 +355,19 @@
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.Size = new System.Drawing.Size(200, 40);
 			this.btnDelete.StyleController = this.layoutControl1;
-			toolTipTitleItem13.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-			toolTipTitleItem13.Appearance.Options.UseImage = true;
-			toolTipTitleItem13.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem13.Image")));
-			toolTipTitleItem13.Text = "المريض";
-			toolTipItem7.LeftIndent = 6;
-			toolTipItem7.Text = "يتيح لك تعديل البيانات الشخصية للمريض\r\nمن الإسم، العنوان، التليفون، بيانات جهات ا" +
+			toolTipTitleItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+			toolTipTitleItem1.Appearance.Options.UseImage = true;
+			toolTipTitleItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem1.Image")));
+			toolTipTitleItem1.Text = "المريض";
+			toolTipItem1.LeftIndent = 6;
+			toolTipItem1.Text = "يتيح لك تعديل البيانات الشخصية للمريض\r\nمن الإسم، العنوان، التليفون، بيانات جهات ا" +
     "لتأمين .. إلخ";
-			toolTipTitleItem14.LeftIndent = 6;
-			toolTipTitleItem14.Text = "تعديل البيانات الشخصية";
-			superToolTip7.Items.Add(toolTipTitleItem13);
-			superToolTip7.Items.Add(toolTipItem7);
-			superToolTip7.Items.Add(toolTipTitleItem14);
-			this.btnDelete.SuperTip = superToolTip7;
+			toolTipTitleItem2.LeftIndent = 6;
+			toolTipTitleItem2.Text = "تعديل البيانات الشخصية";
+			superToolTip1.Items.Add(toolTipTitleItem1);
+			superToolTip1.Items.Add(toolTipItem1);
+			superToolTip1.Items.Add(toolTipTitleItem2);
+			this.btnDelete.SuperTip = superToolTip1;
 			this.btnDelete.TabIndex = 8;
 			this.btnDelete.Text = "حـــــــذف";
 			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -574,19 +588,19 @@
 			this.btnOpen.Name = "btnOpen";
 			this.btnOpen.Size = new System.Drawing.Size(200, 40);
 			this.btnOpen.StyleController = this.layoutControl1;
-			toolTipTitleItem15.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-			toolTipTitleItem15.Appearance.Options.UseImage = true;
-			toolTipTitleItem15.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem15.Image")));
-			toolTipTitleItem15.Text = "المريض";
-			toolTipItem8.LeftIndent = 6;
-			toolTipItem8.Text = "يتيح لك تعديل البيانات الشخصية للمريض\r\nمن الإسم، العنوان، التليفون، بيانات جهات ا" +
+			toolTipTitleItem3.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+			toolTipTitleItem3.Appearance.Options.UseImage = true;
+			toolTipTitleItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem3.Image")));
+			toolTipTitleItem3.Text = "المريض";
+			toolTipItem2.LeftIndent = 6;
+			toolTipItem2.Text = "يتيح لك تعديل البيانات الشخصية للمريض\r\nمن الإسم، العنوان، التليفون، بيانات جهات ا" +
     "لتأمين .. إلخ";
-			toolTipTitleItem16.LeftIndent = 6;
-			toolTipTitleItem16.Text = "تعديل البيانات الشخصية";
-			superToolTip8.Items.Add(toolTipTitleItem15);
-			superToolTip8.Items.Add(toolTipItem8);
-			superToolTip8.Items.Add(toolTipTitleItem16);
-			this.btnOpen.SuperTip = superToolTip8;
+			toolTipTitleItem4.LeftIndent = 6;
+			toolTipTitleItem4.Text = "تعديل البيانات الشخصية";
+			superToolTip2.Items.Add(toolTipTitleItem3);
+			superToolTip2.Items.Add(toolTipItem2);
+			superToolTip2.Items.Add(toolTipTitleItem4);
+			this.btnOpen.SuperTip = superToolTip2;
 			this.btnOpen.TabIndex = 8;
 			this.btnOpen.Text = "إختيــــار ملفــــات";
 			this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
@@ -603,19 +617,19 @@
 			this.btnScanner.Name = "btnScanner";
 			this.btnScanner.Size = new System.Drawing.Size(200, 40);
 			this.btnScanner.StyleController = this.layoutControl1;
-			toolTipTitleItem17.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-			toolTipTitleItem17.Appearance.Options.UseImage = true;
-			toolTipTitleItem17.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem17.Image")));
-			toolTipTitleItem17.Text = "المريض";
-			toolTipItem9.LeftIndent = 6;
-			toolTipItem9.Text = "يتيح لك تعديل البيانات الشخصية للمريض\r\nمن الإسم، العنوان، التليفون، بيانات جهات ا" +
+			toolTipTitleItem5.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+			toolTipTitleItem5.Appearance.Options.UseImage = true;
+			toolTipTitleItem5.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem5.Image")));
+			toolTipTitleItem5.Text = "المريض";
+			toolTipItem3.LeftIndent = 6;
+			toolTipItem3.Text = "يتيح لك تعديل البيانات الشخصية للمريض\r\nمن الإسم، العنوان، التليفون، بيانات جهات ا" +
     "لتأمين .. إلخ";
-			toolTipTitleItem18.LeftIndent = 6;
-			toolTipTitleItem18.Text = "تعديل البيانات الشخصية";
-			superToolTip9.Items.Add(toolTipTitleItem17);
-			superToolTip9.Items.Add(toolTipItem9);
-			superToolTip9.Items.Add(toolTipTitleItem18);
-			this.btnScanner.SuperTip = superToolTip9;
+			toolTipTitleItem6.LeftIndent = 6;
+			toolTipTitleItem6.Text = "تعديل البيانات الشخصية";
+			superToolTip3.Items.Add(toolTipTitleItem5);
+			superToolTip3.Items.Add(toolTipItem3);
+			superToolTip3.Items.Add(toolTipTitleItem6);
+			this.btnScanner.SuperTip = superToolTip3;
 			this.btnScanner.TabIndex = 7;
 			this.btnScanner.Text = "المـاســــح الضوئـــــي";
 			this.btnScanner.Click += new System.EventHandler(this.btnScanner_Click);
@@ -964,6 +978,17 @@
 			this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem26.TextVisible = false;
 			// 
+			// layoutControlItem27
+			// 
+			this.layoutControlItem27.Control = this.chkSurgery;
+			this.layoutControlItem27.Location = new System.Drawing.Point(0, 178);
+			this.layoutControlItem27.Name = "layoutControlItem27";
+			this.layoutControlItem27.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem27.Size = new System.Drawing.Size(156, 36);
+			this.layoutControlItem27.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem27.TextVisible = false;
+			// 
 			// simpleSeparator5
 			// 
 			this.simpleSeparator5.AllowHotTrack = false;
@@ -1081,31 +1106,6 @@
 			this.lytSelectAll.TextVisible = false;
 			this.lytSelectAll.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 			// 
-			// chkSurgery
-			// 
-			this.chkSurgery.GroupIndex = 1;
-			this.chkSurgery.Location = new System.Drawing.Point(1041, 383);
-			this.chkSurgery.MaximumSize = new System.Drawing.Size(150, 30);
-			this.chkSurgery.MinimumSize = new System.Drawing.Size(150, 30);
-			this.chkSurgery.Name = "chkSurgery";
-			this.chkSurgery.Size = new System.Drawing.Size(150, 30);
-			this.chkSurgery.StyleController = this.layoutControl1;
-			this.chkSurgery.TabIndex = 28;
-			this.chkSurgery.TabStop = false;
-			this.chkSurgery.Text = "تقريــر عمليــــة";
-			this.chkSurgery.CheckedChanged += new System.EventHandler(this.chkSurgery_CheckedChanged);
-			// 
-			// layoutControlItem27
-			// 
-			this.layoutControlItem27.Control = this.chkSurgery;
-			this.layoutControlItem27.Location = new System.Drawing.Point(0, 178);
-			this.layoutControlItem27.Name = "layoutControlItem27";
-			this.layoutControlItem27.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem27.Size = new System.Drawing.Size(156, 36);
-			this.layoutControlItem27.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem27.TextVisible = false;
-			// 
 			// ScanFiles_UC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1156,6 +1156,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
@@ -1168,7 +1169,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytSelectAll)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
 			this.ResumeLayout(false);
 
 		}

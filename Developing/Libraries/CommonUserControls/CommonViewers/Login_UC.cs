@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Drawing;
-using System.Globalization;
-using System.Threading;
 using System.Windows.Forms;
 using ApplicationConfiguration;
-using CommonControlLibrary;
 using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
-using Application = DevExpress.XtraRichEdit.API.Word.Application;
 
 namespace CommonUserControls.CommonViewers
 {

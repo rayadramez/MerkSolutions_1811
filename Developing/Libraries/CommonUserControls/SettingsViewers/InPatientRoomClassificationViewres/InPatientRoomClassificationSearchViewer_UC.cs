@@ -1,8 +1,6 @@
 ﻿using CommonControlLibrary;
 using MerkDataBaseBusinessLogicProject;
 using MVCBusinessLogicLibrary.BaseViewers;
-using MVCBusinessLogicLibrary.Controller;
-using MVCBusinessLogicLibrary.MVCDataCollectors;
 using MVCBusinessLogicLibrary.MVCFactories;
 using MVCBusinessLogicLibrary.Viewers;
 

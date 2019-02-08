@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Transactions;
-using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor;
 using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
 
 namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary

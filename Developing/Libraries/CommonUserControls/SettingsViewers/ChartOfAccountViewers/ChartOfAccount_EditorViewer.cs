@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
 using System.Windows.Forms;
 using CommonControlLibrary;
 using DevExpress.XtraEditors;
@@ -12,7 +9,6 @@ using MVCBusinessLogicLibrary.Controller;
 using MVCBusinessLogicLibrary.MVCFactories;
 using MVCBusinessLogicLibrary.Viewers;
 using DevExpress.XtraLayout.Utils;
-using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
 
 namespace CommonUserControls.SettingsViewers.ChartOfAccountViewers
 {

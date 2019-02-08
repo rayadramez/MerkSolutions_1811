@@ -5,8 +5,6 @@ using CommonControlLibrary;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using MerkDataBaseBusinessLogicProject;
-using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
-using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
 using MVCBusinessLogicLibrary.BaseViewers;
 using MVCBusinessLogicLibrary.Controller;
 using MVCBusinessLogicLibrary.MVCFactories;

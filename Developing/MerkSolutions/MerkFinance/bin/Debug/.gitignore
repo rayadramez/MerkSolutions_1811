@@ -66,3 +66,12 @@
 /MerkDataBaseBusinessLogicProject.pdb
 /MerkFinance.exe
 /MerkFinance.pdb
+/EntityFramework.SqlServer.dll
+/EntityFramework.SqlServer.xml
+/EntityFramework.SqlServerCompact.dll
+/EntityFramework.SqlServerCompact.xml
+/MerkFinance.exe.config
+/MerkFinance.vshost.exe
+/MerkFinance.vshost.exe.config
+/MerkFinance.vshost.exe.manifest
+/System.Data.SqlServerCe.dll

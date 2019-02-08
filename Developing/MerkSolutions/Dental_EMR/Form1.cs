@@ -1,7 +1,5 @@
 ﻿using CommonControlLibrary;
-using CommonUserControls.CommonViewers;
 using CommonUserControls.PEMRCommonViewers;
-using CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmology;
 
 namespace Dental_EMR
 {
