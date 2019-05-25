@@ -3376,7 +3376,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p">
+        <Association Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu">
           <End Role="ChartOfAccountCodeMargin_p" Type="Self.ChartOfAccountCodeMargin_p" Multiplicity="1" />
           <End Role="ChartOfAccount_cu" Type="Self.ChartOfAccount_cu" Multiplicity="*" />
           <ReferentialConstraint>
@@ -9767,7 +9767,7 @@
             <End Role="ChartOfAccount_cu" EntitySet="ChartOfAccount_cu" />
             <End Role="ChartOfAccount_cu1" EntitySet="ChartOfAccount_cu" />
           </AssociationSet>
-          <AssociationSet Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p" Association="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p">
+          <AssociationSet Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu" Association="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu">
             <End Role="ChartOfAccountCodeMargin_p" EntitySet="ChartOfAccountCodeMargin_p" />
             <End Role="ChartOfAccount_cu" EntitySet="ChartOfAccount_cu" />
           </AssociationSet>
@@ -11987,7 +11987,7 @@
           <NavigationProperty Name="CashBoxInOutTransactions" Relationship="Self.FK_CashBoxInOutTransaction_ChartOfAccount_cu" FromRole="ChartOfAccount_cu" ToRole="CashBoxInOutTransaction" />
           <NavigationProperty Name="ChartOfAccount_cu1" Relationship="Self.FK_ChartOfAccount_cu_ChartOfAccount_cu" FromRole="ChartOfAccount_cu" ToRole="ChartOfAccount_cu1" />
           <NavigationProperty Name="ChartOfAccount_cu2" Relationship="Self.FK_ChartOfAccount_cu_ChartOfAccount_cu" FromRole="ChartOfAccount_cu1" ToRole="ChartOfAccount_cu" />
-          <NavigationProperty Name="ChartOfAccountCodeMargin_p" Relationship="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p" FromRole="ChartOfAccount_cu" ToRole="ChartOfAccountCodeMargin_p" />
+          <NavigationProperty Name="ChartOfAccountCodeMargin_p" Relationship="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu" FromRole="ChartOfAccount_cu" ToRole="ChartOfAccountCodeMargin_p" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_ChartOfAccount_cu_User_cu" FromRole="ChartOfAccount_cu" ToRole="User_cu" />
           <NavigationProperty Name="ChartOfAccount_FinancialStatementElement_cu" Relationship="Self.FK_ChartOfAccount_FinancialStatementElement_cu_ChartOfAccount_cu" FromRole="ChartOfAccount_cu" ToRole="ChartOfAccount_FinancialStatementElement_cu" />
           <NavigationProperty Name="ChartOfAccount_GeneralChartOfAccountType_cu" Relationship="Self.FK_ChartOfAccount_GeneralChartOfAccountType_cu_ChartOfAccount_cu" FromRole="ChartOfAccount_cu" ToRole="ChartOfAccount_GeneralChartOfAccountType_cu" />
@@ -12055,7 +12055,7 @@
           <Property Name="Name_P" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Name_S" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="NumberOfDigits" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ChartOfAccount_cu" Relationship="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p" FromRole="ChartOfAccountCodeMargin_p" ToRole="ChartOfAccount_cu" />
+          <NavigationProperty Name="ChartOfAccount_cu" Relationship="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu" FromRole="ChartOfAccountCodeMargin_p" ToRole="ChartOfAccount_cu" />
         </EntityType>
         <EntityType Name="City_cu">
           <Key>
@@ -16262,7 +16262,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p">
+        <Association Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu">
           <End Role="ChartOfAccountCodeMargin_p" Type="Self.ChartOfAccountCodeMargin_p" Multiplicity="1" />
           <End Role="ChartOfAccount_cu" Type="Self.ChartOfAccount_cu" Multiplicity="*" />
           <ReferentialConstraint>
@@ -22447,7 +22447,7 @@
             <End Role="ChartOfAccount_cu" EntitySet="ChartOfAccount_cu" />
             <End Role="ChartOfAccount_cu1" EntitySet="ChartOfAccount_cu" />
           </AssociationSet>
-          <AssociationSet Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p" Association="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p">
+          <AssociationSet Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu" Association="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu">
             <End Role="ChartOfAccountCodeMargin_p" EntitySet="ChartOfAccountCodeMargin_p" />
             <End Role="ChartOfAccount_cu" EntitySet="ChartOfAccount_cu" />
           </AssociationSet>

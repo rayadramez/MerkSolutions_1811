@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="cc86ff2b501840adb1ec56cc5ed14511" Name="Diagram1">
+      <Diagram DiagramId="2fac40a5a14642298cbd31a776fa7b8b" Name="Diagram1">
         <EntityTypeShape EntityType="MerkFinanceModel.AccountingJournalEntryTransaction" Width="1.5" PointX="21.5" PointY="290.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.AccountingJournalTransaction" Width="1.5" PointX="22.5" PointY="278.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.ActiveSalaryEffect_cu" Width="1.5" PointX="16.5" PointY="251.625" IsExpanded="true" />
@@ -288,7 +288,7 @@
         <AssociationConnector Association="MerkFinanceModel.FK_CashBoxTransactionType_GeneralChartOfAccountType_p_CashBoxTransactionType_p" ManuallyRouted="false" />
         <AssociationConnector Association="MerkFinanceModel.FK_CashBoxTransactionType_GeneralChartOfAccountType_p_GeneralChartOfAccountType_p" ManuallyRouted="false" />
         <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_cu_ChartOfAccount_cu" ManuallyRouted="false" />
-        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p" ManuallyRouted="false" />
+        <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu" ManuallyRouted="false" />
         <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_cu_User_cu" ManuallyRouted="false" />
         <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_FinancialStatementElement_cu_ChartOfAccount_cu" ManuallyRouted="false" />
         <AssociationConnector Association="MerkFinanceModel.FK_ChartOfAccount_GeneralChartOfAccountType_cu_ChartOfAccount_cu" ManuallyRouted="false" />
