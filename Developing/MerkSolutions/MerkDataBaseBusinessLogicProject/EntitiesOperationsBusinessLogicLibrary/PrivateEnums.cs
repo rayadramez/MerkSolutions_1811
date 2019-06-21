@@ -434,9 +434,11 @@
 		PupillaryRAPDCauses_cu = 151,
 		VisitTiming_MainEOMSign = 152,
 		VisitTiming_EOMReading = 153,
-		VisitTiming_EOMSign,
-		VisitTiming_MedicalHistory,
-		OrganizationMachine_StationPoint_cu
+		VisitTiming_EOMSign = 154,
+		VisitTiming_MedicalHistory = 155,
+		OrganizationMachine_StationPoint_cu = 156,
+		DiabetedMedicationType_p = 157,
+		DiabetesType_p
 	}
 
 	public enum DB_Station

@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.btnUserDropDown = new DevExpress.XtraEditors.DropDownButton();
 			this.btnPreviousVisit = new DevExpress.XtraEditors.SimpleButton();
 			this.btnPatientQueue = new DevExpress.XtraEditors.SimpleButton();
 			this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
@@ -37,6 +38,7 @@
 			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.lytPreviousVisits = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytPatientQueue = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -46,21 +48,39 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytPreviousVisits)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytPatientQueue)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.btnUserDropDown);
 			this.layoutControl1.Controls.Add(this.btnPreviousVisit);
 			this.layoutControl1.Controls.Add(this.btnPatientQueue);
 			this.layoutControl1.Controls.Add(this.splitContainerControl1);
 			this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.layoutControl1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl1.Name = "layoutControl1";
-			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(295, 278, 250, 350);
+			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(295, 279, 250, 350);
 			this.layoutControl1.Root = this.layoutControlGroup1;
 			this.layoutControl1.Size = new System.Drawing.Size(1071, 540);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
+			// 
+			// btnUserDropDown
+			// 
+			this.btnUserDropDown.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnUserDropDown.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
+			this.btnUserDropDown.Appearance.Options.UseFont = true;
+			this.btnUserDropDown.Appearance.Options.UseForeColor = true;
+			this.btnUserDropDown.Image = global::CommonUserControls.Properties.Resources.PersonPic_16_01;
+			this.btnUserDropDown.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+			this.btnUserDropDown.Location = new System.Drawing.Point(765, 6);
+			this.btnUserDropDown.MaximumSize = new System.Drawing.Size(300, 40);
+			this.btnUserDropDown.MinimumSize = new System.Drawing.Size(300, 40);
+			this.btnUserDropDown.Name = "btnUserDropDown";
+			this.btnUserDropDown.Size = new System.Drawing.Size(300, 40);
+			this.btnUserDropDown.StyleController = this.layoutControl1;
+			this.btnUserDropDown.TabIndex = 5;
 			// 
 			// btnPreviousVisit
 			// 
@@ -123,7 +143,8 @@
             this.lytContainer,
             this.emptySpaceItem1,
             this.lytPreviousVisits,
-            this.lytPatientQueue});
+            this.lytPatientQueue,
+            this.layoutControlItem1});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -147,7 +168,7 @@
 			this.emptySpaceItem1.AllowHotTrack = false;
 			this.emptySpaceItem1.Location = new System.Drawing.Point(332, 0);
 			this.emptySpaceItem1.Name = "emptySpaceItem1";
-			this.emptySpaceItem1.Size = new System.Drawing.Size(733, 46);
+			this.emptySpaceItem1.Size = new System.Drawing.Size(427, 46);
 			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// lytPreviousVisits
@@ -172,6 +193,17 @@
 			this.lytPatientQueue.TextSize = new System.Drawing.Size(0, 0);
 			this.lytPatientQueue.TextVisible = false;
 			// 
+			// layoutControlItem1
+			// 
+			this.layoutControlItem1.Control = this.btnUserDropDown;
+			this.layoutControlItem1.Location = new System.Drawing.Point(759, 0);
+			this.layoutControlItem1.Name = "layoutControlItem1";
+			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem1.Size = new System.Drawing.Size(306, 46);
+			this.layoutControlItem1.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem1.TextVisible = false;
+			// 
 			// PEMRContainer
 			// 
 			this.Appearance.BackColor = System.Drawing.Color.SlateGray;
@@ -190,6 +222,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytPreviousVisits)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytPatientQueue)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -205,5 +238,7 @@
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
 		private DevExpress.XtraLayout.LayoutControlItem lytPreviousVisits;
 		private DevExpress.XtraLayout.LayoutControlItem lytPatientQueue;
+		private DevExpress.XtraEditors.DropDownButton btnUserDropDown;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
 	}
 }

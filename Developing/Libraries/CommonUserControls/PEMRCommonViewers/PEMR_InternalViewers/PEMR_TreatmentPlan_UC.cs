@@ -50,11 +50,12 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 		public void ClearControls(bool clearAll)
 		{
 			txtTreatmentPlanDetails.EditValue = null;
-			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan == null
-				|| PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan.Count == 0)
-				spnOrderIndex.EditValue = 1;
-			else
-				spnOrderIndex.EditValue = PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan.Count + 1;
+			if (PEMRBusinessLogic.ActivePEMRObject != null)
+				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan == null
+					|| PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan.Count == 0)
+					spnOrderIndex.EditValue = 1;
+				else
+					spnOrderIndex.EditValue = PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan.Count + 1;
 			if (clearAll)
 				grdTreatmentPlans.DataSource = null;
 			txtTreatmentPlanDetails.Focus();

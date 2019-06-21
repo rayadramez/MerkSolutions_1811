@@ -23,6 +23,10 @@ namespace CommonUserControls.Reports
 			lblElementHeaderTitle.DataBindings.Add("Tag", translatedList, "Handle");
 			lblElementHeaderTitle.DataBindings.Add("Text", translatedList, "ElementName");
 			PEMR_Element = pemrElement;
+			lblDoctorName.Text = PEMRBusinessLogic.ActivePEMRObject.Active_InvoiceDetail.DoctorName;
+			lblDate.Text = PEMRBusinessLogic.ActivePEMRObject.Active_InvoiceDetail.Date.ConvertDateTimeToString(false, true, false);
+			lblPatientID.Text = lblDoctorName.Text = PEMRBusinessLogic.ActivePEMRObject.Active_Patient.ID.ToString();
+			lblPatientName.Text = lblDoctorName.Text = PEMRBusinessLogic.ActivePEMRObject.Active_Patient.PatientFullName;
 		}
 
 		private void ElementHeaderTitle_EvaluateBinding(object sender, BindingEventArgs e)

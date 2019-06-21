@@ -33,10 +33,14 @@
 			this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
 			this.DetailReport = new DevExpress.XtraReports.UI.DetailReportBand();
 			this.Detail1 = new DevExpress.XtraReports.UI.DetailBand();
-			this.lblReccommendations = new DevExpress.XtraReports.UI.XRLabel();
+			this.lblReccommendations_English = new DevExpress.XtraReports.UI.XRLabel();
 			this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
-			this.lblDosage = new DevExpress.XtraReports.UI.XRLabel();
-			this.lblElementValue = new DevExpress.XtraReports.UI.XRLabel();
+			this.lblDosage_English = new DevExpress.XtraReports.UI.XRLabel();
+			this.lblElementValue_English = new DevExpress.XtraReports.UI.XRLabel();
+			this.lblElementValue_Arabic = new DevExpress.XtraReports.UI.XRLabel();
+			this.lblDosage_Arabic = new DevExpress.XtraReports.UI.XRLabel();
+			this.lblReccommendations_Arabic = new DevExpress.XtraReports.UI.XRLabel();
+			this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
 			((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
 			// 
 			// Detail
@@ -70,27 +74,32 @@
 			// Detail1
 			// 
 			this.Detail1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.lblReccommendations,
+            this.xrLine1,
+            this.lblReccommendations_Arabic,
+            this.lblDosage_Arabic,
+            this.lblElementValue_Arabic,
+            this.lblReccommendations_English,
             this.xrLabel3,
-            this.lblDosage,
-            this.lblElementValue});
+            this.lblDosage_English,
+            this.lblElementValue_English});
 			this.Detail1.HeightF = 46.61274F;
 			this.Detail1.Name = "Detail1";
 			// 
-			// lblReccommendations
+			// lblReccommendations_English
 			// 
-			this.lblReccommendations.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-			this.lblReccommendations.ForeColor = System.Drawing.Color.DimGray;
-			this.lblReccommendations.LocationFloat = new DevExpress.Utils.PointFloat(30.89002F, 32.61274F);
-			this.lblReccommendations.Multiline = true;
-			this.lblReccommendations.Name = "lblReccommendations";
-			this.lblReccommendations.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-			this.lblReccommendations.SizeF = new System.Drawing.SizeF(478.1083F, 14F);
-			this.lblReccommendations.StylePriority.UseBorders = false;
-			this.lblReccommendations.StylePriority.UseFont = false;
-			this.lblReccommendations.StylePriority.UseForeColor = false;
-			this.lblReccommendations.StylePriority.UseTextAlignment = false;
-			this.lblReccommendations.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+			this.lblReccommendations_English.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+			this.lblReccommendations_English.ForeColor = System.Drawing.Color.DimGray;
+			this.lblReccommendations_English.LocationFloat = new DevExpress.Utils.PointFloat(9.999996F, 32.61273F);
+			this.lblReccommendations_English.Multiline = true;
+			this.lblReccommendations_English.Name = "lblReccommendations_English";
+			this.lblReccommendations_English.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.lblReccommendations_English.SizeF = new System.Drawing.SizeF(222F, 14F);
+			this.lblReccommendations_English.StylePriority.UseBorders = false;
+			this.lblReccommendations_English.StylePriority.UseFont = false;
+			this.lblReccommendations_English.StylePriority.UseForeColor = false;
+			this.lblReccommendations_English.StylePriority.UseTextAlignment = false;
+			this.lblReccommendations_English.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+			this.lblReccommendations_English.TextTrimming = System.Drawing.StringTrimming.Word;
 			// 
 			// xrLabel3
 			// 
@@ -108,35 +117,92 @@
 			this.xrLabel3.StylePriority.UseTextAlignment = false;
 			this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
 			// 
-			// lblDosage
+			// lblDosage_English
 			// 
-			this.lblDosage.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-			this.lblDosage.ForeColor = System.Drawing.Color.DimGray;
-			this.lblDosage.LocationFloat = new DevExpress.Utils.PointFloat(30.89002F, 18.61273F);
-			this.lblDosage.Multiline = true;
-			this.lblDosage.Name = "lblDosage";
-			this.lblDosage.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-			this.lblDosage.SizeF = new System.Drawing.SizeF(309.3598F, 14F);
-			this.lblDosage.StylePriority.UseBorders = false;
-			this.lblDosage.StylePriority.UseFont = false;
-			this.lblDosage.StylePriority.UseForeColor = false;
-			this.lblDosage.StylePriority.UseTextAlignment = false;
-			this.lblDosage.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+			this.lblDosage_English.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+			this.lblDosage_English.ForeColor = System.Drawing.Color.DimGray;
+			this.lblDosage_English.LocationFloat = new DevExpress.Utils.PointFloat(10F, 18.61274F);
+			this.lblDosage_English.Multiline = true;
+			this.lblDosage_English.Name = "lblDosage_English";
+			this.lblDosage_English.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.lblDosage_English.SizeF = new System.Drawing.SizeF(222F, 14F);
+			this.lblDosage_English.StylePriority.UseBorders = false;
+			this.lblDosage_English.StylePriority.UseFont = false;
+			this.lblDosage_English.StylePriority.UseForeColor = false;
+			this.lblDosage_English.StylePriority.UseTextAlignment = false;
+			this.lblDosage_English.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+			this.lblDosage_English.TextTrimming = System.Drawing.StringTrimming.Word;
 			// 
-			// lblElementValue
+			// lblElementValue_English
 			// 
-			this.lblElementValue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-			this.lblElementValue.ForeColor = System.Drawing.Color.Black;
-			this.lblElementValue.LocationFloat = new DevExpress.Utils.PointFloat(10F, 0F);
-			this.lblElementValue.Multiline = true;
-			this.lblElementValue.Name = "lblElementValue";
-			this.lblElementValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-			this.lblElementValue.SizeF = new System.Drawing.SizeF(498.9983F, 18.61275F);
-			this.lblElementValue.StylePriority.UseBorders = false;
-			this.lblElementValue.StylePriority.UseFont = false;
-			this.lblElementValue.StylePriority.UseForeColor = false;
-			this.lblElementValue.StylePriority.UseTextAlignment = false;
-			this.lblElementValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+			this.lblElementValue_English.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+			this.lblElementValue_English.ForeColor = System.Drawing.Color.Black;
+			this.lblElementValue_English.LocationFloat = new DevExpress.Utils.PointFloat(6F, 0F);
+			this.lblElementValue_English.Multiline = true;
+			this.lblElementValue_English.Name = "lblElementValue_English";
+			this.lblElementValue_English.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.lblElementValue_English.SizeF = new System.Drawing.SizeF(226F, 18.61F);
+			this.lblElementValue_English.StylePriority.UseBorders = false;
+			this.lblElementValue_English.StylePriority.UseFont = false;
+			this.lblElementValue_English.StylePriority.UseForeColor = false;
+			this.lblElementValue_English.StylePriority.UseTextAlignment = false;
+			this.lblElementValue_English.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+			this.lblElementValue_English.TextTrimming = System.Drawing.StringTrimming.Word;
+			// 
+			// lblElementValue_Arabic
+			// 
+			this.lblElementValue_Arabic.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+			this.lblElementValue_Arabic.ForeColor = System.Drawing.Color.Black;
+			this.lblElementValue_Arabic.LocationFloat = new DevExpress.Utils.PointFloat(236.1552F, 0F);
+			this.lblElementValue_Arabic.Multiline = true;
+			this.lblElementValue_Arabic.Name = "lblElementValue_Arabic";
+			this.lblElementValue_Arabic.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.lblElementValue_Arabic.SizeF = new System.Drawing.SizeF(226F, 18.61F);
+			this.lblElementValue_Arabic.StylePriority.UseBorders = false;
+			this.lblElementValue_Arabic.StylePriority.UseFont = false;
+			this.lblElementValue_Arabic.StylePriority.UseForeColor = false;
+			this.lblElementValue_Arabic.StylePriority.UseTextAlignment = false;
+			this.lblElementValue_Arabic.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+			this.lblElementValue_Arabic.TextTrimming = System.Drawing.StringTrimming.Word;
+			// 
+			// lblDosage_Arabic
+			// 
+			this.lblDosage_Arabic.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+			this.lblDosage_Arabic.ForeColor = System.Drawing.Color.DimGray;
+			this.lblDosage_Arabic.LocationFloat = new DevExpress.Utils.PointFloat(236.1552F, 18.61274F);
+			this.lblDosage_Arabic.Multiline = true;
+			this.lblDosage_Arabic.Name = "lblDosage_Arabic";
+			this.lblDosage_Arabic.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.lblDosage_Arabic.SizeF = new System.Drawing.SizeF(222F, 14F);
+			this.lblDosage_Arabic.StylePriority.UseBorders = false;
+			this.lblDosage_Arabic.StylePriority.UseFont = false;
+			this.lblDosage_Arabic.StylePriority.UseForeColor = false;
+			this.lblDosage_Arabic.StylePriority.UseTextAlignment = false;
+			this.lblDosage_Arabic.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+			this.lblDosage_Arabic.TextTrimming = System.Drawing.StringTrimming.Word;
+			// 
+			// lblReccommendations_Arabic
+			// 
+			this.lblReccommendations_Arabic.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+			this.lblReccommendations_Arabic.ForeColor = System.Drawing.Color.DimGray;
+			this.lblReccommendations_Arabic.LocationFloat = new DevExpress.Utils.PointFloat(236.1552F, 32.61271F);
+			this.lblReccommendations_Arabic.Multiline = true;
+			this.lblReccommendations_Arabic.Name = "lblReccommendations_Arabic";
+			this.lblReccommendations_Arabic.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.lblReccommendations_Arabic.SizeF = new System.Drawing.SizeF(222F, 14F);
+			this.lblReccommendations_Arabic.StylePriority.UseBorders = false;
+			this.lblReccommendations_Arabic.StylePriority.UseFont = false;
+			this.lblReccommendations_Arabic.StylePriority.UseForeColor = false;
+			this.lblReccommendations_Arabic.StylePriority.UseTextAlignment = false;
+			this.lblReccommendations_Arabic.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+			this.lblReccommendations_Arabic.TextTrimming = System.Drawing.StringTrimming.Word;
+			// 
+			// xrLine1
+			// 
+			this.xrLine1.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+			this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(232F, 0F);
+			this.xrLine1.Name = "xrLine1";
+			this.xrLine1.SizeF = new System.Drawing.SizeF(4.155167F, 46.61273F);
 			// 
 			// PEMR_Element_Medications_A5_rpt
 			// 
@@ -145,7 +211,7 @@
             this.TopMargin,
             this.BottomMargin,
             this.DetailReport});
-			this.Margins = new System.Drawing.Printing.Margins(30, 38, 32, 53);
+			this.Margins = new System.Drawing.Printing.Margins(30, 88, 32, 53);
 			this.PageHeight = 827;
 			this.PageWidth = 583;
 			this.PaperKind = System.Drawing.Printing.PaperKind.A5;
@@ -161,9 +227,13 @@
 		private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
 		private DevExpress.XtraReports.UI.DetailReportBand DetailReport;
 		private DevExpress.XtraReports.UI.DetailBand Detail1;
-		private DevExpress.XtraReports.UI.XRLabel lblElementValue;
-		private DevExpress.XtraReports.UI.XRLabel lblDosage;
-		private DevExpress.XtraReports.UI.XRLabel lblReccommendations;
+		private DevExpress.XtraReports.UI.XRLabel lblElementValue_English;
+		private DevExpress.XtraReports.UI.XRLabel lblDosage_English;
+		private DevExpress.XtraReports.UI.XRLabel lblReccommendations_English;
 		private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+		private DevExpress.XtraReports.UI.XRLabel lblReccommendations_Arabic;
+		private DevExpress.XtraReports.UI.XRLabel lblDosage_Arabic;
+		private DevExpress.XtraReports.UI.XRLabel lblElementValue_Arabic;
+		private DevExpress.XtraReports.UI.XRLine xrLine1;
 	}
 }

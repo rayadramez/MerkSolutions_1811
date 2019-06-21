@@ -18,6 +18,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 	public partial class PEMR_Medication_UC : UserControl, IPEMR_Viewer
 	{
 		public VisitTiming_Medication Selected_VisitTiming_Medication { get; set; }
+		public bool isDateInterval = true;
 
 		public PEMR_Medication_UC()
 		{
@@ -37,7 +38,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 			lytFromDate.Visibility = lytToDate.Visibility =
 				chkDateInterval.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-			lytTimePerDay.Visibility = lytIntervalDuration.Visibility =
+			lytTimePerDay.Visibility = lytIntervalDuration.Visibility = layoutControlItem24.Visibility = layoutControlItem25.Visibility =
 				!chkDateInterval.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
 			chkDateInterval.Checked = true;
 
@@ -53,8 +54,8 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 		{
 			lkeMedications.EditValue = null;
 			lkeDoses.EditValue = null;
-			dtFrom.EditValue = null;
-			dtTo.EditValue = null;
+			dtFrom_DateInterval.EditValue = null;
+			dtTo_DateInterval.EditValue = null;
 			spnTimePerDay.EditValue = null;
 			chkAllDoses.Checked = false;
 			chkDateInterval.Checked = true;
@@ -102,22 +103,22 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 		private void chkDateInterval_CheckedChanged(object sender, EventArgs e)
 		{
-			lytFromDate.Visibility = lytToDate.Visibility =
+			lytFromDate.Visibility = lytToDate.Visibility = 
 				chkDateInterval.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-			lytTimePerDay.Visibility = lytIntervalDuration.Visibility =
+			lytTimePerDay.Visibility = lytIntervalDuration.Visibility = layoutControlItem24.Visibility = layoutControlItem25.Visibility =
 				!chkDateInterval.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-
+			isDateInterval = true;
 			spnTimePerDay.EditValue = null;
 		}
 
 		private void chkTimDuration_CheckedChanged(object sender, EventArgs e)
 		{
-			lytTimePerDay.Visibility = lytIntervalDuration.Visibility =
+			lytTimePerDay.Visibility = lytIntervalDuration.Visibility = layoutControlItem24.Visibility  = layoutControlItem25.Visibility =
 				chkTimDuration.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-			lytFromDate.Visibility = lytToDate.Visibility =
+			lytFromDate.Visibility = lytToDate.Visibility = 
 				!chkTimDuration.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
-
-			dtFrom.EditValue = dtTo.EditValue = null;
+			isDateInterval = false;
+			dtFrom_DateInterval.EditValue = dtTo_DateInterval.EditValue = null;
 		}
 
 		private void btnAddToList_Click(object sender, EventArgs e)
@@ -137,9 +138,13 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Medication =
 					new List<VisitTiming_Medication>();
 
-			VisitTiming_Medication medication = PEMRBusinessLogic.CreateNew_VisitTiming_Medication(
-				lkeMedications.EditValue, lkeDoses.EditValue, spnTimePerDay.EditValue, TimeDuration, dtFrom.EditValue,
-				dtTo.EditValue, txtDescription.EditValue, ApplicationStaticConfiguration.PEMRSavingMode);
+			VisitTiming_Medication medication = null;
+			medication = PEMRBusinessLogic.CreateNew_VisitTiming_Medication(lkeMedications.EditValue,
+				lkeDoses.EditValue, isDateInterval ? null : spnTimePerDay.EditValue,
+				isDateInterval ? null : TimeDuration,
+				isDateInterval ? dtFrom_DateInterval.EditValue : dtFrom_TimeInterval.EditValue,
+				isDateInterval ? dtTo_DateInterval.EditValue : dtTo_TimeInterval.EditValue, txtDescription.EditValue,
+				ApplicationStaticConfiguration.PEMRSavingMode);
 			if (medication != null)
 				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Medication.Add(medication);
 			grdTreatmentPlans.DataSource = PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_Medication.FindAll(
@@ -232,8 +237,14 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 		private void dtFrom_EditValueChanged(object sender, EventArgs e)
 		{
-			if (dtFrom.EditValue != null)
-				dtTo.Properties.MinValue = dtFrom.DateTime;
+			if (dtFrom_DateInterval.EditValue != null)
+				dtTo_DateInterval.Properties.MinValue = dtFrom_DateInterval.DateTime;
+		}
+
+		private void dtFrom_TimeInterval_EditValueChanged(object sender, EventArgs e)
+		{
+			if (dtFrom_TimeInterval.EditValue != null)
+				dtTo_TimeInterval.Properties.MinValue = dtFrom_TimeInterval.DateTime;
 		}
 
 		public object TimeDuration

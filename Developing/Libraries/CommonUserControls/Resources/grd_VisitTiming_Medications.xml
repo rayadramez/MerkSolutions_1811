@@ -49,7 +49,7 @@
         <property name="FixedWidth">true</property>
       </property>
       <property name="Caption">Medication</property>
-      <property name="FieldName">MedicationName</property>
+      <property name="FieldName">MedicationName_English</property>
     </property>
     <property name="Item2" isnull="true" iskey="true">
       <property name="AppearanceHeader" isnull="true" iskey="true">
@@ -88,7 +88,7 @@
         <property name="FixedWidth">true</property>
       </property>
       <property name="Caption">Dose</property>
-      <property name="FieldName">DosageName</property>
+      <property name="FieldName">DosageName_English</property>
     </property>
     <property name="Item3" isnull="true" iskey="true">
       <property name="AppearanceHeader" isnull="true" iskey="true">
@@ -148,7 +148,7 @@
         <property name="FixedWidth">true</property>
       </property>
       <property name="Caption">Time Duration</property>
-      <property name="FieldName">TimeDurationName</property>
+      <property name="FieldName">TimeDurationName_English</property>
     </property>
     <property name="Item5" isnull="true" iskey="true">
       <property name="AppearanceHeader" isnull="true" iskey="true">
@@ -167,7 +167,7 @@
           <property name="HAlignment">Center</property>
         </property>
       </property>
-      <property name="Width">100</property>
+      <property name="Width">150</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
       <property name="VisibleIndex">2</property>
@@ -197,7 +197,7 @@
           <property name="HAlignment">Center</property>
         </property>
       </property>
-      <property name="Width">100</property>
+      <property name="Width">150</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
       <property name="VisibleIndex">1</property>
@@ -227,7 +227,7 @@
           <property name="HAlignment">Center</property>
         </property>
       </property>
-      <property name="Width">93</property>
+      <property name="Width">43</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
       <property name="VisibleIndex">0</property>
@@ -236,7 +236,7 @@
         <property name="AllowEdit">false</property>
         <property name="ReadOnly">true</property>
       </property>
-      <property name="Caption">Instructions</property>
+      <property name="Caption">Recommendations</property>
       <property name="FieldName">Description</property>
     </property>
   </property>

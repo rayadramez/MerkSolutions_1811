@@ -116,5 +116,181 @@ namespace MerkDataBaseBusinessLogicProject
 		public PEMRElementStatus PEMRElementStatus { get; set; }
 
 		#endregion
+
+		public DiabetedMedicationType_p DiabetedMedicationType
+		{
+			get
+			{
+				DiabetedMedicationType_p diabetedMedicationType = DiabetedMedicationType_p.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(DiabetesMedicationType_P_ID)));
+				return diabetedMedicationType;
+			}
+		}
+
+		public string DiabetedMedicationTypeName
+		{
+			get
+			{
+				if (DiabetedMedicationType != null)
+					return DiabetedMedicationType.Name_P;
+				return string.Empty;
+			}
+		}
+
+		public Medication_cu DiabetesMedication
+		{
+			get
+			{
+				if (DiabetesMedication_CU_ID == null)
+					return null;
+				Medication_cu medication = Medication_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(DiabetesMedication_CU_ID)));
+				return medication;
+			}
+		}
+
+		public string DiabetesMedicationName
+		{
+			get
+			{
+				if (DiabetesMedication != null)
+					return DiabetesMedication.Name_P;
+				return string.Empty;
+			}
+		}
+
+		public Dose_cu DiabetesDose
+		{
+			get
+			{
+				if (DiabetesDose_CU_ID == null)
+					return null;
+				Dose_cu dose = Dose_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(DiabetesDose_CU_ID)));
+				return dose;
+			}
+		}
+
+		public string DiabetesDoseName
+		{
+			get
+			{
+				if (DiabetesDose != null)
+					return DiabetesDose.Name_P;
+				return string.Empty;
+			}
+		}
+
+		public TimeDuration_p DiabetesTimeDurationType
+		{
+			get
+			{
+				if (DiabetesTimeDurationType_P_ID == null)
+					return null;
+				TimeDuration_p timeDuration = TimeDuration_p.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(DiabetesTimeDurationType_P_ID)));
+				return timeDuration;
+			}
+		}
+
+		public string DiabetesTimeDurationTypeName
+		{
+			get
+			{
+				if (DiabetesTimeDurationType != null)
+					return DiabetesTimeDurationType.Name_P;
+				return string.Empty;
+			}
+		}
+
+		public Medication_cu HypertensionMedication
+		{
+			get
+			{
+				if (HypertensionMedication_CU_ID == null)
+					return null;
+				Medication_cu medication = Medication_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(HypertensionMedication_CU_ID)));
+				return medication;
+			}
+		}
+
+		public string HypertensionMedicationName
+		{
+			get
+			{
+				if (DiabetesMedication != null)
+					return DiabetesMedication.Name_P;
+				return string.Empty;
+			}
+		}
+
+		public Dose_cu HypertensionDose
+		{
+			get
+			{
+				if (HypertensionDose_CU_ID == null)
+					return null;
+				Dose_cu dose = Dose_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(HypertensionDose_CU_ID)));
+				return dose;
+			}
+		}
+
+		public string HypertensionDoseName
+		{
+			get
+			{
+				if (HypertensionDose != null)
+					return HypertensionDose.Name_P;
+				return string.Empty;
+			}
+		}
+
+		public TimeDuration_p HypertensionTimeDurationType
+		{
+			get
+			{
+				if (HypertensionTimeDurationType_P_ID == null)
+					return null;
+				TimeDuration_p timeDuration = TimeDuration_p.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(HypertensionTimeDurationType_P_ID)));
+				return timeDuration;
+			}
+		}
+
+		public string HypertensionTimeDurationTypeName
+		{
+			get
+			{
+				if (HypertensionTimeDurationType != null)
+					return HypertensionTimeDurationType.Name_P;
+				return string.Empty;
+			}
+		}
+
+		public DiabetesType_p DiabetesType
+		{
+			get
+			{
+				if (DiabetesType_P_ID == null)
+					return null;
+				DiabetesType_p diabetesType = DiabetesType_p.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(DiabetesType_P_ID)));
+				return diabetesType;
+			}
+		}
+
+		public string DiabetesTypeName
+		{
+			get
+			{
+				if (DiabetesType != null)
+					return DiabetesType.Name_P;
+				return string.Empty;
+			}
+		}
+
+
 	}
 }

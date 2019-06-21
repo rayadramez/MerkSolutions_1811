@@ -75,6 +75,7 @@
 			this.lblElement_Investigation.StylePriority.UseForeColor = false;
 			this.lblElement_Investigation.StylePriority.UseTextAlignment = false;
 			this.lblElement_Investigation.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+			this.lblElement_Investigation.TextTrimming = System.Drawing.StringTrimming.Word;
 			// 
 			// TopMargin
 			// 
@@ -122,6 +123,7 @@
 			this.lblElementValue__Investigation.StylePriority.UseForeColor = false;
 			this.lblElementValue__Investigation.StylePriority.UseTextAlignment = false;
 			this.lblElementValue__Investigation.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+			this.lblElementValue__Investigation.TextTrimming = System.Drawing.StringTrimming.Word;
 			// 
 			// xrLabel3
 			// 

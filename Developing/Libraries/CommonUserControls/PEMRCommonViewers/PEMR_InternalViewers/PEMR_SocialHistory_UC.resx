@@ -128,7 +128,7 @@
     <value>Cornsilk</value>
   </data>
   <data name="txtGeneralDescription.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9pt, style=Bold</value>
+    <value>Tahoma, 8pt, style=Bold</value>
   </data>
   <data name="txtGeneralDescription.Properties.Appearance.ForeColor" type="System.Drawing.Color, System.Drawing">
     <value>Navy</value>
@@ -137,7 +137,7 @@
     <value>Tahoma, 9pt, style=Bold</value>
   </data>
   <data name="txtGeneralDescription.Properties.AppearanceFocused.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9pt, style=Bold</value>
+    <value>Tahoma, 8pt, style=Bold</value>
   </data>
   <data name="txtGeneralDescription.Properties.AppearanceFocused.ForeColor" type="System.Drawing.Color, System.Drawing">
     <value>Navy</value>

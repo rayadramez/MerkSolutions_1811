@@ -17,9 +17,11 @@ namespace CommonUserControls.Reports
 
 			DetailReport.Visible = true;
 			DetailReport.DataSource = translatedList;
-			lblElementValue.DataBindings.Add("Text", translatedList, PEMR_Translated.MedicationNameValueField);
-			lblDosage.DataBindings.Add("Text", translatedList, PEMR_Translated.MedicationDosageNameValueField);
-			lblReccommendations.DataBindings.Add("Text", translatedList,
+			lblElementValue_English.DataBindings.Add("Text", translatedList, PEMR_Translated.MedicationNameValueField_English);
+			lblElementValue_Arabic.DataBindings.Add("Text", translatedList, PEMR_Translated.MedicationNameValueField_Arabic);
+			lblDosage_English.DataBindings.Add("Text", translatedList, PEMR_Translated.MedicationDosageNameValueField_English);
+			lblDosage_Arabic.DataBindings.Add("Text", translatedList, PEMR_Translated.MedicationDosageNameValueField_Arabic);
+			lblReccommendations_English.DataBindings.Add("Text", translatedList,
 				PEMR_Translated.MedicationReccommendationsNameValueField);
 		}
 	}

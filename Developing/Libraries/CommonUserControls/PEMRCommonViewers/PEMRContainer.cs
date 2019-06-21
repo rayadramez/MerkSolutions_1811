@@ -1,4 +1,5 @@
-﻿using CommonControlLibrary;
+﻿using ApplicationConfiguration;
+using CommonControlLibrary;
 using CommonUserControls.CommonViewers;
 using CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers;
 using CommonUserControls.Reports;
@@ -28,13 +29,20 @@ namespace CommonUserControls.PEMRCommonViewers
 		{
 			InitializeComponent();
 			PEMR_PatientCardContainer_UC.ParentContainer = this;
-
+			if (ApplicationStaticConfiguration.ActiveLoginUser != null)
+				PEMRBusinessLogic.ActiveLoggedInUser = ApplicationStaticConfiguration.ActiveLoginUser;
 			lytContainer.Visibility = LayoutVisibility.Always;
 			CommonViewsActions.ShowUserControl(ref _pemrQueueContainer, splitContainerControl1.Panel1);
+			if (ApplicationStaticConfiguration.ActiveLoginUser != null &&
+			    ApplicationStaticConfiguration.ActiveLoginUser.FullName != null)
+				btnUserDropDown.Text = PEMRBusinessLogic.ActiveLoggedInUser.FullName.ToString();
 		}
 
 		public void ShowLeftQueuePanel(bool doCollapse)
 		{
+			if (ApplicationStaticConfiguration.ActiveLoginUser != null &&
+				ApplicationStaticConfiguration.ActiveLoginUser.FullName != null)
+				btnUserDropDown.Text = PEMRBusinessLogic.ActiveLoggedInUser.FullName.ToString();
 			splitContainerControl1.PanelVisibility =
 				doCollapse ? SplitPanelVisibility.Panel2 : SplitPanelVisibility.Both;
 		}
@@ -65,6 +73,9 @@ namespace CommonUserControls.PEMRCommonViewers
 					lytPatientQueue.Visibility = LayoutVisibility.Never;
 					lytPreviousVisits.Visibility = LayoutVisibility.Never;
 					emptySpaceItem1.Visibility = LayoutVisibility.Never;
+					if (ApplicationStaticConfiguration.ActiveLoginUser != null &&
+						ApplicationStaticConfiguration.ActiveLoginUser.FullName != null)
+						btnUserDropDown.Text = PEMRBusinessLogic.ActiveLoggedInUser.FullName.ToString();
 				}
 			}
 			else

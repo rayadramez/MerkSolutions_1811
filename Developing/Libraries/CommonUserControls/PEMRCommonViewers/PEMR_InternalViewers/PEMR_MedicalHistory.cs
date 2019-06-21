@@ -43,7 +43,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			DiabetesMedicationDurationType = null;
 			DiabetesMedication = null;
 			DiabetesDosage = null;
-			HasHypertension = null;
+			IsHypertension = null;
 			IsHypertensionControlled = null;
 			HypertensionMedicationDurationType = null;
 			HypertensionMedicationDuration = null;
@@ -97,16 +97,16 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 		private void chkHypertension_Yes_CheckedChanged(object sender, EventArgs e)
 		{
-			lytGroup_HypertensionDetails.Visibility = HasHypertension != null && Convert.ToBoolean(HasHypertension)
+			lytGroup_HypertensionDetails.Visibility = IsHypertension != null && Convert.ToBoolean(IsHypertension)
 				? LayoutVisibility.Always
 				: LayoutVisibility.Never;
-			emptySpaceItem13.Visibility = HasHypertension != null && Convert.ToBoolean(HasHypertension)
+			emptySpaceItem13.Visibility = IsHypertension != null && Convert.ToBoolean(IsHypertension)
 				? LayoutVisibility.Always
 				: LayoutVisibility.Never;
-			lytGroup_Hypertension.CaptionImage = HasHypertension != null && Convert.ToBoolean(HasHypertension)
+			lytGroup_Hypertension.CaptionImage = IsHypertension != null && Convert.ToBoolean(IsHypertension)
 				? Properties.Resources.AcceptIcon_16_02
 				: Properties.Resources.RoundedPoint_6_01;
-			if (HasHypertension == null || !Convert.ToBoolean(HasHypertension))
+			if (IsHypertension == null || !Convert.ToBoolean(IsHypertension))
 			{
 				IsHypertensionControlled = null;
 				HypertensionMedicationDurationType = null;
@@ -181,7 +181,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			lytGroup_Hypertension.CaptionImage = HasDiabetes != null && !Convert.ToBoolean(HasDiabetes)
 				? Properties.Resources.RejectIcon_16_01
 				: Properties.Resources.RoundedPoint_6_01;
-			if (HasHypertension == null || !Convert.ToBoolean(HasHypertension))
+			if (IsHypertension == null || !Convert.ToBoolean(IsHypertension))
 			{
 				IsHypertensionControlled = null;
 				HypertensionMedicationDurationType = null;
@@ -569,7 +569,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			set { lkeDiabetes_Doses.EditValue = value; }
 		}
 
-		public object HasHypertension
+		public object IsHypertension
 		{
 			get
 			{

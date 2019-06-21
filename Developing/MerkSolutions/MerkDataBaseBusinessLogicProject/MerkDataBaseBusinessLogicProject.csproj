@@ -595,6 +595,8 @@
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\CashBoxTransactionType_GeneralChartOfAccountType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\CashBoxTransactionType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\ChartOfAccountCodeMargin_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\DiabetedMedicationType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\DiabetesType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\DiagnosisType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\DoctorProfessionalFeesIssuingType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\DoctorRank_p.cs" />

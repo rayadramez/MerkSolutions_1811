@@ -33,10 +33,10 @@
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
 			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
 			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
@@ -132,9 +132,9 @@
 			this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem12 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.lytGroup_Hypertension = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -227,9 +227,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Hypertension)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
@@ -280,6 +280,13 @@
 			this.layoutControl1.Controls.Add(this.btnPrint);
 			this.layoutControl1.Controls.Add(this.pictureEdit1);
 			this.layoutControl1.Controls.Add(this.labelControl2);
+			this.layoutControl1.Controls.Add(this.lkeTriggersOfDrugAllergies);
+			this.layoutControl1.Controls.Add(this.chkDrugAllergies_No);
+			this.layoutControl1.Controls.Add(this.chkDrugAllergies_Yes);
+			this.layoutControl1.Controls.Add(this.chkAsthma_No);
+			this.layoutControl1.Controls.Add(this.chkAsthma_Yes);
+			this.layoutControl1.Controls.Add(this.chkHepatitis_No);
+			this.layoutControl1.Controls.Add(this.chkHepatitis_Yes);
 			this.layoutControl1.Controls.Add(this.lkeDiabetes_Doses);
 			this.layoutControl1.Controls.Add(this.lkeDiabetes_Medications);
 			this.layoutControl1.Controls.Add(this.chkDiabetes_No);
@@ -299,13 +306,6 @@
 			this.layoutControl1.Controls.Add(this.spnHbA1C);
 			this.layoutControl1.Controls.Add(this.chkDiabetes_Type2);
 			this.layoutControl1.Controls.Add(this.chkDiabetes_Type1);
-			this.layoutControl1.Controls.Add(this.lkeTriggersOfDrugAllergies);
-			this.layoutControl1.Controls.Add(this.chkDrugAllergies_No);
-			this.layoutControl1.Controls.Add(this.chkDrugAllergies_Yes);
-			this.layoutControl1.Controls.Add(this.chkAsthma_No);
-			this.layoutControl1.Controls.Add(this.chkAsthma_Yes);
-			this.layoutControl1.Controls.Add(this.chkHepatitis_No);
-			this.layoutControl1.Controls.Add(this.chkHepatitis_Yes);
 			this.layoutControl1.Controls.Add(this.chkHypertension_Years);
 			this.layoutControl1.Controls.Add(this.chkHypertension_Months);
 			this.layoutControl1.Controls.Add(this.chkHypertension_Weeks);
@@ -393,17 +393,17 @@
 			this.txtTreatmentPlanDetails.Location = new System.Drawing.Point(3, 102);
 			this.txtTreatmentPlanDetails.Name = "txtTreatmentPlanDetails";
 			this.txtTreatmentPlanDetails.Properties.Appearance.BackColor = System.Drawing.Color.Cornsilk;
-			this.txtTreatmentPlanDetails.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.txtTreatmentPlanDetails.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
 			this.txtTreatmentPlanDetails.Properties.Appearance.ForeColor = System.Drawing.Color.Navy;
 			this.txtTreatmentPlanDetails.Properties.Appearance.Options.UseBackColor = true;
 			this.txtTreatmentPlanDetails.Properties.Appearance.Options.UseFont = true;
 			this.txtTreatmentPlanDetails.Properties.Appearance.Options.UseForeColor = true;
-			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
 			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.ForeColor = System.Drawing.Color.Navy;
 			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.Options.UseFont = true;
 			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.Options.UseForeColor = true;
 			this.txtTreatmentPlanDetails.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.txtTreatmentPlanDetails.Size = new System.Drawing.Size(1096, 308);
+			this.txtTreatmentPlanDetails.Size = new System.Drawing.Size(1096, 335);
 			this.txtTreatmentPlanDetails.StyleController = this.layoutControl1;
 			this.txtTreatmentPlanDetails.TabIndex = 16;
 			// 
@@ -483,7 +483,7 @@
 			// 
 			// lkeDiabetes_Doses
 			// 
-			this.lkeDiabetes_Doses.Location = new System.Drawing.Point(744, 499);
+			this.lkeDiabetes_Doses.Location = new System.Drawing.Point(744, 526);
 			this.lkeDiabetes_Doses.MaximumSize = new System.Drawing.Size(200, 0);
 			this.lkeDiabetes_Doses.MinimumSize = new System.Drawing.Size(200, 0);
 			this.lkeDiabetes_Doses.Name = "lkeDiabetes_Doses";
@@ -511,7 +511,7 @@
 			// 
 			// lkeDiabetes_Medications
 			// 
-			this.lkeDiabetes_Medications.Location = new System.Drawing.Point(491, 499);
+			this.lkeDiabetes_Medications.Location = new System.Drawing.Point(491, 526);
 			this.lkeDiabetes_Medications.MaximumSize = new System.Drawing.Size(200, 0);
 			this.lkeDiabetes_Medications.MinimumSize = new System.Drawing.Size(200, 0);
 			this.lkeDiabetes_Medications.Name = "lkeDiabetes_Medications";
@@ -543,7 +543,7 @@
 			this.chkDiabetes_No.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetes_No.Appearance.Options.UseFont = true;
 			this.chkDiabetes_No.GroupIndex = 1;
-			this.chkDiabetes_No.Location = new System.Drawing.Point(100, 413);
+			this.chkDiabetes_No.Location = new System.Drawing.Point(100, 440);
 			this.chkDiabetes_No.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetes_No.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetes_No.Name = "chkDiabetes_No";
@@ -560,7 +560,7 @@
 			this.chkDiabetes_Yes.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetes_Yes.Appearance.Options.UseFont = true;
 			this.chkDiabetes_Yes.GroupIndex = 1;
-			this.chkDiabetes_Yes.Location = new System.Drawing.Point(0, 413);
+			this.chkDiabetes_Yes.Location = new System.Drawing.Point(0, 440);
 			this.chkDiabetes_Yes.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetes_Yes.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetes_Yes.Name = "chkDiabetes_Yes";
@@ -573,12 +573,13 @@
 			// 
 			// chkDiabetes_Yearly
 			// 
+			this.chkDiabetes_Yearly.AllowAllUnchecked = true;
 			this.chkDiabetes_Yearly.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetes_Yearly.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
 			this.chkDiabetes_Yearly.Appearance.Options.UseFont = true;
 			this.chkDiabetes_Yearly.Appearance.Options.UseForeColor = true;
 			this.chkDiabetes_Yearly.GroupIndex = 5;
-			this.chkDiabetes_Yearly.Location = new System.Drawing.Point(780, 533);
+			this.chkDiabetes_Yearly.Location = new System.Drawing.Point(769, 560);
 			this.chkDiabetes_Yearly.MaximumSize = new System.Drawing.Size(60, 30);
 			this.chkDiabetes_Yearly.MinimumSize = new System.Drawing.Size(60, 30);
 			this.chkDiabetes_Yearly.Name = "chkDiabetes_Yearly";
@@ -590,12 +591,13 @@
 			// 
 			// chkDiabetes_Monthly
 			// 
+			this.chkDiabetes_Monthly.AllowAllUnchecked = true;
 			this.chkDiabetes_Monthly.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetes_Monthly.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
 			this.chkDiabetes_Monthly.Appearance.Options.UseFont = true;
 			this.chkDiabetes_Monthly.Appearance.Options.UseForeColor = true;
 			this.chkDiabetes_Monthly.GroupIndex = 5;
-			this.chkDiabetes_Monthly.Location = new System.Drawing.Point(717, 533);
+			this.chkDiabetes_Monthly.Location = new System.Drawing.Point(706, 560);
 			this.chkDiabetes_Monthly.MaximumSize = new System.Drawing.Size(60, 30);
 			this.chkDiabetes_Monthly.MinimumSize = new System.Drawing.Size(60, 30);
 			this.chkDiabetes_Monthly.Name = "chkDiabetes_Monthly";
@@ -607,12 +609,13 @@
 			// 
 			// chkDiabetes_Weekly
 			// 
+			this.chkDiabetes_Weekly.AllowAllUnchecked = true;
 			this.chkDiabetes_Weekly.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetes_Weekly.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
 			this.chkDiabetes_Weekly.Appearance.Options.UseFont = true;
 			this.chkDiabetes_Weekly.Appearance.Options.UseForeColor = true;
 			this.chkDiabetes_Weekly.GroupIndex = 5;
-			this.chkDiabetes_Weekly.Location = new System.Drawing.Point(657, 533);
+			this.chkDiabetes_Weekly.Location = new System.Drawing.Point(646, 560);
 			this.chkDiabetes_Weekly.MaximumSize = new System.Drawing.Size(60, 30);
 			this.chkDiabetes_Weekly.MinimumSize = new System.Drawing.Size(60, 30);
 			this.chkDiabetes_Weekly.Name = "chkDiabetes_Weekly";
@@ -624,12 +627,13 @@
 			// 
 			// chkDiabetes_Daily
 			// 
+			this.chkDiabetes_Daily.AllowAllUnchecked = true;
 			this.chkDiabetes_Daily.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetes_Daily.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
 			this.chkDiabetes_Daily.Appearance.Options.UseFont = true;
 			this.chkDiabetes_Daily.Appearance.Options.UseForeColor = true;
 			this.chkDiabetes_Daily.GroupIndex = 5;
-			this.chkDiabetes_Daily.Location = new System.Drawing.Point(597, 533);
+			this.chkDiabetes_Daily.Location = new System.Drawing.Point(586, 560);
 			this.chkDiabetes_Daily.MaximumSize = new System.Drawing.Size(60, 30);
 			this.chkDiabetes_Daily.MinimumSize = new System.Drawing.Size(60, 30);
 			this.chkDiabetes_Daily.Name = "chkDiabetes_Daily";
@@ -641,13 +645,13 @@
 			// 
 			// chkDiabetes_Hourly
 			// 
+			this.chkDiabetes_Hourly.AllowAllUnchecked = true;
 			this.chkDiabetes_Hourly.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetes_Hourly.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
 			this.chkDiabetes_Hourly.Appearance.Options.UseFont = true;
 			this.chkDiabetes_Hourly.Appearance.Options.UseForeColor = true;
-			this.chkDiabetes_Hourly.Checked = true;
 			this.chkDiabetes_Hourly.GroupIndex = 5;
-			this.chkDiabetes_Hourly.Location = new System.Drawing.Point(537, 533);
+			this.chkDiabetes_Hourly.Location = new System.Drawing.Point(526, 560);
 			this.chkDiabetes_Hourly.MaximumSize = new System.Drawing.Size(60, 30);
 			this.chkDiabetes_Hourly.MinimumSize = new System.Drawing.Size(60, 30);
 			this.chkDiabetes_Hourly.Name = "chkDiabetes_Hourly";
@@ -663,7 +667,7 @@
             0,
             0,
             0});
-			this.spnDiabetes_Duration.Location = new System.Drawing.Point(423, 540);
+			this.spnDiabetes_Duration.Location = new System.Drawing.Point(423, 567);
 			this.spnDiabetes_Duration.MaximumSize = new System.Drawing.Size(100, 0);
 			this.spnDiabetes_Duration.MinimumSize = new System.Drawing.Size(100, 0);
 			this.spnDiabetes_Duration.Name = "spnDiabetes_Duration";
@@ -683,7 +687,7 @@
 			this.chkDiabetesMedication_Both.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetesMedication_Both.Appearance.Options.UseFont = true;
 			this.chkDiabetesMedication_Both.GroupIndex = 4;
-			this.chkDiabetesMedication_Both.Location = new System.Drawing.Point(621, 466);
+			this.chkDiabetesMedication_Both.Location = new System.Drawing.Point(621, 493);
 			this.chkDiabetesMedication_Both.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetesMedication_Both.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetesMedication_Both.Name = "chkDiabetesMedication_Both";
@@ -699,7 +703,7 @@
 			this.chkDiabetesMedication_Insulin.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetesMedication_Insulin.Appearance.Options.UseFont = true;
 			this.chkDiabetesMedication_Insulin.GroupIndex = 4;
-			this.chkDiabetesMedication_Insulin.Location = new System.Drawing.Point(521, 466);
+			this.chkDiabetesMedication_Insulin.Location = new System.Drawing.Point(521, 493);
 			this.chkDiabetesMedication_Insulin.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetesMedication_Insulin.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetesMedication_Insulin.Name = "chkDiabetesMedication_Insulin";
@@ -715,7 +719,7 @@
 			this.chkDiabetesMedication_Tables.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetesMedication_Tables.Appearance.Options.UseFont = true;
 			this.chkDiabetesMedication_Tables.GroupIndex = 4;
-			this.chkDiabetesMedication_Tables.Location = new System.Drawing.Point(421, 466);
+			this.chkDiabetesMedication_Tables.Location = new System.Drawing.Point(421, 493);
 			this.chkDiabetesMedication_Tables.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetesMedication_Tables.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetesMedication_Tables.Name = "chkDiabetesMedication_Tables";
@@ -731,7 +735,7 @@
 			this.chkDiabetesControlled_No.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetesControlled_No.Appearance.Options.UseFont = true;
 			this.chkDiabetesControlled_No.GroupIndex = 3;
-			this.chkDiabetesControlled_No.Location = new System.Drawing.Point(313, 466);
+			this.chkDiabetesControlled_No.Location = new System.Drawing.Point(313, 493);
 			this.chkDiabetesControlled_No.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetesControlled_No.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetesControlled_No.Name = "chkDiabetesControlled_No";
@@ -747,7 +751,7 @@
 			this.chkDiabetesControlled_Yes.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetesControlled_Yes.Appearance.Options.UseFont = true;
 			this.chkDiabetesControlled_Yes.GroupIndex = 3;
-			this.chkDiabetesControlled_Yes.Location = new System.Drawing.Point(213, 466);
+			this.chkDiabetesControlled_Yes.Location = new System.Drawing.Point(213, 493);
 			this.chkDiabetesControlled_Yes.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetesControlled_Yes.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetesControlled_Yes.Name = "chkDiabetesControlled_Yes";
@@ -762,7 +766,7 @@
 			this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
 			this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl4.Location = new System.Drawing.Point(110, 524);
+			this.labelControl4.Location = new System.Drawing.Point(110, 551);
 			this.labelControl4.Name = "labelControl4";
 			this.labelControl4.Size = new System.Drawing.Size(21, 17);
 			this.labelControl4.StyleController = this.layoutControl1;
@@ -776,7 +780,7 @@
             0,
             0,
             0});
-			this.spnHbA1C.Location = new System.Drawing.Point(4, 521);
+			this.spnHbA1C.Location = new System.Drawing.Point(4, 548);
 			this.spnHbA1C.MaximumSize = new System.Drawing.Size(100, 0);
 			this.spnHbA1C.MinimumSize = new System.Drawing.Size(100, 0);
 			this.spnHbA1C.Name = "spnHbA1C";
@@ -806,7 +810,7 @@
 			this.chkDiabetes_Type2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetes_Type2.Appearance.Options.UseFont = true;
 			this.chkDiabetes_Type2.GroupIndex = 2;
-			this.chkDiabetes_Type2.Location = new System.Drawing.Point(105, 466);
+			this.chkDiabetes_Type2.Location = new System.Drawing.Point(105, 493);
 			this.chkDiabetes_Type2.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetes_Type2.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetes_Type2.Name = "chkDiabetes_Type2";
@@ -822,7 +826,7 @@
 			this.chkDiabetes_Type1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDiabetes_Type1.Appearance.Options.UseFont = true;
 			this.chkDiabetes_Type1.GroupIndex = 2;
-			this.chkDiabetes_Type1.Location = new System.Drawing.Point(5, 466);
+			this.chkDiabetes_Type1.Location = new System.Drawing.Point(5, 493);
 			this.chkDiabetes_Type1.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetes_Type1.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkDiabetes_Type1.Name = "chkDiabetes_Type1";
@@ -834,7 +838,7 @@
 			// 
 			// lkeTriggersOfDrugAllergies
 			// 
-			this.lkeTriggersOfDrugAllergies.Location = new System.Drawing.Point(355, 505);
+			this.lkeTriggersOfDrugAllergies.Location = new System.Drawing.Point(351, 507);
 			this.lkeTriggersOfDrugAllergies.MaximumSize = new System.Drawing.Size(200, 0);
 			this.lkeTriggersOfDrugAllergies.MinimumSize = new System.Drawing.Size(200, 0);
 			this.lkeTriggersOfDrugAllergies.Name = "lkeTriggersOfDrugAllergies";
@@ -847,7 +851,7 @@
 			this.lkeTriggersOfDrugAllergies.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeTriggersOfDrugAllergies.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeTriggersOfDrugAllergies.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
 			this.lkeTriggersOfDrugAllergies.Properties.View = this.gridView4;
 			this.lkeTriggersOfDrugAllergies.Size = new System.Drawing.Size(200, 20);
 			this.lkeTriggersOfDrugAllergies.StyleController = this.layoutControl1;
@@ -865,8 +869,8 @@
 			this.chkDrugAllergies_No.AllowAllUnchecked = true;
 			this.chkDrugAllergies_No.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDrugAllergies_No.Appearance.Options.UseFont = true;
-			this.chkDrugAllergies_No.GroupIndex = 1;
-			this.chkDrugAllergies_No.Location = new System.Drawing.Point(104, 502);
+			this.chkDrugAllergies_No.GroupIndex = 9;
+			this.chkDrugAllergies_No.Location = new System.Drawing.Point(100, 504);
 			this.chkDrugAllergies_No.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkDrugAllergies_No.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkDrugAllergies_No.Name = "chkDrugAllergies_No";
@@ -882,8 +886,8 @@
 			this.chkDrugAllergies_Yes.AllowAllUnchecked = true;
 			this.chkDrugAllergies_Yes.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkDrugAllergies_Yes.Appearance.Options.UseFont = true;
-			this.chkDrugAllergies_Yes.GroupIndex = 1;
-			this.chkDrugAllergies_Yes.Location = new System.Drawing.Point(4, 502);
+			this.chkDrugAllergies_Yes.GroupIndex = 9;
+			this.chkDrugAllergies_Yes.Location = new System.Drawing.Point(0, 504);
 			this.chkDrugAllergies_Yes.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkDrugAllergies_Yes.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkDrugAllergies_Yes.Name = "chkDrugAllergies_Yes";
@@ -899,8 +903,8 @@
 			this.chkAsthma_No.AllowAllUnchecked = true;
 			this.chkAsthma_No.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkAsthma_No.Appearance.Options.UseFont = true;
-			this.chkAsthma_No.GroupIndex = 1;
-			this.chkAsthma_No.Location = new System.Drawing.Point(874, 502);
+			this.chkAsthma_No.GroupIndex = 11;
+			this.chkAsthma_No.Location = new System.Drawing.Point(870, 504);
 			this.chkAsthma_No.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkAsthma_No.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkAsthma_No.Name = "chkAsthma_No";
@@ -916,8 +920,8 @@
 			this.chkAsthma_Yes.AllowAllUnchecked = true;
 			this.chkAsthma_Yes.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkAsthma_Yes.Appearance.Options.UseFont = true;
-			this.chkAsthma_Yes.GroupIndex = 1;
-			this.chkAsthma_Yes.Location = new System.Drawing.Point(774, 502);
+			this.chkAsthma_Yes.GroupIndex = 11;
+			this.chkAsthma_Yes.Location = new System.Drawing.Point(770, 504);
 			this.chkAsthma_Yes.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkAsthma_Yes.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkAsthma_Yes.Name = "chkAsthma_Yes";
@@ -933,8 +937,8 @@
 			this.chkHepatitis_No.AllowAllUnchecked = true;
 			this.chkHepatitis_No.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkHepatitis_No.Appearance.Options.UseFont = true;
-			this.chkHepatitis_No.GroupIndex = 1;
-			this.chkHepatitis_No.Location = new System.Drawing.Point(666, 502);
+			this.chkHepatitis_No.GroupIndex = 10;
+			this.chkHepatitis_No.Location = new System.Drawing.Point(662, 504);
 			this.chkHepatitis_No.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkHepatitis_No.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkHepatitis_No.Name = "chkHepatitis_No";
@@ -950,8 +954,8 @@
 			this.chkHepatitis_Yes.AllowAllUnchecked = true;
 			this.chkHepatitis_Yes.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkHepatitis_Yes.Appearance.Options.UseFont = true;
-			this.chkHepatitis_Yes.GroupIndex = 1;
-			this.chkHepatitis_Yes.Location = new System.Drawing.Point(566, 502);
+			this.chkHepatitis_Yes.GroupIndex = 10;
+			this.chkHepatitis_Yes.Location = new System.Drawing.Point(562, 504);
 			this.chkHepatitis_Yes.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkHepatitis_Yes.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkHepatitis_Yes.Name = "chkHepatitis_Yes";
@@ -964,12 +968,13 @@
 			// 
 			// chkHypertension_Years
 			// 
+			this.chkHypertension_Years.AllowAllUnchecked = true;
 			this.chkHypertension_Years.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkHypertension_Years.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
 			this.chkHypertension_Years.Appearance.Options.UseFont = true;
 			this.chkHypertension_Years.Appearance.Options.UseForeColor = true;
-			this.chkHypertension_Years.GroupIndex = 5;
-			this.chkHypertension_Years.Location = new System.Drawing.Point(884, 497);
+			this.chkHypertension_Years.GroupIndex = 8;
+			this.chkHypertension_Years.Location = new System.Drawing.Point(846, 524);
 			this.chkHypertension_Years.MaximumSize = new System.Drawing.Size(60, 30);
 			this.chkHypertension_Years.MinimumSize = new System.Drawing.Size(60, 30);
 			this.chkHypertension_Years.Name = "chkHypertension_Years";
@@ -981,12 +986,13 @@
 			// 
 			// chkHypertension_Months
 			// 
+			this.chkHypertension_Months.AllowAllUnchecked = true;
 			this.chkHypertension_Months.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkHypertension_Months.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
 			this.chkHypertension_Months.Appearance.Options.UseFont = true;
 			this.chkHypertension_Months.Appearance.Options.UseForeColor = true;
-			this.chkHypertension_Months.GroupIndex = 5;
-			this.chkHypertension_Months.Location = new System.Drawing.Point(821, 497);
+			this.chkHypertension_Months.GroupIndex = 8;
+			this.chkHypertension_Months.Location = new System.Drawing.Point(783, 524);
 			this.chkHypertension_Months.MaximumSize = new System.Drawing.Size(60, 30);
 			this.chkHypertension_Months.MinimumSize = new System.Drawing.Size(60, 30);
 			this.chkHypertension_Months.Name = "chkHypertension_Months";
@@ -998,12 +1004,13 @@
 			// 
 			// chkHypertension_Weeks
 			// 
+			this.chkHypertension_Weeks.AllowAllUnchecked = true;
 			this.chkHypertension_Weeks.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkHypertension_Weeks.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
 			this.chkHypertension_Weeks.Appearance.Options.UseFont = true;
 			this.chkHypertension_Weeks.Appearance.Options.UseForeColor = true;
-			this.chkHypertension_Weeks.GroupIndex = 5;
-			this.chkHypertension_Weeks.Location = new System.Drawing.Point(761, 497);
+			this.chkHypertension_Weeks.GroupIndex = 8;
+			this.chkHypertension_Weeks.Location = new System.Drawing.Point(723, 524);
 			this.chkHypertension_Weeks.MaximumSize = new System.Drawing.Size(60, 30);
 			this.chkHypertension_Weeks.MinimumSize = new System.Drawing.Size(60, 30);
 			this.chkHypertension_Weeks.Name = "chkHypertension_Weeks";
@@ -1015,12 +1022,13 @@
 			// 
 			// chkHypertension_Days
 			// 
+			this.chkHypertension_Days.AllowAllUnchecked = true;
 			this.chkHypertension_Days.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkHypertension_Days.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
 			this.chkHypertension_Days.Appearance.Options.UseFont = true;
 			this.chkHypertension_Days.Appearance.Options.UseForeColor = true;
-			this.chkHypertension_Days.GroupIndex = 5;
-			this.chkHypertension_Days.Location = new System.Drawing.Point(701, 497);
+			this.chkHypertension_Days.GroupIndex = 8;
+			this.chkHypertension_Days.Location = new System.Drawing.Point(663, 524);
 			this.chkHypertension_Days.MaximumSize = new System.Drawing.Size(60, 30);
 			this.chkHypertension_Days.MinimumSize = new System.Drawing.Size(60, 30);
 			this.chkHypertension_Days.Name = "chkHypertension_Days";
@@ -1032,13 +1040,13 @@
 			// 
 			// chkHypertension_Hours
 			// 
+			this.chkHypertension_Hours.AllowAllUnchecked = true;
 			this.chkHypertension_Hours.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkHypertension_Hours.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
 			this.chkHypertension_Hours.Appearance.Options.UseFont = true;
 			this.chkHypertension_Hours.Appearance.Options.UseForeColor = true;
-			this.chkHypertension_Hours.Checked = true;
-			this.chkHypertension_Hours.GroupIndex = 5;
-			this.chkHypertension_Hours.Location = new System.Drawing.Point(641, 497);
+			this.chkHypertension_Hours.GroupIndex = 8;
+			this.chkHypertension_Hours.Location = new System.Drawing.Point(603, 524);
 			this.chkHypertension_Hours.MaximumSize = new System.Drawing.Size(60, 30);
 			this.chkHypertension_Hours.MinimumSize = new System.Drawing.Size(60, 30);
 			this.chkHypertension_Hours.Name = "chkHypertension_Hours";
@@ -1054,7 +1062,7 @@
             0,
             0,
             0});
-			this.spnHypertension_Duration.Location = new System.Drawing.Point(526, 505);
+			this.spnHypertension_Duration.Location = new System.Drawing.Point(499, 532);
 			this.spnHypertension_Duration.MaximumSize = new System.Drawing.Size(100, 0);
 			this.spnHypertension_Duration.MinimumSize = new System.Drawing.Size(100, 0);
 			this.spnHypertension_Duration.Name = "spnHypertension_Duration";
@@ -1063,14 +1071,14 @@
 			this.spnHypertension_Duration.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnHypertension_Duration.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnHypertension_Duration.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
 			this.spnHypertension_Duration.Size = new System.Drawing.Size(100, 20);
 			this.spnHypertension_Duration.StyleController = this.layoutControl1;
 			this.spnHypertension_Duration.TabIndex = 14;
 			// 
 			// lkeHypertension_Doses
 			// 
-			this.lkeHypertension_Doses.Location = new System.Drawing.Point(293, 505);
+			this.lkeHypertension_Doses.Location = new System.Drawing.Point(293, 532);
 			this.lkeHypertension_Doses.MaximumSize = new System.Drawing.Size(200, 0);
 			this.lkeHypertension_Doses.MinimumSize = new System.Drawing.Size(200, 0);
 			this.lkeHypertension_Doses.Name = "lkeHypertension_Doses";
@@ -1083,7 +1091,7 @@
 			this.lkeHypertension_Doses.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeHypertension_Doses.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeHypertension_Doses.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
 			this.lkeHypertension_Doses.Properties.View = this.gridView3;
 			this.lkeHypertension_Doses.Size = new System.Drawing.Size(200, 20);
 			this.lkeHypertension_Doses.StyleController = this.layoutControl1;
@@ -1098,7 +1106,7 @@
 			// 
 			// lkeHypertension_Medications
 			// 
-			this.lkeHypertension_Medications.Location = new System.Drawing.Point(293, 479);
+			this.lkeHypertension_Medications.Location = new System.Drawing.Point(293, 506);
 			this.lkeHypertension_Medications.MaximumSize = new System.Drawing.Size(200, 0);
 			this.lkeHypertension_Medications.MinimumSize = new System.Drawing.Size(200, 0);
 			this.lkeHypertension_Medications.Name = "lkeHypertension_Medications";
@@ -1111,7 +1119,7 @@
 			this.lkeHypertension_Medications.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeHypertension_Medications.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeHypertension_Medications.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
 			this.lkeHypertension_Medications.Properties.View = this.gridView1;
 			this.lkeHypertension_Medications.Size = new System.Drawing.Size(200, 20);
 			this.lkeHypertension_Medications.StyleController = this.layoutControl1;
@@ -1129,8 +1137,8 @@
 			this.chkHypertensionControlled_No.AllowAllUnchecked = true;
 			this.chkHypertensionControlled_No.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkHypertensionControlled_No.Appearance.Options.UseFont = true;
-			this.chkHypertensionControlled_No.GroupIndex = 3;
-			this.chkHypertensionControlled_No.Location = new System.Drawing.Point(102, 495);
+			this.chkHypertensionControlled_No.GroupIndex = 7;
+			this.chkHypertensionControlled_No.Location = new System.Drawing.Point(102, 522);
 			this.chkHypertensionControlled_No.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkHypertensionControlled_No.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkHypertensionControlled_No.Name = "chkHypertensionControlled_No";
@@ -1145,8 +1153,8 @@
 			this.chkHypertensionControlled_Yes.AllowAllUnchecked = true;
 			this.chkHypertensionControlled_Yes.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkHypertensionControlled_Yes.Appearance.Options.UseFont = true;
-			this.chkHypertensionControlled_Yes.GroupIndex = 3;
-			this.chkHypertensionControlled_Yes.Location = new System.Drawing.Point(2, 495);
+			this.chkHypertensionControlled_Yes.GroupIndex = 7;
+			this.chkHypertensionControlled_Yes.Location = new System.Drawing.Point(2, 522);
 			this.chkHypertensionControlled_Yes.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkHypertensionControlled_Yes.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkHypertensionControlled_Yes.Name = "chkHypertensionControlled_Yes";
@@ -1161,8 +1169,8 @@
 			this.chkHypertension_No.AllowAllUnchecked = true;
 			this.chkHypertension_No.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkHypertension_No.Appearance.Options.UseFont = true;
-			this.chkHypertension_No.GroupIndex = 1;
-			this.chkHypertension_No.Location = new System.Drawing.Point(100, 445);
+			this.chkHypertension_No.GroupIndex = 6;
+			this.chkHypertension_No.Location = new System.Drawing.Point(100, 472);
 			this.chkHypertension_No.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkHypertension_No.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkHypertension_No.Name = "chkHypertension_No";
@@ -1178,8 +1186,8 @@
 			this.chkHypertension_Yes.AllowAllUnchecked = true;
 			this.chkHypertension_Yes.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkHypertension_Yes.Appearance.Options.UseFont = true;
-			this.chkHypertension_Yes.GroupIndex = 1;
-			this.chkHypertension_Yes.Location = new System.Drawing.Point(0, 445);
+			this.chkHypertension_Yes.GroupIndex = 6;
+			this.chkHypertension_Yes.Location = new System.Drawing.Point(0, 472);
 			this.chkHypertension_Yes.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkHypertension_Yes.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkHypertension_Yes.Name = "chkHypertension_Yes";
@@ -1310,7 +1318,7 @@
 			this.layoutControlItem7.Location = new System.Drawing.Point(0, 83);
 			this.layoutControlItem7.Name = "layoutControlItem7";
 			this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem7.Size = new System.Drawing.Size(1102, 330);
+			this.layoutControlItem7.Size = new System.Drawing.Size(1102, 357);
 			this.layoutControlItem7.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem7.Text = "Further Details";
 			this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
@@ -1337,7 +1345,7 @@
             this.layoutControlItem23,
             this.layoutControlItem24,
             this.lytGroup_DiabetesDetails});
-			this.lytGroup_Diabetes.Location = new System.Drawing.Point(0, 413);
+			this.lytGroup_Diabetes.Location = new System.Drawing.Point(0, 440);
 			this.lytGroup_Diabetes.Name = "lytGroup_Diabetes";
 			this.lytGroup_Diabetes.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytGroup_Diabetes.Size = new System.Drawing.Size(1102, 32);
@@ -1460,7 +1468,7 @@
 			this.layoutControlItem13.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
 			this.layoutControlItem13.Location = new System.Drawing.Point(0, 56);
 			this.layoutControlItem13.Name = "layoutControlItem13";
-			this.layoutControlItem13.Size = new System.Drawing.Size(115, 42);
+			this.layoutControlItem13.Size = new System.Drawing.Size(104, 42);
 			this.layoutControlItem13.Text = "Duration";
 			this.layoutControlItem13.TextLocation = DevExpress.Utils.Locations.Top;
 			this.layoutControlItem13.TextSize = new System.Drawing.Size(84, 13);
@@ -1476,9 +1484,9 @@
 			// emptySpaceItem7
 			// 
 			this.emptySpaceItem7.AllowHotTrack = false;
-			this.emptySpaceItem7.Location = new System.Drawing.Point(115, 56);
+			this.emptySpaceItem7.Location = new System.Drawing.Point(104, 56);
 			this.emptySpaceItem7.Name = "emptySpaceItem7";
-			this.emptySpaceItem7.Size = new System.Drawing.Size(421, 10);
+			this.emptySpaceItem7.Size = new System.Drawing.Size(432, 10);
 			this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlGroup4
@@ -1489,10 +1497,10 @@
             this.layoutControlItem16,
             this.layoutControlItem17,
             this.layoutControlItem18});
-			this.layoutControlGroup4.Location = new System.Drawing.Point(115, 66);
+			this.layoutControlGroup4.Location = new System.Drawing.Point(104, 66);
 			this.layoutControlGroup4.Name = "layoutControlGroup4";
 			this.layoutControlGroup4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup4.Size = new System.Drawing.Size(421, 32);
+			this.layoutControlGroup4.Size = new System.Drawing.Size(432, 32);
 			this.layoutControlGroup4.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlGroup4.TextVisible = false;
 			// 
@@ -1502,7 +1510,7 @@
 			this.layoutControlItem14.Location = new System.Drawing.Point(243, 0);
 			this.layoutControlItem14.Name = "layoutControlItem14";
 			this.layoutControlItem14.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem14.Size = new System.Drawing.Size(176, 30);
+			this.layoutControlItem14.Size = new System.Drawing.Size(187, 30);
 			this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem14.TextVisible = false;
 			// 
@@ -1705,14 +1713,6 @@
 			this.layoutControlItem8.TextSize = new System.Drawing.Size(36, 13);
 			this.layoutControlItem8.TextToControlDistance = 5;
 			// 
-			// emptySpaceItem4
-			// 
-			this.emptySpaceItem4.AllowHotTrack = false;
-			this.emptySpaceItem4.Location = new System.Drawing.Point(106, 56);
-			this.emptySpaceItem4.Name = "emptySpaceItem4";
-			this.emptySpaceItem4.Size = new System.Drawing.Size(27, 21);
-			this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-			// 
 			// layoutControlItem9
 			// 
 			this.layoutControlItem9.Control = this.labelControl4;
@@ -1735,6 +1735,14 @@
 			this.emptySpaceItem12.Size = new System.Drawing.Size(75, 44);
 			this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
 			// 
+			// emptySpaceItem4
+			// 
+			this.emptySpaceItem4.AllowHotTrack = false;
+			this.emptySpaceItem4.Location = new System.Drawing.Point(106, 56);
+			this.emptySpaceItem4.Name = "emptySpaceItem4";
+			this.emptySpaceItem4.Size = new System.Drawing.Size(27, 21);
+			this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+			// 
 			// lytGroup_Hypertension
 			// 
 			this.lytGroup_Hypertension.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -1752,7 +1760,7 @@
             this.emptySpaceItem11,
             this.emptySpaceItem13,
             this.lytGroup_HypertensionDetails});
-			this.lytGroup_Hypertension.Location = new System.Drawing.Point(0, 445);
+			this.lytGroup_Hypertension.Location = new System.Drawing.Point(0, 472);
 			this.lytGroup_Hypertension.Name = "lytGroup_Hypertension";
 			this.lytGroup_Hypertension.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytGroup_Hypertension.Size = new System.Drawing.Size(1102, 32);
@@ -1791,9 +1799,9 @@
 			// emptySpaceItem13
 			// 
 			this.emptySpaceItem13.AllowHotTrack = false;
-			this.emptySpaceItem13.Location = new System.Drawing.Point(946, 30);
+			this.emptySpaceItem13.Location = new System.Drawing.Point(908, 30);
 			this.emptySpaceItem13.Name = "emptySpaceItem13";
-			this.emptySpaceItem13.Size = new System.Drawing.Size(148, 54);
+			this.emptySpaceItem13.Size = new System.Drawing.Size(186, 54);
 			this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// lytGroup_HypertensionDetails
@@ -1809,7 +1817,7 @@
 			this.lytGroup_HypertensionDetails.Location = new System.Drawing.Point(0, 30);
 			this.lytGroup_HypertensionDetails.Name = "lytGroup_HypertensionDetails";
 			this.lytGroup_HypertensionDetails.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_HypertensionDetails.Size = new System.Drawing.Size(946, 54);
+			this.lytGroup_HypertensionDetails.Size = new System.Drawing.Size(908, 54);
 			this.lytGroup_HypertensionDetails.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytGroup_HypertensionDetails.TextVisible = false;
 			this.lytGroup_HypertensionDetails.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
@@ -1822,7 +1830,7 @@
             this.layoutControlItem36,
             this.layoutControlItem35,
             this.layoutControlItem34});
-			this.lytGroup_HypertensionDurations.Location = new System.Drawing.Point(639, 20);
+			this.lytGroup_HypertensionDurations.Location = new System.Drawing.Point(601, 20);
 			this.lytGroup_HypertensionDurations.Name = "lytGroup_HypertensionDurations";
 			this.lytGroup_HypertensionDurations.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytGroup_HypertensionDurations.Size = new System.Drawing.Size(305, 32);
@@ -1886,10 +1894,10 @@
 			this.layoutControlItem33.AppearanceItemCaption.Options.UseTextOptions = true;
 			this.layoutControlItem33.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.layoutControlItem33.Control = this.spnHypertension_Duration;
-			this.layoutControlItem33.Location = new System.Drawing.Point(522, 10);
+			this.layoutControlItem33.Location = new System.Drawing.Point(495, 10);
 			this.layoutControlItem33.Name = "layoutControlItem33";
 			this.layoutControlItem33.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem33.Size = new System.Drawing.Size(117, 42);
+			this.layoutControlItem33.Size = new System.Drawing.Size(106, 42);
 			this.layoutControlItem33.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem33.Text = "Duration";
 			this.layoutControlItem33.TextLocation = DevExpress.Utils.Locations.Top;
@@ -1898,7 +1906,7 @@
 			// emptySpaceItem14
 			// 
 			this.emptySpaceItem14.AllowHotTrack = false;
-			this.emptySpaceItem14.Location = new System.Drawing.Point(639, 0);
+			this.emptySpaceItem14.Location = new System.Drawing.Point(601, 0);
 			this.emptySpaceItem14.Name = "emptySpaceItem14";
 			this.emptySpaceItem14.Size = new System.Drawing.Size(305, 20);
 			this.emptySpaceItem14.TextSize = new System.Drawing.Size(0, 0);
@@ -1906,9 +1914,9 @@
 			// emptySpaceItem15
 			// 
 			this.emptySpaceItem15.AllowHotTrack = false;
-			this.emptySpaceItem15.Location = new System.Drawing.Point(522, 0);
+			this.emptySpaceItem15.Location = new System.Drawing.Point(495, 0);
 			this.emptySpaceItem15.Name = "emptySpaceItem15";
-			this.emptySpaceItem15.Size = new System.Drawing.Size(117, 10);
+			this.emptySpaceItem15.Size = new System.Drawing.Size(106, 10);
 			this.emptySpaceItem15.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem31
@@ -1919,7 +1927,7 @@
 			this.layoutControlItem31.Location = new System.Drawing.Point(202, 0);
 			this.layoutControlItem31.Name = "layoutControlItem31";
 			this.layoutControlItem31.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem31.Size = new System.Drawing.Size(320, 26);
+			this.layoutControlItem31.Size = new System.Drawing.Size(293, 26);
 			this.layoutControlItem31.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem31.Text = "Medication";
 			this.layoutControlItem31.TextLocation = DevExpress.Utils.Locations.Left;
@@ -1933,7 +1941,7 @@
 			this.layoutControlItem32.Location = new System.Drawing.Point(202, 26);
 			this.layoutControlItem32.Name = "layoutControlItem32";
 			this.layoutControlItem32.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem32.Size = new System.Drawing.Size(320, 26);
+			this.layoutControlItem32.Size = new System.Drawing.Size(293, 26);
 			this.layoutControlItem32.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem32.Text = "Dosage";
 			this.layoutControlItem32.TextLocation = DevExpress.Utils.Locations.Left;
@@ -1980,9 +1988,9 @@
 			// emptySpaceItem17
 			// 
 			this.emptySpaceItem17.AllowHotTrack = false;
-			this.emptySpaceItem17.Location = new System.Drawing.Point(978, 477);
+			this.emptySpaceItem17.Location = new System.Drawing.Point(978, 504);
 			this.emptySpaceItem17.Name = "emptySpaceItem17";
-			this.emptySpaceItem17.Size = new System.Drawing.Size(124, 59);
+			this.emptySpaceItem17.Size = new System.Drawing.Size(124, 32);
 			this.emptySpaceItem17.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// lytGroup_Hepatitis
@@ -1995,13 +2003,14 @@
 			this.lytGroup_Hepatitis.AppearanceGroup.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			this.lytGroup_Hepatitis.CaptionImage = global::CommonUserControls.Properties.Resources.RoundedPoint_6_01;
 			this.lytGroup_Hepatitis.CaptionImageLocation = DevExpress.Utils.GroupElementLocation.AfterText;
+			this.lytGroup_Hepatitis.Expanded = false;
 			this.lytGroup_Hepatitis.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem40,
             this.layoutControlItem39});
-			this.lytGroup_Hepatitis.Location = new System.Drawing.Point(562, 477);
+			this.lytGroup_Hepatitis.Location = new System.Drawing.Point(562, 504);
 			this.lytGroup_Hepatitis.Name = "lytGroup_Hepatitis";
 			this.lytGroup_Hepatitis.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_Hepatitis.Size = new System.Drawing.Size(208, 59);
+			this.lytGroup_Hepatitis.Size = new System.Drawing.Size(208, 32);
 			this.lytGroup_Hepatitis.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lytGroup_Hepatitis.Text = "Hepatitis";
 			this.lytGroup_Hepatitis.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_Hepatitis_MouseUp);
@@ -2038,13 +2047,14 @@
 			this.lytGroup_Asthma.AppearanceGroup.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			this.lytGroup_Asthma.CaptionImage = global::CommonUserControls.Properties.Resources.RoundedPoint_6_01;
 			this.lytGroup_Asthma.CaptionImageLocation = DevExpress.Utils.GroupElementLocation.AfterText;
+			this.lytGroup_Asthma.Expanded = false;
 			this.lytGroup_Asthma.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem42,
             this.layoutControlItem41});
-			this.lytGroup_Asthma.Location = new System.Drawing.Point(770, 477);
+			this.lytGroup_Asthma.Location = new System.Drawing.Point(770, 504);
 			this.lytGroup_Asthma.Name = "lytGroup_Asthma";
 			this.lytGroup_Asthma.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_Asthma.Size = new System.Drawing.Size(208, 59);
+			this.lytGroup_Asthma.Size = new System.Drawing.Size(208, 32);
 			this.lytGroup_Asthma.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lytGroup_Asthma.Text = "Asthma";
 			this.lytGroup_Asthma.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_Asthma_MouseUp);
@@ -2079,14 +2089,15 @@
 			this.lytGroup_Allergies.AppearanceGroup.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			this.lytGroup_Allergies.CaptionImage = global::CommonUserControls.Properties.Resources.RoundedPoint_6_01;
 			this.lytGroup_Allergies.CaptionImageLocation = DevExpress.Utils.GroupElementLocation.AfterText;
+			this.lytGroup_Allergies.Expanded = false;
 			this.lytGroup_Allergies.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lytGroup_TriggersOfDrugAllergies,
             this.layoutControlItem44,
             this.layoutControlItem43});
-			this.lytGroup_Allergies.Location = new System.Drawing.Point(0, 477);
+			this.lytGroup_Allergies.Location = new System.Drawing.Point(0, 504);
 			this.lytGroup_Allergies.Name = "lytGroup_Allergies";
 			this.lytGroup_Allergies.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_Allergies.Size = new System.Drawing.Size(562, 59);
+			this.lytGroup_Allergies.Size = new System.Drawing.Size(562, 32);
 			this.lytGroup_Allergies.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lytGroup_Allergies.Text = "Drug Allergies";
 			this.lytGroup_Allergies.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_Allergies_MouseUp);
@@ -2237,9 +2248,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Hypertension)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();

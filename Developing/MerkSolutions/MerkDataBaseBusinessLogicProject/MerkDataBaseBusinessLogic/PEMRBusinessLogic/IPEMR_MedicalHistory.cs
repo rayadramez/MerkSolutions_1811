@@ -12,7 +12,7 @@
 		object DiabetesMedicationDurationType { get; set; }
 		object DiabetesMedication { get; set; }
 		object DiabetesDosage { get; set; }
-		object HasHypertension { get; set; }
+		object IsHypertension { get; set; }
 		object IsHypertensionControlled { get; set; }
 		object HypertensionMedicationDurationType { get; set; }
 		object HypertensionMedicationDuration { get; set; }

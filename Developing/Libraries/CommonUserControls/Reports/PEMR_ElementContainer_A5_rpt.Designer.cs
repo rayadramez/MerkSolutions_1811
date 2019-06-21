@@ -44,7 +44,7 @@
 			this.lblPatientName = new DevExpress.XtraReports.UI.XRLabel();
 			this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
 			this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
-			this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+			this.lblDoctorName = new DevExpress.XtraReports.UI.XRLabel();
 			this.xrShape1 = new DevExpress.XtraReports.UI.XRShape();
 			((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
 			// 
@@ -115,7 +115,7 @@
             this.lblPatientName,
             this.xrLabel2,
             this.xrLabel3,
-            this.xrLabel1,
+            this.lblDoctorName,
             this.xrShape1});
 			this.ReportHeader.HeightF = 72F;
 			this.ReportHeader.Name = "ReportHeader";
@@ -215,20 +215,20 @@
 			this.xrLabel3.Text = "Doctor :";
 			this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
 			// 
-			// xrLabel1
+			// lblDoctorName
 			// 
-			this.xrLabel1.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-			this.xrLabel1.ForeColor = System.Drawing.Color.Navy;
-			this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(77.37331F, 37.33333F);
-			this.xrLabel1.Name = "xrLabel1";
-			this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-			this.xrLabel1.SizeF = new System.Drawing.SizeF(227.7917F, 23.00001F);
-			this.xrLabel1.StylePriority.UseBorders = false;
-			this.xrLabel1.StylePriority.UseFont = false;
-			this.xrLabel1.StylePriority.UseForeColor = false;
-			this.xrLabel1.StylePriority.UseTextAlignment = false;
-			this.xrLabel1.Text = "Wael Shaker Abd El Hamed Sayed";
-			this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+			this.lblDoctorName.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+			this.lblDoctorName.ForeColor = System.Drawing.Color.Navy;
+			this.lblDoctorName.LocationFloat = new DevExpress.Utils.PointFloat(77.37331F, 37.33333F);
+			this.lblDoctorName.Name = "lblDoctorName";
+			this.lblDoctorName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+			this.lblDoctorName.SizeF = new System.Drawing.SizeF(227.7917F, 23.00001F);
+			this.lblDoctorName.StylePriority.UseBorders = false;
+			this.lblDoctorName.StylePriority.UseFont = false;
+			this.lblDoctorName.StylePriority.UseForeColor = false;
+			this.lblDoctorName.StylePriority.UseTextAlignment = false;
+			this.lblDoctorName.Text = "Wael Shaker Abd El Hamed Sayed";
+			this.lblDoctorName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
 			// 
 			// xrShape1
 			// 
@@ -272,6 +272,6 @@
 		private DevExpress.XtraReports.UI.XRShape xrShape1;
 		private DevExpress.XtraReports.UI.XRLabel xrLabel3;
 		private DevExpress.XtraReports.UI.XRLine xrLine1;
-		private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+		private DevExpress.XtraReports.UI.XRLabel lblDoctorName;
 	}
 }

@@ -28,13 +28,18 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_Medication_UC));
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_Medication_UC));
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.dtTo_TimeInterval = new DevExpress.XtraEditors.DateEdit();
+			this.dtFrom_TimeInterval = new DevExpress.XtraEditors.DateEdit();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.chkYearly = new DevExpress.XtraEditors.CheckButton();
 			this.chkMonthly = new DevExpress.XtraEditors.CheckButton();
 			this.chkWeekly = new DevExpress.XtraEditors.CheckButton();
@@ -52,8 +57,8 @@
 			this.chkDateInterval = new DevExpress.XtraEditors.CheckButton();
 			this.spnTimePerDay = new DevExpress.XtraEditors.SpinEdit();
 			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-			this.dtTo = new DevExpress.XtraEditors.DateEdit();
-			this.dtFrom = new DevExpress.XtraEditors.DateEdit();
+			this.dtTo_DateInterval = new DevExpress.XtraEditors.DateEdit();
+			this.dtFrom_DateInterval = new DevExpress.XtraEditors.DateEdit();
 			this.lkeDoses = new DevExpress.XtraEditors.GridLookUpEdit();
 			this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.lkeMedications = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -93,7 +98,6 @@
 			this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -105,16 +109,22 @@
 			this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dtTo_TimeInterval.Properties.CalendarTimeProperties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtTo_TimeInterval.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtFrom_TimeInterval.Properties.CalendarTimeProperties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtFrom_TimeInterval.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnTimePerDay.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties.CalendarTimeProperties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtFrom.Properties.CalendarTimeProperties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtFrom.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtTo_DateInterval.Properties.CalendarTimeProperties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtTo_DateInterval.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtFrom_DateInterval.Properties.CalendarTimeProperties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtFrom_DateInterval.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeDoses.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeMedications.Properties)).BeginInit();
@@ -144,7 +154,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
@@ -156,11 +165,16 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.dtTo_TimeInterval);
+			this.layoutControl1.Controls.Add(this.dtFrom_TimeInterval);
 			this.layoutControl1.Controls.Add(this.btnSave);
 			this.layoutControl1.Controls.Add(this.chkYearly);
 			this.layoutControl1.Controls.Add(this.chkMonthly);
@@ -179,8 +193,8 @@
 			this.layoutControl1.Controls.Add(this.chkDateInterval);
 			this.layoutControl1.Controls.Add(this.spnTimePerDay);
 			this.layoutControl1.Controls.Add(this.labelControl4);
-			this.layoutControl1.Controls.Add(this.dtTo);
-			this.layoutControl1.Controls.Add(this.dtFrom);
+			this.layoutControl1.Controls.Add(this.dtTo_DateInterval);
+			this.layoutControl1.Controls.Add(this.dtFrom_DateInterval);
 			this.layoutControl1.Controls.Add(this.lkeDoses);
 			this.layoutControl1.Controls.Add(this.lkeMedications);
 			this.layoutControl1.Controls.Add(this.grdTreatmentPlans);
@@ -191,13 +205,65 @@
 			this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.layoutControl1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl1.Name = "layoutControl1";
-			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(175, 0, 303, 413);
+			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(869, 326, 303, 413);
 			this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
 			this.layoutControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.layoutControl1.Root = this.layoutControlGroup1;
 			this.layoutControl1.Size = new System.Drawing.Size(908, 552);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
+			// 
+			// dtTo_TimeInterval
+			// 
+			this.dtTo_TimeInterval.EditValue = null;
+			this.dtTo_TimeInterval.Location = new System.Drawing.Point(726, 160);
+			this.dtTo_TimeInterval.MaximumSize = new System.Drawing.Size(150, 0);
+			this.dtTo_TimeInterval.MinimumSize = new System.Drawing.Size(150, 0);
+			this.dtTo_TimeInterval.Name = "dtTo_TimeInterval";
+			this.dtTo_TimeInterval.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.dtTo_TimeInterval.Properties.Appearance.Options.UseFont = true;
+			this.dtTo_TimeInterval.Properties.Appearance.Options.UseTextOptions = true;
+			this.dtTo_TimeInterval.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.dtTo_TimeInterval.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+			this.dtTo_TimeInterval.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.dtTo_TimeInterval.Size = new System.Drawing.Size(150, 20);
+			this.dtTo_TimeInterval.StyleController = this.layoutControl1;
+			this.dtTo_TimeInterval.TabIndex = 43;
+			// 
+			// dtFrom_TimeInterval
+			// 
+			this.dtFrom_TimeInterval.EditValue = null;
+			this.dtFrom_TimeInterval.Location = new System.Drawing.Point(570, 162);
+			this.dtFrom_TimeInterval.MaximumSize = new System.Drawing.Size(150, 0);
+			this.dtFrom_TimeInterval.MinimumSize = new System.Drawing.Size(150, 0);
+			this.dtFrom_TimeInterval.Name = "dtFrom_TimeInterval";
+			this.dtFrom_TimeInterval.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.dtFrom_TimeInterval.Properties.Appearance.Options.UseFont = true;
+			this.dtFrom_TimeInterval.Properties.Appearance.Options.UseTextOptions = true;
+			this.dtFrom_TimeInterval.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.dtFrom_TimeInterval.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+			this.dtFrom_TimeInterval.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.dtFrom_TimeInterval.Size = new System.Drawing.Size(150, 20);
+			this.dtFrom_TimeInterval.StyleController = this.layoutControl1;
+			this.dtFrom_TimeInterval.TabIndex = 42;
+			this.dtFrom_TimeInterval.EditValueChanged += new System.EventHandler(this.dtFrom_TimeInterval_EditValueChanged);
+			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSave.Location = new System.Drawing.Point(798, 3);
+			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(110, 40);
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.TabIndex = 14;
+			this.btnSave.Text = "simpleButton1";
 			// 
 			// chkYearly
 			// 
@@ -349,7 +415,7 @@
 			this.txtDescription.Properties.AppearanceFocused.Options.UseForeColor = true;
 			this.txtDescription.Properties.AppearanceFocused.Options.UseTextOptions = true;
 			this.txtDescription.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-			this.txtDescription.Size = new System.Drawing.Size(902, 76);
+			this.txtDescription.Size = new System.Drawing.Size(902, 64);
 			this.txtDescription.StyleController = this.layoutControl1;
 			this.txtDescription.TabIndex = 14;
 			// 
@@ -401,7 +467,7 @@
 			// 
 			this.btnAddToList.Image = global::CommonUserControls.Properties.Resources.AddToList_16_09;
 			this.btnAddToList.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnAddToList.Location = new System.Drawing.Point(820, 286);
+			this.btnAddToList.Location = new System.Drawing.Point(820, 274);
 			this.btnAddToList.MaximumSize = new System.Drawing.Size(80, 30);
 			this.btnAddToList.MinimumSize = new System.Drawing.Size(80, 30);
 			this.btnAddToList.Name = "btnAddToList";
@@ -463,7 +529,7 @@
 			this.spnTimePerDay.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnTimePerDay.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnTimePerDay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
 			this.spnTimePerDay.Properties.MaxValue = new decimal(new int[] {
             10000,
             0,
@@ -490,44 +556,44 @@
 			this.labelControl4.TabIndex = 11;
 			this.labelControl4.Text = "OR";
 			// 
-			// dtTo
+			// dtTo_DateInterval
 			// 
-			this.dtTo.EditValue = null;
-			this.dtTo.Location = new System.Drawing.Point(315, 96);
-			this.dtTo.MaximumSize = new System.Drawing.Size(150, 0);
-			this.dtTo.MinimumSize = new System.Drawing.Size(150, 0);
-			this.dtTo.Name = "dtTo";
-			this.dtTo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.dtTo.Properties.Appearance.Options.UseFont = true;
-			this.dtTo.Properties.Appearance.Options.UseTextOptions = true;
-			this.dtTo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.dtTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-			this.dtTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+			this.dtTo_DateInterval.EditValue = null;
+			this.dtTo_DateInterval.Location = new System.Drawing.Point(315, 96);
+			this.dtTo_DateInterval.MaximumSize = new System.Drawing.Size(150, 0);
+			this.dtTo_DateInterval.MinimumSize = new System.Drawing.Size(150, 0);
+			this.dtTo_DateInterval.Name = "dtTo_DateInterval";
+			this.dtTo_DateInterval.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.dtTo_DateInterval.Properties.Appearance.Options.UseFont = true;
+			this.dtTo_DateInterval.Properties.Appearance.Options.UseTextOptions = true;
+			this.dtTo_DateInterval.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.dtTo_DateInterval.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+			this.dtTo_DateInterval.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.dtTo.Size = new System.Drawing.Size(150, 20);
-			this.dtTo.StyleController = this.layoutControl1;
-			this.dtTo.TabIndex = 10;
+			this.dtTo_DateInterval.Size = new System.Drawing.Size(150, 20);
+			this.dtTo_DateInterval.StyleController = this.layoutControl1;
+			this.dtTo_DateInterval.TabIndex = 10;
 			// 
-			// dtFrom
+			// dtFrom_DateInterval
 			// 
-			this.dtFrom.EditValue = null;
-			this.dtFrom.Location = new System.Drawing.Point(159, 96);
-			this.dtFrom.MaximumSize = new System.Drawing.Size(150, 0);
-			this.dtFrom.MinimumSize = new System.Drawing.Size(150, 0);
-			this.dtFrom.Name = "dtFrom";
-			this.dtFrom.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.dtFrom.Properties.Appearance.Options.UseFont = true;
-			this.dtFrom.Properties.Appearance.Options.UseTextOptions = true;
-			this.dtFrom.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.dtFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
-			this.dtFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+			this.dtFrom_DateInterval.EditValue = null;
+			this.dtFrom_DateInterval.Location = new System.Drawing.Point(159, 96);
+			this.dtFrom_DateInterval.MaximumSize = new System.Drawing.Size(150, 0);
+			this.dtFrom_DateInterval.MinimumSize = new System.Drawing.Size(150, 0);
+			this.dtFrom_DateInterval.Name = "dtFrom_DateInterval";
+			this.dtFrom_DateInterval.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.dtFrom_DateInterval.Properties.Appearance.Options.UseFont = true;
+			this.dtFrom_DateInterval.Properties.Appearance.Options.UseTextOptions = true;
+			this.dtFrom_DateInterval.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.dtFrom_DateInterval.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+			this.dtFrom_DateInterval.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.dtFrom.Size = new System.Drawing.Size(150, 20);
-			this.dtFrom.StyleController = this.layoutControl1;
-			this.dtFrom.TabIndex = 9;
-			this.dtFrom.EditValueChanged += new System.EventHandler(this.dtFrom_EditValueChanged);
+			this.dtFrom_DateInterval.Size = new System.Drawing.Size(150, 20);
+			this.dtFrom_DateInterval.StyleController = this.layoutControl1;
+			this.dtFrom_DateInterval.TabIndex = 9;
+			this.dtFrom_DateInterval.EditValueChanged += new System.EventHandler(this.dtFrom_EditValueChanged);
 			// 
 			// lkeDoses
 			// 
@@ -544,7 +610,7 @@
 			this.lkeDoses.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeDoses.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeDoses.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
 			this.lkeDoses.Properties.View = this.gridView2;
 			this.lkeDoses.Size = new System.Drawing.Size(250, 20);
 			this.lkeDoses.StyleController = this.layoutControl1;
@@ -572,7 +638,7 @@
 			this.lkeMedications.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeMedications.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeMedications.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
 			this.lkeMedications.Properties.View = this.gridLookUpEdit1View;
 			this.lkeMedications.Size = new System.Drawing.Size(250, 20);
 			this.lkeMedications.StyleController = this.layoutControl1;
@@ -588,10 +654,10 @@
 			// 
 			// grdTreatmentPlans
 			// 
-			this.grdTreatmentPlans.Location = new System.Drawing.Point(3, 286);
+			this.grdTreatmentPlans.Location = new System.Drawing.Point(3, 274);
 			this.grdTreatmentPlans.MainView = this.gridView1;
 			this.grdTreatmentPlans.Name = "grdTreatmentPlans";
-			this.grdTreatmentPlans.Size = new System.Drawing.Size(811, 263);
+			this.grdTreatmentPlans.Size = new System.Drawing.Size(811, 275);
 			this.grdTreatmentPlans.TabIndex = 2;
 			this.grdTreatmentPlans.TabStop = false;
 			this.grdTreatmentPlans.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -627,7 +693,7 @@
 			this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
 			this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.gridColumn2.Caption = "Medication";
-			this.gridColumn2.FieldName = "MedicationName";
+			this.gridColumn2.FieldName = "MedicationName_English";
 			this.gridColumn2.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
 			this.gridColumn2.Name = "gridColumn2";
 			this.gridColumn2.OptionsColumn.AllowEdit = false;
@@ -652,7 +718,7 @@
 			this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
 			this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.gridColumn5.Caption = "Dose";
-			this.gridColumn5.FieldName = "DosageName";
+			this.gridColumn5.FieldName = "DosageName_English";
 			this.gridColumn5.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
 			this.gridColumn5.Name = "gridColumn5";
 			this.gridColumn5.OptionsColumn.AllowEdit = false;
@@ -685,7 +751,7 @@
 			this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
 			this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.gridColumn3.Caption = "Time Duration";
-			this.gridColumn3.FieldName = "TimeDurationName";
+			this.gridColumn3.FieldName = "TimeDurationName_English";
 			this.gridColumn3.Name = "gridColumn3";
 			this.gridColumn3.OptionsColumn.AllowEdit = false;
 			this.gridColumn3.OptionsColumn.FixedWidth = true;
@@ -732,7 +798,7 @@
 			this.gridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.gridColumn7.AppearanceHeader.Options.UseTextOptions = true;
 			this.gridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn7.Caption = "Instructions";
+			this.gridColumn7.Caption = "Recommendations";
 			this.gridColumn7.FieldName = "Description";
 			this.gridColumn7.Name = "gridColumn7";
 			this.gridColumn7.OptionsColumn.AllowEdit = false;
@@ -822,7 +888,9 @@
             this.emptySpaceItem5,
             this.lytIntervalDuration,
             this.layoutControlItem11,
-            this.layoutControlItem23});
+            this.layoutControlItem23,
+            this.layoutControlItem24,
+            this.layoutControlItem25});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -889,10 +957,10 @@
 			// layoutControlItem5
 			// 
 			this.layoutControlItem5.Control = this.grdTreatmentPlans;
-			this.layoutControlItem5.Location = new System.Drawing.Point(0, 283);
+			this.layoutControlItem5.Location = new System.Drawing.Point(0, 271);
 			this.layoutControlItem5.Name = "layoutControlItem5";
 			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem5.Size = new System.Drawing.Size(817, 269);
+			this.layoutControlItem5.Size = new System.Drawing.Size(817, 281);
 			this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem5.TextVisible = false;
@@ -939,7 +1007,7 @@
 			this.lytFromDate.AppearanceItemCaption.Options.UseFont = true;
 			this.lytFromDate.AppearanceItemCaption.Options.UseTextOptions = true;
 			this.lytFromDate.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.lytFromDate.Control = this.dtFrom;
+			this.lytFromDate.Control = this.dtFrom_DateInterval;
 			this.lytFromDate.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
 			this.lytFromDate.Location = new System.Drawing.Point(156, 75);
 			this.lytFromDate.Name = "lytFromDate";
@@ -967,7 +1035,7 @@
 			this.lytToDate.AppearanceItemCaption.Options.UseFont = true;
 			this.lytToDate.AppearanceItemCaption.Options.UseTextOptions = true;
 			this.lytToDate.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.lytToDate.Control = this.dtTo;
+			this.lytToDate.Control = this.dtTo_DateInterval;
 			this.lytToDate.Location = new System.Drawing.Point(312, 75);
 			this.lytToDate.Name = "lytToDate";
 			this.lytToDate.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -1013,7 +1081,7 @@
 			// layoutControlItem8
 			// 
 			this.layoutControlItem8.Control = this.btnAddToList;
-			this.layoutControlItem8.Location = new System.Drawing.Point(817, 283);
+			this.layoutControlItem8.Location = new System.Drawing.Point(817, 271);
 			this.layoutControlItem8.Name = "layoutControlItem8";
 			this.layoutControlItem8.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem8.Size = new System.Drawing.Size(91, 39);
@@ -1035,9 +1103,9 @@
 			// emptySpaceItem6
 			// 
 			this.emptySpaceItem6.AllowHotTrack = false;
-			this.emptySpaceItem6.Location = new System.Drawing.Point(817, 322);
+			this.emptySpaceItem6.Location = new System.Drawing.Point(817, 310);
 			this.emptySpaceItem6.Name = "emptySpaceItem6";
-			this.emptySpaceItem6.Size = new System.Drawing.Size(91, 191);
+			this.emptySpaceItem6.Size = new System.Drawing.Size(91, 203);
 			this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// lytAllDoses
@@ -1073,7 +1141,7 @@
 			this.layoutControlItem17.Location = new System.Drawing.Point(0, 185);
 			this.layoutControlItem17.Name = "layoutControlItem17";
 			this.layoutControlItem17.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem17.Size = new System.Drawing.Size(908, 98);
+			this.layoutControlItem17.Size = new System.Drawing.Size(908, 86);
 			this.layoutControlItem17.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem17.Text = "Recommendations";
 			this.layoutControlItem17.TextLocation = DevExpress.Utils.Locations.Top;
@@ -1089,17 +1157,6 @@
 			this.layoutControlItem9.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem9.TextVisible = false;
-			// 
-			// layoutControlItem11
-			// 
-			this.layoutControlItem11.Control = this.btnSearch;
-			this.layoutControlItem11.Location = new System.Drawing.Point(757, 3);
-			this.layoutControlItem11.Name = "layoutControlItem11";
-			this.layoutControlItem11.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem11.Size = new System.Drawing.Size(41, 41);
-			this.layoutControlItem11.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem11.TextVisible = false;
 			// 
 			// layoutControlItem13
 			// 
@@ -1154,9 +1211,9 @@
 			// emptySpaceItem5
 			// 
 			this.emptySpaceItem5.AllowHotTrack = false;
-			this.emptySpaceItem5.Location = new System.Drawing.Point(567, 141);
+			this.emptySpaceItem5.Location = new System.Drawing.Point(879, 141);
 			this.emptySpaceItem5.Name = "emptySpaceItem5";
-			this.emptySpaceItem5.Size = new System.Drawing.Size(341, 44);
+			this.emptySpaceItem5.Size = new System.Drawing.Size(29, 44);
 			this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// lytIntervalDuration
@@ -1224,18 +1281,16 @@
 			this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem18.TextVisible = false;
 			// 
-			// btnSave
+			// layoutControlItem11
 			// 
-			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
-			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSave.Location = new System.Drawing.Point(798, 3);
-			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(110, 40);
-			this.btnSave.StyleController = this.layoutControl1;
-			this.btnSave.TabIndex = 14;
-			this.btnSave.Text = "simpleButton1";
+			this.layoutControlItem11.Control = this.btnSearch;
+			this.layoutControlItem11.Location = new System.Drawing.Point(757, 3);
+			this.layoutControlItem11.Name = "layoutControlItem11";
+			this.layoutControlItem11.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem11.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem11.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem11.TextVisible = false;
 			// 
 			// layoutControlItem23
 			// 
@@ -1247,6 +1302,40 @@
 			this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem23.TextVisible = false;
 			// 
+			// layoutControlItem24
+			// 
+			this.layoutControlItem24.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.layoutControlItem24.AppearanceItemCaption.Options.UseFont = true;
+			this.layoutControlItem24.AppearanceItemCaption.Options.UseTextOptions = true;
+			this.layoutControlItem24.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.layoutControlItem24.Control = this.dtFrom_TimeInterval;
+			this.layoutControlItem24.Location = new System.Drawing.Point(567, 141);
+			this.layoutControlItem24.Name = "layoutControlItem24";
+			this.layoutControlItem24.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem24.Size = new System.Drawing.Size(156, 44);
+			this.layoutControlItem24.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem24.Text = "From Date";
+			this.layoutControlItem24.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+			this.layoutControlItem24.TextLocation = DevExpress.Utils.Locations.Top;
+			this.layoutControlItem24.TextSize = new System.Drawing.Size(59, 13);
+			this.layoutControlItem24.TextToControlDistance = 5;
+			// 
+			// layoutControlItem25
+			// 
+			this.layoutControlItem25.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.layoutControlItem25.AppearanceItemCaption.Options.UseFont = true;
+			this.layoutControlItem25.AppearanceItemCaption.Options.UseTextOptions = true;
+			this.layoutControlItem25.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.layoutControlItem25.Control = this.dtTo_TimeInterval;
+			this.layoutControlItem25.Location = new System.Drawing.Point(723, 141);
+			this.layoutControlItem25.Name = "layoutControlItem25";
+			this.layoutControlItem25.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem25.Size = new System.Drawing.Size(156, 44);
+			this.layoutControlItem25.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem25.Text = "ToDate";
+			this.layoutControlItem25.TextLocation = DevExpress.Utils.Locations.Top;
+			this.layoutControlItem25.TextSize = new System.Drawing.Size(106, 13);
+			// 
 			// PEMR_Medication_UC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1257,12 +1346,16 @@
 			this.Size = new System.Drawing.Size(908, 552);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
 			this.layoutControl1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dtTo_TimeInterval.Properties.CalendarTimeProperties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtTo_TimeInterval.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtFrom_TimeInterval.Properties.CalendarTimeProperties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtFrom_TimeInterval.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnTimePerDay.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties.CalendarTimeProperties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtTo.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtFrom.Properties.CalendarTimeProperties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtFrom.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtTo_DateInterval.Properties.CalendarTimeProperties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtTo_DateInterval.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtFrom_DateInterval.Properties.CalendarTimeProperties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtFrom_DateInterval.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeDoses.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeMedications.Properties)).EndInit();
@@ -1292,7 +1385,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
@@ -1304,7 +1396,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1333,8 +1428,8 @@
 		private DevExpress.XtraEditors.GridLookUpEdit lkeDoses;
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-		private DevExpress.XtraEditors.DateEdit dtTo;
-		private DevExpress.XtraEditors.DateEdit dtFrom;
+		private DevExpress.XtraEditors.DateEdit dtTo_DateInterval;
+		private DevExpress.XtraEditors.DateEdit dtFrom_DateInterval;
 		private DevExpress.XtraLayout.LayoutControlItem lytFromDate;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
 		private DevExpress.XtraLayout.LayoutControlItem lytToDate;
@@ -1384,5 +1479,9 @@
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
 		private DevExpress.XtraEditors.SimpleButton btnSave;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
+		private DevExpress.XtraEditors.DateEdit dtTo_TimeInterval;
+		private DevExpress.XtraEditors.DateEdit dtFrom_TimeInterval;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
 	}
 }

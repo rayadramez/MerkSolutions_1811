@@ -214,12 +214,12 @@
 			this.txtTreatmentPlanDetails.Location = new System.Drawing.Point(3, 70);
 			this.txtTreatmentPlanDetails.Name = "txtTreatmentPlanDetails";
 			this.txtTreatmentPlanDetails.Properties.Appearance.BackColor = System.Drawing.Color.Cornsilk;
-			this.txtTreatmentPlanDetails.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.txtTreatmentPlanDetails.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.txtTreatmentPlanDetails.Properties.Appearance.ForeColor = System.Drawing.Color.Navy;
 			this.txtTreatmentPlanDetails.Properties.Appearance.Options.UseBackColor = true;
 			this.txtTreatmentPlanDetails.Properties.Appearance.Options.UseFont = true;
 			this.txtTreatmentPlanDetails.Properties.Appearance.Options.UseForeColor = true;
-			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.ForeColor = System.Drawing.Color.Navy;
 			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.Options.UseFont = true;
 			this.txtTreatmentPlanDetails.Properties.AppearanceFocused.Options.UseForeColor = true;

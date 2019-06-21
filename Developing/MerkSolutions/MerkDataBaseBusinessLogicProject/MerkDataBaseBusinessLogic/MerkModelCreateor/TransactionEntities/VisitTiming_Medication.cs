@@ -139,13 +139,23 @@ namespace MerkDataBaseBusinessLogicProject
 			}
 		}
 
-		public string MedicationName
+		public string MedicationName_English
 		{
 			get
 			{
 				if(Medication == null)
 					return String.Empty;
 				return Medication.Name_P;
+			}
+		}
+
+		public string MedicationName_Arabic
+		{
+			get
+			{
+				if (Medication == null)
+					return String.Empty;
+				return Medication.Name_S;
 			}
 		}
 
@@ -159,13 +169,23 @@ namespace MerkDataBaseBusinessLogicProject
 			}
 		}
 
-		public string DosageName
+		public string DosageName_English
 		{
 			get
 			{
 				if (Dosage == null)
 					return String.Empty;
 				return Dosage.Name_P;
+			}
+		}
+
+		public string DosageName_Arabic
+		{
+			get
+			{
+				if (Dosage == null)
+					return String.Empty;
+				return Dosage.Name_S;
 			}
 		}
 
@@ -179,13 +199,23 @@ namespace MerkDataBaseBusinessLogicProject
 			}
 		}
 
-		public string TimeDurationName
+		public string TimeDurationName_English
 		{
 			get
 			{
 				if (TimeDuration == null)
 					return String.Empty;
 				return TimeDuration.Name_P;
+			}
+		}
+
+		public string TimeDurationName_Arabic
+		{
+			get
+			{
+				if (TimeDuration == null)
+					return String.Empty;
+				return TimeDuration.Name_S;
 			}
 		}
 
