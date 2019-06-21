@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using ApplicationConfiguration;
 using CommonControlLibrary;
 using CommonUserControls.PEMRCommonViewers.PEMR_Interfaces;
+using DevExpress.XtraEditors;
 using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.HitInfo;
 using DevExpress.XtraLayout.Utils;
@@ -179,8 +180,18 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 		private void btnNewVitalSign_Click(object sender, EventArgs e)
 		{
-			ClearControls(false);
-
+			if (IsThereNotSavedReadings())
+			{
+				DialogResult result = XtraMessageBox.Show(
+					"There are not saved data. Do you want to clear all records and create new record ? ", "Notice",
+					MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+				switch (result)
+				{
+					case DialogResult.Yes:
+						ClearControls(false);
+						break;
+				}
+			}
 			lytNewVitalSigns.Visibility = LayoutVisibility.Always;
 			lytNewVitalSigns.Expanded = true;
 			lytVitalSignsGrid.Visibility = LayoutVisibility.Never;
@@ -194,7 +205,8 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			lytVitalSignsGrid.Visibility = LayoutVisibility.Always;
 			lytVitalSignsGrid.Expanded = true;
 			grdControl.DataSource = PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_VitalSign;
-			ClearControls(false);
+			if (!IsThereNotSavedReadings()) 
+				ClearControls(false);
 		}
 
 		private void btnAllActiveSign_Click(object sender, EventArgs e)
@@ -204,23 +216,39 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			lytVitalSignsGrid.Visibility = LayoutVisibility.Always;
 			lytVitalSignsGrid.Expanded = true;
 			grdControl.DataSource = PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_VitalSign;
-			ClearControls(false);
+			if (!IsThereNotSavedReadings())
+				ClearControls(false);
+		}
+
+		private void btnAdd_Click(object sender, EventArgs e)
+		{
+			DialogResult result = XtraMessageBox.Show("Do you to add this Readings ?", "Adding", MessageBoxButtons.YesNo,
+				MessageBoxIcon.Exclamation);
+
+			switch (result)
+			{
+				case DialogResult.Yes:
+					VisitTiming_VitalSign visitTiming_VitalSign =
+						PEMRBusinessLogic.CreateNew_VisitTiming_VitalSign(this,
+							ApplicationStaticConfiguration.PEMRSavingMode);
+					if (visitTiming_VitalSign != null)
+					{
+						if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_VitalSign == null)
+							PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_VitalSign =
+								new List<VisitTiming_VitalSign>();
+						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_VitalSign.Add(visitTiming_VitalSign);
+					}
+
+					btnActiveVitalSign_Click(null, null);
+					ClearControls(false);
+					break;
+			}
 		}
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
-			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_VitalSign == null)
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_VitalSign = new List<VisitTiming_VitalSign>();
-
-			VisitTiming_VitalSign vitalSign =
-				PEMRBusinessLogic.CreateNew_VisitTiming_VitalSign(this,
-					ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID);
-			if(vitalSign != null)
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_VitalSign.Add(vitalSign);
-
-			grdControl.DataSource = PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_VitalSign;
-			
-			btnActiveVitalSign_Click(null, null);
+			XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			ClearControls(false);
 		}
 
 		#endregion
@@ -252,6 +280,16 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 		}
 
 		#endregion
+
+		public bool IsThereNotSavedReadings()
+		{
+			return GeneralDescription != null || Weight_Amount != null ||
+			       HeightAmount != null || Weight_Description != null ||
+			       Temperature_Amount != null || Temperature_Description != null || BloodPressure_AmountHigh != null ||
+			       BloodPressure_AmountLow != null || Pulse_Amount != null || Pulse_Reg != null ||
+			       BloodPressure_Description != null || Respiration_Amount != null || Oxygen_Amount != null ||
+			       FIO2 != null || SPO2_Amount != null;
+		}
 
 		#region Implementation of IPEMR_VitalSign
 

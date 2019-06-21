@@ -30,6 +30,8 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_VisionRefraction_UC));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
 			this.btnGraph = new DevExpress.XtraEditors.SimpleButton();
 			this.spnAdd_OS = new DevExpress.XtraEditors.SpinEdit();
@@ -80,7 +82,7 @@
 			this.chkAutoRefAfterCyclo = new DevExpress.XtraEditors.CheckButton();
 			this.btnAllReadings = new DevExpress.XtraEditors.SimpleButton();
 			this.chkAutoRef = new DevExpress.XtraEditors.CheckButton();
-			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+			this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
 			this.btnNewReading = new DevExpress.XtraEditors.SimpleButton();
 			this.btnFullScreen = new DevExpress.XtraEditors.SimpleButton();
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -119,7 +121,6 @@
 			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytNewReadings = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytViewAllReadings = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -236,9 +237,8 @@
 			this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytGraph = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
@@ -288,7 +288,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytNewReadings)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytViewAllReadings)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
@@ -406,13 +405,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.lytGraph)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
 			this.layoutControl1.Controls.Add(this.btnSearchDiagnosis);
-			this.layoutControl1.Controls.Add(this.simpleButton2);
+			this.layoutControl1.Controls.Add(this.btnSave);
 			this.layoutControl1.Controls.Add(this.btnNewVitalSign);
 			this.layoutControl1.Controls.Add(this.btnGraph);
 			this.layoutControl1.Controls.Add(this.spnAdd_OS);
@@ -457,7 +457,7 @@
 			this.layoutControl1.Controls.Add(this.chkAutoRefAfterCyclo);
 			this.layoutControl1.Controls.Add(this.btnAllReadings);
 			this.layoutControl1.Controls.Add(this.chkAutoRef);
-			this.layoutControl1.Controls.Add(this.btnSave);
+			this.layoutControl1.Controls.Add(this.btnAdd);
 			this.layoutControl1.Controls.Add(this.btnNewReading);
 			this.layoutControl1.Controls.Add(this.btnFullScreen);
 			this.layoutControl1.Controls.Add(this.labelControl3);
@@ -480,6 +480,35 @@
 			this.layoutControl1.Size = new System.Drawing.Size(1170, 600);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
+			// 
+			// btnSearchDiagnosis
+			// 
+			this.btnSearchDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
+			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
+			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSearchDiagnosis.Location = new System.Drawing.Point(1022, 6);
+			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
+			this.btnSearchDiagnosis.Size = new System.Drawing.Size(35, 35);
+			this.btnSearchDiagnosis.StyleController = this.layoutControl1;
+			this.btnSearchDiagnosis.TabIndex = 42;
+			this.btnSearchDiagnosis.Text = "Add New Diagnosis";
+			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSave.Location = new System.Drawing.Point(1060, 3);
+			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(110, 40);
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.TabIndex = 12;
+			this.btnSave.Text = "simpleButton1";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// btnNewVitalSign
 			// 
@@ -1656,21 +1685,21 @@
 			this.chkAutoRef.Text = "AutoRef";
 			this.chkAutoRef.CheckedChanged += new System.EventHandler(this.chkAutoRef_CheckedChanged);
 			// 
-			// btnSave
+			// btnAdd
 			// 
-			this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnSave.Appearance.Options.UseFont = true;
-			this.btnSave.Image = global::CommonUserControls.Properties.Resources.AddToList_16_09;
-			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSave.Location = new System.Drawing.Point(1081, 135);
-			this.btnSave.MaximumSize = new System.Drawing.Size(80, 30);
-			this.btnSave.MinimumSize = new System.Drawing.Size(80, 30);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(80, 30);
-			this.btnSave.StyleController = this.layoutControl1;
-			this.btnSave.TabIndex = 39;
-			this.btnSave.Text = "All Active Signs";
-			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+			this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnAdd.Appearance.Options.UseFont = true;
+			this.btnAdd.Image = global::CommonUserControls.Properties.Resources.AddToList_16_09;
+			this.btnAdd.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnAdd.Location = new System.Drawing.Point(1081, 135);
+			this.btnAdd.MaximumSize = new System.Drawing.Size(80, 30);
+			this.btnAdd.MinimumSize = new System.Drawing.Size(80, 30);
+			this.btnAdd.Name = "btnAdd";
+			this.btnAdd.Size = new System.Drawing.Size(80, 30);
+			this.btnAdd.StyleController = this.layoutControl1;
+			this.btnAdd.TabIndex = 39;
+			this.btnAdd.Text = "All Active Signs";
+			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 			// 
 			// btnNewReading
 			// 
@@ -2358,18 +2387,6 @@
 			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem3.TextVisible = false;
 			// 
-			// layoutControlItem5
-			// 
-			this.layoutControlItem5.Control = this.btnFullScreen;
-			this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
-			this.layoutControlItem5.Location = new System.Drawing.Point(937, 3);
-			this.layoutControlItem5.Name = "layoutControlItem5";
-			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem5.Size = new System.Drawing.Size(41, 41);
-			this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem5.TextVisible = false;
-			// 
 			// lytNewReadings
 			// 
 			this.lytNewReadings.Control = this.btnNewReading;
@@ -2611,7 +2628,7 @@
 			// 
 			// lyt_Add
 			// 
-			this.lyt_Add.Control = this.btnSave;
+			this.lyt_Add.Control = this.btnAdd;
 			this.lyt_Add.CustomizationFormText = "lyt_Add";
 			this.lyt_Add.Location = new System.Drawing.Point(1077, 22);
 			this.lyt_Add.Name = "lyt_Add";
@@ -3875,22 +3892,9 @@
 			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem6.TextVisible = false;
 			// 
-			// simpleButton2
-			// 
-			this.simpleButton2.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
-			this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.simpleButton2.Location = new System.Drawing.Point(1060, 3);
-			this.simpleButton2.MaximumSize = new System.Drawing.Size(110, 40);
-			this.simpleButton2.MinimumSize = new System.Drawing.Size(110, 40);
-			this.simpleButton2.Name = "simpleButton2";
-			this.simpleButton2.Size = new System.Drawing.Size(110, 40);
-			this.simpleButton2.StyleController = this.layoutControl1;
-			this.simpleButton2.TabIndex = 12;
-			this.simpleButton2.Text = "simpleButton1";
-			// 
 			// layoutControlItem9
 			// 
-			this.layoutControlItem9.Control = this.simpleButton2;
+			this.layoutControlItem9.Control = this.btnSave;
 			this.layoutControlItem9.Location = new System.Drawing.Point(1060, 3);
 			this.layoutControlItem9.Name = "layoutControlItem9";
 			this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -3898,20 +3902,17 @@
 			this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem9.TextVisible = false;
 			// 
-			// btnSearchDiagnosis
+			// layoutControlItem5
 			// 
-			this.btnSearchDiagnosis.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
-			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
-			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSearchDiagnosis.Location = new System.Drawing.Point(1022, 6);
-			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
-			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
-			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
-			this.btnSearchDiagnosis.Size = new System.Drawing.Size(35, 35);
-			this.btnSearchDiagnosis.StyleController = this.layoutControl1;
-			this.btnSearchDiagnosis.TabIndex = 42;
-			this.btnSearchDiagnosis.Text = "Add New Diagnosis";
+			this.layoutControlItem5.Control = this.btnFullScreen;
+			this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
+			this.layoutControlItem5.Location = new System.Drawing.Point(937, 3);
+			this.layoutControlItem5.Name = "layoutControlItem5";
+			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem5.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem5.TextVisible = false;
 			// 
 			// layoutControlItem37
 			// 
@@ -3982,7 +3983,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytNewReadings)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytViewAllReadings)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
@@ -4100,6 +4100,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.lytGraph)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
 			this.ResumeLayout(false);
 
@@ -4115,7 +4116,7 @@
 		private DevExpress.XtraEditors.LabelControl labelControl1;
 		private DevExpress.XtraEditors.SimpleButton btnFullScreen;
 		private DevExpress.XtraEditors.SimpleButton btnNewReading;
-		private DevExpress.XtraEditors.SimpleButton btnSave;
+		private DevExpress.XtraEditors.SimpleButton btnAdd;
 		private DevExpress.XtraEditors.CheckButton chkAutoRef;
 		private DevExpress.XtraEditors.SimpleButton btnAllReadings;
 		private DevExpress.XtraEditors.CheckButton chkSubjectivePrescription;
@@ -4314,7 +4315,7 @@
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator28;
 		private DevExpress.XtraEditors.SimpleButton btnNewVitalSign;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-		private DevExpress.XtraEditors.SimpleButton simpleButton2;
+		private DevExpress.XtraEditors.SimpleButton btnSave;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
 		private DevExpress.XtraEditors.SimpleButton btnSearchDiagnosis;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem37;

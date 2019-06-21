@@ -526,6 +526,12 @@
     <Compile Include="Reports\PEMR_PatientMedicalRecordReportElement_rpt.Designer.cs">
       <DependentUpon>PEMR_PatientMedicalRecordReportElement_rpt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PEMR_PatientMedicalRecordReportElement_VisionRefraction_rpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PEMR_PatientMedicalRecordReportElement_VisionRefraction_rpt.Designer.cs">
+      <DependentUpon>PEMR_PatientMedicalRecordReportElement_VisionRefraction_rpt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PEMR_PatientMedicalRecordReportSub_rpt.cs">
       <SubType>Component</SubType>
     </Compile>

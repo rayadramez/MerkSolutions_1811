@@ -107,6 +107,8 @@
 			this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtReccommednations.Properties)).BeginInit();
@@ -164,10 +166,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.simpleButton2);
 			this.layoutControl1.Controls.Add(this.btnAddedDiagnosisFullScreen);
 			this.layoutControl1.Controls.Add(this.btnSearchDiagnosis);
 			this.layoutControl1.Controls.Add(this.btnNewVitalSign);
@@ -214,7 +218,7 @@
 			this.btnAddedDiagnosisFullScreen.Appearance.Options.UseFont = true;
 			this.btnAddedDiagnosisFullScreen.Image = global::CommonUserControls.Properties.Resources.FullScreen_1_161;
 			this.btnAddedDiagnosisFullScreen.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnAddedDiagnosisFullScreen.Location = new System.Drawing.Point(949, 6);
+			this.btnAddedDiagnosisFullScreen.Location = new System.Drawing.Point(839, 6);
 			this.btnAddedDiagnosisFullScreen.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnAddedDiagnosisFullScreen.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnAddedDiagnosisFullScreen.Name = "btnAddedDiagnosisFullScreen";
@@ -229,7 +233,7 @@
 			this.btnSearchDiagnosis.Appearance.Options.UseFont = true;
 			this.btnSearchDiagnosis.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchDiagnosis.Image")));
 			this.btnSearchDiagnosis.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSearchDiagnosis.Location = new System.Drawing.Point(990, 6);
+			this.btnSearchDiagnosis.Location = new System.Drawing.Point(880, 6);
 			this.btnSearchDiagnosis.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnSearchDiagnosis.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnSearchDiagnosis.Name = "btnSearchDiagnosis";
@@ -244,7 +248,7 @@
 			this.btnNewVitalSign.Appearance.Options.UseFont = true;
 			this.btnNewVitalSign.Image = global::CommonUserControls.Properties.Resources.Settings_4_24x24;
 			this.btnNewVitalSign.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnNewVitalSign.Location = new System.Drawing.Point(1031, 6);
+			this.btnNewVitalSign.Location = new System.Drawing.Point(921, 6);
 			this.btnNewVitalSign.MaximumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.MinimumSize = new System.Drawing.Size(35, 35);
 			this.btnNewVitalSign.Name = "btnNewVitalSign";
@@ -257,7 +261,7 @@
 			// 
 			this.btnPrint.Image = global::CommonUserControls.Properties.Resources.PrintIcon_16_02;
 			this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnPrint.Location = new System.Drawing.Point(836, 3);
+			this.btnPrint.Location = new System.Drawing.Point(726, 3);
 			this.btnPrint.MaximumSize = new System.Drawing.Size(110, 40);
 			this.btnPrint.MinimumSize = new System.Drawing.Size(110, 40);
 			this.btnPrint.Name = "btnPrint";
@@ -468,7 +472,7 @@
 			this.labelControl2.MinimumSize = new System.Drawing.Size(0, 40);
 			this.labelControl2.Name = "labelControl2";
 			this.labelControl2.Padding = new System.Windows.Forms.Padding(10);
-			this.labelControl2.Size = new System.Drawing.Size(796, 40);
+			this.labelControl2.Size = new System.Drawing.Size(686, 40);
 			this.labelControl2.StyleController = this.layoutControl1;
 			this.labelControl2.TabIndex = 8;
 			this.labelControl2.Text = ".... Symptoms and Compaints  ....";
@@ -689,7 +693,8 @@
             this.layoutControlItem26,
             this.layoutControlItem27,
             this.layoutControlItem28,
-            this.layoutControlItem29});
+            this.layoutControlItem29,
+            this.layoutControlItem30});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -704,7 +709,7 @@
 			this.layoutControlItem1.MinSize = new System.Drawing.Size(14, 40);
 			this.layoutControlItem1.Name = "layoutControlItem1";
 			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem1.Size = new System.Drawing.Size(796, 41);
+			this.layoutControlItem1.Size = new System.Drawing.Size(686, 41);
 			this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem1.TextVisible = false;
@@ -1225,7 +1230,7 @@
 			// layoutControlItem26
 			// 
 			this.layoutControlItem26.Control = this.btnPrint;
-			this.layoutControlItem26.Location = new System.Drawing.Point(836, 3);
+			this.layoutControlItem26.Location = new System.Drawing.Point(726, 3);
 			this.layoutControlItem26.Name = "layoutControlItem26";
 			this.layoutControlItem26.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem26.Size = new System.Drawing.Size(110, 41);
@@ -1235,7 +1240,7 @@
 			// layoutControlItem27
 			// 
 			this.layoutControlItem27.Control = this.btnNewVitalSign;
-			this.layoutControlItem27.Location = new System.Drawing.Point(1028, 3);
+			this.layoutControlItem27.Location = new System.Drawing.Point(918, 3);
 			this.layoutControlItem27.Name = "layoutControlItem27";
 			this.layoutControlItem27.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem27.Size = new System.Drawing.Size(41, 41);
@@ -1246,7 +1251,7 @@
 			// layoutControlItem28
 			// 
 			this.layoutControlItem28.Control = this.btnSearchDiagnosis;
-			this.layoutControlItem28.Location = new System.Drawing.Point(987, 3);
+			this.layoutControlItem28.Location = new System.Drawing.Point(877, 3);
 			this.layoutControlItem28.Name = "layoutControlItem28";
 			this.layoutControlItem28.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem28.Size = new System.Drawing.Size(41, 41);
@@ -1257,13 +1262,36 @@
 			// layoutControlItem29
 			// 
 			this.layoutControlItem29.Control = this.btnAddedDiagnosisFullScreen;
-			this.layoutControlItem29.Location = new System.Drawing.Point(946, 3);
+			this.layoutControlItem29.Location = new System.Drawing.Point(836, 3);
 			this.layoutControlItem29.Name = "layoutControlItem29";
 			this.layoutControlItem29.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem29.Size = new System.Drawing.Size(41, 41);
 			this.layoutControlItem29.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem29.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem29.TextVisible = false;
+			// 
+			// simpleButton2
+			// 
+			this.simpleButton2.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.simpleButton2.Location = new System.Drawing.Point(959, 3);
+			this.simpleButton2.MaximumSize = new System.Drawing.Size(110, 40);
+			this.simpleButton2.MinimumSize = new System.Drawing.Size(110, 40);
+			this.simpleButton2.Name = "simpleButton2";
+			this.simpleButton2.Size = new System.Drawing.Size(110, 40);
+			this.simpleButton2.StyleController = this.layoutControl1;
+			this.simpleButton2.TabIndex = 19;
+			this.simpleButton2.Text = "simpleButton1";
+			// 
+			// layoutControlItem30
+			// 
+			this.layoutControlItem30.Control = this.simpleButton2;
+			this.layoutControlItem30.Location = new System.Drawing.Point(959, 3);
+			this.layoutControlItem30.Name = "layoutControlItem30";
+			this.layoutControlItem30.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem30.Size = new System.Drawing.Size(110, 41);
+			this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem30.TextVisible = false;
 			// 
 			// PEMR_Symptoms_UC
 			// 
@@ -1331,6 +1359,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1415,5 +1444,7 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem28;
 		private DevExpress.XtraEditors.SimpleButton btnAddedDiagnosisFullScreen;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem29;
+		private DevExpress.XtraEditors.SimpleButton simpleButton2;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
 	}
 }

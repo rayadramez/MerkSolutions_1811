@@ -1895,55 +1895,89 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			return investigationResult;
 		}
 
-		public static VisitTiming_VitalSign CreateNew_VisitTiming_VitalSign(IPEMR_VitalSign vitalSignObject, int userID)
+		public static VisitTiming_VitalSign CreateNew_VisitTiming_VitalSign(
+			IPEMR_VitalSign vitalSingViewer, DB_PEMRSavingMode savingMode)
 		{
-			if (vitalSignObject.TakenDate == null || vitalSignObject.TakenTime == null)
+			if (vitalSingViewer == null)
+				return null;
+			VisitTiming_VitalSign vitalSign = null;
+			switch (savingMode)
+			{
+				case DB_PEMRSavingMode.PostponeSaving:
+					return CreateNew_VisitTiming_VitalSign(vitalSingViewer);
+				case DB_PEMRSavingMode.SaveImmediately:
+					vitalSign =
+						CreateNew_VisitTiming_VitalSign(ActivePEMRObject.Active_VisitTiming, vitalSingViewer);
+					if (vitalSign == null ||
+						!Save_VisitTiming_VitalSign(vitalSign))
+						return null;
+					return vitalSign;
+			}
+			return null;
+		}
+
+		public static VisitTiming_VitalSign CreateNew_VisitTiming_VitalSign(
+			VisitTiming visitTiming, IPEMR_VitalSign vitalSingViewer)
+		{
+			if (visitTiming == null || vitalSingViewer == null)
+				return null;
+			VisitTiming_VitalSign vitalSign =
+				CreateNew_VisitTiming_VitalSign(vitalSingViewer);
+			if (vitalSign == null)
+				return null;
+			vitalSign.VisitTimingID = visitTiming.ID;
+			return vitalSign;
+		}
+
+		public static VisitTiming_VitalSign CreateNew_VisitTiming_VitalSign(IPEMR_VitalSign vitalSingViewer)
+		{
+			if (vitalSingViewer.TakenDate == null || vitalSingViewer.TakenTime == null)
 				return null;
 			VisitTiming_VitalSign vitalSign = DBCommon.CreateNewDBEntity<VisitTiming_VitalSign>();
-			vitalSign.TakenDate = Convert.ToDateTime(vitalSignObject.TakenDate).Date;
-			vitalSign.TakenTime = Convert.ToDateTime(vitalSignObject.TakenTime);
-			if (vitalSignObject.GeneralDescription != null)
-				vitalSign.GeneralDescription = vitalSignObject.GeneralDescription.ToString();
-			if (vitalSignObject.Weight_Unit != null)
-				vitalSign.WeightUnit_P_ID = Convert.ToInt32(vitalSignObject.Weight_Unit);
-			if (vitalSignObject.Weight_Amount != null)
-				vitalSign.WeightAmount = Convert.ToInt32(vitalSignObject.Weight_Amount);
-			if (vitalSignObject.Height_Unit != null)
-				vitalSign.HeightUnit_P_ID = Convert.ToInt32(vitalSignObject.Height_Unit);
-			if (vitalSignObject.HeightAmount != null)
-				vitalSign.HeightAmount = Convert.ToInt32(vitalSignObject.HeightAmount);
-			if (vitalSignObject.Weight_Description != null)
-				vitalSign.WeightDescription = vitalSignObject.Weight_Description.ToString();
-			if (vitalSignObject.Temperature_Unit != null)
-				vitalSign.TemperatureUnit_P_ID = Convert.ToInt32(vitalSignObject.Temperature_Unit);
-			if (vitalSignObject.Temperature_Amount != null)
-				vitalSign.TemperatureAmount = Convert.ToInt32(vitalSignObject.Temperature_Amount);
-			if (vitalSignObject.Temperature_Description != null)
-				vitalSign.TemperatureDescription = vitalSignObject.Temperature_Description.ToString();
-			if (vitalSignObject.BloodPressure_AmountHigh != null)
-				vitalSign.BloodPressureAmountHigh = Convert.ToInt32(vitalSignObject.BloodPressure_AmountHigh);
-			if (vitalSignObject.BloodPressure_AmountLow != null)
-				vitalSign.BloodPressureAmountLow = Convert.ToInt32(vitalSignObject.BloodPressure_AmountLow);
-			if (vitalSignObject.Pulse_Amount != null)
-				vitalSign.PulseAmount = Convert.ToInt32(vitalSignObject.Pulse_Amount);
-			if (vitalSignObject.Pulse_Reg != null)
-				vitalSign.PulseReg = Convert.ToInt32(vitalSignObject.Pulse_Reg);
-			if (vitalSignObject.BloodPressure_Description != null)
-				vitalSign.BloodPressureDescription = vitalSignObject.BloodPressure_Description.ToString();
-			if (vitalSignObject.Respiration_Amount != null)
-				vitalSign.RespirationAmount = Convert.ToInt32(vitalSignObject.Respiration_Amount);
-			if (vitalSignObject.Oxygen_Amount != null)
-				vitalSign.OxygenAmount = Convert.ToInt32(vitalSignObject.Oxygen_Amount);
-			if (vitalSignObject.FIO2 != null)
-				vitalSign.FIO2 = Convert.ToInt32(vitalSignObject.FIO2);
-			if (vitalSignObject.SPO2_Amount != null)
-				vitalSign.SPO2Amount = Convert.ToInt32(vitalSignObject.SPO2_Amount);
-			if (vitalSignObject.Respiration_Description != null)
-				vitalSign.RespirationDescription = vitalSignObject.Respiration_Description.ToString();
-			vitalSign.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
-			vitalSign.IsOnDuty = true;
-			vitalSign.InsertedBy = userID;
+			vitalSign.TakenDate = Convert.ToDateTime(vitalSingViewer.TakenDate).Date;
+			vitalSign.TakenTime = Convert.ToDateTime(vitalSingViewer.TakenTime);
+			if (vitalSingViewer.GeneralDescription != null)
+				vitalSign.GeneralDescription = vitalSingViewer.GeneralDescription.ToString();
+			if (vitalSingViewer.Weight_Unit != null)
+				vitalSign.WeightUnit_P_ID = Convert.ToInt32(vitalSingViewer.Weight_Unit);
+			if (vitalSingViewer.Weight_Amount != null)
+				vitalSign.WeightAmount = Convert.ToInt32(vitalSingViewer.Weight_Amount);
+			if (vitalSingViewer.Height_Unit != null)
+				vitalSign.HeightUnit_P_ID = Convert.ToInt32(vitalSingViewer.Height_Unit);
+			if (vitalSingViewer.HeightAmount != null)
+				vitalSign.HeightAmount = Convert.ToInt32(vitalSingViewer.HeightAmount);
+			if (vitalSingViewer.Weight_Description != null)
+				vitalSign.WeightDescription = vitalSingViewer.Weight_Description.ToString();
+			if (vitalSingViewer.Temperature_Unit != null)
+				vitalSign.TemperatureUnit_P_ID = Convert.ToInt32(vitalSingViewer.Temperature_Unit);
+			if (vitalSingViewer.Temperature_Amount != null)
+				vitalSign.TemperatureAmount = Convert.ToInt32(vitalSingViewer.Temperature_Amount);
+			if (vitalSingViewer.Temperature_Description != null)
+				vitalSign.TemperatureDescription = vitalSingViewer.Temperature_Description.ToString();
+			if (vitalSingViewer.BloodPressure_AmountHigh != null)
+				vitalSign.BloodPressureAmountHigh = Convert.ToInt32(vitalSingViewer.BloodPressure_AmountHigh);
+			if (vitalSingViewer.BloodPressure_AmountLow != null)
+				vitalSign.BloodPressureAmountLow = Convert.ToInt32(vitalSingViewer.BloodPressure_AmountLow);
+			if (vitalSingViewer.Pulse_Amount != null)
+				vitalSign.PulseAmount = Convert.ToInt32(vitalSingViewer.Pulse_Amount);
+			if (vitalSingViewer.Pulse_Reg != null)
+				vitalSign.PulseReg = Convert.ToInt32(vitalSingViewer.Pulse_Reg);
+			if (vitalSingViewer.BloodPressure_Description != null)
+				vitalSign.BloodPressureDescription = vitalSingViewer.BloodPressure_Description.ToString();
+			if (vitalSingViewer.Respiration_Amount != null)
+				vitalSign.RespirationAmount = Convert.ToInt32(vitalSingViewer.Respiration_Amount);
+			if (vitalSingViewer.Oxygen_Amount != null)
+				vitalSign.OxygenAmount = Convert.ToInt32(vitalSingViewer.Oxygen_Amount);
+			if (vitalSingViewer.FIO2 != null)
+				vitalSign.FIO2 = Convert.ToInt32(vitalSingViewer.FIO2);
+			if (vitalSingViewer.SPO2_Amount != null)
+				vitalSign.SPO2Amount = Convert.ToInt32(vitalSingViewer.SPO2_Amount);
+			if (vitalSingViewer.Respiration_Description != null)
+				vitalSign.RespirationDescription = vitalSingViewer.Respiration_Description.ToString();
 
+			vitalSign.IsOnDuty = true;
+			vitalSign.InsertedBy = ActiveLoggedInUser.ID;
+			vitalSign.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			return vitalSign;
 		}
 
@@ -3764,6 +3798,234 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 			#endregion
 
+			#region VisitTiming_VitalSign
+
+			if (pemrObject.List_VisitTiming_VitalSign != null && pemrObject.List_VisitTiming_VitalSign.Count > 0)
+			{
+				PEMR_Translated vitalSignParent = CreateNewPEMR_Translated(
+					pemrObject.List_VisitTiming_VitalSign[0].OrderIndex,
+					pemrObject.List_VisitTiming_VitalSign[0].ElementName,
+					"",
+					pemrObject.List_VisitTiming_VitalSign[0],
+					pemrObject.List_VisitTiming_VitalSign[0].PEMR_Element);
+
+				foreach (VisitTiming_VitalSign visitTiming in pemrObject.List_VisitTiming_VitalSign)
+				{
+					PEMR_Translated vitalSign = null;
+
+					#region Taken Date / Time
+
+					vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Taken Date / Time : ",
+						Convert.ToDateTime(visitTiming.TakenTime).ToString(), visitTiming, visitTiming.PEMR_Element);
+					if (vitalSignParent.List_PEMR_Element_Translated == null)
+						vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+					vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
+
+					#endregion
+
+					#region GeneralDescription
+
+					if (visitTiming.GeneralDescription != null &&
+						!string.IsNullOrEmpty(visitTiming.GeneralDescription) &&
+						!string.IsNullOrWhiteSpace(visitTiming.GeneralDescription))
+					{
+						vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "General Description ",
+							visitTiming.GeneralDescription, visitTiming, visitTiming.PEMR_Element);
+						if (vitalSignParent.List_PEMR_Element_Translated == null)
+							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
+					}
+
+					#endregion
+
+					#region IsHeightRegistered
+
+					if (visitTiming.IsHeightRegistered)
+					{
+						vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Height ",
+							visitTiming.HeightUnitUnitName + " [" + visitTiming.HeightAmount + "] ", visitTiming,
+							visitTiming.PEMR_Element);
+						if (vitalSignParent.List_PEMR_Element_Translated == null)
+							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
+					}
+
+					#endregion
+
+					#region IsWeightRegistered
+
+					if (visitTiming.IsWeightRegistered)
+					{
+						if (visitTiming.WeightDescription != null)
+							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Weight ",
+								visitTiming.WeightUnitName + " [" + visitTiming.WeightAmount + "] Description : " +
+								visitTiming.WeightDescription, visitTiming, visitTiming.PEMR_Element);
+						else
+							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Weight ",
+								visitTiming.WeightUnitName + " [" + visitTiming.WeightAmount + "] ", visitTiming,
+								visitTiming.PEMR_Element);
+						if (vitalSignParent.List_PEMR_Element_Translated == null)
+							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
+					}
+
+					#endregion
+
+					#region IsTemperatureRegistered
+
+					if (visitTiming.IsTemperatureRegistered)
+					{
+						if (visitTiming.WeightDescription != null)
+							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Temperature ",
+								visitTiming.TemperatureUnitName + " [" + visitTiming.TemperatureAmount +
+								"] Description : " +
+								visitTiming.TemperatureDescription, visitTiming, visitTiming.PEMR_Element);
+						else
+							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Temperature ",
+								visitTiming.TemperatureUnitName + " [" + visitTiming.TemperatureAmount + "] ",
+								visitTiming,
+								visitTiming.PEMR_Element);
+						if (vitalSignParent.List_PEMR_Element_Translated == null)
+							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
+					}
+
+					#endregion
+
+					#region IsBloodPressureRegistered
+
+					if (visitTiming.IsBloodPressureRegistered)
+					{
+						if (visitTiming.BloodPressureDescription != null)
+							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Blood Pressure : ",
+								visitTiming.BloodPressureAmountHigh + " / " + visitTiming.BloodPressureAmountLow +
+								" Description : " + visitTiming.BloodPressureDescription, visitTiming,
+								visitTiming.PEMR_Element);
+						else
+							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Blood Pressure : ",
+								visitTiming.BloodPressureAmountHigh + " / " + visitTiming.BloodPressureAmountLow,
+								visitTiming, visitTiming.PEMR_Element);
+						if (vitalSignParent.List_PEMR_Element_Translated == null)
+							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
+					}
+
+					#endregion
+
+					#region PulseAmount
+
+					if (visitTiming.PulseAmount != null)
+					{
+						vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Pulse",
+							visitTiming.PulseAmount.ToString(), visitTiming, visitTiming.PEMR_Element);
+						if (vitalSignParent.List_PEMR_Element_Translated == null)
+							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
+					}
+
+					#endregion
+
+					#region RespirationAmount
+
+					if (visitTiming.PulseAmount != null)
+					{
+						if (visitTiming.RespirationDescription != null)
+							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Respiration ",
+								visitTiming.RespirationAmount + " Description : " +
+								visitTiming.RespirationDescription, visitTiming, visitTiming.PEMR_Element);
+						else
+							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Respiration ",
+								visitTiming.RespirationAmount.ToString(), visitTiming, visitTiming.PEMR_Element);
+						if (vitalSignParent.List_PEMR_Element_Translated == null)
+							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
+					}
+
+					#endregion
+
+					#region OxygenAmount
+
+					if (visitTiming.OxygenAmount != null)
+					{
+						vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Oxygen ",
+							visitTiming.OxygenAmount.ToString(), visitTiming, visitTiming.PEMR_Element);
+						if (vitalSignParent.List_PEMR_Element_Translated == null)
+							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
+					}
+
+					#endregion
+
+					#region FIO2
+
+					if (visitTiming.FIO2 != null)
+					{
+						vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "FIO2 ",
+							visitTiming.FIO2.ToString(), visitTiming, visitTiming.PEMR_Element);
+						if (vitalSignParent.List_PEMR_Element_Translated == null)
+							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
+					}
+
+					#endregion
+
+					#region SPO2Amount
+
+					if (visitTiming.SPO2Amount != null)
+					{
+						vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "SPO2 ",
+							visitTiming.SPO2Amount.ToString(), visitTiming, visitTiming.PEMR_Element);
+						if (vitalSignParent.List_PEMR_Element_Translated == null)
+							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
+					}
+
+					#endregion
+				}
+
+				if (parent.List_PEMR_Element_Translated == null)
+					parent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+				parent.List_PEMR_Element_Translated.Add(vitalSignParent);
+			}
+
+			#endregion
+
+			#region Symptoms
+
+			#endregion
+
+			#region VisitTiming_VisionRefractionReading
+
+			if (pemrObject.List_VisitTiming_MedicalHistory != null &&
+			    pemrObject.List_VisitTiming_MedicalHistory.Count > 0)
+			{
+				PEMR_Translated visionRefractionParent = CreateNewPEMR_Translated(
+					pemrObject.List_VisitTiming_MedicalHistory[0].OrderIndex,
+					pemrObject.List_VisitTiming_MedicalHistory[0].ElementName,
+					"",
+					pemrObject.List_VisitTiming_MedicalHistory[0],
+					pemrObject.List_VisitTiming_MedicalHistory[0].PEMR_Element);
+
+				foreach (VisitTiming_VisionRefractionReading visitTiming in pemrObject.List_VisitTiming_VisionRefractionReading)
+				{
+					PEMR_Translated medicalHistory = null;
+					if (visitTiming.VisionRefractionReadingType != null)
+					{
+						medicalHistory = CreateNewPEMR_Translated(visitTiming.OrderIndex, "VR Type",
+							visitTiming.VisionRefractionReadingTypeName, visitTiming, visitTiming.PEMR_Element);
+						if (visionRefractionParent.List_PEMR_Element_Translated == null)
+							visionRefractionParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						visionRefractionParent.List_PEMR_Element_Translated.Add(medicalHistory);
+					}
+				}
+
+				if (parent.List_PEMR_Element_Translated == null)
+					parent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+				parent.List_PEMR_Element_Translated.Add(visionRefractionParent);
+			}
+
+			#endregion
+
 			#region VisitTiming_TreatmentPlan
 
 			if (pemrObject.List_VisitTiming_TreatmentPlan != null && pemrObject.List_VisitTiming_TreatmentPlan.Count > 0)
@@ -4202,198 +4464,6 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 				if (parent.List_PEMR_Element_Translated == null)
 					parent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
 				parent.List_PEMR_Element_Translated.Add(mainDiagnosisParent);
-			}
-
-			#endregion
-
-			#region VisitTiming_VitalSign
-
-			if (pemrObject.List_VisitTiming_VitalSign != null && pemrObject.List_VisitTiming_VitalSign.Count > 0)
-			{
-				PEMR_Translated vitalSignParent = CreateNewPEMR_Translated(
-					pemrObject.List_VisitTiming_VitalSign[0].OrderIndex,
-					pemrObject.List_VisitTiming_VitalSign[0].ElementName,
-					"",
-					pemrObject.List_VisitTiming_VitalSign[0],
-					pemrObject.List_VisitTiming_VitalSign[0].PEMR_Element);
-
-				foreach (VisitTiming_VitalSign visitTiming in pemrObject.List_VisitTiming_VitalSign)
-				{
-					PEMR_Translated vitalSign = null;
-
-					#region Taken Date / Time
-
-					vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Taken Date / Time : ",
-						Convert.ToDateTime(visitTiming.TakenTime).ToString(), visitTiming, visitTiming.PEMR_Element);
-					if (vitalSignParent.List_PEMR_Element_Translated == null)
-						vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-					vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
-
-					#endregion
-
-					#region GeneralDescription
-
-					if (visitTiming.GeneralDescription != null &&
-						!string.IsNullOrEmpty(visitTiming.GeneralDescription) &&
-						!string.IsNullOrWhiteSpace(visitTiming.GeneralDescription))
-					{
-						vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "General Description ",
-							visitTiming.GeneralDescription, visitTiming, visitTiming.PEMR_Element);
-						if (vitalSignParent.List_PEMR_Element_Translated == null)
-							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
-					}
-
-					#endregion
-
-					#region IsHeightRegistered
-
-					if (visitTiming.IsHeightRegistered)
-					{
-						vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Height ",
-							visitTiming.HeightUnitUnitName + " [" + visitTiming.HeightAmount + "] ", visitTiming,
-							visitTiming.PEMR_Element);
-						if (vitalSignParent.List_PEMR_Element_Translated == null)
-							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
-					}
-
-					#endregion
-
-					#region IsWeightRegistered
-
-					if (visitTiming.IsWeightRegistered)
-					{
-						if (visitTiming.WeightDescription != null)
-							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Weight ",
-								visitTiming.WeightUnitName + " [" + visitTiming.WeightAmount + "] Description : " +
-								visitTiming.WeightDescription, visitTiming, visitTiming.PEMR_Element);
-						else
-							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Weight ",
-								visitTiming.WeightUnitName + " [" + visitTiming.WeightAmount + "] ", visitTiming,
-								visitTiming.PEMR_Element);
-						if (vitalSignParent.List_PEMR_Element_Translated == null)
-							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
-					}
-
-					#endregion
-
-					#region IsTemperatureRegistered
-
-					if (visitTiming.IsTemperatureRegistered)
-					{
-						if (visitTiming.WeightDescription != null)
-							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Temperature ",
-								visitTiming.TemperatureUnitName + " [" + visitTiming.TemperatureAmount +
-								"] Description : " +
-								visitTiming.TemperatureDescription, visitTiming, visitTiming.PEMR_Element);
-						else
-							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Temperature ",
-								visitTiming.TemperatureUnitName + " [" + visitTiming.TemperatureAmount + "] ",
-								visitTiming,
-								visitTiming.PEMR_Element);
-						if (vitalSignParent.List_PEMR_Element_Translated == null)
-							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
-					}
-
-					#endregion
-
-					#region IsBloodPressureRegistered
-
-					if (visitTiming.IsBloodPressureRegistered)
-					{
-						if (visitTiming.BloodPressureDescription != null)
-							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Blood Pressure : ",
-								visitTiming.BloodPressureAmountHigh + " / " + visitTiming.BloodPressureAmountLow +
-								" Description : " + visitTiming.BloodPressureDescription, visitTiming,
-								visitTiming.PEMR_Element);
-						else
-							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Blood Pressure : ",
-								visitTiming.BloodPressureAmountHigh + " / " + visitTiming.BloodPressureAmountLow,
-								visitTiming, visitTiming.PEMR_Element);
-						if (vitalSignParent.List_PEMR_Element_Translated == null)
-							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
-					}
-
-					#endregion
-
-					#region PulseAmount
-
-					if (visitTiming.PulseAmount != null)
-					{
-						vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Pulse",
-							visitTiming.PulseAmount.ToString(), visitTiming, visitTiming.PEMR_Element);
-						if (vitalSignParent.List_PEMR_Element_Translated == null)
-							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
-					}
-
-					#endregion
-
-					#region RespirationAmount
-
-					if (visitTiming.PulseAmount != null)
-					{
-						if (visitTiming.RespirationDescription != null)
-							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Respiration ",
-								visitTiming.RespirationAmount + " Description : " +
-								visitTiming.RespirationDescription, visitTiming, visitTiming.PEMR_Element);
-						else
-							vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Respiration ",
-								visitTiming.RespirationAmount.ToString(), visitTiming, visitTiming.PEMR_Element);
-						if (vitalSignParent.List_PEMR_Element_Translated == null)
-							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
-					}
-
-					#endregion
-
-					#region OxygenAmount
-
-					if (visitTiming.OxygenAmount != null)
-					{
-						vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Oxygen ",
-							visitTiming.OxygenAmount.ToString(), visitTiming, visitTiming.PEMR_Element);
-						if (vitalSignParent.List_PEMR_Element_Translated == null)
-							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
-					}
-
-					#endregion
-
-					#region FIO2
-
-					if (visitTiming.FIO2 != null)
-					{
-						vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "FIO2 ",
-							visitTiming.FIO2.ToString(), visitTiming, visitTiming.PEMR_Element);
-						if (vitalSignParent.List_PEMR_Element_Translated == null)
-							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
-					}
-
-					#endregion
-
-					#region SPO2Amount
-
-					if (visitTiming.SPO2Amount != null)
-					{
-						vitalSign = CreateNewPEMR_Translated(visitTiming.OrderIndex, "SPO2 ",
-							visitTiming.SPO2Amount.ToString(), visitTiming, visitTiming.PEMR_Element);
-						if (vitalSignParent.List_PEMR_Element_Translated == null)
-							vitalSignParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-						vitalSignParent.List_PEMR_Element_Translated.Add(vitalSign);
-					}
-
-					#endregion
-				}
-
-				if (parent.List_PEMR_Element_Translated == null)
-					parent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-				parent.List_PEMR_Element_Translated.Add(vitalSignParent);
 			}
 
 			#endregion

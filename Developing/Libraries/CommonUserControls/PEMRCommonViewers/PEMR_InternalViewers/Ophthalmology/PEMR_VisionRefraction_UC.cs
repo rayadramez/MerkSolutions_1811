@@ -432,7 +432,7 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 			}
 		}
 
-		private void btnSave_Click(object sender, EventArgs e)
+		private void btnAdd_Click(object sender, EventArgs e)
 		{
 			DialogResult result = XtraMessageBox.Show("Do you to add this Readings?", "Note", MessageBoxButtons.YesNo,
 				MessageBoxIcon.Exclamation);
@@ -462,6 +462,11 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 					}
 					break;
 			}
+		}
+
+		private void btnSave_Click(object sender, EventArgs e)
+		{
+
 		}
 
 		private void btnSearch_Click(object sender, EventArgs e)

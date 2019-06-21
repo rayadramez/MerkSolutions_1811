@@ -30,7 +30,6 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_AdnexaSegment_UC));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
 			this.txtReccommednations_OS = new DevExpress.XtraEditors.MemoEdit();
 			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
@@ -92,16 +91,17 @@
 			this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem12 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator5 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.simpleSeparator6 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.emptySpaceItem13 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.simpleSeparator6 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtReccommednations_OS.Properties)).BeginInit();
@@ -152,21 +152,21 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
-			this.layoutControl1.Controls.Add(this.btnSave);
+			this.layoutControl1.Controls.Add(this.simpleButton2);
 			this.layoutControl1.Controls.Add(this.btnNewVitalSign);
 			this.layoutControl1.Controls.Add(this.txtReccommednations_OS);
 			this.layoutControl1.Controls.Add(this.btnSearchDiagnosis);
@@ -200,20 +200,6 @@
 			this.layoutControl1.Size = new System.Drawing.Size(1200, 600);
 			this.layoutControl1.TabIndex = 2;
 			this.layoutControl1.Text = "layoutControl1";
-			// 
-			// btnSave
-			// 
-			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_100;
-			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSave.Location = new System.Drawing.Point(1090, 3);
-			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(110, 40);
-			this.btnSave.StyleController = this.layoutControl1;
-			this.btnSave.TabIndex = 9;
-			this.btnSave.Text = "simpleButton1";
-			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// btnNewVitalSign
 			// 
@@ -661,9 +647,9 @@
             this.emptySpaceItem13,
             this.layoutControlItem11,
             this.layoutControlItem22,
-            this.layoutControlItem23,
             this.simpleSeparator2,
-            this.simpleSeparator6});
+            this.simpleSeparator6,
+            this.layoutControlItem12});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -1090,13 +1076,6 @@
 			this.simpleSeparator1.Name = "simpleSeparator1";
 			this.simpleSeparator1.Size = new System.Drawing.Size(2, 473);
 			// 
-			// simpleSeparator2
-			// 
-			this.simpleSeparator2.AllowHotTrack = false;
-			this.simpleSeparator2.Location = new System.Drawing.Point(521, 47);
-			this.simpleSeparator2.Name = "simpleSeparator2";
-			this.simpleSeparator2.Size = new System.Drawing.Size(2, 553);
-			// 
 			// layoutControlItem24
 			// 
 			this.layoutControlItem24.Control = this.btnSearchDiagnosis;
@@ -1128,13 +1107,6 @@
 			this.simpleSeparator5.Location = new System.Drawing.Point(523, 47);
 			this.simpleSeparator5.Name = "simpleSeparator5";
 			this.simpleSeparator5.Size = new System.Drawing.Size(2, 473);
-			// 
-			// simpleSeparator6
-			// 
-			this.simpleSeparator6.AllowHotTrack = false;
-			this.simpleSeparator6.Location = new System.Drawing.Point(675, 47);
-			this.simpleSeparator6.Name = "simpleSeparator6";
-			this.simpleSeparator6.Size = new System.Drawing.Size(2, 553);
 			// 
 			// emptySpaceItem13
 			// 
@@ -1176,15 +1148,43 @@
 			this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem22.TextVisible = false;
 			// 
-			// layoutControlItem23
+			// simpleSeparator2
 			// 
-			this.layoutControlItem23.Control = this.btnSave;
-			this.layoutControlItem23.Location = new System.Drawing.Point(1090, 3);
-			this.layoutControlItem23.Name = "layoutControlItem23";
-			this.layoutControlItem23.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem23.Size = new System.Drawing.Size(110, 41);
-			this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem23.TextVisible = false;
+			this.simpleSeparator2.AllowHotTrack = false;
+			this.simpleSeparator2.Location = new System.Drawing.Point(521, 47);
+			this.simpleSeparator2.Name = "simpleSeparator2";
+			this.simpleSeparator2.Size = new System.Drawing.Size(2, 553);
+			// 
+			// simpleSeparator6
+			// 
+			this.simpleSeparator6.AllowHotTrack = false;
+			this.simpleSeparator6.Location = new System.Drawing.Point(675, 47);
+			this.simpleSeparator6.Name = "simpleSeparator6";
+			this.simpleSeparator6.Size = new System.Drawing.Size(2, 553);
+			// 
+			// simpleButton2
+			// 
+			this.simpleButton2.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.simpleButton2.Location = new System.Drawing.Point(1090, 3);
+			this.simpleButton2.MaximumSize = new System.Drawing.Size(110, 40);
+			this.simpleButton2.MinimumSize = new System.Drawing.Size(110, 40);
+			this.simpleButton2.Name = "simpleButton2";
+			this.simpleButton2.Size = new System.Drawing.Size(110, 40);
+			this.simpleButton2.StyleController = this.layoutControl1;
+			this.simpleButton2.TabIndex = 19;
+			this.simpleButton2.Text = "simpleButton1";
+			// 
+			// layoutControlItem12
+			// 
+			this.layoutControlItem12.Control = this.simpleButton2;
+			this.layoutControlItem12.Location = new System.Drawing.Point(1090, 3);
+			this.layoutControlItem12.Name = "layoutControlItem12";
+			this.layoutControlItem12.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem12.Size = new System.Drawing.Size(110, 41);
+			this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem12.TextVisible = false;
+			this.layoutControlItem12.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// PEMR_AdnexaSegment_UC
 			// 
@@ -1245,16 +1245,16 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1332,7 +1332,7 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
 		private DevExpress.XtraEditors.SimpleButton btnNewVitalSign;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
-		private DevExpress.XtraEditors.SimpleButton btnSave;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
+		private DevExpress.XtraEditors.SimpleButton simpleButton2;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
 	}
 }

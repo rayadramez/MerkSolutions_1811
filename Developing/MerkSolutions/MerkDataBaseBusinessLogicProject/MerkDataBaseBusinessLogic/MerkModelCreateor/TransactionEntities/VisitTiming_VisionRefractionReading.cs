@@ -121,5 +121,26 @@ namespace MerkDataBaseBusinessLogicProject
 		public PEMRElementStatus PEMRElementStatus { get; set; }
 
 		#endregion
+
+		public VisionRefractionReadingType_p VisionRefractionReadingType
+		{
+			get
+			{
+				VisionRefractionReadingType_p visionRefractionType =
+					VisionRefractionReadingType_p.ItemsList.Find(item =>
+						Convert.ToInt32(item.ID).Equals(Convert.ToInt32(VisionRefractionReadingType_P_ID)));
+				return visionRefractionType;
+			}
+		}
+
+		public string VisionRefractionReadingTypeName
+		{
+			get
+			{
+				if (VisionRefractionReadingType != null)
+					return VisionRefractionReadingType.Name_P;
+				return string.Empty;
+			}
+		}
 	}
 }

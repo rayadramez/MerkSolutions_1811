@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_VitalSigns_UC));
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -41,8 +42,8 @@
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.btnAddedDiagnosisFullScreen = new DevExpress.XtraEditors.SimpleButton();
 			this.btnSearchDiagnosis = new DevExpress.XtraEditors.SimpleButton();
 			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -53,7 +54,7 @@
 			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+			this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
 			this.btnAllActiveSign = new DevExpress.XtraEditors.SimpleButton();
 			this.btnActiveVitalSign = new DevExpress.XtraEditors.SimpleButton();
 			this.btnNewVitalSign = new DevExpress.XtraEditors.SimpleButton();
@@ -182,9 +183,8 @@
 			this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem38 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem39 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
@@ -284,14 +284,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
-			this.layoutControl1.Controls.Add(this.simpleButton2);
+			this.layoutControl1.Controls.Add(this.btnSave);
 			this.layoutControl1.Controls.Add(this.btnAddedDiagnosisFullScreen);
 			this.layoutControl1.Controls.Add(this.btnSearchDiagnosis);
 			this.layoutControl1.Controls.Add(this.simpleButton1);
@@ -302,7 +302,7 @@
 			this.layoutControl1.Controls.Add(this.labelControl4);
 			this.layoutControl1.Controls.Add(this.labelControl3);
 			this.layoutControl1.Controls.Add(this.labelControl2);
-			this.layoutControl1.Controls.Add(this.btnSave);
+			this.layoutControl1.Controls.Add(this.btnAdd);
 			this.layoutControl1.Controls.Add(this.btnAllActiveSign);
 			this.layoutControl1.Controls.Add(this.btnActiveVitalSign);
 			this.layoutControl1.Controls.Add(this.btnNewVitalSign);
@@ -346,6 +346,20 @@
 			this.layoutControl1.Size = new System.Drawing.Size(998, 482);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
+			// 
+			// btnSave
+			// 
+			this.btnSave.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
+			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnSave.Location = new System.Drawing.Point(888, 3);
+			this.btnSave.MaximumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.MinimumSize = new System.Drawing.Size(110, 40);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(110, 40);
+			this.btnSave.StyleController = this.layoutControl1;
+			this.btnSave.TabIndex = 18;
+			this.btnSave.Text = "simpleButton1";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// btnAddedDiagnosisFullScreen
 			// 
@@ -487,21 +501,21 @@
 			this.labelControl2.TabIndex = 6;
 			this.labelControl2.Text = ".... Vital Signs  ....";
 			// 
-			// btnSave
+			// btnAdd
 			// 
-			this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnSave.Appearance.Options.UseFont = true;
-			this.btnSave.Image = global::CommonUserControls.Properties.Resources.AddToList_16_09;
-			this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnSave.Location = new System.Drawing.Point(910, 50);
-			this.btnSave.MaximumSize = new System.Drawing.Size(80, 30);
-			this.btnSave.MinimumSize = new System.Drawing.Size(80, 30);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(80, 30);
-			this.btnSave.StyleController = this.layoutControl1;
-			this.btnSave.TabIndex = 38;
-			this.btnSave.Text = "All Active Signs";
-			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+			this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnAdd.Appearance.Options.UseFont = true;
+			this.btnAdd.Image = global::CommonUserControls.Properties.Resources.AddToList_16_09;
+			this.btnAdd.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnAdd.Location = new System.Drawing.Point(910, 50);
+			this.btnAdd.MaximumSize = new System.Drawing.Size(80, 30);
+			this.btnAdd.MinimumSize = new System.Drawing.Size(80, 30);
+			this.btnAdd.Name = "btnAdd";
+			this.btnAdd.Size = new System.Drawing.Size(80, 30);
+			this.btnAdd.StyleController = this.layoutControl1;
+			this.btnAdd.TabIndex = 38;
+			this.btnAdd.Text = "All Active Signs";
+			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 			// 
 			// btnAllActiveSign
 			// 
@@ -559,7 +573,7 @@
 			this.takesTime.Properties.Appearance.Options.UseTextOptions = true;
 			this.takesTime.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.takesTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject14, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, "", null, null, true)});
 			this.takesTime.Properties.DisplayFormat.FormatString = "t";
 			this.takesTime.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
 			this.takesTime.Size = new System.Drawing.Size(120, 20);
@@ -580,7 +594,7 @@
 			this.takenDate.Properties.Appearance.Options.UseTextOptions = true;
 			this.takenDate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.takenDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject14, "", null, null, true)});
 			this.takenDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
 			this.takenDate.Size = new System.Drawing.Size(120, 20);
@@ -1053,7 +1067,7 @@
 			this.spnSPO.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnSPO.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnSPO.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
 			this.spnSPO.Size = new System.Drawing.Size(80, 20);
 			this.spnSPO.StyleController = this.layoutControl1;
 			this.spnSPO.TabIndex = 15;
@@ -1073,7 +1087,7 @@
 			this.lkeFIO.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkeFIO.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeFIO.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
 			this.lkeFIO.Properties.View = this.gridView4;
 			this.lkeFIO.Size = new System.Drawing.Size(150, 20);
 			this.lkeFIO.StyleController = this.layoutControl1;
@@ -1104,7 +1118,7 @@
 			this.spnOxygen.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnOxygen.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnOxygen.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
 			this.spnOxygen.Size = new System.Drawing.Size(80, 20);
 			this.spnOxygen.StyleController = this.layoutControl1;
 			this.spnOxygen.TabIndex = 14;
@@ -1127,7 +1141,7 @@
 			this.spnRespiration.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnRespiration.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnRespiration.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
 			this.spnRespiration.Size = new System.Drawing.Size(80, 20);
 			this.spnRespiration.StyleController = this.layoutControl1;
 			this.spnRespiration.TabIndex = 13;
@@ -1173,7 +1187,7 @@
 			this.lkePulseReg.Properties.Appearance.Options.UseTextOptions = true;
 			this.lkePulseReg.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkePulseReg.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
 			this.lkePulseReg.Properties.View = this.gridView3;
 			this.lkePulseReg.Size = new System.Drawing.Size(150, 20);
 			this.lkePulseReg.StyleController = this.layoutControl1;
@@ -1204,7 +1218,7 @@
 			this.spnPulse.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnPulse.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnPulse.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
 			this.spnPulse.Size = new System.Drawing.Size(80, 20);
 			this.spnPulse.StyleController = this.layoutControl1;
 			this.spnPulse.TabIndex = 12;
@@ -1227,7 +1241,7 @@
 			this.spnBloodPressureLow.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnBloodPressureLow.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnBloodPressureLow.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
 			this.spnBloodPressureLow.Size = new System.Drawing.Size(80, 20);
 			this.spnBloodPressureLow.StyleController = this.layoutControl1;
 			this.spnBloodPressureLow.TabIndex = 12;
@@ -1263,7 +1277,7 @@
 			this.spnBloodPressureHigh.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnBloodPressureHigh.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnBloodPressureHigh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
 			this.spnBloodPressureHigh.Size = new System.Drawing.Size(80, 20);
 			this.spnBloodPressureHigh.StyleController = this.layoutControl1;
 			this.spnBloodPressureHigh.TabIndex = 11;
@@ -1312,7 +1326,7 @@
 			this.spnTemperature.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnTemperature.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnTemperature.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
 			this.spnTemperature.Size = new System.Drawing.Size(80, 20);
 			this.spnTemperature.StyleController = this.layoutControl1;
 			this.spnTemperature.TabIndex = 12;
@@ -1395,7 +1409,7 @@
 			this.spnHeight.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnHeight.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnHeight.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject11, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
 			this.spnHeight.Size = new System.Drawing.Size(80, 20);
 			this.spnHeight.StyleController = this.layoutControl1;
 			this.spnHeight.TabIndex = 11;
@@ -1469,7 +1483,7 @@
 			this.spnWeight.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnWeight.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnWeight.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject12, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject11, "", null, null, true)});
 			this.spnWeight.Size = new System.Drawing.Size(80, 20);
 			this.spnWeight.StyleController = this.layoutControl1;
 			this.spnWeight.TabIndex = 10;
@@ -2420,7 +2434,7 @@
 			// 
 			// layoutControlItem25
 			// 
-			this.layoutControlItem25.Control = this.btnSave;
+			this.layoutControlItem25.Control = this.btnAdd;
 			this.layoutControlItem25.Location = new System.Drawing.Point(907, 47);
 			this.layoutControlItem25.Name = "layoutControlItem25";
 			this.layoutControlItem25.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -2512,17 +2526,6 @@
 			this.layoutControlItem36.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem36.TextVisible = false;
 			// 
-			// layoutControlItem37
-			// 
-			this.layoutControlItem37.Control = this.btnSearchDiagnosis;
-			this.layoutControlItem37.Location = new System.Drawing.Point(847, 3);
-			this.layoutControlItem37.Name = "layoutControlItem37";
-			this.layoutControlItem37.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem37.Size = new System.Drawing.Size(41, 41);
-			this.layoutControlItem37.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem37.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem37.TextVisible = false;
-			// 
 			// layoutControlItem38
 			// 
 			this.layoutControlItem38.Control = this.btnAddedDiagnosisFullScreen;
@@ -2534,22 +2537,20 @@
 			this.layoutControlItem38.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem38.TextVisible = false;
 			// 
-			// simpleButton2
+			// layoutControlItem37
 			// 
-			this.simpleButton2.Image = global::CommonUserControls.Properties.Resources.SaveIcon_16_101;
-			this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.simpleButton2.Location = new System.Drawing.Point(888, 3);
-			this.simpleButton2.MaximumSize = new System.Drawing.Size(110, 40);
-			this.simpleButton2.MinimumSize = new System.Drawing.Size(110, 40);
-			this.simpleButton2.Name = "simpleButton2";
-			this.simpleButton2.Size = new System.Drawing.Size(110, 40);
-			this.simpleButton2.StyleController = this.layoutControl1;
-			this.simpleButton2.TabIndex = 18;
-			this.simpleButton2.Text = "simpleButton1";
+			this.layoutControlItem37.Control = this.btnSearchDiagnosis;
+			this.layoutControlItem37.Location = new System.Drawing.Point(847, 3);
+			this.layoutControlItem37.Name = "layoutControlItem37";
+			this.layoutControlItem37.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem37.Size = new System.Drawing.Size(41, 41);
+			this.layoutControlItem37.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem37.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem37.TextVisible = false;
 			// 
 			// layoutControlItem39
 			// 
-			this.layoutControlItem39.Control = this.simpleButton2;
+			this.layoutControlItem39.Control = this.btnSave;
 			this.layoutControlItem39.Location = new System.Drawing.Point(888, 3);
 			this.layoutControlItem39.Name = "layoutControlItem39";
 			this.layoutControlItem39.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -2666,8 +2667,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).EndInit();
 			this.ResumeLayout(false);
 
@@ -2689,7 +2690,7 @@
 		private DevExpress.XtraEditors.SimpleButton btnActiveVitalSign;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
-		private DevExpress.XtraEditors.SimpleButton btnSave;
+		private DevExpress.XtraEditors.SimpleButton btnAdd;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
 		private DevExpress.XtraEditors.LabelControl labelControl2;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem28;
@@ -2817,7 +2818,7 @@
 		private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
 		private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
 		private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
-		private DevExpress.XtraEditors.SimpleButton simpleButton2;
+		private DevExpress.XtraEditors.SimpleButton btnSave;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem39;
 	}
 }
