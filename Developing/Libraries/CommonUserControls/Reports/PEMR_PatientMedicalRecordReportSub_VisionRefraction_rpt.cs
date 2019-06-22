@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using DevExpress.XtraReports.UI;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 
 namespace CommonUserControls.Reports
 {
-	public partial class PEMR_PatientMedicalRecordReportSub_rpt : DevExpress.XtraReports.UI.XtraReport
+	public partial class PEMR_PatientMedicalRecordReportSub_VisionRefraction_rpt : XtraReport
 	{
-		public PEMR_PatientMedicalRecordReportSub_rpt()
+		public PEMR_PatientMedicalRecordReportSub_VisionRefraction_rpt()
 		{
 			InitializeComponent();
 			lblElementHeaderTitle.EvaluateBinding += ElementHeaderTitle_EvaluateBinding;
@@ -29,25 +28,11 @@ namespace CommonUserControls.Reports
 			if (mainServiceTitle == null || !(e.Value is PEMR_Translated))
 				return;
 
-			PEMR_PatientMedicalRecordReportElement_rpt elementReport = new PEMR_PatientMedicalRecordReportElement_rpt();
 			PEMR_PatientMedicalRecordReportElement_VisionRefraction_rpt elementReport_VisionRefraction =
 				new PEMR_PatientMedicalRecordReportElement_VisionRefraction_rpt();
 			PEMR_Translated translated = e.Value as PEMR_Translated;
-			elementReport.Initialize(translated.List_PEMR_Element_Translated);
-			elementSubReport.ReportSource = elementReport;
-			//if (translated.List_PEMR_Element_Translated != null && translated.List_PEMR_Element_Translated.Count > 0)
-			//{
-			//	if (!translated.IsEyeRelatedType)
-			//	{
-			//		elementReport.Initialize(translated.List_PEMR_Element_Translated);
-			//		elementSubReport.ReportSource = elementReport;
-			//	}
-			//	else
-			//	{
-			//		elementReport_VisionRefraction.Initialize(translated.List_PEMR_Element_Translated);
-			//		elementSubReport.ReportSource = elementReport_VisionRefraction;
-			//	}
-			//}
+			elementReport_VisionRefraction.Initialize(translated.List_PEMR_Element_Translated);
+			elementSubReport.ReportSource = elementReport_VisionRefraction;
 		}
 	}
 }

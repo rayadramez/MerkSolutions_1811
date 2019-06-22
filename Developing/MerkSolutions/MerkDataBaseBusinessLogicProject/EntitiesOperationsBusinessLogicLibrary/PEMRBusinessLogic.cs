@@ -1456,14 +1456,14 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 				visitTiming_MedicalHistory.HypertensionMedicationDuration = Convert.ToInt32(pemrMedicalHistory.HypertensionMedicationDuration);
 			if (pemrMedicalHistory.HypertensionMedicationDurationType != null)
 				visitTiming_MedicalHistory.HypertensionTimeDurationType_P_ID = Convert.ToInt32(pemrMedicalHistory.HypertensionMedicationDurationType);
-			
+
 			if (pemrMedicalHistory.HasDrugAllergies != null)
 				visitTiming_MedicalHistory.IsDrugAllergy = Convert.ToBoolean(pemrMedicalHistory.HasDrugAllergies);
 			else
 				pemrMedicalHistory.HasDrugAllergies = null;
 			if (pemrMedicalHistory.TriggersDrugAllergies != null)
 				visitTiming_MedicalHistory.TriggerOfDrugAllergy_CU_ID = Convert.ToInt32(pemrMedicalHistory.TriggersDrugAllergies);
-			
+
 			if (pemrMedicalHistory.HasHepatitis != null)
 				visitTiming_MedicalHistory.IsHepatitis = Convert.ToBoolean(pemrMedicalHistory.HasHepatitis);
 			else
@@ -3611,7 +3611,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 						if (visitTiming.DidYouEverSmoke != null && Convert.ToBoolean(visitTiming.DidYouEverSmoke))
 						{
 							visitTimingValue += " Yes";
-							
+
 							visitTimingValue += " \r\n";
 							if (visitTiming.NumberOfPacks != null)
 								visitTimingValue += "	--- Number Of Packs : " + visitTiming.NumberOfPacks + " packs";
@@ -3626,7 +3626,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 							if (visitTiming.SmokeFurtherDetails != null)
 								visitTimingValue += " \r\n" + "	--- Smoke Further Details : " +
-								                    visitTiming.SmokeFurtherDetails;
+													visitTiming.SmokeFurtherDetails;
 
 							visitTimingValue += " \r\n";
 							if (visitTiming.QuitingSmokeLessThan != null)
@@ -3634,13 +3634,13 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 							else if (visitTiming.QuitingSmokeBetween != null)
 								visitTimingValue += "	--- Quiting Smoke Between : 6 and 12 months";
 							else if (visitTiming.QuitingSmokeMoreThan != null)
-								visitTimingValue += "	--- Quiting Smoke More Than : 12 months" ;
+								visitTimingValue += "	--- Quiting Smoke More Than : 12 months";
 							else
 								visitTimingValue += "	-- Quiting Smoke : Still Smoking";
 
 							if (visitTiming.QuitingSmokeFurtherDetails != null)
 								visitTimingValue += " \r\n" + "	--- Quitting Smoking Further Details : " +
-								                    visitTiming.QuitingSmokeFurtherDetails;
+													visitTiming.QuitingSmokeFurtherDetails;
 
 						}
 						else if (visitTiming.DidYouEverSmoke != null && !Convert.ToBoolean(visitTiming.DidYouEverSmoke))
@@ -3673,11 +3673,11 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 							if (visitTiming.AlcoholFurtherDetails != null)
 								visitTimingValue += " \r\n" + "	--- Drinking Alcohol Further Details : " +
-								                    visitTiming.AlcoholFurtherDetails;
+													visitTiming.AlcoholFurtherDetails;
 
 							visitTimingValue += " \r\n";
 							if (visitTiming.HadProblemWithAlcohol != null &&
-							    Convert.ToBoolean(visitTiming.HadProblemWithAlcohol))
+								Convert.ToBoolean(visitTiming.HadProblemWithAlcohol))
 							{
 								visitTimingValue += "	--- Had Problems With Alcohol : Yes";
 								if (visitTiming.WhenHadProblemWIthAlcohol != null)
@@ -3689,7 +3689,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 														visitTiming.HadProblemWithAlcoholFurtherDetails;
 							}
 							else if (visitTiming.HadProblemWithAlcohol != null &&
-							    !Convert.ToBoolean(visitTiming.HadProblemWithAlcohol))
+								!Convert.ToBoolean(visitTiming.HadProblemWithAlcohol))
 								visitTimingValue += "	--- Had Problems With Alcohol : No";
 							else
 								visitTimingValue += "	--- Had Problems With Alcohol : Void";
@@ -3718,7 +3718,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 							if (visitTiming.AddictionFurtherDetails != null)
 								visitTimingValue += " \r\n" + "	--- Addicted Further Details : " +
-								                    visitTiming.AlcoholFurtherDetails;
+													visitTiming.AlcoholFurtherDetails;
 
 							if (visitTiming.HadProblemWithAddiction != null &&
 								Convert.ToBoolean(visitTiming.HadProblemWithAddiction))
@@ -3996,32 +3996,306 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 			#region VisitTiming_VisionRefractionReading
 
-			if (pemrObject.List_VisitTiming_MedicalHistory != null &&
-			    pemrObject.List_VisitTiming_MedicalHistory.Count > 0)
+			if (pemrObject.List_VisitTiming_VisionRefractionReading != null &&
+				pemrObject.List_VisitTiming_VisionRefractionReading.Count > 0)
 			{
 				PEMR_Translated visionRefractionParent = CreateNewPEMR_Translated(
-					pemrObject.List_VisitTiming_MedicalHistory[0].OrderIndex,
-					pemrObject.List_VisitTiming_MedicalHistory[0].ElementName,
+					pemrObject.List_VisitTiming_VisionRefractionReading[0].OrderIndex,
+					pemrObject.List_VisitTiming_VisionRefractionReading[0].ElementName,
 					"",
-					pemrObject.List_VisitTiming_MedicalHistory[0],
-					pemrObject.List_VisitTiming_MedicalHistory[0].PEMR_Element);
+					pemrObject.List_VisitTiming_VisionRefractionReading[0],
+					pemrObject.List_VisitTiming_VisionRefractionReading[0].PEMR_Element);
+				if (visionRefractionParent != null)
+					visionRefractionParent.IsEyeRelatedType = true;
 
 				foreach (VisitTiming_VisionRefractionReading visitTiming in pemrObject.List_VisitTiming_VisionRefractionReading)
 				{
-					PEMR_Translated medicalHistory = null;
+					PEMR_Translated visionRefractionReading = null;
+
+					#region VisionRefractionReadingTypeName
+
 					if (visitTiming.VisionRefractionReadingType != null)
 					{
-						medicalHistory = CreateNewPEMR_Translated(visitTiming.OrderIndex, "VR Type",
+						visionRefractionReading = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Vision Refraction Type",
 							visitTiming.VisionRefractionReadingTypeName, visitTiming, visitTiming.PEMR_Element);
+						if (visionRefractionReading != null)
+							visionRefractionReading.IsEyeRelatedType = true;
 						if (visionRefractionParent.List_PEMR_Element_Translated == null)
 							visionRefractionParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
-						visionRefractionParent.List_PEMR_Element_Translated.Add(medicalHistory);
+						visionRefractionParent.List_PEMR_Element_Translated.Add(visionRefractionReading);
 					}
+
+					#endregion
+
+					#region TakenDateTime
+
+					if (visitTiming.TakenDateTime != null)
+					{
+						visionRefractionReading = CreateNewPEMR_Translated(visitTiming.OrderIndex,
+							"Reading Taken Date/Time",
+							visitTiming.TakenDateTime.ConvertDateTimeToString(false, true, false), visitTiming,
+							visitTiming.PEMR_Element);
+						if (visionRefractionReading != null)
+							visionRefractionReading.IsEyeRelatedType = true;
+						if (visionRefractionParent.List_PEMR_Element_Translated == null)
+							visionRefractionParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						visionRefractionParent.List_PEMR_Element_Translated.Add(visionRefractionReading);
+					}
+
+					#endregion
+
+					#region UVA_OU
+
+					if (visitTiming.UVA_OU != null)
+					{
+						visionRefractionReading = CreateNewPEMR_Translated(visitTiming.OrderIndex, "UVA",
+							visitTiming.UVA_OU.ToString(), visitTiming, visitTiming.PEMR_Element);
+						if (visionRefractionReading != null)
+							visionRefractionReading.IsEyeRelatedType = true;
+						if (visionRefractionReading != null)
+							visionRefractionReading.EyeType = DB_EyeType_p.OU;
+						if (visionRefractionParent.List_PEMR_Element_Translated == null)
+							visionRefractionParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						visionRefractionParent.List_PEMR_Element_Translated.Add(visionRefractionReading);
+					}
+
+					#endregion
+
+					#region NVA_OU
+
+					if (visitTiming.NVA_OU != null)
+					{
+						visionRefractionReading = CreateNewPEMR_Translated(visitTiming.OrderIndex, "NVA",
+							visitTiming.NVA_OU.ToString(), visitTiming, visitTiming.PEMR_Element);
+						if (visionRefractionReading != null)
+							visionRefractionReading.EyeType = DB_EyeType_p.OU;
+						if (visionRefractionParent.List_PEMR_Element_Translated == null)
+							visionRefractionParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						visionRefractionParent.List_PEMR_Element_Translated.Add(visionRefractionReading);
+					}
+
+					#endregion
+
+					#region NVAAmount_OU
+
+					if (visitTiming.NVAAmount_OU != null)
+					{
+						visionRefractionReading = CreateNewPEMR_Translated(visitTiming.OrderIndex, "NVAAmount",
+							visitTiming.NVAAmount_OU.ToString(), visitTiming, visitTiming.PEMR_Element);
+						if (visionRefractionReading != null)
+							visionRefractionReading.EyeType = DB_EyeType_p.OU;
+						if (visionRefractionParent.List_PEMR_Element_Translated == null)
+							visionRefractionParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						visionRefractionParent.List_PEMR_Element_Translated.Add(visionRefractionReading);
+					}
+
+					#endregion
+
+					#region Distance_OD
+
+					if (visitTiming.Distance_OD != null)
+					{
+						visionRefractionReading = CreateNewPEMR_Translated(visitTiming.OrderIndex, "Distance",
+							visitTiming.Distance_OD.ToString(), visitTiming, visitTiming.PEMR_Element);
+						if (visionRefractionReading != null)
+							visionRefractionReading.EyeType = DB_EyeType_p.OD;
+						if (visionRefractionParent.List_PEMR_Element_Translated == null)
+							visionRefractionParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						visionRefractionParent.List_PEMR_Element_Translated.Add(visionRefractionReading);
+					}
+
+					#endregion
+
+					#region NVA_OD
+
+					if (visitTiming.NVA_OD != null)
+					{
+						visionRefractionReading = CreateNewPEMR_Translated(visitTiming.OrderIndex, "NVA",
+							visitTiming.NVA_OD.ToString(), visitTiming, visitTiming.PEMR_Element);
+						if (visionRefractionReading != null)
+							visionRefractionReading.EyeType = DB_EyeType_p.OD;
+						if (visionRefractionParent.List_PEMR_Element_Translated == null)
+							visionRefractionParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						visionRefractionParent.List_PEMR_Element_Translated.Add(visionRefractionReading);
+					}
+
+					#endregion
+
+					#region NVAAmount_OD
+
+					if (visitTiming.NVAAmount_OD != null)
+					{
+						visionRefractionReading = CreateNewPEMR_Translated(visitTiming.OrderIndex, "NVAAmount",
+							visitTiming.NVAAmount_OD.ToString(), visitTiming, visitTiming.PEMR_Element);
+						if (visionRefractionReading != null)
+							visionRefractionReading.EyeType = DB_EyeType_p.OD;
+						if (visionRefractionParent.List_PEMR_Element_Translated == null)
+							visionRefractionParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						visionRefractionParent.List_PEMR_Element_Translated.Add(visionRefractionReading);
+					}
+
+					#endregion
 				}
 
 				if (parent.List_PEMR_Element_Translated == null)
 					parent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
 				parent.List_PEMR_Element_Translated.Add(visionRefractionParent);
+			}
+
+			#endregion
+
+			#region VisitTiming_Pupillary
+
+			#endregion
+
+			#region VisitTiming_AnteriorSegmentSign
+
+			if (pemrObject.List_VisitTiming_MainAnteriorSegmentSign != null &&
+				pemrObject.List_VisitTiming_MainAnteriorSegmentSign.Count > 0)
+			{
+				PEMR_Translated mainAnteriorSegmentParent = CreateNewPEMR_Translated(
+					pemrObject.List_VisitTiming_MainAnteriorSegmentSign[0].OrderIndex,
+					pemrObject.List_VisitTiming_MainAnteriorSegmentSign[0].ElementName,
+					"",
+					pemrObject.List_VisitTiming_MainAnteriorSegmentSign[0],
+					pemrObject.List_VisitTiming_MainAnteriorSegmentSign[0].PEMR_Element);
+				if (mainAnteriorSegmentParent != null)
+					mainAnteriorSegmentParent.IsEyeRelatedType = true;
+
+				PEMR_Translated anteriorSegment_translated = null;
+				VisitTiming_MainAnteriorSegmentSign mainAnteriorSegmentElement = null;
+
+				if (pemrObject.List_VisitTiming_MainAnteriorSegmentSign != null)
+					foreach (VisitTiming_MainAnteriorSegmentSign visitTiming in pemrObject
+						.List_VisitTiming_MainAnteriorSegmentSign)
+					{
+						#region General Description
+
+						if (visitTiming.GeneralDescription_OD != null)
+						{
+							anteriorSegment_translated = CreateNewPEMR_Translated(visitTiming.OrderIndex,
+								"General Recommendations",
+								visitTiming.GeneralDescription_OD, visitTiming,
+								visitTiming.PEMR_Element);
+							if (anteriorSegment_translated != null)
+							{
+								anteriorSegment_translated.EyeType = DB_EyeType_p.OD;
+								anteriorSegment_translated.IsEyeRelatedType = true;
+							}
+							if (mainAnteriorSegmentParent.List_PEMR_Element_Translated == null)
+								mainAnteriorSegmentParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+							mainAnteriorSegmentParent.List_PEMR_Element_Translated.Add(anteriorSegment_translated);
+						}
+
+						if (visitTiming.GeneralDescription_OD != null)
+						{
+							anteriorSegment_translated = CreateNewPEMR_Translated(visitTiming.OrderIndex,
+								"General Recommendations",
+								visitTiming.GeneralDescription_OS, visitTiming,
+								visitTiming.PEMR_Element);
+							if (anteriorSegment_translated != null)
+							{
+								anteriorSegment_translated.EyeType = DB_EyeType_p.OS;
+								anteriorSegment_translated.IsEyeRelatedType = true;
+							}
+							if (mainAnteriorSegmentParent.List_PEMR_Element_Translated == null)
+								mainAnteriorSegmentParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+							mainAnteriorSegmentParent.List_PEMR_Element_Translated.Add(anteriorSegment_translated);
+						}
+
+						mainAnteriorSegmentElement = visitTiming;
+
+						#endregion
+					}
+
+				#region AnteriorSegmentSign
+
+				if (pemrObject.List_VisitTiming_AnteriorSegmentSign != null)
+				{
+					int orderIndex = -1;
+					string segmentString = "";
+					string segmentElementName = "";
+
+					if (pemrObject.List_VisitTiming_AnteriorSegmentSign.FindAll(
+							item => item.Eye_P_ID != null &&
+									Convert.ToInt32(item.Eye_P_ID).Equals(Convert.ToInt32(DB_EyeType_p.OD))).Count > 0)
+					{
+						segmentString = "Eye (OD) : ";
+						foreach (VisitTiming_AnteriorSegmentSign anteriorSegment in
+							pemrObject.List_VisitTiming_AnteriorSegmentSign.FindAll(item => Convert
+								.ToInt32(item.Eye_P_ID)
+								.Equals(Convert.ToInt32(DB_EyeType_p.OD))))
+						{
+							orderIndex = anteriorSegment.OrderIndex;
+							SegmentSign_cu segmentAdded = SegmentSign_cu.ItemsList.Find(item =>
+								Convert.ToInt32(item.ID).Equals(Convert.ToInt32(anteriorSegment.SegmentSignID)));
+							if (segmentAdded != null)
+								segmentString += segmentAdded.Name_P + ", ";
+						}
+
+						anteriorSegment_translated = CreateNewPEMR_Translated(orderIndex, "Anterior Segment - OD", segmentString,
+							mainAnteriorSegmentElement, DB_PEMR_ElementType.Diagnosis);
+
+						if (mainAnteriorSegmentParent.List_PEMR_Element_Translated == null)
+							mainAnteriorSegmentParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						mainAnteriorSegmentParent.List_PEMR_Element_Translated.Add(anteriorSegment_translated);
+					}
+
+					if (pemrObject.List_VisitTiming_AnteriorSegmentSign.FindAll(
+							item => item.Eye_P_ID != null &&
+									Convert.ToInt32(item.Eye_P_ID).Equals(Convert.ToInt32(DB_EyeType_p.OS))).Count > 0)
+					{
+						segmentString = "Eye (OS) : ";
+						foreach (VisitTiming_AnteriorSegmentSign anteriorSegment in pemrObject
+							.List_VisitTiming_AnteriorSegmentSign.FindAll(
+								item => item.Eye_P_ID != null &&
+										Convert.ToInt32(item.Eye_P_ID).Equals(Convert.ToInt32(DB_EyeType_p.OS))))
+						{
+							orderIndex = anteriorSegment.OrderIndex;
+							SegmentSign_cu segmentAdded = SegmentSign_cu.ItemsList.Find(item =>
+								Convert.ToInt32(item.ID).Equals(Convert.ToInt32(anteriorSegment.SegmentSignID)));
+							if (segmentAdded != null)
+								segmentString += segmentAdded.Name_P + ", ";
+						}
+
+						anteriorSegment_translated = CreateNewPEMR_Translated(orderIndex, "Anterior Segment - OS ", segmentString,
+							mainAnteriorSegmentElement, DB_PEMR_ElementType.Diagnosis);
+
+						if (mainAnteriorSegmentParent.List_PEMR_Element_Translated == null)
+							mainAnteriorSegmentParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						mainAnteriorSegmentParent.List_PEMR_Element_Translated.Add(anteriorSegment_translated);
+					}
+
+					if (pemrObject.List_VisitTiming_AnteriorSegmentSign.FindAll(
+							item => item.Eye_P_ID != null &&
+									Convert.ToInt32(item.Eye_P_ID).Equals(Convert.ToInt32(DB_EyeType_p.OU))).Count > 0)
+					{
+						segmentString = "Eye (OU) : ";
+						foreach (VisitTiming_AnteriorSegmentSign visitDiagnosis in pemrObject
+							.List_VisitTiming_AnteriorSegmentSign.FindAll(
+								item => item.Eye_P_ID != null &&
+										Convert.ToInt32(item.Eye_P_ID).Equals(Convert.ToInt32(DB_EyeType_p.OU))))
+						{
+							orderIndex = visitDiagnosis.OrderIndex;
+							SegmentSign_cu segmentAdded = SegmentSign_cu.ItemsList.Find(item =>
+								Convert.ToInt32(item.ID).Equals(Convert.ToInt32(visitDiagnosis.SegmentSignID)));
+							if (segmentAdded != null)
+								segmentString += segmentAdded.Name_P + ", ";
+						}
+
+						anteriorSegment_translated = CreateNewPEMR_Translated(orderIndex, "Anterior Segment - OU", segmentString,
+							mainAnteriorSegmentElement, DB_PEMR_ElementType.Diagnosis);
+
+						if (mainAnteriorSegmentParent.List_PEMR_Element_Translated == null)
+							mainAnteriorSegmentParent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+						mainAnteriorSegmentParent.List_PEMR_Element_Translated.Add(anteriorSegment_translated);
+					}
+				}
+				#endregion
+
+				if (parent.List_PEMR_Element_Translated == null)
+					parent.List_PEMR_Element_Translated = new List<PEMR_Translated>();
+				parent.List_PEMR_Element_Translated.Add(mainAnteriorSegmentParent);
 			}
 
 			#endregion
@@ -4310,15 +4584,15 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 			#region VisitTiming_Diagnosis
 
-			if (pemrObject.List_VisitTiming_MainAnteriorSegmentSign != null &&
-				pemrObject.List_VisitTiming_MainAnteriorSegmentSign.Count > 0)
+			if (pemrObject.List_VisitTiming_MainDiagnosis != null &&
+				pemrObject.List_VisitTiming_MainDiagnosis.Count > 0)
 			{
 				PEMR_Translated mainDiagnosisParent = CreateNewPEMR_Translated(
-					pemrObject.List_VisitTiming_MainAnteriorSegmentSign[0].OrderIndex,
-					pemrObject.List_VisitTiming_MainAnteriorSegmentSign[0].ElementName,
+					pemrObject.List_VisitTiming_MainDiagnosis[0].OrderIndex,
+					pemrObject.List_VisitTiming_MainDiagnosis[0].ElementName,
 					"",
-					pemrObject.List_VisitTiming_MainAnteriorSegmentSign[0],
-					pemrObject.List_VisitTiming_MainAnteriorSegmentSign[0].PEMR_Element);
+					pemrObject.List_VisitTiming_MainDiagnosis[0],
+					pemrObject.List_VisitTiming_MainDiagnosis[0].PEMR_Element);
 				PEMR_Translated diagnosis = null;
 				VisitTiming_MainDiagnosis mainDiagnosisElement = null;
 

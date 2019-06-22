@@ -67,7 +67,7 @@ namespace MerkDataBaseBusinessLogicProject
 
 		public DB_PEMR_ElementType PEMR_Element
 		{
-			get { return DB_PEMR_ElementType.VisitTiming_MedicalHistory; }
+			get { return DB_PEMR_ElementType.VisitTiming_SocialHistory; }
 		}
 
 		public int OrderIndex
@@ -78,7 +78,7 @@ namespace MerkDataBaseBusinessLogicProject
 				if (PEM_ElementPrintOrder_cu.ItemsList.Count == 0)
 				{
 					element = PEMR_Elemet_p.ItemsList.Find(
-						item => Convert.ToInt32(item.ID).Equals((int) DB_PEMR_ElementType.VisitTiming_MedicalHistory));
+						item => Convert.ToInt32(item.ID).Equals((int) DB_PEMR_ElementType.VisitTiming_SocialHistory));
 					if (element != null)
 						return Convert.ToInt32(element.DefaultOrderIndex);
 					return 0;
@@ -86,12 +86,12 @@ namespace MerkDataBaseBusinessLogicProject
 
 				PEM_ElementPrintOrder_cu elementPrintOrder = PEM_ElementPrintOrder_cu.ItemsList.Find(
 					item => Convert.ToInt32(item.PEMR_Elemet_P_ID)
-						.Equals((int) DB_PEMR_ElementType.VisitTiming_MedicalHistory));
+						.Equals((int) DB_PEMR_ElementType.VisitTiming_SocialHistory));
 				if (elementPrintOrder != null)
 					return elementPrintOrder.OrderIndex;
 
 				element = PEMR_Elemet_p.ItemsList.Find(
-					item => Convert.ToInt32(item.ID).Equals((int)DB_PEMR_ElementType.VisitTiming_MedicalHistory));
+					item => Convert.ToInt32(item.ID).Equals((int)DB_PEMR_ElementType.VisitTiming_SocialHistory));
 				if (element != null)
 					return Convert.ToInt32(element.DefaultOrderIndex);
 				return 0;
@@ -103,7 +103,7 @@ namespace MerkDataBaseBusinessLogicProject
 			get
 			{
 				PEMR_Elemet_p element = element = PEMR_Elemet_p.ItemsList.Find(
-					item => Convert.ToInt32(item.ID).Equals((int)DB_PEMR_ElementType.VisitTiming_MedicalHistory));
+					item => Convert.ToInt32(item.ID).Equals((int)DB_PEMR_ElementType.VisitTiming_SocialHistory));
 				if(element == null)
 					return String.Empty;
 

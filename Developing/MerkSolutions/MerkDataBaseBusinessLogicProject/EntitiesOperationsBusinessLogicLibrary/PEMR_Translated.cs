@@ -53,6 +53,8 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		public string TranslatedItem { get; set; }
 		public string TranslatedItemValue { get; set; }
 		public PEMRElementStatus PEMRElementStatus { get; set; }
+		public DB_EyeType_p EyeType { get; set; }
+		public bool IsEyeRelatedType { get; set; }
 
 		public string MedicationName_EnglishValue { get; set; }
 		public string MedicationName_ArabicValue { get; set; }

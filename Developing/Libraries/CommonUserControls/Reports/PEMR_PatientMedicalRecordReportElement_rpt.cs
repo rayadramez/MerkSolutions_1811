@@ -15,8 +15,8 @@ namespace CommonUserControls.Reports
 			if (translatedList == null || translatedList.Count == 0)
 				return;
 
-			DetailReport_Investigation.Visible = true;
-			DetailReport_Investigation.DataSource = translatedList;
+			DetailReport_Main.Visible = true;
+			DetailReport_Main.DataSource = translatedList;
 			lblElement_Investigation.DataBindings.Add("Text", translatedList, PEMR_Translated.ElementNameField);
 			lblElementValue__Investigation.DataBindings.Add("Text", translatedList, PEMR_Translated.TranslatedItemValueField);
 		}

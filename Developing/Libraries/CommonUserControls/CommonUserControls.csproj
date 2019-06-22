@@ -538,6 +538,12 @@
     <Compile Include="Reports\PEMR_PatientMedicalRecordReportSub_rpt.Designer.cs">
       <DependentUpon>PEMR_PatientMedicalRecordReportSub_rpt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PEMR_PatientMedicalRecordReportSub_VisionRefraction_rpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PEMR_PatientMedicalRecordReportSub_VisionRefraction_rpt.Designer.cs">
+      <DependentUpon>PEMR_PatientMedicalRecordReportSub_VisionRefraction_rpt.cs</DependentUpon>
+    </Compile>
     <Compile Include="SettingsViewers\BankAccountViewers\BankAccount_EditorViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1435,8 +1441,14 @@
     <EmbeddedResource Include="Reports\PEMR_PatientMedicalRecordReportElement_rpt.resx">
       <DependentUpon>PEMR_PatientMedicalRecordReportElement_rpt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEMR_PatientMedicalRecordReportElement_VisionRefraction_rpt.resx">
+      <DependentUpon>PEMR_PatientMedicalRecordReportElement_VisionRefraction_rpt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\PEMR_PatientMedicalRecordReportSub_rpt.resx">
       <DependentUpon>PEMR_PatientMedicalRecordReportSub_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PEMR_PatientMedicalRecordReportSub_VisionRefraction_rpt.resx">
+      <DependentUpon>PEMR_PatientMedicalRecordReportSub_VisionRefraction_rpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsViewers\BankAccountViewers\BankAccount_EditorViewer.resx">
       <DependentUpon>BankAccount_EditorViewer.cs</DependentUpon>

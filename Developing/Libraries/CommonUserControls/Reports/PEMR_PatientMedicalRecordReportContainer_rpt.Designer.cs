@@ -51,6 +51,7 @@
 			this.xrShape1 = new DevExpress.XtraReports.UI.XRShape();
 			this.DetailReport = new DevExpress.XtraReports.UI.DetailReportBand();
 			this.Detail1 = new DevExpress.XtraReports.UI.DetailBand();
+			this.subReport_VisionRefraction = new DevExpress.XtraReports.UI.XRSubreport();
 			((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
 			// 
 			// Detail
@@ -306,11 +307,18 @@
 			// Detail1
 			// 
 			this.Detail1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.subReport_VisionRefraction,
             this.lblElementHeaderTitle,
             this.xrLine2,
             this.elementSubReport});
-			this.Detail1.HeightF = 83.79166F;
+			this.Detail1.HeightF = 128.5833F;
 			this.Detail1.Name = "Detail1";
+			// 
+			// subReport_VisionRefraction
+			// 
+			this.subReport_VisionRefraction.LocationFloat = new DevExpress.Utils.PointFloat(5.999994F, 78.12166F);
+			this.subReport_VisionRefraction.Name = "subReport_VisionRefraction";
+			this.subReport_VisionRefraction.SizeF = new System.Drawing.SizeF(728F, 48.79166F);
 			// 
 			// PEMR_PatientMedicalRecordReportContainer_rpt
 			// 
@@ -353,5 +361,6 @@
 		private DevExpress.XtraReports.UI.XRLabel lblServiceCategoryName;
 		private DevExpress.XtraReports.UI.DetailReportBand DetailReport;
 		private DevExpress.XtraReports.UI.DetailBand Detail1;
+		private DevExpress.XtraReports.UI.XRSubreport subReport_VisionRefraction;
 	}
 }

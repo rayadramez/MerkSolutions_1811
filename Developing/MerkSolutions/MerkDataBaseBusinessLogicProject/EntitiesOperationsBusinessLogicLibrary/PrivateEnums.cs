@@ -177,7 +177,8 @@
 		VisitTiming_AdnexaSegmentSign,
 		VisitTiming_MainAdnexaSegmentSign,
 		VisitTiming_PosteriorSegmentSign,
-		VisitTiming_EOMSign
+		VisitTiming_EOMSign,
+		VisitTiming_VisionRefractionReading
 	}
 
 	public enum DB_PersonType

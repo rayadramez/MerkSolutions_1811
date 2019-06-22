@@ -78,7 +78,7 @@ namespace MerkDataBaseBusinessLogicProject
 
 		public DB_PEMR_ElementType PEMR_Element
 		{
-			get { return DB_PEMR_ElementType.VisitTiming_AnteriorSegmentSign; }
+			get { return DB_PEMR_ElementType.VisitTiming_VisionRefractionReading; }
 		}
 
 		public int OrderIndex
@@ -111,7 +111,7 @@ namespace MerkDataBaseBusinessLogicProject
 		{
 			get
 			{
-				return "Diagnosis";
+				return "Vision Refraction Reading";
 			}
 		}
 
