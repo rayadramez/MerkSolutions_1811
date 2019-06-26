@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEMR_TreatmentPlan_UC));
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
 			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.btnAddedDiagnosisFullScreen = new DevExpress.XtraEditors.SimpleButton();
@@ -149,6 +149,7 @@
 			this.btnSave.StyleController = this.layoutControl1;
 			this.btnSave.TabIndex = 17;
 			this.btnSave.Text = "simpleButton1";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// btnAddedDiagnosisFullScreen
 			// 
@@ -374,7 +375,7 @@
 			this.spnOrderIndex.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnOrderIndex.Properties.AutoHeight = false;
 			this.spnOrderIndex.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
 			this.spnOrderIndex.Properties.MaxValue = new decimal(new int[] {
             1,
             0,

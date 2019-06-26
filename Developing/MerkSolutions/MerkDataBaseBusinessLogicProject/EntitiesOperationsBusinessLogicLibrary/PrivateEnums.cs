@@ -211,7 +211,9 @@
 		InvoiceManager = 5,
 		Settings = 6,
 		QueueManager = 7,
-		FinanceInvoiceCreation = 8
+		FinanceInvoiceCreation = 8,
+		OneDaySurgeryReception = 9,
+		OphalmologySurgeryApplication = 10
 	}
 
 	public enum DB_GeneralChartOfAccountType
@@ -439,7 +441,8 @@
 		VisitTiming_MedicalHistory = 155,
 		OrganizationMachine_StationPoint_cu = 156,
 		DiabetedMedicationType_p = 157,
-		DiabetesType_p
+		DiabetesType_p,
+		Doctor_StationPointStage_cu
 	}
 
 	public enum DB_Station
@@ -447,7 +450,8 @@
 		None = 0,
 		Surgery_Reception = 1,
 		Dental_StationPoint = 15,
-		CardiovascularClinic = 16
+		CardiovascularClinic = 16,
+		OphthalmologySurgeryRoom = 18
 	}
 
 	public enum DB_Organization

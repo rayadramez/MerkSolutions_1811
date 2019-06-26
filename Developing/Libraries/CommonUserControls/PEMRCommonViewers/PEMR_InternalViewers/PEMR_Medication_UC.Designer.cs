@@ -264,6 +264,7 @@
 			this.btnSave.StyleController = this.layoutControl1;
 			this.btnSave.TabIndex = 14;
 			this.btnSave.Text = "simpleButton1";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// chkYearly
 			// 

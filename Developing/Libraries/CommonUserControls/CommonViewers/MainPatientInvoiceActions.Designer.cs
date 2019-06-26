@@ -38,6 +38,7 @@
 			DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
 			DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.btnOneDaySurgery = new DevExpress.XtraEditors.SimpleButton();
 			this.btnPatientDeposite = new DevExpress.XtraEditors.SimpleButton();
 			this.btnScanner = new DevExpress.XtraEditors.SimpleButton();
 			this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -67,10 +68,8 @@
 			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytOutpatientActions = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytInPatientActions = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -103,6 +102,11 @@
 			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lytFinance = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picPatient.Properties)).BeginInit();
@@ -110,10 +114,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytOutpatientActions)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytInPatientActions)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
@@ -146,10 +148,16 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytFinance)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.btnOneDaySurgery);
 			this.layoutControl1.Controls.Add(this.btnPatientDeposite);
 			this.layoutControl1.Controls.Add(this.btnScanner);
 			this.layoutControl1.Controls.Add(this.labelControl7);
@@ -178,20 +186,40 @@
 			this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.layoutControl1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl1.Name = "layoutControl1";
-			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(477, 156, 417, 497);
+			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(668, 212, 417, 497);
 			this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
 			this.layoutControl1.Root = this.layoutControlGroup1;
-			this.layoutControl1.Size = new System.Drawing.Size(1005, 478);
+			this.layoutControl1.Size = new System.Drawing.Size(1005, 500);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
+			// 
+			// btnOneDaySurgery
+			// 
+			this.btnOneDaySurgery.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnOneDaySurgery.Appearance.ForeColor = System.Drawing.Color.Black;
+			this.btnOneDaySurgery.Appearance.Options.UseFont = true;
+			this.btnOneDaySurgery.Appearance.Options.UseForeColor = true;
+			this.btnOneDaySurgery.Image = global::CommonUserControls.Properties.Resources.MedicalIcon_16_02;
+			this.btnOneDaySurgery.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+			this.btnOneDaySurgery.Location = new System.Drawing.Point(592, 190);
+			this.btnOneDaySurgery.MaximumSize = new System.Drawing.Size(200, 50);
+			this.btnOneDaySurgery.MinimumSize = new System.Drawing.Size(200, 50);
+			this.btnOneDaySurgery.Name = "btnOneDaySurgery";
+			this.btnOneDaySurgery.Size = new System.Drawing.Size(200, 50);
+			this.btnOneDaySurgery.StyleController = this.layoutControl1;
+			this.btnOneDaySurgery.TabIndex = 8;
+			this.btnOneDaySurgery.Text = "عملية يوم واحد";
+			this.btnOneDaySurgery.Click += new System.EventHandler(this.btnOneDaySurgery_Click);
 			// 
 			// btnPatientDeposite
 			// 
 			this.btnPatientDeposite.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnPatientDeposite.Appearance.ForeColor = System.Drawing.Color.Black;
 			this.btnPatientDeposite.Appearance.Options.UseFont = true;
+			this.btnPatientDeposite.Appearance.Options.UseForeColor = true;
 			this.btnPatientDeposite.Image = global::CommonUserControls.Properties.Resources.PaymentsIcon_16_01;
 			this.btnPatientDeposite.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-			this.btnPatientDeposite.Location = new System.Drawing.Point(386, 190);
+			this.btnPatientDeposite.Location = new System.Drawing.Point(592, 273);
 			this.btnPatientDeposite.MaximumSize = new System.Drawing.Size(200, 50);
 			this.btnPatientDeposite.MinimumSize = new System.Drawing.Size(200, 50);
 			this.btnPatientDeposite.Name = "btnPatientDeposite";
@@ -204,7 +232,9 @@
 			// btnScanner
 			// 
 			this.btnScanner.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnScanner.Appearance.ForeColor = System.Drawing.Color.Black;
 			this.btnScanner.Appearance.Options.UseFont = true;
+			this.btnScanner.Appearance.Options.UseForeColor = true;
 			this.btnScanner.Image = global::CommonUserControls.Properties.Resources.Scanner_16_01;
 			this.btnScanner.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
 			this.btnScanner.Location = new System.Drawing.Point(596, 111);
@@ -394,8 +424,10 @@
 			// btnInPatientPayments
 			// 
 			this.btnInPatientPayments.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnInPatientPayments.Appearance.ForeColor = System.Drawing.Color.Black;
 			this.btnInPatientPayments.Appearance.Options.UseFont = true;
-			this.btnInPatientPayments.Location = new System.Drawing.Point(592, 339);
+			this.btnInPatientPayments.Appearance.Options.UseForeColor = true;
+			this.btnInPatientPayments.Location = new System.Drawing.Point(592, 422);
 			this.btnInPatientPayments.MaximumSize = new System.Drawing.Size(200, 60);
 			this.btnInPatientPayments.MinimumSize = new System.Drawing.Size(200, 60);
 			this.btnInPatientPayments.Name = "btnInPatientPayments";
@@ -408,8 +440,10 @@
 			// btnInvoiceReviewingInPatient
 			// 
 			this.btnInvoiceReviewingInPatient.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnInvoiceReviewingInPatient.Appearance.ForeColor = System.Drawing.Color.Black;
 			this.btnInvoiceReviewingInPatient.Appearance.Options.UseFont = true;
-			this.btnInvoiceReviewingInPatient.Location = new System.Drawing.Point(386, 339);
+			this.btnInvoiceReviewingInPatient.Appearance.Options.UseForeColor = true;
+			this.btnInvoiceReviewingInPatient.Location = new System.Drawing.Point(386, 422);
 			this.btnInvoiceReviewingInPatient.MaximumSize = new System.Drawing.Size(200, 60);
 			this.btnInvoiceReviewingInPatient.MinimumSize = new System.Drawing.Size(200, 60);
 			this.btnInvoiceReviewingInPatient.Name = "btnInvoiceReviewingInPatient";
@@ -422,8 +456,10 @@
 			// btnEndAccommodation
 			// 
 			this.btnEndAccommodation.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnEndAccommodation.Appearance.ForeColor = System.Drawing.Color.Black;
 			this.btnEndAccommodation.Appearance.Options.UseFont = true;
-			this.btnEndAccommodation.Location = new System.Drawing.Point(386, 273);
+			this.btnEndAccommodation.Appearance.Options.UseForeColor = true;
+			this.btnEndAccommodation.Location = new System.Drawing.Point(386, 356);
 			this.btnEndAccommodation.MaximumSize = new System.Drawing.Size(200, 60);
 			this.btnEndAccommodation.MinimumSize = new System.Drawing.Size(200, 60);
 			this.btnEndAccommodation.Name = "btnEndAccommodation";
@@ -436,8 +472,10 @@
 			// btnAddServicesToInPatient
 			// 
 			this.btnAddServicesToInPatient.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnAddServicesToInPatient.Appearance.ForeColor = System.Drawing.Color.Black;
 			this.btnAddServicesToInPatient.Appearance.Options.UseFont = true;
-			this.btnAddServicesToInPatient.Location = new System.Drawing.Point(798, 339);
+			this.btnAddServicesToInPatient.Appearance.Options.UseForeColor = true;
+			this.btnAddServicesToInPatient.Location = new System.Drawing.Point(798, 422);
 			this.btnAddServicesToInPatient.MaximumSize = new System.Drawing.Size(200, 60);
 			this.btnAddServicesToInPatient.MinimumSize = new System.Drawing.Size(200, 60);
 			this.btnAddServicesToInPatient.Name = "btnAddServicesToInPatient";
@@ -450,8 +488,10 @@
 			// btnTransferAccommodation
 			// 
 			this.btnTransferAccommodation.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnTransferAccommodation.Appearance.ForeColor = System.Drawing.Color.Black;
 			this.btnTransferAccommodation.Appearance.Options.UseFont = true;
-			this.btnTransferAccommodation.Location = new System.Drawing.Point(592, 273);
+			this.btnTransferAccommodation.Appearance.Options.UseForeColor = true;
+			this.btnTransferAccommodation.Location = new System.Drawing.Point(592, 356);
 			this.btnTransferAccommodation.MaximumSize = new System.Drawing.Size(200, 60);
 			this.btnTransferAccommodation.MinimumSize = new System.Drawing.Size(200, 60);
 			this.btnTransferAccommodation.Name = "btnTransferAccommodation";
@@ -464,8 +504,10 @@
 			// btnStartAccommodation
 			// 
 			this.btnStartAccommodation.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnStartAccommodation.Appearance.ForeColor = System.Drawing.Color.Black;
 			this.btnStartAccommodation.Appearance.Options.UseFont = true;
-			this.btnStartAccommodation.Location = new System.Drawing.Point(798, 273);
+			this.btnStartAccommodation.Appearance.Options.UseForeColor = true;
+			this.btnStartAccommodation.Location = new System.Drawing.Point(798, 356);
 			this.btnStartAccommodation.MaximumSize = new System.Drawing.Size(200, 60);
 			this.btnStartAccommodation.MinimumSize = new System.Drawing.Size(200, 60);
 			this.btnStartAccommodation.Name = "btnStartAccommodation";
@@ -478,10 +520,12 @@
 			// btnOutPayments
 			// 
 			this.btnOutPayments.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnOutPayments.Appearance.ForeColor = System.Drawing.Color.Black;
 			this.btnOutPayments.Appearance.Options.UseFont = true;
+			this.btnOutPayments.Appearance.Options.UseForeColor = true;
 			this.btnOutPayments.Image = global::CommonUserControls.Properties.Resources.PaymentsIcon_16_01;
 			this.btnOutPayments.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-			this.btnOutPayments.Location = new System.Drawing.Point(592, 190);
+			this.btnOutPayments.Location = new System.Drawing.Point(798, 273);
 			this.btnOutPayments.MaximumSize = new System.Drawing.Size(200, 50);
 			this.btnOutPayments.MinimumSize = new System.Drawing.Size(200, 50);
 			this.btnOutPayments.Name = "btnOutPayments";
@@ -494,10 +538,12 @@
 			// btnInvoiceReviewingOutPatient
 			// 
 			this.btnInvoiceReviewingOutPatient.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnInvoiceReviewingOutPatient.Appearance.ForeColor = System.Drawing.Color.Black;
 			this.btnInvoiceReviewingOutPatient.Appearance.Options.UseFont = true;
+			this.btnInvoiceReviewingOutPatient.Appearance.Options.UseForeColor = true;
 			this.btnInvoiceReviewingOutPatient.Image = global::CommonUserControls.Properties.Resources.InvoiceManagerIcon_16_01;
 			this.btnInvoiceReviewingOutPatient.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-			this.btnInvoiceReviewingOutPatient.Location = new System.Drawing.Point(180, 190);
+			this.btnInvoiceReviewingOutPatient.Location = new System.Drawing.Point(386, 273);
 			this.btnInvoiceReviewingOutPatient.MaximumSize = new System.Drawing.Size(200, 50);
 			this.btnInvoiceReviewingOutPatient.MinimumSize = new System.Drawing.Size(200, 50);
 			this.btnInvoiceReviewingOutPatient.Name = "btnInvoiceReviewingOutPatient";
@@ -510,7 +556,9 @@
 			// btnOutPatientInvoiceCreation
 			// 
 			this.btnOutPatientInvoiceCreation.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnOutPatientInvoiceCreation.Appearance.ForeColor = System.Drawing.Color.Black;
 			this.btnOutPatientInvoiceCreation.Appearance.Options.UseFont = true;
+			this.btnOutPatientInvoiceCreation.Appearance.Options.UseForeColor = true;
 			this.btnOutPatientInvoiceCreation.Image = global::CommonUserControls.Properties.Resources.MedicalIcon_16_02;
 			this.btnOutPatientInvoiceCreation.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
 			this.btnOutPatientInvoiceCreation.Location = new System.Drawing.Point(798, 190);
@@ -526,7 +574,9 @@
 			// simpleButton1
 			// 
 			this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Black;
 			this.simpleButton1.Appearance.Options.UseFont = true;
+			this.simpleButton1.Appearance.Options.UseForeColor = true;
 			this.simpleButton1.Image = global::CommonUserControls.Properties.Resources.PersonPic_16_01;
 			this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
 			this.simpleButton1.Location = new System.Drawing.Point(802, 111);
@@ -580,11 +630,12 @@
             this.layoutControlGroup2,
             this.layoutControlGroup3,
             this.emptySpaceItem4,
-            this.layoutControlItem24});
+            this.layoutControlItem24,
+            this.lytFinance});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup1.Size = new System.Drawing.Size(1005, 478);
+			this.layoutControlGroup1.Size = new System.Drawing.Size(1005, 500);
 			this.layoutControlGroup1.TextVisible = false;
 			// 
 			// layoutControlItem2
@@ -608,7 +659,9 @@
 			this.lytOutpatientActions.AppearanceGroup.Options.UseForeColor = true;
 			this.lytOutpatientActions.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.lytOutpatientActions.AppearanceItemCaption.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.lytOutpatientActions.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
 			this.lytOutpatientActions.AppearanceItemCaption.Options.UseBackColor = true;
+			this.lytOutpatientActions.AppearanceItemCaption.Options.UseForeColor = true;
 			this.lytOutpatientActions.AppearanceTabPage.Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.lytOutpatientActions.AppearanceTabPage.Header.Options.UseBackColor = true;
 			this.lytOutpatientActions.AppearanceTabPage.HeaderActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -622,16 +675,14 @@
 			this.lytOutpatientActions.ExpandButtonVisible = true;
 			this.lytOutpatientActions.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem4,
-            this.layoutControlItem5,
-            this.layoutControlItem6,
             this.emptySpaceItem3,
-            this.layoutControlItem25});
+            this.layoutControlItem26});
 			this.lytOutpatientActions.Location = new System.Drawing.Point(0, 164);
 			this.lytOutpatientActions.Name = "lytOutpatientActions";
 			this.lytOutpatientActions.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytOutpatientActions.Size = new System.Drawing.Size(1005, 83);
 			this.lytOutpatientActions.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.lytOutpatientActions.Text = "قسم العيادات الخارجية";
+			this.lytOutpatientActions.Text = "العيادات الخارجية وعمليات اليوم الواحد";
 			// 
 			// layoutControlItem4
 			// 
@@ -644,47 +695,24 @@
 			this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem4.TextVisible = false;
 			// 
-			// layoutControlItem5
-			// 
-			this.layoutControlItem5.Control = this.btnInvoiceReviewingOutPatient;
-			this.layoutControlItem5.Location = new System.Drawing.Point(173, 0);
-			this.layoutControlItem5.Name = "layoutControlItem5";
-			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem5.Size = new System.Drawing.Size(206, 56);
-			this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem5.TextVisible = false;
-			// 
-			// layoutControlItem6
-			// 
-			this.layoutControlItem6.Control = this.btnOutPayments;
-			this.layoutControlItem6.Location = new System.Drawing.Point(585, 0);
-			this.layoutControlItem6.Name = "layoutControlItem6";
-			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem6.Size = new System.Drawing.Size(206, 56);
-			this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem6.TextVisible = false;
-			// 
 			// emptySpaceItem3
 			// 
 			this.emptySpaceItem3.AllowHotTrack = false;
 			this.emptySpaceItem3.Location = new System.Drawing.Point(0, 0);
 			this.emptySpaceItem3.Name = "emptySpaceItem3";
-			this.emptySpaceItem3.Size = new System.Drawing.Size(173, 56);
+			this.emptySpaceItem3.Size = new System.Drawing.Size(585, 56);
 			this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
 			// 
-			// layoutControlItem25
+			// layoutControlItem26
 			// 
-			this.layoutControlItem25.Control = this.btnPatientDeposite;
-			this.layoutControlItem25.Location = new System.Drawing.Point(379, 0);
-			this.layoutControlItem25.Name = "layoutControlItem25";
-			this.layoutControlItem25.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem25.Size = new System.Drawing.Size(206, 56);
-			this.layoutControlItem25.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem25.Text = "إيـــداع تحــت الحســـأب";
-			this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem25.TextVisible = false;
+			this.layoutControlItem26.Control = this.btnOneDaySurgery;
+			this.layoutControlItem26.Location = new System.Drawing.Point(585, 0);
+			this.layoutControlItem26.Name = "layoutControlItem26";
+			this.layoutControlItem26.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem26.Size = new System.Drawing.Size(206, 56);
+			this.layoutControlItem26.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem26.TextVisible = false;
 			// 
 			// lytInPatientActions
 			// 
@@ -701,10 +729,10 @@
             this.layoutControlItem11,
             this.layoutControlItem12,
             this.emptySpaceItem7});
-			this.lytInPatientActions.Location = new System.Drawing.Point(0, 247);
+			this.lytInPatientActions.Location = new System.Drawing.Point(0, 330);
 			this.lytInPatientActions.Name = "lytInPatientActions";
 			this.lytInPatientActions.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytInPatientActions.Size = new System.Drawing.Size(1005, 231);
+			this.lytInPatientActions.Size = new System.Drawing.Size(1005, 170);
 			this.lytInPatientActions.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lytInPatientActions.Text = "القسم الداخلي";
 			// 
@@ -747,7 +775,7 @@
 			this.layoutControlItem9.Location = new System.Drawing.Point(791, 66);
 			this.layoutControlItem9.Name = "layoutControlItem9";
 			this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem9.Size = new System.Drawing.Size(206, 138);
+			this.layoutControlItem9.Size = new System.Drawing.Size(206, 77);
 			this.layoutControlItem9.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem9.TextVisible = false;
@@ -758,7 +786,7 @@
 			this.layoutControlItem11.Location = new System.Drawing.Point(379, 66);
 			this.layoutControlItem11.Name = "layoutControlItem11";
 			this.layoutControlItem11.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem11.Size = new System.Drawing.Size(206, 138);
+			this.layoutControlItem11.Size = new System.Drawing.Size(206, 77);
 			this.layoutControlItem11.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem11.TextVisible = false;
@@ -769,7 +797,7 @@
 			this.layoutControlItem12.Location = new System.Drawing.Point(585, 66);
 			this.layoutControlItem12.Name = "layoutControlItem12";
 			this.layoutControlItem12.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem12.Size = new System.Drawing.Size(206, 138);
+			this.layoutControlItem12.Size = new System.Drawing.Size(206, 77);
 			this.layoutControlItem12.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem12.TextVisible = false;
@@ -779,7 +807,7 @@
 			this.emptySpaceItem7.AllowHotTrack = false;
 			this.emptySpaceItem7.Location = new System.Drawing.Point(0, 0);
 			this.emptySpaceItem7.Name = "emptySpaceItem7";
-			this.emptySpaceItem7.Size = new System.Drawing.Size(379, 204);
+			this.emptySpaceItem7.Size = new System.Drawing.Size(379, 143);
 			this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem3
@@ -1029,6 +1057,85 @@
 			this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem24.TextVisible = false;
 			// 
+			// lytFinance
+			// 
+			this.lytFinance.AppearanceGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.lytFinance.AppearanceGroup.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.lytFinance.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.lytFinance.AppearanceGroup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.lytFinance.AppearanceGroup.Options.UseBackColor = true;
+			this.lytFinance.AppearanceGroup.Options.UseFont = true;
+			this.lytFinance.AppearanceGroup.Options.UseForeColor = true;
+			this.lytFinance.AppearanceItemCaption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.lytFinance.AppearanceItemCaption.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.lytFinance.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+			this.lytFinance.AppearanceItemCaption.Options.UseBackColor = true;
+			this.lytFinance.AppearanceItemCaption.Options.UseForeColor = true;
+			this.lytFinance.AppearanceTabPage.Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.lytFinance.AppearanceTabPage.Header.Options.UseBackColor = true;
+			this.lytFinance.AppearanceTabPage.HeaderActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.lytFinance.AppearanceTabPage.HeaderActive.Options.UseBackColor = true;
+			this.lytFinance.AppearanceTabPage.HeaderDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.lytFinance.AppearanceTabPage.HeaderDisabled.Options.UseBackColor = true;
+			this.lytFinance.AppearanceTabPage.HeaderHotTracked.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.lytFinance.AppearanceTabPage.HeaderHotTracked.Options.UseBackColor = true;
+			this.lytFinance.AppearanceTabPage.PageClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.lytFinance.AppearanceTabPage.PageClient.Options.UseBackColor = true;
+			this.lytFinance.ExpandButtonVisible = true;
+			this.lytFinance.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem6,
+            this.layoutControlItem25,
+            this.layoutControlItem5,
+            this.emptySpaceItem6});
+			this.lytFinance.Location = new System.Drawing.Point(0, 247);
+			this.lytFinance.Name = "lytFinance";
+			this.lytFinance.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.lytFinance.Size = new System.Drawing.Size(1005, 83);
+			this.lytFinance.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.lytFinance.Text = "الخزينة والتقارير المالية";
+			// 
+			// layoutControlItem6
+			// 
+			this.layoutControlItem6.Control = this.btnOutPayments;
+			this.layoutControlItem6.Location = new System.Drawing.Point(791, 0);
+			this.layoutControlItem6.Name = "layoutControlItem6";
+			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem6.Size = new System.Drawing.Size(206, 56);
+			this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem6.TextVisible = false;
+			// 
+			// layoutControlItem25
+			// 
+			this.layoutControlItem25.Control = this.btnPatientDeposite;
+			this.layoutControlItem25.Location = new System.Drawing.Point(585, 0);
+			this.layoutControlItem25.Name = "layoutControlItem25";
+			this.layoutControlItem25.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem25.Size = new System.Drawing.Size(206, 56);
+			this.layoutControlItem25.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem25.Text = "إيـــداع تحــت الحســـأب";
+			this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem25.TextVisible = false;
+			// 
+			// layoutControlItem5
+			// 
+			this.layoutControlItem5.Control = this.btnInvoiceReviewingOutPatient;
+			this.layoutControlItem5.Location = new System.Drawing.Point(379, 0);
+			this.layoutControlItem5.Name = "layoutControlItem5";
+			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem5.Size = new System.Drawing.Size(206, 56);
+			this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem5.TextVisible = false;
+			// 
+			// emptySpaceItem6
+			// 
+			this.emptySpaceItem6.AllowHotTrack = false;
+			this.emptySpaceItem6.Location = new System.Drawing.Point(0, 0);
+			this.emptySpaceItem6.Name = "emptySpaceItem6";
+			this.emptySpaceItem6.Size = new System.Drawing.Size(379, 56);
+			this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
+			// 
 			// MainPatientInvoiceActions
 			// 
 			this.Appearance.BackColor = System.Drawing.Color.SlateGray;
@@ -1041,10 +1148,10 @@
 			this.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(59)))), ((int)(((byte)(74)))));
 			this.LookAndFeel.SkinName = "Office 2010 Black";
 			this.LookAndFeel.UseDefaultLookAndFeel = false;
-			this.MinimumSize = new System.Drawing.Size(2, 465);
+			this.MinimumSize = new System.Drawing.Size(2, 500);
 			this.Name = "MainPatientInvoiceActions";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.Size = new System.Drawing.Size(1005, 478);
+			this.Size = new System.Drawing.Size(1005, 500);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
 			this.layoutControl1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.picPatient.Properties)).EndInit();
@@ -1052,10 +1159,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytOutpatientActions)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytInPatientActions)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
@@ -1088,6 +1193,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytFinance)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1160,5 +1270,9 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
 		private DevExpress.XtraEditors.SimpleButton btnPatientDeposite;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
+		private DevExpress.XtraEditors.SimpleButton btnOneDaySurgery;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
+		private DevExpress.XtraLayout.LayoutControlGroup lytFinance;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
 	}
 }

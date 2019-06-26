@@ -498,6 +498,16 @@
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="InsertedBy" Type="int" />
         </EntityType>
+        <EntityType Name="Doctor_StationPointStage_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Doctor_CU_ID" Type="int" Nullable="false" />
+          <Property Name="StationPointStage_CU_ID" Type="int" Nullable="false" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
+          <Property Name="InsertedBy" Type="int" />
+        </EntityType>
         <EntityType Name="Doctor_Symptoms_cu">
           <Key>
             <PropertyRef Name="ID" />
@@ -2009,6 +2019,16 @@
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="InsertedBy" Type="int" />
         </EntityType>
+        <EntityType Name="Service_StationPointStage_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Service_CU_ID" Type="int" Nullable="false" />
+          <Property Name="StationPointStage_CU_ID" Type="int" Nullable="false" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
+          <Property Name="InsertedBy" Type="int" />
+        </EntityType>
         <EntityType Name="Service_Surcharge_cu">
           <Key>
             <PropertyRef Name="ID" />
@@ -2045,6 +2065,16 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ServiceCategory_CU_ID" Type="int" Nullable="false" />
           <Property Name="StationPoint_CU_ID" Type="int" Nullable="false" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
+          <Property Name="InsertedBy" Type="int" />
+        </EntityType>
+        <EntityType Name="ServiceCategory_StationPointStage_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceCategory_CU_ID" Type="int" Nullable="false" />
+          <Property Name="StationPointStage_CU_ID" Type="int" Nullable="false" />
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="InsertedBy" Type="int" />
         </EntityType>
@@ -2109,6 +2139,16 @@
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="InsertedBy" Type="int" />
         </EntityType>
+        <EntityType Name="ServiceType_StationPointStage_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceType_P_ID" Type="int" Nullable="false" />
+          <Property Name="StationPointStage_CU_ID" Type="int" Nullable="false" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
+          <Property Name="InsertedBy" Type="int" />
+        </EntityType>
         <EntityType Name="ServiceType_Surcharge_cu">
           <Key>
             <PropertyRef Name="ID" />
@@ -2140,6 +2180,7 @@
           <Property Name="Name_P" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="Name_S" Type="nvarchar" MaxLength="150" />
           <Property Name="Station_P_ID" Type="int" Nullable="false" />
+          <Property Name="MaxAdmissionCount" Type="float" />
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="InternalCode" Type="nvarchar" MaxLength="50" />
           <Property Name="Description" Type="nvarchar" MaxLength="150" />
@@ -2155,8 +2196,8 @@
           <Property Name="StationPoint_CU_ID" Type="int" Nullable="false" />
           <Property Name="Floor_CU_ID" Type="int" />
           <Property Name="ServingApplication_P_ID" Type="int" />
-          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="OrderIndex" Type="int" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="InternalCode" Type="nvarchar" MaxLength="50" />
           <Property Name="Description" Type="nvarchar" MaxLength="150" />
           <Property Name="InsertedBy" Type="int" />
@@ -3376,7 +3417,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu">
+        <Association Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p">
           <End Role="ChartOfAccountCodeMargin_p" Type="Self.ChartOfAccountCodeMargin_p" Multiplicity="1" />
           <End Role="ChartOfAccount_cu" Type="Self.ChartOfAccount_cu" Multiplicity="*" />
           <ReferentialConstraint>
@@ -4128,6 +4169,42 @@
               <PropertyRef Name="Person_CU_ID" />
             </Principal>
             <Dependent Role="Doctor_Service_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Doctor_StationPointStage_cu_Doctor_cu">
+          <End Role="Doctor_cu" Type="Self.Doctor_cu" Multiplicity="1" />
+          <End Role="Doctor_StationPointStage_cu" Type="Self.Doctor_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="Doctor_StationPointStage_cu">
+              <PropertyRef Name="Doctor_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Doctor_StationPointStage_cu_StationPointStage_cu">
+          <End Role="StationPointStage_cu" Type="Self.StationPointStage_cu" Multiplicity="1" />
+          <End Role="Doctor_StationPointStage_cu" Type="Self.Doctor_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationPointStage_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Doctor_StationPointStage_cu">
+              <PropertyRef Name="StationPointStage_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Doctor_StationPointStage_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="Doctor_StationPointStage_cu" Type="Self.Doctor_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="Doctor_StationPointStage_cu">
               <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
@@ -7156,6 +7233,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Service_StationPointStage_cu_Service_cu">
+          <End Role="Service_cu" Type="Self.Service_cu" Multiplicity="1" />
+          <End Role="Service_StationPointStage_cu" Type="Self.Service_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Service_StationPointStage_cu">
+              <PropertyRef Name="Service_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Service_StationPointStage_cu_StationPointStage_cu">
+          <End Role="StationPointStage_cu" Type="Self.StationPointStage_cu" Multiplicity="1" />
+          <End Role="Service_StationPointStage_cu" Type="Self.Service_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationPointStage_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Service_StationPointStage_cu">
+              <PropertyRef Name="StationPointStage_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Service_StationPointStage_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="Service_StationPointStage_cu" Type="Self.Service_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="Service_StationPointStage_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Service_Surcharge_cu_InvoiceType_p">
           <End Role="InvoiceType_p" Type="Self.InvoiceType_p" Multiplicity="1" />
           <End Role="Service_Surcharge_cu" Type="Self.Service_Surcharge_cu" Multiplicity="*" />
@@ -7260,6 +7373,42 @@
               <PropertyRef Name="Person_CU_ID" />
             </Principal>
             <Dependent Role="ServiceCategory_StationPoint_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceCategory_StationPointStage_cu_ServiceCategory_cu">
+          <End Role="ServiceCategory_cu" Type="Self.ServiceCategory_cu" Multiplicity="1" />
+          <End Role="ServiceCategory_StationPointStage_cu" Type="Self.ServiceCategory_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceCategory_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServiceCategory_StationPointStage_cu">
+              <PropertyRef Name="ServiceCategory_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceCategory_StationPointStage_cu_StationPointStage_cu">
+          <End Role="StationPointStage_cu" Type="Self.StationPointStage_cu" Multiplicity="1" />
+          <End Role="ServiceCategory_StationPointStage_cu" Type="Self.ServiceCategory_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationPointStage_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServiceCategory_StationPointStage_cu">
+              <PropertyRef Name="StationPointStage_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceCategory_StationPointStage_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="ServiceCategory_StationPointStage_cu" Type="Self.ServiceCategory_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="ServiceCategory_StationPointStage_cu">
               <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
@@ -7464,6 +7613,42 @@
               <PropertyRef Name="Person_CU_ID" />
             </Principal>
             <Dependent Role="ServiceType_StationPoint_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceType_StationPointStage_cu_ServiceType_p">
+          <End Role="ServiceType_p" Type="Self.ServiceType_p" Multiplicity="1" />
+          <End Role="ServiceType_StationPointStage_cu" Type="Self.ServiceType_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServiceType_StationPointStage_cu">
+              <PropertyRef Name="ServiceType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceType_StationPointStage_cu_StationPointStage_cu">
+          <End Role="StationPointStage_cu" Type="Self.StationPointStage_cu" Multiplicity="1" />
+          <End Role="ServiceType_StationPointStage_cu" Type="Self.ServiceType_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationPointStage_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServiceType_StationPointStage_cu">
+              <PropertyRef Name="StationPointStage_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceType_StationPointStage_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="ServiceType_StationPointStage_cu" Type="Self.ServiceType_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="ServiceType_StationPointStage_cu">
               <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
@@ -9421,6 +9606,7 @@
           <EntitySet Name="Doctor_Diagnosis_cu" EntityType="Self.Doctor_Diagnosis_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Doctor_DiagnosisCategory_cu" EntityType="Self.Doctor_DiagnosisCategory_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Doctor_Service_cu" EntityType="Self.Doctor_Service_cu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Doctor_StationPointStage_cu" EntityType="Self.Doctor_StationPointStage_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Doctor_Symptoms_cu" EntityType="Self.Doctor_Symptoms_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Doctor_SymptomsCategory_cu" EntityType="Self.Doctor_SymptomsCategory_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DoctorCategory_cu" EntityType="Self.DoctorCategory_cu" Schema="dbo" store:Type="Tables" />
@@ -9545,14 +9731,17 @@
           <EntitySet Name="Service_ChartOfAccount_cu" EntityType="Self.Service_ChartOfAccount_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Service_cu" EntityType="Self.Service_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Service_StationPoint_cu" EntityType="Self.Service_StationPoint_cu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Service_StationPointStage_cu" EntityType="Self.Service_StationPointStage_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Service_Surcharge_cu" EntityType="Self.Service_Surcharge_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServiceCategory_cu" EntityType="Self.ServiceCategory_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServiceCategory_StationPoint_cu" EntityType="Self.ServiceCategory_StationPoint_cu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceCategory_StationPointStage_cu" EntityType="Self.ServiceCategory_StationPointStage_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServiceCategory_Surcharge_cu" EntityType="Self.ServiceCategory_Surcharge_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServicePrice_cu" EntityType="Self.ServicePrice_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServiceType_ChartOfAccount_cu" EntityType="Self.ServiceType_ChartOfAccount_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServiceType_p" EntityType="Self.ServiceType_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServiceType_StationPoint_cu" EntityType="Self.ServiceType_StationPoint_cu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceType_StationPointStage_cu" EntityType="Self.ServiceType_StationPointStage_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServiceType_Surcharge_cu" EntityType="Self.ServiceType_Surcharge_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Station_p" EntityType="Self.Station_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StationPoint_cu" EntityType="Self.StationPoint_cu" Schema="dbo" store:Type="Tables" />
@@ -9767,7 +9956,7 @@
             <End Role="ChartOfAccount_cu" EntitySet="ChartOfAccount_cu" />
             <End Role="ChartOfAccount_cu1" EntitySet="ChartOfAccount_cu" />
           </AssociationSet>
-          <AssociationSet Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu" Association="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu">
+          <AssociationSet Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p" Association="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p">
             <End Role="ChartOfAccountCodeMargin_p" EntitySet="ChartOfAccountCodeMargin_p" />
             <End Role="ChartOfAccount_cu" EntitySet="ChartOfAccount_cu" />
           </AssociationSet>
@@ -10018,6 +10207,18 @@
           <AssociationSet Name="FK_Doctor_Service_cu_User_cu" Association="Self.FK_Doctor_Service_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="Doctor_Service_cu" EntitySet="Doctor_Service_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Doctor_StationPointStage_cu_Doctor_cu" Association="Self.FK_Doctor_StationPointStage_cu_Doctor_cu">
+            <End Role="Doctor_cu" EntitySet="Doctor_cu" />
+            <End Role="Doctor_StationPointStage_cu" EntitySet="Doctor_StationPointStage_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Doctor_StationPointStage_cu_StationPointStage_cu" Association="Self.FK_Doctor_StationPointStage_cu_StationPointStage_cu">
+            <End Role="StationPointStage_cu" EntitySet="StationPointStage_cu" />
+            <End Role="Doctor_StationPointStage_cu" EntitySet="Doctor_StationPointStage_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Doctor_StationPointStage_cu_User_cu" Association="Self.FK_Doctor_StationPointStage_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="Doctor_StationPointStage_cu" EntitySet="Doctor_StationPointStage_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_Doctor_Symptoms_cu_Doctor_cu" Association="Self.FK_Doctor_Symptoms_cu_Doctor_cu">
             <End Role="Doctor_cu" EntitySet="Doctor_cu" />
@@ -11027,6 +11228,18 @@
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="Service_StationPoint_cu" EntitySet="Service_StationPoint_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_Service_StationPointStage_cu_Service_cu" Association="Self.FK_Service_StationPointStage_cu_Service_cu">
+            <End Role="Service_cu" EntitySet="Service_cu" />
+            <End Role="Service_StationPointStage_cu" EntitySet="Service_StationPointStage_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Service_StationPointStage_cu_StationPointStage_cu" Association="Self.FK_Service_StationPointStage_cu_StationPointStage_cu">
+            <End Role="StationPointStage_cu" EntitySet="StationPointStage_cu" />
+            <End Role="Service_StationPointStage_cu" EntitySet="Service_StationPointStage_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Service_StationPointStage_cu_User_cu" Association="Self.FK_Service_StationPointStage_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="Service_StationPointStage_cu" EntitySet="Service_StationPointStage_cu" />
+          </AssociationSet>
           <AssociationSet Name="FK_Service_Surcharge_cu_InvoiceType_p" Association="Self.FK_Service_Surcharge_cu_InvoiceType_p">
             <End Role="InvoiceType_p" EntitySet="InvoiceType_p" />
             <End Role="Service_Surcharge_cu" EntitySet="Service_Surcharge_cu" />
@@ -11062,6 +11275,18 @@
           <AssociationSet Name="FK_ServiceCategory_StationPoint_cu_User_cu" Association="Self.FK_ServiceCategory_StationPoint_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="ServiceCategory_StationPoint_cu" EntitySet="ServiceCategory_StationPoint_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceCategory_StationPointStage_cu_ServiceCategory_cu" Association="Self.FK_ServiceCategory_StationPointStage_cu_ServiceCategory_cu">
+            <End Role="ServiceCategory_cu" EntitySet="ServiceCategory_cu" />
+            <End Role="ServiceCategory_StationPointStage_cu" EntitySet="ServiceCategory_StationPointStage_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceCategory_StationPointStage_cu_StationPointStage_cu" Association="Self.FK_ServiceCategory_StationPointStage_cu_StationPointStage_cu">
+            <End Role="StationPointStage_cu" EntitySet="StationPointStage_cu" />
+            <End Role="ServiceCategory_StationPointStage_cu" EntitySet="ServiceCategory_StationPointStage_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceCategory_StationPointStage_cu_User_cu" Association="Self.FK_ServiceCategory_StationPointStage_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="ServiceCategory_StationPointStage_cu" EntitySet="ServiceCategory_StationPointStage_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_ServiceCategory_Surcharge_cu_InvoiceType_p" Association="Self.FK_ServiceCategory_Surcharge_cu_InvoiceType_p">
             <End Role="InvoiceType_p" EntitySet="InvoiceType_p" />
@@ -11130,6 +11355,18 @@
           <AssociationSet Name="FK_ServiceType_StationPoint_cu_User_cu" Association="Self.FK_ServiceType_StationPoint_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="ServiceType_StationPoint_cu" EntitySet="ServiceType_StationPoint_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceType_StationPointStage_cu_ServiceType_p" Association="Self.FK_ServiceType_StationPointStage_cu_ServiceType_p">
+            <End Role="ServiceType_p" EntitySet="ServiceType_p" />
+            <End Role="ServiceType_StationPointStage_cu" EntitySet="ServiceType_StationPointStage_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceType_StationPointStage_cu_StationPointStage_cu" Association="Self.FK_ServiceType_StationPointStage_cu_StationPointStage_cu">
+            <End Role="StationPointStage_cu" EntitySet="StationPointStage_cu" />
+            <End Role="ServiceType_StationPointStage_cu" EntitySet="ServiceType_StationPointStage_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceType_StationPointStage_cu_User_cu" Association="Self.FK_ServiceType_StationPointStage_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="ServiceType_StationPointStage_cu" EntitySet="ServiceType_StationPointStage_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_ServiceType_Surcharge_cu_InvoiceType_p" Association="Self.FK_ServiceType_Surcharge_cu_InvoiceType_p">
             <End Role="InvoiceType_p" EntitySet="InvoiceType_p" />
@@ -11987,7 +12224,7 @@
           <NavigationProperty Name="CashBoxInOutTransactions" Relationship="Self.FK_CashBoxInOutTransaction_ChartOfAccount_cu" FromRole="ChartOfAccount_cu" ToRole="CashBoxInOutTransaction" />
           <NavigationProperty Name="ChartOfAccount_cu1" Relationship="Self.FK_ChartOfAccount_cu_ChartOfAccount_cu" FromRole="ChartOfAccount_cu" ToRole="ChartOfAccount_cu1" />
           <NavigationProperty Name="ChartOfAccount_cu2" Relationship="Self.FK_ChartOfAccount_cu_ChartOfAccount_cu" FromRole="ChartOfAccount_cu1" ToRole="ChartOfAccount_cu" />
-          <NavigationProperty Name="ChartOfAccountCodeMargin_p" Relationship="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu" FromRole="ChartOfAccount_cu" ToRole="ChartOfAccountCodeMargin_p" />
+          <NavigationProperty Name="ChartOfAccountCodeMargin_p" Relationship="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p" FromRole="ChartOfAccount_cu" ToRole="ChartOfAccountCodeMargin_p" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_ChartOfAccount_cu_User_cu" FromRole="ChartOfAccount_cu" ToRole="User_cu" />
           <NavigationProperty Name="ChartOfAccount_FinancialStatementElement_cu" Relationship="Self.FK_ChartOfAccount_FinancialStatementElement_cu_ChartOfAccount_cu" FromRole="ChartOfAccount_cu" ToRole="ChartOfAccount_FinancialStatementElement_cu" />
           <NavigationProperty Name="ChartOfAccount_GeneralChartOfAccountType_cu" Relationship="Self.FK_ChartOfAccount_GeneralChartOfAccountType_cu_ChartOfAccount_cu" FromRole="ChartOfAccount_cu" ToRole="ChartOfAccount_GeneralChartOfAccountType_cu" />
@@ -12055,7 +12292,7 @@
           <Property Name="Name_P" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Name_S" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="NumberOfDigits" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ChartOfAccount_cu" Relationship="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu" FromRole="ChartOfAccountCodeMargin_p" ToRole="ChartOfAccount_cu" />
+          <NavigationProperty Name="ChartOfAccount_cu" Relationship="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p" FromRole="ChartOfAccountCodeMargin_p" ToRole="ChartOfAccount_cu" />
         </EntityType>
         <EntityType Name="City_cu">
           <Key>
@@ -12354,6 +12591,7 @@
           <NavigationProperty Name="Doctor_Diagnosis_cu" Relationship="Self.FK_Doctor_Diagnosis_cu_Doctor_cu" FromRole="Doctor_cu" ToRole="Doctor_Diagnosis_cu" />
           <NavigationProperty Name="Doctor_DiagnosisCategory_cu" Relationship="Self.FK_Doctor_DiagnosisCategory_cu_Doctor_cu1" FromRole="Doctor_cu" ToRole="Doctor_DiagnosisCategory_cu" />
           <NavigationProperty Name="Doctor_Service_cu" Relationship="Self.FK_Doctor_Service_CU_Doctor_cu" FromRole="Doctor_cu" ToRole="Doctor_Service_cu" />
+          <NavigationProperty Name="Doctor_StationPointStage_cu" Relationship="Self.FK_Doctor_StationPointStage_cu_Doctor_cu" FromRole="Doctor_cu" ToRole="Doctor_StationPointStage_cu" />
           <NavigationProperty Name="Doctor_Symptoms_cu" Relationship="Self.FK_Doctor_Symptoms_cu_Doctor_cu" FromRole="Doctor_cu" ToRole="Doctor_Symptoms_cu" />
           <NavigationProperty Name="Doctor_SymptomsCategory_cu" Relationship="Self.FK_Doctor_SymptomsCategory_cu_Doctor_cu" FromRole="Doctor_cu" ToRole="Doctor_SymptomsCategory_cu" />
           <NavigationProperty Name="InvoiceDetails" Relationship="Self.FK_InvoiceDetail_Doctor_cu" FromRole="Doctor_cu" ToRole="InvoiceDetail" />
@@ -12406,6 +12644,19 @@
           <NavigationProperty Name="ServiceCategory_cu" Relationship="Self.FK_Doctor_Service_CU_ServiceCategory_cu" FromRole="Doctor_Service_cu" ToRole="ServiceCategory_cu" />
           <NavigationProperty Name="ServiceType_p" Relationship="Self.FK_Doctor_Service_CU_ServiceType_p" FromRole="Doctor_Service_cu" ToRole="ServiceType_p" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_Doctor_Service_cu_User_cu" FromRole="Doctor_Service_cu" ToRole="User_cu" />
+        </EntityType>
+        <EntityType Name="Doctor_StationPointStage_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Doctor_CU_ID" Type="Int32" Nullable="false" />
+          <Property Name="StationPointStage_CU_ID" Type="Int32" Nullable="false" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <Property Name="InsertedBy" Type="Int32" />
+          <NavigationProperty Name="Doctor_cu" Relationship="Self.FK_Doctor_StationPointStage_cu_Doctor_cu" FromRole="Doctor_StationPointStage_cu" ToRole="Doctor_cu" />
+          <NavigationProperty Name="StationPointStage_cu" Relationship="Self.FK_Doctor_StationPointStage_cu_StationPointStage_cu" FromRole="Doctor_StationPointStage_cu" ToRole="StationPointStage_cu" />
+          <NavigationProperty Name="User_cu" Relationship="Self.FK_Doctor_StationPointStage_cu_User_cu" FromRole="Doctor_StationPointStage_cu" ToRole="User_cu" />
         </EntityType>
         <EntityType Name="Doctor_Symptoms_cu">
           <Key>
@@ -14334,6 +14585,7 @@
           <NavigationProperty Name="Service_cu2" Relationship="Self.FK_Service_cu_Service_cu" FromRole="Service_cu1" ToRole="Service_cu" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_Service_cu_User_cu" FromRole="Service_cu" ToRole="User_cu" />
           <NavigationProperty Name="Service_StationPoint_cu" Relationship="Self.FK_Service_StationPoint_cu_Service_cu" FromRole="Service_cu" ToRole="Service_StationPoint_cu" />
+          <NavigationProperty Name="Service_StationPointStage_cu" Relationship="Self.FK_Service_StationPointStage_cu_Service_cu" FromRole="Service_cu" ToRole="Service_StationPointStage_cu" />
           <NavigationProperty Name="Service_Surcharge_cu" Relationship="Self.FK_Service_SurchargeType_cu_Service_cu" FromRole="Service_cu" ToRole="Service_Surcharge_cu" />
           <NavigationProperty Name="ServicePrice_cu" Relationship="Self.FK_ServicePrice_cu_Service_cu" FromRole="Service_cu" ToRole="ServicePrice_cu" />
           <NavigationProperty Name="VisitTiming_InvestigationReservation" Relationship="Self.FK_VisitTiming_InvestigationReservation_Service_cu" FromRole="Service_cu" ToRole="VisitTiming_InvestigationReservation" />
@@ -14352,6 +14604,19 @@
           <NavigationProperty Name="Service_cu" Relationship="Self.FK_Service_StationPoint_cu_Service_cu" FromRole="Service_StationPoint_cu" ToRole="Service_cu" />
           <NavigationProperty Name="StationPoint_cu" Relationship="Self.FK_Service_StationPoint_cu_StationPoint_cu" FromRole="Service_StationPoint_cu" ToRole="StationPoint_cu" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_Service_StationPoint_cu_User_cu" FromRole="Service_StationPoint_cu" ToRole="User_cu" />
+        </EntityType>
+        <EntityType Name="Service_StationPointStage_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Service_CU_ID" Type="Int32" Nullable="false" />
+          <Property Name="StationPointStage_CU_ID" Type="Int32" Nullable="false" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <Property Name="InsertedBy" Type="Int32" />
+          <NavigationProperty Name="Service_cu" Relationship="Self.FK_Service_StationPointStage_cu_Service_cu" FromRole="Service_StationPointStage_cu" ToRole="Service_cu" />
+          <NavigationProperty Name="StationPointStage_cu" Relationship="Self.FK_Service_StationPointStage_cu_StationPointStage_cu" FromRole="Service_StationPointStage_cu" ToRole="StationPointStage_cu" />
+          <NavigationProperty Name="User_cu" Relationship="Self.FK_Service_StationPointStage_cu_User_cu" FromRole="Service_StationPointStage_cu" ToRole="User_cu" />
         </EntityType>
         <EntityType Name="Service_Surcharge_cu">
           <Key>
@@ -14391,6 +14656,7 @@
           <NavigationProperty Name="ServiceType_p" Relationship="Self.FK_InvoiceServiceCategory_cu_InvoiceServiceType_p" FromRole="ServiceCategory_cu" ToRole="ServiceType_p" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_ServiceCategory_cu_User_cu" FromRole="ServiceCategory_cu" ToRole="User_cu" />
           <NavigationProperty Name="ServiceCategory_StationPoint_cu" Relationship="Self.FK_ServiceCategory_StationPoint_cu_ServiceCategory_cu" FromRole="ServiceCategory_cu" ToRole="ServiceCategory_StationPoint_cu" />
+          <NavigationProperty Name="ServiceCategory_StationPointStage_cu" Relationship="Self.FK_ServiceCategory_StationPointStage_cu_ServiceCategory_cu" FromRole="ServiceCategory_cu" ToRole="ServiceCategory_StationPointStage_cu" />
           <NavigationProperty Name="ServiceCategory_Surcharge_cu" Relationship="Self.FK_ServiceCategory_Surcharge_cu_ServiceCategory_cu" FromRole="ServiceCategory_cu" ToRole="ServiceCategory_Surcharge_cu" />
           <NavigationProperty Name="ServicePrice_cu" Relationship="Self.FK_ServicePrice_cu_ServiceCategory_cu" FromRole="ServiceCategory_cu" ToRole="ServicePrice_cu" />
         </EntityType>
@@ -14406,6 +14672,19 @@
           <NavigationProperty Name="ServiceCategory_cu" Relationship="Self.FK_ServiceCategory_StationPoint_cu_ServiceCategory_cu" FromRole="ServiceCategory_StationPoint_cu" ToRole="ServiceCategory_cu" />
           <NavigationProperty Name="StationPoint_cu" Relationship="Self.FK_ServiceCategory_StationPoint_cu_StationPoint_cu" FromRole="ServiceCategory_StationPoint_cu" ToRole="StationPoint_cu" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_ServiceCategory_StationPoint_cu_User_cu" FromRole="ServiceCategory_StationPoint_cu" ToRole="User_cu" />
+        </EntityType>
+        <EntityType Name="ServiceCategory_StationPointStage_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceCategory_CU_ID" Type="Int32" Nullable="false" />
+          <Property Name="StationPointStage_CU_ID" Type="Int32" Nullable="false" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <Property Name="InsertedBy" Type="Int32" />
+          <NavigationProperty Name="ServiceCategory_cu" Relationship="Self.FK_ServiceCategory_StationPointStage_cu_ServiceCategory_cu" FromRole="ServiceCategory_StationPointStage_cu" ToRole="ServiceCategory_cu" />
+          <NavigationProperty Name="StationPointStage_cu" Relationship="Self.FK_ServiceCategory_StationPointStage_cu_StationPointStage_cu" FromRole="ServiceCategory_StationPointStage_cu" ToRole="StationPointStage_cu" />
+          <NavigationProperty Name="User_cu" Relationship="Self.FK_ServiceCategory_StationPointStage_cu_User_cu" FromRole="ServiceCategory_StationPointStage_cu" ToRole="User_cu" />
         </EntityType>
         <EntityType Name="ServiceCategory_Surcharge_cu">
           <Key>
@@ -14476,6 +14755,7 @@
           <NavigationProperty Name="ServiceCategory_cu" Relationship="Self.FK_InvoiceServiceCategory_cu_InvoiceServiceType_p" FromRole="ServiceType_p" ToRole="ServiceCategory_cu" />
           <NavigationProperty Name="ServiceType_ChartOfAccount_cu" Relationship="Self.FK_ServiceType_ChartOfAccount_cu_ServiceType_p" FromRole="ServiceType_p" ToRole="ServiceType_ChartOfAccount_cu" />
           <NavigationProperty Name="ServiceType_StationPoint_cu" Relationship="Self.FK_ServiceType_StationPoint_cu_ServiceType_p" FromRole="ServiceType_p" ToRole="ServiceType_StationPoint_cu" />
+          <NavigationProperty Name="ServiceType_StationPointStage_cu" Relationship="Self.FK_ServiceType_StationPointStage_cu_ServiceType_p" FromRole="ServiceType_p" ToRole="ServiceType_StationPointStage_cu" />
           <NavigationProperty Name="ServiceType_Surcharge_cu" Relationship="Self.FK_ServiceType_Surcharge_cu_ServiceType_p" FromRole="ServiceType_p" ToRole="ServiceType_Surcharge_cu" />
         </EntityType>
         <EntityType Name="ServiceType_StationPoint_cu">
@@ -14490,6 +14770,19 @@
           <NavigationProperty Name="ServiceType_p" Relationship="Self.FK_ServiceType_StationPoint_cu_ServiceType_p" FromRole="ServiceType_StationPoint_cu" ToRole="ServiceType_p" />
           <NavigationProperty Name="StationPoint_cu" Relationship="Self.FK_ServiceType_StationPoint_cu_StationPoint_cu" FromRole="ServiceType_StationPoint_cu" ToRole="StationPoint_cu" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_ServiceType_StationPoint_cu_User_cu" FromRole="ServiceType_StationPoint_cu" ToRole="User_cu" />
+        </EntityType>
+        <EntityType Name="ServiceType_StationPointStage_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceType_P_ID" Type="Int32" Nullable="false" />
+          <Property Name="StationPointStage_CU_ID" Type="Int32" Nullable="false" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <Property Name="InsertedBy" Type="Int32" />
+          <NavigationProperty Name="ServiceType_p" Relationship="Self.FK_ServiceType_StationPointStage_cu_ServiceType_p" FromRole="ServiceType_StationPointStage_cu" ToRole="ServiceType_p" />
+          <NavigationProperty Name="StationPointStage_cu" Relationship="Self.FK_ServiceType_StationPointStage_cu_StationPointStage_cu" FromRole="ServiceType_StationPointStage_cu" ToRole="StationPointStage_cu" />
+          <NavigationProperty Name="User_cu" Relationship="Self.FK_ServiceType_StationPointStage_cu_User_cu" FromRole="ServiceType_StationPointStage_cu" ToRole="User_cu" />
         </EntityType>
         <EntityType Name="ServiceType_Surcharge_cu">
           <Key>
@@ -14527,6 +14820,7 @@
           <Property Name="Name_P" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Name_S" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="Station_P_ID" Type="Int32" Nullable="false" />
+          <Property Name="MaxAdmissionCount" Type="Double" />
           <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
           <Property Name="InternalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
@@ -14551,14 +14845,18 @@
           <Property Name="StationPoint_CU_ID" Type="Int32" Nullable="false" />
           <Property Name="Floor_CU_ID" Type="Int32" />
           <Property Name="ServingApplication_P_ID" Type="Int32" />
-          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
           <Property Name="OrderIndex" Type="Int32" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
           <Property Name="InternalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="InsertedBy" Type="Int32" />
           <NavigationProperty Name="Application_p" Relationship="Self.FK_StationPointStage_cu_Application_p" FromRole="StationPointStage_cu" ToRole="Application_p" />
+          <NavigationProperty Name="Doctor_StationPointStage_cu" Relationship="Self.FK_Doctor_StationPointStage_cu_StationPointStage_cu" FromRole="StationPointStage_cu" ToRole="Doctor_StationPointStage_cu" />
           <NavigationProperty Name="Floor_cu" Relationship="Self.FK_StationPointStage_cu_Floor_cu" FromRole="StationPointStage_cu" ToRole="Floor_cu" />
           <NavigationProperty Name="QueueManagers" Relationship="Self.FK_QueueManager_StationPointStage_cu" FromRole="StationPointStage_cu" ToRole="QueueManager" />
+          <NavigationProperty Name="Service_StationPointStage_cu" Relationship="Self.FK_Service_StationPointStage_cu_StationPointStage_cu" FromRole="StationPointStage_cu" ToRole="Service_StationPointStage_cu" />
+          <NavigationProperty Name="ServiceCategory_StationPointStage_cu" Relationship="Self.FK_ServiceCategory_StationPointStage_cu_StationPointStage_cu" FromRole="StationPointStage_cu" ToRole="ServiceCategory_StationPointStage_cu" />
+          <NavigationProperty Name="ServiceType_StationPointStage_cu" Relationship="Self.FK_ServiceType_StationPointStage_cu_StationPointStage_cu" FromRole="StationPointStage_cu" ToRole="ServiceType_StationPointStage_cu" />
           <NavigationProperty Name="StationPoint_cu" Relationship="Self.FK_StationPointStage_cu_StationPoint_cu" FromRole="StationPointStage_cu" ToRole="StationPoint_cu" />
           <NavigationProperty Name="VisitTimings" Relationship="Self.FK_PatientVisitTiming_StationPointStage_cu" FromRole="StationPointStage_cu" ToRole="VisitTiming" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_StationPointStage_cu_User_cu" FromRole="StationPointStage_cu" ToRole="User_cu" />
@@ -14902,6 +15200,7 @@
           <NavigationProperty Name="Doctor_Diagnosis_cu" Relationship="Self.FK_Doctor_Diagnosis_cu_User_cu" FromRole="User_cu" ToRole="Doctor_Diagnosis_cu" />
           <NavigationProperty Name="Doctor_DiagnosisCategory_cu" Relationship="Self.FK_Doctor_DiagnosisCategory_cu_User_cu" FromRole="User_cu" ToRole="Doctor_DiagnosisCategory_cu" />
           <NavigationProperty Name="Doctor_Service_cu" Relationship="Self.FK_Doctor_Service_cu_User_cu" FromRole="User_cu" ToRole="Doctor_Service_cu" />
+          <NavigationProperty Name="Doctor_StationPointStage_cu" Relationship="Self.FK_Doctor_StationPointStage_cu_User_cu" FromRole="User_cu" ToRole="Doctor_StationPointStage_cu" />
           <NavigationProperty Name="Doctor_Symptoms_cu" Relationship="Self.FK_Doctor_Symptoms_cu_User_cu" FromRole="User_cu" ToRole="Doctor_Symptoms_cu" />
           <NavigationProperty Name="Doctor_SymptomsCategory_cu" Relationship="Self.FK_Doctor_SymptomsCategory_cu_User_cu" FromRole="User_cu" ToRole="Doctor_SymptomsCategory_cu" />
           <NavigationProperty Name="DoctorCategory_cu" Relationship="Self.FK_DoctorCategory_cu_User_cu" FromRole="User_cu" ToRole="DoctorCategory_cu" />
@@ -14980,13 +15279,16 @@
           <NavigationProperty Name="SegmentSignCategory_cu" Relationship="Self.FK_SegmentSignCategory_cu_User_cu" FromRole="User_cu" ToRole="SegmentSignCategory_cu" />
           <NavigationProperty Name="Service_cu" Relationship="Self.FK_Service_cu_User_cu" FromRole="User_cu" ToRole="Service_cu" />
           <NavigationProperty Name="Service_StationPoint_cu" Relationship="Self.FK_Service_StationPoint_cu_User_cu" FromRole="User_cu" ToRole="Service_StationPoint_cu" />
+          <NavigationProperty Name="Service_StationPointStage_cu" Relationship="Self.FK_Service_StationPointStage_cu_User_cu" FromRole="User_cu" ToRole="Service_StationPointStage_cu" />
           <NavigationProperty Name="Service_Surcharge_cu" Relationship="Self.FK_Service_Surcharge_cu_User_cu" FromRole="User_cu" ToRole="Service_Surcharge_cu" />
           <NavigationProperty Name="ServiceCategory_cu" Relationship="Self.FK_ServiceCategory_cu_User_cu" FromRole="User_cu" ToRole="ServiceCategory_cu" />
           <NavigationProperty Name="ServiceCategory_StationPoint_cu" Relationship="Self.FK_ServiceCategory_StationPoint_cu_User_cu" FromRole="User_cu" ToRole="ServiceCategory_StationPoint_cu" />
+          <NavigationProperty Name="ServiceCategory_StationPointStage_cu" Relationship="Self.FK_ServiceCategory_StationPointStage_cu_User_cu" FromRole="User_cu" ToRole="ServiceCategory_StationPointStage_cu" />
           <NavigationProperty Name="ServiceCategory_Surcharge_cu" Relationship="Self.FK_ServiceCategory_Surcharge_cu_User_cu" FromRole="User_cu" ToRole="ServiceCategory_Surcharge_cu" />
           <NavigationProperty Name="ServicePrice_cu" Relationship="Self.FK_ServicePrice_cu_User_cu" FromRole="User_cu" ToRole="ServicePrice_cu" />
           <NavigationProperty Name="ServiceType_ChartOfAccount_cu" Relationship="Self.FK_ServiceType_ChartOfAccount_cu_User_cu" FromRole="User_cu" ToRole="ServiceType_ChartOfAccount_cu" />
           <NavigationProperty Name="ServiceType_StationPoint_cu" Relationship="Self.FK_ServiceType_StationPoint_cu_User_cu" FromRole="User_cu" ToRole="ServiceType_StationPoint_cu" />
+          <NavigationProperty Name="ServiceType_StationPointStage_cu" Relationship="Self.FK_ServiceType_StationPointStage_cu_User_cu" FromRole="User_cu" ToRole="ServiceType_StationPointStage_cu" />
           <NavigationProperty Name="ServiceType_Surcharge_cu" Relationship="Self.FK_ServiceType_Surcharge_cu_User_cu" FromRole="User_cu" ToRole="ServiceType_Surcharge_cu" />
           <NavigationProperty Name="StationPoint_cu" Relationship="Self.FK_StationPoint_cu_User_cu" FromRole="User_cu" ToRole="StationPoint_cu" />
           <NavigationProperty Name="StationPointStage_cu" Relationship="Self.FK_StationPointStage_cu_User_cu" FromRole="User_cu" ToRole="StationPointStage_cu" />
@@ -16262,7 +16564,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu">
+        <Association Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p">
           <End Role="ChartOfAccountCodeMargin_p" Type="Self.ChartOfAccountCodeMargin_p" Multiplicity="1" />
           <End Role="ChartOfAccount_cu" Type="Self.ChartOfAccount_cu" Multiplicity="*" />
           <ReferentialConstraint>
@@ -17270,6 +17572,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Doctor_StationPointStage_cu_Doctor_cu">
+          <End Role="Doctor_cu" Type="Self.Doctor_cu" Multiplicity="1" />
+          <End Role="Doctor_StationPointStage_cu" Type="Self.Doctor_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="Doctor_StationPointStage_cu">
+              <PropertyRef Name="Doctor_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Doctor_Symptoms_cu_Doctor_cu">
           <End Role="Doctor_cu" Type="Self.Doctor_cu" Multiplicity="1" />
           <End Role="Doctor_Symptoms_cu" Type="Self.Doctor_Symptoms_cu" Multiplicity="*" />
@@ -17410,6 +17724,30 @@
               <PropertyRef Name="Person_CU_ID" />
             </Principal>
             <Dependent Role="Doctor_Service_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Doctor_StationPointStage_cu_StationPointStage_cu">
+          <End Role="StationPointStage_cu" Type="Self.StationPointStage_cu" Multiplicity="1" />
+          <End Role="Doctor_StationPointStage_cu" Type="Self.Doctor_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationPointStage_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Doctor_StationPointStage_cu">
+              <PropertyRef Name="StationPointStage_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Doctor_StationPointStage_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="Doctor_StationPointStage_cu" Type="Self.Doctor_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="Doctor_StationPointStage_cu">
               <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
@@ -20486,6 +20824,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Service_StationPointStage_cu_Service_cu">
+          <End Role="Service_cu" Type="Self.Service_cu" Multiplicity="1" />
+          <End Role="Service_StationPointStage_cu" Type="Self.Service_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Service_StationPointStage_cu">
+              <PropertyRef Name="Service_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Service_SurchargeType_cu_Service_cu">
           <End Role="Service_cu" Type="Self.Service_cu" Multiplicity="1" />
           <End Role="Service_Surcharge_cu" Type="Self.Service_Surcharge_cu" Multiplicity="*" />
@@ -20570,6 +20920,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Service_StationPointStage_cu_StationPointStage_cu">
+          <End Role="StationPointStage_cu" Type="Self.StationPointStage_cu" Multiplicity="1" />
+          <End Role="Service_StationPointStage_cu" Type="Self.Service_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationPointStage_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Service_StationPointStage_cu">
+              <PropertyRef Name="StationPointStage_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Service_StationPointStage_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="Service_StationPointStage_cu" Type="Self.Service_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="Service_StationPointStage_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Service_Surcharge_cu_User_cu">
           <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
           <End Role="Service_Surcharge_cu" Type="Self.Service_Surcharge_cu" Multiplicity="*" />
@@ -20630,6 +21004,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ServiceCategory_StationPointStage_cu_ServiceCategory_cu">
+          <End Role="ServiceCategory_cu" Type="Self.ServiceCategory_cu" Multiplicity="1" />
+          <End Role="ServiceCategory_StationPointStage_cu" Type="Self.ServiceCategory_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceCategory_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServiceCategory_StationPointStage_cu">
+              <PropertyRef Name="ServiceCategory_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ServiceCategory_Surcharge_cu_ServiceCategory_cu">
           <End Role="ServiceCategory_cu" Type="Self.ServiceCategory_cu" Multiplicity="1" />
           <End Role="ServiceCategory_Surcharge_cu" Type="Self.ServiceCategory_Surcharge_cu" Multiplicity="*" />
@@ -20674,6 +21060,30 @@
               <PropertyRef Name="Person_CU_ID" />
             </Principal>
             <Dependent Role="ServiceCategory_StationPoint_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceCategory_StationPointStage_cu_StationPointStage_cu">
+          <End Role="StationPointStage_cu" Type="Self.StationPointStage_cu" Multiplicity="1" />
+          <End Role="ServiceCategory_StationPointStage_cu" Type="Self.ServiceCategory_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationPointStage_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServiceCategory_StationPointStage_cu">
+              <PropertyRef Name="StationPointStage_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceCategory_StationPointStage_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="ServiceCategory_StationPointStage_cu" Type="Self.ServiceCategory_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="ServiceCategory_StationPointStage_cu">
               <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
@@ -20750,6 +21160,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ServiceType_StationPointStage_cu_ServiceType_p">
+          <End Role="ServiceType_p" Type="Self.ServiceType_p" Multiplicity="1" />
+          <End Role="ServiceType_StationPointStage_cu" Type="Self.ServiceType_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServiceType_StationPointStage_cu">
+              <PropertyRef Name="ServiceType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ServiceType_Surcharge_cu_ServiceType_p">
           <End Role="ServiceType_p" Type="Self.ServiceType_p" Multiplicity="1" />
           <End Role="ServiceType_Surcharge_cu" Type="Self.ServiceType_Surcharge_cu" Multiplicity="*" />
@@ -20782,6 +21204,30 @@
               <PropertyRef Name="Person_CU_ID" />
             </Principal>
             <Dependent Role="ServiceType_StationPoint_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceType_StationPointStage_cu_StationPointStage_cu">
+          <End Role="StationPointStage_cu" Type="Self.StationPointStage_cu" Multiplicity="1" />
+          <End Role="ServiceType_StationPointStage_cu" Type="Self.ServiceType_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationPointStage_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServiceType_StationPointStage_cu">
+              <PropertyRef Name="StationPointStage_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceType_StationPointStage_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="ServiceType_StationPointStage_cu" Type="Self.ServiceType_StationPointStage_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="ServiceType_StationPointStage_cu">
               <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
@@ -22065,6 +22511,7 @@
           <EntitySet Name="Doctor_Diagnosis_cu" EntityType="Self.Doctor_Diagnosis_cu" />
           <EntitySet Name="Doctor_DiagnosisCategory_cu" EntityType="Self.Doctor_DiagnosisCategory_cu" />
           <EntitySet Name="Doctor_Service_cu" EntityType="Self.Doctor_Service_cu" />
+          <EntitySet Name="Doctor_StationPointStage_cu" EntityType="Self.Doctor_StationPointStage_cu" />
           <EntitySet Name="Doctor_Symptoms_cu" EntityType="Self.Doctor_Symptoms_cu" />
           <EntitySet Name="Doctor_SymptomsCategory_cu" EntityType="Self.Doctor_SymptomsCategory_cu" />
           <EntitySet Name="DoctorCategory_cu" EntityType="Self.DoctorCategory_cu" />
@@ -22189,14 +22636,17 @@
           <EntitySet Name="Service_ChartOfAccount_cu" EntityType="Self.Service_ChartOfAccount_cu" />
           <EntitySet Name="Service_cu" EntityType="Self.Service_cu" />
           <EntitySet Name="Service_StationPoint_cu" EntityType="Self.Service_StationPoint_cu" />
+          <EntitySet Name="Service_StationPointStage_cu" EntityType="Self.Service_StationPointStage_cu" />
           <EntitySet Name="Service_Surcharge_cu" EntityType="Self.Service_Surcharge_cu" />
           <EntitySet Name="ServiceCategory_cu" EntityType="Self.ServiceCategory_cu" />
           <EntitySet Name="ServiceCategory_StationPoint_cu" EntityType="Self.ServiceCategory_StationPoint_cu" />
+          <EntitySet Name="ServiceCategory_StationPointStage_cu" EntityType="Self.ServiceCategory_StationPointStage_cu" />
           <EntitySet Name="ServiceCategory_Surcharge_cu" EntityType="Self.ServiceCategory_Surcharge_cu" />
           <EntitySet Name="ServicePrice_cu" EntityType="Self.ServicePrice_cu" />
           <EntitySet Name="ServiceType_ChartOfAccount_cu" EntityType="Self.ServiceType_ChartOfAccount_cu" />
           <EntitySet Name="ServiceType_p" EntityType="Self.ServiceType_p" />
           <EntitySet Name="ServiceType_StationPoint_cu" EntityType="Self.ServiceType_StationPoint_cu" />
+          <EntitySet Name="ServiceType_StationPointStage_cu" EntityType="Self.ServiceType_StationPointStage_cu" />
           <EntitySet Name="ServiceType_Surcharge_cu" EntityType="Self.ServiceType_Surcharge_cu" />
           <EntitySet Name="Station_p" EntityType="Self.Station_p" />
           <EntitySet Name="StationPoint_cu" EntityType="Self.StationPoint_cu" />
@@ -22447,7 +22897,7 @@
             <End Role="ChartOfAccount_cu" EntitySet="ChartOfAccount_cu" />
             <End Role="ChartOfAccount_cu1" EntitySet="ChartOfAccount_cu" />
           </AssociationSet>
-          <AssociationSet Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu" Association="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_cu">
+          <AssociationSet Name="FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p" Association="Self.FK_ChartOfAccount_cu_ChartOfAccountCodeMargin_p">
             <End Role="ChartOfAccountCodeMargin_p" EntitySet="ChartOfAccountCodeMargin_p" />
             <End Role="ChartOfAccount_cu" EntitySet="ChartOfAccount_cu" />
           </AssociationSet>
@@ -22783,6 +23233,10 @@
             <End Role="Doctor_cu" EntitySet="Doctor_cu" />
             <End Role="Doctor_Service_cu" EntitySet="Doctor_Service_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_Doctor_StationPointStage_cu_Doctor_cu" Association="Self.FK_Doctor_StationPointStage_cu_Doctor_cu">
+            <End Role="Doctor_cu" EntitySet="Doctor_cu" />
+            <End Role="Doctor_StationPointStage_cu" EntitySet="Doctor_StationPointStage_cu" />
+          </AssociationSet>
           <AssociationSet Name="FK_Doctor_Symptoms_cu_Doctor_cu" Association="Self.FK_Doctor_Symptoms_cu_Doctor_cu">
             <End Role="Doctor_cu" EntitySet="Doctor_cu" />
             <End Role="Doctor_Symptoms_cu" EntitySet="Doctor_Symptoms_cu" />
@@ -22830,6 +23284,14 @@
           <AssociationSet Name="FK_Doctor_Service_cu_User_cu" Association="Self.FK_Doctor_Service_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="Doctor_Service_cu" EntitySet="Doctor_Service_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Doctor_StationPointStage_cu_StationPointStage_cu" Association="Self.FK_Doctor_StationPointStage_cu_StationPointStage_cu">
+            <End Role="StationPointStage_cu" EntitySet="StationPointStage_cu" />
+            <End Role="Doctor_StationPointStage_cu" EntitySet="Doctor_StationPointStage_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Doctor_StationPointStage_cu_User_cu" Association="Self.FK_Doctor_StationPointStage_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="Doctor_StationPointStage_cu" EntitySet="Doctor_StationPointStage_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_Doctor_Symptoms_cu_Symptoms_cu" Association="Self.FK_Doctor_Symptoms_cu_Symptoms_cu">
             <End Role="Symptoms_cu" EntitySet="Symptoms_cu" />
@@ -23855,6 +24317,10 @@
             <End Role="Service_cu" EntitySet="Service_cu" />
             <End Role="Service_StationPoint_cu" EntitySet="Service_StationPoint_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_Service_StationPointStage_cu_Service_cu" Association="Self.FK_Service_StationPointStage_cu_Service_cu">
+            <End Role="Service_cu" EntitySet="Service_cu" />
+            <End Role="Service_StationPointStage_cu" EntitySet="Service_StationPointStage_cu" />
+          </AssociationSet>
           <AssociationSet Name="FK_Service_SurchargeType_cu_Service_cu" Association="Self.FK_Service_SurchargeType_cu_Service_cu">
             <End Role="Service_cu" EntitySet="Service_cu" />
             <End Role="Service_Surcharge_cu" EntitySet="Service_Surcharge_cu" />
@@ -23883,6 +24349,14 @@
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="Service_StationPoint_cu" EntitySet="Service_StationPoint_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_Service_StationPointStage_cu_StationPointStage_cu" Association="Self.FK_Service_StationPointStage_cu_StationPointStage_cu">
+            <End Role="StationPointStage_cu" EntitySet="StationPointStage_cu" />
+            <End Role="Service_StationPointStage_cu" EntitySet="Service_StationPointStage_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Service_StationPointStage_cu_User_cu" Association="Self.FK_Service_StationPointStage_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="Service_StationPointStage_cu" EntitySet="Service_StationPointStage_cu" />
+          </AssociationSet>
           <AssociationSet Name="FK_Service_Surcharge_cu_User_cu" Association="Self.FK_Service_Surcharge_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="Service_Surcharge_cu" EntitySet="Service_Surcharge_cu" />
@@ -23903,6 +24377,10 @@
             <End Role="ServiceCategory_cu" EntitySet="ServiceCategory_cu" />
             <End Role="ServiceCategory_StationPoint_cu" EntitySet="ServiceCategory_StationPoint_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_ServiceCategory_StationPointStage_cu_ServiceCategory_cu" Association="Self.FK_ServiceCategory_StationPointStage_cu_ServiceCategory_cu">
+            <End Role="ServiceCategory_cu" EntitySet="ServiceCategory_cu" />
+            <End Role="ServiceCategory_StationPointStage_cu" EntitySet="ServiceCategory_StationPointStage_cu" />
+          </AssociationSet>
           <AssociationSet Name="FK_ServiceCategory_Surcharge_cu_ServiceCategory_cu" Association="Self.FK_ServiceCategory_Surcharge_cu_ServiceCategory_cu">
             <End Role="ServiceCategory_cu" EntitySet="ServiceCategory_cu" />
             <End Role="ServiceCategory_Surcharge_cu" EntitySet="ServiceCategory_Surcharge_cu" />
@@ -23918,6 +24396,14 @@
           <AssociationSet Name="FK_ServiceCategory_StationPoint_cu_User_cu" Association="Self.FK_ServiceCategory_StationPoint_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="ServiceCategory_StationPoint_cu" EntitySet="ServiceCategory_StationPoint_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceCategory_StationPointStage_cu_StationPointStage_cu" Association="Self.FK_ServiceCategory_StationPointStage_cu_StationPointStage_cu">
+            <End Role="StationPointStage_cu" EntitySet="StationPointStage_cu" />
+            <End Role="ServiceCategory_StationPointStage_cu" EntitySet="ServiceCategory_StationPointStage_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceCategory_StationPointStage_cu_User_cu" Association="Self.FK_ServiceCategory_StationPointStage_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="ServiceCategory_StationPointStage_cu" EntitySet="ServiceCategory_StationPointStage_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_ServiceCategory_Surcharge_cu_Surcharge_cu" Association="Self.FK_ServiceCategory_Surcharge_cu_Surcharge_cu">
             <End Role="Surcharge_cu" EntitySet="Surcharge_cu" />
@@ -23943,6 +24429,10 @@
             <End Role="ServiceType_p" EntitySet="ServiceType_p" />
             <End Role="ServiceType_StationPoint_cu" EntitySet="ServiceType_StationPoint_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_ServiceType_StationPointStage_cu_ServiceType_p" Association="Self.FK_ServiceType_StationPointStage_cu_ServiceType_p">
+            <End Role="ServiceType_p" EntitySet="ServiceType_p" />
+            <End Role="ServiceType_StationPointStage_cu" EntitySet="ServiceType_StationPointStage_cu" />
+          </AssociationSet>
           <AssociationSet Name="FK_ServiceType_Surcharge_cu_ServiceType_p" Association="Self.FK_ServiceType_Surcharge_cu_ServiceType_p">
             <End Role="ServiceType_p" EntitySet="ServiceType_p" />
             <End Role="ServiceType_Surcharge_cu" EntitySet="ServiceType_Surcharge_cu" />
@@ -23954,6 +24444,14 @@
           <AssociationSet Name="FK_ServiceType_StationPoint_cu_User_cu" Association="Self.FK_ServiceType_StationPoint_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="ServiceType_StationPoint_cu" EntitySet="ServiceType_StationPoint_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceType_StationPointStage_cu_StationPointStage_cu" Association="Self.FK_ServiceType_StationPointStage_cu_StationPointStage_cu">
+            <End Role="StationPointStage_cu" EntitySet="StationPointStage_cu" />
+            <End Role="ServiceType_StationPointStage_cu" EntitySet="ServiceType_StationPointStage_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceType_StationPointStage_cu_User_cu" Association="Self.FK_ServiceType_StationPointStage_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="ServiceType_StationPointStage_cu" EntitySet="ServiceType_StationPointStage_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_ServiceType_Surcharge_cu_Surcharge_cu" Association="Self.FK_ServiceType_Surcharge_cu_Surcharge_cu">
             <End Role="Surcharge_cu" EntitySet="Surcharge_cu" />
@@ -25206,6 +25704,17 @@
                 <ScalarProperty Name="Service_CU_ID" ColumnName="Service_CU_ID" />
                 <ScalarProperty Name="ServiceCartegory_CU_ID" ColumnName="ServiceCartegory_CU_ID" />
                 <ScalarProperty Name="ServiceType_P_ID" ColumnName="ServiceType_P_ID" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
+                <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Doctor_StationPointStage_cu">
+            <EntityTypeMapping TypeName="MerkFinanceModel.Doctor_StationPointStage_cu">
+              <MappingFragment StoreEntitySet="Doctor_StationPointStage_cu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Doctor_CU_ID" ColumnName="Doctor_CU_ID" />
+                <ScalarProperty Name="StationPointStage_CU_ID" ColumnName="StationPointStage_CU_ID" />
                 <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
                 <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
               </MappingFragment>
@@ -26846,6 +27355,17 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Service_StationPointStage_cu">
+            <EntityTypeMapping TypeName="MerkFinanceModel.Service_StationPointStage_cu">
+              <MappingFragment StoreEntitySet="Service_StationPointStage_cu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Service_CU_ID" ColumnName="Service_CU_ID" />
+                <ScalarProperty Name="StationPointStage_CU_ID" ColumnName="StationPointStage_CU_ID" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
+                <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Service_Surcharge_cu">
             <EntityTypeMapping TypeName="MerkFinanceModel.Service_Surcharge_cu">
               <MappingFragment StoreEntitySet="Service_Surcharge_cu">
@@ -26883,6 +27403,17 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ServiceCategory_CU_ID" ColumnName="ServiceCategory_CU_ID" />
                 <ScalarProperty Name="StationPoint_CU_ID" ColumnName="StationPoint_CU_ID" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
+                <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceCategory_StationPointStage_cu">
+            <EntityTypeMapping TypeName="MerkFinanceModel.ServiceCategory_StationPointStage_cu">
+              <MappingFragment StoreEntitySet="ServiceCategory_StationPointStage_cu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ServiceCategory_CU_ID" ColumnName="ServiceCategory_CU_ID" />
+                <ScalarProperty Name="StationPointStage_CU_ID" ColumnName="StationPointStage_CU_ID" />
                 <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
                 <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
               </MappingFragment>
@@ -26954,6 +27485,17 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ServiceType_StationPointStage_cu">
+            <EntityTypeMapping TypeName="MerkFinanceModel.ServiceType_StationPointStage_cu">
+              <MappingFragment StoreEntitySet="ServiceType_StationPointStage_cu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ServiceType_P_ID" ColumnName="ServiceType_P_ID" />
+                <ScalarProperty Name="StationPointStage_CU_ID" ColumnName="StationPointStage_CU_ID" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
+                <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="ServiceType_Surcharge_cu">
             <EntityTypeMapping TypeName="MerkFinanceModel.ServiceType_Surcharge_cu">
               <MappingFragment StoreEntitySet="ServiceType_Surcharge_cu">
@@ -26986,6 +27528,7 @@
                 <ScalarProperty Name="Name_P" ColumnName="Name_P" />
                 <ScalarProperty Name="Name_S" ColumnName="Name_S" />
                 <ScalarProperty Name="Station_P_ID" ColumnName="Station_P_ID" />
+                <ScalarProperty Name="MaxAdmissionCount" ColumnName="MaxAdmissionCount" />
                 <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
                 <ScalarProperty Name="InternalCode" ColumnName="InternalCode" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -27002,8 +27545,8 @@
                 <ScalarProperty Name="StationPoint_CU_ID" ColumnName="StationPoint_CU_ID" />
                 <ScalarProperty Name="Floor_CU_ID" ColumnName="Floor_CU_ID" />
                 <ScalarProperty Name="ServingApplication_P_ID" ColumnName="ServingApplication_P_ID" />
-                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
                 <ScalarProperty Name="OrderIndex" ColumnName="OrderIndex" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
                 <ScalarProperty Name="InternalCode" ColumnName="InternalCode" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />

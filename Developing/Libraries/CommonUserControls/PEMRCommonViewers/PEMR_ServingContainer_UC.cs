@@ -11,6 +11,7 @@ using CommonUserControls.SettingsViewers.PatientViewers;
 using DevExpress.Utils;
 using DevExpress.XtraBars.Docking;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGauges.Core.Model;
 using DevExpress.XtraLayout.Utils;
 using DevExpress.XtraTab;
 using MerkDataBaseBusinessLogicProject;
@@ -47,6 +48,9 @@ namespace CommonUserControls.PEMRCommonViewers
 		private PEMR_AdnexaSegment_UC _pemr_Adnexa;
 		private PEMR_ExtraocularMuscles_UC _pemr_EOM;
 		private PEMR_Pupillary_UC _pemr_Pupillary;
+		private int lockTimerCounter = 0;
+		private short _hours, _minutes, _seconds;
+		private string timerStr = "";
 
 		public PEMR_ServingContainer_UC()
 		{
@@ -54,8 +58,98 @@ namespace CommonUserControls.PEMRCommonViewers
 
 			if (ApplicationStaticConfiguration.ActiveLoginUser != null)
 				PEMRBusinessLogic.ActiveLoggedInUser = ApplicationStaticConfiguration.ActiveLoginUser;
+			digitalGauge1.DisplayMode = DigitalGaugeDisplayMode.SevenSegment;
+			digitalGauge1.LetterSpacing = 30;
+			digitalGauge1.DigitCount = 6;
+			digitalGauge1.Text = DateTime.Now.ToString();
 
+			timer.Enabled = true;
+			timer.Start();
 			SetupTabs();
+		}
+
+		private int GetStringLength(string str)
+		{
+			int counter = 0;
+			int pos = 0;
+			while (pos < str.Length)
+			{
+				if (str[pos] != ':')
+					counter++;
+				pos++;
+			}
+			return counter;
+		}
+
+		private void OnTimerTick(object sender, EventArgs e)
+		{
+			if (lockTimerCounter == 0)
+			{
+				lockTimerCounter++;
+				UpdateTime();
+				lockTimerCounter--;
+			}
+		}
+
+		private void UpdateTime()
+		{
+			string time = DateTime.Now.ToLongTimeString();
+			if (GetStringLength(time) > digitalGauge1.DigitCount)
+				digitalGauge1.DigitCount = GetStringLength(time);
+			digitalGauge1.Text = time;
+		}
+
+		private void timer_Tick(object sender, EventArgs e)
+		{
+			IncreaseSeconds();
+			ShowTimer();
+		}
+
+		private void ResetTimers()
+		{
+			_hours = 0;
+			_minutes = 0;
+			_seconds = 0;
+
+			ShowTimer();
+		}
+
+		private void ShowTimer()
+		{
+			timerStr = _hours.ToString("00");
+			timerStr += " : ";
+			timerStr += _minutes.ToString("00");
+			timerStr += " : ";
+			timerStr += _seconds.ToString("00");
+
+			digitalGauge1.Text = timerStr;
+		}
+
+		private void IncreaseSeconds()
+		{
+			if (_seconds == 59)
+			{
+				_seconds = 0;
+				IncreaeMinutes();
+			}
+			else
+				_seconds++;
+		}
+
+		private void IncreaeMinutes()
+		{
+			if (_minutes == 59)
+			{
+				_minutes = 0;
+				IncreaseHours();
+			}
+			else
+				_minutes++;
+		}
+
+		private void IncreaseHours()
+		{
+			_hours++;
 		}
 
 		public void SetupTabs()
@@ -363,7 +457,7 @@ namespace CommonUserControls.PEMRCommonViewers
 		private void btnSendToStage_Click(object sender, EventArgs e)
 		{
 			PEMR_SendToStage_UC sendToStage = new PEMR_SendToStage_UC();
-			sendToStage.Initialize(MerkDBBusinessLogicEngine.ActiveStationPointStage);
+			sendToStage.Initialize(MerkDBBusinessLogicEngine.ActiveStationPointStage, QueueResult);
 			PopupBaseForm.ShowAsPopup(sendToStage, this);
 		}
 

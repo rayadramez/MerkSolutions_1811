@@ -10,8 +10,7 @@ using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 
 namespace CommonUserControls.PEMRCommonViewers
 {
-	public partial class PEMRContainer : 
-		DevExpress.XtraEditors.XtraUserControl
+	public partial class PEMRContainer : XtraUserControl
 	{
 		private PEMRContainer _pemrContainer;
 		private PEMR_PatientCardContainer_UC _pemrQueueContainer;
@@ -34,7 +33,7 @@ namespace CommonUserControls.PEMRCommonViewers
 			lytContainer.Visibility = LayoutVisibility.Always;
 			CommonViewsActions.ShowUserControl(ref _pemrQueueContainer, splitContainerControl1.Panel1);
 			if (ApplicationStaticConfiguration.ActiveLoginUser != null &&
-			    ApplicationStaticConfiguration.ActiveLoginUser.FullName != null)
+				ApplicationStaticConfiguration.ActiveLoginUser.FullName != null)
 				btnUserDropDown.Text = PEMRBusinessLogic.ActiveLoggedInUser.FullName.ToString();
 		}
 
@@ -54,28 +53,36 @@ namespace CommonUserControls.PEMRCommonViewers
 				QueueResult = queueResult;
 				ActiveVisitTiming = visitTiming;
 				InvoiceDetailID = QueueResult.InvoiceDetailID;
-				CommonViewsActions.ShowUserControl(ref _pemrServingContainer, splitContainerControl1.Panel2);
-				if (_pemrServingContainer != null)
+				switch (ApplicationStaticConfiguration.Application)
 				{
-					DB_QueueManagerStatus queueManagerStatus = (DB_QueueManagerStatus)queueResult.QueueStatusID;
-					switch (queueManagerStatus)
-					{
-						case DB_QueueManagerStatus.Waiting:
-							PEMRBusinessLogic.ActivePEMRObject = PEMRBusinessLogic.GetPEMRObject(InvoiceDetailID);
-							PEMRBusinessLogic.ActivePEMRObject.PEMRStatus = PEMRStatus.CreateNewVisit;
-							break;
-					}
+					case DB_Application.PEMR:
+						CommonViewsActions.ShowUserControl(ref _pemrServingContainer, splitContainerControl1.Panel2);
+						if (_pemrServingContainer != null)
+						{
+							DB_QueueManagerStatus queueManagerStatus = (DB_QueueManagerStatus)queueResult.QueueStatusID;
+							switch (queueManagerStatus)
+							{
+								case DB_QueueManagerStatus.Waiting:
+									PEMRBusinessLogic.ActivePEMRObject = PEMRBusinessLogic.GetPEMRObject(InvoiceDetailID);
+									PEMRBusinessLogic.ActivePEMRObject.PEMRStatus = PEMRStatus.CreateNewVisit;
+									break;
+							}
 
-					_pemrServingContainer.InitializePatientInfo(this, QueueResult, ActiveVisitTiming,
-						PEMRBusinessLogic.ActivePEMRObject);
-					MerkDBBusinessLogicEngine.UpdateAndSave_QueueManagerStatus(queueResult.QueueManagerID,
-						DB_QueueManagerStatus.Serving);
-					lytPatientQueue.Visibility = LayoutVisibility.Never;
-					lytPreviousVisits.Visibility = LayoutVisibility.Never;
-					emptySpaceItem1.Visibility = LayoutVisibility.Never;
-					if (ApplicationStaticConfiguration.ActiveLoginUser != null &&
-						ApplicationStaticConfiguration.ActiveLoginUser.FullName != null)
-						btnUserDropDown.Text = PEMRBusinessLogic.ActiveLoggedInUser.FullName.ToString();
+							_pemrServingContainer.InitializePatientInfo(this, QueueResult, ActiveVisitTiming,
+								PEMRBusinessLogic.ActivePEMRObject);
+							MerkDBBusinessLogicEngine.UpdateAndSave_QueueManagerStatus(queueResult.QueueManagerID,
+								DB_QueueManagerStatus.Serving);
+							lytPatientQueue.Visibility = LayoutVisibility.Never;
+							lytPreviousVisits.Visibility = LayoutVisibility.Never;
+							emptySpaceItem1.Visibility = LayoutVisibility.Never;
+							if (ApplicationStaticConfiguration.ActiveLoginUser != null &&
+							    ApplicationStaticConfiguration.ActiveLoginUser.FullName != null)
+								btnUserDropDown.Text = PEMRBusinessLogic.ActiveLoggedInUser.FullName.ToString();
+						}
+						break;
+					case DB_Application.OphalmologySurgeryApplication:
+
+						break;
 				}
 			}
 			else

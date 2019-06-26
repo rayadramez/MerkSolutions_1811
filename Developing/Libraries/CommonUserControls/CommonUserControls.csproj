@@ -53,6 +53,7 @@
     <Reference Include="DevExpress.XtraCharts.v15.1.Wizard, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Win, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -231,6 +232,18 @@
     </Compile>
     <Compile Include="MerkFinanceCommonViewers\MainHomeScreen_UC.Designer.cs">
       <DependentUpon>MainHomeScreen_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\Choose_PEMR_VS_Surgery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\Choose_PEMR_VS_Surgery.Designer.cs">
+      <DependentUpon>Choose_PEMR_VS_Surgery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_ChooseApplication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PEMRCommonViewers\PEMR_ChooseApplication.Designer.cs">
+      <DependentUpon>PEMR_ChooseApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="PEMRCommonViewers\PEMR_DoneServingChoosing_UC.cs">
       <SubType>UserControl</SubType>
@@ -1223,6 +1236,12 @@
     <Compile Include="SettingsViewers\User_UserGroupViewers\User_UserGroup_SearchViewer.Designer.cs">
       <DependentUpon>User_UserGroup_SearchViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="SurgeryRoomApplicationCommonViewers\Surgery_ServingConatiner_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SurgeryRoomApplicationCommonViewers\Surgery_ServingConatiner_UC.Designer.cs">
+      <DependentUpon>Surgery_ServingConatiner_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1296,11 +1315,17 @@
     <EmbeddedResource Include="MerkFinanceCommonViewers\MainHomeScreen_UC.resx">
       <DependentUpon>MainHomeScreen_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\Choose_PEMR_VS_Surgery.resx">
+      <DependentUpon>Choose_PEMR_VS_Surgery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PEMRCommonViewers\PEMRPatientQueueCard.resx">
       <DependentUpon>PEMRPatientQueueCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PEMRCommonViewers\PEMRContainer.resx">
       <DependentUpon>PEMRContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEMRCommonViewers\PEMR_ChooseApplication.resx">
+      <DependentUpon>PEMR_ChooseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PEMRCommonViewers\PEMR_DoneServingChoosing_UC.resx">
       <DependentUpon>PEMR_DoneServingChoosing_UC.cs</DependentUpon>
@@ -1773,6 +1798,9 @@
     <EmbeddedResource Include="SettingsViewers\User_UserGroupViewers\User_UserGroup_SearchViewer.resx">
       <DependentUpon>User_UserGroup_SearchViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SurgeryRoomApplicationCommonViewers\Surgery_ServingConatiner_UC.resx">
+      <DependentUpon>Surgery_ServingConatiner_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
@@ -1815,6 +1843,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\lyt_PEMR_PatientCardContainer_Surgery_UC.xml" />
+    <None Include="Resources\lyt_MedicalAdmissionInvoiceCreation_OneDaySurgery_UC.xml" />
     <None Include="Resources\InvoiceOutIcon_01.png" />
     <None Include="Resources\InvoiceInIcon_01.png" />
     <None Include="Resources\SaveIcon_16_101.png" />

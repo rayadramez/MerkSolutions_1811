@@ -39,7 +39,8 @@ namespace CommonUserControls.PEMRCommonViewers
 			DoctorID = Convert.ToInt32(queueResult.DoctorID);
 			DoctorName = queueResult.DoctorFullName;
 			ServiceName = queueResult.ServiceName;
-			ReservationDateTime = Convert.ToDateTime(queueResult.ReservationTime).ConvertDateTimeToString(true, true, true);
+			ReservationDateTime = Convert.ToDateTime(queueResult.ReservationTime)
+				.ConvertDateTimeToString(true, true, true);
 
 			lblPatientID.Text = PatientID.ToString();
 			lblPatientName.Text = PatientName;

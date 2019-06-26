@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using ApplicationConfiguration;
 using CommonUserControls.CommonViewers;
+using CommonUserControls.PEMRCommonViewers;
 using DevExpress.LookAndFeel;
 using DevExpress.Skins;
 using DevExpress.UserSkins;
@@ -24,17 +25,23 @@ namespace Dental_EMR
 			SkinManager.EnableFormSkins();
 
 			DialogResult result = DialogResult.None;
-			ApplicationStaticConfiguration.Application = DB_Application.PEMR;
-			if (ApplicationStaticConfiguration.LoadApplicationConfiguration())
+			Choose_PEMR_VS_Surgery choose = new Choose_PEMR_VS_Surgery();
+			result = choose.ShowDialog();
+			switch (result)
 			{
-				DBBusinessLogicLibrary.LoadDBItemsList();
-				result = Login_UC.ShowLoginScreen();
+				case DialogResult.Cancel:
+					if (ApplicationStaticConfiguration.LoadApplicationConfiguration())
+					{
+						DBBusinessLogicLibrary.LoadDBItemsList();
+						result = Login_UC.ShowLoginScreen();
+					}
+					break;
 			}
 
 			switch (result)
 			{
 				case DialogResult.OK:
-					MerkDBBusinessLogicEngine.Private_StationPoint = ApplicationStaticConfiguration.StationPoint;
+					MerkDBBusinessLogicEngine.Private_StationPoint = ApplicationStaticConfiguration.Station;
 					UserLookAndFeel.Default.SetSkinStyle(ApplicationStaticConfiguration.SkinName);
 					if (ApplicationStaticConfiguration.SkinColor != null)
 						UserLookAndFeel.Default.SkinMaskColor = Color.FromArgb(

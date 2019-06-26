@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.btnStage = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
@@ -48,18 +48,6 @@
 			this.layoutControl1.Size = new System.Drawing.Size(315, 54);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
-			// 
-			// layoutControlGroup1
-			// 
-			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-			this.layoutControlGroup1.GroupBordersVisible = false;
-			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
-			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlGroup1.Name = "layoutControlGroup1";
-			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup1.Size = new System.Drawing.Size(315, 54);
-			this.layoutControlGroup1.TextVisible = false;
 			// 
 			// btnStage
 			// 
@@ -80,6 +68,18 @@
 			this.btnStage.TabIndex = 9;
 			this.btnStage.Text = "Sample Stage";
 			this.btnStage.Click += new System.EventHandler(this.btnStage_Click);
+			// 
+			// layoutControlGroup1
+			// 
+			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+			this.layoutControlGroup1.GroupBordersVisible = false;
+			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlGroup1.Name = "layoutControlGroup1";
+			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlGroup1.Size = new System.Drawing.Size(315, 54);
+			this.layoutControlGroup1.TextVisible = false;
 			// 
 			// layoutControlItem1
 			// 

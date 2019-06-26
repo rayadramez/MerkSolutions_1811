@@ -102,7 +102,7 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 				invoicePayment.PaymentType_P_ID = (int)DB_PaymentType.CashPayment;
 				invoicePayment.PaymentSerial = "123";
 				invoicePayment.IsOnDuty = true;
-				invoicePayment.Description = "sdfsdfsdf";
+				invoicePayment.Description = ((Invoice)ActiveDBItem).Description;
 				invoicePayment.IsRemainingReturned = Convert.ToBoolean(IsRemainingReturned);
 				if (UserID != null)
 					invoicePayment.InsertedBy = Convert.ToInt32(UserID);
@@ -451,6 +451,19 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 		{
 			get { return ((IPatientInvoiceCreation)ActiveCollector.ActiveViewer).SurchargeAmount; }
 		}
+
+		public object StationPointID
+		{
+			get { return ((IPatientInvoiceCreation)ActiveCollector.ActiveViewer).StationPointID; }
+			set { ((IPatientInvoiceCreation)ActiveCollector.ActiveViewer).StationPointID = value; }
+		}
+
+		public object StationPointStageID
+		{
+			get { return ((IPatientInvoiceCreation)ActiveCollector.ActiveViewer).StationPointStageID; }
+			set { ((IPatientInvoiceCreation)ActiveCollector.ActiveViewer).StationPointStageID = value; }
+		}
+
 
 		public List<InvoiceDetail> Grid_InvoiceDetails
 		{

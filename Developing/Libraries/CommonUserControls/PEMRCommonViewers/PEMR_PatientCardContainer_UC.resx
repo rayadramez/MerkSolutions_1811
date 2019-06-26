@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnRefresh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>459, 47</value>
+    <value>447, 47</value>
   </data>
   <data name="btnRefresh.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
@@ -163,7 +163,7 @@
     <value>0, 3</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>505, 3</value>
+    <value>493, 3</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -218,7 +218,7 @@
     <value>No</value>
   </data>
   <data name="lkeStationPointStages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>426, 25</value>
+    <value>415, 25</value>
   </data>
   <data name="lkeStationPointStages.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -248,7 +248,7 @@
     <value>0, 3</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>505, 3</value>
+    <value>493, 3</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -266,10 +266,10 @@
     <value>7</value>
   </data>
   <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>431, 6</value>
+    <value>420, 6</value>
   </data>
   <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 22</value>
+    <value>73, 22</value>
   </data>
   <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -337,7 +337,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="tabWaiting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>491, 336</value>
+    <value>479, 324</value>
   </data>
   <data name="tabWaiting.Text" xml:space="preserve">
     <value>Waiting</value>
@@ -355,7 +355,7 @@
     <value>2</value>
   </data>
   <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>499, 366</value>
+    <value>487, 354</value>
   </data>
   <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -379,7 +379,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="tabServed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>493, 338</value>
+    <value>481, 326</value>
   </data>
   <data name="tabServed.Text" xml:space="preserve">
     <value>Served</value>
@@ -415,7 +415,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="tabPaused.Size" type="System.Drawing.Size, System.Drawing">
-    <value>493, 338</value>
+    <value>481, 326</value>
   </data>
   <data name="tabPaused.Text" xml:space="preserve">
     <value>Paused</value>
@@ -445,13 +445,13 @@
     <value>9</value>
   </data>
   <data name="txtPatientName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 6</value>
+    <value>210, 6</value>
   </data>
   <data name="txtPatientName.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="txtPatientName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
+    <value>204, 20</value>
   </data>
   <data name="txtPatientName.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -475,7 +475,7 @@
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
   <data name="txtPatientID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 20</value>
+    <value>92, 20</value>
   </data>
   <data name="txtPatientID.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -498,14 +498,32 @@
   <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="layoutControlGroup1.CustomizationFormText" xml:space="preserve">
+    <value>Root</value>
+  </data>
   <data name="layoutControlItem1.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
+  </data>
+  <data name="layoutControlItem1.CustomizationFormText" xml:space="preserve">
+    <value>Pt. Code</value>
   </data>
   <data name="layoutControlItem1.Text" xml:space="preserve">
     <value>Pt. Code</value>
   </data>
+  <data name="layoutControlItem3.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="layoutControlItem5.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem5</value>
+  </data>
+  <data name="layoutControlItem4.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem4</value>
+  </data>
   <data name="lytName.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
+  </data>
+  <data name="lytName.CustomizationFormText" xml:space="preserve">
+    <value>Pt. Name</value>
   </data>
   <data name="lytName.Text" xml:space="preserve">
     <value>Pt. Name</value>
@@ -513,11 +531,26 @@
   <data name="layoutControlItem2.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 10pt, style=Bold</value>
   </data>
+  <data name="layoutControlItem2.CustomizationFormText" xml:space="preserve">
+    <value>Stage</value>
+  </data>
   <data name="layoutControlItem2.Text" xml:space="preserve">
     <value>Stage</value>
   </data>
+  <data name="layoutControlItem6.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem6</value>
+  </data>
+  <data name="layoutControlItem7.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem7</value>
+  </data>
+  <data name="emptySpaceItem1.CustomizationFormText" xml:space="preserve">
+    <value>emptySpaceItem1</value>
+  </data>
+  <data name="emptySpaceItem2.CustomizationFormText" xml:space="preserve">
+    <value>emptySpaceItem2</value>
+  </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>511, 470</value>
+    <value>499, 458</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -553,7 +586,7 @@
     <value>Yes</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>511, 470</value>
+    <value>499, 458</value>
   </data>
   <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
     <value>gridView1</value>

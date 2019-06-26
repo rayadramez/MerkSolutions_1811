@@ -26,6 +26,8 @@ namespace MVCBusinessLogicLibrary.Viewers
 		object IsStampApplied { get; set; }
 		object StampAmount { get; }
 		object SurchargeAmount { get; }
+		object StationPointID { get; set; }
+		object StationPointStageID { get; set; }
 		List<InvoiceDetail> Grid_InvoiceDetails { get; set; }
 	}
 }

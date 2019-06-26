@@ -466,7 +466,26 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers.Ophthalmolog
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
-
+			//if (PEMRBusinessLogic.ActivePEMRObject != null)
+			//	if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory == null)
+			//	{
+			//		Active_VisitTiming_SocialHistory = PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(this, DB_PEMRSavingMode.SaveImmediately);
+			//		if (Active_VisitTiming_SocialHistory == null)
+			//			return;
+			//		if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory == null)
+			//			PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory = new List<VisitTiming_SocialHistory>();
+			//		PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory.Add(Active_VisitTiming_SocialHistory);
+			//		XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+			//			MessageBoxIcon.Information);
+			//	}
+			//	else
+			//	{
+			//		if (Active_VisitTiming_SocialHistory == null)
+			//			return;
+			//		if (PEMRBusinessLogic.Update_VisitTiming_SocialHistory(this, Active_VisitTiming_SocialHistory))
+			//			XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+			//				MessageBoxIcon.Information);
+			//	}
 		}
 
 		private void btnSearch_Click(object sender, EventArgs e)

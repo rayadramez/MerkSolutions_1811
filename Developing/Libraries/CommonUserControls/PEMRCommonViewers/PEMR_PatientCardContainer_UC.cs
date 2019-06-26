@@ -23,6 +23,18 @@ namespace CommonUserControls.PEMRCommonViewers
 			Initialize();
 			_timer = new System.Timers.Timer();
 			_activeTimer = new Timer();
+
+			switch (ApplicationStaticConfiguration.Application)
+			{
+				case DB_Application.OphalmologySurgeryApplication:
+					CommonViewsActions.LoadXMLFromString(layoutControl1,
+						Resources.LocalizedRes.lyt_PEMR_PatientCardContainer_Surgery_UC);
+					break;
+				case DB_Application.PEMR:
+					CommonViewsActions.LoadXMLFromString(layoutControl1,
+						Resources.LocalizedRes.lyt_PEMR_PatientCardContainer_UC);
+					break;
+			}
 		}
 
 		public void Initialize()
@@ -59,25 +71,26 @@ namespace CommonUserControls.PEMRCommonViewers
 			tabPaused.Controls.Clear();
 			tabServed.Controls.Clear();
 
-			List<GetBriefQueue_Result> allQueues =
-				MerkDBBusinessLogicEngine.GetBriefQueue(ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID,
-					stationPointStage.ID, DateTime.Now.Date, null);
+			List<GetBriefQueue_Result> allQueues = MerkDBBusinessLogicEngine.GetBriefQueue(
+				ApplicationStaticConfiguration.ActiveLoginUser.Person_CU_ID, stationPointStage.ID, DateTime.Now.Date,
+				null);
 
 			if (allQueues == null || allQueues.Count == 0)
 				return;
 
-			List<GetBriefQueue_Result> waitingQueue =
-				allQueues.FindAll(item => Convert.ToInt32(item.QueueStatusID).Equals((int)DB_QueueManagerStatus.Waiting));
+			List<GetBriefQueue_Result> waitingQueue = allQueues.FindAll(item =>
+				Convert.ToInt32(item.QueueStatusID).Equals((int) DB_QueueManagerStatus.Waiting));
 
-			List<GetBriefQueue_Result> pausedQueue =
-				allQueues.FindAll(item => Convert.ToInt32(item.QueueStatusID).Equals((int)DB_QueueManagerStatus.Paused));
+			List<GetBriefQueue_Result> pausedQueue = allQueues.FindAll(item =>
+				Convert.ToInt32(item.QueueStatusID).Equals((int) DB_QueueManagerStatus.Paused));
 
-			List<GetBriefQueue_Result> servedQueue =
-				allQueues.FindAll(item => Convert.ToInt32(item.QueueStatusID).Equals((int)DB_QueueManagerStatus.Served));
+			List<GetBriefQueue_Result> servedQueue = allQueues.FindAll(item =>
+				Convert.ToInt32(item.QueueStatusID).Equals((int) DB_QueueManagerStatus.Served));
 
 			if (waitingQueue.Count > 0)
 			{
-				foreach (GetBriefQueue_Result queueResult in waitingQueue.OrderByDescending(item => item.ReservationTime))
+				foreach (GetBriefQueue_Result queueResult in waitingQueue.OrderByDescending(
+					item => item.ReservationTime))
 				{
 					PEMRPatientQueueCard card = new PEMRPatientQueueCard();
 					card.Dock = DockStyle.Top;
@@ -138,14 +151,11 @@ namespace CommonUserControls.PEMRCommonViewers
 			tabPaused.Controls.Clear();
 			tabServed.Controls.Clear();
 
-			//StationPointStage_cu stationPointStage =
-			//	StationPointStage_cu.ItemsList.Find(
-			//		item => Convert.ToInt32(item.ID).Equals(Convert.ToInt32(lkeStationPointStages.EditValue)));
-			//if (stationPointStage == null)
-			//	return;
-
-			//MerkDBBusinessLogicEngine.ActiveStationPointStage = stationPointStage;
-
+			StationPointStage_cu stage = StationPointStage_cu.ItemsList.Find(item =>
+				Convert.ToInt32(item.ID).Equals(Convert.ToInt32(lkeStationPointStages.EditValue)));
+			if (stage != null)
+				MerkDBBusinessLogicEngine.ActiveStationPointStage = stage;
+			
 			Initialize(MerkDBBusinessLogicEngine.ActiveStationPointStage);
 		}
 

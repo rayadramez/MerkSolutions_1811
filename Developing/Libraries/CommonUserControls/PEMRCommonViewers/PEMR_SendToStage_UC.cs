@@ -12,18 +12,20 @@ namespace CommonUserControls.PEMRCommonViewers
 	public partial class PEMR_SendToStage_UC : UserControl
 	{
 		private StationPointStage_cu ActiveStage { get; set; }
+		private GetBriefQueue_Result QueueResult { get; set; }
 
 		public PEMR_SendToStage_UC()
 		{
 			InitializeComponent();
 		}
 
-		public void Initialize(StationPointStage_cu activeStage)
+		public void Initialize(StationPointStage_cu activeStage, GetBriefQueue_Result queueResult)
 		{
 			if(activeStage == null)
 				return;
 			
 			ActiveStage = activeStage;
+			QueueResult = queueResult;
 
 			List<StationPointStage_cu> stationPointStagesList =
 				MerkDBBusinessLogicEngine.GetOrganizationMachineStationPointStages(
@@ -44,7 +46,7 @@ namespace CommonUserControls.PEMRCommonViewers
 				{
 					SendToStageCard_UC card = new SendToStageCard_UC();
 					card.Dock = DockStyle.Top;
-					card.Initialize(stationPointStageCu);
+					card.Initialize(stationPointStageCu, QueueResult);
 					tabPage.Controls.Add(card);
 				}
 		}

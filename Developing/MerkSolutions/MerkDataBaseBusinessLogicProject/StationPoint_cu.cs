@@ -30,6 +30,7 @@ namespace MerkDataBaseBusinessLogicProject
         public string Name_P { get; set; }
         public string Name_S { get; set; }
         public int Station_P_ID { get; set; }
+        public Nullable<double> MaxAdmissionCount { get; set; }
         public bool IsOnDuty { get; set; }
         public string InternalCode { get; set; }
         public string Description { get; set; }

@@ -24,7 +24,7 @@ namespace ApplicationConfiguration
 
 		public static DB_Organization Organization { get; set; }
 
-		public static DB_Station StationPoint { get; set; }
+		public static DB_Station Station { get; set; }
 
 		public static int ActiveCashBoxID { get; set; }
 

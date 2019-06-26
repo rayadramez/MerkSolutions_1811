@@ -92,6 +92,8 @@ namespace CommonUserControls.InvoiceViewers
 		public override void FillControls()
 		{
 			CommonViewsActions.FillGridlookupEdit(lkeDoctor, Doctor_cu.ItemsList, valueMember: "Person_CU_ID");
+			CommonViewsActions.FillGridlookupEdit(lkeStationPoint, StationPoint_cu.ItemsList);
+			CommonViewsActions.FillGridlookupEdit(lkeStationPointStage, StationPointStage_cu.ItemsList);
 
 			if (ViewerDataRelated != null && ViewerDataRelated is Patient_cu)
 			{
@@ -151,6 +153,11 @@ namespace CommonUserControls.InvoiceViewers
 					chkInPatient.Enabled = true;
 					chkInPatient.Checked = true;
 					break;
+				case DB_Application.OneDaySurgeryReception:
+					chkOutPatient.Enabled = true;
+					chkInPatient.Enabled = true;
+					chkInPatient.Checked = true;
+					break;
 			}
 		}
 
@@ -169,6 +176,9 @@ namespace CommonUserControls.InvoiceViewers
 			spnAmountPaid.EditValue = 0;
 			spnRemainingAmount.EditValue = 0;
 			spnNet.EditValue = 0;
+
+			lkeStationPoint.EditValue = null;
+			lkeStationPointStage.EditValue = null;
 
 			chkResetRemaining.Checked = false;
 			chkIsPaymentEnough.Checked = false;
@@ -207,7 +217,7 @@ namespace CommonUserControls.InvoiceViewers
 					return DB_ServiceType.ParentAccommodationService;
 				if (chkInvestigationServicetype.Checked)
 					return DB_ServiceType.InvestigationServices;
-				if (chkSurgeryServiceType.Checked)
+				if (chkOnsDaySurgery.Checked)
 					return DB_ServiceType.SurgeryService;
 				if (chkLabServiceType.Checked)
 					return DB_ServiceType.LabServices;
@@ -455,6 +465,18 @@ namespace CommonUserControls.InvoiceViewers
 			}
 		}
 
+		public object StationPointID
+		{
+			get { return lkeStationPoint.EditValue; }
+			set { lkeStationPoint.EditValue = value; }
+		}
+
+		public object StationPointStageID
+		{
+			get { return lkeStationPointStage.EditValue; }
+			set { lkeStationPointStage.EditValue = value; }
+		}
+
 		public object IsPaymentAttached
 		{
 			get { return chkPaymentType.IsOn; }
@@ -623,6 +645,16 @@ namespace CommonUserControls.InvoiceViewers
 			}
 		}
 
+		private void lkeStationPoint_EditValueChanged(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void lkeStationPointStage_EditValueChanged(object sender, EventArgs e)
+		{
+		
+		}
+
 		#endregion
 
 		#region CheckEdit Events
@@ -713,17 +745,20 @@ namespace CommonUserControls.InvoiceViewers
 
 		private void chkInPatient_CheckedChanged(object sender, EventArgs e)
 		{
-			chkOutPatient.Checked = !chkInPatient.Checked;
+			CommonViewsActions.LoadXMLFromString(layoutControl1,
+				Resources.LocalizedRes.lyt_MedicalAdmissionInvoiceCreation_OneDaySurgery_UC);
+			chkOnsDaySurgery.Checked = true;
+		}
+
+		private void chkOutPatient_CheckedChanged(object sender, EventArgs e)
+		{
+			CommonViewsActions.LoadXMLFromString(layoutControl1,
+				Resources.LocalizedRes.lyt_MedicalAdmissionInvoiceCreation_UC);
 		}
 
 		private void chkNotPrivateInvoice_CheckedChanged(object sender, EventArgs e)
 		{
 			chkPrivateInvoice.Checked = !chkNotPrivateInvoice.Checked;
-		}
-
-		private void chkOutPatient_CheckedChanged(object sender, EventArgs e)
-		{
-			chkInPatient.Checked = !chkOutPatient.Checked;
 		}
 
 		private void chkPrivateInvoice_CheckedChanged(object sender, EventArgs e)
@@ -765,6 +800,18 @@ namespace CommonUserControls.InvoiceViewers
 
 		}
 
+		private void chkOnsDaySurgery_CheckedChanged(object sender, EventArgs e)
+		{
+			if (chkOnsDaySurgery.Checked)
+				CommonViewsActions.FillGridlookupEdit(lkeServiceCategory,
+					ServiceCategory_cu.ItemsList.FindAll(
+						item =>
+							Convert.ToBoolean(item.AllowAdmission) &&
+							Convert.ToInt32(item.ServiceType_P_ID).Equals((int)DB_ServiceType.SurgeryService)));
+			else
+				lkeServiceCategory.Properties.DataSource = null;
+		}
+
 		private void chkIsInsuranceAppliedToService_CheckedChanged(object sender, EventArgs e)
 		{
 			if (InsuranceObject != null && Convert.ToBoolean(IsInsuranceAppliedToService))
@@ -795,6 +842,17 @@ namespace CommonUserControls.InvoiceViewers
 			lyt_chkResetRemaining.Visibility = chkPaymentType.IsOn ? LayoutVisibility.Always : LayoutVisibility.Never;
 			lyt_spnAmountPaid.Visibility = chkPaymentType.IsOn ? LayoutVisibility.Always : LayoutVisibility.Never;
 			lyt_spnRemainingAmount.Visibility = chkPaymentType.IsOn ? LayoutVisibility.Always : LayoutVisibility.Never;
+		}
+
+		private void chkStationPoint_Toggled(object sender, EventArgs e)
+		{
+			lytStationPoint.Enabled = chkPaymentType.IsOn;
+			lytStationPointStage.Enabled = chkPaymentType.IsOn;
+			if (!chkPaymentType.IsOn)
+			{
+				lkeStationPoint.EditValue = null;
+				lkeStationPointStage.EditValue = null;
+			}
 		}
 
 		#endregion
@@ -935,50 +993,82 @@ namespace CommonUserControls.InvoiceViewers
 				case DB_ServiceType.LabServices:
 					Service_cu parentService =
 						Service_cu.ItemsList.Find(
-							item => Convert.ToInt32(item.ServiceType_P_ID).Equals((int)DB_ServiceType.ParentLabService));
+							item => Convert.ToInt32(item.ServiceType_P_ID)
+								.Equals((int) DB_ServiceType.ParentLabService));
 					if (parentService == null)
 					{
-						XtraMessageBox.Show("Error :: please refer to customer service");
+						XtraMessageBox.Show("Error :: please refer to customer service, Parent Lab Service Not Found");
 						return;
 					}
 
 					serviceDetailObject = MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail(null, parentService.ID,
-						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService, InsurancePercentage,
+						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService,
+						InsurancePercentage,
 						IsSurchargeAppliedToService, false,
 						ServiceDescription);
 
-					foreach (Service_cu labService in (List<Service_cu>)LabServices)
-						MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail(serviceDetailObject, labService.ID, labService.DefaultPrice, useCustomServicePrice,
-								1, ServiceDate, DoctorID, IsInsuranceAppliedToService, InsurancePercentage, IsSurchargeAppliedToService, false,
-								ServiceDescription);
+					foreach (Service_cu labService in (List<Service_cu>) LabServices)
+						MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail(serviceDetailObject, labService.ID,
+							labService.DefaultPrice, useCustomServicePrice,
+							1, ServiceDate, DoctorID, IsInsuranceAppliedToService, InsurancePercentage,
+							IsSurchargeAppliedToService, false,
+							ServiceDescription);
 
 					break;
 				case DB_ServiceType.ParentAccommodationService:
 					parentService =
 						Service_cu.ItemsList.Find(
-							item => Convert.ToInt32(item.ServiceType_P_ID).Equals((int)DB_ServiceType.ParentAccommodationService));
+							item => Convert.ToInt32(item.ServiceType_P_ID)
+								.Equals((int) DB_ServiceType.ParentAccommodationService));
 					if (parentService == null)
 					{
-						XtraMessageBox.Show("Error :: please refer to customer service");
+						XtraMessageBox.Show("Error :: please refer to customer service, Parent Accommodation Service Not Found");
 						return;
 					}
 
 					serviceDetailObject = MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail(null, parentService.ID,
-						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService, InsurancePercentage,
+						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService,
+						InsurancePercentage,
 						IsSurchargeAppliedToService, false,
 						ServiceDescription);
 
-					MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail_Accommodation(serviceDetailObject, ServicePrice, ServiceDate,
-						InPatientRoomBedID, null, IsSurchargeAppliedToService, false, ServiceDescription, IsInsuranceAppliedToService,
+					MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail_Accommodation(serviceDetailObject, ServicePrice,
+						ServiceDate,
+						InPatientRoomBedID, null, IsSurchargeAppliedToService, false, ServiceDescription,
+						IsInsuranceAppliedToService,
 						InsurancePercentage);
 
 					break;
 				case DB_ServiceType.ExaminationService:
 				case DB_ServiceType.InvestigationServices:
 					serviceDetailObject = MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail(null, ServiceID,
-						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService, InsurancePercentage,
+						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService,
+						InsurancePercentage,
 						IsSurchargeAppliedToService, false,
 						ServiceDescription);
+					break;
+				case DB_ServiceType.SurgeryService:
+					//parentService =
+					//	Service_cu.ItemsList.Find(
+					//		item => Convert.ToInt32(item.ServiceType_P_ID)
+					//			.Equals((int) DB_ServiceType.ParentSurgeryService));
+					//if (parentService == null)
+					//{
+					//	XtraMessageBox.Show(
+					//		"Error :: please refer to customer service, Parent Surgery Service Not Found");
+					//	return;
+					//}
+
+					serviceDetailObject = MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail(null, ServiceID,
+						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService,
+						InsurancePercentage,
+						IsSurchargeAppliedToService, false,
+						ServiceDescription);
+					//MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail_Surgery(serviceDetailObject, ServiceID,
+					//	ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService,
+					//	InsurancePercentage,
+					//	IsSurchargeAppliedToService, false,
+					//	ServiceDescription);
 					break;
 			}
 

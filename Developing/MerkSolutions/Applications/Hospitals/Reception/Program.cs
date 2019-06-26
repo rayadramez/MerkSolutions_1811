@@ -23,7 +23,7 @@ namespace Reception
 
 			DialogResult result = DialogResult.None;
 			
-			ApplicationStaticConfiguration.Application = DB_Application.ClinicReception;
+			ApplicationStaticConfiguration.Application = DB_Application.OneDaySurgeryReception;
 			if (ApplicationStaticConfiguration.LoadApplicationConfiguration())
 			{
 				DBBusinessLogicLibrary.LoadDBItemsList();

@@ -69,6 +69,7 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual DbSet<Doctor_Diagnosis_cu> Doctor_Diagnosis_cu { get; set; }
         public virtual DbSet<Doctor_DiagnosisCategory_cu> Doctor_DiagnosisCategory_cu { get; set; }
         public virtual DbSet<Doctor_Service_cu> Doctor_Service_cu { get; set; }
+        public virtual DbSet<Doctor_StationPointStage_cu> Doctor_StationPointStage_cu { get; set; }
         public virtual DbSet<Doctor_Symptoms_cu> Doctor_Symptoms_cu { get; set; }
         public virtual DbSet<Doctor_SymptomsCategory_cu> Doctor_SymptomsCategory_cu { get; set; }
         public virtual DbSet<DoctorCategory_cu> DoctorCategory_cu { get; set; }
@@ -193,14 +194,17 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual DbSet<Service_ChartOfAccount_cu> Service_ChartOfAccount_cu { get; set; }
         public virtual DbSet<Service_cu> Service_cu { get; set; }
         public virtual DbSet<Service_StationPoint_cu> Service_StationPoint_cu { get; set; }
+        public virtual DbSet<Service_StationPointStage_cu> Service_StationPointStage_cu { get; set; }
         public virtual DbSet<Service_Surcharge_cu> Service_Surcharge_cu { get; set; }
         public virtual DbSet<ServiceCategory_cu> ServiceCategory_cu { get; set; }
         public virtual DbSet<ServiceCategory_StationPoint_cu> ServiceCategory_StationPoint_cu { get; set; }
+        public virtual DbSet<ServiceCategory_StationPointStage_cu> ServiceCategory_StationPointStage_cu { get; set; }
         public virtual DbSet<ServiceCategory_Surcharge_cu> ServiceCategory_Surcharge_cu { get; set; }
         public virtual DbSet<ServicePrice_cu> ServicePrice_cu { get; set; }
         public virtual DbSet<ServiceType_ChartOfAccount_cu> ServiceType_ChartOfAccount_cu { get; set; }
         public virtual DbSet<ServiceType_p> ServiceType_p { get; set; }
         public virtual DbSet<ServiceType_StationPoint_cu> ServiceType_StationPoint_cu { get; set; }
+        public virtual DbSet<ServiceType_StationPointStage_cu> ServiceType_StationPointStage_cu { get; set; }
         public virtual DbSet<ServiceType_Surcharge_cu> ServiceType_Surcharge_cu { get; set; }
         public virtual DbSet<Station_p> Station_p { get; set; }
         public virtual DbSet<StationPoint_cu> StationPoint_cu { get; set; }

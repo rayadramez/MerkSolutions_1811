@@ -30,6 +30,12 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicalAdmissionInvoiceCreationContainer_UC));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.chkStationPoint = new DevExpress.XtraEditors.ToggleSwitch();
+			this.lkeStationPointStage = new DevExpress.XtraEditors.GridLookUpEdit();
+			this.gridView10 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.lkeStationPoint = new DevExpress.XtraEditors.GridLookUpEdit();
+			this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.chkOnsDaySurgery = new DevExpress.XtraEditors.CheckButton();
 			this.chkResetRemaining = new DevExpress.XtraEditors.CheckButton();
 			this.txtInvoice_Description = new DevExpress.XtraEditors.TextEdit();
 			this.spnNet = new DevExpress.XtraEditors.SpinEdit();
@@ -117,6 +123,7 @@
 			this.item4 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.item5 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.item6 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lytOneDaySurgery = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.simpleSeparator6 = new DevExpress.XtraLayout.SimpleSeparator();
@@ -180,12 +187,12 @@
 			this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem39 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem17 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.simpleSeparator5 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator12 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -216,8 +223,20 @@
 			this.lyt_spnAmountPaid = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lyt_chkIsPaymentEnough = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lytStationPoint = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem12 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.lytStationPointStage = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lytExamination = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lytInvestigation = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lytLab = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.chkStationPoint.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lkeStationPointStage.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView10)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lkeStationPoint.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtInvoice_Description.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnNet.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnRemainingAmount.Properties)).BeginInit();
@@ -266,6 +285,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.item4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.item5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.item6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytOneDaySurgery)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).BeginInit();
@@ -329,12 +349,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem17)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator12)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
@@ -365,10 +385,21 @@
 			((System.ComponentModel.ISupportInitialize)(this.lyt_spnAmountPaid)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lyt_chkIsPaymentEnough)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytStationPoint)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytStationPointStage)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytExamination)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytInvestigation)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytLab)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.chkStationPoint);
+			this.layoutControl1.Controls.Add(this.lkeStationPointStage);
+			this.layoutControl1.Controls.Add(this.lkeStationPoint);
+			this.layoutControl1.Controls.Add(this.chkOnsDaySurgery);
 			this.layoutControl1.Controls.Add(this.chkResetRemaining);
 			this.layoutControl1.Controls.Add(this.txtInvoice_Description);
 			this.layoutControl1.Controls.Add(this.spnNet);
@@ -437,15 +468,95 @@
             this.item3,
             this.item4,
             this.item5,
-            this.item6});
+            this.item6,
+            this.lytOneDaySurgery});
 			this.layoutControl1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl1.Name = "layoutControl1";
-			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(66, 44, 444, 476);
+			this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(303, 229, 444, 476);
 			this.layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
 			this.layoutControl1.Root = this.layoutControlGroup1;
 			this.layoutControl1.Size = new System.Drawing.Size(1300, 680);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
+			// 
+			// chkStationPoint
+			// 
+			this.chkStationPoint.Location = new System.Drawing.Point(155, 90);
+			this.chkStationPoint.Name = "chkStationPoint";
+			this.chkStationPoint.Properties.Appearance.BackColor = System.Drawing.SystemColors.Info;
+			this.chkStationPoint.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkStationPoint.Properties.Appearance.Options.UseBackColor = true;
+			this.chkStationPoint.Properties.Appearance.Options.UseFont = true;
+			this.chkStationPoint.Properties.OffText = "لا";
+			this.chkStationPoint.Properties.OnText = "نعم";
+			this.chkStationPoint.Size = new System.Drawing.Size(141, 24);
+			this.chkStationPoint.StyleController = this.layoutControl1;
+			this.chkStationPoint.TabIndex = 67;
+			this.chkStationPoint.Toggled += new System.EventHandler(this.chkStationPoint_Toggled);
+			// 
+			// lkeStationPointStage
+			// 
+			this.lkeStationPointStage.Location = new System.Drawing.Point(155, 178);
+			this.lkeStationPointStage.Name = "lkeStationPointStage";
+			this.lkeStationPointStage.Properties.Appearance.BackColor = System.Drawing.Color.LawnGreen;
+			this.lkeStationPointStage.Properties.Appearance.Options.UseBackColor = true;
+			this.lkeStationPointStage.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.lkeStationPointStage.Properties.View = this.gridView10;
+			this.lkeStationPointStage.Size = new System.Drawing.Size(141, 20);
+			this.lkeStationPointStage.StyleController = this.layoutControl1;
+			this.lkeStationPointStage.TabIndex = 14;
+			this.lkeStationPointStage.EditValueChanged += new System.EventHandler(this.lkeStationPointStage_EditValueChanged);
+			// 
+			// gridView10
+			// 
+			this.gridView10.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.gridView10.Name = "gridView10";
+			this.gridView10.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.gridView10.OptionsView.ShowGroupPanel = false;
+			// 
+			// lkeStationPoint
+			// 
+			this.lkeStationPoint.Location = new System.Drawing.Point(155, 136);
+			this.lkeStationPoint.Name = "lkeStationPoint";
+			this.lkeStationPoint.Properties.Appearance.BackColor = System.Drawing.Color.LawnGreen;
+			this.lkeStationPoint.Properties.Appearance.Options.UseBackColor = true;
+			this.lkeStationPoint.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.lkeStationPoint.Properties.View = this.gridView6;
+			this.lkeStationPoint.Size = new System.Drawing.Size(141, 20);
+			this.lkeStationPoint.StyleController = this.layoutControl1;
+			this.lkeStationPoint.TabIndex = 13;
+			this.lkeStationPoint.EditValueChanged += new System.EventHandler(this.lkeStationPoint_EditValueChanged);
+			// 
+			// gridView6
+			// 
+			this.gridView6.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.gridView6.Name = "gridView6";
+			this.gridView6.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.gridView6.OptionsView.ShowGroupPanel = false;
+			// 
+			// chkOnsDaySurgery
+			// 
+			this.chkOnsDaySurgery.AllowAllUnchecked = true;
+			this.chkOnsDaySurgery.Appearance.BackColor = System.Drawing.Color.Black;
+			this.chkOnsDaySurgery.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkOnsDaySurgery.Appearance.ForeColor = System.Drawing.Color.Black;
+			this.chkOnsDaySurgery.Appearance.Options.UseBackColor = true;
+			this.chkOnsDaySurgery.Appearance.Options.UseFont = true;
+			this.chkOnsDaySurgery.Appearance.Options.UseForeColor = true;
+			this.chkOnsDaySurgery.GroupIndex = 3;
+			this.chkOnsDaySurgery.Location = new System.Drawing.Point(567, 97);
+			this.chkOnsDaySurgery.MaximumSize = new System.Drawing.Size(100, 30);
+			this.chkOnsDaySurgery.MinimumSize = new System.Drawing.Size(100, 30);
+			this.chkOnsDaySurgery.Name = "chkOnsDaySurgery";
+			this.chkOnsDaySurgery.Size = new System.Drawing.Size(100, 30);
+			this.chkOnsDaySurgery.StyleController = this.layoutControl1;
+			this.chkOnsDaySurgery.TabIndex = 27;
+			this.chkOnsDaySurgery.TabStop = false;
+			this.chkOnsDaySurgery.Text = "عملية يوم واحد";
+			this.chkOnsDaySurgery.ToolTip = "معمل";
+			this.chkOnsDaySurgery.CheckedChanged += new System.EventHandler(this.chkOnsDaySurgery_CheckedChanged);
 			// 
 			// chkResetRemaining
 			// 
@@ -454,7 +565,7 @@
 			this.chkResetRemaining.Appearance.Options.UseTextOptions = true;
 			this.chkResetRemaining.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.chkResetRemaining.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-			this.chkResetRemaining.Location = new System.Drawing.Point(994, 636);
+			this.chkResetRemaining.Location = new System.Drawing.Point(996, 636);
 			this.chkResetRemaining.MaximumSize = new System.Drawing.Size(120, 30);
 			this.chkResetRemaining.MinimumSize = new System.Drawing.Size(120, 30);
 			this.chkResetRemaining.Name = "chkResetRemaining";
@@ -467,9 +578,9 @@
 			// 
 			// txtInvoice_Description
 			// 
-			this.txtInvoice_Description.Location = new System.Drawing.Point(999, 52);
+			this.txtInvoice_Description.Location = new System.Drawing.Point(1001, 52);
 			this.txtInvoice_Description.Name = "txtInvoice_Description";
-			this.txtInvoice_Description.Size = new System.Drawing.Size(157, 20);
+			this.txtInvoice_Description.Size = new System.Drawing.Size(155, 20);
 			this.txtInvoice_Description.StyleController = this.layoutControl1;
 			this.txtInvoice_Description.TabIndex = 69;
 			this.txtInvoice_Description.TabStop = false;
@@ -508,7 +619,7 @@
 			// spnRemainingAmount
 			// 
 			this.spnRemainingAmount.EditValue = "0";
-			this.spnRemainingAmount.Location = new System.Drawing.Point(1011, 600);
+			this.spnRemainingAmount.Location = new System.Drawing.Point(1013, 600);
 			this.spnRemainingAmount.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnRemainingAmount.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnRemainingAmount.Name = "spnRemainingAmount";
@@ -554,7 +665,7 @@
             0,
             0,
             131072});
-			this.spnAmountPaid.Location = new System.Drawing.Point(1011, 548);
+			this.spnAmountPaid.Location = new System.Drawing.Point(1013, 548);
 			this.spnAmountPaid.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnAmountPaid.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnAmountPaid.Name = "spnAmountPaid";
@@ -597,7 +708,7 @@
 			// 
 			this.chkUseCustomPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkUseCustomPrice.Appearance.Options.UseFont = true;
-			this.chkUseCustomPrice.Location = new System.Drawing.Point(306, 231);
+			this.chkUseCustomPrice.Location = new System.Drawing.Point(308, 231);
 			this.chkUseCustomPrice.MaximumSize = new System.Drawing.Size(0, 30);
 			this.chkUseCustomPrice.MinimumSize = new System.Drawing.Size(0, 30);
 			this.chkUseCustomPrice.Name = "chkUseCustomPrice";
@@ -616,7 +727,7 @@
 			this.label4.MaximumSize = new System.Drawing.Size(0, 3);
 			this.label4.MinimumSize = new System.Drawing.Size(0, 3);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(990, 3);
+			this.label4.Size = new System.Drawing.Size(992, 3);
 			this.label4.TabIndex = 34;
 			// 
 			// spnCompanionNumbers
@@ -778,7 +889,7 @@
 			this.grdServices.Location = new System.Drawing.Point(65, 349);
 			this.grdServices.MainView = this.grv_Services;
 			this.grdServices.Name = "grdServices";
-			this.grdServices.Size = new System.Drawing.Size(918, 324);
+			this.grdServices.Size = new System.Drawing.Size(920, 324);
 			this.grdServices.TabIndex = 34;
 			this.grdServices.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grv_Services});
@@ -1094,7 +1205,7 @@
             0,
             0,
             0});
-			this.spnServicePrice.Location = new System.Drawing.Point(323, 283);
+			this.spnServicePrice.Location = new System.Drawing.Point(325, 283);
 			this.spnServicePrice.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnServicePrice.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnServicePrice.Name = "spnServicePrice";
@@ -1127,7 +1238,7 @@
             0,
             0,
             0});
-			this.spnServiceDiscount.Location = new System.Drawing.Point(323, 195);
+			this.spnServiceDiscount.Location = new System.Drawing.Point(325, 195);
 			this.spnServiceDiscount.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnServiceDiscount.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnServiceDiscount.Name = "spnServiceDiscount";
@@ -1156,7 +1267,7 @@
 			// 
 			this.chkIsServiceSurchargeApplied.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkIsServiceSurchargeApplied.Appearance.Options.UseFont = true;
-			this.chkIsServiceSurchargeApplied.Location = new System.Drawing.Point(306, 133);
+			this.chkIsServiceSurchargeApplied.Location = new System.Drawing.Point(308, 133);
 			this.chkIsServiceSurchargeApplied.MaximumSize = new System.Drawing.Size(0, 30);
 			this.chkIsServiceSurchargeApplied.MinimumSize = new System.Drawing.Size(0, 30);
 			this.chkIsServiceSurchargeApplied.Name = "chkIsServiceSurchargeApplied";
@@ -1171,7 +1282,7 @@
 			// 
 			this.chkIsInsuranceAppliedToService.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkIsInsuranceAppliedToService.Appearance.Options.UseFont = true;
-			this.chkIsInsuranceAppliedToService.Location = new System.Drawing.Point(306, 97);
+			this.chkIsInsuranceAppliedToService.Location = new System.Drawing.Point(308, 97);
 			this.chkIsInsuranceAppliedToService.MaximumSize = new System.Drawing.Size(0, 30);
 			this.chkIsInsuranceAppliedToService.MinimumSize = new System.Drawing.Size(0, 30);
 			this.chkIsInsuranceAppliedToService.Name = "chkIsInsuranceAppliedToService";
@@ -1184,7 +1295,7 @@
 			// 
 			// txtServiceDescription
 			// 
-			this.txtServiceDescription.Location = new System.Drawing.Point(446, 237);
+			this.txtServiceDescription.Location = new System.Drawing.Point(448, 237);
 			this.txtServiceDescription.MaximumSize = new System.Drawing.Size(0, 50);
 			this.txtServiceDescription.MinimumSize = new System.Drawing.Size(0, 50);
 			this.txtServiceDescription.Name = "txtServiceDescription";
@@ -1196,7 +1307,7 @@
 			// dtServiceDate
 			// 
 			this.dtServiceDate.EditValue = null;
-			this.dtServiceDate.Location = new System.Drawing.Point(686, 211);
+			this.dtServiceDate.Location = new System.Drawing.Point(688, 211);
 			this.dtServiceDate.MaximumSize = new System.Drawing.Size(160, 0);
 			this.dtServiceDate.MinimumSize = new System.Drawing.Size(160, 0);
 			this.dtServiceDate.Name = "dtServiceDate";
@@ -1212,7 +1323,7 @@
 			// 
 			// lkeDoctor
 			// 
-			this.lkeDoctor.Location = new System.Drawing.Point(446, 185);
+			this.lkeDoctor.Location = new System.Drawing.Point(448, 185);
 			this.lkeDoctor.MaximumSize = new System.Drawing.Size(400, 0);
 			this.lkeDoctor.MinimumSize = new System.Drawing.Size(400, 0);
 			this.lkeDoctor.Name = "lkeDoctor";
@@ -1235,7 +1346,7 @@
 			// 
 			// lkeService
 			// 
-			this.lkeService.Location = new System.Drawing.Point(446, 159);
+			this.lkeService.Location = new System.Drawing.Point(448, 159);
 			this.lkeService.MaximumSize = new System.Drawing.Size(400, 0);
 			this.lkeService.MinimumSize = new System.Drawing.Size(400, 0);
 			this.lkeService.Name = "lkeService";
@@ -1258,7 +1369,7 @@
 			// 
 			// lkeServiceCategory
 			// 
-			this.lkeServiceCategory.Location = new System.Drawing.Point(446, 133);
+			this.lkeServiceCategory.Location = new System.Drawing.Point(448, 133);
 			this.lkeServiceCategory.MaximumSize = new System.Drawing.Size(400, 0);
 			this.lkeServiceCategory.MinimumSize = new System.Drawing.Size(400, 0);
 			this.lkeServiceCategory.Name = "lkeServiceCategory";
@@ -1282,12 +1393,14 @@
 			// chkLabServiceType
 			// 
 			this.chkLabServiceType.AllowAllUnchecked = true;
+			this.chkLabServiceType.Appearance.BackColor = System.Drawing.Color.Black;
 			this.chkLabServiceType.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkLabServiceType.Appearance.ForeColor = System.Drawing.Color.Yellow;
+			this.chkLabServiceType.Appearance.ForeColor = System.Drawing.Color.Black;
+			this.chkLabServiceType.Appearance.Options.UseBackColor = true;
 			this.chkLabServiceType.Appearance.Options.UseFont = true;
 			this.chkLabServiceType.Appearance.Options.UseForeColor = true;
 			this.chkLabServiceType.GroupIndex = 3;
-			this.chkLabServiceType.Location = new System.Drawing.Point(671, 97);
+			this.chkLabServiceType.Location = new System.Drawing.Point(673, 97);
 			this.chkLabServiceType.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkLabServiceType.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkLabServiceType.Name = "chkLabServiceType";
@@ -1302,12 +1415,14 @@
 			// chkInvestigationServicetype
 			// 
 			this.chkInvestigationServicetype.AllowAllUnchecked = true;
+			this.chkInvestigationServicetype.Appearance.BackColor = System.Drawing.Color.Black;
 			this.chkInvestigationServicetype.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkInvestigationServicetype.Appearance.ForeColor = System.Drawing.Color.Yellow;
+			this.chkInvestigationServicetype.Appearance.ForeColor = System.Drawing.Color.Black;
+			this.chkInvestigationServicetype.Appearance.Options.UseBackColor = true;
 			this.chkInvestigationServicetype.Appearance.Options.UseFont = true;
 			this.chkInvestigationServicetype.Appearance.Options.UseForeColor = true;
 			this.chkInvestigationServicetype.GroupIndex = 3;
-			this.chkInvestigationServicetype.Location = new System.Drawing.Point(777, 97);
+			this.chkInvestigationServicetype.Location = new System.Drawing.Point(779, 97);
 			this.chkInvestigationServicetype.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkInvestigationServicetype.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkInvestigationServicetype.Name = "chkInvestigationServicetype";
@@ -1320,12 +1435,14 @@
 			// 
 			// chkExaminationServiceType
 			// 
+			this.chkExaminationServiceType.Appearance.BackColor = System.Drawing.Color.Black;
 			this.chkExaminationServiceType.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.chkExaminationServiceType.Appearance.ForeColor = System.Drawing.Color.Yellow;
+			this.chkExaminationServiceType.Appearance.ForeColor = System.Drawing.Color.Black;
+			this.chkExaminationServiceType.Appearance.Options.UseBackColor = true;
 			this.chkExaminationServiceType.Appearance.Options.UseFont = true;
 			this.chkExaminationServiceType.Appearance.Options.UseForeColor = true;
 			this.chkExaminationServiceType.GroupIndex = 3;
-			this.chkExaminationServiceType.Location = new System.Drawing.Point(883, 97);
+			this.chkExaminationServiceType.Location = new System.Drawing.Point(885, 97);
 			this.chkExaminationServiceType.MaximumSize = new System.Drawing.Size(100, 30);
 			this.chkExaminationServiceType.MinimumSize = new System.Drawing.Size(100, 30);
 			this.chkExaminationServiceType.Name = "chkExaminationServiceType";
@@ -1344,7 +1461,7 @@
 			this.label1.MaximumSize = new System.Drawing.Size(0, 3);
 			this.label1.MinimumSize = new System.Drawing.Size(0, 3);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(990, 3);
+			this.label1.Size = new System.Drawing.Size(992, 3);
 			this.label1.TabIndex = 32;
 			// 
 			// labelControl7
@@ -1352,7 +1469,7 @@
 			this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
 			this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
 			this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl7.Location = new System.Drawing.Point(168, 34);
+			this.labelControl7.Location = new System.Drawing.Point(170, 34);
 			this.labelControl7.MaximumSize = new System.Drawing.Size(30, 20);
 			this.labelControl7.MinimumSize = new System.Drawing.Size(30, 20);
 			this.labelControl7.Name = "labelControl7";
@@ -1366,7 +1483,7 @@
 			this.lblInsurancePercentage.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
 			this.lblInsurancePercentage.Appearance.ForeColor = System.Drawing.Color.White;
 			this.lblInsurancePercentage.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.lblInsurancePercentage.Location = new System.Drawing.Point(204, 34);
+			this.lblInsurancePercentage.Location = new System.Drawing.Point(206, 34);
 			this.lblInsurancePercentage.MaximumSize = new System.Drawing.Size(70, 20);
 			this.lblInsurancePercentage.MinimumSize = new System.Drawing.Size(70, 20);
 			this.lblInsurancePercentage.Name = "lblInsurancePercentage";
@@ -1380,7 +1497,7 @@
 			this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
 			this.labelControl5.Appearance.ForeColor = System.Drawing.Color.OldLace;
 			this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl5.Location = new System.Drawing.Point(280, 34);
+			this.labelControl5.Location = new System.Drawing.Point(282, 34);
 			this.labelControl5.MaximumSize = new System.Drawing.Size(70, 20);
 			this.labelControl5.MinimumSize = new System.Drawing.Size(70, 20);
 			this.labelControl5.Name = "labelControl5";
@@ -1394,7 +1511,7 @@
 			this.lblInsuranceLevelName.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
 			this.lblInsuranceLevelName.Appearance.ForeColor = System.Drawing.Color.White;
 			this.lblInsuranceLevelName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.lblInsuranceLevelName.Location = new System.Drawing.Point(358, 34);
+			this.lblInsuranceLevelName.Location = new System.Drawing.Point(360, 34);
 			this.lblInsuranceLevelName.MaximumSize = new System.Drawing.Size(200, 20);
 			this.lblInsuranceLevelName.MinimumSize = new System.Drawing.Size(200, 20);
 			this.lblInsuranceLevelName.Name = "lblInsuranceLevelName";
@@ -1408,7 +1525,7 @@
 			this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
 			this.labelControl3.Appearance.ForeColor = System.Drawing.Color.OldLace;
 			this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl3.Location = new System.Drawing.Point(564, 34);
+			this.labelControl3.Location = new System.Drawing.Point(566, 34);
 			this.labelControl3.MaximumSize = new System.Drawing.Size(70, 20);
 			this.labelControl3.MinimumSize = new System.Drawing.Size(70, 20);
 			this.labelControl3.Name = "labelControl3";
@@ -1422,7 +1539,7 @@
 			this.lblInsuranceCarrierName.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
 			this.lblInsuranceCarrierName.Appearance.ForeColor = System.Drawing.Color.White;
 			this.lblInsuranceCarrierName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.lblInsuranceCarrierName.Location = new System.Drawing.Point(642, 34);
+			this.lblInsuranceCarrierName.Location = new System.Drawing.Point(644, 34);
 			this.lblInsuranceCarrierName.MaximumSize = new System.Drawing.Size(200, 20);
 			this.lblInsuranceCarrierName.MinimumSize = new System.Drawing.Size(200, 20);
 			this.lblInsuranceCarrierName.Name = "lblInsuranceCarrierName";
@@ -1436,7 +1553,7 @@
 			this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
 			this.labelControl1.Appearance.ForeColor = System.Drawing.Color.OldLace;
 			this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl1.Location = new System.Drawing.Point(848, 34);
+			this.labelControl1.Location = new System.Drawing.Point(850, 34);
 			this.labelControl1.MaximumSize = new System.Drawing.Size(70, 20);
 			this.labelControl1.MinimumSize = new System.Drawing.Size(70, 20);
 			this.labelControl1.Name = "labelControl1";
@@ -1450,7 +1567,7 @@
 			this.lblPatientName.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
 			this.lblPatientName.Appearance.ForeColor = System.Drawing.Color.Ivory;
 			this.lblPatientName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.lblPatientName.Location = new System.Drawing.Point(420, 4);
+			this.lblPatientName.Location = new System.Drawing.Point(422, 4);
 			this.lblPatientName.MaximumSize = new System.Drawing.Size(400, 20);
 			this.lblPatientName.MinimumSize = new System.Drawing.Size(400, 20);
 			this.lblPatientName.Name = "lblPatientName";
@@ -1465,7 +1582,7 @@
 			this.lblPatientID.Appearance.ForeColor = System.Drawing.Color.Yellow;
 			this.lblPatientID.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lblPatientID.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.lblPatientID.Location = new System.Drawing.Point(828, 4);
+			this.lblPatientID.Location = new System.Drawing.Point(830, 4);
 			this.lblPatientID.MaximumSize = new System.Drawing.Size(90, 20);
 			this.lblPatientID.MinimumSize = new System.Drawing.Size(90, 20);
 			this.lblPatientID.Name = "lblPatientID";
@@ -1477,7 +1594,7 @@
 			// picPatient
 			// 
 			this.picPatient.EditValue = ((object)(resources.GetObject("picPatient.EditValue")));
-			this.picPatient.Location = new System.Drawing.Point(927, 3);
+			this.picPatient.Location = new System.Drawing.Point(929, 3);
 			this.picPatient.MaximumSize = new System.Drawing.Size(60, 60);
 			this.picPatient.MinimumSize = new System.Drawing.Size(60, 60);
 			this.picPatient.Name = "picPatient";
@@ -1489,10 +1606,14 @@
 			// 
 			// chkNotPrivateInvoice
 			// 
+			this.chkNotPrivateInvoice.Appearance.BackColor = System.Drawing.Color.Black;
 			this.chkNotPrivateInvoice.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkNotPrivateInvoice.Appearance.ForeColor = System.Drawing.Color.Black;
+			this.chkNotPrivateInvoice.Appearance.Options.UseBackColor = true;
 			this.chkNotPrivateInvoice.Appearance.Options.UseFont = true;
+			this.chkNotPrivateInvoice.Appearance.Options.UseForeColor = true;
 			this.chkNotPrivateInvoice.GroupIndex = 2;
-			this.chkNotPrivateInvoice.Location = new System.Drawing.Point(1003, 168);
+			this.chkNotPrivateInvoice.Location = new System.Drawing.Point(1005, 168);
 			this.chkNotPrivateInvoice.MaximumSize = new System.Drawing.Size(120, 30);
 			this.chkNotPrivateInvoice.MinimumSize = new System.Drawing.Size(120, 30);
 			this.chkNotPrivateInvoice.Name = "chkNotPrivateInvoice";
@@ -1505,8 +1626,12 @@
 			// 
 			// chkPrivateInvoice
 			// 
+			this.chkPrivateInvoice.Appearance.BackColor = System.Drawing.Color.Black;
 			this.chkPrivateInvoice.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkPrivateInvoice.Appearance.ForeColor = System.Drawing.Color.Black;
+			this.chkPrivateInvoice.Appearance.Options.UseBackColor = true;
 			this.chkPrivateInvoice.Appearance.Options.UseFont = true;
+			this.chkPrivateInvoice.Appearance.Options.UseForeColor = true;
 			this.chkPrivateInvoice.GroupIndex = 2;
 			this.chkPrivateInvoice.Location = new System.Drawing.Point(1169, 168);
 			this.chkPrivateInvoice.MaximumSize = new System.Drawing.Size(120, 30);
@@ -1526,7 +1651,7 @@
             0,
             0,
             0});
-			this.spnInsuranceMaxAmount.Location = new System.Drawing.Point(1010, 476);
+			this.spnInsuranceMaxAmount.Location = new System.Drawing.Point(1012, 476);
 			this.spnInsuranceMaxAmount.MaximumSize = new System.Drawing.Size(120, 0);
 			this.spnInsuranceMaxAmount.MinimumSize = new System.Drawing.Size(120, 0);
 			this.spnInsuranceMaxAmount.Name = "spnInsuranceMaxAmount";
@@ -1563,7 +1688,7 @@
             0,
             0,
             0});
-			this.spnInsurancePercentage.Location = new System.Drawing.Point(1010, 434);
+			this.spnInsurancePercentage.Location = new System.Drawing.Point(1012, 434);
 			this.spnInsurancePercentage.MaximumSize = new System.Drawing.Size(120, 0);
 			this.spnInsurancePercentage.MinimumSize = new System.Drawing.Size(120, 0);
 			this.spnInsurancePercentage.Name = "spnInsurancePercentage";
@@ -1595,13 +1720,13 @@
 			// 
 			// lkeInsuaranceLevel
 			// 
-			this.lkeInsuaranceLevel.Location = new System.Drawing.Point(1003, 392);
+			this.lkeInsuaranceLevel.Location = new System.Drawing.Point(1005, 392);
 			this.lkeInsuaranceLevel.Name = "lkeInsuaranceLevel";
 			this.lkeInsuaranceLevel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
 			this.lkeInsuaranceLevel.Properties.ReadOnly = true;
 			this.lkeInsuaranceLevel.Properties.View = this.gridView1;
-			this.lkeInsuaranceLevel.Size = new System.Drawing.Size(286, 20);
+			this.lkeInsuaranceLevel.Size = new System.Drawing.Size(284, 20);
 			this.lkeInsuaranceLevel.StyleController = this.layoutControl1;
 			this.lkeInsuaranceLevel.TabIndex = 12;
 			this.lkeInsuaranceLevel.EditValueChanged += new System.EventHandler(this.lkeInsuaranceLevel_EditValueChanged);
@@ -1617,11 +1742,11 @@
 			// 
 			this.chkIsInsuranceAppliedToInvoice.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.chkIsInsuranceAppliedToInvoice.Appearance.Options.UseFont = true;
-			this.chkIsInsuranceAppliedToInvoice.Location = new System.Drawing.Point(1003, 298);
+			this.chkIsInsuranceAppliedToInvoice.Location = new System.Drawing.Point(1005, 298);
 			this.chkIsInsuranceAppliedToInvoice.MaximumSize = new System.Drawing.Size(0, 30);
 			this.chkIsInsuranceAppliedToInvoice.MinimumSize = new System.Drawing.Size(0, 30);
 			this.chkIsInsuranceAppliedToInvoice.Name = "chkIsInsuranceAppliedToInvoice";
-			this.chkIsInsuranceAppliedToInvoice.Size = new System.Drawing.Size(286, 30);
+			this.chkIsInsuranceAppliedToInvoice.Size = new System.Drawing.Size(284, 30);
 			this.chkIsInsuranceAppliedToInvoice.StyleController = this.layoutControl1;
 			this.chkIsInsuranceAppliedToInvoice.TabIndex = 7;
 			this.chkIsInsuranceAppliedToInvoice.Text = "إضـافــــة جهــة التـأميـــــن";
@@ -1629,13 +1754,13 @@
 			// 
 			// lkeInsuranceCarrier
 			// 
-			this.lkeInsuranceCarrier.Location = new System.Drawing.Point(1003, 350);
+			this.lkeInsuranceCarrier.Location = new System.Drawing.Point(1005, 350);
 			this.lkeInsuranceCarrier.Name = "lkeInsuranceCarrier";
 			this.lkeInsuranceCarrier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
 			this.lkeInsuranceCarrier.Properties.ReadOnly = true;
 			this.lkeInsuranceCarrier.Properties.View = this.gridView4;
-			this.lkeInsuranceCarrier.Size = new System.Drawing.Size(286, 20);
+			this.lkeInsuranceCarrier.Size = new System.Drawing.Size(284, 20);
 			this.lkeInsuranceCarrier.StyleController = this.layoutControl1;
 			this.lkeInsuranceCarrier.TabIndex = 11;
 			this.lkeInsuranceCarrier.EditValueChanged += new System.EventHandler(this.lkeInsuranceCarrier_EditValueChanged);
@@ -1649,10 +1774,14 @@
 			// 
 			// chkOutPatient
 			// 
+			this.chkOutPatient.Appearance.BackColor = System.Drawing.Color.Black;
 			this.chkOutPatient.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkOutPatient.Appearance.ForeColor = System.Drawing.Color.Black;
+			this.chkOutPatient.Appearance.Options.UseBackColor = true;
 			this.chkOutPatient.Appearance.Options.UseFont = true;
+			this.chkOutPatient.Appearance.Options.UseForeColor = true;
 			this.chkOutPatient.GroupIndex = 1;
-			this.chkOutPatient.Location = new System.Drawing.Point(1003, 103);
+			this.chkOutPatient.Location = new System.Drawing.Point(1005, 103);
 			this.chkOutPatient.MaximumSize = new System.Drawing.Size(120, 30);
 			this.chkOutPatient.MinimumSize = new System.Drawing.Size(120, 30);
 			this.chkOutPatient.Name = "chkOutPatient";
@@ -1665,8 +1794,12 @@
 			// 
 			// chkInPatient
 			// 
+			this.chkInPatient.Appearance.BackColor = System.Drawing.Color.Black;
 			this.chkInPatient.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkInPatient.Appearance.ForeColor = System.Drawing.Color.Black;
+			this.chkInPatient.Appearance.Options.UseBackColor = true;
 			this.chkInPatient.Appearance.Options.UseFont = true;
+			this.chkInPatient.Appearance.Options.UseForeColor = true;
 			this.chkInPatient.GroupIndex = 1;
 			this.chkInPatient.Location = new System.Drawing.Point(1169, 103);
 			this.chkInPatient.MaximumSize = new System.Drawing.Size(120, 30);
@@ -1681,9 +1814,13 @@
 			// 
 			// chkAddStamp
 			// 
+			this.chkAddStamp.Appearance.BackColor = System.Drawing.Color.Black;
 			this.chkAddStamp.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkAddStamp.Appearance.ForeColor = System.Drawing.Color.Black;
+			this.chkAddStamp.Appearance.Options.UseBackColor = true;
 			this.chkAddStamp.Appearance.Options.UseFont = true;
-			this.chkAddStamp.Location = new System.Drawing.Point(1003, 233);
+			this.chkAddStamp.Appearance.Options.UseForeColor = true;
+			this.chkAddStamp.Location = new System.Drawing.Point(1005, 233);
 			this.chkAddStamp.MaximumSize = new System.Drawing.Size(120, 30);
 			this.chkAddStamp.MinimumSize = new System.Drawing.Size(120, 30);
 			this.chkAddStamp.Name = "chkAddStamp";
@@ -1695,8 +1832,12 @@
 			// 
 			// chkIsSurchargesAppliedToInvoice
 			// 
+			this.chkIsSurchargesAppliedToInvoice.Appearance.BackColor = System.Drawing.Color.Black;
 			this.chkIsSurchargesAppliedToInvoice.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.chkIsSurchargesAppliedToInvoice.Appearance.ForeColor = System.Drawing.Color.Black;
+			this.chkIsSurchargesAppliedToInvoice.Appearance.Options.UseBackColor = true;
 			this.chkIsSurchargesAppliedToInvoice.Appearance.Options.UseFont = true;
+			this.chkIsSurchargesAppliedToInvoice.Appearance.Options.UseForeColor = true;
 			this.chkIsSurchargesAppliedToInvoice.Location = new System.Drawing.Point(1169, 233);
 			this.chkIsSurchargesAppliedToInvoice.MaximumSize = new System.Drawing.Size(120, 30);
 			this.chkIsSurchargesAppliedToInvoice.MinimumSize = new System.Drawing.Size(120, 30);
@@ -1785,6 +1926,18 @@
 			this.item6.Size = new System.Drawing.Size(0, 0);
 			this.item6.TextSize = new System.Drawing.Size(50, 20);
 			// 
+			// lytOneDaySurgery
+			// 
+			this.lytOneDaySurgery.Control = this.chkOnsDaySurgery;
+			this.lytOneDaySurgery.CustomizationFormText = "lytOneDaySurgery";
+			this.lytOneDaySurgery.Location = new System.Drawing.Point(259, 0);
+			this.lytOneDaySurgery.Name = "lytOneDaySurgery";
+			this.lytOneDaySurgery.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.lytOneDaySurgery.Size = new System.Drawing.Size(106, 36);
+			this.lytOneDaySurgery.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.lytOneDaySurgery.TextSize = new System.Drawing.Size(0, 0);
+			this.lytOneDaySurgery.TextVisible = false;
+			// 
 			// layoutControlGroup1
 			// 
 			this.layoutControlGroup1.CustomizationFormText = "Root";
@@ -1809,7 +1962,11 @@
             this.layoutControlGroup8,
             this.simpleSeparator14,
             this.emptySpaceItem2,
-            this.layoutControlGroup10});
+            this.layoutControlGroup10,
+            this.lytStationPoint,
+            this.emptySpaceItem12,
+            this.lytStationPointStage,
+            this.layoutControlItem49});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -1837,10 +1994,10 @@
             this.layoutControlItem1,
             this.layoutControlItem54,
             this.emptySpaceItem1});
-			this.layoutControlGroup6.Location = new System.Drawing.Point(992, 0);
+			this.layoutControlGroup6.Location = new System.Drawing.Point(994, 0);
 			this.layoutControlGroup6.Name = "layoutControlGroup6";
 			this.layoutControlGroup6.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlGroup6.Size = new System.Drawing.Size(308, 507);
+			this.layoutControlGroup6.Size = new System.Drawing.Size(306, 507);
 			this.layoutControlGroup6.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlGroup6.Text = "بيـانـــــات الفـاتــــورة";
 			// 
@@ -1850,7 +2007,7 @@
 			this.simpleSeparator6.CustomizationFormText = "simpleSeparator6";
 			this.simpleSeparator6.Location = new System.Drawing.Point(0, 52);
 			this.simpleSeparator6.Name = "simpleSeparator6";
-			this.simpleSeparator6.Size = new System.Drawing.Size(300, 2);
+			this.simpleSeparator6.Size = new System.Drawing.Size(298, 2);
 			// 
 			// simpleSeparator1
 			// 
@@ -1858,7 +2015,7 @@
 			this.simpleSeparator1.CustomizationFormText = "simpleSeparator1";
 			this.simpleSeparator1.Location = new System.Drawing.Point(0, 117);
 			this.simpleSeparator1.Name = "simpleSeparator1";
-			this.simpleSeparator1.Size = new System.Drawing.Size(300, 2);
+			this.simpleSeparator1.Size = new System.Drawing.Size(298, 2);
 			// 
 			// simpleSeparator2
 			// 
@@ -1866,7 +2023,7 @@
 			this.simpleSeparator2.CustomizationFormText = "simpleSeparator2";
 			this.simpleSeparator2.Location = new System.Drawing.Point(0, 182);
 			this.simpleSeparator2.Name = "simpleSeparator2";
-			this.simpleSeparator2.Size = new System.Drawing.Size(300, 2);
+			this.simpleSeparator2.Size = new System.Drawing.Size(298, 2);
 			// 
 			// simpleSeparator3
 			// 
@@ -1874,7 +2031,7 @@
 			this.simpleSeparator3.CustomizationFormText = "simpleSeparator3";
 			this.simpleSeparator3.Location = new System.Drawing.Point(0, 247);
 			this.simpleSeparator3.Name = "simpleSeparator3";
-			this.simpleSeparator3.Size = new System.Drawing.Size(300, 2);
+			this.simpleSeparator3.Size = new System.Drawing.Size(298, 2);
 			// 
 			// layoutControlGroup5
 			// 
@@ -1898,7 +2055,7 @@
 			this.layoutControlGroup5.Location = new System.Drawing.Point(0, 249);
 			this.layoutControlGroup5.Name = "layoutControlGroup5";
 			this.layoutControlGroup5.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlGroup5.Size = new System.Drawing.Size(300, 231);
+			this.layoutControlGroup5.Size = new System.Drawing.Size(298, 231);
 			this.layoutControlGroup5.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlGroup5.Text = "بيـانـــــات جهــــة التـأميـــــن";
 			// 
@@ -1912,7 +2069,7 @@
 			this.layoutControlItem12.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
 			this.layoutControlItem12.CustomizationFormText = "الأقصـــى للمـريـــض";
 			this.layoutControlItem12.FillControlToClientArea = false;
-			this.layoutControlItem12.Location = new System.Drawing.Point(152, 162);
+			this.layoutControlItem12.Location = new System.Drawing.Point(150, 162);
 			this.layoutControlItem12.Name = "layoutControlItem12";
 			this.layoutControlItem12.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem12.Size = new System.Drawing.Size(140, 42);
@@ -1946,7 +2103,7 @@
 			this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem7";
 			this.emptySpaceItem7.Location = new System.Drawing.Point(140, 162);
 			this.emptySpaceItem7.Name = "emptySpaceItem7";
-			this.emptySpaceItem7.Size = new System.Drawing.Size(12, 42);
+			this.emptySpaceItem7.Size = new System.Drawing.Size(10, 42);
 			this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// emptySpaceItem6
@@ -1955,7 +2112,7 @@
 			this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem6";
 			this.emptySpaceItem6.Location = new System.Drawing.Point(140, 120);
 			this.emptySpaceItem6.Name = "emptySpaceItem6";
-			this.emptySpaceItem6.Size = new System.Drawing.Size(12, 42);
+			this.emptySpaceItem6.Size = new System.Drawing.Size(10, 42);
 			this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem11
@@ -1987,7 +2144,7 @@
 			this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
 			this.layoutControlItem10.CustomizationFormText = "نسبـة المـريــض";
 			this.layoutControlItem10.FillControlToClientArea = false;
-			this.layoutControlItem10.Location = new System.Drawing.Point(152, 120);
+			this.layoutControlItem10.Location = new System.Drawing.Point(150, 120);
 			this.layoutControlItem10.Name = "layoutControlItem10";
 			this.layoutControlItem10.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem10.Size = new System.Drawing.Size(140, 42);
@@ -2007,7 +2164,7 @@
 			this.layoutControlItem8.Location = new System.Drawing.Point(0, 78);
 			this.layoutControlItem8.Name = "layoutControlItem8";
 			this.layoutControlItem8.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem8.Size = new System.Drawing.Size(292, 42);
+			this.layoutControlItem8.Size = new System.Drawing.Size(290, 42);
 			this.layoutControlItem8.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem8.Text = "المستـــوى التـأمينــــي";
 			this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
@@ -2024,7 +2181,7 @@
 			this.layoutControlItem6.Location = new System.Drawing.Point(0, 36);
 			this.layoutControlItem6.Name = "layoutControlItem6";
 			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem6.Size = new System.Drawing.Size(292, 42);
+			this.layoutControlItem6.Size = new System.Drawing.Size(290, 42);
 			this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem6.Text = "جهــــة التـأميــــــن";
 			this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top;
@@ -2037,7 +2194,7 @@
 			this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem7.Name = "layoutControlItem7";
 			this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem7.Size = new System.Drawing.Size(292, 36);
+			this.layoutControlItem7.Size = new System.Drawing.Size(290, 36);
 			this.layoutControlItem7.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem7.TextVisible = false;
@@ -2058,7 +2215,7 @@
 			this.layoutControlGroup4.Location = new System.Drawing.Point(0, 184);
 			this.layoutControlGroup4.Name = "layoutControlGroup4";
 			this.layoutControlGroup4.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlGroup4.Size = new System.Drawing.Size(300, 63);
+			this.layoutControlGroup4.Size = new System.Drawing.Size(298, 63);
 			this.layoutControlGroup4.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlGroup4.Text = "إضـافــــات علــى الفـاتـــــورة";
 			// 
@@ -2066,7 +2223,7 @@
 			// 
 			this.layoutControlItem2.Control = this.chkIsSurchargesAppliedToInvoice;
 			this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-			this.layoutControlItem2.Location = new System.Drawing.Point(166, 0);
+			this.layoutControlItem2.Location = new System.Drawing.Point(164, 0);
 			this.layoutControlItem2.Name = "layoutControlItem2";
 			this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem2.Size = new System.Drawing.Size(126, 36);
@@ -2080,7 +2237,7 @@
 			this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
 			this.emptySpaceItem3.Location = new System.Drawing.Point(126, 0);
 			this.emptySpaceItem3.Name = "emptySpaceItem3";
-			this.emptySpaceItem3.Size = new System.Drawing.Size(40, 36);
+			this.emptySpaceItem3.Size = new System.Drawing.Size(38, 36);
 			this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem3
@@ -2111,7 +2268,7 @@
 			this.layoutControlGroup3.Location = new System.Drawing.Point(0, 119);
 			this.layoutControlGroup3.Name = "layoutControlGroup3";
 			this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlGroup3.Size = new System.Drawing.Size(300, 63);
+			this.layoutControlGroup3.Size = new System.Drawing.Size(298, 63);
 			this.layoutControlGroup3.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlGroup3.Text = "حـالــــــة المـريــــض";
 			// 
@@ -2131,7 +2288,7 @@
 			// 
 			this.layoutControlItem14.Control = this.chkPrivateInvoice;
 			this.layoutControlItem14.CustomizationFormText = "layoutControlItem14";
-			this.layoutControlItem14.Location = new System.Drawing.Point(166, 0);
+			this.layoutControlItem14.Location = new System.Drawing.Point(164, 0);
 			this.layoutControlItem14.Name = "layoutControlItem14";
 			this.layoutControlItem14.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem14.Size = new System.Drawing.Size(126, 36);
@@ -2145,7 +2302,7 @@
 			this.emptySpaceItem8.CustomizationFormText = "emptySpaceItem8";
 			this.emptySpaceItem8.Location = new System.Drawing.Point(128, 0);
 			this.emptySpaceItem8.Name = "emptySpaceItem8";
-			this.emptySpaceItem8.Size = new System.Drawing.Size(38, 36);
+			this.emptySpaceItem8.Size = new System.Drawing.Size(36, 36);
 			this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlGroup2
@@ -2164,7 +2321,7 @@
 			this.layoutControlGroup2.Location = new System.Drawing.Point(0, 54);
 			this.layoutControlGroup2.Name = "layoutControlGroup2";
 			this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlGroup2.Size = new System.Drawing.Size(300, 63);
+			this.layoutControlGroup2.Size = new System.Drawing.Size(298, 63);
 			this.layoutControlGroup2.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlGroup2.Text = "نــوع الفـاتـــــورة";
 			// 
@@ -2184,7 +2341,7 @@
 			// 
 			this.layoutControlItem4.Control = this.chkInPatient;
 			this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-			this.layoutControlItem4.Location = new System.Drawing.Point(166, 0);
+			this.layoutControlItem4.Location = new System.Drawing.Point(164, 0);
 			this.layoutControlItem4.Name = "layoutControlItem4";
 			this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem4.Size = new System.Drawing.Size(126, 36);
@@ -2198,7 +2355,7 @@
 			this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
 			this.emptySpaceItem4.Location = new System.Drawing.Point(126, 0);
 			this.emptySpaceItem4.Name = "emptySpaceItem4";
-			this.emptySpaceItem4.Size = new System.Drawing.Size(40, 36);
+			this.emptySpaceItem4.Size = new System.Drawing.Size(38, 36);
 			this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem1
@@ -2207,7 +2364,7 @@
 			this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
 			this.layoutControlItem1.Control = this.dtInvoiceCreationDate;
 			this.layoutControlItem1.CustomizationFormText = "تـاريــخ إنشـــاء الفـاتـــورة";
-			this.layoutControlItem1.Location = new System.Drawing.Point(37, 0);
+			this.layoutControlItem1.Location = new System.Drawing.Point(35, 0);
 			this.layoutControlItem1.Name = "layoutControlItem1";
 			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem1.Size = new System.Drawing.Size(263, 26);
@@ -2219,10 +2376,11 @@
 			// layoutControlItem54
 			// 
 			this.layoutControlItem54.Control = this.txtInvoice_Description;
+			this.layoutControlItem54.CustomizationFormText = "مـلاحـظــــات علـى الفـاتـــورة";
 			this.layoutControlItem54.Location = new System.Drawing.Point(0, 26);
 			this.layoutControlItem54.Name = "layoutControlItem54";
 			this.layoutControlItem54.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem54.Size = new System.Drawing.Size(300, 26);
+			this.layoutControlItem54.Size = new System.Drawing.Size(298, 26);
 			this.layoutControlItem54.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem54.Text = "مـلاحـظــــات علـى الفـاتـــورة";
 			this.layoutControlItem54.TextSize = new System.Drawing.Size(134, 13);
@@ -2233,7 +2391,7 @@
 			this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
 			this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
 			this.emptySpaceItem1.Name = "emptySpaceItem1";
-			this.emptySpaceItem1.Size = new System.Drawing.Size(37, 26);
+			this.emptySpaceItem1.Size = new System.Drawing.Size(35, 26);
 			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// emptySpaceItem9
@@ -2242,14 +2400,14 @@
 			this.emptySpaceItem9.CustomizationFormText = "emptySpaceItem9";
 			this.emptySpaceItem9.Location = new System.Drawing.Point(0, 58);
 			this.emptySpaceItem9.Name = "emptySpaceItem9";
-			this.emptySpaceItem9.Size = new System.Drawing.Size(922, 10);
+			this.emptySpaceItem9.Size = new System.Drawing.Size(924, 10);
 			this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem17
 			// 
 			this.layoutControlItem17.Control = this.picPatient;
 			this.layoutControlItem17.CustomizationFormText = "layoutControlItem17";
-			this.layoutControlItem17.Location = new System.Drawing.Point(924, 0);
+			this.layoutControlItem17.Location = new System.Drawing.Point(926, 0);
 			this.layoutControlItem17.Name = "layoutControlItem17";
 			this.layoutControlItem17.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem17.Size = new System.Drawing.Size(66, 68);
@@ -2262,7 +2420,7 @@
 			// 
 			this.simpleSeparator7.AllowHotTrack = false;
 			this.simpleSeparator7.CustomizationFormText = "simpleSeparator7";
-			this.simpleSeparator7.Location = new System.Drawing.Point(922, 0);
+			this.simpleSeparator7.Location = new System.Drawing.Point(924, 0);
 			this.simpleSeparator7.Name = "simpleSeparator7";
 			this.simpleSeparator7.Size = new System.Drawing.Size(2, 68);
 			// 
@@ -2272,7 +2430,7 @@
 			this.simpleSeparator8.CustomizationFormText = "simpleSeparator8";
 			this.simpleSeparator8.Location = new System.Drawing.Point(0, 28);
 			this.simpleSeparator8.Name = "simpleSeparator8";
-			this.simpleSeparator8.Size = new System.Drawing.Size(922, 2);
+			this.simpleSeparator8.Size = new System.Drawing.Size(924, 2);
 			// 
 			// lytPatientNameDetails
 			// 
@@ -2285,7 +2443,7 @@
 			this.lytPatientNameDetails.Location = new System.Drawing.Point(0, 0);
 			this.lytPatientNameDetails.Name = "lytPatientNameDetails";
 			this.lytPatientNameDetails.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytPatientNameDetails.Size = new System.Drawing.Size(922, 28);
+			this.lytPatientNameDetails.Size = new System.Drawing.Size(924, 28);
 			this.lytPatientNameDetails.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytPatientNameDetails.TextVisible = false;
 			// 
@@ -2295,14 +2453,14 @@
 			this.emptySpaceItem10.CustomizationFormText = "emptySpaceItem10";
 			this.emptySpaceItem10.Location = new System.Drawing.Point(0, 0);
 			this.emptySpaceItem10.Name = "emptySpaceItem10";
-			this.emptySpaceItem10.Size = new System.Drawing.Size(416, 26);
+			this.emptySpaceItem10.Size = new System.Drawing.Size(418, 26);
 			this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem19
 			// 
 			this.layoutControlItem19.Control = this.lblPatientName;
 			this.layoutControlItem19.CustomizationFormText = "layoutControlItem19";
-			this.layoutControlItem19.Location = new System.Drawing.Point(416, 0);
+			this.layoutControlItem19.Location = new System.Drawing.Point(418, 0);
 			this.layoutControlItem19.Name = "layoutControlItem19";
 			this.layoutControlItem19.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem19.Size = new System.Drawing.Size(406, 26);
@@ -2314,7 +2472,7 @@
 			// 
 			this.layoutControlItem48.Control = this.lblPatientID;
 			this.layoutControlItem48.CustomizationFormText = "layoutControlItem18";
-			this.layoutControlItem48.Location = new System.Drawing.Point(824, 0);
+			this.layoutControlItem48.Location = new System.Drawing.Point(826, 0);
 			this.layoutControlItem48.Name = "layoutControlItem48";
 			this.layoutControlItem48.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem48.Size = new System.Drawing.Size(96, 26);
@@ -2325,7 +2483,8 @@
 			// simpleSeparator9
 			// 
 			this.simpleSeparator9.AllowHotTrack = false;
-			this.simpleSeparator9.Location = new System.Drawing.Point(822, 0);
+			this.simpleSeparator9.CustomizationFormText = "simpleSeparator9";
+			this.simpleSeparator9.Location = new System.Drawing.Point(824, 0);
 			this.simpleSeparator9.Name = "simpleSeparator9";
 			this.simpleSeparator9.Size = new System.Drawing.Size(2, 26);
 			// 
@@ -2336,7 +2495,7 @@
 			this.layoutControlItem27.Location = new System.Drawing.Point(0, 68);
 			this.layoutControlItem27.Name = "layoutControlItem27";
 			this.layoutControlItem27.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem27.Size = new System.Drawing.Size(990, 3);
+			this.layoutControlItem27.Size = new System.Drawing.Size(992, 3);
 			this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem27.TextVisible = false;
 			// 
@@ -2357,7 +2516,7 @@
 			this.lytPatientInsuranceDetails.Location = new System.Drawing.Point(0, 30);
 			this.lytPatientInsuranceDetails.Name = "lytPatientInsuranceDetails";
 			this.lytPatientInsuranceDetails.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytPatientInsuranceDetails.Size = new System.Drawing.Size(922, 28);
+			this.lytPatientInsuranceDetails.Size = new System.Drawing.Size(924, 28);
 			this.lytPatientInsuranceDetails.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytPatientInsuranceDetails.TextVisible = false;
 			this.lytPatientInsuranceDetails.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
@@ -2366,7 +2525,7 @@
 			// 
 			this.layoutControlItem20.Control = this.labelControl1;
 			this.layoutControlItem20.CustomizationFormText = "layoutControlItem20";
-			this.layoutControlItem20.Location = new System.Drawing.Point(844, 0);
+			this.layoutControlItem20.Location = new System.Drawing.Point(846, 0);
 			this.layoutControlItem20.Name = "layoutControlItem20";
 			this.layoutControlItem20.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem20.Size = new System.Drawing.Size(76, 26);
@@ -2378,7 +2537,7 @@
 			// 
 			this.simpleSeparator10.AllowHotTrack = false;
 			this.simpleSeparator10.CustomizationFormText = "simpleSeparator10";
-			this.simpleSeparator10.Location = new System.Drawing.Point(636, 0);
+			this.simpleSeparator10.Location = new System.Drawing.Point(638, 0);
 			this.simpleSeparator10.Name = "simpleSeparator10";
 			this.simpleSeparator10.Size = new System.Drawing.Size(2, 26);
 			// 
@@ -2386,7 +2545,7 @@
 			// 
 			this.layoutControlItem22.Control = this.labelControl3;
 			this.layoutControlItem22.CustomizationFormText = "layoutControlItem22";
-			this.layoutControlItem22.Location = new System.Drawing.Point(560, 0);
+			this.layoutControlItem22.Location = new System.Drawing.Point(562, 0);
 			this.layoutControlItem22.Name = "layoutControlItem22";
 			this.layoutControlItem22.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem22.Size = new System.Drawing.Size(76, 26);
@@ -2398,7 +2557,7 @@
 			// 
 			this.simpleSeparator11.AllowHotTrack = false;
 			this.simpleSeparator11.CustomizationFormText = "simpleSeparator11";
-			this.simpleSeparator11.Location = new System.Drawing.Point(352, 0);
+			this.simpleSeparator11.Location = new System.Drawing.Point(354, 0);
 			this.simpleSeparator11.Name = "simpleSeparator11";
 			this.simpleSeparator11.Size = new System.Drawing.Size(2, 26);
 			// 
@@ -2406,7 +2565,7 @@
 			// 
 			this.layoutControlItem24.Control = this.labelControl5;
 			this.layoutControlItem24.CustomizationFormText = "layoutControlItem24";
-			this.layoutControlItem24.Location = new System.Drawing.Point(276, 0);
+			this.layoutControlItem24.Location = new System.Drawing.Point(278, 0);
 			this.layoutControlItem24.Name = "layoutControlItem24";
 			this.layoutControlItem24.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem24.Size = new System.Drawing.Size(76, 26);
@@ -2418,7 +2577,7 @@
 			// 
 			this.layoutControlItem26.Control = this.labelControl7;
 			this.layoutControlItem26.CustomizationFormText = "layoutControlItem26";
-			this.layoutControlItem26.Location = new System.Drawing.Point(164, 0);
+			this.layoutControlItem26.Location = new System.Drawing.Point(166, 0);
 			this.layoutControlItem26.Name = "layoutControlItem26";
 			this.layoutControlItem26.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem26.Size = new System.Drawing.Size(36, 26);
@@ -2432,14 +2591,14 @@
 			this.emptySpaceItem11.CustomizationFormText = "emptySpaceItem11";
 			this.emptySpaceItem11.Location = new System.Drawing.Point(0, 0);
 			this.emptySpaceItem11.Name = "emptySpaceItem11";
-			this.emptySpaceItem11.Size = new System.Drawing.Size(164, 26);
+			this.emptySpaceItem11.Size = new System.Drawing.Size(166, 26);
 			this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem21
 			// 
 			this.layoutControlItem21.Control = this.lblInsuranceCarrierName;
 			this.layoutControlItem21.CustomizationFormText = "layoutControlItem21";
-			this.layoutControlItem21.Location = new System.Drawing.Point(638, 0);
+			this.layoutControlItem21.Location = new System.Drawing.Point(640, 0);
 			this.layoutControlItem21.Name = "layoutControlItem21";
 			this.layoutControlItem21.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem21.Size = new System.Drawing.Size(206, 26);
@@ -2451,7 +2610,7 @@
 			// 
 			this.layoutControlItem23.Control = this.lblInsuranceLevelName;
 			this.layoutControlItem23.CustomizationFormText = "layoutControlItem23";
-			this.layoutControlItem23.Location = new System.Drawing.Point(354, 0);
+			this.layoutControlItem23.Location = new System.Drawing.Point(356, 0);
 			this.layoutControlItem23.Name = "layoutControlItem23";
 			this.layoutControlItem23.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem23.Size = new System.Drawing.Size(206, 26);
@@ -2463,7 +2622,7 @@
 			// 
 			this.layoutControlItem25.Control = this.lblInsurancePercentage;
 			this.layoutControlItem25.CustomizationFormText = "layoutControlItem25";
-			this.layoutControlItem25.Location = new System.Drawing.Point(200, 0);
+			this.layoutControlItem25.Location = new System.Drawing.Point(202, 0);
 			this.layoutControlItem25.Name = "layoutControlItem25";
 			this.layoutControlItem25.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem25.Size = new System.Drawing.Size(76, 26);
@@ -2474,7 +2633,7 @@
 			// layoutControlGroup7
 			// 
 			this.layoutControlGroup7.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.layoutControlGroup7.AppearanceGroup.ForeColor = System.Drawing.Color.FloralWhite;
+			this.layoutControlGroup7.AppearanceGroup.ForeColor = System.Drawing.Color.DarkCyan;
 			this.layoutControlGroup7.AppearanceGroup.Options.UseFont = true;
 			this.layoutControlGroup7.AppearanceGroup.Options.UseForeColor = true;
 			this.layoutControlGroup7.CustomizationFormText = "بيــانــــات إختيــــار الخـدمـــات الطبيــــة";
@@ -2489,13 +2648,13 @@
             this.layoutControlItem35,
             this.layoutControlItem39,
             this.layoutControlItem37,
-            this.layoutControlItem28,
-            this.layoutControlItem29,
-            this.layoutControlItem30,
             this.emptySpaceItem17,
             this.layoutControlItem36,
-            this.layoutControlItem16});
-			this.layoutControlGroup7.Location = new System.Drawing.Point(299, 71);
+            this.layoutControlItem16,
+            this.layoutControlItem28,
+            this.layoutControlItem29,
+            this.layoutControlItem9});
+			this.layoutControlGroup7.Location = new System.Drawing.Point(301, 71);
 			this.layoutControlGroup7.Name = "layoutControlGroup7";
 			this.layoutControlGroup7.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlGroup7.Size = new System.Drawing.Size(691, 249);
@@ -2640,42 +2799,6 @@
 			this.layoutControlItem37.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem37.TextVisible = false;
 			// 
-			// layoutControlItem28
-			// 
-			this.layoutControlItem28.Control = this.chkExaminationServiceType;
-			this.layoutControlItem28.CustomizationFormText = "layoutControlItem28";
-			this.layoutControlItem28.Location = new System.Drawing.Point(577, 0);
-			this.layoutControlItem28.Name = "layoutControlItem28";
-			this.layoutControlItem28.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem28.Size = new System.Drawing.Size(106, 36);
-			this.layoutControlItem28.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem28.TextVisible = false;
-			// 
-			// layoutControlItem29
-			// 
-			this.layoutControlItem29.Control = this.chkInvestigationServicetype;
-			this.layoutControlItem29.CustomizationFormText = "layoutControlItem29";
-			this.layoutControlItem29.Location = new System.Drawing.Point(471, 0);
-			this.layoutControlItem29.Name = "layoutControlItem29";
-			this.layoutControlItem29.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem29.Size = new System.Drawing.Size(106, 36);
-			this.layoutControlItem29.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem29.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem29.TextVisible = false;
-			// 
-			// layoutControlItem30
-			// 
-			this.layoutControlItem30.Control = this.chkLabServiceType;
-			this.layoutControlItem30.CustomizationFormText = "layoutControlItem30";
-			this.layoutControlItem30.Location = new System.Drawing.Point(365, 0);
-			this.layoutControlItem30.Name = "layoutControlItem30";
-			this.layoutControlItem30.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem30.Size = new System.Drawing.Size(106, 36);
-			this.layoutControlItem30.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem30.TextVisible = false;
-			// 
 			// emptySpaceItem17
 			// 
 			this.emptySpaceItem17.AllowHotTrack = false;
@@ -2700,6 +2823,7 @@
 			// layoutControlItem16
 			// 
 			this.layoutControlItem16.Control = this.chkUseCustomPrice;
+			this.layoutControlItem16.CustomizationFormText = "layoutControlItem16";
 			this.layoutControlItem16.Location = new System.Drawing.Point(0, 134);
 			this.layoutControlItem16.Name = "layoutControlItem16";
 			this.layoutControlItem16.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -2708,11 +2832,47 @@
 			this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem16.TextVisible = false;
 			// 
+			// layoutControlItem28
+			// 
+			this.layoutControlItem28.Control = this.chkInvestigationServicetype;
+			this.layoutControlItem28.CustomizationFormText = "layoutControlItem29";
+			this.layoutControlItem28.Location = new System.Drawing.Point(471, 0);
+			this.layoutControlItem28.Name = "layoutControlItem28";
+			this.layoutControlItem28.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem28.Size = new System.Drawing.Size(106, 36);
+			this.layoutControlItem28.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem28.TextVisible = false;
+			// 
+			// layoutControlItem29
+			// 
+			this.layoutControlItem29.Control = this.chkLabServiceType;
+			this.layoutControlItem29.CustomizationFormText = "layoutControlItem30";
+			this.layoutControlItem29.Location = new System.Drawing.Point(365, 0);
+			this.layoutControlItem29.Name = "layoutControlItem29";
+			this.layoutControlItem29.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem29.Size = new System.Drawing.Size(106, 36);
+			this.layoutControlItem29.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem29.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem29.TextVisible = false;
+			// 
+			// layoutControlItem9
+			// 
+			this.layoutControlItem9.Control = this.chkExaminationServiceType;
+			this.layoutControlItem9.CustomizationFormText = "layoutControlItem28";
+			this.layoutControlItem9.Location = new System.Drawing.Point(577, 0);
+			this.layoutControlItem9.Name = "layoutControlItem9";
+			this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem9.Size = new System.Drawing.Size(106, 36);
+			this.layoutControlItem9.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem9.TextVisible = false;
+			// 
 			// simpleSeparator5
 			// 
 			this.simpleSeparator5.AllowHotTrack = false;
 			this.simpleSeparator5.CustomizationFormText = "simpleSeparator5";
-			this.simpleSeparator5.Location = new System.Drawing.Point(990, 0);
+			this.simpleSeparator5.Location = new System.Drawing.Point(992, 0);
 			this.simpleSeparator5.Name = "simpleSeparator5";
 			this.simpleSeparator5.Size = new System.Drawing.Size(2, 507);
 			// 
@@ -2720,7 +2880,7 @@
 			// 
 			this.simpleSeparator12.AllowHotTrack = false;
 			this.simpleSeparator12.CustomizationFormText = "simpleSeparator12";
-			this.simpleSeparator12.Location = new System.Drawing.Point(297, 71);
+			this.simpleSeparator12.Location = new System.Drawing.Point(299, 71);
 			this.simpleSeparator12.Name = "simpleSeparator12";
 			this.simpleSeparator12.Size = new System.Drawing.Size(2, 249);
 			// 
@@ -2731,7 +2891,7 @@
 			this.layoutControlItem45.Location = new System.Drawing.Point(0, 320);
 			this.layoutControlItem45.Name = "layoutControlItem45";
 			this.layoutControlItem45.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem45.Size = new System.Drawing.Size(990, 3);
+			this.layoutControlItem45.Size = new System.Drawing.Size(992, 3);
 			this.layoutControlItem45.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem45.TextVisible = false;
 			// 
@@ -2752,7 +2912,7 @@
 			this.layoutControlGroup9.Location = new System.Drawing.Point(0, 323);
 			this.layoutControlGroup9.Name = "layoutControlGroup9";
 			this.layoutControlGroup9.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup9.Size = new System.Drawing.Size(990, 357);
+			this.layoutControlGroup9.Size = new System.Drawing.Size(992, 357);
 			this.layoutControlGroup9.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlGroup9.Text = "الخـدمـــــات المضـافــــــة";
 			// 
@@ -2796,7 +2956,7 @@
 			this.item0.Location = new System.Drawing.Point(58, 0);
 			this.item0.Name = "item0";
 			this.item0.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.item0.Size = new System.Drawing.Size(924, 330);
+			this.item0.Size = new System.Drawing.Size(926, 330);
 			this.item0.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.item0.TextSize = new System.Drawing.Size(0, 0);
 			this.item0.TextVisible = false;
@@ -2828,12 +2988,13 @@
 			this.emptySpaceItem16.CustomizationFormText = "emptySpaceItem16";
 			this.emptySpaceItem16.Location = new System.Drawing.Point(142, 71);
 			this.emptySpaceItem16.Name = "emptySpaceItem16";
-			this.emptySpaceItem16.Size = new System.Drawing.Size(155, 249);
+			this.emptySpaceItem16.Size = new System.Drawing.Size(10, 249);
 			this.emptySpaceItem16.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// emptySpaceItem13
 			// 
 			this.emptySpaceItem13.AllowHotTrack = false;
+			this.emptySpaceItem13.CustomizationFormText = "emptySpaceItem13";
 			this.emptySpaceItem13.Location = new System.Drawing.Point(0, 71);
 			this.emptySpaceItem13.Name = "emptySpaceItem13";
 			this.emptySpaceItem13.Size = new System.Drawing.Size(142, 37);
@@ -2841,6 +3002,7 @@
 			// 
 			// layoutControlGroup8
 			// 
+			this.layoutControlGroup8.CustomizationFormText = "layoutControlGroup8";
 			this.layoutControlGroup8.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem42,
             this.layoutControlItem41,
@@ -2900,6 +3062,7 @@
 			this.layoutControlItem52.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.layoutControlItem52.Control = this.spnNet;
 			this.layoutControlItem52.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+			this.layoutControlItem52.CustomizationFormText = "صـافــي الفـاتـــورة";
 			this.layoutControlItem52.FillControlToClientArea = false;
 			this.layoutControlItem52.Location = new System.Drawing.Point(0, 104);
 			this.layoutControlItem52.Name = "layoutControlItem52";
@@ -2913,6 +3076,7 @@
 			// simpleSeparator13
 			// 
 			this.simpleSeparator13.AllowHotTrack = false;
+			this.simpleSeparator13.CustomizationFormText = "simpleSeparator13";
 			this.simpleSeparator13.Location = new System.Drawing.Point(0, 156);
 			this.simpleSeparator13.Name = "simpleSeparator13";
 			this.simpleSeparator13.Size = new System.Drawing.Size(140, 2);
@@ -2939,16 +3103,18 @@
 			// simpleSeparator14
 			// 
 			this.simpleSeparator14.AllowHotTrack = false;
-			this.simpleSeparator14.Location = new System.Drawing.Point(990, 507);
+			this.simpleSeparator14.CustomizationFormText = "simpleSeparator14";
+			this.simpleSeparator14.Location = new System.Drawing.Point(992, 507);
 			this.simpleSeparator14.Name = "simpleSeparator14";
-			this.simpleSeparator14.Size = new System.Drawing.Size(310, 2);
+			this.simpleSeparator14.Size = new System.Drawing.Size(308, 2);
 			// 
 			// emptySpaceItem2
 			// 
 			this.emptySpaceItem2.AllowHotTrack = false;
-			this.emptySpaceItem2.Location = new System.Drawing.Point(990, 670);
+			this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
+			this.emptySpaceItem2.Location = new System.Drawing.Point(992, 670);
 			this.emptySpaceItem2.Name = "emptySpaceItem2";
-			this.emptySpaceItem2.Size = new System.Drawing.Size(310, 10);
+			this.emptySpaceItem2.Size = new System.Drawing.Size(308, 10);
 			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlGroup10
@@ -2957,6 +3123,7 @@
 			this.layoutControlGroup10.AppearanceGroup.ForeColor = System.Drawing.Color.FloralWhite;
 			this.layoutControlGroup10.AppearanceGroup.Options.UseFont = true;
 			this.layoutControlGroup10.AppearanceGroup.Options.UseForeColor = true;
+			this.layoutControlGroup10.CustomizationFormText = "بيـانــــات المـدفوعــــات";
 			this.layoutControlGroup10.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lyt_chkResetRemaining,
             this.emptySpaceItem20,
@@ -2967,16 +3134,17 @@
             this.lyt_spnAmountPaid,
             this.layoutControlItem40,
             this.lyt_chkIsPaymentEnough});
-			this.layoutControlGroup10.Location = new System.Drawing.Point(990, 509);
+			this.layoutControlGroup10.Location = new System.Drawing.Point(992, 509);
 			this.layoutControlGroup10.Name = "layoutControlGroup10";
 			this.layoutControlGroup10.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup10.Size = new System.Drawing.Size(310, 161);
+			this.layoutControlGroup10.Size = new System.Drawing.Size(308, 161);
 			this.layoutControlGroup10.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlGroup10.Text = "بيـانــــات المـدفوعــــات";
 			// 
 			// lyt_chkResetRemaining
 			// 
 			this.lyt_chkResetRemaining.Control = this.chkResetRemaining;
+			this.lyt_chkResetRemaining.CustomizationFormText = "lyt_chkResetRemaining";
 			this.lyt_chkResetRemaining.Location = new System.Drawing.Point(0, 104);
 			this.lyt_chkResetRemaining.Name = "lyt_chkResetRemaining";
 			this.lyt_chkResetRemaining.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -2989,6 +3157,7 @@
 			// emptySpaceItem20
 			// 
 			this.emptySpaceItem20.AllowHotTrack = false;
+			this.emptySpaceItem20.CustomizationFormText = "emptySpaceItem20";
 			this.emptySpaceItem20.Location = new System.Drawing.Point(126, 104);
 			this.emptySpaceItem20.Name = "emptySpaceItem20";
 			this.emptySpaceItem20.Size = new System.Drawing.Size(14, 36);
@@ -2997,9 +3166,10 @@
 			// emptySpaceItem15
 			// 
 			this.emptySpaceItem15.AllowHotTrack = false;
+			this.emptySpaceItem15.CustomizationFormText = "emptySpaceItem15";
 			this.emptySpaceItem15.Location = new System.Drawing.Point(140, 118);
 			this.emptySpaceItem15.Name = "emptySpaceItem15";
-			this.emptySpaceItem15.Size = new System.Drawing.Size(168, 22);
+			this.emptySpaceItem15.Size = new System.Drawing.Size(166, 22);
 			this.emptySpaceItem15.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// lyt_spnRemainingAmount
@@ -3010,6 +3180,7 @@
 			this.lyt_spnRemainingAmount.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lyt_spnRemainingAmount.Control = this.spnRemainingAmount;
 			this.lyt_spnRemainingAmount.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lyt_spnRemainingAmount.CustomizationFormText = "المتبقـــي";
 			this.lyt_spnRemainingAmount.FillControlToClientArea = false;
 			this.lyt_spnRemainingAmount.Location = new System.Drawing.Point(0, 52);
 			this.lyt_spnRemainingAmount.Name = "lyt_spnRemainingAmount";
@@ -3027,15 +3198,16 @@
 			this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
 			this.emptySpaceItem5.Location = new System.Drawing.Point(140, 62);
 			this.emptySpaceItem5.Name = "emptySpaceItem5";
-			this.emptySpaceItem5.Size = new System.Drawing.Size(12, 56);
+			this.emptySpaceItem5.Size = new System.Drawing.Size(10, 56);
 			this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// emptySpaceItem14
 			// 
 			this.emptySpaceItem14.AllowHotTrack = false;
+			this.emptySpaceItem14.CustomizationFormText = "emptySpaceItem14";
 			this.emptySpaceItem14.Location = new System.Drawing.Point(140, 0);
 			this.emptySpaceItem14.Name = "emptySpaceItem14";
-			this.emptySpaceItem14.Size = new System.Drawing.Size(28, 62);
+			this.emptySpaceItem14.Size = new System.Drawing.Size(26, 62);
 			this.emptySpaceItem14.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// lyt_spnAmountPaid
@@ -3046,6 +3218,7 @@
 			this.lyt_spnAmountPaid.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lyt_spnAmountPaid.Control = this.spnAmountPaid;
 			this.lyt_spnAmountPaid.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lyt_spnAmountPaid.CustomizationFormText = "المبلـغ المـدفــوع";
 			this.lyt_spnAmountPaid.FillControlToClientArea = false;
 			this.lyt_spnAmountPaid.Location = new System.Drawing.Point(0, 0);
 			this.lyt_spnAmountPaid.Name = "lyt_spnAmountPaid";
@@ -3062,7 +3235,8 @@
 			this.layoutControlItem40.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
 			this.layoutControlItem40.AppearanceItemCaption.Options.UseFont = true;
 			this.layoutControlItem40.Control = this.chkPaymentType;
-			this.layoutControlItem40.Location = new System.Drawing.Point(168, 0);
+			this.layoutControlItem40.CustomizationFormText = "تسجيــل المـدفوعــات";
+			this.layoutControlItem40.Location = new System.Drawing.Point(166, 0);
 			this.layoutControlItem40.Name = "layoutControlItem40";
 			this.layoutControlItem40.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem40.Size = new System.Drawing.Size(140, 62);
@@ -3074,13 +3248,108 @@
 			// lyt_chkIsPaymentEnough
 			// 
 			this.lyt_chkIsPaymentEnough.Control = this.chkIsPaymentEnough;
-			this.lyt_chkIsPaymentEnough.Location = new System.Drawing.Point(152, 62);
+			this.lyt_chkIsPaymentEnough.CustomizationFormText = "lyt_chkIsPaymentEnough";
+			this.lyt_chkIsPaymentEnough.Location = new System.Drawing.Point(150, 62);
 			this.lyt_chkIsPaymentEnough.Name = "lyt_chkIsPaymentEnough";
 			this.lyt_chkIsPaymentEnough.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lyt_chkIsPaymentEnough.Size = new System.Drawing.Size(156, 56);
 			this.lyt_chkIsPaymentEnough.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.lyt_chkIsPaymentEnough.TextSize = new System.Drawing.Size(0, 0);
 			this.lyt_chkIsPaymentEnough.TextVisible = false;
+			// 
+			// lytStationPoint
+			// 
+			this.lytStationPoint.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.lytStationPoint.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.lytStationPoint.AppearanceItemCaption.Options.UseFont = true;
+			this.lytStationPoint.AppearanceItemCaption.Options.UseForeColor = true;
+			this.lytStationPoint.Control = this.lkeStationPoint;
+			this.lytStationPoint.Enabled = false;
+			this.lytStationPoint.Location = new System.Drawing.Point(152, 117);
+			this.lytStationPoint.Name = "lytStationPoint";
+			this.lytStationPoint.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.lytStationPoint.Size = new System.Drawing.Size(147, 42);
+			this.lytStationPoint.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.lytStationPoint.Text = "العيــــادة";
+			this.lytStationPoint.TextLocation = DevExpress.Utils.Locations.Top;
+			this.lytStationPoint.TextSize = new System.Drawing.Size(134, 13);
+			// 
+			// emptySpaceItem12
+			// 
+			this.emptySpaceItem12.AllowHotTrack = false;
+			this.emptySpaceItem12.Location = new System.Drawing.Point(152, 201);
+			this.emptySpaceItem12.Name = "emptySpaceItem12";
+			this.emptySpaceItem12.Size = new System.Drawing.Size(147, 119);
+			this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// lytStationPointStage
+			// 
+			this.lytStationPointStage.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.lytStationPointStage.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.lytStationPointStage.AppearanceItemCaption.Options.UseFont = true;
+			this.lytStationPointStage.AppearanceItemCaption.Options.UseForeColor = true;
+			this.lytStationPointStage.Control = this.lkeStationPointStage;
+			this.lytStationPointStage.Enabled = false;
+			this.lytStationPointStage.Location = new System.Drawing.Point(152, 159);
+			this.lytStationPointStage.Name = "lytStationPointStage";
+			this.lytStationPointStage.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.lytStationPointStage.Size = new System.Drawing.Size(147, 42);
+			this.lytStationPointStage.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.lytStationPointStage.Text = "المرحلــــــة";
+			this.lytStationPointStage.TextLocation = DevExpress.Utils.Locations.Top;
+			this.lytStationPointStage.TextSize = new System.Drawing.Size(134, 13);
+			// 
+			// layoutControlItem49
+			// 
+			this.layoutControlItem49.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.layoutControlItem49.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.layoutControlItem49.AppearanceItemCaption.Options.UseFont = true;
+			this.layoutControlItem49.AppearanceItemCaption.Options.UseForeColor = true;
+			this.layoutControlItem49.Control = this.chkStationPoint;
+			this.layoutControlItem49.Location = new System.Drawing.Point(152, 71);
+			this.layoutControlItem49.Name = "layoutControlItem49";
+			this.layoutControlItem49.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem49.Size = new System.Drawing.Size(147, 46);
+			this.layoutControlItem49.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem49.Text = "إختيــار العيـــادة يدويــــاً";
+			this.layoutControlItem49.TextLocation = DevExpress.Utils.Locations.Top;
+			this.layoutControlItem49.TextSize = new System.Drawing.Size(134, 13);
+			// 
+			// lytExamination
+			// 
+			this.lytExamination.CustomizationFormText = "layoutControlItem28";
+			this.lytExamination.Location = new System.Drawing.Point(577, 0);
+			this.lytExamination.Name = "lytExamination";
+			this.lytExamination.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.lytExamination.Size = new System.Drawing.Size(106, 36);
+			this.lytExamination.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.lytExamination.TextSize = new System.Drawing.Size(0, 0);
+			this.lytExamination.TextVisible = false;
+			this.lytExamination.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+			// 
+			// lytInvestigation
+			// 
+			this.lytInvestigation.CustomizationFormText = "layoutControlItem29";
+			this.lytInvestigation.Location = new System.Drawing.Point(577, 0);
+			this.lytInvestigation.Name = "lytInvestigation";
+			this.lytInvestigation.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.lytInvestigation.Size = new System.Drawing.Size(106, 36);
+			this.lytInvestigation.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.lytInvestigation.TextSize = new System.Drawing.Size(0, 0);
+			this.lytInvestigation.TextVisible = false;
+			this.lytInvestigation.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+			// 
+			// lytLab
+			// 
+			this.lytLab.CustomizationFormText = "layoutControlItem30";
+			this.lytLab.Location = new System.Drawing.Point(577, 0);
+			this.lytLab.Name = "lytLab";
+			this.lytLab.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.lytLab.Size = new System.Drawing.Size(106, 36);
+			this.lytLab.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.lytLab.TextSize = new System.Drawing.Size(0, 0);
+			this.lytLab.TextVisible = false;
+			this.lytLab.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
 			// 
 			// MedicalAdmissionInvoiceCreationContainer_UC
 			// 
@@ -3094,6 +3363,11 @@
 			this.Load += new System.EventHandler(this.MedicalAdmissionInvoiceCreationContainer_UC_Load);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
 			this.layoutControl1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.chkStationPoint.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lkeStationPointStage.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView10)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lkeStationPoint.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtInvoice_Description.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnNet.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnRemainingAmount.Properties)).EndInit();
@@ -3142,6 +3416,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.item4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.item5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.item6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytOneDaySurgery)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).EndInit();
@@ -3205,12 +3480,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem17)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator12)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
@@ -3241,6 +3516,13 @@
 			((System.ComponentModel.ISupportInitialize)(this.lyt_spnAmountPaid)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lyt_chkIsPaymentEnough)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytStationPoint)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytStationPointStage)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytExamination)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytInvestigation)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lytLab)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -3317,11 +3599,30 @@
 		private DevExpress.XtraLayout.LayoutControlItem item4;
 		private DevExpress.XtraLayout.LayoutControlItem item5;
 		private DevExpress.XtraLayout.LayoutControlItem item6;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem48;
+		private DevExpress.XtraLayout.LayoutControlItem lytExamination;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+		private DevExpress.XtraEditors.CheckButton chkUseCustomPrice;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+		private DevExpress.XtraEditors.ToggleSwitch chkPaymentType;
+		private DevExpress.XtraEditors.SpinEdit spnAmountPaid;
+		private DevExpress.XtraEditors.CheckButton chkIsPaymentEnough;
+		private DevExpress.XtraEditors.TextEdit spnRemainingAmount;
+		private DevExpress.XtraEditors.SpinEdit spnNet;
+		private DevExpress.XtraEditors.TextEdit txtInvoice_Description;
+		private DevExpress.XtraEditors.CheckButton chkResetRemaining;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+		private DevExpress.XtraEditors.CheckButton chkOnsDaySurgery;
+		private DevExpress.XtraLayout.LayoutControlItem lytInvestigation;
+		private DevExpress.XtraLayout.LayoutControlItem lytLab;
+		private DevExpress.XtraLayout.LayoutControlItem lytOneDaySurgery;
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator6;
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
@@ -3350,6 +3651,7 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem54;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
@@ -3357,6 +3659,9 @@
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator8;
 		private DevExpress.XtraLayout.LayoutControlGroup lytPatientNameDetails;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem48;
+		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator9;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem27;
 		private DevExpress.XtraLayout.LayoutControlGroup lytPatientInsuranceDetails;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
@@ -3366,7 +3671,9 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem11;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem16;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup7;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem32;
@@ -3378,12 +3685,12 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem35;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem39;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem37;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem28;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem29;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem17;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem36;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem28;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem29;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator5;
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator12;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem45;
@@ -3394,45 +3701,34 @@
 		private DevExpress.XtraLayout.LayoutControlItem item0;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem44;
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator4;
-		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator9;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
-		private DevExpress.XtraEditors.CheckButton chkUseCustomPrice;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-		private DevExpress.XtraEditors.ToggleSwitch chkPaymentType;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem40;
-		private DevExpress.XtraEditors.SpinEdit spnAmountPaid;
-		private DevExpress.XtraEditors.CheckButton chkIsPaymentEnough;
-		private DevExpress.XtraEditors.TextEdit spnRemainingAmount;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem41;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem42;
-		private DevExpress.XtraEditors.SpinEdit spnNet;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem52;
-		private DevExpress.XtraEditors.TextEdit txtInvoice_Description;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem54;
-		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator13;
-		private DevExpress.XtraEditors.CheckButton chkResetRemaining;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem43;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem16;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem13;
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup8;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem14;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem42;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem41;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem52;
+		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator13;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem43;
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator14;
-		private DevExpress.XtraLayout.LayoutControlItem lyt_spnAmountPaid;
-		private DevExpress.XtraLayout.LayoutControlItem lyt_chkIsPaymentEnough;
-		private DevExpress.XtraLayout.LayoutControlItem lyt_spnRemainingAmount;
-		private DevExpress.XtraLayout.LayoutControlItem lyt_chkResetRemaining;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem15;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem20;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup10;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+		private DevExpress.XtraLayout.LayoutControlItem lyt_chkResetRemaining;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem20;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem15;
+		private DevExpress.XtraLayout.LayoutControlItem lyt_spnRemainingAmount;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem14;
+		private DevExpress.XtraLayout.LayoutControlItem lyt_spnAmountPaid;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem40;
+		private DevExpress.XtraLayout.LayoutControlItem lyt_chkIsPaymentEnough;
+		private DevExpress.XtraEditors.GridLookUpEdit lkeStationPointStage;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView10;
+		private DevExpress.XtraEditors.GridLookUpEdit lkeStationPoint;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
+		private DevExpress.XtraLayout.LayoutControlItem lytStationPoint;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem12;
+		private DevExpress.XtraLayout.LayoutControlItem lytStationPointStage;
+		private DevExpress.XtraEditors.ToggleSwitch chkStationPoint;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem49;
 	}
 }

@@ -203,6 +203,9 @@
     <Compile Include="Doctor_Service_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Doctor_StationPointStage_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Doctor_SymptomsCategory_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
@@ -495,6 +498,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MerkAuditingEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Doctor_StationPointStage_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\OrganizationMachine_StationPoint_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PEMRSavingMode_User_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PupillaryAbnormalities_cu.cs" />
@@ -693,6 +697,7 @@
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_MedicalHistory.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_PosteriorSegment.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_SocialHistory.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_TreatmentPlan.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_VisionRefractionReading.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_VitalSign.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\PEMRBusinessLogic\IPEMR_Pupillary.cs" />
@@ -838,6 +843,9 @@
     <Compile Include="ServiceCategory_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="ServiceCategory_StationPointStage_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="ServiceCategory_StationPoint_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
@@ -853,6 +861,9 @@
     <Compile Include="ServiceType_p.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="ServiceType_StationPointStage_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="ServiceType_StationPoint_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
@@ -863,6 +874,9 @@
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Service_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service_StationPointStage_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Service_StationPoint_cu.cs">

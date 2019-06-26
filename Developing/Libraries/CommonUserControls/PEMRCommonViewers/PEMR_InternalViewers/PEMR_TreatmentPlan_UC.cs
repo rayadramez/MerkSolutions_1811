@@ -10,11 +10,13 @@ using DevExpress.XtraEditors;
 using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
+using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.PEMRBusinessLogic;
 
 namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 {
-	public partial class PEMR_TreatmentPlan_UC : UserControl, IPEMR_Viewer
+	public partial class PEMR_TreatmentPlan_UC : UserControl, IPEMR_Viewer, IPEMR_TreatmentPlan
 	{
+		public VisitTiming_TreatmentPlan Active_VisitTiming_TreatmentPlan { get; set; }
 		public VisitTiming_TreatmentPlan Selected_VisitTiming_TreatmentPlan { get; set; }
 
 		public PEMR_TreatmentPlan_UC()
@@ -94,15 +96,20 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			if (PEMRBusinessLogic.ActivePEMRObject == null)
 				return;
 
-			if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan == null)
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan =
-					new List<VisitTiming_TreatmentPlan>();
-
-			VisitTiming_TreatmentPlan visitTimingTreatmentPlan =
-				PEMRBusinessLogic.CreateNew_VisitTiming_TreatmentPlan(txtTreatmentPlanDetails.EditValue,
-					spnOrderIndex.EditValue, ApplicationStaticConfiguration.ActiveLoginUser.ID);
-			if (visitTimingTreatmentPlan != null)
-				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan.Add(visitTimingTreatmentPlan);
+			if (PEMRBusinessLogic.ActivePEMRObject != null)
+			{
+				Active_VisitTiming_TreatmentPlan =
+					PEMRBusinessLogic.CreateNew_VisitTiming_TreatmentPlan(this, DB_PEMRSavingMode.SaveImmediately);
+				if (Active_VisitTiming_TreatmentPlan == null)
+					return;
+				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan == null)
+				{
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan =
+						new List<VisitTiming_TreatmentPlan>();
+				}
+				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan.Add(
+					Active_VisitTiming_TreatmentPlan);
+			}
 
 			grdTreatmentPlans.DataSource =
 				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan.FindAll(
@@ -200,6 +207,13 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 
 			visitTimingTreatmentPlan.StepOrderIndex = visitTimingTreatmentPlan.StepOrderIndex - 1;
 			visitTimingTreatmentPlan.PEMRElementStatus = PEMRElementStatus.Updated;
+			StepOrderIndex = visitTimingTreatmentPlan.StepOrderIndex;
+
+			if (!PEMRBusinessLogic.Update_VisitTiming_TreatmentPlan(this, Active_VisitTiming_TreatmentPlan))
+				return;
+
+			if (!PEMRBusinessLogic.Update_VisitTiming_TreatmentPlan(this, previousVisitTimingTreatmentPlan))
+				return;
 
 			grdTreatmentPlans.DataSource =
 				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan.FindAll(
@@ -207,6 +221,12 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 						.Equals(Convert.ToInt32(PEMRElementStatus.Removed))).OrderBy(item => item.StepOrderIndex);
 			grdTreatmentPlans.RefreshDataSource();
 			ClearControls(false);
+
+			StepOrderIndex = PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan
+				                 .FindAll(item =>
+					                 !Convert.ToInt32(item.PEMRElementStatus)
+						                 .Equals(Convert.ToInt32(PEMRElementStatus.Removed)))
+				                 .OrderBy(item => item.StepOrderIndex).Count() + 1;
 		}
 
 		private void btnDown_Click(object sender, EventArgs e)
@@ -258,12 +278,62 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			visitTimingTreatmentPlan.StepOrderIndex = visitTimingTreatmentPlan.StepOrderIndex + 1;
 			visitTimingTreatmentPlan.PEMRElementStatus = PEMRElementStatus.Updated;
 
+			if (!PEMRBusinessLogic.Update_VisitTiming_TreatmentPlan(this, Active_VisitTiming_TreatmentPlan))
+				return;
+
 			grdTreatmentPlans.DataSource =
 				PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan.FindAll(
 					item => !Convert.ToInt32(item.PEMRElementStatus)
 						.Equals(Convert.ToInt32(PEMRElementStatus.Removed))).OrderBy(item => item.StepOrderIndex);
 			grdTreatmentPlans.RefreshDataSource();
 			ClearControls(false);
+
+			StepOrderIndex = PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan
+								 .FindAll(item =>
+									 !Convert.ToInt32(item.PEMRElementStatus)
+										 .Equals(Convert.ToInt32(PEMRElementStatus.Removed)))
+								 .OrderBy(item => item.StepOrderIndex).Count() + 1;
 		}
+
+		private void btnSave_Click(object sender, EventArgs e)
+		{
+			if (PEMRBusinessLogic.ActivePEMRObject != null)
+				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan == null)
+				{
+					Active_VisitTiming_TreatmentPlan =
+						PEMRBusinessLogic.CreateNew_VisitTiming_TreatmentPlan(this, DB_PEMRSavingMode.SaveImmediately);
+					if (Active_VisitTiming_TreatmentPlan == null)
+						return;
+					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan == null)
+						PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan = new List<VisitTiming_TreatmentPlan>();
+					PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_TreatmentPlan.Add(Active_VisitTiming_TreatmentPlan);
+					XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+						MessageBoxIcon.Information);
+				}
+				else
+				{
+					if (Active_VisitTiming_TreatmentPlan == null)
+						return;
+					if (PEMRBusinessLogic.Update_VisitTiming_TreatmentPlan(this, Active_VisitTiming_TreatmentPlan))
+						XtraMessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,
+							MessageBoxIcon.Information);
+				}
+		}
+
+		#region Implementation of IPEMR_TreatmentPlan
+
+		public object TreatmentDetails
+		{
+			get { return txtTreatmentPlanDetails.EditValue; }
+			set { txtTreatmentPlanDetails.EditValue = value; }
+		}
+
+		public object StepOrderIndex
+		{
+			get { return spnOrderIndex.EditValue; }
+			set { spnOrderIndex.EditValue = value; }
+		}
+
+		#endregion
 	}
 }

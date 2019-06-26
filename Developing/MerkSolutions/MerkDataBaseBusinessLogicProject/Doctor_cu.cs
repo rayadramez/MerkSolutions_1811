@@ -20,6 +20,7 @@ namespace MerkDataBaseBusinessLogicProject
             this.Doctor_Diagnosis_cu = new HashSet<Doctor_Diagnosis_cu>();
             this.Doctor_DiagnosisCategory_cu = new HashSet<Doctor_DiagnosisCategory_cu>();
             this.Doctor_Service_cu = new HashSet<Doctor_Service_cu>();
+            this.Doctor_StationPointStage_cu = new HashSet<Doctor_StationPointStage_cu>();
             this.Doctor_Symptoms_cu = new HashSet<Doctor_Symptoms_cu>();
             this.Doctor_SymptomsCategory_cu = new HashSet<Doctor_SymptomsCategory_cu>();
             this.InvoiceDetails = new HashSet<InvoiceDetail>();
@@ -52,6 +53,8 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual ICollection<Doctor_DiagnosisCategory_cu> Doctor_DiagnosisCategory_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Doctor_Service_cu> Doctor_Service_cu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Doctor_StationPointStage_cu> Doctor_StationPointStage_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Doctor_Symptoms_cu> Doctor_Symptoms_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

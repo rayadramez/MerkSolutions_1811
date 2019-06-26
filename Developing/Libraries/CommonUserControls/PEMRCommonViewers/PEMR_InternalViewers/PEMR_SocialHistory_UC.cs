@@ -534,7 +534,8 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			if (PEMRBusinessLogic.ActivePEMRObject != null)
 				if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory == null)
 				{
-					Active_VisitTiming_SocialHistory = PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(this, DB_PEMRSavingMode.SaveImmediately);
+					Active_VisitTiming_SocialHistory =
+						PEMRBusinessLogic.CreateNew_VisitTiming_SocialHistory(this, DB_PEMRSavingMode.SaveImmediately);
 					if (Active_VisitTiming_SocialHistory == null)
 						return;
 					if (PEMRBusinessLogic.ActivePEMRObject.List_VisitTiming_SocialHistory == null)

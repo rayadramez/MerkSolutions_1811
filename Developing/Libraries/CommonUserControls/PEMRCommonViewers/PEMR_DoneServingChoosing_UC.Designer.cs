@@ -29,15 +29,15 @@
 		private void InitializeComponent()
 		{
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnExit = new DevExpress.XtraEditors.SimpleButton();
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.btnExit = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
@@ -65,21 +65,40 @@
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
-			// layoutControlGroup1
+			// btnExit
 			// 
-			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-			this.layoutControlGroup1.GroupBordersVisible = false;
-			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.emptySpaceItem1,
-            this.layoutControlItem4});
-			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlGroup1.Name = "Root";
-			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup1.Size = new System.Drawing.Size(769, 448);
-			this.layoutControlGroup1.TextVisible = false;
+			this.btnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnExit.Appearance.Options.UseFont = true;
+			this.btnExit.Image = global::CommonUserControls.Properties.Resources.ExitIcon_8;
+			this.btnExit.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+			this.btnExit.Location = new System.Drawing.Point(731, 6);
+			this.btnExit.MaximumSize = new System.Drawing.Size(35, 35);
+			this.btnExit.MinimumSize = new System.Drawing.Size(35, 35);
+			this.btnExit.Name = "btnExit";
+			this.btnExit.Size = new System.Drawing.Size(35, 35);
+			this.btnExit.StyleController = this.layoutControl1;
+			this.btnExit.TabIndex = 46;
+			this.btnExit.Text = "Add New Diagnosis";
+			// 
+			// labelControl3
+			// 
+			this.labelControl3.Appearance.BackColor = System.Drawing.Color.Gold;
+			this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+			this.labelControl3.Location = new System.Drawing.Point(0, 44);
+			this.labelControl3.Name = "labelControl3";
+			this.labelControl3.Size = new System.Drawing.Size(769, 3);
+			this.labelControl3.StyleController = this.layoutControl1;
+			this.labelControl3.TabIndex = 10;
+			// 
+			// labelControl1
+			// 
+			this.labelControl1.Appearance.BackColor = System.Drawing.Color.Gold;
+			this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+			this.labelControl1.Location = new System.Drawing.Point(0, 0);
+			this.labelControl1.Name = "labelControl1";
+			this.labelControl1.Size = new System.Drawing.Size(769, 3);
+			this.labelControl1.StyleController = this.layoutControl1;
+			this.labelControl1.TabIndex = 10;
 			// 
 			// labelControl2
 			// 
@@ -98,6 +117,22 @@
 			this.labelControl2.TabIndex = 10;
 			this.labelControl2.Text = ".... Select ....";
 			// 
+			// layoutControlGroup1
+			// 
+			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+			this.layoutControlGroup1.GroupBordersVisible = false;
+			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.emptySpaceItem1,
+            this.layoutControlItem4});
+			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlGroup1.Name = "Root";
+			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlGroup1.Size = new System.Drawing.Size(769, 448);
+			this.layoutControlGroup1.TextVisible = false;
+			// 
 			// layoutControlItem1
 			// 
 			this.layoutControlItem1.Control = this.labelControl2;
@@ -111,16 +146,6 @@
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem1.TextVisible = false;
 			// 
-			// labelControl1
-			// 
-			this.labelControl1.Appearance.BackColor = System.Drawing.Color.Gold;
-			this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl1.Location = new System.Drawing.Point(0, 0);
-			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(769, 3);
-			this.labelControl1.StyleController = this.layoutControl1;
-			this.labelControl1.TabIndex = 10;
-			// 
 			// layoutControlItem2
 			// 
 			this.layoutControlItem2.Control = this.labelControl1;
@@ -133,16 +158,6 @@
 			this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem2.TextVisible = false;
-			// 
-			// labelControl3
-			// 
-			this.labelControl3.Appearance.BackColor = System.Drawing.Color.Gold;
-			this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl3.Location = new System.Drawing.Point(0, 44);
-			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(769, 3);
-			this.labelControl3.StyleController = this.layoutControl1;
-			this.labelControl3.TabIndex = 10;
 			// 
 			// layoutControlItem3
 			// 
@@ -164,21 +179,6 @@
 			this.emptySpaceItem1.Name = "emptySpaceItem1";
 			this.emptySpaceItem1.Size = new System.Drawing.Size(769, 401);
 			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// btnExit
-			// 
-			this.btnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.btnExit.Appearance.Options.UseFont = true;
-			this.btnExit.Image = global::CommonUserControls.Properties.Resources.ExitIcon_8;
-			this.btnExit.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-			this.btnExit.Location = new System.Drawing.Point(731, 6);
-			this.btnExit.MaximumSize = new System.Drawing.Size(35, 35);
-			this.btnExit.MinimumSize = new System.Drawing.Size(35, 35);
-			this.btnExit.Name = "btnExit";
-			this.btnExit.Size = new System.Drawing.Size(35, 35);
-			this.btnExit.StyleController = this.layoutControl1;
-			this.btnExit.TabIndex = 46;
-			this.btnExit.Text = "Add New Diagnosis";
 			// 
 			// layoutControlItem4
 			// 

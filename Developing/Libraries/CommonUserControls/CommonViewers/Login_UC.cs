@@ -40,6 +40,9 @@ namespace CommonUserControls.CommonViewers
 				case DB_Application.FinanceInvoiceCreation:
 					lblApplicationTItle.Text = "Merk Finance";
 					break;
+				case DB_Application.OphalmologySurgeryApplication:
+					lblApplicationTItle.Text = "Oph. Surgery Room";
+					break;
 			}
 
 			lblApplicationTItle.ForeColor = Color.FromArgb(41, 45, 56);

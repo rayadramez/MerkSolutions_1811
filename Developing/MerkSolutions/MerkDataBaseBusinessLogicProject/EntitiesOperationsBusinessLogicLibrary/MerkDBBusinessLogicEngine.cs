@@ -66,15 +66,16 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			ServiceCategory_StationPoint_cu serviceCategoryStationPoint,
 			List<StationPointStage_cu> stationPointStagesList)
 		{
-			if (invoice == null || invoiceDetail == null || serviceCategoryStationPoint == null /*||
-			    stationPointStagesList.Count == 0*/)
+			if (invoice == null || invoiceDetail == null || serviceCategoryStationPoint == null)
 				return null;
 
 			QueueManager manager = DBCommon.CreateNewDBEntity<QueueManager>();
 			if (invoiceDetail.Doctor_CU_ID != null)
 				manager.Doctor_CU_ID = Convert.ToInt32(invoiceDetail.Doctor_CU_ID);
 			manager.InvoiceDetailID = invoiceDetail.ID;
-			manager.Service_CU_ID = invoiceDetail.Service_CU_ID != null ? Convert.ToInt32(invoiceDetail.Service_CU_ID) : (int?)null;
+			manager.Service_CU_ID = invoiceDetail.Service_CU_ID != null
+				? Convert.ToInt32(invoiceDetail.Service_CU_ID)
+				: (int?) null;
 			manager.StationPoint_CU_ID = serviceCategoryStationPoint.StationPoint_CU_ID;
 			if (stationPointStagesList.Count > 0)
 				manager.StationPointStage_CU_ID = stationPointStagesList.First().ID;
@@ -141,6 +142,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			return
 				ServiceCategory_StationPoint_cu.ItemsList.Find(
 					item => Convert.ToInt32(item.ServiceCategory_CU_ID).Equals(Convert.ToInt32(serviceCategoryID)));
+
 		}
 
 		public static List<StationPointStage_cu> GetStationPointStagesList(int stationPointID, bool orderByIndex)
@@ -405,6 +407,16 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			return accommodation;
 		}
 
+		public static InvoiceDetail CreateNew_InvoiceDetail_Surgery(InvoiceDetail parentInvoiceDetail, object serviceId,
+			object servicePrice, bool useCustomPrice, object serviceCount, object serviceDate, object doctorId,
+			object isServiceIncludedInInsurance, object insurancePercetnage, object isSurchargeApplied,
+			object isTaxApplied, object serviceDescription)
+		{
+			return CreateNew_InvoiceDetail(null, serviceId, servicePrice, useCustomPrice, serviceCount, serviceDate,
+				doctorId, isServiceIncludedInInsurance, insurancePercetnage, isSurchargeApplied, isTaxApplied,
+				serviceDescription);
+		}
+
 		public static FinanceInvoiceDetail CreateNew_FinanceInvoiceDetail(FinanceInvoiceDetail parentFinanceInvoiceDetail,
 			object inventoryItemID, object pricePerUnit, object unitMeasurmentID, object quantity, object date,
 			object discountAmount, object discountTypeID, object description, object isSurchargeApplied, object surchargeAmount)
@@ -526,15 +538,8 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			List<OrganizationMachine_StationPoint_cu> list_OrganizationMachine_StationPoint_cu =
 				OrganizationMachine_StationPoint_cu.ItemsList.FindAll(item =>
 					Convert.ToInt32(item.OrganizationMachine_CU_ID).Equals(Convert.ToInt32(organizationMachine.ID)));
-			List<StationPoint_cu> list_StationPoint_cu = new List<StationPoint_cu>();
-			foreach (OrganizationMachine_StationPoint_cu organizationMachineStationPointCu in list_OrganizationMachine_StationPoint_cu)
-			{
-				StationPoint_cu stationPoint = StationPoint_cu.ItemsList.Find(item =>
-					Convert.ToInt32(item.ID)
-						.Equals(Convert.ToInt32(organizationMachineStationPointCu.StationPoint_CU_ID)));
-				if(stationPoint != null)
-					list_StationPoint_cu.Add(stationPoint);
-			}
+
+			List<StationPoint_cu> list_StationPoint_cu = GetStationPointsList(list_OrganizationMachine_StationPoint_cu);
 
 			if (list_StationPoint_cu == null || list_StationPoint_cu.Count == 0)
 				return null;
@@ -555,6 +560,36 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			}
 
 			return list_StationPointStage_cu;
+		}
+
+		public static List<StationPoint_cu> GetStationPointsList(List<OrganizationMachine_StationPoint_cu> list)
+		{
+			List<StationPoint_cu> list_StationPoint_cu = new List<StationPoint_cu>();
+
+			foreach (OrganizationMachine_StationPoint_cu organizationMachineStationPointCu in list)
+			{
+				StationPoint_cu stationPoint = StationPoint_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID)
+						.Equals(Convert.ToInt32(organizationMachineStationPointCu.StationPoint_CU_ID)));
+				if (stationPoint != null)
+					list_StationPoint_cu.Add(stationPoint);
+			}
+
+			return list_StationPoint_cu;
+		}
+
+		public static List<Doctor_StationPointStage_cu> GetDoctor_StationPointStages(
+			StationPointStage_cu stationPointStage)
+		{
+			List<Doctor_StationPointStage_cu> list = new List<Doctor_StationPointStage_cu>();
+
+			if (Doctor_StationPointStage_cu.ItemsList == null || Doctor_StationPointStage_cu.ItemsList.Count == 0)
+				return null;
+
+			list = Doctor_StationPointStage_cu.ItemsList.FindAll(item =>
+				Convert.ToInt32(item.StationPointStage_CU_ID).Equals(Convert.ToInt32(stationPointStage.ID)));
+
+			return list;
 		}
 
 		public static PatientAttachment_cu CreateNewPatientAttachement(int patientID, string imageName,

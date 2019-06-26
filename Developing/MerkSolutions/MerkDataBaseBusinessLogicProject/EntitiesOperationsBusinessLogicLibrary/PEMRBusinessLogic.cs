@@ -1836,20 +1836,59 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 		#endregion
 
-		public static VisitTiming_TreatmentPlan CreateNew_VisitTiming_TreatmentPlan(object treatmentPlanDetails,
-			object orderIndex, int userID)
+		#region VisitTiming_TreatmentPlan
+
+		public static VisitTiming_TreatmentPlan CreateNew_VisitTiming_TreatmentPlan(
+			IPEMR_TreatmentPlan treatmentPlanObject, DB_PEMRSavingMode savingMode)
 		{
-			if (treatmentPlanDetails == null || orderIndex == null || userID == null)
+			if (treatmentPlanObject == null || treatmentPlanObject.TreatmentDetails == null ||
+			    treatmentPlanObject.StepOrderIndex == null)
+				return null;
+			VisitTiming_TreatmentPlan visitTiming_TreatmentPLan = null;
+			switch (savingMode)
+			{
+				case DB_PEMRSavingMode.PostponeSaving:
+					return CreateNew_VisitTiming_TreatmentPlan(treatmentPlanObject);
+				case DB_PEMRSavingMode.SaveImmediately:
+					visitTiming_TreatmentPLan = CreateNew_VisitTiming_TreatmentPlan(
+						ActivePEMRObject.Active_VisitTiming, treatmentPlanObject);
+					if (visitTiming_TreatmentPLan == null || !Save_VisitTiming_TreatmentPlan(visitTiming_TreatmentPLan))
+						return null;
+					return visitTiming_TreatmentPLan;
+			}
+			return null;
+		}
+
+		public static VisitTiming_TreatmentPlan CreateNew_VisitTiming_TreatmentPlan(
+			VisitTiming visitTiming, IPEMR_TreatmentPlan treatmentPlanObject)
+		{
+			if (visitTiming == null || treatmentPlanObject.TreatmentDetails == null ||
+				treatmentPlanObject.StepOrderIndex == null)
+				return null;
+			VisitTiming_TreatmentPlan visitTiming_TreatmentPLan = CreateNew_VisitTiming_TreatmentPlan(treatmentPlanObject);
+			if (visitTiming_TreatmentPLan == null)
+				return null;
+			visitTiming_TreatmentPLan.VisitTimingID = visitTiming.ID;
+			return visitTiming_TreatmentPLan;
+		}
+
+		public static VisitTiming_TreatmentPlan CreateNew_VisitTiming_TreatmentPlan(IPEMR_TreatmentPlan treatmentPlanObject)
+		{
+			if (treatmentPlanObject.TreatmentDetails == null ||
+				treatmentPlanObject.StepOrderIndex == null)
 				return null;
 
 			VisitTiming_TreatmentPlan visitTreatmentPlan = DBCommon.CreateNewDBEntity<VisitTiming_TreatmentPlan>();
-			visitTreatmentPlan.Treatment = treatmentPlanDetails.ToString();
-			visitTreatmentPlan.StepOrderIndex = Convert.ToInt32(orderIndex);
-			visitTreatmentPlan.InsertedBy = userID;
+			visitTreatmentPlan.Treatment = treatmentPlanObject.TreatmentDetails.ToString();
+			visitTreatmentPlan.StepOrderIndex = Convert.ToInt32(treatmentPlanObject.StepOrderIndex);
+
 			visitTreatmentPlan.IsOnDuty = true;
+			visitTreatmentPlan.InsertedBy = ActiveLoggedInUser.ID;
 			visitTreatmentPlan.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			return visitTreatmentPlan;
 		}
+
+		#endregion
 
 		public static VisitTiming_Attachment CreateNewVisitTimingAttachement(int patientID, string imageName,
 			string imagePath, DB_ImageType imageType, object description, int userID)
@@ -2866,6 +2905,26 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			visitTiming_MedicalHistory.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
 			visitTiming_MedicalHistory.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
 			return visitTiming_MedicalHistory.SaveChanges();
+		}
+
+		#endregion
+
+		#region VisitTiming_TreatmentPlan
+
+		public static bool Update_VisitTiming_TreatmentPlan(IPEMR_TreatmentPlan treatmentPLanObject,
+			VisitTiming_TreatmentPlan visitTiming_TreatmentPlan)
+		{
+			if (visitTiming_TreatmentPlan == null || treatmentPLanObject == null)
+				return false;
+			if (treatmentPLanObject.TreatmentDetails != null)
+				visitTiming_TreatmentPlan.Treatment = treatmentPLanObject.TreatmentDetails.ToString();
+			if (treatmentPLanObject.StepOrderIndex != null)
+				visitTiming_TreatmentPlan.StepOrderIndex = Convert.ToInt32(treatmentPLanObject.StepOrderIndex);
+			visitTiming_TreatmentPlan.IsOnDuty = true;
+			visitTiming_TreatmentPlan.InsertedBy = ActiveLoggedInUser.ID;
+			visitTiming_TreatmentPlan.PEMRElementStatus = PEMRElementStatus.NewelyAdded;
+			visitTiming_TreatmentPlan.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
+			return visitTiming_TreatmentPlan.SaveChanges();
 		}
 
 		#endregion

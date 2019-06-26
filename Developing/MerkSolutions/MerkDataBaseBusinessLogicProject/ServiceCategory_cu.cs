@@ -20,6 +20,7 @@ namespace MerkDataBaseBusinessLogicProject
             this.Doctor_Service_cu = new HashSet<Doctor_Service_cu>();
             this.Service_cu = new HashSet<Service_cu>();
             this.ServiceCategory_StationPoint_cu = new HashSet<ServiceCategory_StationPoint_cu>();
+            this.ServiceCategory_StationPointStage_cu = new HashSet<ServiceCategory_StationPointStage_cu>();
             this.ServiceCategory_Surcharge_cu = new HashSet<ServiceCategory_Surcharge_cu>();
             this.ServicePrice_cu = new HashSet<ServicePrice_cu>();
         }
@@ -45,6 +46,8 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual User_cu User_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ServiceCategory_StationPoint_cu> ServiceCategory_StationPoint_cu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ServiceCategory_StationPointStage_cu> ServiceCategory_StationPointStage_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ServiceCategory_Surcharge_cu> ServiceCategory_Surcharge_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

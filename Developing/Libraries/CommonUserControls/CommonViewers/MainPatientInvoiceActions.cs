@@ -159,6 +159,33 @@ namespace CommonUserControls.CommonViewers
 			}
 		}
 
+		private void btnOneDaySurgery_Click(object sender, EventArgs e)
+		{
+			ApplicationStaticConfiguration.InternalReceptionApplication = DB_Application.OneDaySurgeryReception;
+			List<GetPatientPreviousInvoices_Result> list = DBCommon.DBContext_External
+				.GetPatientPreviousInvoices(ActiveSelectedPatient.Person_CU_ID, false, true, DateTime.Now.Date,
+					DateTime.Now.Date).OrderBy(item => item.InvoiceCreationDate).ToList();
+			if (list.Count > 0)
+			{
+				PatientMedicalServicesActions_UC patientMedicalServiceActions = new PatientMedicalServicesActions_UC();
+				patientMedicalServiceActions.Initialize(ActiveSelectedPatient, this, ParentControl);
+				if (ParentForm != null)
+					ParentForm.Close();
+				PopupBaseForm.ShowAsPopup(patientMedicalServiceActions, this);
+			}
+			else
+			{
+				BaseController<Invoice>.ShowEditorControl(ref _medicalAdmissionInvoiceCreationContainer, this,
+					ActiveSelectedPatient, null, EditorContainerType.Regular,
+					ViewerName.PatientInvoiceCreation,
+					DB_CommonTransactionType.CreateNew,
+					".... الخـدمــــات الطبيــــــة ....",
+					true);
+				if (ParentForm != null)
+					ParentForm.Close();
+			}
+		}
+
 		private void btnOutPayments_Click(object sender, System.EventArgs e)
 		{
 			PatientNotCompletedPreviousVisits_UC patientPreviousInvoices = new PatientNotCompletedPreviousVisits_UC();

@@ -273,5 +273,10 @@ namespace CommonUserControls.PEMRCommonViewers.PEMR_InternalViewers
 			Selected_VisitTiming_Medication =
 				CommonViewsActions.GetSelectedRowObject<VisitTiming_Medication>(gridView1);
 		}
+
+		private void btnSave_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

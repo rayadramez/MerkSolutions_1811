@@ -135,7 +135,6 @@
 			this.lkeStationPointStages.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.lkeStationPointStages.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lkeStationPointStages.Properties.Buttons"))))});
-			this.lkeStationPointStages.Properties.ReadOnly = true;
 			this.lkeStationPointStages.Properties.View = this.gridView1;
 			this.lkeStationPointStages.StyleController = this.layoutControl1;
 			this.lkeStationPointStages.EditValueChanged += new System.EventHandler(this.lkeStationPointStages_EditValueChanged);
@@ -240,6 +239,7 @@
 			// 
 			// layoutControlGroup1
 			// 
+			resources.ApplyResources(this.layoutControlGroup1, "layoutControlGroup1");
 			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
 			this.layoutControlGroup1.GroupBordersVisible = false;
 			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -256,7 +256,7 @@
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup1.Size = new System.Drawing.Size(511, 470);
+			this.layoutControlGroup1.Size = new System.Drawing.Size(499, 458);
 			this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlGroup1.TextVisible = false;
 			// 
@@ -265,22 +265,23 @@
 			this.layoutControlItem1.AppearanceItemCaption.Font = ((System.Drawing.Font)(resources.GetObject("layoutControlItem1.AppearanceItemCaption.Font")));
 			this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
 			this.layoutControlItem1.Control = this.txtPatientID;
+			resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
 			this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem1.Name = "layoutControlItem1";
 			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem1.Size = new System.Drawing.Size(155, 28);
+			this.layoutControlItem1.Size = new System.Drawing.Size(151, 28);
 			this.layoutControlItem1.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
 			this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Left;
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(50, 13);
 			// 
 			// layoutControlItem3
 			// 
 			this.layoutControlItem3.Control = this.xtraTabControl1;
+			resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
 			this.layoutControlItem3.Location = new System.Drawing.Point(0, 92);
 			this.layoutControlItem3.Name = "layoutControlItem3";
 			this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem3.Size = new System.Drawing.Size(505, 372);
+			this.layoutControlItem3.Size = new System.Drawing.Size(493, 360);
 			this.layoutControlItem3.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem3.TextVisible = false;
@@ -288,20 +289,22 @@
 			// layoutControlItem5
 			// 
 			this.layoutControlItem5.Control = this.label2;
+			resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
 			this.layoutControlItem5.Location = new System.Drawing.Point(0, 28);
 			this.layoutControlItem5.Name = "layoutControlItem5";
 			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem5.Size = new System.Drawing.Size(505, 3);
+			this.layoutControlItem5.Size = new System.Drawing.Size(493, 3);
 			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem5.TextVisible = false;
 			// 
 			// layoutControlItem4
 			// 
 			this.layoutControlItem4.Control = this.btnSearch;
-			this.layoutControlItem4.Location = new System.Drawing.Point(425, 0);
+			resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
+			this.layoutControlItem4.Location = new System.Drawing.Point(414, 0);
 			this.layoutControlItem4.Name = "layoutControlItem4";
 			this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem4.Size = new System.Drawing.Size(80, 28);
+			this.layoutControlItem4.Size = new System.Drawing.Size(79, 28);
 			this.layoutControlItem4.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem4.TextVisible = false;
@@ -311,12 +314,12 @@
 			this.lytName.AppearanceItemCaption.Font = ((System.Drawing.Font)(resources.GetObject("lytName.AppearanceItemCaption.Font")));
 			this.lytName.AppearanceItemCaption.Options.UseFont = true;
 			this.lytName.Control = this.txtPatientName;
-			this.lytName.Location = new System.Drawing.Point(155, 0);
+			resources.ApplyResources(this.lytName, "lytName");
+			this.lytName.Location = new System.Drawing.Point(151, 0);
 			this.lytName.Name = "lytName";
 			this.lytName.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytName.Size = new System.Drawing.Size(270, 28);
+			this.lytName.Size = new System.Drawing.Size(263, 28);
 			this.lytName.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			resources.ApplyResources(this.lytName, "lytName");
 			this.lytName.TextLocation = DevExpress.Utils.Locations.Left;
 			this.lytName.TextSize = new System.Drawing.Size(50, 13);
 			// 
@@ -328,29 +331,31 @@
 			this.layoutControlItem2.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.layoutControlItem2.Control = this.lkeStationPointStages;
 			this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+			resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
 			this.layoutControlItem2.Location = new System.Drawing.Point(0, 31);
 			this.layoutControlItem2.Name = "layoutControlItem2";
 			this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem2.Size = new System.Drawing.Size(432, 58);
+			this.layoutControlItem2.Size = new System.Drawing.Size(421, 58);
 			this.layoutControlItem2.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
 			this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
 			this.layoutControlItem2.TextSize = new System.Drawing.Size(50, 17);
 			// 
 			// layoutControlItem6
 			// 
 			this.layoutControlItem6.Control = this.label1;
+			resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
 			this.layoutControlItem6.Location = new System.Drawing.Point(0, 89);
 			this.layoutControlItem6.Name = "layoutControlItem6";
 			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem6.Size = new System.Drawing.Size(505, 3);
+			this.layoutControlItem6.Size = new System.Drawing.Size(493, 3);
 			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem6.TextVisible = false;
 			// 
 			// layoutControlItem7
 			// 
 			this.layoutControlItem7.Control = this.btnRefresh;
-			this.layoutControlItem7.Location = new System.Drawing.Point(453, 41);
+			resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
+			this.layoutControlItem7.Location = new System.Drawing.Point(441, 41);
 			this.layoutControlItem7.Name = "layoutControlItem7";
 			this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.layoutControlItem7.Size = new System.Drawing.Size(52, 48);
@@ -361,15 +366,17 @@
 			// emptySpaceItem1
 			// 
 			this.emptySpaceItem1.AllowHotTrack = false;
-			this.emptySpaceItem1.Location = new System.Drawing.Point(432, 31);
+			resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
+			this.emptySpaceItem1.Location = new System.Drawing.Point(421, 31);
 			this.emptySpaceItem1.Name = "emptySpaceItem1";
-			this.emptySpaceItem1.Size = new System.Drawing.Size(21, 58);
+			this.emptySpaceItem1.Size = new System.Drawing.Size(20, 58);
 			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// emptySpaceItem2
 			// 
 			this.emptySpaceItem2.AllowHotTrack = false;
-			this.emptySpaceItem2.Location = new System.Drawing.Point(453, 31);
+			resources.ApplyResources(this.emptySpaceItem2, "emptySpaceItem2");
+			this.emptySpaceItem2.Location = new System.Drawing.Point(441, 31);
 			this.emptySpaceItem2.Name = "emptySpaceItem2";
 			this.emptySpaceItem2.Size = new System.Drawing.Size(52, 10);
 			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -411,25 +418,25 @@
 		private DevExpress.XtraLayout.LayoutControl layoutControl1;
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
 		private DevExpress.XtraEditors.TextEdit txtPatientID;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
 		private DevExpress.XtraEditors.TextEdit txtPatientName;
-		private DevExpress.XtraLayout.LayoutControlItem lytName;
 		private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
 		private DevExpress.XtraTab.XtraTabPage tabWaiting;
 		private DevExpress.XtraTab.XtraTabPage tabPaused;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
 		private DevExpress.XtraEditors.SimpleButton btnSearch;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
 		private System.Windows.Forms.Label label2;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
 		private DevExpress.XtraTab.XtraTabPage tabServed;
 		private System.Windows.Forms.Label label1;
 		private DevExpress.XtraEditors.GridLookUpEdit lkeStationPointStages;
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
 		private DevExpress.XtraEditors.SimpleButton btnRefresh;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+		private DevExpress.XtraLayout.LayoutControlItem lytName;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
 

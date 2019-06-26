@@ -24,6 +24,13 @@ INSERT INTO dbo.Application_p( ID ,Name_P ,Name_S ,IsOnDuty ,Description)VALUES 
 ,( 5,N'برنـامــــج إدارة الفـواتيــــر',N'InvoiceManager',1,NULL)
 ,( 6,N'برنـامــــج الإعـــدادات العـامـــــة',N'Settings',1,NULL)
 ,( 7,N'برنـامــــج إدارة الطـوابيـــر',N'Queue Manager',1,NULL)
+
+IF NOT EXISTS (SELECT 1 FROM [dbo].Application_p WHERE ID = 8)
+INSERT INTO dbo.Application_p( ID ,Name_P ,Name_S ,IsOnDuty ,Description)VALUES  ( 8,N'FinanceInvoiceCreation',N'FinanceInvoiceCreation',1,NULL)
+IF NOT EXISTS (SELECT 1 FROM [dbo].Application_p WHERE ID = 9)
+INSERT INTO dbo.Application_p( ID ,Name_P ,Name_S ,IsOnDuty ,Description)VALUES  ( 9,N'برنامج إستقبال عمليات اليوم الواحد',N'One Day Surgery Reception',1,NULL)
+IF NOT EXISTS (SELECT 1 FROM [dbo].Application_p WHERE ID = 10)
+INSERT INTO dbo.Application_p( ID ,Name_P ,Name_S ,IsOnDuty ,Description)VALUES  ( 10,N'OphalmologySurgeryApplication',N'OphalmologySurgeryApplication',1,NULL)
 -- ///////////// END :: Application_p
 
 -- ///////////// BEGIN :: CashBoxTransactionType_p
@@ -366,6 +373,9 @@ INSERT INTO dbo.Station_p( ID, Name_P, Name_S, Description )VALUES  ( 1,N'إست
 ,( 14,N'عيادة الأنف والأذن والحنجرة',N'عيادة الأنف والأذن والحنجرة',NULL)
 ,( 15,N'عيادة الأسنان',N'عيادة الأسنان',NULL)
 ,( 16,N'عيادة القلب والأوعية الدموية',N'Cardiovascular Clinic',NULL)
+
+IF NOT EXISTS (SELECT 1 FROM [dbo].Station_p WHERE ID = 18)
+INSERT INTO dbo.Station_p( ID, Name_P, Name_S, Description )VALUES  ( 18,N'غرفة عمليات العيون',N'OphthalmologySurgeryRoom',NULL)
 -- ///////////// END :: Station_p
 
 -- ///////////// BEGIN :: SurchargeType_p

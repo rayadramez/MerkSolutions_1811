@@ -52,3 +52,4 @@
 *.resources
 /CommonUserControls.csproj.ResolveComReference.cache
 /Interop.WIA.dll
+*.TMP
