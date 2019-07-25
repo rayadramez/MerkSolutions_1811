@@ -1,7 +1,7 @@
 USE [master]
-RESTORE DATABASE [MerkFinance] FROM 
-	DISK = N'D:\Work\StepMarket1.4\DBScript\Backup FIles\MerkFinance_20190701_01.bak' WITH FILE = 1,
-	MOVE N'MerkFinance' TO N'D:\Work\Restored DB\1\MerkFinance.mdf',
-	MOVE N'MerkFinance_log' TO N'D:\Work\Restored DB\1\MerkFinance.ldf',
+RESTORE DATABASE [MerkAuditing] FROM 
+	DISK = N'd:\Work\StepMarket1.4\DBScript\Backup FIles\MerkAuditing.bak' WITH FILE = 1,
+	MOVE N'MerkAuditing' TO N'd:\Work\DataBases_Backups\1\MerkAuditing.mdf',
+	MOVE N'MerkAuditing_log' TO N'd:\Work\DataBases_Backups\1\MerkAuditing.ldf',
 	NOUNLOAD, REPLACE,  STATS = 5
 GO

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<MerkStaticConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DBServer>.\rayadlapsqlsrv</DBServer>
+  <MerkDBName>MerkFinance</MerkDBName>
+  <OrganizationID>3</OrganizationID>
+  <StationPointID>15</StationPointID>
+  <InventoryHousingID>1</InventoryHousingID>
+  <CashBoxID>1</CashBoxID>
+</MerkStaticConfiguration>
