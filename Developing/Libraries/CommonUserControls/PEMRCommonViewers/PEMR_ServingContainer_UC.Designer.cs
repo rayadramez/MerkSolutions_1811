@@ -30,6 +30,9 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.gaugeControl1 = new DevExpress.XtraGauges.Win.GaugeControl();
+			this.digitalGauge1 = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalGauge();
+			this.digitalBackgroundLayerComponent1 = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent();
 			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
 			this.lblBD = new DevExpress.XtraEditors.LabelControl();
 			this.tabMain = new DevExpress.XtraTab.XtraTabControl();
@@ -98,7 +101,6 @@
 			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.lytmenu = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -111,18 +113,18 @@
 			this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator5 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
 			this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
 			this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
 			this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
 			this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-			this.gaugeControl1 = new DevExpress.XtraGauges.Win.GaugeControl();
-			this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.digitalGauge1 = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalGauge();
-			this.digitalBackgroundLayerComponent1 = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent();
 			this.timer = new System.Windows.Forms.Timer(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.digitalGauge1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.digitalBackgroundLayerComponent1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tabMain)).BeginInit();
 			this.tabMain.SuspendLayout();
 			this.tabActiveVisit.SuspendLayout();
@@ -158,7 +160,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytmenu)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
@@ -171,12 +172,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
 			this.dockPanel1.SuspendLayout();
 			this.dockPanel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.digitalGauge1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.digitalBackgroundLayerComponent1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
@@ -205,15 +205,48 @@
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
+			// gaugeControl1
+			// 
+			this.gaugeControl1.AutoLayout = false;
+			this.gaugeControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+			this.gaugeControl1.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
+            this.digitalGauge1});
+			this.gaugeControl1.Location = new System.Drawing.Point(917, 2);
+			this.gaugeControl1.Name = "gaugeControl1";
+			this.gaugeControl1.Size = new System.Drawing.Size(331, 53);
+			this.gaugeControl1.TabIndex = 31;
+			// 
+			// digitalGauge1
+			// 
+			this.digitalGauge1.AppearanceOff.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#0D8097");
+			this.digitalGauge1.AppearanceOn.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#02F0F7");
+			this.digitalGauge1.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent[] {
+            this.digitalBackgroundLayerComponent1});
+			this.digitalGauge1.Bounds = new System.Drawing.Rectangle(24, 6, 246, 41);
+			this.digitalGauge1.DigitCount = 6;
+			this.digitalGauge1.DisplayMode = DevExpress.XtraGauges.Core.Model.DigitalGaugeDisplayMode.SevenSegment;
+			this.digitalGauge1.LetterSpacing = 30F;
+			this.digitalGauge1.Name = "digitalGauge1";
+			this.digitalGauge1.Padding = new DevExpress.XtraGauges.Core.Base.TextSpacing(26, 20, 26, 20);
+			this.digitalGauge1.Text = "02:02:02";
+			// 
+			// digitalBackgroundLayerComponent1
+			// 
+			this.digitalBackgroundLayerComponent1.BottomRight = new DevExpress.XtraGauges.Core.Base.PointF2D(483.65F, 106.075F);
+			this.digitalBackgroundLayerComponent1.Name = "digitalBackgroundLayerComponent1";
+			this.digitalBackgroundLayerComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.DigitalBackgroundShapeSetType.Style17;
+			this.digitalBackgroundLayerComponent1.TopLeft = new DevExpress.XtraGauges.Core.Base.PointF2D(26F, 0F);
+			this.digitalBackgroundLayerComponent1.ZOrder = 1000;
+			// 
 			// labelControl1
 			// 
 			this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
 			this.labelControl1.Appearance.ForeColor = System.Drawing.Color.DarkOrange;
 			this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl1.Location = new System.Drawing.Point(423, 2);
+			this.labelControl1.Location = new System.Drawing.Point(467, 2);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(12, 14);
+			this.labelControl1.Size = new System.Drawing.Size(172, 14);
 			this.labelControl1.StyleController = this.layoutControl1;
 			this.labelControl1.TabIndex = 9;
 			this.labelControl1.Text = "Years Old";
@@ -226,7 +259,7 @@
 			this.lblBD.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
 			this.lblBD.Location = new System.Drawing.Point(407, 2);
 			this.lblBD.Name = "lblBD";
-			this.lblBD.Size = new System.Drawing.Size(12, 14);
+			this.lblBD.Size = new System.Drawing.Size(56, 14);
 			this.lblBD.StyleController = this.layoutControl1;
 			this.lblBD.TabIndex = 8;
 			this.lblBD.Text = "--";
@@ -1272,7 +1305,7 @@
 			this.lblTitleServiceName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
 			this.lblTitleServiceName.Location = new System.Drawing.Point(56, 22);
 			this.lblTitleServiceName.Name = "lblTitleServiceName";
-			this.lblTitleServiceName.Size = new System.Drawing.Size(379, 14);
+			this.lblTitleServiceName.Size = new System.Drawing.Size(583, 14);
 			this.lblTitleServiceName.StyleController = this.layoutControl1;
 			this.lblTitleServiceName.TabIndex = 7;
 			this.lblTitleServiceName.Text = "ServiceName";
@@ -1407,7 +1440,7 @@
 			this.layoutControlItem5.Control = this.lblTitleServiceName;
 			this.layoutControlItem5.Location = new System.Drawing.Point(54, 20);
 			this.layoutControlItem5.Name = "layoutControlItem5";
-			this.layoutControlItem5.Size = new System.Drawing.Size(383, 18);
+			this.layoutControlItem5.Size = new System.Drawing.Size(587, 18);
 			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem5.TextVisible = false;
 			// 
@@ -1429,18 +1462,10 @@
 			this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem7.TextVisible = false;
 			// 
-			// emptySpaceItem6
-			// 
-			this.emptySpaceItem6.AllowHotTrack = false;
-			this.emptySpaceItem6.Location = new System.Drawing.Point(439, 0);
-			this.emptySpaceItem6.Name = "emptySpaceItem6";
-			this.emptySpaceItem6.Size = new System.Drawing.Size(476, 57);
-			this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
-			// 
 			// simpleSeparator1
 			// 
 			this.simpleSeparator1.AllowHotTrack = false;
-			this.simpleSeparator1.Location = new System.Drawing.Point(437, 0);
+			this.simpleSeparator1.Location = new System.Drawing.Point(641, 0);
 			this.simpleSeparator1.Name = "simpleSeparator1";
 			this.simpleSeparator1.Size = new System.Drawing.Size(2, 57);
 			// 
@@ -1492,7 +1517,7 @@
 			this.emptySpaceItem2.AllowHotTrack = false;
 			this.emptySpaceItem2.Location = new System.Drawing.Point(383, 40);
 			this.emptySpaceItem2.Name = "emptySpaceItem2";
-			this.emptySpaceItem2.Size = new System.Drawing.Size(54, 17);
+			this.emptySpaceItem2.Size = new System.Drawing.Size(258, 17);
 			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem17
@@ -1510,7 +1535,7 @@
 			this.layoutControlItem15.Control = this.lblBD;
 			this.layoutControlItem15.Location = new System.Drawing.Point(405, 0);
 			this.layoutControlItem15.Name = "layoutControlItem15";
-			this.layoutControlItem15.Size = new System.Drawing.Size(16, 18);
+			this.layoutControlItem15.Size = new System.Drawing.Size(60, 18);
 			this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem15.TextVisible = false;
 			// 
@@ -1531,9 +1556,9 @@
 			// layoutControlItem16
 			// 
 			this.layoutControlItem16.Control = this.labelControl1;
-			this.layoutControlItem16.Location = new System.Drawing.Point(421, 0);
+			this.layoutControlItem16.Location = new System.Drawing.Point(465, 0);
 			this.layoutControlItem16.Name = "layoutControlItem16";
-			this.layoutControlItem16.Size = new System.Drawing.Size(16, 18);
+			this.layoutControlItem16.Size = new System.Drawing.Size(176, 18);
 			this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem16.TextVisible = false;
 			// 
@@ -1542,14 +1567,40 @@
 			this.simpleSeparator4.AllowHotTrack = false;
 			this.simpleSeparator4.Location = new System.Drawing.Point(54, 18);
 			this.simpleSeparator4.Name = "simpleSeparator4";
-			this.simpleSeparator4.Size = new System.Drawing.Size(383, 2);
+			this.simpleSeparator4.Size = new System.Drawing.Size(587, 2);
 			// 
 			// simpleSeparator5
 			// 
 			this.simpleSeparator5.AllowHotTrack = false;
 			this.simpleSeparator5.Location = new System.Drawing.Point(54, 38);
 			this.simpleSeparator5.Name = "simpleSeparator5";
-			this.simpleSeparator5.Size = new System.Drawing.Size(383, 2);
+			this.simpleSeparator5.Size = new System.Drawing.Size(587, 2);
+			// 
+			// layoutControlItem19
+			// 
+			this.layoutControlItem19.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+			this.layoutControlItem19.AppearanceItemCaption.ForeColor = System.Drawing.Color.Teal;
+			this.layoutControlItem19.AppearanceItemCaption.Options.UseFont = true;
+			this.layoutControlItem19.AppearanceItemCaption.Options.UseForeColor = true;
+			this.layoutControlItem19.Control = this.gaugeControl1;
+			this.layoutControlItem19.Location = new System.Drawing.Point(915, 0);
+			this.layoutControlItem19.MaxSize = new System.Drawing.Size(335, 0);
+			this.layoutControlItem19.MinSize = new System.Drawing.Size(335, 24);
+			this.layoutControlItem19.Name = "layoutControlItem19";
+			this.layoutControlItem19.Size = new System.Drawing.Size(335, 57);
+			this.layoutControlItem19.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+			this.layoutControlItem19.Text = "Timer";
+			this.layoutControlItem19.TextLocation = DevExpress.Utils.Locations.Left;
+			this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem19.TextVisible = false;
+			// 
+			// emptySpaceItem6
+			// 
+			this.emptySpaceItem6.AllowHotTrack = false;
+			this.emptySpaceItem6.Location = new System.Drawing.Point(643, 0);
+			this.emptySpaceItem6.Name = "emptySpaceItem6";
+			this.emptySpaceItem6.Size = new System.Drawing.Size(272, 57);
+			this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// dockManager1
 			// 
@@ -1620,56 +1671,6 @@
 			this.dockPanel2_Container.Size = new System.Drawing.Size(1194, 575);
 			this.dockPanel2_Container.TabIndex = 0;
 			// 
-			// gaugeControl1
-			// 
-			this.gaugeControl1.AutoLayout = false;
-			this.gaugeControl1.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
-            this.digitalGauge1});
-			this.gaugeControl1.Location = new System.Drawing.Point(917, 2);
-			this.gaugeControl1.Name = "gaugeControl1";
-			this.gaugeControl1.Size = new System.Drawing.Size(331, 53);
-			this.gaugeControl1.TabIndex = 31;
-			// 
-			// layoutControlItem19
-			// 
-			this.layoutControlItem19.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-			this.layoutControlItem19.AppearanceItemCaption.ForeColor = System.Drawing.Color.Teal;
-			this.layoutControlItem19.AppearanceItemCaption.Options.UseFont = true;
-			this.layoutControlItem19.AppearanceItemCaption.Options.UseForeColor = true;
-			this.layoutControlItem19.Control = this.gaugeControl1;
-			this.layoutControlItem19.Location = new System.Drawing.Point(915, 0);
-			this.layoutControlItem19.MaxSize = new System.Drawing.Size(335, 0);
-			this.layoutControlItem19.MinSize = new System.Drawing.Size(335, 24);
-			this.layoutControlItem19.Name = "layoutControlItem19";
-			this.layoutControlItem19.Size = new System.Drawing.Size(335, 57);
-			this.layoutControlItem19.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			this.layoutControlItem19.Text = "Timer";
-			this.layoutControlItem19.TextLocation = DevExpress.Utils.Locations.Left;
-			this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem19.TextVisible = false;
-			// 
-			// digitalGauge1
-			// 
-			this.digitalGauge1.AppearanceOff.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#0D8097");
-			this.digitalGauge1.AppearanceOn.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#02F0F7");
-			this.digitalGauge1.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent[] {
-            this.digitalBackgroundLayerComponent1});
-			this.digitalGauge1.Bounds = new System.Drawing.Rectangle(24, 6, 246, 41);
-			this.digitalGauge1.DigitCount = 6;
-			this.digitalGauge1.DisplayMode = DevExpress.XtraGauges.Core.Model.DigitalGaugeDisplayMode.SevenSegment;
-			this.digitalGauge1.LetterSpacing = 30F;
-			this.digitalGauge1.Name = "digitalGauge1";
-			this.digitalGauge1.Padding = new DevExpress.XtraGauges.Core.Base.TextSpacing(26, 20, 26, 20);
-			this.digitalGauge1.Text = "02:02:02";
-			// 
-			// digitalBackgroundLayerComponent1
-			// 
-			this.digitalBackgroundLayerComponent1.BottomRight = new DevExpress.XtraGauges.Core.Base.PointF2D(291.1F, 106.075F);
-			this.digitalBackgroundLayerComponent1.Name = "digitalBackgroundLayerComponent1";
-			this.digitalBackgroundLayerComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.DigitalBackgroundShapeSetType.Style17;
-			this.digitalBackgroundLayerComponent1.TopLeft = new DevExpress.XtraGauges.Core.Base.PointF2D(26F, 0F);
-			this.digitalBackgroundLayerComponent1.ZOrder = 1000;
-			// 
 			// timer
 			// 
 			this.timer.Interval = 1000;
@@ -1686,6 +1687,8 @@
 			this.Size = new System.Drawing.Size(1300, 700);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
 			this.layoutControl1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.digitalGauge1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.digitalBackgroundLayerComponent1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.tabMain)).EndInit();
 			this.tabMain.ResumeLayout(false);
 			this.tabActiveVisit.ResumeLayout(false);
@@ -1721,7 +1724,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytmenu)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
@@ -1734,12 +1736,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
 			this.dockPanel1.ResumeLayout(false);
 			this.dockPanel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.digitalGauge1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.digitalBackgroundLayerComponent1)).EndInit();
 			this.ResumeLayout(false);
 
 		}

@@ -42,24 +42,29 @@ namespace CommonUserControls.PEMRCommonViewers
 			if (ApplicationStaticConfiguration.ActiveLoginUser == null)
 				return;
 
-			List<StationPointStage_cu> stationPointStagesList =
-				MerkDBBusinessLogicEngine.GetOrganizationMachineStationPointStages(
-					ApplicationStaticConfiguration.OrganizationMachine, ApplicationStaticConfiguration.Application);
-			if (stationPointStagesList != null && stationPointStagesList.Count > 0)
-			{
-				stationPointStagesList = stationPointStagesList.OrderBy(item => item.OrderIndex).ToList();
-				MerkDBBusinessLogicEngine.ActiveStationPointStage = stationPointStagesList.FirstOrDefault();
-			}
-			
-			CommonViewsActions.FillGridlookupEdit(lkeStationPointStages, stationPointStagesList, "Name_S");
-			if (MerkDBBusinessLogicEngine.ActiveStationPointStage != null)
-			{
-				StationPoint_cu stationPoint = StationPoint_cu.ItemsList.Find(item =>
-					Convert.ToInt32(item.ID)
-						.Equals(Convert.ToInt32(MerkDBBusinessLogicEngine.ActiveStationPointStage.StationPoint_CU_ID)));
-				MerkDBBusinessLogicEngine.ActiveStationPoint = stationPoint;
-				lkeStationPointStages.EditValue = MerkDBBusinessLogicEngine.ActiveStationPointStage.ID;
-			}
+			List<StationPoint_cu> stationPointsList =
+				MerkDBBusinessLogicEngine.GetOrganizationMachineStationPoint(ApplicationStaticConfiguration
+					.OrganizationMachine);
+			CommonViewsActions.FillGridlookupEdit(lkeStationPoint, stationPointsList, "Name_S");
+
+			//List<StationPointStage_cu> stationPointStagesList =
+			//	MerkDBBusinessLogicEngine.GetOrganizationMachineStationPointStages(
+			//		ApplicationStaticConfiguration.OrganizationMachine, ApplicationStaticConfiguration.Application);
+			//if (stationPointStagesList != null && stationPointStagesList.Count > 0)
+			//{
+			//	stationPointStagesList = stationPointStagesList.OrderBy(item => item.OrderIndex).ToList();
+			//	MerkDBBusinessLogicEngine.ActiveStationPointStage = stationPointStagesList.FirstOrDefault();
+			//}
+
+			//CommonViewsActions.FillGridlookupEdit(lkeStationPointStages, stationPointStagesList, "StationPointStageFullName");
+			//if (MerkDBBusinessLogicEngine.ActiveStationPointStage != null)
+			//{
+			//	StationPoint_cu stationPoint = StationPoint_cu.ItemsList.Find(item =>
+			//		Convert.ToInt32(item.ID)
+			//			.Equals(Convert.ToInt32(MerkDBBusinessLogicEngine.ActiveStationPointStage.StationPoint_CU_ID)));
+			//	MerkDBBusinessLogicEngine.ActiveStationPoint = stationPoint;
+			//	lkeStationPointStages.EditValue = MerkDBBusinessLogicEngine.ActiveStationPointStage.ID;
+			//}
 		}
 
 		public void Initialize(StationPointStage_cu stationPointStage)
@@ -142,6 +147,26 @@ namespace CommonUserControls.PEMRCommonViewers
 			return ((60 - now.Second) * 1000 - now.Millisecond);
 		}
 
+		private void lkeStationPoint_EditValueChanged(object sender, EventArgs e)
+		{
+			if (lkeStationPoint.EditValue == null)
+				return;
+
+			tabWaiting.Controls.Clear();
+			tabPaused.Controls.Clear();
+			tabServed.Controls.Clear();
+
+			StationPoint_cu stationPoint = StationPoint_cu.ItemsList.Find(item =>
+				Convert.ToInt32(item.ID).Equals(Convert.ToInt32(lkeStationPoint.EditValue)));
+			if (stationPoint == null)
+				return;
+			List<StationPointStage_cu> stagesList = MerkDBBusinessLogicEngine.GetStationPointStagesList(stationPoint);
+
+			MerkDBBusinessLogicEngine.ActiveStationPoint = stationPoint;
+
+			CommonViewsActions.FillGridlookupEdit(lkeStationPointStages, stagesList, "Name_S");
+		}
+
 		private void lkeStationPointStages_EditValueChanged(object sender, EventArgs e)
 		{
 			if (lkeStationPointStages.EditValue == null)
@@ -167,5 +192,6 @@ namespace CommonUserControls.PEMRCommonViewers
 
 			Initialize(MerkDBBusinessLogicEngine.ActiveStationPointStage);
 		}
+
 	}
 }

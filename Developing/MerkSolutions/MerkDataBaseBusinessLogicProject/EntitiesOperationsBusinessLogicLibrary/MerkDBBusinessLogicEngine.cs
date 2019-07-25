@@ -63,6 +63,24 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		}
 
 		public static QueueManager CreateNewQueueManager(Invoice invoice, InvoiceDetail invoiceDetail,
+			int stationPointID, int stationPointStageID)
+		{
+			QueueManager manager = DBCommon.CreateNewDBEntity<QueueManager>();
+			if (invoiceDetail.Doctor_CU_ID != null)
+				manager.Doctor_CU_ID = Convert.ToInt32(invoiceDetail.Doctor_CU_ID);
+			manager.InvoiceDetailID = invoiceDetail.ID;
+			manager.Service_CU_ID = invoiceDetail.Service_CU_ID != null
+				? Convert.ToInt32(invoiceDetail.Service_CU_ID)
+				: (int?)null;
+			manager.StationPoint_CU_ID = stationPointID;
+			manager.StationPointStage_CU_ID = stationPointStageID;
+			manager.Patient_CU_ID = invoice.Patient_CU_ID;
+			manager.QueueManagerStatus_P_ID = (int)DB_QueueManagerStatus.Waiting;
+			manager.IsOnDuty = true;
+			return manager;
+		}
+
+		public static QueueManager CreateNewQueueManager(Invoice invoice, InvoiceDetail invoiceDetail,
 			ServiceCategory_StationPoint_cu serviceCategoryStationPoint,
 			List<StationPointStage_cu> stationPointStagesList)
 		{
@@ -75,9 +93,15 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			manager.InvoiceDetailID = invoiceDetail.ID;
 			manager.Service_CU_ID = invoiceDetail.Service_CU_ID != null
 				? Convert.ToInt32(invoiceDetail.Service_CU_ID)
-				: (int?) null;
-			manager.StationPoint_CU_ID = serviceCategoryStationPoint.StationPoint_CU_ID;
-			if (stationPointStagesList.Count > 0)
+				: (int?)null;
+
+			if (invoiceDetail.StationPointID != null)
+				manager.StationPoint_CU_ID = Convert.ToInt32(invoiceDetail.StationPointID);
+			else
+				manager.StationPoint_CU_ID = serviceCategoryStationPoint.StationPoint_CU_ID;
+			if (invoiceDetail.StationPointStagesID != null)
+				manager.StationPointStage_CU_ID = Convert.ToInt32(invoiceDetail.StationPointStagesID);
+			else if (stationPointStagesList.Count > 0)
 				manager.StationPointStage_CU_ID = stationPointStagesList.First().ID;
 			manager.Patient_CU_ID = invoice.Patient_CU_ID;
 			manager.QueueManagerStatus_P_ID = (int)DB_QueueManagerStatus.Waiting;
@@ -93,9 +117,16 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (invoiceDetail.Doctor_CU_ID != null)
 				manager.Doctor_CU_ID = Convert.ToInt32(invoiceDetail.Doctor_CU_ID);
 			manager.InvoiceDetailID = invoiceDetail.ID;
-			manager.Service_CU_ID = invoiceDetail.Service_CU_ID != null ? Convert.ToInt32(invoiceDetail.Service_CU_ID) : (int?)null;
-			manager.StationPoint_CU_ID = serviceStation.StationPoint_CU_ID;
-			if (stationPointStagesList.Count > 0)
+			manager.Service_CU_ID = invoiceDetail.Service_CU_ID != null
+				? Convert.ToInt32(invoiceDetail.Service_CU_ID)
+				: (int?) null;
+			if (invoiceDetail.StationPointID != null)
+				manager.StationPoint_CU_ID = Convert.ToInt32(invoiceDetail.StationPointID);
+			else
+				manager.StationPoint_CU_ID = serviceStation.StationPoint_CU_ID;
+			if (invoiceDetail.StationPointStagesID != null)
+				manager.StationPointStage_CU_ID = Convert.ToInt32(invoiceDetail.StationPointStagesID);
+			else if (stationPointStagesList.Count > 0)
 				manager.StationPointStage_CU_ID = stationPointStagesList.First().ID;
 			manager.Patient_CU_ID = invoice.Patient_CU_ID;
 			manager.QueueManagerStatus_P_ID = (int)DB_QueueManagerStatus.Waiting;
@@ -168,28 +199,28 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 					case AdmissionType.ClinicAdmission:
 						result =
 							DBCommon.DBContext_External.GetInvoiceForAddmission(InvoiceCreationDateStart, InvoiceCreationDateEnd,
-								(int) DB_InvoiceType.OutPatientPrivate, InvoiceIsOnDuty, InvoiceIsFinanciallyReviewed, InvoiceIsPrinted,
-								InvoiceIsPaymentEnough, DoctorID, Patient != null ? Patient.Person_CU_ID : (int?) null)
+								(int)DB_InvoiceType.OutPatientPrivate, InvoiceIsOnDuty, InvoiceIsFinanciallyReviewed, InvoiceIsPrinted,
+								InvoiceIsPaymentEnough, DoctorID, Patient != null ? Patient.Person_CU_ID : (int?)null)
 								.OrderByDescending(item => item.InvoiceCreationDate)
 								.ToList();
 						result.AddRange(
 							DBCommon.DBContext_External.GetInvoiceForAddmission(InvoiceCreationDateStart, InvoiceCreationDateEnd,
-								(int) DB_InvoiceType.OutPatientNotPrivate, InvoiceIsOnDuty, InvoiceIsFinanciallyReviewed, InvoiceIsPrinted,
-								InvoiceIsPaymentEnough, DoctorID, Patient != null ? Patient.Person_CU_ID : (int?) null)
+								(int)DB_InvoiceType.OutPatientNotPrivate, InvoiceIsOnDuty, InvoiceIsFinanciallyReviewed, InvoiceIsPrinted,
+								InvoiceIsPaymentEnough, DoctorID, Patient != null ? Patient.Person_CU_ID : (int?)null)
 								.OrderByDescending(item => item.InvoiceCreationDate)
 								.ToList());
 						break;
 					case AdmissionType.InPatientAdmission:
 						result =
 							DBCommon.DBContext_External.GetInvoiceForAddmission(InvoiceCreationDateStart, InvoiceCreationDateEnd,
-								(int) DB_InvoiceType.InPatientPrivate, InvoiceIsOnDuty, InvoiceIsFinanciallyReviewed, InvoiceIsPrinted,
-								InvoiceIsPaymentEnough, DoctorID, Patient != null ? Patient.Person_CU_ID : (int?) null)
+								(int)DB_InvoiceType.InPatientPrivate, InvoiceIsOnDuty, InvoiceIsFinanciallyReviewed, InvoiceIsPrinted,
+								InvoiceIsPaymentEnough, DoctorID, Patient != null ? Patient.Person_CU_ID : (int?)null)
 								.OrderByDescending(item => item.InvoiceCreationDate)
 								.ToList();
 						result.AddRange(
 							DBCommon.DBContext_External.GetInvoiceForAddmission(InvoiceCreationDateStart, InvoiceCreationDateEnd,
-								(int) DB_InvoiceType.InPatientNotPrivate, InvoiceIsOnDuty, InvoiceIsFinanciallyReviewed, InvoiceIsPrinted,
-								InvoiceIsPaymentEnough, DoctorID, Patient != null ? Patient.Person_CU_ID : (int?) null)
+								(int)DB_InvoiceType.InPatientNotPrivate, InvoiceIsOnDuty, InvoiceIsFinanciallyReviewed, InvoiceIsPrinted,
+								InvoiceIsPaymentEnough, DoctorID, Patient != null ? Patient.Person_CU_ID : (int?)null)
 								.OrderByDescending(item => item.InvoiceCreationDate)
 								.ToList());
 						break;
@@ -207,7 +238,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 						PatientID = getInvoiceForAddmissionResult.PatientID,
 						PatientFullName = getInvoiceForAddmissionResult.PatientFullName,
 						InvoiceID = getInvoiceForAddmissionResult.InvoiceID,
-						InvoiceType =  (DB_InvoiceType)invoice.InvoiceType_P_ID,
+						InvoiceType = (DB_InvoiceType)invoice.InvoiceType_P_ID,
 						InvoiceCreationDate = getInvoiceForAddmissionResult.InvoiceCreationDate,
 						InvoiceSerial = getInvoiceForAddmissionResult.InvoiceSerial,
 						DoctorID = getInvoiceForAddmissionResult.DoctorID,
@@ -238,7 +269,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 				if (invoice == null)
 					continue;
 				Patient_cu patient = DBCommon.GetEntity<Patient_cu>(invoice.Patient_CU_ID);
-				if(patient == null)
+				if (patient == null)
 					continue;
 				ReadyInvoicesForAction readyInvoicesForPayments = new ReadyInvoicesForAction()
 				{
@@ -278,11 +309,11 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 							Convert.ToBoolean(item.ActiveInvoice.InvoiceShareObject.IsInsuranceApplied).Equals(isInsurance)))
 				listFirstStep.Add(readyInvoicesForAction);
 
-			if(isInPatient)
+			if (isInPatient)
 				foreach (ReadyInvoicesForAction readyInvoicesForAction in
 						listFirstStep.FindAll(
-							item => Convert.ToInt32(item.ActiveInvoice.InvoiceType_P_ID).Equals((int) DB_InvoiceType.InPatientPrivate) ||
-							        Convert.ToInt32(item.ActiveInvoice.InvoiceType_P_ID).Equals((int) DB_InvoiceType.InPatientNotPrivate)))
+							item => Convert.ToInt32(item.ActiveInvoice.InvoiceType_P_ID).Equals((int)DB_InvoiceType.InPatientPrivate) ||
+									Convert.ToInt32(item.ActiveInvoice.InvoiceType_P_ID).Equals((int)DB_InvoiceType.InPatientNotPrivate)))
 					listSecondStep.Add(readyInvoicesForAction);
 			else
 				foreach (ReadyInvoicesForAction readyInvoicesForAction in
@@ -297,8 +328,8 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		public static List<GetBriefQueue_Result> GetBriefQueue(object doctorID, object stationPointStageID, object date,
 			object queueManagerStatus)
 		{
-			return DBCommon.DBContext_External.GetBriefQueue((int?) stationPointStageID, (int?) queueManagerStatus,
-				(int?) doctorID, (DateTime?) date).ToList();
+			return DBCommon.DBContext_External.GetBriefQueue((int?)stationPointStageID, (int?)queueManagerStatus,
+				(int?)doctorID, (DateTime?)date).ToList();
 		}
 
 		public static List<GetPreviousMedicalVisits_Result> GetPreviousMedicalVisitsList(object patientID,
@@ -311,6 +342,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 		public static InvoiceDetail CreateNew_InvoiceDetail(InvoiceDetail parentInvoiceDetail, object serviceId,
 			object servicePrice, bool useCustomPrice, object serviceCount, object serviceDate, object doctorId,
+			object stationPointID, object stationPointStageID,
 			object isServiceIncludedInInsurance, object insurancePercetnage, object isSurchargeApplied,
 			object isTaxApplied, object serviceDescription)
 		{
@@ -348,6 +380,11 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			serviceDetailObject.Date = Convert.ToDateTime(serviceDate);
 			if (serviceDescription != null)
 				serviceDetailObject.Description = serviceDescription.ToString();
+
+			if (stationPointID != null)
+				serviceDetailObject.StationPointID = Convert.ToInt32(stationPointID);
+			if (stationPointStageID != null)
+				serviceDetailObject.StationPointStagesID = Convert.ToInt32(stationPointStageID);
 
 			return serviceDetailObject;
 		}
@@ -409,11 +446,13 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 		public static InvoiceDetail CreateNew_InvoiceDetail_Surgery(InvoiceDetail parentInvoiceDetail, object serviceId,
 			object servicePrice, bool useCustomPrice, object serviceCount, object serviceDate, object doctorId,
+			object stationPointID, object stationPointStageID,
 			object isServiceIncludedInInsurance, object insurancePercetnage, object isSurchargeApplied,
 			object isTaxApplied, object serviceDescription)
 		{
 			return CreateNew_InvoiceDetail(null, serviceId, servicePrice, useCustomPrice, serviceCount, serviceDate,
-				doctorId, isServiceIncludedInInsurance, insurancePercetnage, isSurchargeApplied, isTaxApplied,
+				doctorId, stationPointID, stationPointStageID, isServiceIncludedInInsurance, insurancePercetnage,
+				isSurchargeApplied, isTaxApplied,
 				serviceDescription);
 		}
 
@@ -478,7 +517,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			{
 				User_cu user =
 					User_cu.ItemsList.Find(item => Convert.ToInt32(item.Person_CU_ID).Equals(Convert.ToInt32(userBridge.User_CU_ID)));
-				if(user != null)
+				if (user != null)
 					usersList.Add(user);
 			}
 
@@ -509,7 +548,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (queueManager == null)
 				return false;
 
-			queueManager.QueueManagerStatus_P_ID = (int) queueManagerStatus;
+			queueManager.QueueManagerStatus_P_ID = (int)queueManagerStatus;
 			queueManager.DBCommonTransactionType = DB_CommonTransactionType.UpdateExisting;
 			queueManager.SaveChanges();
 
@@ -533,13 +572,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 		public static List<StationPointStage_cu> GetOrganizationMachineStationPointStages(
 			OrganizationMachine_cu organizationMachine, DB_Application application)
 		{
-			if (organizationMachine == null)
-				return null;
-			List<OrganizationMachine_StationPoint_cu> list_OrganizationMachine_StationPoint_cu =
-				OrganizationMachine_StationPoint_cu.ItemsList.FindAll(item =>
-					Convert.ToInt32(item.OrganizationMachine_CU_ID).Equals(Convert.ToInt32(organizationMachine.ID)));
-
-			List<StationPoint_cu> list_StationPoint_cu = GetStationPointsList(list_OrganizationMachine_StationPoint_cu);
+			List<StationPoint_cu> list_StationPoint_cu = GetOrganizationMachineStationPoint(organizationMachine);
 
 			if (list_StationPoint_cu == null || list_StationPoint_cu.Count == 0)
 				return null;
@@ -560,6 +593,35 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			}
 
 			return list_StationPointStage_cu;
+		}
+
+		public static List<StationPoint_cu> GetOrganizationMachineStationPoint(OrganizationMachine_cu organizationMachine)
+		{
+			if (organizationMachine == null)
+				return null;
+
+			List<OrganizationMachine_StationPoint_cu> list_OrganizationMachine_StationPoint_cu =
+				OrganizationMachine_StationPoint_cu.ItemsList.FindAll(item =>
+					Convert.ToInt32(item.OrganizationMachine_CU_ID).Equals(Convert.ToInt32(organizationMachine.ID)));
+
+			List<StationPoint_cu> list_StationPoint_cu = GetStationPointsList(list_OrganizationMachine_StationPoint_cu);
+			return list_StationPoint_cu;
+		}
+
+		public static List<StationPointStage_cu> GetStationPointStagesList(StationPoint_cu stationPoint)
+		{
+			if (stationPoint == null)
+				return null;
+
+			List<StationPointStage_cu> list = new List<StationPointStage_cu>();
+
+			foreach (StationPointStage_cu stage in StationPointStage_cu.ItemsList)
+			{
+				if(Convert.ToInt32(stage.StationPoint_CU_ID).Equals(Convert.ToInt32(stationPoint.ID)))
+					list.Add(stage);
+			}
+
+			return list;
 		}
 
 		public static List<StationPoint_cu> GetStationPointsList(List<OrganizationMachine_StationPoint_cu> list)

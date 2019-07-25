@@ -420,5 +420,8 @@ namespace MerkDataBaseBusinessLogicProject
 		#endregion
 
 		public bool IsCustomPriceUsed { get; set; }
+
+		public object StationPointID { get; set; }
+		public object StationPointStagesID { get; set; }
 	}
 }

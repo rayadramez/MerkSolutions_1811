@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using ApplicationConfiguration;
 using DevExpress.XtraEditors;
@@ -46,6 +47,37 @@ namespace CommonUserControls.PEMRCommonViewers
 			lblPatientName.Text = PatientName;
 			lblServiceName.Text = ServiceName;
 			lblReservationTime.Text = ReservationDateTime;
+
+			if (queueResult.ServiceID == null)
+				return;
+
+			Service_cu service = Service_cu.ItemsList.Find(item =>
+				Convert.ToInt32(item.ID).Equals(Convert.ToInt32(queueResult.ServiceID)));
+			if (service == null)
+				return;
+
+			ServiceCategory_cu serviceCategory = ServiceCategory_cu.ItemsList.Find(item =>
+				Convert.ToInt32(item.ID).Equals(Convert.ToInt32(service.ServiceCategory_CU_ID)));
+			if(serviceCategory == null)
+				return;
+			
+			if(serviceCategory.DisplayingColor == null)
+				if(service.DisplayingColor == null)
+					return;
+				else
+				{
+					object backColor = ApplicationStaticConfiguration.GetSkinColor(service.DisplayingColor);
+					if (backColor != null)
+						this.BackColor = Color.FromArgb(((Color) backColor).R, ((Color) backColor).G,
+							((Color) backColor).B);
+				}
+			else
+			{
+				object backColor = ApplicationStaticConfiguration.GetSkinColor(serviceCategory.DisplayingColor);
+				if (backColor != null)
+					this.BackColor = Color.FromArgb(((Color)backColor).R, ((Color)backColor).G,
+						((Color)backColor).B);
+			}
 		}
 
 		private void btnPlay_Click(object sender, System.EventArgs e)

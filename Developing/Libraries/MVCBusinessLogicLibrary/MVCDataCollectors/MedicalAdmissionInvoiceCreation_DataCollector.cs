@@ -257,7 +257,8 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 					case DB_CommonTransactionType.CreateNew:
 						foreach (InvoiceDetail invoiceDetail in Grid_InvoiceDetails)
 						{
-							QueueManager manager = MerkDBBusinessLogicEngine.CreateNewQueueManager((Invoice)ActiveDBItem, invoiceDetail);
+							QueueManager manager =
+								MerkDBBusinessLogicEngine.CreateNewQueueManager((Invoice) ActiveDBItem, invoiceDetail);
 							if (manager != null)
 								manager.SaveChanges();
 						}

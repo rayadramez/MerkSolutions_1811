@@ -2008,6 +2008,7 @@
           <Property Name="AllowAddmission" Type="bit" />
           <Property Name="Description" Type="nvarchar" MaxLength="200" />
           <Property Name="InsertedBy" Type="int" />
+          <Property Name="DisplayingColor" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Service_StationPoint_cu">
           <Key>
@@ -2057,6 +2058,7 @@
           <Property Name="IsMedical" Type="bit" />
           <Property Name="InternalCode" Type="nvarchar" MaxLength="50" />
           <Property Name="InsertedBy" Type="int" />
+          <Property Name="DisplayingColor" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ServiceCategory_StationPoint_cu">
           <Key>
@@ -14574,6 +14576,7 @@
           <Property Name="AllowAddmission" Type="Boolean" />
           <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="InsertedBy" Type="Int32" />
+          <Property Name="DisplayingColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ChartOfAccount_cu" Relationship="Self.FK_Service_cu_ChartOfAccount_cu" FromRole="Service_cu" ToRole="ChartOfAccount_cu" />
           <NavigationProperty Name="Doctor_Service_cu" Relationship="Self.FK_Doctor_Service_CU_Service_cu" FromRole="Service_cu" ToRole="Doctor_Service_cu" />
           <NavigationProperty Name="InvoiceDetails" Relationship="Self.FK_InvoiceDetail_InvoiceFinancialService_cu" FromRole="Service_cu" ToRole="InvoiceDetail" />
@@ -14650,6 +14653,7 @@
           <Property Name="IsMedical" Type="Boolean" />
           <Property Name="InternalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="InsertedBy" Type="Int32" />
+          <Property Name="DisplayingColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ChartOfAccount_cu" Relationship="Self.FK_ServiceCategory_cu_ChartOfAccount_cu" FromRole="ServiceCategory_cu" ToRole="ChartOfAccount_cu" />
           <NavigationProperty Name="Doctor_Service_cu" Relationship="Self.FK_Doctor_Service_CU_ServiceCategory_cu" FromRole="ServiceCategory_cu" ToRole="Doctor_Service_cu" />
           <NavigationProperty Name="Service_cu" Relationship="Self.FK_InvoiceFinancialService_cu_InvoiceFinancialServiceCategory_cu" FromRole="ServiceCategory_cu" ToRole="Service_cu" />
@@ -27341,6 +27345,7 @@
                 <ScalarProperty Name="AllowAddmission" ColumnName="AllowAddmission" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+                <ScalarProperty Name="DisplayingColor" ColumnName="DisplayingColor" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -27394,6 +27399,7 @@
                 <ScalarProperty Name="IsMedical" ColumnName="IsMedical" />
                 <ScalarProperty Name="InternalCode" ColumnName="InternalCode" />
                 <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+                <ScalarProperty Name="DisplayingColor" ColumnName="DisplayingColor" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

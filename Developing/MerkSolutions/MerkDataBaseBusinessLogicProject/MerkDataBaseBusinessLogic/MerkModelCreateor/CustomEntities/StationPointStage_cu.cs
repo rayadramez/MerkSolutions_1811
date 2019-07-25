@@ -85,14 +85,25 @@ namespace MerkDataBaseBusinessLogicProject
 
 		#endregion
 
-		public string StationPointName
+		public StationPoint_cu StationPoint
 		{
 			get
 			{
 				StationPoint_cu stationPoint =
-					StationPoint_cu.ItemsList.Find(item => Convert.ToInt32(item.ID).Equals(Convert.ToInt32(StationPoint_CU_ID)));
+					StationPoint_cu.ItemsList.Find(item =>
+						Convert.ToInt32(item.ID).Equals(Convert.ToInt32(StationPoint_CU_ID)));
 				if (stationPoint != null)
-					return stationPoint.Name_P;
+					return stationPoint;
+				return null;
+			}
+		}
+
+		public string StationPointName
+		{
+			get
+			{
+				if (StationPoint != null)
+					return StationPoint.Name_P;
 
 				return string.Empty;
 			}
@@ -110,6 +121,16 @@ namespace MerkDataBaseBusinessLogicProject
 						return floor.Name_P;
 				}
 
+				return string.Empty;
+			}
+		}
+
+		public string StationPointStageFullName
+		{
+			get
+			{
+				if (StationPoint != null)
+					return Name_P + " - " + StationPoint.Name_P;
 				return string.Empty;
 			}
 		}

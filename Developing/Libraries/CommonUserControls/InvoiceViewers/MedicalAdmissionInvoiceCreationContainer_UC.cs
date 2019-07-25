@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using ApplicationConfiguration;
 using CommonControlLibrary;
@@ -92,8 +93,6 @@ namespace CommonUserControls.InvoiceViewers
 		public override void FillControls()
 		{
 			CommonViewsActions.FillGridlookupEdit(lkeDoctor, Doctor_cu.ItemsList, valueMember: "Person_CU_ID");
-			CommonViewsActions.FillGridlookupEdit(lkeStationPoint, StationPoint_cu.ItemsList);
-			CommonViewsActions.FillGridlookupEdit(lkeStationPointStage, StationPointStage_cu.ItemsList);
 
 			if (ViewerDataRelated != null && ViewerDataRelated is Patient_cu)
 			{
@@ -618,6 +617,22 @@ namespace CommonUserControls.InvoiceViewers
 					InsuranceObject.InsuranceLevelID);
 			else
 				ServicePrice = FinancialBusinessLogicLibrary.GetServicePrice(ServiceID, DoctorID, null);
+
+			List<ServiceCategory_StationPoint_cu> bridgeList = ServiceCategory_StationPoint_cu.ItemsList.FindAll(item =>
+				Convert.ToInt32(item.ServiceCategory_CU_ID).Equals(Convert.ToInt32(ServiceCategoryID)));
+			if (bridgeList != null && bridgeList.Count > 0)
+			{
+				List<StationPoint_cu> stationPointList = new List<StationPoint_cu>();
+				foreach (ServiceCategory_StationPoint_cu pointCu in bridgeList)
+				{
+					StationPoint_cu stationPoint = StationPoint_cu.ItemsList.Find(item =>
+						Convert.ToInt32(item.ID).Equals(Convert.ToInt32(pointCu.StationPoint_CU_ID)));
+					if(stationPoint != null)
+						stationPointList.Add(stationPoint);
+				}
+
+				CommonViewsActions.FillGridlookupEdit(lkeStationPoint, stationPointList);
+			}
 		}
 
 		private void lkeService_EditValueChanged(object sender, EventArgs e)
@@ -627,6 +642,22 @@ namespace CommonUserControls.InvoiceViewers
 					InsuranceObject.InsuranceLevelID);
 			else
 				ServicePrice = FinancialBusinessLogicLibrary.GetServicePrice(ServiceID, DoctorID, null);
+
+			List<Service_StationPoint_cu> bridgeList = Service_StationPoint_cu.ItemsList.FindAll(item =>
+				Convert.ToInt32(item.Service_CU_ID).Equals(Convert.ToInt32(ServiceID)));
+			if (bridgeList != null && bridgeList.Count > 0)
+			{
+				List<StationPoint_cu> stationPointList = new List<StationPoint_cu>();
+				foreach (Service_StationPoint_cu pointCu in bridgeList)
+				{
+					StationPoint_cu stationPoint = StationPoint_cu.ItemsList.Find(item =>
+						Convert.ToInt32(item.ID).Equals(Convert.ToInt32(pointCu.StationPoint_CU_ID)));
+					if (stationPoint != null)
+						stationPointList.Add(stationPoint);
+				}
+
+				CommonViewsActions.FillGridlookupEdit(lkeStationPoint, stationPointList);
+			}
 		}
 
 		private void lkeDoctor_EditValueChanged(object sender, EventArgs e)
@@ -647,7 +678,16 @@ namespace CommonUserControls.InvoiceViewers
 
 		private void lkeStationPoint_EditValueChanged(object sender, EventArgs e)
 		{
-			
+			StationPoint_cu stationPoint = StationPoint_cu.ItemsList.Find(item =>
+				Convert.ToInt32(item.ID).Equals(Convert.ToInt32(lkeStationPoint.EditValue)));
+			if (stationPoint != null)
+				CommonViewsActions.FillGridlookupEdit(lkeStationPointStage,
+					StationPointStage_cu.ItemsList
+						.FindAll(item =>
+							Convert.ToInt32(item.StationPoint_CU_ID).Equals(Convert.ToInt32(stationPoint.ID)))
+						.OrderBy(x => x.OrderIndex).ToList());
+			else
+				lkeStationPointStage.Properties.DataSource = null;
 		}
 
 		private void lkeStationPointStage_EditValueChanged(object sender, EventArgs e)
@@ -846,12 +886,12 @@ namespace CommonUserControls.InvoiceViewers
 
 		private void chkStationPoint_Toggled(object sender, EventArgs e)
 		{
-			lytStationPoint.Enabled = chkPaymentType.IsOn;
-			lytStationPointStage.Enabled = chkPaymentType.IsOn;
-			if (!chkPaymentType.IsOn)
+			lytStationPoint.Enabled = chkStationPoint.IsOn;
+			lytStationPointStage.Enabled = chkStationPoint.IsOn;
+			if (!chkStationPoint.IsOn)
 			{
-				lkeStationPoint.EditValue = null;
-				lkeStationPointStage.EditValue = null;
+				StationPointID = null;
+				StationPointStageID = null;
 			}
 		}
 
@@ -983,6 +1023,14 @@ namespace CommonUserControls.InvoiceViewers
 				return;
 			}
 
+			if(chkStationPoint.IsOn)
+				if(StationPointID == null || StationPointStageID == null)
+				{
+					XtraMessageBox.Show("يجب إختيار العيــــادة والمرحلــــة", "بيانات خاطئة",
+						MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+					return;
+				}
+
 			if (Grid_InvoiceDetails == null)
 				Grid_InvoiceDetails = new List<InvoiceDetail>();
 
@@ -1003,6 +1051,7 @@ namespace CommonUserControls.InvoiceViewers
 
 					serviceDetailObject = MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail(null, parentService.ID,
 						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService,
+						StationPointID, StationPointStageID,
 						InsurancePercentage,
 						IsSurchargeAppliedToService, false,
 						ServiceDescription);
@@ -1010,7 +1059,8 @@ namespace CommonUserControls.InvoiceViewers
 					foreach (Service_cu labService in (List<Service_cu>) LabServices)
 						MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail(serviceDetailObject, labService.ID,
 							labService.DefaultPrice, useCustomServicePrice,
-							1, ServiceDate, DoctorID, IsInsuranceAppliedToService, InsurancePercentage,
+							1, ServiceDate, DoctorID, StationPointID, StationPointStageID, IsInsuranceAppliedToService,
+							InsurancePercentage,
 							IsSurchargeAppliedToService, false,
 							ServiceDescription);
 
@@ -1028,6 +1078,7 @@ namespace CommonUserControls.InvoiceViewers
 
 					serviceDetailObject = MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail(null, parentService.ID,
 						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService,
+						StationPointID, StationPointStageID,
 						InsurancePercentage,
 						IsSurchargeAppliedToService, false,
 						ServiceDescription);
@@ -1042,33 +1093,19 @@ namespace CommonUserControls.InvoiceViewers
 				case DB_ServiceType.ExaminationService:
 				case DB_ServiceType.InvestigationServices:
 					serviceDetailObject = MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail(null, ServiceID,
-						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService,
+						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, StationPointID,
+						StationPointStageID, IsInsuranceAppliedToService,
 						InsurancePercentage,
 						IsSurchargeAppliedToService, false,
 						ServiceDescription);
 					break;
 				case DB_ServiceType.SurgeryService:
-					//parentService =
-					//	Service_cu.ItemsList.Find(
-					//		item => Convert.ToInt32(item.ServiceType_P_ID)
-					//			.Equals((int) DB_ServiceType.ParentSurgeryService));
-					//if (parentService == null)
-					//{
-					//	XtraMessageBox.Show(
-					//		"Error :: please refer to customer service, Parent Surgery Service Not Found");
-					//	return;
-					//}
-
 					serviceDetailObject = MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail(null, ServiceID,
-						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService,
+						ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, StationPointID,
+						StationPointStageID, IsInsuranceAppliedToService,
 						InsurancePercentage,
 						IsSurchargeAppliedToService, false,
 						ServiceDescription);
-					//MerkDBBusinessLogicEngine.CreateNew_InvoiceDetail_Surgery(serviceDetailObject, ServiceID,
-					//	ServicePrice, useCustomServicePrice, 1, ServiceDate, DoctorID, IsInsuranceAppliedToService,
-					//	InsurancePercentage,
-					//	IsSurchargeAppliedToService, false,
-					//	ServiceDescription);
 					break;
 			}
 

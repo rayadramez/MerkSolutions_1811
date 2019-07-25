@@ -36,6 +36,7 @@ namespace MerkDataBaseBusinessLogicProject
         public Nullable<bool> IsMedical { get; set; }
         public string InternalCode { get; set; }
         public Nullable<int> InsertedBy { get; set; }
+        public string DisplayingColor { get; set; }
     
         public virtual ChartOfAccount_cu ChartOfAccount_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
