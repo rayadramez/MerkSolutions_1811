@@ -61,23 +61,24 @@ namespace CommonUserControls.PEMRCommonViewers
 			if(serviceCategory == null)
 				return;
 			
-			if(serviceCategory.DisplayingColor == null)
-				if(service.DisplayingColor == null)
-					return;
-				else
-				{
-					object backColor = ApplicationStaticConfiguration.GetSkinColor(service.DisplayingColor);
-					if (backColor != null)
-						this.BackColor = Color.FromArgb(((Color) backColor).R, ((Color) backColor).G,
-							((Color) backColor).B);
-				}
-			else
-			{
-				object backColor = ApplicationStaticConfiguration.GetSkinColor(serviceCategory.DisplayingColor);
-				if (backColor != null)
-					this.BackColor = Color.FromArgb(((Color)backColor).R, ((Color)backColor).G,
-						((Color)backColor).B);
-			}
+			//TODO :: just add DisplayingColor to ServiceCategoryTable and it will work
+			//if(serviceCategory.DisplayingColor == null)
+			//	if(service.DisplayingColor == null)
+			//		return;
+			//	else
+			//	{
+			//		object backColor = ApplicationStaticConfiguration.GetSkinColor(service.DisplayingColor);
+			//		if (backColor != null)
+			//			this.BackColor = Color.FromArgb(((Color) backColor).R, ((Color) backColor).G,
+			//				((Color) backColor).B);
+			//	}
+			//else
+			//{
+			//	object backColor = ApplicationStaticConfiguration.GetSkinColor(serviceCategory.DisplayingColor);
+			//	if (backColor != null)
+			//		this.BackColor = Color.FromArgb(((Color)backColor).R, ((Color)backColor).G,
+			//			((Color)backColor).B);
+			//}
 		}
 
 		private void btnPlay_Click(object sender, System.EventArgs e)

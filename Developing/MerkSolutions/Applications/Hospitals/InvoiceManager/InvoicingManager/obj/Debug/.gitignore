@@ -12,3 +12,4 @@
 /InvoicingManager.exe
 /InvoicingManager.pdb
 /invoicingmanager.exe.licenses
+*.cache

@@ -46,7 +46,6 @@ namespace MerkDataBaseBusinessLogicProject
         public Nullable<bool> AllowAddmission { get; set; }
         public string Description { get; set; }
         public Nullable<int> InsertedBy { get; set; }
-        public string DisplayingColor { get; set; }
     
         public virtual ChartOfAccount_cu ChartOfAccount_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
