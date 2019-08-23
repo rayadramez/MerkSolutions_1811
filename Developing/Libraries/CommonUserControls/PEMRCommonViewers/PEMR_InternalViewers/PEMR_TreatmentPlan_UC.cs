@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using ApplicationConfiguration;
 using CommonControlLibrary;
 using CommonUserControls.PEMRCommonViewers.PEMR_Interfaces;
 using DevExpress.Utils;

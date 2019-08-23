@@ -1040,6 +1040,18 @@
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="InsertedBy" Type="int" />
         </EntityType>
+        <EntityType Name="InventoryItem_Area">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InventoryItemID" Type="int" Nullable="false" />
+          <Property Name="Width" Type="float" Nullable="false" />
+          <Property Name="Height" Type="float" Nullable="false" />
+          <Property Name="Count" Type="float" Nullable="false" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
+          <Property Name="InsertedBy" Type="int" />
+        </EntityType>
         <EntityType Name="InventoryItem_cu">
           <Key>
             <PropertyRef Name="ID" />
@@ -1073,6 +1085,9 @@
           <Property Name="InsertedBy" Type="int" />
           <Property Name="IsTaxable" Type="bit" />
           <Property Name="IsSurcharge" Type="bit" />
+          <Property Name="Width" Type="float" />
+          <Property Name="Height" Type="float" />
+          <Property Name="Count" Type="int" />
         </EntityType>
         <EntityType Name="InventoryItem_UnitMeasurment_cu">
           <Key>
@@ -9652,6 +9667,7 @@
           <EntitySet Name="InsuranceCarrier_InsuranceLevel_cu" EntityType="Self.InsuranceCarrier_InsuranceLevel_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InsuranceLevel_cu" EntityType="Self.InsuranceLevel_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InventoryHousing_cu" EntityType="Self.InventoryHousing_cu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InventoryItem_Area" EntityType="Self.InventoryItem_Area" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InventoryItem_cu" EntityType="Self.InventoryItem_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InventoryItem_UnitMeasurment_cu" EntityType="Self.InventoryItem_UnitMeasurment_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InventoryItemBrand_cu" EntityType="Self.InventoryItemBrand_cu" Schema="dbo" store:Type="Tables" />
@@ -13341,6 +13357,18 @@
           <NavigationProperty Name="InventoryItemTransactions" Relationship="Self.FK_InventoryItem_InventoryHousing_cu_InventoryHousing_cu" FromRole="InventoryHousing_cu" ToRole="InventoryItemTransaction" />
           <NavigationProperty Name="InvoiceDetail_Inventory" Relationship="Self.FK_InvoiceDetail_Inventory_InventoryHousing_cu" FromRole="InventoryHousing_cu" ToRole="InvoiceDetail_Inventory" />
         </EntityType>
+        <EntityType Name="InventoryItem_Area">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InventoryItemID" Type="Int32" Nullable="false" />
+          <Property Name="Width" Type="Double" Nullable="false" />
+          <Property Name="Height" Type="Double" Nullable="false" />
+          <Property Name="Count" Type="Double" Nullable="false" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <Property Name="InsertedBy" Type="Int32" />
+        </EntityType>
         <EntityType Name="InventoryItem_cu">
           <Key>
             <PropertyRef Name="ID" />
@@ -13374,6 +13402,9 @@
           <Property Name="InsertedBy" Type="Int32" />
           <Property Name="IsTaxable" Type="Boolean" />
           <Property Name="IsSurcharge" Type="Boolean" />
+          <Property Name="Width" Type="Double" />
+          <Property Name="Height" Type="Double" />
+          <Property Name="Count" Type="Int32" />
           <NavigationProperty Name="ChartOfAccount_cu" Relationship="Self.FK_InventoryItem_cu_ChartOfAccount_cu" FromRole="InventoryItem_cu" ToRole="ChartOfAccount_cu" />
           <NavigationProperty Name="FinanceInvoiceDetails" Relationship="Self.FK_FinanceInvoiceDetail_InventoryItem_cu" FromRole="InventoryItem_cu" ToRole="FinanceInvoiceDetail" />
           <NavigationProperty Name="InventoryHousing_cu" Relationship="Self.FK_InventoryItem_cu_InventoryHousing_cu" FromRole="InventoryItem_cu" ToRole="InventoryHousing_cu" />
@@ -22557,6 +22588,7 @@
           <EntitySet Name="InsuranceCarrier_InsuranceLevel_cu" EntityType="Self.InsuranceCarrier_InsuranceLevel_cu" />
           <EntitySet Name="InsuranceLevel_cu" EntityType="Self.InsuranceLevel_cu" />
           <EntitySet Name="InventoryHousing_cu" EntityType="Self.InventoryHousing_cu" />
+          <EntitySet Name="InventoryItem_Area" EntityType="Self.InventoryItem_Area" />
           <EntitySet Name="InventoryItem_cu" EntityType="Self.InventoryItem_cu" />
           <EntitySet Name="InventoryItem_UnitMeasurment_cu" EntityType="Self.InventoryItem_UnitMeasurment_cu" />
           <EntitySet Name="InventoryItemBrand_cu" EntityType="Self.InventoryItemBrand_cu" />
@@ -26297,6 +26329,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="InventoryItem_Area">
+            <EntityTypeMapping TypeName="MerkFinanceModel.InventoryItem_Area">
+              <MappingFragment StoreEntitySet="InventoryItem_Area">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="InventoryItemID" ColumnName="InventoryItemID" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
+                <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="InventoryItem_cu">
             <EntityTypeMapping TypeName="MerkFinanceModel.InventoryItem_cu">
               <MappingFragment StoreEntitySet="InventoryItem_cu">
@@ -26329,6 +26374,9 @@
                 <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
                 <ScalarProperty Name="IsTaxable" ColumnName="IsTaxable" />
                 <ScalarProperty Name="IsSurcharge" ColumnName="IsSurcharge" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

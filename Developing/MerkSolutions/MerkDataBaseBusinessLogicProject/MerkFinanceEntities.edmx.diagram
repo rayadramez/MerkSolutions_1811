@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c566f0ca70454c9daabb62a74de894a6" Name="Diagram1">
+      <Diagram DiagramId="c5721a4435a54190a855f1fc9ac6be65" Name="Diagram1">
         <EntityTypeShape EntityType="MerkFinanceModel.AccountingJournalEntryTransaction" Width="1.5" PointX="21.5" PointY="296.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.AccountingJournalTransaction" Width="1.5" PointX="22.5" PointY="284" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.ActiveSalaryEffect_cu" Width="1.5" PointX="16.5" PointY="257.375" IsExpanded="true" />
@@ -17,8 +17,8 @@
         <EntityTypeShape EntityType="MerkFinanceModel.CashBoxInOutTransaction" Width="1.5" PointX="55" PointY="291.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.CashBoxInOutTransaction_AccountingJournalTransaction" Width="1.5" PointX="34.75" PointY="301.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.CashBoxTransactionType_GeneralChartOfAccountType_cu" Width="1.5" PointX="21.5" PointY="300.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.CashBoxTransactionType_GeneralChartOfAccountType_p" Width="1.5" PointX="63" PointY="292.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.CashBoxTransactionType_p" Width="1.5" PointX="52.75" PointY="311.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.CashBoxTransactionType_GeneralChartOfAccountType_p" Width="1.5" PointX="63" PointY="292.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.CashBoxTransactionType_p" Width="1.5" PointX="52.75" PointY="312.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.ChartOfAccount_cu" Width="1.5" PointX="26.5" PointY="295.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.ChartOfAccount_FinancialStatementElement_cu" Width="1.5" PointX="37.75" PointY="301.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.ChartOfAccount_GeneralChartOfAccountType_cu" Width="1.5" PointX="39.75" PointY="279.5" IsExpanded="true" />
@@ -77,10 +77,10 @@
         <EntityTypeShape EntityType="MerkFinanceModel.Floor_cu" Width="1.5" PointX="37.25" PointY="305.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.GeneralChartOfAccountType_cu" Width="1.5" PointX="25.5" PointY="279.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.GeneralChartOfAccountType_p" Width="1.5" PointX="23.25" PointY="272.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.HeightUnit_p" Width="1.5" PointX="49.75" PointY="312" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.HeightUnit_p" Width="1.5" PointX="49.75" PointY="317" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.IdentificationCardType_p" Width="1.5" PointX="0.75" PointY="286.625" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.ImageType_p" Width="1.5" PointX="29.25" PointY="268.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.InPatientAdmissionPricingType_p" Width="1.5" PointX="54.5" PointY="315.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InPatientAdmissionPricingType_p" Width="1.5" PointX="54.5" PointY="316.625" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InPatientRoom_cu" Width="1.5" PointX="43.5" PointY="304.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InPatientRoom_InPatientAdmissionPricingType_cu" Width="1.5" PointX="56.75" PointY="303.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InPatientRoomBed_cu" Width="1.5" PointX="59.75" PointY="275" IsExpanded="true" />
@@ -93,17 +93,18 @@
         <EntityTypeShape EntityType="MerkFinanceModel.InsuranceCarrier_InsuranceLevel_cu" Width="1.5" PointX="37" PointY="312.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InsuranceLevel_cu" Width="1.5" PointX="16.5" PointY="352.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InventoryHousing_cu" Width="1.5" PointX="40.75" PointY="303.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItem_cu" Width="1.5" PointX="45" PointY="322.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItem_UnitMeasurment_cu" Width="1.5" PointX="54.25" PointY="307.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItem_Area" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItem_cu" Width="1.5" PointX="45" PointY="322.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItem_UnitMeasurment_cu" Width="1.5" PointX="54.25" PointY="307.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemBrand_cu" Width="1.5" PointX="42.75" PointY="295.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemCategory_cu" Width="1.5" PointX="42.75" PointY="287.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemGroup_cu" Width="1.5" PointX="28.75" PointY="323.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemGroup_InventoryItem_cu" Width="1.5" PointX="47.25" PointY="325.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemPrice_cu" Width="1.5" PointX="16.5" PointY="283.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemTransaction" Width="1.5" PointX="57.25" PointY="310.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemTransactionType_p" Width="1.5" PointX="55" PointY="312.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemTransaction" Width="1.5" PointX="49.25" PointY="311.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemTransactionType_p" Width="1.5" PointX="47" PointY="336.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InventoryItemType_p" Width="1.5" PointX="18.75" PointY="376.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.InventoryTrackingType_p" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.InventoryTrackingType_p" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.Invoice" Width="1.5" PointX="32.5" PointY="291.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InvoiceCostingStrategy_p" Width="1.5" PointX="30.25" PointY="312.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.InvoiceDetail" Width="1.5" PointX="24.5" PointY="288.375" IsExpanded="true" />
@@ -123,7 +124,7 @@
         <EntityTypeShape EntityType="MerkFinanceModel.Location_cu" Width="1.5" PointX="31" PointY="322.625" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.Manager_cu" Width="1.5" PointX="16.5" PointY="362.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.MaritalStatus_p" Width="1.5" PointX="0.75" PointY="294.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.MedicalFlow_p" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.MedicalFlow_p" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.MedicalStage_cu" Width="1.5" PointX="16.5" PointY="366" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.Medication_cu" Width="1.5" PointX="18.75" PointY="323.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.Medication_Dose_cu" Width="1.5" PointX="18.75" PointY="301.5" IsExpanded="true" />
@@ -152,7 +153,7 @@
         <EntityTypeShape EntityType="MerkFinanceModel.PersonTitle_p" Width="1.5" PointX="0.75" PointY="297.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.PersonType_ChartOfAccount_cu" Width="1.5" PointX="33.75" PointY="276.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.PersonType_p" Width="1.5" PointX="0.75" PointY="290.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.PhoneType_p" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.PhoneType_p" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.PriceType_p" Width="1.5" PointX="14.25" PointY="268.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.PupillaryAbnormalities_cu" Width="1.5" PointX="16.5" PointY="386.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.PupillaryRAPDCauses_cu" Width="1.5" PointX="16.5" PointY="390.25" IsExpanded="true" />
@@ -168,7 +169,7 @@
         <EntityTypeShape EntityType="MerkFinanceModel.SegmentSign_cu" Width="1.5" PointX="29.5" PointY="303.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.SegmentSignCategory_cu" Width="1.5" PointX="16.5" PointY="276.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.SegmentSignType_p" Width="1.5" PointX="14.25" PointY="265.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.ServerDirectory_p" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.ServerDirectory_p" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.Service_ChartOfAccount_cu" Width="1.5" PointX="28.75" PointY="331.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.Service_cu" Width="1.5" PointX="42.75" PointY="279.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.Service_StationPoint_cu" Width="1.5" PointX="57" PointY="287.5" IsExpanded="true" />
@@ -194,14 +195,14 @@
         <EntityTypeShape EntityType="MerkFinanceModel.Symptoms_cu" Width="1.5" PointX="16.5" PointY="421.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.SymptomsCategory_cu" Width="1.5" PointX="16.5" PointY="426.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.SymptomsCategory_Symptoms_cu" Width="1.5" PointX="21.75" PointY="354.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.sysdiagram" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.TableIdentity" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.TemperatureUnit_p" Width="1.5" PointX="49.75" PointY="314.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.sysdiagram" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.TableIdentity" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.TemperatureUnit_p" Width="1.5" PointX="49.75" PointY="319.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.Terriotry_cu" Width="1.5" PointX="54.25" PointY="299.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.TimeDuration_p" Width="1.5" PointX="46.75" PointY="318.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.ToBeInserted_cu" Width="1.5" PointX="22.5" PointY="275.625" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.TrialBalanceTransaction" Width="1.5" PointX="28.75" PointY="307.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.TrialBalanceTransactionType_p" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.TrialBalanceTransactionType_p" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.TriggerOfDrugAllergy_cu" Width="1.5" PointX="46.75" PointY="333.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.UncorrectedDistanceVisualAcuity_cu" Width="1.5" PointX="51.75" PointY="272.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.UncorrectedDistanceVisualAcuityUnit_p" Width="1.5" PointX="49.5" PointY="272.875" IsExpanded="true" />
@@ -243,7 +244,7 @@
         <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_TreatmentPlan" Width="1.5" PointX="52" PointY="291.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_VisionRefractionReading" Width="1.5" PointX="54" PointY="281.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.VisitTiming_VitalSign" Width="1.5" PointX="52" PointY="299.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MerkFinanceModel.WeightUnit_p" Width="1.5" PointX="49.75" PointY="317.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MerkFinanceModel.WeightUnit_p" Width="1.5" PointX="49.75" PointY="322.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MerkFinanceModel.WorkingShiftTitle_cu" Width="1.5" PointX="16.5" PointY="453.375" IsExpanded="true" />
         <AssociationConnector Association="MerkFinanceModel.FK_AccountingJournalEntryTransaction_AccountingJournalTransaction" ManuallyRouted="false" />
         <AssociationConnector Association="MerkFinanceModel.FK_AccountingJournalEntryTransaction_ChartOfAccount_cu" ManuallyRouted="false" />

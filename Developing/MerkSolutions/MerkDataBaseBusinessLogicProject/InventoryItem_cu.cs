@@ -54,6 +54,9 @@ namespace MerkDataBaseBusinessLogicProject
         public Nullable<int> InsertedBy { get; set; }
         public Nullable<bool> IsTaxable { get; set; }
         public Nullable<bool> IsSurcharge { get; set; }
+        public Nullable<double> Width { get; set; }
+        public Nullable<double> Height { get; set; }
+        public Nullable<int> Count { get; set; }
     
         public virtual ChartOfAccount_cu ChartOfAccount_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

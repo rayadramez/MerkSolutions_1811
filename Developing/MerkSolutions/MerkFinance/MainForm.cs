@@ -22,5 +22,10 @@ namespace MerkFinance
 			if (_mainHomeScreen != null)
 				_mainHomeScreen.Initialize(this);
 		}
+
+		private void btnMenu_Click(object sender, System.EventArgs e)
+		{
+
+		}
 	}
 }
