@@ -173,7 +173,19 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 
 		#region Implementation of IInventoryItemGroup_InventoryItem_Viewer
 
-		public List<InventoryItemGroup_InventoryItem_cu> List_InventoryItemGroup_InventoryItem { get; set; }
+		public List<InventoryItemGroup_InventoryItem_cu> List_InventoryItemGroup_InventoryItem
+		{
+			get
+			{
+				return ((IInventoryItemGroup_InventoryItem_Viewer) ActiveCollector.ActiveViewer)
+					.List_InventoryItemGroup_InventoryItem;
+			}
+			set
+			{
+				((IInventoryItemGroup_InventoryItem_Viewer) ActiveCollector.ActiveViewer)
+					.List_InventoryItemGroup_InventoryItem = value;
+			}
+		}
 
 		#endregion
 	}
