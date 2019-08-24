@@ -723,6 +723,20 @@ INSERT INTO dbo.Region_cu( Name_P, Name_S, City_CU_ID, Description, IsOnDuty )VA
 ( N'15 مايو',N'15 مايو', 39, NULL, 1)
 -- ///////////// END :: Region_cu
 
+-- ///////////// BEGIN :: RawMaterialTranasctionType_p
+PRINT 'RawMaterialTranasctionType_p'
+IF NOT EXISTS (SELECT 1 FROM [dbo].RawMaterialTranasctionType_p WHERE ID BETWEEN 1 AND 2)
+INSERT INTO dbo.RawMaterialTranasctionType_p ( ID, Name_P, Name_S, Description ) VALUES  ( 1, N'شراء',N'Purchasing',N'' ),
+( 2, N'بيع',N'Selling',N'' )
+-- ///////////// END :: RawMaterialTranasctionType_p
+
+-- ///////////// BEGIN :: RawMaterialType_p
+PRINT 'RawMaterialType_p'
+IF NOT EXISTS (SELECT 1 FROM [dbo].RawMaterialType_p WHERE ID BETWEEN 1 AND 2)
+INSERT INTO dbo.RawMaterialType_p ( ID, Name_P, Name_S, Description ) VALUES  ( 1, N'أخشاب إم دي أف',N'MDF Wood',N'' ),
+( 2, N'لزق أمير',N'Amir Adhesive',N'' )
+-- ///////////// END :: RawMaterialType_p
+
 IF @@ERROR<>0 AND @@TRANCOUNT>0 ROLLBACK TRANSACTION
 GO
 IF @@TRANCOUNT=0 BEGIN INSERT INTO #tmpErrors (Error) SELECT 1 BEGIN TRANSACTION END

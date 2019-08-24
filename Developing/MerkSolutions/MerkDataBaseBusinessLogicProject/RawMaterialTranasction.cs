@@ -22,6 +22,7 @@ namespace MerkDataBaseBusinessLogicProject
         public Nullable<int> InsertedBy { get; set; }
         public bool IsOnDuty { get; set; }
     
+        public virtual RawMaterials_cu RawMaterials_cu { get; set; }
         public virtual RawMaterialTranasctionType_p RawMaterialTranasctionType_p { get; set; }
         public virtual User_cu User_cu { get; set; }
     }

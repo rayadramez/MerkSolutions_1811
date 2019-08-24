@@ -14,6 +14,12 @@ namespace MerkDataBaseBusinessLogicProject
     
     public partial class RawMaterials_cu
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public RawMaterials_cu()
+        {
+            this.RawMaterialTranasctions = new HashSet<RawMaterialTranasction>();
+        }
+    
         public int ID { get; set; }
         public string Name_P { get; set; }
         public string Name_S { get; set; }
@@ -22,12 +28,12 @@ namespace MerkDataBaseBusinessLogicProject
         public double Width { get; set; }
         public double Height { get; set; }
         public double Weight { get; set; }
-        public System.DateTime PurchasingDate { get; set; }
-        public double PurchasingPrice { get; set; }
         public Nullable<int> InsertedBy { get; set; }
         public bool IsOnDuty { get; set; }
     
         public virtual RawMaterialType_p RawMaterialType_p { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RawMaterialTranasction> RawMaterialTranasctions { get; set; }
         public virtual User_cu User_cu { get; set; }
     }
 }
