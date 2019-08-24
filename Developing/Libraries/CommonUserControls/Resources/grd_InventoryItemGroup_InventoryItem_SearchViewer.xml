@@ -70,7 +70,7 @@
         <property name="FixedWidth">true</property>
       </property>
       <property name="Caption">المنتــــــج</property>
-      <property name="FieldName">InventortItemName</property>
+      <property name="FieldName">InventoryItemName</property>
     </property>
     <property name="Item3" isnull="true" iskey="true">
       <property name="AppearanceHeader" isnull="true" iskey="true">

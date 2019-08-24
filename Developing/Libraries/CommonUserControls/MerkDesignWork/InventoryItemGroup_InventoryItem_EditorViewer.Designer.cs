@@ -162,6 +162,7 @@
 			this.gridView1.Name = "gridView1";
 			this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
 			this.gridView1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gridView1_MouseUp);
+			this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
 			this.gridView1.GotFocus += new System.EventHandler(this.gridView1_GotFocus);
 			// 
 			// gridColumn2

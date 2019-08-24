@@ -176,5 +176,11 @@ namespace CommonUserControls.MerkDesignWork
 			SelectedInventoryGroupFromGrid =
 				CommonViewsActions.GetSelectedRowObject<InventoryItemGroup_cu>((GridView) sender);
 		}
+
+		private void gridView1_DoubleClick(object sender, EventArgs e)
+		{
+			SelectedInventoryGroupFromGrid =
+				CommonViewsActions.GetSelectedRowObject<InventoryItemGroup_cu>((GridView) sender);
+		}
 	}
 }
