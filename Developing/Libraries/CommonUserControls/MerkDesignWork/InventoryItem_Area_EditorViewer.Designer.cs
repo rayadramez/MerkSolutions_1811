@@ -29,6 +29,10 @@
 		private void InitializeComponent()
 		{
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
 			this.txtInternalCode = new DevExpress.XtraEditors.TextEdit();
 			this.spnTotalArea = new DevExpress.XtraEditors.SpinEdit();
 			this.spnCount = new DevExpress.XtraEditors.SpinEdit();
@@ -51,20 +55,16 @@
 			this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
 			this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
-			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -95,12 +95,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
 			this.SuspendLayout();
@@ -127,6 +127,46 @@
 			this.layoutControl1.Size = new System.Drawing.Size(968, 135);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
+			// 
+			// labelControl4
+			// 
+			this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.labelControl4.Location = new System.Drawing.Point(44, 81);
+			this.labelControl4.Name = "labelControl4";
+			this.labelControl4.Size = new System.Drawing.Size(25, 14);
+			this.labelControl4.StyleController = this.layoutControl1;
+			this.labelControl4.TabIndex = 45;
+			this.labelControl4.Text = "cm2";
+			// 
+			// labelControl3
+			// 
+			this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.labelControl3.Location = new System.Drawing.Point(44, 45);
+			this.labelControl3.Name = "labelControl3";
+			this.labelControl3.Size = new System.Drawing.Size(25, 14);
+			this.labelControl3.StyleController = this.layoutControl1;
+			this.labelControl3.TabIndex = 44;
+			this.labelControl3.Text = "cm2";
+			// 
+			// labelControl2
+			// 
+			this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.labelControl2.Location = new System.Drawing.Point(359, 45);
+			this.labelControl2.Name = "labelControl2";
+			this.labelControl2.Size = new System.Drawing.Size(17, 14);
+			this.labelControl2.StyleController = this.layoutControl1;
+			this.labelControl2.TabIndex = 43;
+			this.labelControl2.Text = "cm";
+			// 
+			// labelControl1
+			// 
+			this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.labelControl1.Location = new System.Drawing.Point(666, 45);
+			this.labelControl1.Name = "labelControl1";
+			this.labelControl1.Size = new System.Drawing.Size(17, 14);
+			this.labelControl1.StyleController = this.layoutControl1;
+			this.labelControl1.TabIndex = 42;
+			this.labelControl1.Text = "cm";
 			// 
 			// txtInternalCode
 			// 
@@ -445,16 +485,6 @@
 			this.emptySpaceItem6.Size = new System.Drawing.Size(968, 11);
 			this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
 			// 
-			// labelControl1
-			// 
-			this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.labelControl1.Location = new System.Drawing.Point(666, 45);
-			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(17, 14);
-			this.labelControl1.StyleController = this.layoutControl1;
-			this.labelControl1.TabIndex = 42;
-			this.labelControl1.Text = "cm";
-			// 
 			// layoutControlItem8
 			// 
 			this.layoutControlItem8.Control = this.labelControl1;
@@ -488,15 +518,13 @@
 			this.simpleSeparator2.Name = "simpleSeparator2";
 			this.simpleSeparator2.Size = new System.Drawing.Size(2, 36);
 			// 
-			// labelControl2
+			// emptySpaceItem8
 			// 
-			this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.labelControl2.Location = new System.Drawing.Point(359, 45);
-			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Size = new System.Drawing.Size(17, 14);
-			this.labelControl2.StyleController = this.layoutControl1;
-			this.labelControl2.TabIndex = 43;
-			this.labelControl2.Text = "cm";
+			this.emptySpaceItem8.AllowHotTrack = false;
+			this.emptySpaceItem8.Location = new System.Drawing.Point(356, 26);
+			this.emptySpaceItem8.Name = "emptySpaceItem8";
+			this.emptySpaceItem8.Size = new System.Drawing.Size(23, 16);
+			this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem9
 			// 
@@ -509,23 +537,13 @@
 			this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem9.TextVisible = false;
 			// 
-			// emptySpaceItem8
+			// emptySpaceItem9
 			// 
-			this.emptySpaceItem8.AllowHotTrack = false;
-			this.emptySpaceItem8.Location = new System.Drawing.Point(356, 26);
-			this.emptySpaceItem8.Name = "emptySpaceItem8";
-			this.emptySpaceItem8.Size = new System.Drawing.Size(23, 16);
-			this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// labelControl3
-			// 
-			this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.labelControl3.Location = new System.Drawing.Point(44, 45);
-			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(25, 14);
-			this.labelControl3.StyleController = this.layoutControl1;
-			this.labelControl3.TabIndex = 44;
-			this.labelControl3.Text = "cm2";
+			this.emptySpaceItem9.AllowHotTrack = false;
+			this.emptySpaceItem9.Location = new System.Drawing.Point(41, 26);
+			this.emptySpaceItem9.Name = "emptySpaceItem9";
+			this.emptySpaceItem9.Size = new System.Drawing.Size(31, 16);
+			this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem10
 			// 
@@ -538,23 +556,13 @@
 			this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem10.TextVisible = false;
 			// 
-			// emptySpaceItem9
+			// emptySpaceItem10
 			// 
-			this.emptySpaceItem9.AllowHotTrack = false;
-			this.emptySpaceItem9.Location = new System.Drawing.Point(41, 26);
-			this.emptySpaceItem9.Name = "emptySpaceItem9";
-			this.emptySpaceItem9.Size = new System.Drawing.Size(31, 16);
-			this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
-			// 
-			// labelControl4
-			// 
-			this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.labelControl4.Location = new System.Drawing.Point(44, 81);
-			this.labelControl4.Name = "labelControl4";
-			this.labelControl4.Size = new System.Drawing.Size(25, 14);
-			this.labelControl4.StyleController = this.layoutControl1;
-			this.labelControl4.TabIndex = 45;
-			this.labelControl4.Text = "cm2";
+			this.emptySpaceItem10.AllowHotTrack = false;
+			this.emptySpaceItem10.Location = new System.Drawing.Point(41, 62);
+			this.emptySpaceItem10.Name = "emptySpaceItem10";
+			this.emptySpaceItem10.Size = new System.Drawing.Size(31, 16);
+			this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem11
 			// 
@@ -566,14 +574,6 @@
 			this.layoutControlItem11.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem11.TextVisible = false;
-			// 
-			// emptySpaceItem10
-			// 
-			this.emptySpaceItem10.AllowHotTrack = false;
-			this.emptySpaceItem10.Location = new System.Drawing.Point(41, 62);
-			this.emptySpaceItem10.Name = "emptySpaceItem10";
-			this.emptySpaceItem10.Size = new System.Drawing.Size(31, 16);
-			this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// simpleSeparator3
 			// 
@@ -626,12 +626,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
 			this.ResumeLayout(false);
