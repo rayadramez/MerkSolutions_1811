@@ -121,6 +121,8 @@ namespace MerkDataBaseBusinessLogicProject
             this.PupillaryAbnormalities_cu = new HashSet<PupillaryAbnormalities_cu>();
             this.PupillaryRAPDCauses_cu = new HashSet<PupillaryRAPDCauses_cu>();
             this.QueueManagers = new HashSet<QueueManager>();
+            this.RawMaterials_cu = new HashSet<RawMaterials_cu>();
+            this.RawMaterialTranasctions = new HashSet<RawMaterialTranasction>();
             this.Region_cu = new HashSet<Region_cu>();
             this.RoleRegistration_cu = new HashSet<RoleRegistration_cu>();
             this.SegmentSign_cu = new HashSet<SegmentSign_cu>();
@@ -401,6 +403,10 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual ICollection<PupillaryRAPDCauses_cu> PupillaryRAPDCauses_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QueueManager> QueueManagers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RawMaterials_cu> RawMaterials_cu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RawMaterialTranasction> RawMaterialTranasctions { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Region_cu> Region_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

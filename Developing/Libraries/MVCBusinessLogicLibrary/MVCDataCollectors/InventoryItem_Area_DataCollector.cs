@@ -28,6 +28,9 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			if (ActiveDBItem == null)
 				return false;
 
+			if (InventoryItemID != null)
+				((InventoryItem_Area) ActiveDBItem).InventoryItemID = Convert.ToInt32(InventoryItemID);
+
 			if (Width != null)
 				((InventoryItem_Area)ActiveDBItem).Width = Convert.ToDouble(Width);
 

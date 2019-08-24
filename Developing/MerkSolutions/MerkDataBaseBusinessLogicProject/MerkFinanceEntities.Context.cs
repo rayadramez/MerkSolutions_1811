@@ -184,6 +184,10 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual DbSet<PupillarySize_p> PupillarySize_p { get; set; }
         public virtual DbSet<QueueManager> QueueManagers { get; set; }
         public virtual DbSet<QueueManagerStatus_p> QueueManagerStatus_p { get; set; }
+        public virtual DbSet<RawMaterials_cu> RawMaterials_cu { get; set; }
+        public virtual DbSet<RawMaterialTranasction> RawMaterialTranasctions { get; set; }
+        public virtual DbSet<RawMaterialTranasctionType_p> RawMaterialTranasctionType_p { get; set; }
+        public virtual DbSet<RawMaterialType_p> RawMaterialType_p { get; set; }
         public virtual DbSet<Region_cu> Region_cu { get; set; }
         public virtual DbSet<Religion_p> Religion_p { get; set; }
         public virtual DbSet<Role_p> Role_p { get; set; }

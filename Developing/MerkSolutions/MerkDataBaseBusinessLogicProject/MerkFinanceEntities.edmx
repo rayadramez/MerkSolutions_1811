@@ -1915,6 +1915,53 @@
           <Property Name="Name_S" Type="nvarchar" MaxLength="50" />
           <Property Name="Description" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="RawMaterials_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_P" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name_S" Type="nvarchar" MaxLength="100" />
+          <Property Name="RawTypeID" Type="int" Nullable="false" />
+          <Property Name="Thickness" Type="float" Nullable="false" />
+          <Property Name="Width" Type="float" Nullable="false" />
+          <Property Name="Height" Type="float" Nullable="false" />
+          <Property Name="Weight" Type="float" Nullable="false" />
+          <Property Name="PurchasingDate" Type="datetime" Nullable="false" />
+          <Property Name="PurchasingPrice" Type="float" Nullable="false" />
+          <Property Name="InsertedBy" Type="int" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RawMaterialTranasction">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="RawMaterial_CU_ID" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="RawMaterialTransactionType_P_ID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="InsertedBy" Type="int" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RawMaterialTranasctionType_p">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name_P" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name_S" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="RawMaterialType_p">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name_P" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name_S" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Region_cu">
           <Key>
             <PropertyRef Name="ID" />
@@ -7082,6 +7129,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_RawMaterials_cu_RawMaterialType_p">
+          <End Role="RawMaterialType_p" Type="Self.RawMaterialType_p" Multiplicity="1" />
+          <End Role="RawMaterials_cu" Type="Self.RawMaterials_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RawMaterialType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RawMaterials_cu">
+              <PropertyRef Name="RawTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RawMaterialTranasction_RawMaterialTranasctionType_p">
+          <End Role="RawMaterialTranasctionType_p" Type="Self.RawMaterialTranasctionType_p" Multiplicity="1" />
+          <End Role="RawMaterialTranasction" Type="Self.RawMaterialTranasction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RawMaterialTranasctionType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RawMaterialTranasction">
+              <PropertyRef Name="RawMaterialTransactionType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RawMaterialTranasction_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="RawMaterialTranasction" Type="Self.RawMaterialTranasction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="RawMaterialTranasction">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Region_cu_City_cu">
           <End Role="City_cu" Type="Self.City_cu" Multiplicity="1" />
           <End Role="Region_cu" Type="Self.Region_cu" Multiplicity="*" />
@@ -9470,6 +9553,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Wood_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="RawMaterials_cu" Type="Self.RawMaterials_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="RawMaterials_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_WorkingShiftTitle_cu_User_cu">
           <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
           <End Role="WorkingShiftTitle_cu" Type="Self.WorkingShiftTitle_cu" Multiplicity="*" />
@@ -9774,6 +9869,10 @@
           <EntitySet Name="PupillarySize_p" EntityType="Self.PupillarySize_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="QueueManager" EntityType="Self.QueueManager" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="QueueManagerStatus_p" EntityType="Self.QueueManagerStatus_p" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RawMaterials_cu" EntityType="Self.RawMaterials_cu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RawMaterialTranasction" EntityType="Self.RawMaterialTranasction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RawMaterialTranasctionType_p" EntityType="Self.RawMaterialTranasctionType_p" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RawMaterialType_p" EntityType="Self.RawMaterialType_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Region_cu" EntityType="Self.Region_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Religion_p" EntityType="Self.Religion_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role_p" EntityType="Self.Role_p" Schema="dbo" store:Type="Tables" />
@@ -11226,6 +11325,18 @@
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="PupillaryRAPDCauses_cu" EntitySet="PupillaryRAPDCauses_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_RawMaterials_cu_RawMaterialType_p" Association="Self.FK_RawMaterials_cu_RawMaterialType_p">
+            <End Role="RawMaterialType_p" EntitySet="RawMaterialType_p" />
+            <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RawMaterialTranasction_RawMaterialTranasctionType_p" Association="Self.FK_RawMaterialTranasction_RawMaterialTranasctionType_p">
+            <End Role="RawMaterialTranasctionType_p" EntitySet="RawMaterialTranasctionType_p" />
+            <End Role="RawMaterialTranasction" EntitySet="RawMaterialTranasction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RawMaterialTranasction_User_cu" Association="Self.FK_RawMaterialTranasction_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="RawMaterialTranasction" EntitySet="RawMaterialTranasction" />
+          </AssociationSet>
           <AssociationSet Name="FK_Region_cu_City_cu" Association="Self.FK_Region_cu_City_cu">
             <End Role="City_cu" EntitySet="City_cu" />
             <End Role="Region_cu" EntitySet="Region_cu" />
@@ -12021,6 +12132,10 @@
           <AssociationSet Name="FK_VisitTimming_SocialHistory_VisitTiming" Association="Self.FK_VisitTimming_SocialHistory_VisitTiming">
             <End Role="VisitTiming" EntitySet="VisitTiming" />
             <End Role="VisitTiming_SocialHistory" EntitySet="VisitTiming_SocialHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Wood_cu_User_cu" Association="Self.FK_Wood_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_WorkingShiftTitle_cu_User_cu" Association="Self.FK_WorkingShiftTitle_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
@@ -14529,6 +14644,59 @@
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="QueueManagers" Relationship="Self.FK_QueueManager_QueueManagerStatus_p" FromRole="QueueManagerStatus_p" ToRole="QueueManager" />
         </EntityType>
+        <EntityType Name="RawMaterials_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_P" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_S" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RawTypeID" Type="Int32" Nullable="false" />
+          <Property Name="Thickness" Type="Double" Nullable="false" />
+          <Property Name="Width" Type="Double" Nullable="false" />
+          <Property Name="Height" Type="Double" Nullable="false" />
+          <Property Name="Weight" Type="Double" Nullable="false" />
+          <Property Name="PurchasingDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PurchasingPrice" Type="Double" Nullable="false" />
+          <Property Name="InsertedBy" Type="Int32" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="RawMaterialType_p" Relationship="Self.FK_RawMaterials_cu_RawMaterialType_p" FromRole="RawMaterials_cu" ToRole="RawMaterialType_p" />
+          <NavigationProperty Name="User_cu" Relationship="Self.FK_Wood_cu_User_cu" FromRole="RawMaterials_cu" ToRole="User_cu" />
+        </EntityType>
+        <EntityType Name="RawMaterialTranasction">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="RawMaterial_CU_ID" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <Property Name="RawMaterialTransactionType_P_ID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="InsertedBy" Type="Int32" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="RawMaterialTranasctionType_p" Relationship="Self.FK_RawMaterialTranasction_RawMaterialTranasctionType_p" FromRole="RawMaterialTranasction" ToRole="RawMaterialTranasctionType_p" />
+          <NavigationProperty Name="User_cu" Relationship="Self.FK_RawMaterialTranasction_User_cu" FromRole="RawMaterialTranasction" ToRole="User_cu" />
+        </EntityType>
+        <EntityType Name="RawMaterialTranasctionType_p">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name_P" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_S" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="RawMaterialTranasctions" Relationship="Self.FK_RawMaterialTranasction_RawMaterialTranasctionType_p" FromRole="RawMaterialTranasctionType_p" ToRole="RawMaterialTranasction" />
+        </EntityType>
+        <EntityType Name="RawMaterialType_p">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name_P" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_S" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="RawMaterials_cu" Relationship="Self.FK_RawMaterials_cu_RawMaterialType_p" FromRole="RawMaterialType_p" ToRole="RawMaterials_cu" />
+        </EntityType>
         <EntityType Name="Region_cu">
           <Key>
             <PropertyRef Name="ID" />
@@ -15362,6 +15530,8 @@
           <NavigationProperty Name="PupillaryAbnormalities_cu" Relationship="Self.FK_PupillaryAbnormalities_cu_User_cu" FromRole="User_cu" ToRole="PupillaryAbnormalities_cu" />
           <NavigationProperty Name="PupillaryRAPDCauses_cu" Relationship="Self.FK_RAPDCauses_cu_User_cu" FromRole="User_cu" ToRole="PupillaryRAPDCauses_cu" />
           <NavigationProperty Name="QueueManagers" Relationship="Self.FK_QueueManager_User_cu" FromRole="User_cu" ToRole="QueueManager" />
+          <NavigationProperty Name="RawMaterials_cu" Relationship="Self.FK_Wood_cu_User_cu" FromRole="User_cu" ToRole="RawMaterials_cu" />
+          <NavigationProperty Name="RawMaterialTranasctions" Relationship="Self.FK_RawMaterialTranasction_User_cu" FromRole="User_cu" ToRole="RawMaterialTranasction" />
           <NavigationProperty Name="Region_cu" Relationship="Self.FK_Region_cu_User_cu" FromRole="User_cu" ToRole="Region_cu" />
           <NavigationProperty Name="RoleRegistration_cu" Relationship="Self.FK_RoleRegistration_cu_User_cu" FromRole="User_cu" ToRole="RoleRegistration_cu" />
           <NavigationProperty Name="SegmentSign_cu" Relationship="Self.FK_Segment_cu_User_cu" FromRole="User_cu" ToRole="SegmentSign_cu" />
@@ -20733,6 +20903,54 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_RawMaterials_cu_RawMaterialType_p">
+          <End Role="RawMaterialType_p" Type="Self.RawMaterialType_p" Multiplicity="1" />
+          <End Role="RawMaterials_cu" Type="Self.RawMaterials_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RawMaterialType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RawMaterials_cu">
+              <PropertyRef Name="RawTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Wood_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="RawMaterials_cu" Type="Self.RawMaterials_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="RawMaterials_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RawMaterialTranasction_RawMaterialTranasctionType_p">
+          <End Role="RawMaterialTranasctionType_p" Type="Self.RawMaterialTranasctionType_p" Multiplicity="1" />
+          <End Role="RawMaterialTranasction" Type="Self.RawMaterialTranasction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RawMaterialTranasctionType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RawMaterialTranasction">
+              <PropertyRef Name="RawMaterialTransactionType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RawMaterialTranasction_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="RawMaterialTranasction" Type="Self.RawMaterialTranasction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="RawMaterialTranasction">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Region_cu_User_cu">
           <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
           <End Role="Region_cu" Type="Self.Region_cu" Multiplicity="*" />
@@ -22751,6 +22969,10 @@
           <EntitySet Name="PupillarySize_p" EntityType="Self.PupillarySize_p" />
           <EntitySet Name="QueueManagers" EntityType="Self.QueueManager" />
           <EntitySet Name="QueueManagerStatus_p" EntityType="Self.QueueManagerStatus_p" />
+          <EntitySet Name="RawMaterials_cu" EntityType="Self.RawMaterials_cu" />
+          <EntitySet Name="RawMaterialTranasctions" EntityType="Self.RawMaterialTranasction" />
+          <EntitySet Name="RawMaterialTranasctionType_p" EntityType="Self.RawMaterialTranasctionType_p" />
+          <EntitySet Name="RawMaterialType_p" EntityType="Self.RawMaterialType_p" />
           <EntitySet Name="Region_cu" EntityType="Self.Region_cu" />
           <EntitySet Name="Religion_p" EntityType="Self.Religion_p" />
           <EntitySet Name="Role_p" EntityType="Self.Role_p" />
@@ -24382,6 +24604,22 @@
           <AssociationSet Name="FK_QueueManager_User_cu" Association="Self.FK_QueueManager_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="QueueManager" EntitySet="QueueManagers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RawMaterials_cu_RawMaterialType_p" Association="Self.FK_RawMaterials_cu_RawMaterialType_p">
+            <End Role="RawMaterialType_p" EntitySet="RawMaterialType_p" />
+            <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Wood_cu_User_cu" Association="Self.FK_Wood_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RawMaterialTranasction_RawMaterialTranasctionType_p" Association="Self.FK_RawMaterialTranasction_RawMaterialTranasctionType_p">
+            <End Role="RawMaterialTranasctionType_p" EntitySet="RawMaterialTranasctionType_p" />
+            <End Role="RawMaterialTranasction" EntitySet="RawMaterialTranasctions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RawMaterialTranasction_User_cu" Association="Self.FK_RawMaterialTranasction_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="RawMaterialTranasction" EntitySet="RawMaterialTranasctions" />
           </AssociationSet>
           <AssociationSet Name="FK_Region_cu_User_cu" Association="Self.FK_Region_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
@@ -27372,6 +27610,57 @@
           <EntitySetMapping Name="QueueManagerStatus_p">
             <EntityTypeMapping TypeName="MerkFinanceModel.QueueManagerStatus_p">
               <MappingFragment StoreEntitySet="QueueManagerStatus_p">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name_P" ColumnName="Name_P" />
+                <ScalarProperty Name="Name_S" ColumnName="Name_S" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RawMaterials_cu">
+            <EntityTypeMapping TypeName="MerkFinanceModel.RawMaterials_cu">
+              <MappingFragment StoreEntitySet="RawMaterials_cu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name_P" ColumnName="Name_P" />
+                <ScalarProperty Name="Name_S" ColumnName="Name_S" />
+                <ScalarProperty Name="RawTypeID" ColumnName="RawTypeID" />
+                <ScalarProperty Name="Thickness" ColumnName="Thickness" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="PurchasingDate" ColumnName="PurchasingDate" />
+                <ScalarProperty Name="PurchasingPrice" ColumnName="PurchasingPrice" />
+                <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RawMaterialTranasctions">
+            <EntityTypeMapping TypeName="MerkFinanceModel.RawMaterialTranasction">
+              <MappingFragment StoreEntitySet="RawMaterialTranasction">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RawMaterial_CU_ID" ColumnName="RawMaterial_CU_ID" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="RawMaterialTransactionType_P_ID" ColumnName="RawMaterialTransactionType_P_ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RawMaterialTranasctionType_p">
+            <EntityTypeMapping TypeName="MerkFinanceModel.RawMaterialTranasctionType_p">
+              <MappingFragment StoreEntitySet="RawMaterialTranasctionType_p">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name_P" ColumnName="Name_P" />
+                <ScalarProperty Name="Name_S" ColumnName="Name_S" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RawMaterialType_p">
+            <EntityTypeMapping TypeName="MerkFinanceModel.RawMaterialType_p">
+              <MappingFragment StoreEntitySet="RawMaterialType_p">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name_P" ColumnName="Name_P" />
                 <ScalarProperty Name="Name_S" ColumnName="Name_S" />
