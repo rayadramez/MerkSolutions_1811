@@ -10,10 +10,10 @@ using MVCBusinessLogicLibrary.Viewers;
 namespace MVCBusinessLogicLibrary.MVCDataCollectors
 {
 	public class InventoryItemGroup_InventoryItem_DataCollector<TEntity> : AbstractDataCollector<TEntity>,
-		InventoryItemGroup_InventoryItem_Viewer
+		IInventoryItemGroup_InventoryItem_Viewer
 		where TEntity : DBCommon, IDBCommon, new()
 	{
-		private InventoryItemGroup_InventoryItem_Viewer _inventoryItemGroupImplementation;
+		private IInventoryItemGroup_InventoryItem_Viewer _inventoryItemGroupImplementation;
 
 		#region Overrides of AbstractDataCollector<TEntity>
 
@@ -27,7 +27,7 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 
 			ActiveCollector = collector;
 
-			ID = ((InventoryItemGroup_InventoryItem_Viewer)ActiveCollector.ActiveViewer).ID;
+			ID = ((IInventoryItemGroup_InventoryItem_Viewer)ActiveCollector.ActiveViewer).ID;
 
 			if (ActiveDBItem == null)
 				return false;
@@ -45,14 +45,14 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 				((InventoryItemGroup_InventoryItem_cu)ActiveDBItem).InsertedBy = Convert.ToInt32(UserID);
 
 			((InventoryItemGroup_InventoryItem_cu)ActiveDBItem).IsOnDuty = true;
-			switch (((InventoryItemGroup_InventoryItem_Viewer)ActiveCollector.ActiveViewer).CommonTransactionType)
+			switch (((IInventoryItemGroup_InventoryItem_Viewer)ActiveCollector.ActiveViewer).CommonTransactionType)
 			{
 				case DB_CommonTransactionType.DeleteExisting:
 					((InventoryItemGroup_InventoryItem_cu)ActiveDBItem).IsOnDuty = false;
 					break;
 			}
 
-			RelatedViewers = ((InventoryItemGroup_InventoryItem_Viewer)ActiveCollector.ActiveViewer).RelatedViewers;
+			RelatedViewers = ((IInventoryItemGroup_InventoryItem_Viewer)ActiveCollector.ActiveViewer).RelatedViewers;
 
 			return true;
 		}
@@ -116,7 +116,7 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			if (ActiveDBItem == null)
 			{
 				ActiveDBItem = DBCommon.CreateNewDBEntity<InventoryItemGroup_InventoryItem_cu>();
-				((InventoryItemGroup_InventoryItem_Viewer)ActiveCollector.ActiveViewer).CommonTransactionType = DB_CommonTransactionType.SaveNew;
+				((IInventoryItemGroup_InventoryItem_Viewer)ActiveCollector.ActiveViewer).CommonTransactionType = DB_CommonTransactionType.SaveNew;
 				return true;
 			}
 			return false;
@@ -136,7 +136,7 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 					((InventoryItemGroup_InventoryItem_cu)ActiveDBItem).InsertedBy = Convert.ToInt32(UserID);
 
 				((InventoryItemGroup_InventoryItem_cu)ActiveDBItem).IsOnDuty = true;
-				switch (((InventoryItemGroup_InventoryItem_Viewer)ActiveCollector.ActiveViewer).CommonTransactionType)
+				switch (((IInventoryItemGroup_InventoryItem_Viewer)ActiveCollector.ActiveViewer).CommonTransactionType)
 				{
 					case DB_CommonTransactionType.DeleteExisting:
 						((InventoryItemGroup_InventoryItem_cu)ActiveDBItem).IsOnDuty = false;
@@ -158,7 +158,7 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			//InternalCode = ((InventoryItemGroup_InventoryItem_cu)ActiveDBItem).InternalCode;
 			//Description = ((InventoryItemGroup_InventoryItem_cu)ActiveDBItem).Description;
 
-			//((InventoryItemGroup_InventoryItem_Viewer)ActiveCollector.ActiveViewer).ID = ((InventoryItemGroup_InventoryItem_cu)ActiveDBItem).ID;
+			//((IInventoryItemGroup_InventoryItem_Viewer)ActiveCollector.ActiveViewer).ID = ((InventoryItemGroup_InventoryItem_cu)ActiveDBItem).ID;
 			//ActiveCollector.ActiveDBItem.ID = ((InventoryItemGroup_InventoryItem_cu)ActiveDBItem).ID;
 
 			base.Edit(ActiveCollector.ActiveDBItem);
@@ -171,7 +171,7 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 
 		#endregion
 
-		#region Implementation of InventoryItemGroup_InventoryItem_Viewer
+		#region Implementation of IInventoryItemGroup_InventoryItem_Viewer
 
 		public List<InventoryItemGroup_InventoryItem_cu> List_InventoryItemGroup_InventoryItem { get; set; }
 
