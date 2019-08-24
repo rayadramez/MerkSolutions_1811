@@ -213,7 +213,8 @@
 		QueueManager = 7,
 		FinanceInvoiceCreation = 8,
 		OneDaySurgeryReception = 9,
-		OphalmologySurgeryApplication = 10
+		OphalmologySurgeryApplication = 10,
+		MerkFinance = 11,
 	}
 
 	public enum DB_GeneralChartOfAccountType
@@ -442,7 +443,8 @@
 		OrganizationMachine_StationPoint_cu = 156,
 		DiabetedMedicationType_p = 157,
 		DiabetesType_p,
-		Doctor_StationPointStage_cu
+		Doctor_StationPointStage_cu,
+		InventoryItem_Area
 	}
 
 	public enum DB_Station

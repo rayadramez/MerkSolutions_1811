@@ -227,6 +227,24 @@
     <Compile Include="InvoiceViewers\ReadyInvoiceForPayments_UC.Designer.cs">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="MerkDesignWork\InventoryItem_Area_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\InventoryItem_Area_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryItem_Area_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MerkDesignWork\InventoryItem_Area_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\InventoryItem_Area_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryItem_Area_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MerkDesignWork\MerkFinanceMainMenu_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\MerkFinanceMainMenu_UC.Designer.cs">
+      <DependentUpon>MerkFinanceMainMenu_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="MerkFinanceCommonViewers\MainHomeScreen_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1312,6 +1330,15 @@
     <EmbeddedResource Include="InvoiceViewers\ReadyInvoiceForPayments_UC.resx">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\InventoryItem_Area_EditorViewer.resx">
+      <DependentUpon>InventoryItem_Area_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\InventoryItem_Area_SearchViewer.resx">
+      <DependentUpon>InventoryItem_Area_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\MerkFinanceMainMenu_UC.resx">
+      <DependentUpon>MerkFinanceMainMenu_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MerkFinanceCommonViewers\MainHomeScreen_UC.resx">
       <DependentUpon>MainHomeScreen_UC.cs</DependentUpon>
     </EmbeddedResource>
@@ -1843,6 +1870,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\grd_InventoryItem_Area_SearchViewer.xml" />
+    <None Include="Resources\lyt_Inventoryitem_Area_SearchViewer.xml" />
+    <None Include="Resources\lyt_Inventoryitem_Area_EditorViewer.xml" />
     <None Include="Resources\lyt_PEMR_PatientCardContainer_Surgery_UC.xml" />
     <None Include="Resources\lyt_MedicalAdmissionInvoiceCreation_OneDaySurgery_UC.xml" />
     <None Include="Resources\InvoiceOutIcon_01.png" />
@@ -2222,7 +2252,6 @@
     <None Include="Resources\2-AddIcon_2_24.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MerkDesignWork\" />
     <Folder Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\" />
   </ItemGroup>
   <ItemGroup>

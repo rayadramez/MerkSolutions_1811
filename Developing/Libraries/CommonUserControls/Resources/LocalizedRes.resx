@@ -760,4 +760,13 @@
   <data name="lyt_PEMR_PatientCardContainer_Surgery_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>lyt_PEMR_PatientCardContainer_Surgery_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="lyt_Inventoryitem_Area_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Inventoryitem_Area_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_Inventoryitem_Area_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_Inventoryitem_Area_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InventoryItem_Area_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InventoryItem_Area_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

@@ -1034,9 +1034,9 @@
           <Property Name="Name_S" Type="nvarchar" MaxLength="150" />
           <Property Name="Floor_CU_ID" Type="int" />
           <Property Name="IsMain" Type="bit" Nullable="false" />
-          <Property Name="InternalCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InternalCode" Type="nvarchar" MaxLength="50" />
           <Property Name="ChartOfAccount_CU_ID" Type="int" />
-          <Property Name="Description" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="150" />
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="InsertedBy" Type="int" />
         </EntityType>
@@ -1049,6 +1049,7 @@
           <Property Name="Width" Type="float" Nullable="false" />
           <Property Name="Height" Type="float" Nullable="false" />
           <Property Name="Count" Type="float" Nullable="false" />
+          <Property Name="InternalCode" Type="nvarchar" MaxLength="50" />
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="InsertedBy" Type="int" />
         </EntityType>
@@ -5180,6 +5181,30 @@
               <PropertyRef Name="Person_CU_ID" />
             </Principal>
             <Dependent Role="InventoryHousing_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryItem_Area_InventoryItem_cu">
+          <End Role="InventoryItem_cu" Type="Self.InventoryItem_cu" Multiplicity="1" />
+          <End Role="InventoryItem_Area" Type="Self.InventoryItem_Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventoryItem_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="InventoryItem_Area">
+              <PropertyRef Name="InventoryItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryItem_Area_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="InventoryItem_Area" Type="Self.InventoryItem_Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="InventoryItem_Area">
               <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
@@ -10556,6 +10581,14 @@
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="InventoryHousing_cu" EntitySet="InventoryHousing_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_InventoryItem_Area_InventoryItem_cu" Association="Self.FK_InventoryItem_Area_InventoryItem_cu">
+            <End Role="InventoryItem_cu" EntitySet="InventoryItem_cu" />
+            <End Role="InventoryItem_Area" EntitySet="InventoryItem_Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventoryItem_Area_User_cu" Association="Self.FK_InventoryItem_Area_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="InventoryItem_Area" EntitySet="InventoryItem_Area" />
+          </AssociationSet>
           <AssociationSet Name="FK_InventoryItem_cu_ChartOfAccount_cu" Association="Self.FK_InventoryItem_cu_ChartOfAccount_cu">
             <End Role="ChartOfAccount_cu" EntitySet="ChartOfAccount_cu" />
             <End Role="InventoryItem_cu" EntitySet="InventoryItem_cu" />
@@ -13344,9 +13377,9 @@
           <Property Name="Name_S" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="Floor_CU_ID" Type="Int32" />
           <Property Name="IsMain" Type="Boolean" Nullable="false" />
-          <Property Name="InternalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InternalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ChartOfAccount_CU_ID" Type="Int32" />
-          <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
           <Property Name="InsertedBy" Type="Int32" />
           <NavigationProperty Name="ChartOfAccount_cu" Relationship="Self.FK_InventoryHousing_cu_ChartOfAccount_cu" FromRole="InventoryHousing_cu" ToRole="ChartOfAccount_cu" />
@@ -13366,8 +13399,11 @@
           <Property Name="Width" Type="Double" Nullable="false" />
           <Property Name="Height" Type="Double" Nullable="false" />
           <Property Name="Count" Type="Double" Nullable="false" />
+          <Property Name="InternalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
           <Property Name="InsertedBy" Type="Int32" />
+          <NavigationProperty Name="InventoryItem_cu" Relationship="Self.FK_InventoryItem_Area_InventoryItem_cu" FromRole="InventoryItem_Area" ToRole="InventoryItem_cu" />
+          <NavigationProperty Name="User_cu" Relationship="Self.FK_InventoryItem_Area_User_cu" FromRole="InventoryItem_Area" ToRole="User_cu" />
         </EntityType>
         <EntityType Name="InventoryItem_cu">
           <Key>
@@ -13408,6 +13444,7 @@
           <NavigationProperty Name="ChartOfAccount_cu" Relationship="Self.FK_InventoryItem_cu_ChartOfAccount_cu" FromRole="InventoryItem_cu" ToRole="ChartOfAccount_cu" />
           <NavigationProperty Name="FinanceInvoiceDetails" Relationship="Self.FK_FinanceInvoiceDetail_InventoryItem_cu" FromRole="InventoryItem_cu" ToRole="FinanceInvoiceDetail" />
           <NavigationProperty Name="InventoryHousing_cu" Relationship="Self.FK_InventoryItem_cu_InventoryHousing_cu" FromRole="InventoryItem_cu" ToRole="InventoryHousing_cu" />
+          <NavigationProperty Name="InventoryItem_Area" Relationship="Self.FK_InventoryItem_Area_InventoryItem_cu" FromRole="InventoryItem_cu" ToRole="InventoryItem_Area" />
           <NavigationProperty Name="InventoryItemBrand_cu" Relationship="Self.FK_InventoryItem_cu_InventoryItemBrand_cu" FromRole="InventoryItem_cu" ToRole="InventoryItemBrand_cu" />
           <NavigationProperty Name="InventoryItemCategory_cu" Relationship="Self.FK_InventoryItem_cu_InventoryItemCategory_cu" FromRole="InventoryItem_cu" ToRole="InventoryItemCategory_cu" />
           <NavigationProperty Name="InventoryItemType_p" Relationship="Self.FK_InventoryItem_cu_InventoryItemType_p" FromRole="InventoryItem_cu" ToRole="InventoryItemType_p" />
@@ -15262,6 +15299,7 @@
           <NavigationProperty Name="InsuranceCarrier_InsuranceLevel_cu" Relationship="Self.FK_InsuranceCarrier_InsuranceLevel_cu_User_cu" FromRole="User_cu" ToRole="InsuranceCarrier_InsuranceLevel_cu" />
           <NavigationProperty Name="InsuranceLevel_cu" Relationship="Self.FK_InsuranceLevel_cu_User_cu" FromRole="User_cu" ToRole="InsuranceLevel_cu" />
           <NavigationProperty Name="InventoryHousing_cu" Relationship="Self.FK_InventoryHousing_cu_User_cu" FromRole="User_cu" ToRole="InventoryHousing_cu" />
+          <NavigationProperty Name="InventoryItem_Area" Relationship="Self.FK_InventoryItem_Area_User_cu" FromRole="User_cu" ToRole="InventoryItem_Area" />
           <NavigationProperty Name="InventoryItem_cu" Relationship="Self.FK_InventoryItem_cu_User_cu" FromRole="User_cu" ToRole="InventoryItem_cu" />
           <NavigationProperty Name="InventoryItem_UnitMeasurment_cu" Relationship="Self.FK_InventoryItem_UnitMeasurment_cu_User_cu" FromRole="User_cu" ToRole="InventoryItem_UnitMeasurment_cu" />
           <NavigationProperty Name="InventoryItemBrand_cu" Relationship="Self.FK_InventoryItemBrand_cu_User_cu" FromRole="User_cu" ToRole="InventoryItemBrand_cu" />
@@ -19004,6 +19042,30 @@
             </Principal>
             <Dependent Role="InvoiceDetail_Inventory">
               <PropertyRef Name="InventoryHousing_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryItem_Area_InventoryItem_cu">
+          <End Role="InventoryItem_cu" Type="Self.InventoryItem_cu" Multiplicity="1" />
+          <End Role="InventoryItem_Area" Type="Self.InventoryItem_Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventoryItem_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="InventoryItem_Area">
+              <PropertyRef Name="InventoryItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryItem_Area_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="InventoryItem_Area" Type="Self.InventoryItem_Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="InventoryItem_Area">
+              <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -23733,6 +23795,14 @@
             <End Role="InventoryHousing_cu" EntitySet="InventoryHousing_cu" />
             <End Role="InvoiceDetail_Inventory" EntitySet="InvoiceDetail_Inventory" />
           </AssociationSet>
+          <AssociationSet Name="FK_InventoryItem_Area_InventoryItem_cu" Association="Self.FK_InventoryItem_Area_InventoryItem_cu">
+            <End Role="InventoryItem_cu" EntitySet="InventoryItem_cu" />
+            <End Role="InventoryItem_Area" EntitySet="InventoryItem_Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventoryItem_Area_User_cu" Association="Self.FK_InventoryItem_Area_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="InventoryItem_Area" EntitySet="InventoryItem_Area" />
+          </AssociationSet>
           <AssociationSet Name="FK_InventoryItem_cu_InventoryItemBrand_cu" Association="Self.FK_InventoryItem_cu_InventoryItemBrand_cu">
             <End Role="InventoryItemBrand_cu" EntitySet="InventoryItemBrand_cu" />
             <End Role="InventoryItem_cu" EntitySet="InventoryItem_cu" />
@@ -26337,6 +26407,7 @@
                 <ScalarProperty Name="Width" ColumnName="Width" />
                 <ScalarProperty Name="Height" ColumnName="Height" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="InternalCode" ColumnName="InternalCode" />
                 <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
                 <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
               </MappingFragment>

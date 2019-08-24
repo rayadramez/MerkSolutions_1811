@@ -25,6 +25,16 @@ INSERT INTO dbo.Application_p( ID ,Name_P ,Name_S ,IsOnDuty ,Description)VALUES 
 ,( 6,N'برنـامــــج الإعـــدادات العـامـــــة',N'Settings',1,NULL)
 ,( 7,N'برنـامــــج إدارة الطـوابيـــر',N'Queue Manager',1,NULL)
 
+PRINT 'Application_p'
+IF NOT EXISTS (SELECT 1 FROM [dbo].Application_p WHERE ID BETWEEN 8 AND 10)
+INSERT INTO dbo.Application_p( ID ,Name_P ,Name_S ,IsOnDuty ,Description)VALUES  ( 8,N'FinanceInvoiceCreation',N'FinanceInvoiceCreation',1,NULL),
+( 9,N'برنامج العمليات',N'برنامج العمليات',1,NULL),
+( 10,N'OphalmologySurgeryApplication',N'OphalmologySurgeryApplication',1,NULL)
+
+PRINT 'Application_p'
+IF NOT EXISTS (SELECT 1 FROM [dbo].Application_p WHERE ID = 11)
+INSERT INTO dbo.Application_p( ID ,Name_P ,Name_S ,IsOnDuty ,Description)VALUES  ( 11,N'MerkFinance',N'MerkFinance',1,NULL)
+
 IF NOT EXISTS (SELECT 1 FROM [dbo].Application_p WHERE ID = 8)
 INSERT INTO dbo.Application_p( ID ,Name_P ,Name_S ,IsOnDuty ,Description)VALUES  ( 8,N'FinanceInvoiceCreation',N'FinanceInvoiceCreation',1,NULL)
 IF NOT EXISTS (SELECT 1 FROM [dbo].Application_p WHERE ID = 9)

@@ -19,7 +19,11 @@ namespace MerkDataBaseBusinessLogicProject
         public double Width { get; set; }
         public double Height { get; set; }
         public double Count { get; set; }
+        public string InternalCode { get; set; }
         public bool IsOnDuty { get; set; }
         public Nullable<int> InsertedBy { get; set; }
+    
+        public virtual InventoryItem_cu InventoryItem_cu { get; set; }
+        public virtual User_cu User_cu { get; set; }
     }
 }

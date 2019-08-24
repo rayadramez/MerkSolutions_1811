@@ -18,6 +18,7 @@ namespace MerkDataBaseBusinessLogicProject
         public InventoryItem_cu()
         {
             this.FinanceInvoiceDetails = new HashSet<FinanceInvoiceDetail>();
+            this.InventoryItem_Area = new HashSet<InventoryItem_Area>();
             this.InventoryItemTransactions = new HashSet<InventoryItemTransaction>();
             this.InventoryItem_UnitMeasurment_cu = new HashSet<InventoryItem_UnitMeasurment_cu>();
             this.InventoryItemGroup_InventoryItem_cu = new HashSet<InventoryItemGroup_InventoryItem_cu>();
@@ -62,6 +63,8 @@ namespace MerkDataBaseBusinessLogicProject
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FinanceInvoiceDetail> FinanceInvoiceDetails { get; set; }
         public virtual InventoryHousing_cu InventoryHousing_cu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<InventoryItem_Area> InventoryItem_Area { get; set; }
         public virtual InventoryItemBrand_cu InventoryItemBrand_cu { get; set; }
         public virtual InventoryItemCategory_cu InventoryItemCategory_cu { get; set; }
         public virtual InventoryItemType_p InventoryItemType_p { get; set; }

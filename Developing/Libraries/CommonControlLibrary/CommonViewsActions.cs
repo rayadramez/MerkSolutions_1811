@@ -654,6 +654,7 @@ namespace CommonControlLibrary
 							case DB_Application.InvoiceManager:
 							case DB_Application.QueueManager:
 							case DB_Application.Settings:
+							case DB_Application.MerkFinance:
 								if (String.IsNullOrEmpty(((PopupBaseEdit) parentContainer).Properties.NullValuePrompt))
 									((PopupBaseEdit) parentContainer).Properties.NullValuePrompt = "إختــــار";
 								break;
@@ -714,6 +715,7 @@ namespace CommonControlLibrary
 						case DB_Application.InvoiceManager:
 						case DB_Application.QueueManager:
 						case DB_Application.Settings:
+						case DB_Application.MerkFinance:
 							if (!string.IsNullOrEmpty(ApplicationStaticConfiguration.SkinName) &&
 								!string.IsNullOrWhiteSpace(ApplicationStaticConfiguration.SkinName))
 								if (!ApplicationStaticConfiguration.SkinName.Equals("McSkin"))
@@ -777,6 +779,7 @@ namespace CommonControlLibrary
 							case DB_Application.InvoiceManager:
 							case DB_Application.QueueManager:
 							case DB_Application.Settings:
+							case DB_Application.MerkFinance:
 								//if (String.IsNullOrEmpty(((PopupBaseEdit) parentContainer).Properties.NullValuePrompt))
 								//	((PopupBaseEdit) parentContainer).Properties.NullValuePrompt = "إختــــار";
 								break;
@@ -850,6 +853,7 @@ namespace CommonControlLibrary
 					case DB_Application.InvoiceManager:
 					case DB_Application.QueueManager:
 					case DB_Application.Settings:
+					case DB_Application.MerkFinance:
 						if (!string.IsNullOrEmpty(ApplicationStaticConfiguration.SkinName) &&
 							!string.IsNullOrWhiteSpace(ApplicationStaticConfiguration.SkinName))
 							if (!ApplicationStaticConfiguration.SkinName.Equals("McSkin"))
@@ -866,6 +870,7 @@ namespace CommonControlLibrary
 					case DB_Application.InvoiceManager:
 					case DB_Application.QueueManager:
 					case DB_Application.Settings:
+					case DB_Application.MerkFinance:
 						if (!string.IsNullOrEmpty(ApplicationStaticConfiguration.SkinName) &&
 							!string.IsNullOrWhiteSpace(ApplicationStaticConfiguration.SkinName))
 							if (!ApplicationStaticConfiguration.SkinName.Equals("McSkin"))
@@ -888,6 +893,7 @@ namespace CommonControlLibrary
 				case DB_Application.InvoiceManager:
 				case DB_Application.QueueManager:
 				case DB_Application.Settings:
+				case DB_Application.MerkFinance:
 					if (!string.IsNullOrEmpty(ApplicationStaticConfiguration.SkinName) &&
 						!string.IsNullOrWhiteSpace(ApplicationStaticConfiguration.SkinName))
 						if (!ApplicationStaticConfiguration.SkinName.Equals("McSkin"))
@@ -917,6 +923,7 @@ namespace CommonControlLibrary
 					case DB_Application.InvoiceManager:
 					case DB_Application.QueueManager:
 					case DB_Application.Settings:
+					case DB_Application.MerkFinance:
 						btnClear.Image = Resources.LocaizedRes.ClearIcon_16X16;
 						break;
 					case DB_Application.PEMR:

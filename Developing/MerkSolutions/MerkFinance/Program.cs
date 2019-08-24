@@ -25,7 +25,7 @@ namespace MerkFinance
 			DevExpress.UserSkins.BonusSkins.Register();
 
 			DialogResult result = DialogResult.None;
-			ApplicationStaticConfiguration.Application = DB_Application.FinanceInvoiceCreation;
+			ApplicationStaticConfiguration.Application = DB_Application.MerkFinance;
 			if (ApplicationStaticConfiguration.LoadApplicationConfiguration())
 			{
 				DBBusinessLogicLibrary.LoadDBItemsList();
