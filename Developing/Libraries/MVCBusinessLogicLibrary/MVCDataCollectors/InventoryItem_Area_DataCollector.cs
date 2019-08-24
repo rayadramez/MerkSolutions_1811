@@ -125,13 +125,13 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 				return false;
 			}
 
-			if (Width == null)
+			if (Width == null || Math.Abs(Convert.ToDouble(Width)) < 0.0001)
 			{
 				MessageToView = "يجـب كتـابــــة العــــرض";
 				return false;
 			}
 
-			if (Height == null)
+			if (Height == null || Math.Abs(Convert.ToDouble(Width)) < 0.0001)
 			{
 				MessageToView = "يجـب كتـابــــة الطــــول";
 				return false;

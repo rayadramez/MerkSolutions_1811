@@ -50,7 +50,11 @@ namespace CommonActions
 
 			// Return the week of our adjusted day
 			return CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(date, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
-		} 
+		}
 
+		public static Double GetShapeArea(Double width, Double height, int count = 1)
+		{
+			return width * height * count;
+		}
 	}
 }

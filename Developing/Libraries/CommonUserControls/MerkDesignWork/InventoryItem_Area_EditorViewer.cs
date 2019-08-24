@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using CommonControlLibrary;
 using MerkDataBaseBusinessLogicProject;
 using MVCBusinessLogicLibrary.BaseViewers;
@@ -42,11 +43,11 @@ namespace CommonUserControls.MerkDesignWork
 
 		public override void ClearControls()
 		{
-			spnArea.EditValue = null;
-			spnCount.EditValue = null;
-			spnHeight.EditValue = null;
-			spnWidth.EditValue = null;
-			spnTotalArea.EditValue = null;
+			spnArea.EditValue = 0;
+			spnCount.EditValue = 1;
+			spnHeight.EditValue = 0;
+			spnWidth.EditValue = 0;
+			spnTotalArea.EditValue = 0;
 			lkeInventoryItems.EditValue = null;
 			txtInternalCode.EditValue = null;
 		}
@@ -86,5 +87,29 @@ namespace CommonUserControls.MerkDesignWork
 		}
 
 		#endregion
+
+		private void spnWidth_EditValueChanged(object sender, System.EventArgs e)
+		{
+			spnArea.EditValue =
+				CommonActions.CommonActions.GetShapeArea(Convert.ToDouble(Width), Convert.ToDouble(Height));
+			spnTotalArea.EditValue = CommonActions.CommonActions.GetShapeArea(Convert.ToDouble(Width),
+				Convert.ToDouble(Height), Convert.ToInt32(Count));
+		}
+
+		private void spnHeight_EditValueChanged(object sender, EventArgs e)
+		{
+			spnArea.EditValue =
+				CommonActions.CommonActions.GetShapeArea(Convert.ToDouble(Width), Convert.ToDouble(Height));
+			spnTotalArea.EditValue = CommonActions.CommonActions.GetShapeArea(Convert.ToDouble(Width),
+				Convert.ToDouble(Height), Convert.ToInt32(Count));
+		}
+
+		private void spnCount_EditValueChanged(object sender, EventArgs e)
+		{
+			spnArea.EditValue =
+				CommonActions.CommonActions.GetShapeArea(Convert.ToDouble(Width), Convert.ToDouble(Height));
+			spnTotalArea.EditValue = CommonActions.CommonActions.GetShapeArea(Convert.ToDouble(Width),
+				Convert.ToDouble(Height), Convert.ToInt32(Count));
+		}
 	}
 }
