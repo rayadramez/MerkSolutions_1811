@@ -1148,6 +1148,7 @@
           <Property Name="InvetoryItemGroup_CU_ID" Type="int" Nullable="false" />
           <Property Name="InventoryItem_CU_ID" Type="int" Nullable="false" />
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
+          <Property Name="InsertedBy" Type="int" />
         </EntityType>
         <EntityType Name="InventoryItemPrice_cu">
           <Key>
@@ -5458,6 +5459,18 @@
             </Principal>
             <Dependent Role="InventoryItemGroup_InventoryItem_cu">
               <PropertyRef Name="InvetoryItemGroup_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryItemGroup_InventoryItem_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="InventoryItemGroup_InventoryItem_cu" Type="Self.InventoryItemGroup_InventoryItem_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="InventoryItemGroup_InventoryItem_cu">
+              <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -10673,6 +10686,10 @@
             <End Role="InventoryItemGroup_cu" EntitySet="InventoryItemGroup_cu" />
             <End Role="InventoryItemGroup_InventoryItem_cu" EntitySet="InventoryItemGroup_InventoryItem_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_InventoryItemGroup_InventoryItem_cu_User_cu" Association="Self.FK_InventoryItemGroup_InventoryItem_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="InventoryItemGroup_InventoryItem_cu" EntitySet="InventoryItemGroup_InventoryItem_cu" />
+          </AssociationSet>
           <AssociationSet Name="FK_InventoryItemPrice_cu_Customer_cu" Association="Self.FK_InventoryItemPrice_cu_Customer_cu">
             <End Role="Customer_cu" EntitySet="Customer_cu" />
             <End Role="InventoryItemPrice_cu" EntitySet="InventoryItemPrice_cu" />
@@ -13526,8 +13543,10 @@
           <Property Name="InvetoryItemGroup_CU_ID" Type="Int32" Nullable="false" />
           <Property Name="InventoryItem_CU_ID" Type="Int32" Nullable="false" />
           <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <Property Name="InsertedBy" Type="Int32" />
           <NavigationProperty Name="InventoryItem_cu" Relationship="Self.FK_InventoryItemGroup_InventoryItem_cu_InventoryItem_cu" FromRole="InventoryItemGroup_InventoryItem_cu" ToRole="InventoryItem_cu" />
           <NavigationProperty Name="InventoryItemGroup_cu" Relationship="Self.FK_InventoryItemGroup_InventoryItem_cu_InventoryItemGroup_cu" FromRole="InventoryItemGroup_InventoryItem_cu" ToRole="InventoryItemGroup_cu" />
+          <NavigationProperty Name="User_cu" Relationship="Self.FK_InventoryItemGroup_InventoryItem_cu_User_cu" FromRole="InventoryItemGroup_InventoryItem_cu" ToRole="User_cu" />
         </EntityType>
         <EntityType Name="InventoryItemPrice_cu">
           <Key>
@@ -15304,6 +15323,7 @@
           <NavigationProperty Name="InventoryItem_UnitMeasurment_cu" Relationship="Self.FK_InventoryItem_UnitMeasurment_cu_User_cu" FromRole="User_cu" ToRole="InventoryItem_UnitMeasurment_cu" />
           <NavigationProperty Name="InventoryItemBrand_cu" Relationship="Self.FK_InventoryItemBrand_cu_User_cu" FromRole="User_cu" ToRole="InventoryItemBrand_cu" />
           <NavigationProperty Name="InventoryItemCategory_cu" Relationship="Self.FK_InventoryItemCategory_cu_User_cu" FromRole="User_cu" ToRole="InventoryItemCategory_cu" />
+          <NavigationProperty Name="InventoryItemGroup_InventoryItem_cu" Relationship="Self.FK_InventoryItemGroup_InventoryItem_cu_User_cu" FromRole="User_cu" ToRole="InventoryItemGroup_InventoryItem_cu" />
           <NavigationProperty Name="InventoryItemPrice_cu" Relationship="Self.FK_InventoryItemPrice_cu_User_cu" FromRole="User_cu" ToRole="InventoryItemPrice_cu" />
           <NavigationProperty Name="InventoryItemTransactions" Relationship="Self.FK_InventoryItem_InventoryHousing_cu_User_cu" FromRole="User_cu" ToRole="InventoryItemTransaction" />
           <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoice_User_cu" FromRole="User_cu" ToRole="Invoice" />
@@ -19258,6 +19278,18 @@
             </Principal>
             <Dependent Role="InventoryItemGroup_InventoryItem_cu">
               <PropertyRef Name="InvetoryItemGroup_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryItemGroup_InventoryItem_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="InventoryItemGroup_InventoryItem_cu" Type="Self.InventoryItemGroup_InventoryItem_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="InventoryItemGroup_InventoryItem_cu">
+              <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -23867,6 +23899,10 @@
             <End Role="InventoryItemGroup_cu" EntitySet="InventoryItemGroup_cu" />
             <End Role="InventoryItemGroup_InventoryItem_cu" EntitySet="InventoryItemGroup_InventoryItem_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_InventoryItemGroup_InventoryItem_cu_User_cu" Association="Self.FK_InventoryItemGroup_InventoryItem_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="InventoryItemGroup_InventoryItem_cu" EntitySet="InventoryItemGroup_InventoryItem_cu" />
+          </AssociationSet>
           <AssociationSet Name="FK_InventoryItemPrice_cu_PriceType_p" Association="Self.FK_InventoryItemPrice_cu_PriceType_p">
             <End Role="PriceType_p" EntitySet="PriceType_p" />
             <End Role="InventoryItemPrice_cu" EntitySet="InventoryItemPrice_cu" />
@@ -26512,6 +26548,7 @@
                 <ScalarProperty Name="InvetoryItemGroup_CU_ID" ColumnName="InvetoryItemGroup_CU_ID" />
                 <ScalarProperty Name="InventoryItem_CU_ID" ColumnName="InventoryItem_CU_ID" />
                 <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
+                <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

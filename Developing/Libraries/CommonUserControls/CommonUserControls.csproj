@@ -227,6 +227,18 @@
     <Compile Include="InvoiceViewers\ReadyInvoiceForPayments_UC.Designer.cs">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="MerkDesignWork\InventoryItemGroup_InventoryItem_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\InventoryItemGroup_InventoryItem_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryItemGroup_InventoryItem_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MerkDesignWork\InventoryItemGroup_InventoryItem_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\InventoryItemGroup_InventoryItem_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryItemGroup_InventoryItem_SearchViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="MerkDesignWork\InventoryItem_Area_EditorViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1330,6 +1342,12 @@
     <EmbeddedResource Include="InvoiceViewers\ReadyInvoiceForPayments_UC.resx">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\InventoryItemGroup_InventoryItem_EditorViewer.resx">
+      <DependentUpon>InventoryItemGroup_InventoryItem_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\InventoryItemGroup_InventoryItem_SearchViewer.resx">
+      <DependentUpon>InventoryItemGroup_InventoryItem_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MerkDesignWork\InventoryItem_Area_EditorViewer.resx">
       <DependentUpon>InventoryItem_Area_EditorViewer.cs</DependentUpon>
     </EmbeddedResource>
@@ -1870,6 +1888,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\grd_InventoryItemGroup_InventoryItem_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryItemGroup_InventoryItem_EditorViewer.xml" />
+    <None Include="Resources\grd_InventoryItemGroup_Internal.xml" />
     <None Include="Resources\grd_InventoryItem_Area_SearchViewer.xml" />
     <None Include="Resources\lyt_Inventoryitem_Area_SearchViewer.xml" />
     <None Include="Resources\lyt_Inventoryitem_Area_EditorViewer.xml" />

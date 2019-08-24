@@ -81,5 +81,47 @@ namespace MerkDataBaseBusinessLogicProject
 			return true;
 		}
 
+		public InventoryItemGroup_cu InventoryItemGroup
+		{
+			get
+			{
+				InventoryItemGroup_cu itemsGroup = InventoryItemGroup_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(InvetoryItemGroup_CU_ID)));
+				return itemsGroup;
+			}
+		}
+
+		public string InventoryItemGroupName
+		{
+			get
+			{
+				if (InventoryItemGroup == null)
+					return string.Empty;
+
+				return InventoryItemGroup.Name_P;
+			}
+		}
+
+		public InventoryItem_cu InventoryItem
+		{
+			get
+			{
+				InventoryItem_cu inventoryItem = InventoryItem_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(InventoryItem_CU_ID)));
+				return inventoryItem;
+			}
+		}
+
+		public string InventoryItemName
+		{
+			get
+			{
+				if (InventoryItem == null)
+					return string.Empty;
+
+				return InventoryItem.Name_P;
+			}
+		}
+
 	}
 }

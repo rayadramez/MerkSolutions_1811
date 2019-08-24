@@ -126,6 +126,10 @@ namespace MVCBusinessLogicLibrary.MVCFactories
 					return new Diagnosis_DataCollector<TEntity>();
 				case ViewerName.DiagnosisCategory_Diagnosis_Viewer:
 					return new DiagnosisCategory_Diagnosis_DataCollector<TEntity>();
+				case ViewerName.InventoryItem_Area_Viewer:
+					return new InventoryItem_Area_DataCollector<TEntity>();
+				case ViewerName.InventoryItemGroup_InventoryItem_Viewer:
+					return new InventoryItemGroup_InventoryItem_DataCollector<TEntity>();
 			}
 
 			return null;

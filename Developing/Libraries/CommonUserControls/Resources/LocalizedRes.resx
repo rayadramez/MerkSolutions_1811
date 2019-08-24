@@ -769,4 +769,13 @@
   <data name="grd_InventoryItem_Area_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>grd_InventoryItem_Area_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="grd_InventoryItemGroup_Internal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InventoryItemGroup_Internal.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItemGroup_InventoryItem_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItemGroup_InventoryItem_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InventoryItemGroup_InventoryItem_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InventoryItemGroup_InventoryItem_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

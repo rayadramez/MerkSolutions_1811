@@ -51,6 +51,9 @@ namespace CommonUserControls.MerkDesignWork
 		private InventoryItem_Area_EditorViewer _inventoryItemAreaEditorViewer;
 		private InventoryItem_Area_SearchViewer _inventoryItemAreaSearchViewer;
 
+		private InventoryItemGroup_InventoryItem_EditorViewer _inventoryItemGroupInventoryItemEditor;
+		private InventoryItemGroup_InventoryItem_SearchViewer _inventoryItemGroupInventoryItemSearch;
+
 		public MerkFinanceMainMenu_UC()
 		{
 			InitializeComponent();
@@ -108,7 +111,15 @@ namespace CommonUserControls.MerkDesignWork
 
 		private void btnInventoryItemGroup_InventoryItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
 		{
-
+			BaseController<InventoryItemGroup_InventoryItem_cu>.ShowControl(ref _inventoryItemGroupInventoryItemEditor,
+				ref _inventoryItemGroupInventoryItemSearch,
+				splitContainerControl2.Panel1,
+				EditorContainerType.Settings,
+				ViewerName.InventoryItemGroup_InventoryItem_Viewer,
+				DB_CommonTransactionType.CreateNew,
+				"ربــــط مجمـوعــــات المنتجـــــات بالمنتجــــــات",
+				AbstractViewerType.SearchViewer,
+				true);
 		}
 
 		private void btnInventoryItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)

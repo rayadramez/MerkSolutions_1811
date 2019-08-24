@@ -102,6 +102,23 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			throw new System.NotImplementedException();
 		}
 
+		public override object[] CollectSearchCriteria()
+		{
+			List<InventoryItemGroup_cu> list = InventoryItemGroup_cu.ItemsList.FindAll(item => item.IsOnDuty);
+			return list.ToArray();
+		}
+
+		public override bool ValidateBeforeSave(ref string message)
+		{
+			if (Name_P == null)
+			{
+				MessageToView = "يجـب كتابــــة إســـم المجموعـــــة";
+				return false;
+			}
+
+			return true;
+		}
+
 		public override bool CreateNew()
 		{
 			if (ActiveDBItem == null)

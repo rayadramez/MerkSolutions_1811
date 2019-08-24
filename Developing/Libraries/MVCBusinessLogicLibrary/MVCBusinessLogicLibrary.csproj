@@ -148,6 +148,7 @@
     <Compile Include="MVCDataCollectors\InventoryItemBrand_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InventoryItemCategory_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InventoryItemGroup_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InventoryItemGroup_InventoryItem_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InventoryItemPrice_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InventoryItem_Area_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InventoryItem_DataCollector.cs" />
@@ -218,6 +219,7 @@
     <Compile Include="Viewers\IInventoryHousingViewer.cs" />
     <Compile Include="Viewers\IInventoryItemBrandViewer.cs" />
     <Compile Include="Viewers\IInventoryItemCategoryViewer.cs" />
+    <Compile Include="Viewers\IInventoryItemGroup_InventoryItem_Viewer.cs" />
     <Compile Include="Viewers\IInventoryItemPriceViewer.cs" />
     <Compile Include="Viewers\IInventoryItemViewer.cs" />
     <Compile Include="Viewers\IInventoryItem_Area_Viewer.cs" />

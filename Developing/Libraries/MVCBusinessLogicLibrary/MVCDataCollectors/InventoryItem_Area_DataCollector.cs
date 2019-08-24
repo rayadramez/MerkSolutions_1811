@@ -99,6 +99,12 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			throw new System.NotImplementedException();
 		}
 
+		public override object[] CollectSearchCriteria()
+		{
+			List<InventoryItem_Area> list = InventoryItem_Area.ItemsList.FindAll(item => item.IsOnDuty);
+			return list.ToArray();
+		}
+
 		public override bool CreateNew()
 		{
 			if (ActiveDBItem == null)
@@ -109,6 +115,29 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 				return true;
 			}
 			return false;
+		}
+
+		public override bool ValidateBeforeSave(ref string message)
+		{
+			if (InventoryItemID == null)
+			{
+				MessageToView = "يجـب إختيــار المنتــــــج";
+				return false;
+			}
+
+			if (Width == null)
+			{
+				MessageToView = "يجـب كتـابــــة العــــرض";
+				return false;
+			}
+
+			if (Height == null)
+			{
+				MessageToView = "يجـب كتـابــــة الطــــول";
+				return false;
+			}
+
+			return true;
 		}
 
 		public override bool SaveChanges(DB_CommonTransactionType commonTransactionType)

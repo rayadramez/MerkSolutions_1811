@@ -82,6 +82,12 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			throw new System.NotImplementedException();
 		}
 
+		public override object[] CollectSearchCriteria()
+		{
+			List<InventoryItem_UnitMeasurment_cu> list = InventoryItem_UnitMeasurment_cu.ItemsList.FindAll(item => item.IsOnDuty);
+			return list.ToArray();
+		}
+
 		public override bool CreateNew()
 		{
 			if (ActiveDBItem == null)

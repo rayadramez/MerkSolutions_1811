@@ -132,6 +132,12 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			return false;
 		}
 
+		public override object[] CollectSearchCriteria()
+		{
+			List<InventoryItemPrice_cu> list = InventoryItemPrice_cu.ItemsList.FindAll(item => item.IsOnDuty);
+			return list.ToArray();
+		}
+
 		public override bool ValidateBeforeSave(ref string message)
 		{
 			if (InventoryItem_CU_ID == null)
