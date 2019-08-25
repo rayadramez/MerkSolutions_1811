@@ -5,6 +5,7 @@ using CommonUserControls.SettingsViewers.InventoryItemCategoryViewers;
 using CommonUserControls.SettingsViewers.InventoryItemPriceViewers;
 using CommonUserControls.SettingsViewers.InventoryItemViewers;
 using CommonUserControls.SettingsViewers.InventoryItem_InventoryHousingViewers;
+using CommonUserControls.SettingsViewers.InventoryItem_InventoryItemGroupViewers;
 using CommonUserControls.SettingsViewers.InventoryItem_UnitMeasurmentViewers;
 using CommonUserControls.SettingsViewers.InvetoryItemGroupViewers;
 using CommonUserControls.SettingsViewers.UnitMeasurmentTreeLinkViewers;
@@ -53,6 +54,9 @@ namespace CommonUserControls.MerkDesignWork
 
 		private InventoryItemGroup_InventoryItem_EditorViewer _inventoryItemGroupInventoryItemEditor;
 		private InventoryItemGroup_InventoryItem_SearchViewer _inventoryItemGroupInventoryItemSearch;
+
+		private RawMaterial_EditorViewer _rawMaterialEditor;
+		private RawMaterial_SearchViewer _rawMaterialSearch;
 
 		public MerkFinanceMainMenu_UC()
 		{
@@ -170,6 +174,19 @@ namespace CommonUserControls.MerkDesignWork
 				ViewerName.InventoryItem_Area_Viewer,
 				DB_CommonTransactionType.CreateNew,
 				"تقسيــــم وحـــدات المنتــــج",
+				AbstractViewerType.SearchViewer,
+				true);
+		}
+
+		private void btnRawMaterial_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+		{
+			BaseController<RawMaterials_cu>.ShowControl(ref _rawMaterialEditor,
+				ref _rawMaterialSearch,
+				splitContainerControl2.Panel1,
+				EditorContainerType.Settings,
+				ViewerName.RawMaterial_viewer,
+				DB_CommonTransactionType.CreateNew,
+				"تسجيـــــل المــــواد الخــــام",
 				AbstractViewerType.SearchViewer,
 				true);
 		}

@@ -227,16 +227,22 @@
     <Compile Include="InvoiceViewers\ReadyInvoiceForPayments_UC.Designer.cs">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="MerkDesignWork\InventoryItemGroup_InventoryItem_EditorViewer.cs">
+    <Compile Include="MerkDesignWork\RawMaterial_SearchViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MerkDesignWork\InventoryItemGroup_InventoryItem_EditorViewer.Designer.cs">
+    <Compile Include="MerkDesignWork\RawMaterial_SearchViewer.Designer.cs">
+      <DependentUpon>RawMaterial_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\InventoryItemGroup_InventoryItem_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\InventoryItemGroup_InventoryItem_EditorViewer.Designer.cs">
       <DependentUpon>InventoryItemGroup_InventoryItem_EditorViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="MerkDesignWork\InventoryItemGroup_InventoryItem_SearchViewer.cs">
+    <Compile Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\InventoryItemGroup_InventoryItem_SearchViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MerkDesignWork\InventoryItemGroup_InventoryItem_SearchViewer.Designer.cs">
+    <Compile Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\InventoryItemGroup_InventoryItem_SearchViewer.Designer.cs">
       <DependentUpon>InventoryItemGroup_InventoryItem_SearchViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="MerkDesignWork\InventoryItem_Area_EditorViewer.cs">
@@ -256,6 +262,12 @@
     </Compile>
     <Compile Include="MerkDesignWork\MerkFinanceMainMenu_UC.Designer.cs">
       <DependentUpon>MerkFinanceMainMenu_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MerkDesignWork\RawMaterial_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\RawMaterial_EditorViewer.Designer.cs">
+      <DependentUpon>RawMaterial_EditorViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="MerkFinanceCommonViewers\MainHomeScreen_UC.cs">
       <SubType>UserControl</SubType>
@@ -1342,10 +1354,13 @@
     <EmbeddedResource Include="InvoiceViewers\ReadyInvoiceForPayments_UC.resx">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MerkDesignWork\InventoryItemGroup_InventoryItem_EditorViewer.resx">
+    <EmbeddedResource Include="MerkDesignWork\RawMaterial_SearchViewer.resx">
+      <DependentUpon>RawMaterial_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\InventoryItemGroup_InventoryItem_EditorViewer.resx">
       <DependentUpon>InventoryItemGroup_InventoryItem_EditorViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MerkDesignWork\InventoryItemGroup_InventoryItem_SearchViewer.resx">
+    <EmbeddedResource Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\InventoryItemGroup_InventoryItem_SearchViewer.resx">
       <DependentUpon>InventoryItemGroup_InventoryItem_SearchViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MerkDesignWork\InventoryItem_Area_EditorViewer.resx">
@@ -1356,6 +1371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MerkDesignWork\MerkFinanceMainMenu_UC.resx">
       <DependentUpon>MerkFinanceMainMenu_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\RawMaterial_EditorViewer.resx">
+      <DependentUpon>RawMaterial_EditorViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MerkFinanceCommonViewers\MainHomeScreen_UC.resx">
       <DependentUpon>MainHomeScreen_UC.cs</DependentUpon>
@@ -1888,6 +1906,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\grd_RawMaterial_SearchViewer.xml" />
+    <None Include="Resources\lyt_RawMaterial_EditorViewer.xml" />
     <None Include="Resources\grd_InventoryItemGroup_InventoryItem_SearchViewer.xml" />
     <None Include="Resources\lyt_InventoryItemGroup_InventoryItem_EditorViewer.xml" />
     <None Include="Resources\grd_InventoryItemGroup_Internal.xml" />
@@ -2272,9 +2292,7 @@
     <None Include="Resources\lyt_ChartOfAccountsType.xml" />
     <None Include="Resources\2-AddIcon_2_24.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <COMReference Include="WIA">
       <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>

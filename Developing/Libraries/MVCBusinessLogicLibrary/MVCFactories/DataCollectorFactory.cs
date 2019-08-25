@@ -130,6 +130,8 @@ namespace MVCBusinessLogicLibrary.MVCFactories
 					return new InventoryItem_Area_DataCollector<TEntity>();
 				case ViewerName.InventoryItemGroup_InventoryItem_Viewer:
 					return new InventoryItemGroup_InventoryItem_DataCollector<TEntity>();
+				case ViewerName.RawMaterial_viewer:
+					return new RawMaterial_DataCollector<TEntity>();
 			}
 
 			return null;

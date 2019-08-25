@@ -68,7 +68,8 @@ namespace MVCBusinessLogicLibrary.MVCFactories
 		Diagnosis_Viewer = 59,
 		DiagnosisCategory_Diagnosis_Viewer = 60,
 		InventoryItem_Area_Viewer = 61,
-		InventoryItemGroup_InventoryItem_Viewer
+		InventoryItemGroup_InventoryItem_Viewer,
+		RawMaterial_viewer
 	}
 
 	public enum MVCType

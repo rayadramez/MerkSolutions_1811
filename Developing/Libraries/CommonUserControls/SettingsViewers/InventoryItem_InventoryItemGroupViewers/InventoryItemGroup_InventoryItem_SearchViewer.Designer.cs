@@ -1,4 +1,4 @@
-﻿namespace CommonUserControls.MerkDesignWork
+﻿namespace CommonUserControls.SettingsViewers.InventoryItem_InventoryItemGroupViewers
 {
 	partial class InventoryItemGroup_InventoryItem_SearchViewer
 	{

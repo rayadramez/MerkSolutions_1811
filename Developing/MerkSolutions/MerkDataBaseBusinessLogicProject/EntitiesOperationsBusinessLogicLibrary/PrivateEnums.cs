@@ -360,7 +360,7 @@
 		UnitMeasurment_p = 73,
 		DoctorRank_p = 74,
 		DoctorProfessionalFeesIssuingType_p = 75,
-		ChartOfAccountMargin_p  = 76,
+		ChartOfAccountMargin_p = 76,
 		IdentificationCardType_p = 77,
 		InPatientRoomBedStatus_p = 78,
 		VisitTiming = 79,
@@ -444,7 +444,9 @@
 		DiabetedMedicationType_p = 157,
 		DiabetesType_p,
 		Doctor_StationPointStage_cu,
-		InventoryItem_Area
+		InventoryItem_Area,
+		RawMaterials_cu,
+		RawMaterialType_p
 	}
 
 	public enum DB_Station

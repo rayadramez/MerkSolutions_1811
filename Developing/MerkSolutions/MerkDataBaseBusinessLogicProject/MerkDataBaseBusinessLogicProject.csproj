@@ -405,6 +405,9 @@
     <Compile Include="InventoryItem_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="InventoryItem_RawMaterial_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="InventoryItem_UnitMeasurment_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
@@ -507,6 +510,7 @@
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PEMRSavingMode_User_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PupillaryAbnormalities_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PupillaryRAPDCauses_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\RawMaterials_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\SegmentSignCategory_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\SegmentSign_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\UncorrectedDistanceVisualAcuity_cu.cs" />
@@ -628,6 +632,7 @@
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PersonType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PhoneType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PriceType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\RawMaterialType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\Role_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\SegmentSignType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\ServerDirectory_p.cs" />

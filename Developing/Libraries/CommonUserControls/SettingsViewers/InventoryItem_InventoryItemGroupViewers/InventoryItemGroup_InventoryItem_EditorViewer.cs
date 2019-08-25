@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using MVCBusinessLogicLibrary.Viewers;
 using System.Windows.Forms;
 using CommonControlLibrary;
 using DevExpress.XtraEditors;
@@ -8,8 +7,9 @@ using DevExpress.XtraGrid.Views.Grid;
 using MerkDataBaseBusinessLogicProject;
 using MVCBusinessLogicLibrary.BaseViewers;
 using MVCBusinessLogicLibrary.MVCFactories;
+using MVCBusinessLogicLibrary.Viewers;
 
-namespace CommonUserControls.MerkDesignWork
+namespace CommonUserControls.SettingsViewers.InventoryItem_InventoryItemGroupViewers
 {
 	public partial class InventoryItemGroup_InventoryItem_EditorViewer :
 		//DevExpress.XtraEditors.XtraUserControl

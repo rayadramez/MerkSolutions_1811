@@ -20,6 +20,7 @@ namespace MerkDataBaseBusinessLogicProject
             this.FinanceInvoiceDetails = new HashSet<FinanceInvoiceDetail>();
             this.InventoryItem_Area = new HashSet<InventoryItem_Area>();
             this.InventoryItemTransactions = new HashSet<InventoryItemTransaction>();
+            this.InventoryItem_RawMaterial_cu = new HashSet<InventoryItem_RawMaterial_cu>();
             this.InventoryItem_UnitMeasurment_cu = new HashSet<InventoryItem_UnitMeasurment_cu>();
             this.InventoryItemGroup_InventoryItem_cu = new HashSet<InventoryItemGroup_InventoryItem_cu>();
             this.InventoryItemPrice_cu = new HashSet<InventoryItemPrice_cu>();
@@ -72,6 +73,8 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual User_cu User_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InventoryItemTransaction> InventoryItemTransactions { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<InventoryItem_RawMaterial_cu> InventoryItem_RawMaterial_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InventoryItem_UnitMeasurment_cu> InventoryItem_UnitMeasurment_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

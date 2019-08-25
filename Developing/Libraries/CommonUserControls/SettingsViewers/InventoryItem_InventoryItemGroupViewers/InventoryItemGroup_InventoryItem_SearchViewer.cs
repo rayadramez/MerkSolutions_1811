@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Windows.Forms;
 using MerkDataBaseBusinessLogicProject;
 using MVCBusinessLogicLibrary.BaseViewers;
 using MVCBusinessLogicLibrary.MVCFactories;
 using MVCBusinessLogicLibrary.Viewers;
 
-namespace CommonUserControls.MerkDesignWork
+namespace CommonUserControls.SettingsViewers.InventoryItem_InventoryItemGroupViewers
 {
 	public partial class InventoryItemGroup_InventoryItem_SearchViewer : 
 		//UserControl

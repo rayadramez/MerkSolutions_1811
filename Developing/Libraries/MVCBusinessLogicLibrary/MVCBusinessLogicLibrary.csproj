@@ -165,6 +165,7 @@
     <Compile Include="MVCDataCollectors\PatientDepositBalance_Report_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\PersonType_ChartOfAccount_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\Person_ChartOfAccount_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\RawMaterial_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\RoleRegistration_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\ServiceCategory_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\ServiceCategory_StationPoint_DataCollector.cs" />
@@ -241,6 +242,7 @@
     <Compile Include="Viewers\IPersonRelativeViewer.cs" />
     <Compile Include="Viewers\IPersonType_ChartOfAccount_Viewer.cs" />
     <Compile Include="Viewers\IPerson_ChartOfAccount_Viewer.cs" />
+    <Compile Include="Viewers\IRawMaterial_Viewer.cs" />
     <Compile Include="Viewers\IRoleRegistrationViewer.cs" />
     <Compile Include="Viewers\IServiceCategoryViewer.cs" />
     <Compile Include="Viewers\IServiceCategory_StationPointViewer.cs" />

@@ -17,6 +17,7 @@ namespace MerkDataBaseBusinessLogicProject
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public RawMaterials_cu()
         {
+            this.InventoryItem_RawMaterial_cu = new HashSet<InventoryItem_RawMaterial_cu>();
             this.RawMaterialTranasctions = new HashSet<RawMaterialTranasction>();
         }
     
@@ -28,9 +29,16 @@ namespace MerkDataBaseBusinessLogicProject
         public double Width { get; set; }
         public double Height { get; set; }
         public double Weight { get; set; }
+        public Nullable<System.DateTime> ExpirationDate { get; set; }
+        public string Description { get; set; }
+        public Nullable<bool> IsCountable { get; set; }
+        public Nullable<bool> IsStockAvailable { get; set; }
         public Nullable<int> InsertedBy { get; set; }
         public bool IsOnDuty { get; set; }
+        public string InternalCode { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<InventoryItem_RawMaterial_cu> InventoryItem_RawMaterial_cu { get; set; }
         public virtual RawMaterialType_p RawMaterialType_p { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RawMaterialTranasction> RawMaterialTranasctions { get; set; }
