@@ -61,6 +61,9 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			if (IsCountable != null)
 				((RawMaterials_cu)ActiveDBItem).IsCountable = Convert.ToBoolean(IsCountable);
 
+			if (ColorID != null)
+				((RawMaterials_cu)ActiveDBItem).Color_CU_ID = Convert.ToInt32(ColorID);
+
 			if (Description != null)
 				((RawMaterials_cu)ActiveDBItem).Description = Description.ToString();
 
@@ -168,6 +171,7 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			ExpirationDate = ((RawMaterials_cu)ActiveDBItem).ExpirationDate;
 			IsStockAvailable = ((RawMaterials_cu)ActiveDBItem).IsStockAvailable;
 			IsCountable = ((RawMaterials_cu)ActiveDBItem).IsCountable;
+			ColorID = ((RawMaterials_cu)ActiveDBItem).Color_CU_ID;
 			Description = ((RawMaterials_cu)ActiveDBItem).Description;
 
 			((IRawMaterial_Viewer)ActiveCollector.ActiveViewer).ID = ((RawMaterials_cu)ActiveDBItem).ID;
@@ -257,7 +261,13 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			set { ((IRawMaterial_Viewer)ActiveCollector.ActiveViewer).Description = value; }
 		}
 
+		public object ColorID
+		{
+			get { return ((IRawMaterial_Viewer)ActiveCollector.ActiveViewer).ColorID; }
+			set { ((IRawMaterial_Viewer)ActiveCollector.ActiveViewer).ColorID = value; }
+		}
 		#endregion
+
 	}
 }
 

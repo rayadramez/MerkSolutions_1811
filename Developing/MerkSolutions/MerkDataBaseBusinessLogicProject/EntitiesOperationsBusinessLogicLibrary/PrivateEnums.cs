@@ -446,7 +446,8 @@
 		Doctor_StationPointStage_cu,
 		InventoryItem_Area,
 		RawMaterials_cu,
-		RawMaterialType_p
+		RawMaterialType_p,
+		Color_cu
 	}
 
 	public enum DB_Station

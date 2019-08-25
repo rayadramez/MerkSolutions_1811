@@ -44,10 +44,11 @@
 			this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
 			this.btnRawMaterial = new DevExpress.XtraNavBar.NavBarItem();
 			this.btnRawMaterialTransaction = new DevExpress.XtraNavBar.NavBarItem();
-			this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
+			this.btnColor = new DevExpress.XtraNavBar.NavBarItem();
 			this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
 			this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
 			this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
+			this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
 			this.splitContainerControl2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).BeginInit();
@@ -94,7 +95,8 @@
             this.btnInventoryItem_Area,
             this.btnRawMaterial,
             this.btnRawMaterialTransaction,
-            this.navBarItem6});
+            this.btnColor,
+            this.navBarItem4});
 			this.navBarControl2.Location = new System.Drawing.Point(0, 0);
 			this.navBarControl2.Margin = new System.Windows.Forms.Padding(5);
 			this.navBarControl2.Name = "navBarControl2";
@@ -280,8 +282,9 @@
 			this.navBarGroup2.Expanded = true;
 			this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnRawMaterial),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnColor),
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnRawMaterialTransaction),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem6)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4)});
 			this.navBarGroup2.LargeImage = global::CommonUserControls.Properties.Resources.MenuIcon_16_02;
 			this.navBarGroup2.Name = "navBarGroup2";
 			// 
@@ -314,19 +317,20 @@
 			this.btnRawMaterialTransaction.Name = "btnRawMaterialTransaction";
 			this.btnRawMaterialTransaction.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnRawMaterialTransaction.SmallImage")));
 			// 
-			// navBarItem6
+			// btnColor
 			// 
-			this.navBarItem6.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.navBarItem6.Appearance.Options.UseFont = true;
-			this.navBarItem6.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.navBarItem6.AppearanceDisabled.Options.UseFont = true;
-			this.navBarItem6.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.navBarItem6.AppearanceHotTracked.Options.UseFont = true;
-			this.navBarItem6.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.navBarItem6.AppearancePressed.Options.UseFont = true;
-			this.navBarItem6.Caption = "navBarItem6";
-			this.navBarItem6.Name = "navBarItem6";
-			this.navBarItem6.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem6.SmallImage")));
+			this.btnColor.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.btnColor.Appearance.Options.UseFont = true;
+			this.btnColor.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.btnColor.AppearanceDisabled.Options.UseFont = true;
+			this.btnColor.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.btnColor.AppearanceHotTracked.Options.UseFont = true;
+			this.btnColor.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.btnColor.AppearancePressed.Options.UseFont = true;
+			this.btnColor.Caption = "ألوان الأخشاب";
+			this.btnColor.Name = "btnColor";
+			this.btnColor.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnColor.SmallImage")));
+			this.btnColor.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnColor_LinkClicked);
 			// 
 			// navBarItem1
 			// 
@@ -360,6 +364,11 @@
 			this.navBarItem3.Caption = "العمليــات الرئيسيــة للمخـــــزون";
 			this.navBarItem3.Name = "navBarItem3";
 			this.navBarItem3.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.SmallImage")));
+			// 
+			// navBarItem4
+			// 
+			this.navBarItem4.Caption = "navBarItem4";
+			this.navBarItem4.Name = "navBarItem4";
 			// 
 			// MerkFinanceMainMenu_UC
 			// 
@@ -396,6 +405,7 @@
 		private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
 		private DevExpress.XtraNavBar.NavBarItem btnRawMaterial;
 		private DevExpress.XtraNavBar.NavBarItem btnRawMaterialTransaction;
-		private DevExpress.XtraNavBar.NavBarItem navBarItem6;
+		private DevExpress.XtraNavBar.NavBarItem btnColor;
+		private DevExpress.XtraNavBar.NavBarItem navBarItem4;
 	}
 }

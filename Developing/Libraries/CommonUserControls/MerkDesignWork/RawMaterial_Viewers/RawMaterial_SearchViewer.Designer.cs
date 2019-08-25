@@ -63,6 +63,9 @@
 			this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.lkeColor = new DevExpress.XtraEditors.GridLookUpEdit();
+			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
@@ -98,10 +101,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lkeColor.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.lkeColor);
 			this.layoutControl1.Controls.Add(this.txtDescription);
 			this.layoutControl1.Controls.Add(this.txtInternalCode);
 			this.layoutControl1.Controls.Add(this.chkIsAvailable);
@@ -345,7 +352,8 @@
             this.emptySpaceItem5,
             this.emptySpaceItem6,
             this.emptySpaceItem7,
-            this.emptySpaceItem8});
+            this.emptySpaceItem8,
+            this.layoutControlItem13});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -537,7 +545,7 @@
 			this.emptySpaceItem7.AllowHotTrack = false;
 			this.emptySpaceItem7.Location = new System.Drawing.Point(0, 26);
 			this.emptySpaceItem7.Name = "emptySpaceItem7";
-			this.emptySpaceItem7.Size = new System.Drawing.Size(637, 26);
+			this.emptySpaceItem7.Size = new System.Drawing.Size(220, 26);
 			this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// emptySpaceItem8
@@ -547,6 +555,37 @@
 			this.emptySpaceItem8.Name = "emptySpaceItem8";
 			this.emptySpaceItem8.Size = new System.Drawing.Size(420, 26);
 			this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// lkeColor
+			// 
+			this.lkeColor.Location = new System.Drawing.Point(223, 29);
+			this.lkeColor.MaximumSize = new System.Drawing.Size(300, 0);
+			this.lkeColor.MinimumSize = new System.Drawing.Size(300, 0);
+			this.lkeColor.Name = "lkeColor";
+			this.lkeColor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.lkeColor.Properties.View = this.gridView1;
+			this.lkeColor.Size = new System.Drawing.Size(300, 20);
+			this.lkeColor.StyleController = this.layoutControl1;
+			this.lkeColor.TabIndex = 29;
+			// 
+			// gridView1
+			// 
+			this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.gridView1.Name = "gridView1";
+			this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.gridView1.OptionsView.ShowGroupPanel = false;
+			// 
+			// layoutControlItem13
+			// 
+			this.layoutControlItem13.Control = this.lkeColor;
+			this.layoutControlItem13.Location = new System.Drawing.Point(220, 26);
+			this.layoutControlItem13.Name = "layoutControlItem13";
+			this.layoutControlItem13.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem13.Size = new System.Drawing.Size(417, 26);
+			this.layoutControlItem13.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem13.Text = "اللـــــــون";
+			this.layoutControlItem13.TextSize = new System.Drawing.Size(108, 13);
 			// 
 			// RawMaterial_SearchViewer
 			// 
@@ -592,6 +631,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lkeColor.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -633,5 +675,8 @@
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
+		private DevExpress.XtraEditors.GridLookUpEdit lkeColor;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
 	}
 }

@@ -227,10 +227,40 @@
     <Compile Include="InvoiceViewers\ReadyInvoiceForPayments_UC.Designer.cs">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="MerkDesignWork\RawMaterial_SearchViewer.cs">
+    <Compile Include="MerkDesignWork\Color_Viewers\Color_EditorViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MerkDesignWork\RawMaterial_SearchViewer.Designer.cs">
+    <Compile Include="MerkDesignWork\Color_Viewers\Color_EditorViewer.Designer.cs">
+      <DependentUpon>Color_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MerkDesignWork\Color_Viewers\Color_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\Color_Viewers\Color_SearchViewer.Designer.cs">
+      <DependentUpon>Color_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MerkDesignWork\InventoryItem_Area_Viewers\InventoryItem_Area_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\InventoryItem_Area_Viewers\InventoryItem_Area_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryItem_Area_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MerkDesignWork\InventoryItem_Area_Viewers\InventoryItem_Area_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\InventoryItem_Area_Viewers\InventoryItem_Area_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryItem_Area_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MerkDesignWork\RawMaterial_Viewers\RawMaterial_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\RawMaterial_Viewers\RawMaterial_EditorViewer.Designer.cs">
+      <DependentUpon>RawMaterial_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MerkDesignWork\RawMaterial_Viewers\RawMaterial_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\RawMaterial_Viewers\RawMaterial_SearchViewer.Designer.cs">
       <DependentUpon>RawMaterial_SearchViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\InventoryItemGroup_InventoryItem_EditorViewer.cs">
@@ -245,29 +275,11 @@
     <Compile Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\InventoryItemGroup_InventoryItem_SearchViewer.Designer.cs">
       <DependentUpon>InventoryItemGroup_InventoryItem_SearchViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="MerkDesignWork\InventoryItem_Area_EditorViewer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MerkDesignWork\InventoryItem_Area_EditorViewer.Designer.cs">
-      <DependentUpon>InventoryItem_Area_EditorViewer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MerkDesignWork\InventoryItem_Area_SearchViewer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MerkDesignWork\InventoryItem_Area_SearchViewer.Designer.cs">
-      <DependentUpon>InventoryItem_Area_SearchViewer.cs</DependentUpon>
-    </Compile>
     <Compile Include="MerkDesignWork\MerkFinanceMainMenu_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MerkDesignWork\MerkFinanceMainMenu_UC.Designer.cs">
       <DependentUpon>MerkFinanceMainMenu_UC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MerkDesignWork\RawMaterial_EditorViewer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MerkDesignWork\RawMaterial_EditorViewer.Designer.cs">
-      <DependentUpon>RawMaterial_EditorViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="MerkFinanceCommonViewers\MainHomeScreen_UC.cs">
       <SubType>UserControl</SubType>
@@ -1354,7 +1366,22 @@
     <EmbeddedResource Include="InvoiceViewers\ReadyInvoiceForPayments_UC.resx">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MerkDesignWork\RawMaterial_SearchViewer.resx">
+    <EmbeddedResource Include="MerkDesignWork\Color_Viewers\Color_EditorViewer.resx">
+      <DependentUpon>Color_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\Color_Viewers\Color_SearchViewer.resx">
+      <DependentUpon>Color_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\InventoryItem_Area_Viewers\InventoryItem_Area_EditorViewer.resx">
+      <DependentUpon>InventoryItem_Area_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\InventoryItem_Area_Viewers\InventoryItem_Area_SearchViewer.resx">
+      <DependentUpon>InventoryItem_Area_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\RawMaterial_Viewers\RawMaterial_EditorViewer.resx">
+      <DependentUpon>RawMaterial_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\RawMaterial_Viewers\RawMaterial_SearchViewer.resx">
       <DependentUpon>RawMaterial_SearchViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\InventoryItemGroup_InventoryItem_EditorViewer.resx">
@@ -1363,17 +1390,8 @@
     <EmbeddedResource Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\InventoryItemGroup_InventoryItem_SearchViewer.resx">
       <DependentUpon>InventoryItemGroup_InventoryItem_SearchViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MerkDesignWork\InventoryItem_Area_EditorViewer.resx">
-      <DependentUpon>InventoryItem_Area_EditorViewer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MerkDesignWork\InventoryItem_Area_SearchViewer.resx">
-      <DependentUpon>InventoryItem_Area_SearchViewer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MerkDesignWork\MerkFinanceMainMenu_UC.resx">
       <DependentUpon>MerkFinanceMainMenu_UC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MerkDesignWork\RawMaterial_EditorViewer.resx">
-      <DependentUpon>RawMaterial_EditorViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MerkFinanceCommonViewers\MainHomeScreen_UC.resx">
       <DependentUpon>MainHomeScreen_UC.cs</DependentUpon>
@@ -1906,6 +1924,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\lyt_Color_SearchViewer.xml" />
+    <None Include="Resources\lyt_Color_EditorViewer.xml" />
+    <None Include="Resources\grd_Color_SearchViewer.xml" />
     <None Include="Resources\grd_RawMaterial_SearchViewer.xml" />
     <None Include="Resources\lyt_RawMaterial_EditorViewer.xml" />
     <None Include="Resources\grd_InventoryItemGroup_InventoryItem_SearchViewer.xml" />

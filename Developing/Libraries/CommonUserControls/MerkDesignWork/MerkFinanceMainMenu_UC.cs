@@ -1,4 +1,7 @@
 ﻿using System.Windows.Forms;
+using CommonUserControls.MerkDesignWork.Color_Viewers;
+using CommonUserControls.MerkDesignWork.InventoryItem_Area_Viewers;
+using CommonUserControls.MerkDesignWork.RawMaterial_Viewers;
 using CommonUserControls.SettingsViewers.InventoryHousingViewers;
 using CommonUserControls.SettingsViewers.InventoryItemBrandViewers;
 using CommonUserControls.SettingsViewers.InventoryItemCategoryViewers;
@@ -57,6 +60,9 @@ namespace CommonUserControls.MerkDesignWork
 
 		private RawMaterial_EditorViewer _rawMaterialEditor;
 		private RawMaterial_SearchViewer _rawMaterialSearch;
+
+		private Color_EditorViewer _colorEditor;
+		private Color_SearchViewer _colorSearch;
 
 		public MerkFinanceMainMenu_UC()
 		{
@@ -187,6 +193,19 @@ namespace CommonUserControls.MerkDesignWork
 				ViewerName.RawMaterial_viewer,
 				DB_CommonTransactionType.CreateNew,
 				"تسجيـــــل المــــواد الخــــام",
+				AbstractViewerType.SearchViewer,
+				true);
+		}
+
+		private void btnColor_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+		{
+			BaseController<Color_cu>.ShowControl(ref _colorEditor,
+				ref _colorSearch,
+				splitContainerControl2.Panel1,
+				EditorContainerType.Settings,
+				ViewerName.Color_Viewer,
+				DB_CommonTransactionType.CreateNew,
+				"تسجيـــــل الــــوان الأخشــــاب",
 				AbstractViewerType.SearchViewer,
 				true);
 		}

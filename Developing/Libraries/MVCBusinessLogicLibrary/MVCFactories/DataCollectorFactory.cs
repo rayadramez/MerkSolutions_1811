@@ -132,6 +132,8 @@ namespace MVCBusinessLogicLibrary.MVCFactories
 					return new InventoryItemGroup_InventoryItem_DataCollector<TEntity>();
 				case ViewerName.RawMaterial_viewer:
 					return new RawMaterial_DataCollector<TEntity>();
+				case ViewerName.Color_Viewer:
+					return new Color_DataCollector<TEntity>();
 			}
 
 			return null;

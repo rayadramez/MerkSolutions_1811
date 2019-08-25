@@ -34,6 +34,7 @@ namespace MerkDataBaseBusinessLogicProject
             this.ChartOfAccount_GeneralChartOfAccountType_cu = new HashSet<ChartOfAccount_GeneralChartOfAccountType_cu>();
             this.ChartOfAccountBalances = new HashSet<ChartOfAccountBalance>();
             this.City_cu = new HashSet<City_cu>();
+            this.Color_cu = new HashSet<Color_cu>();
             this.Country_cu = new HashSet<Country_cu>();
             this.Currency_cu = new HashSet<Currency_cu>();
             this.Customer_cu = new HashSet<Customer_cu>();
@@ -228,6 +229,8 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual ICollection<ChartOfAccountBalance> ChartOfAccountBalances { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<City_cu> City_cu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Color_cu> Color_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Country_cu> Country_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

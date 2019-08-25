@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Windows.Forms;
 using CommonControlLibrary;
+using CommonUserControls.MerkDesignWork.Color_Viewers;
 using MerkDataBaseBusinessLogicProject;
+using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MVCBusinessLogicLibrary.BaseViewers;
 using MVCBusinessLogicLibrary.Controller;
 using MVCBusinessLogicLibrary.MVCFactories;
@@ -13,6 +16,8 @@ namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
 		CommonAbstractEditorViewer<RawMaterials_cu>,
 		IRawMaterial_Viewer
 	{
+		private Color_EditorViewer _colorEditor;
+
 		public RawMaterial_EditorViewer()
 		{
 			InitializeComponent();
@@ -35,14 +40,10 @@ namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
 			get { return "المنتجــــات"; }
 		}
 
-		public override string GridXML
-		{
-			get { return Resources.LocalizedRes.grd_InventoryItem_Area_SearchViewer; }
-		}
-
 		public override void FillControls()
 		{
 			CommonViewsActions.FillGridlookupEdit(lkeInventoryItemType, RawMaterialType_p.ItemsList);
+			CommonViewsActions.FillGridlookupEdit(lkeColor, Color_cu.ItemsList);
 		}
 
 		public override void ClearControls()
@@ -59,6 +60,7 @@ namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
 			chkIsCountable.Checked = false;
 			txtDescription.EditValue = null;
 			txtInternalCode.EditValue = null;
+			ColorID = null;
 		}
 
 		#endregion
@@ -139,6 +141,20 @@ namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
 			set { txtInternalCode.EditValue = Convert.ToBoolean(value); }
 		}
 
+		public object ColorID
+		{
+			get { return lkeColor.EditValue; }
+			set { lkeColor.EditValue = Convert.ToBoolean(value); }
+		}
+
 		#endregion
+
+		private void btnAddColor_Click(object sender, EventArgs e)
+		{
+			BaseController<Color_cu>.ShowEditorControl(ref _colorEditor, this, null, null,
+				EditorContainerType.Regular, ViewerName.Color_Viewer, DB_CommonTransactionType.CreateNew,
+				"ألــــوان الأخشـــــاب", true);
+			CommonViewsActions.FillGridlookupEdit(lkeColor, Color_cu.ItemsList);
+		}
 	}
 }

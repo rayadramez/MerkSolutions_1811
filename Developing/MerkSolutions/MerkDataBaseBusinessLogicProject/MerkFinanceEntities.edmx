@@ -255,6 +255,18 @@
           <Property Name="Description" Type="ntext" />
           <Property Name="InsertedBy" Type="int" />
         </EntityType>
+        <EntityType Name="Color_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_P" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name_S" Type="nvarchar" MaxLength="100" />
+          <Property Name="InternalCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="InsertedBy" Type="int" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="CommonTransactionType_p">
           <Key>
             <PropertyRef Name="ID" />
@@ -1939,12 +1951,13 @@
           <Property Name="Height" Type="float" Nullable="false" />
           <Property Name="Weight" Type="float" Nullable="false" />
           <Property Name="ExpirationDate" Type="datetime" />
-          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="InternalCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Color_CU_ID" Type="int" />
           <Property Name="IsCountable" Type="bit" />
           <Property Name="IsStockAvailable" Type="bit" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
           <Property Name="InsertedBy" Type="int" />
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
-          <Property Name="InternalCode" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="RawMaterialTranasction">
           <Key>
@@ -3659,6 +3672,18 @@
               <PropertyRef Name="Person_CU_ID" />
             </Principal>
             <Dependent Role="City_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Color_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="Color_cu" Type="Self.Color_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="Color_cu">
               <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
@@ -7179,6 +7204,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_RawMaterials_cu_Color_cu">
+          <End Role="Color_cu" Type="Self.Color_cu" Multiplicity="0..1" />
+          <End Role="RawMaterials_cu" Type="Self.RawMaterials_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Color_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RawMaterials_cu">
+              <PropertyRef Name="Color_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_RawMaterials_cu_RawMaterialType_p">
           <End Role="RawMaterialType_p" Type="Self.RawMaterialType_p" Multiplicity="1" />
           <End Role="RawMaterials_cu" Type="Self.RawMaterials_cu" Multiplicity="*" />
@@ -9794,6 +9831,7 @@
           <EntitySet Name="ChartOfAccountBalance" EntityType="Self.ChartOfAccountBalance" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ChartOfAccountCodeMargin_p" EntityType="Self.ChartOfAccountCodeMargin_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="City_cu" EntityType="Self.City_cu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Color_cu" EntityType="Self.Color_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CommonTransactionType_p" EntityType="Self.CommonTransactionType_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Country_cu" EntityType="Self.Country_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Currency_cu" EntityType="Self.Currency_cu" Schema="dbo" store:Type="Tables" />
@@ -10227,6 +10265,10 @@
           <AssociationSet Name="FK_City_cu_User_cu" Association="Self.FK_City_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="City_cu" EntitySet="City_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Color_cu_User_cu" Association="Self.FK_Color_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="Color_cu" EntitySet="Color_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_Country_cu_User_cu" Association="Self.FK_Country_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
@@ -11400,6 +11442,10 @@
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="PupillaryRAPDCauses_cu" EntitySet="PupillaryRAPDCauses_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_RawMaterials_cu_Color_cu" Association="Self.FK_RawMaterials_cu_Color_cu">
+            <End Role="Color_cu" EntitySet="Color_cu" />
+            <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
+          </AssociationSet>
           <AssociationSet Name="FK_RawMaterials_cu_RawMaterialType_p" Association="Self.FK_RawMaterials_cu_RawMaterialType_p">
             <End Role="RawMaterialType_p" EntitySet="RawMaterialType_p" />
             <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
@@ -12571,6 +12617,20 @@
           <NavigationProperty Name="Location_cu" Relationship="Self.FK_Location_cu_City_cu" FromRole="City_cu" ToRole="Location_cu" />
           <NavigationProperty Name="Person_cu" Relationship="Self.FK_Person_cu_City_cu" FromRole="City_cu" ToRole="Person_cu" />
           <NavigationProperty Name="Region_cu" Relationship="Self.FK_Region_cu_City_cu" FromRole="City_cu" ToRole="Region_cu" />
+        </EntityType>
+        <EntityType Name="Color_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_P" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_S" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="InternalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="InsertedBy" Type="Int32" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="User_cu" Relationship="Self.FK_Color_cu_User_cu" FromRole="Color_cu" ToRole="User_cu" />
+          <NavigationProperty Name="RawMaterials_cu" Relationship="Self.FK_RawMaterials_cu_Color_cu" FromRole="Color_cu" ToRole="RawMaterials_cu" />
         </EntityType>
         <EntityType Name="CommonTransactionType_p">
           <Key>
@@ -14751,12 +14811,14 @@
           <Property Name="Height" Type="Double" Nullable="false" />
           <Property Name="Weight" Type="Double" Nullable="false" />
           <Property Name="ExpirationDate" Type="DateTime" Precision="3" />
-          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="InternalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Color_CU_ID" Type="Int32" />
           <Property Name="IsCountable" Type="Boolean" />
           <Property Name="IsStockAvailable" Type="Boolean" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="InsertedBy" Type="Int32" />
           <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
-          <Property Name="InternalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Color_cu" Relationship="Self.FK_RawMaterials_cu_Color_cu" FromRole="RawMaterials_cu" ToRole="Color_cu" />
           <NavigationProperty Name="InventoryItem_RawMaterial_cu" Relationship="Self.FK_InventoryItem_RawMaterial_cu_RawMaterials_cu" FromRole="RawMaterials_cu" ToRole="InventoryItem_RawMaterial_cu" />
           <NavigationProperty Name="RawMaterialType_p" Relationship="Self.FK_RawMaterials_cu_RawMaterialType_p" FromRole="RawMaterials_cu" ToRole="RawMaterialType_p" />
           <NavigationProperty Name="RawMaterialTranasctions" Relationship="Self.FK_RawMaterialTranasction_RawMaterials_cu" FromRole="RawMaterials_cu" ToRole="RawMaterialTranasction" />
@@ -15541,6 +15603,7 @@
           <NavigationProperty Name="ChartOfAccount_GeneralChartOfAccountType_cu" Relationship="Self.FK_ChartOfAccount_GeneralChartOfAccountType_cu_User_cu" FromRole="User_cu" ToRole="ChartOfAccount_GeneralChartOfAccountType_cu" />
           <NavigationProperty Name="ChartOfAccountBalances" Relationship="Self.FK_ChartOfAccountBalance_User_cu" FromRole="User_cu" ToRole="ChartOfAccountBalance" />
           <NavigationProperty Name="City_cu" Relationship="Self.FK_City_cu_User_cu" FromRole="User_cu" ToRole="City_cu" />
+          <NavigationProperty Name="Color_cu" Relationship="Self.FK_Color_cu_User_cu" FromRole="User_cu" ToRole="Color_cu" />
           <NavigationProperty Name="Country_cu" Relationship="Self.FK_Country_cu_User_cu" FromRole="User_cu" ToRole="Country_cu" />
           <NavigationProperty Name="Currency_cu" Relationship="Self.FK_Currency_cu_User_cu" FromRole="User_cu" ToRole="Currency_cu" />
           <NavigationProperty Name="Customer_cu" Relationship="Self.FK_Customer_cu_User_cu" FromRole="User_cu" ToRole="Customer_cu" />
@@ -17257,6 +17320,30 @@
             </Principal>
             <Dependent Role="Region_cu">
               <PropertyRef Name="City_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Color_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="Color_cu" Type="Self.Color_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="Color_cu">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RawMaterials_cu_Color_cu">
+          <End Role="Color_cu" Type="Self.Color_cu" Multiplicity="0..1" />
+          <End Role="RawMaterials_cu" Type="Self.RawMaterials_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Color_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RawMaterials_cu">
+              <PropertyRef Name="Color_CU_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -22981,6 +23068,7 @@
           <EntitySet Name="ChartOfAccountBalances" EntityType="Self.ChartOfAccountBalance" />
           <EntitySet Name="ChartOfAccountCodeMargin_p" EntityType="Self.ChartOfAccountCodeMargin_p" />
           <EntitySet Name="City_cu" EntityType="Self.City_cu" />
+          <EntitySet Name="Color_cu" EntityType="Self.Color_cu" />
           <EntitySet Name="CommonTransactionType_p" EntityType="Self.CommonTransactionType_p" />
           <EntitySet Name="Country_cu" EntityType="Self.Country_cu" />
           <EntitySet Name="Currency_cu" EntityType="Self.Currency_cu" />
@@ -23506,6 +23594,14 @@
           <AssociationSet Name="FK_Region_cu_City_cu" Association="Self.FK_Region_cu_City_cu">
             <End Role="City_cu" EntitySet="City_cu" />
             <End Role="Region_cu" EntitySet="Region_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Color_cu_User_cu" Association="Self.FK_Color_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="Color_cu" EntitySet="Color_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RawMaterials_cu_Color_cu" Association="Self.FK_RawMaterials_cu_Color_cu">
+            <End Role="Color_cu" EntitySet="Color_cu" />
+            <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_Country_cu_User_cu" Association="Self.FK_Country_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
@@ -25986,6 +26082,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Color_cu">
+            <EntityTypeMapping TypeName="MerkFinanceModel.Color_cu">
+              <MappingFragment StoreEntitySet="Color_cu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name_P" ColumnName="Name_P" />
+                <ScalarProperty Name="Name_S" ColumnName="Name_S" />
+                <ScalarProperty Name="InternalCode" ColumnName="InternalCode" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="CommonTransactionType_p">
             <EntityTypeMapping TypeName="MerkFinanceModel.CommonTransactionType_p">
               <MappingFragment StoreEntitySet="CommonTransactionType_p">
@@ -27807,12 +27916,13 @@
                 <ScalarProperty Name="Height" ColumnName="Height" />
                 <ScalarProperty Name="Weight" ColumnName="Weight" />
                 <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="InternalCode" ColumnName="InternalCode" />
+                <ScalarProperty Name="Color_CU_ID" ColumnName="Color_CU_ID" />
                 <ScalarProperty Name="IsCountable" ColumnName="IsCountable" />
                 <ScalarProperty Name="IsStockAvailable" ColumnName="IsStockAvailable" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
                 <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
-                <ScalarProperty Name="InternalCode" ColumnName="InternalCode" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

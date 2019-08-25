@@ -119,6 +119,9 @@
     <Compile Include="City_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Color_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="CommonTransactionType_p.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
@@ -504,6 +507,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MerkAuditingEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Color_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Doctor_StationPointStage_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItem_Area.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\OrganizationMachine_StationPoint_cu.cs" />

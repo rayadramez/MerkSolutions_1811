@@ -128,6 +128,7 @@
     <Compile Include="MVCDataCollectors\CashBoxTransactionType_GeneralChartOfAccountType_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\CashBox_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\ChartOfAccount_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\Color_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\CustomerFinanceInvoice_Report_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\Customer_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\DiagnosisCategory_DataCollector.cs" />
@@ -202,6 +203,7 @@
     <Compile Include="Viewers\ICashBoxTransactionType_GeneralChartOfAccountType_Viewer.cs" />
     <Compile Include="Viewers\ICashBoxViewer.cs" />
     <Compile Include="Viewers\IChartOfAccountViewer.cs" />
+    <Compile Include="Viewers\IColorViewer.cs" />
     <Compile Include="Viewers\ICustomerFinanceInvoices_Report_Viewer.cs" />
     <Compile Include="Viewers\ICustomerViewer.cs" />
     <Compile Include="Viewers\IDiagnosisCategory_Diagnosis_Viewer.cs" />

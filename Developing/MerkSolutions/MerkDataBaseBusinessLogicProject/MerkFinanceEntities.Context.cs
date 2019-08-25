@@ -47,6 +47,7 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual DbSet<ChartOfAccountBalance> ChartOfAccountBalances { get; set; }
         public virtual DbSet<ChartOfAccountCodeMargin_p> ChartOfAccountCodeMargin_p { get; set; }
         public virtual DbSet<City_cu> City_cu { get; set; }
+        public virtual DbSet<Color_cu> Color_cu { get; set; }
         public virtual DbSet<CommonTransactionType_p> CommonTransactionType_p { get; set; }
         public virtual DbSet<Country_cu> Country_cu { get; set; }
         public virtual DbSet<Currency_cu> Currency_cu { get; set; }

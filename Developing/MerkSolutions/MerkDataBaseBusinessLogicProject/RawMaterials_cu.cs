@@ -30,13 +30,15 @@ namespace MerkDataBaseBusinessLogicProject
         public double Height { get; set; }
         public double Weight { get; set; }
         public Nullable<System.DateTime> ExpirationDate { get; set; }
-        public string Description { get; set; }
+        public string InternalCode { get; set; }
+        public Nullable<int> Color_CU_ID { get; set; }
         public Nullable<bool> IsCountable { get; set; }
         public Nullable<bool> IsStockAvailable { get; set; }
+        public string Description { get; set; }
         public Nullable<int> InsertedBy { get; set; }
         public bool IsOnDuty { get; set; }
-        public string InternalCode { get; set; }
     
+        public virtual Color_cu Color_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InventoryItem_RawMaterial_cu> InventoryItem_RawMaterial_cu { get; set; }
         public virtual RawMaterialType_p RawMaterialType_p { get; set; }

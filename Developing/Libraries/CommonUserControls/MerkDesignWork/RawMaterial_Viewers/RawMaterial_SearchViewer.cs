@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using CommonControlLibrary;
 using MerkDataBaseBusinessLogicProject;
 using MVCBusinessLogicLibrary.BaseViewers;
@@ -111,6 +112,12 @@ namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
 		{
 			get { return txtInternalCode.EditValue; }
 			set { txtInternalCode.EditValue = Convert.ToBoolean(value); }
+		}
+
+		public object ColorID
+		{
+			get { return lkeColor.EditValue; }
+			set { lkeColor.EditValue = Convert.ToBoolean(value); }
 		}
 
 		#endregion
