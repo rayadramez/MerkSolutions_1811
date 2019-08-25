@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Windows.Forms;
 using CommonControlLibrary;
 using MerkDataBaseBusinessLogicProject;
 using MVCBusinessLogicLibrary.BaseViewers;
 using MVCBusinessLogicLibrary.MVCFactories;
 using MVCBusinessLogicLibrary.Viewers;
 
-namespace CommonUserControls.MerkDesignWork
+namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
 {
 	public partial class RawMaterial_SearchViewer : 
 		//UserControl

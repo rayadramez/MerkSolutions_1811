@@ -1,11 +1,10 @@
-﻿using System.Windows.Forms;
-using CommonControlLibrary;
+﻿using CommonControlLibrary;
 using MerkDataBaseBusinessLogicProject;
 using MVCBusinessLogicLibrary.BaseViewers;
 using MVCBusinessLogicLibrary.MVCFactories;
 using MVCBusinessLogicLibrary.Viewers;
 
-namespace CommonUserControls.MerkDesignWork
+namespace CommonUserControls.MerkDesignWork.InventoryItem_Area_Viewers
 {
 	public partial class InventoryItem_Area_SearchViewer : 
 		//UserControl

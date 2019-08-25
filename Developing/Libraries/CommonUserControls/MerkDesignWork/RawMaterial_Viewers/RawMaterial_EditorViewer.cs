@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Forms;
 using CommonControlLibrary;
 using MerkDataBaseBusinessLogicProject;
 using MVCBusinessLogicLibrary.BaseViewers;
@@ -7,7 +6,7 @@ using MVCBusinessLogicLibrary.Controller;
 using MVCBusinessLogicLibrary.MVCFactories;
 using MVCBusinessLogicLibrary.Viewers;
 
-namespace CommonUserControls.MerkDesignWork
+namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
 {
 	public partial class RawMaterial_EditorViewer : 
 		//UserControl
