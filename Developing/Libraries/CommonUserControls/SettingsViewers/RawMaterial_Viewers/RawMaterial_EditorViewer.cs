@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using CommonControlLibrary;
-using CommonUserControls.MerkDesignWork.Color_Viewers;
+using CommonUserControls.SettingsViewers.Color_Viewers;
+using DevExpress.XtraLayout.Utils;
 using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MVCBusinessLogicLibrary.BaseViewers;
@@ -9,7 +10,7 @@ using MVCBusinessLogicLibrary.Controller;
 using MVCBusinessLogicLibrary.MVCFactories;
 using MVCBusinessLogicLibrary.Viewers;
 
-namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
+namespace CommonUserControls.SettingsViewers.RawMaterial_Viewers
 {
 	public partial class RawMaterial_EditorViewer : 
 		//UserControl
@@ -61,6 +62,8 @@ namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
 			txtDescription.EditValue = null;
 			txtInternalCode.EditValue = null;
 			ColorID = null;
+			chkNotDivided.Checked = false;
+			chkNotDivided.Checked = true;
 		}
 
 		#endregion
@@ -138,13 +141,41 @@ namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
 		public object InternalCode
 		{
 			get { return txtInternalCode.EditValue; }
-			set { txtInternalCode.EditValue = Convert.ToBoolean(value); }
+			set { txtInternalCode.EditValue = value; }
 		}
 
 		public object ColorID
 		{
 			get { return lkeColor.EditValue; }
-			set { lkeColor.EditValue = Convert.ToBoolean(value); }
+			set { lkeColor.EditValue = value; }
+		}
+
+		public object DividedTypeID
+		{
+			get
+			{
+				if (chkNotDivided.Checked)
+					return (int) DB_DividedByType.NotDivided;
+				if (chkDividedByQuarter.Checked)
+					return (int)DB_DividedByType.DividedBy4;
+				if (chkDividedByOther.Checked)
+					return (int)DB_DividedByType.DividedBy6;
+				return (int) DB_DividedByType.None;
+			}
+			set {
+				switch ((DB_DividedByType)value)
+				{
+					case DB_DividedByType.NotDivided:
+						chkNotDivided.Checked = true;
+						break;
+					case DB_DividedByType.DividedBy4:
+						chkDividedByQuarter.Checked = true;
+						break;
+					case DB_DividedByType.DividedBy6:
+						chkDividedByOther.Checked = true;
+						break;
+				}
+			}
 		}
 
 		#endregion
@@ -155,6 +186,11 @@ namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
 				EditorContainerType.Regular, ViewerName.Color_Viewer, DB_CommonTransactionType.CreateNew,
 				"ألــــوان الأخشـــــاب", true);
 			CommonViewsActions.FillGridlookupEdit(lkeColor, Color_cu.ItemsList);
+		}
+
+		private void chkIsDivided_CheckedChanged(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

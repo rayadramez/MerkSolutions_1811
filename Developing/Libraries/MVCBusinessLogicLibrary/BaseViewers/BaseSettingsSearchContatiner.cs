@@ -85,6 +85,7 @@ namespace MVCBusinessLogicLibrary.BaseViewers
 
 			object[] list = BaseMvcController.CollectSearchCriteria();
 			grdControlItems.DataSource = list;
+			BaseMvcController.ClearControls();
 		}
 
 		private void btnEdit_Click(object sender, System.EventArgs e)

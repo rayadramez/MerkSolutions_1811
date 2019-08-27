@@ -43,7 +43,11 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			if (InternalCode != null)
 				((InventoryItem_Area)ActiveDBItem).InternalCode = InternalCode.ToString();
 
+			if (UserID != null)
+				((Service_cu)ActiveDBItem).InsertedBy = Convert.ToInt32(UserID);
+
 			((InventoryItem_Area)ActiveDBItem).IsOnDuty = true;
+
 			switch (((IInventoryItem_Area_Viewer)ActiveCollector.ActiveViewer).CommonTransactionType)
 			{
 				case DB_CommonTransactionType.DeleteExisting:

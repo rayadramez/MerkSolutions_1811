@@ -227,41 +227,41 @@
     <Compile Include="InvoiceViewers\ReadyInvoiceForPayments_UC.Designer.cs">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="MerkDesignWork\Color_Viewers\Color_EditorViewer.cs">
+    <Compile Include="ReportsContainer\GetInventoryItemAreaParts_Report.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MerkDesignWork\Color_Viewers\Color_EditorViewer.Designer.cs">
+    <Compile Include="ReportsContainer\GetInventoryItemAreaParts_Report.Designer.cs">
+      <DependentUpon>GetInventoryItemAreaParts_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsContainer\GetRawMaterialCostPrices_Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportsContainer\GetRawMaterialCostPrices_Report.Designer.cs">
+      <DependentUpon>GetRawMaterialCostPrices_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\Color_Viewers\Color_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\Color_Viewers\Color_EditorViewer.Designer.cs">
       <DependentUpon>Color_EditorViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="MerkDesignWork\Color_Viewers\Color_SearchViewer.cs">
+    <Compile Include="SettingsViewers\Color_Viewers\Color_SearchViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MerkDesignWork\Color_Viewers\Color_SearchViewer.Designer.cs">
+    <Compile Include="SettingsViewers\Color_Viewers\Color_SearchViewer.Designer.cs">
       <DependentUpon>Color_SearchViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="MerkDesignWork\InventoryItem_Area_Viewers\InventoryItem_Area_EditorViewer.cs">
+    <Compile Include="SettingsViewers\InventoryItem_Area_Viewers\InventoryItem_Area_EditorViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MerkDesignWork\InventoryItem_Area_Viewers\InventoryItem_Area_EditorViewer.Designer.cs">
+    <Compile Include="SettingsViewers\InventoryItem_Area_Viewers\InventoryItem_Area_EditorViewer.Designer.cs">
       <DependentUpon>InventoryItem_Area_EditorViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="MerkDesignWork\InventoryItem_Area_Viewers\InventoryItem_Area_SearchViewer.cs">
+    <Compile Include="SettingsViewers\InventoryItem_Area_Viewers\InventoryItem_Area_SearchViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MerkDesignWork\InventoryItem_Area_Viewers\InventoryItem_Area_SearchViewer.Designer.cs">
+    <Compile Include="SettingsViewers\InventoryItem_Area_Viewers\InventoryItem_Area_SearchViewer.Designer.cs">
       <DependentUpon>InventoryItem_Area_SearchViewer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MerkDesignWork\RawMaterial_Viewers\RawMaterial_EditorViewer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MerkDesignWork\RawMaterial_Viewers\RawMaterial_EditorViewer.Designer.cs">
-      <DependentUpon>RawMaterial_EditorViewer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MerkDesignWork\RawMaterial_Viewers\RawMaterial_SearchViewer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MerkDesignWork\RawMaterial_Viewers\RawMaterial_SearchViewer.Designer.cs">
-      <DependentUpon>RawMaterial_SearchViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\InventoryItemGroup_InventoryItem_EditorViewer.cs">
       <SubType>UserControl</SubType>
@@ -1086,6 +1086,30 @@
     <Compile Include="SettingsViewers\Person_ChartOfAccount_Viewers\Person_ChartOfAccount_SearchViewer.Designer.cs">
       <DependentUpon>Person_ChartOfAccount_SearchViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsViewers\RawMaterialTransaction\RawMaterialTransaction_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\RawMaterialTransaction\RawMaterialTransaction_EditorViewer.Designer.cs">
+      <DependentUpon>RawMaterialTransaction_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\RawMaterialTransaction\RawMaterialTransaction_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\RawMaterialTransaction\RawMaterialTransaction_SearchViewer.Designer.cs">
+      <DependentUpon>RawMaterialTransaction_SearchViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\RawMaterial_Viewers\RawMaterial_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\RawMaterial_Viewers\RawMaterial_EditorViewer.Designer.cs">
+      <DependentUpon>RawMaterial_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\RawMaterial_Viewers\RawMaterial_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\RawMaterial_Viewers\RawMaterial_SearchViewer.Designer.cs">
+      <DependentUpon>RawMaterial_SearchViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="SettingsViewers\RoleRegistrationViewers\RoleRegistration_EditorViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1366,23 +1390,23 @@
     <EmbeddedResource Include="InvoiceViewers\ReadyInvoiceForPayments_UC.resx">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MerkDesignWork\Color_Viewers\Color_EditorViewer.resx">
+    <EmbeddedResource Include="ReportsContainer\GetInventoryItemAreaParts_Report.resx">
+      <DependentUpon>GetInventoryItemAreaParts_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsContainer\GetRawMaterialCostPrices_Report.resx">
+      <DependentUpon>GetRawMaterialCostPrices_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\Color_Viewers\Color_EditorViewer.resx">
       <DependentUpon>Color_EditorViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MerkDesignWork\Color_Viewers\Color_SearchViewer.resx">
+    <EmbeddedResource Include="SettingsViewers\Color_Viewers\Color_SearchViewer.resx">
       <DependentUpon>Color_SearchViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MerkDesignWork\InventoryItem_Area_Viewers\InventoryItem_Area_EditorViewer.resx">
+    <EmbeddedResource Include="SettingsViewers\InventoryItem_Area_Viewers\InventoryItem_Area_EditorViewer.resx">
       <DependentUpon>InventoryItem_Area_EditorViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MerkDesignWork\InventoryItem_Area_Viewers\InventoryItem_Area_SearchViewer.resx">
+    <EmbeddedResource Include="SettingsViewers\InventoryItem_Area_Viewers\InventoryItem_Area_SearchViewer.resx">
       <DependentUpon>InventoryItem_Area_SearchViewer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MerkDesignWork\RawMaterial_Viewers\RawMaterial_EditorViewer.resx">
-      <DependentUpon>RawMaterial_EditorViewer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MerkDesignWork\RawMaterial_Viewers\RawMaterial_SearchViewer.resx">
-      <DependentUpon>RawMaterial_SearchViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsViewers\InventoryItem_InventoryItemGroupViewers\InventoryItemGroup_InventoryItem_EditorViewer.resx">
       <DependentUpon>InventoryItemGroup_InventoryItem_EditorViewer.cs</DependentUpon>
@@ -1783,6 +1807,18 @@
     <EmbeddedResource Include="SettingsViewers\Person_ChartOfAccount_Viewers\Person_ChartOfAccount_SearchViewer.resx">
       <DependentUpon>Person_ChartOfAccount_SearchViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\RawMaterialTransaction\RawMaterialTransaction_EditorViewer.resx">
+      <DependentUpon>RawMaterialTransaction_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\RawMaterialTransaction\RawMaterialTransaction_SearchViewer.resx">
+      <DependentUpon>RawMaterialTransaction_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\RawMaterial_Viewers\RawMaterial_EditorViewer.resx">
+      <DependentUpon>RawMaterial_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\RawMaterial_Viewers\RawMaterial_SearchViewer.resx">
+      <DependentUpon>RawMaterial_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SettingsViewers\RoleRegistrationViewers\RoleRegistration_EditorViewer.resx">
       <DependentUpon>RoleRegistration_EditorViewer.cs</DependentUpon>
     </EmbeddedResource>
@@ -1924,6 +1960,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\grd_GetRawMaterialCostPrices.xml" />
+    <None Include="Resources\lyt_GetRawMaterialCostPrices_Viewer.xml" />
+    <None Include="Resources\grd_RawMaterialTransaction_SearchViewer.xml" />
+    <None Include="Resources\lyt_RawMaterialTransaction_SearchViewer.xml" />
+    <None Include="Resources\lyt_RawMaterialTransaction_EditorViewer.xml" />
     <None Include="Resources\lyt_Color_SearchViewer.xml" />
     <None Include="Resources\lyt_Color_EditorViewer.xml" />
     <None Include="Resources\grd_Color_SearchViewer.xml" />

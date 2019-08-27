@@ -1,39 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using CommonControlLibrary;
 using MerkDataBaseBusinessLogicProject;
 using MVCBusinessLogicLibrary.BaseViewers;
+using MVCBusinessLogicLibrary.Controller;
 using MVCBusinessLogicLibrary.MVCFactories;
 using MVCBusinessLogicLibrary.Viewers;
 
-namespace CommonUserControls.MerkDesignWork.Color_Viewers
+namespace CommonUserControls.SettingsViewers.Color_Viewers
 {
-	public partial class Color_SearchViewer :
+	public partial class Color_EditorViewer : 
 		//UserControl
-		CommonAbstractSearchViewer<Color_cu>,
+		CommonAbstractEditorViewer<Color_cu>,
 		IColorViewer
 	{
-		public Color_SearchViewer()
+		public Color_EditorViewer()
 		{
 			InitializeComponent();
 
-			CommonViewsActions.LoadXMLFromString(layoutControl1, Resources.LocalizedRes.lyt_Color_SearchViewer);
+			CommonViewsActions.LoadXMLFromString(layoutControl1, Resources.LocalizedRes.lyt_Color_EditorViewer);
 			CommonViewsActions.SetupSyle(this);
 		}
 
-		private void txtInternalCode_EditValueChanged(object sender, EventArgs e)
-		{
-
-		}
-
 		#region Overrides of CommonAbstractViewer<Color_cu>
+
+		public override IMVCController<Color_cu> ViewerCollector { get; set; }
 
 		public override object ViewerID
 		{
@@ -47,7 +37,19 @@ namespace CommonUserControls.MerkDesignWork.Color_Viewers
 
 		public override string GridXML
 		{
-			get { return Resources.LocalizedRes.grd_Color_SearchViewer; }
+			get { return Resources.LocalizedRes.grd_InventoryItem_Area_SearchViewer; }
+		}
+
+		public override void FillControls()
+		{
+		}
+
+		public override void ClearControls()
+		{
+			txtNameP.EditValue = null;
+			txtNameS.EditValue = null;
+			txtDescription.EditValue = null;
+			txtInternalCode.EditValue = null;
 		}
 
 		#endregion

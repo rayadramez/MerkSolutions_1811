@@ -176,6 +176,9 @@
     <Compile Include="DiscountType_p.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="DividedByType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="DoctorCategory_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
@@ -303,6 +306,9 @@
     <Compile Include="GetCustomerInvoices_Result.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="GetInventoryItemAreaParts_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="GetInvoiceForAddmission_Result.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
@@ -322,6 +328,9 @@
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="GetPreviousVisitTiming_VisionRefractionReading_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRawMaterialCostPrices_Result.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="GetSupplierBalance_Result.cs">
@@ -636,6 +645,7 @@
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PersonType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PhoneType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\PriceType_p.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\RawMaterialTranasctionType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\RawMaterialType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\Role_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\SegmentSignType_p.cs" />
@@ -655,6 +665,7 @@
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetPreviousMedicalVisits_Result.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetPreviousVisitTiming_EOMReading_Result.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetPreviousVisitTiming_VisionRefractionReading_Result.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetRawMaterialCostPrices_Result.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetTotalServiceAndDoctorRevenues_Result.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\AccountingJournalEntryTransaction.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\AccountingJournalTransaction.cs" />
@@ -674,6 +685,7 @@
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PatientAttachment_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\PatientDepositeBalance.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\QueueManager.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\RawMaterialTranasction.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_AdnexaSegmentSign.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\TransactionEntities\VisitTiming_AnteriorSegmentSign.cs" />

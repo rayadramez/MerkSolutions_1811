@@ -1,16 +1,18 @@
 ﻿using System.Windows.Forms;
-using CommonUserControls.MerkDesignWork.Color_Viewers;
-using CommonUserControls.MerkDesignWork.InventoryItem_Area_Viewers;
-using CommonUserControls.MerkDesignWork.RawMaterial_Viewers;
+using CommonUserControls.ReportsContainer;
+using CommonUserControls.SettingsViewers.Color_Viewers;
 using CommonUserControls.SettingsViewers.InventoryHousingViewers;
 using CommonUserControls.SettingsViewers.InventoryItemBrandViewers;
 using CommonUserControls.SettingsViewers.InventoryItemCategoryViewers;
 using CommonUserControls.SettingsViewers.InventoryItemPriceViewers;
 using CommonUserControls.SettingsViewers.InventoryItemViewers;
+using CommonUserControls.SettingsViewers.InventoryItem_Area_Viewers;
 using CommonUserControls.SettingsViewers.InventoryItem_InventoryHousingViewers;
 using CommonUserControls.SettingsViewers.InventoryItem_InventoryItemGroupViewers;
 using CommonUserControls.SettingsViewers.InventoryItem_UnitMeasurmentViewers;
 using CommonUserControls.SettingsViewers.InvetoryItemGroupViewers;
+using CommonUserControls.SettingsViewers.RawMaterialTransaction;
+using CommonUserControls.SettingsViewers.RawMaterial_Viewers;
 using CommonUserControls.SettingsViewers.UnitMeasurmentTreeLinkViewers;
 using CommonUserControls.SettingsViewers.UnitMeasurmentViewers;
 using MerkDataBaseBusinessLogicProject;
@@ -63,6 +65,11 @@ namespace CommonUserControls.MerkDesignWork
 
 		private Color_EditorViewer _colorEditor;
 		private Color_SearchViewer _colorSearch;
+
+		private RawMaterialTransaction_EditorViewer _rawMaterialTransactionEditorViewer;
+		private RawMaterialTransaction_SearchViewer _rawMaterialTransactionSearchViewer;
+
+		private GetRawMaterialCostPrices_Report _getRawMaterialCostPricesReport;
 
 		public MerkFinanceMainMenu_UC()
 		{
@@ -208,6 +215,26 @@ namespace CommonUserControls.MerkDesignWork
 				"تسجيـــــل الــــوان الأخشــــاب",
 				AbstractViewerType.SearchViewer,
 				true);
+		}
+
+		private void btnRawMaterialTransaction_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+		{
+			BaseController<RawMaterialTranasction>.ShowControl(ref _rawMaterialTransactionEditorViewer,
+				ref _rawMaterialTransactionSearchViewer,
+				splitContainerControl2.Panel1,
+				EditorContainerType.Settings,
+				ViewerName.RawMaterialTransactions_viewer,
+				DB_CommonTransactionType.CreateNew,
+				"تسجيـــــل حـركــــة مــواد الخــــام",
+				AbstractViewerType.SearchViewer,
+				true);
+		}
+
+		private void btnGetRawMaterialCostPrices_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+		{
+			BaseController<GetRawMaterialCostPrices_Result>.ShowSearchControl(ref _getRawMaterialCostPricesReport, this,
+				ViewerName.GetRawMaterialCostPrices_Viewer, DB_CommonTransactionType.SearchReport,
+				".... تقــريــــــر تكاليـــف المـــواد الخــــام .....", true, true);
 		}
 	}
 }

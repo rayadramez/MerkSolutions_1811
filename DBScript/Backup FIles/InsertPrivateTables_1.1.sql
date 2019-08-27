@@ -728,6 +728,10 @@ PRINT 'RawMaterialTranasctionType_p'
 IF NOT EXISTS (SELECT 1 FROM [dbo].RawMaterialTranasctionType_p WHERE ID BETWEEN 1 AND 2)
 INSERT INTO dbo.RawMaterialTranasctionType_p ( ID, Name_P, Name_S, Description ) VALUES  ( 1, N'شراء',N'Purchasing',N'' ),
 ( 2, N'بيع',N'Selling',N'' )
+
+PRINT 'RawMaterialTranasctionType_p'
+IF NOT EXISTS (SELECT 1 FROM [dbo].RawMaterialTranasctionType_p WHERE ID = 3)
+INSERT INTO dbo.RawMaterialTranasctionType_p ( ID, Name_P, Name_S, Description ) VALUES  ( 3, N'إستهلاك',N'Consuming',N'' )
 -- ///////////// END :: RawMaterialTranasctionType_p
 
 -- ///////////// BEGIN :: RawMaterialType_p
@@ -736,6 +740,14 @@ IF NOT EXISTS (SELECT 1 FROM [dbo].RawMaterialType_p WHERE ID BETWEEN 1 AND 2)
 INSERT INTO dbo.RawMaterialType_p ( ID, Name_P, Name_S, Description ) VALUES  ( 1, N'أخشاب إم دي أف',N'MDF Wood',N'' ),
 ( 2, N'لزق أمير',N'Amir Adhesive',N'' )
 -- ///////////// END :: RawMaterialType_p
+
+-- ///////////// BEGIN :: DividedByType_p
+PRINT 'DividedByType_p'
+IF NOT EXISTS (SELECT 1 FROM [dbo].DividedByType_p WHERE ID BETWEEN 1 AND 2)
+INSERT INTO dbo.DividedByType_p ( ID, Name_P, Name_S, Description ) VALUES  ( 1, N'غير مقسم',N'Not Divided',N'120*240' ),
+( 2, N'مقسم إلى 4 بالطول',N'Divided By 4 Height',N'120*60' ),
+( 3, N'مقسم إلى 6 بالعرض والطول',N'Divided By 6 Width and Height',N'60*80' )
+-- ///////////// END :: DividedByType_p
 
 IF @@ERROR<>0 AND @@TRANCOUNT>0 ROLLBACK TRANSACTION
 GO

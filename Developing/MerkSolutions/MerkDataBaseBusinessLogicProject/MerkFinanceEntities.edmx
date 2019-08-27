@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MerkFinanceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MerkFinanceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AccountingJournalEntryTransaction">
           <Key>
             <PropertyRef Name="ID" />
@@ -458,6 +458,15 @@
           <Property Name="Name_P" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="Name_S" Type="nvarchar" MaxLength="150" />
           <Property Name="Description" Type="ntext" />
+        </EntityType>
+        <EntityType Name="DividedByType_p">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name_P" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name_S" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Doctor_cu">
           <Key>
@@ -1953,6 +1962,7 @@
           <Property Name="ExpirationDate" Type="datetime" />
           <Property Name="InternalCode" Type="nvarchar" MaxLength="50" />
           <Property Name="Color_CU_ID" Type="int" />
+          <Property Name="DividedByType_P_ID" Type="int" Nullable="false" />
           <Property Name="IsCountable" Type="bit" />
           <Property Name="IsStockAvailable" Type="bit" />
           <Property Name="Description" Type="nvarchar" MaxLength="200" />
@@ -1963,10 +1973,14 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
-          <Property Name="RawMaterial_CU_ID" Type="int" Nullable="false" />
-          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RawMaterialTransactionType_P_ID" Type="int" Nullable="false" />
+          <Property Name="RawMaterial_CU_ID" Type="int" Nullable="false" />
+          <Property Name="DividedByType_P_ID" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="PuchasingPrice" Type="float" Nullable="false" />
+          <Property Name="Width" Type="float" />
+          <Property Name="Height" Type="float" />
           <Property Name="Date" Type="datetime" Nullable="false" />
           <Property Name="InsertedBy" Type="int" />
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
@@ -7216,6 +7230,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_RawMaterials_cu_DividedByType_p">
+          <End Role="DividedByType_p" Type="Self.DividedByType_p" Multiplicity="1" />
+          <End Role="RawMaterials_cu" Type="Self.RawMaterials_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DividedByType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RawMaterials_cu">
+              <PropertyRef Name="DividedByType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_RawMaterials_cu_RawMaterialType_p">
           <End Role="RawMaterialType_p" Type="Self.RawMaterialType_p" Multiplicity="1" />
           <End Role="RawMaterials_cu" Type="Self.RawMaterials_cu" Multiplicity="*" />
@@ -7225,6 +7251,18 @@
             </Principal>
             <Dependent Role="RawMaterials_cu">
               <PropertyRef Name="RawTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RawMaterialTranasction_DividedByType_p">
+          <End Role="DividedByType_p" Type="Self.DividedByType_p" Multiplicity="1" />
+          <End Role="RawMaterialTranasction" Type="Self.RawMaterialTranasction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DividedByType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RawMaterialTranasction">
+              <PropertyRef Name="DividedByType_P_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -9701,6 +9739,9 @@
         <Function Name="GetDoctorFullName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
           <Parameter Name="DoctorID" Type="int" Mode="In" />
         </Function>
+        <Function Name="GetInventoryItemAreaParts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="InventoryItemID" Type="int" Mode="In" />
+        </Function>
         <Function Name="GetInvoiceForAddmission" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="InvoiceCreationDateStart" Type="datetime" Mode="In" />
           <Parameter Name="InvoiceCreationDateEnd" Type="datetime" Mode="In" />
@@ -9759,6 +9800,12 @@
           <Parameter Name="PatientID" Type="int" Mode="In" />
           <Parameter Name="FromDate" Type="date" Mode="In" />
           <Parameter Name="ToDate" Type="date" Mode="In" />
+        </Function>
+        <Function Name="GetRawMaterialCostPrices" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RawMaterialID" Type="int" Mode="In" />
+          <Parameter Name="FromDate" Type="date" Mode="In" />
+          <Parameter Name="ToDate" Type="date" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
         </Function>
         <Function Name="GetSupplierBalance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SupplierID" Type="int" Mode="In" />
@@ -9850,6 +9897,7 @@
           <EntitySet Name="DiagnosisCategory_Diagnosis_cu" EntityType="Self.DiagnosisCategory_Diagnosis_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DiagnosisType_p" EntityType="Self.DiagnosisType_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DiscountType_p" EntityType="Self.DiscountType_p" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DividedByType_p" EntityType="Self.DividedByType_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Doctor_cu" EntityType="Self.Doctor_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Doctor_Diagnosis_cu" EntityType="Self.Doctor_Diagnosis_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Doctor_DiagnosisCategory_cu" EntityType="Self.Doctor_DiagnosisCategory_cu" Schema="dbo" store:Type="Tables" />
@@ -11446,9 +11494,17 @@
             <End Role="Color_cu" EntitySet="Color_cu" />
             <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
           </AssociationSet>
+          <AssociationSet Name="FK_RawMaterials_cu_DividedByType_p" Association="Self.FK_RawMaterials_cu_DividedByType_p">
+            <End Role="DividedByType_p" EntitySet="DividedByType_p" />
+            <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
+          </AssociationSet>
           <AssociationSet Name="FK_RawMaterials_cu_RawMaterialType_p" Association="Self.FK_RawMaterials_cu_RawMaterialType_p">
             <End Role="RawMaterialType_p" EntitySet="RawMaterialType_p" />
             <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RawMaterialTranasction_DividedByType_p" Association="Self.FK_RawMaterialTranasction_DividedByType_p">
+            <End Role="DividedByType_p" EntitySet="DividedByType_p" />
+            <End Role="RawMaterialTranasction" EntitySet="RawMaterialTranasction" />
           </AssociationSet>
           <AssociationSet Name="FK_RawMaterialTranasction_RawMaterials_cu" Association="Self.FK_RawMaterialTranasction_RawMaterials_cu">
             <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
@@ -12267,8 +12323,7 @@
             <End Role="WorkingShiftTitle_cu" EntitySet="WorkingShiftTitle_cu" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MerkFinanceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -12885,6 +12940,17 @@
           <NavigationProperty Name="InvoiceDetail_DoctorFees" Relationship="Self.FK_InvoiceDetail_DoctorFees_DiscountType_p" FromRole="DiscountType_p" ToRole="InvoiceDetail_DoctorFees" />
           <NavigationProperty Name="InvoiceDetail_Inventory" Relationship="Self.FK_InvoiceDetail_Inventory_InvoiceDetail_Inventory" FromRole="DiscountType_p" ToRole="InvoiceDetail_Inventory" />
           <NavigationProperty Name="InvoiceDiscounts" Relationship="Self.FK_InvoiceDiscount_DiscountType_p" FromRole="DiscountType_p" ToRole="InvoiceDiscount" />
+        </EntityType>
+        <EntityType Name="DividedByType_p">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name_P" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_S" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="RawMaterials_cu" Relationship="Self.FK_RawMaterials_cu_DividedByType_p" FromRole="DividedByType_p" ToRole="RawMaterials_cu" />
+          <NavigationProperty Name="RawMaterialTranasctions" Relationship="Self.FK_RawMaterialTranasction_DividedByType_p" FromRole="DividedByType_p" ToRole="RawMaterialTranasction" />
         </EntityType>
         <EntityType Name="Doctor_cu">
           <Key>
@@ -14813,12 +14879,14 @@
           <Property Name="ExpirationDate" Type="DateTime" Precision="3" />
           <Property Name="InternalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Color_CU_ID" Type="Int32" />
+          <Property Name="DividedByType_P_ID" Type="Int32" Nullable="false" />
           <Property Name="IsCountable" Type="Boolean" />
           <Property Name="IsStockAvailable" Type="Boolean" />
           <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="InsertedBy" Type="Int32" />
           <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Color_cu" Relationship="Self.FK_RawMaterials_cu_Color_cu" FromRole="RawMaterials_cu" ToRole="Color_cu" />
+          <NavigationProperty Name="DividedByType_p" Relationship="Self.FK_RawMaterials_cu_DividedByType_p" FromRole="RawMaterials_cu" ToRole="DividedByType_p" />
           <NavigationProperty Name="InventoryItem_RawMaterial_cu" Relationship="Self.FK_InventoryItem_RawMaterial_cu_RawMaterials_cu" FromRole="RawMaterials_cu" ToRole="InventoryItem_RawMaterial_cu" />
           <NavigationProperty Name="RawMaterialType_p" Relationship="Self.FK_RawMaterials_cu_RawMaterialType_p" FromRole="RawMaterials_cu" ToRole="RawMaterialType_p" />
           <NavigationProperty Name="RawMaterialTranasctions" Relationship="Self.FK_RawMaterialTranasction_RawMaterials_cu" FromRole="RawMaterials_cu" ToRole="RawMaterialTranasction" />
@@ -14828,13 +14896,18 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="RawMaterial_CU_ID" Type="Int32" Nullable="false" />
-          <Property Name="Count" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RawMaterialTransactionType_P_ID" Type="Int32" Nullable="false" />
+          <Property Name="RawMaterial_CU_ID" Type="Int32" Nullable="false" />
+          <Property Name="DividedByType_P_ID" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <Property Name="PuchasingPrice" Type="Double" Nullable="false" />
+          <Property Name="Width" Type="Double" />
+          <Property Name="Height" Type="Double" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="InsertedBy" Type="Int32" />
           <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="DividedByType_p" Relationship="Self.FK_RawMaterialTranasction_DividedByType_p" FromRole="RawMaterialTranasction" ToRole="DividedByType_p" />
           <NavigationProperty Name="RawMaterials_cu" Relationship="Self.FK_RawMaterialTranasction_RawMaterials_cu" FromRole="RawMaterialTranasction" ToRole="RawMaterials_cu" />
           <NavigationProperty Name="RawMaterialTranasctionType_p" Relationship="Self.FK_RawMaterialTranasction_RawMaterialTranasctionType_p" FromRole="RawMaterialTranasction" ToRole="RawMaterialTranasctionType_p" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_RawMaterialTranasction_User_cu" FromRole="RawMaterialTranasction" ToRole="User_cu" />
@@ -17896,6 +17969,30 @@
             </Principal>
             <Dependent Role="InvoiceDiscount">
               <PropertyRef Name="DisountType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RawMaterials_cu_DividedByType_p">
+          <End Role="DividedByType_p" Type="Self.DividedByType_p" Multiplicity="1" />
+          <End Role="RawMaterials_cu" Type="Self.RawMaterials_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DividedByType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RawMaterials_cu">
+              <PropertyRef Name="DividedByType_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RawMaterialTranasction_DividedByType_p">
+          <End Role="DividedByType_p" Type="Self.DividedByType_p" Multiplicity="1" />
+          <End Role="RawMaterialTranasction" Type="Self.RawMaterialTranasction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DividedByType_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RawMaterialTranasction">
+              <PropertyRef Name="DividedByType_P_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -23087,6 +23184,7 @@
           <EntitySet Name="DiagnosisCategory_Diagnosis_cu" EntityType="Self.DiagnosisCategory_Diagnosis_cu" />
           <EntitySet Name="DiagnosisType_p" EntityType="Self.DiagnosisType_p" />
           <EntitySet Name="DiscountType_p" EntityType="Self.DiscountType_p" />
+          <EntitySet Name="DividedByType_p" EntityType="Self.DividedByType_p" />
           <EntitySet Name="Doctor_cu" EntityType="Self.Doctor_cu" />
           <EntitySet Name="Doctor_Diagnosis_cu" EntityType="Self.Doctor_Diagnosis_cu" />
           <EntitySet Name="Doctor_DiagnosisCategory_cu" EntityType="Self.Doctor_DiagnosisCategory_cu" />
@@ -23786,6 +23884,14 @@
           <AssociationSet Name="FK_InvoiceDiscount_DiscountType_p" Association="Self.FK_InvoiceDiscount_DiscountType_p">
             <End Role="DiscountType_p" EntitySet="DiscountType_p" />
             <End Role="InvoiceDiscount" EntitySet="InvoiceDiscounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RawMaterials_cu_DividedByType_p" Association="Self.FK_RawMaterials_cu_DividedByType_p">
+            <End Role="DividedByType_p" EntitySet="DividedByType_p" />
+            <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RawMaterialTranasction_DividedByType_p" Association="Self.FK_RawMaterialTranasction_DividedByType_p">
+            <End Role="DividedByType_p" EntitySet="DividedByType_p" />
+            <End Role="RawMaterialTranasction" EntitySet="RawMaterialTranasctions" />
           </AssociationSet>
           <AssociationSet Name="FK_Doctor_cu_DoctorCategory_cu" Association="Self.FK_Doctor_cu_DoctorCategory_cu">
             <End Role="DoctorCategory_cu" EntitySet="DoctorCategory_cu" />
@@ -25533,7 +25639,7 @@
             <Parameter Name="PatientID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetInvoiceNextSerial" ReturnType="Collection(String)">
-            <Parameter Name="InvoiceType" Mode="In" Type="Int32" />
+          <Parameter Name="InvoiceType" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetInvoicePaymentSerial" ReturnType="Collection(String)" />
           <FunctionImport Name="GetInvoicesPaymentBriefReport" ReturnType="Collection(MerkFinanceModel.GetInvoicesPaymentBriefReport_Result)">
@@ -25576,6 +25682,12 @@
             <Parameter Name="PatientID" Mode="In" Type="Int32" />
             <Parameter Name="FromDate" Mode="In" Type="DateTime" />
             <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GetRawMaterialCostPrices" ReturnType="Collection(MerkFinanceModel.GetRawMaterialCostPrices_Result)">
+            <Parameter Name="RawMaterialID" Mode="In" Type="Int32" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetSupplierBalance" ReturnType="Collection(MerkFinanceModel.GetSupplierBalance_Result)">
             <Parameter Name="SupplierID" Mode="In" Type="Int32" />
@@ -25621,6 +25733,9 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="GetInventoryItemAreaParts" ReturnType="Collection(MerkFinanceModel.GetInventoryItemAreaParts_Result)">
+            <Parameter Name="InventoryItemID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="GetBriefQueue_Result">
           <Property Type="Int32" Name="InvoiceID" Nullable="false" />
@@ -25782,6 +25897,24 @@
           <Property Type="Boolean" Name="IsOnDuty" Nullable="false" />
           <Property Type="Int32" Name="InsertedBy" Nullable="true" />
         </ComplexType>
+        <ComplexType Name="GetRawMaterialCostPrices_Result">
+          <Property Type="Int32" Name="TransTypeID" Nullable="false" />
+          <Property Type="String" Name="TransactionTypeName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="RawID" Nullable="false" />
+          <Property Type="String" Name="RawName" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="Thickness" Nullable="false" />
+          <Property Type="Int32" Name="Count" Nullable="true" />
+          <Property Type="Double" Name="Width" Nullable="true" />
+          <Property Type="Double" Name="Height" Nullable="true" />
+          <Property Type="Int32" Name="DividedByTypeID" Nullable="false" />
+          <Property Type="String" Name="DividedByTypeName" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Date" Nullable="false" Precision="23" />
+          <Property Type="Double" Name="UnitArea" Nullable="true" />
+          <Property Type="Double" Name="TotalArea" Nullable="false" />
+          <Property Type="Double" Name="PurchasingPriceInPounds" Nullable="true" />
+          <Property Type="Double" Name="TotalPurchasingPriceInPounds" Nullable="true" />
+          <Property Type="Double" Name="UnitPriceInPounds" Nullable="true" />
+        </ComplexType>
         <ComplexType Name="GetSupplierBalance_Result">
           <Property Type="Int32" Name="CustomerID" Nullable="true" />
           <Property Type="Double" Name="TotalRequired" Nullable="true" />
@@ -25805,6 +25938,12 @@
           <Property Type="Int32" Name="ID" Nullable="false" />
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GetInventoryItemAreaParts_Result">
+          <Property Type="Int32" Name="ItemID" Nullable="false" />
+          <Property Type="Double" Name="Width" Nullable="true" />
+          <Property Type="Double" Name="Height" Nullable="true" />
+          <Property Type="Double" Name="Count" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -26298,6 +26437,16 @@
           <EntitySetMapping Name="DiscountType_p">
             <EntityTypeMapping TypeName="MerkFinanceModel.DiscountType_p">
               <MappingFragment StoreEntitySet="DiscountType_p">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name_P" ColumnName="Name_P" />
+                <ScalarProperty Name="Name_S" ColumnName="Name_S" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DividedByType_p">
+            <EntityTypeMapping TypeName="MerkFinanceModel.DividedByType_p">
+              <MappingFragment StoreEntitySet="DividedByType_p">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name_P" ColumnName="Name_P" />
                 <ScalarProperty Name="Name_S" ColumnName="Name_S" />
@@ -27918,6 +28067,7 @@
                 <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
                 <ScalarProperty Name="InternalCode" ColumnName="InternalCode" />
                 <ScalarProperty Name="Color_CU_ID" ColumnName="Color_CU_ID" />
+                <ScalarProperty Name="DividedByType_P_ID" ColumnName="DividedByType_P_ID" />
                 <ScalarProperty Name="IsCountable" ColumnName="IsCountable" />
                 <ScalarProperty Name="IsStockAvailable" ColumnName="IsStockAvailable" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -27930,9 +28080,13 @@
             <EntityTypeMapping TypeName="MerkFinanceModel.RawMaterialTranasction">
               <MappingFragment StoreEntitySet="RawMaterialTranasction">
                 <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="RawMaterial_CU_ID" ColumnName="RawMaterial_CU_ID" />
-                <ScalarProperty Name="Count" ColumnName="Count" />
                 <ScalarProperty Name="RawMaterialTransactionType_P_ID" ColumnName="RawMaterialTransactionType_P_ID" />
+                <ScalarProperty Name="RawMaterial_CU_ID" ColumnName="RawMaterial_CU_ID" />
+                <ScalarProperty Name="DividedByType_P_ID" ColumnName="DividedByType_P_ID" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="PuchasingPrice" ColumnName="PuchasingPrice" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
                 <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
@@ -29308,6 +29462,28 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetRawMaterialCostPrices" FunctionName="MerkFinanceModel.Store.GetRawMaterialCostPrices">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MerkFinanceModel.GetRawMaterialCostPrices_Result">
+                <ScalarProperty Name="TransTypeID" ColumnName="TransTypeID" />
+                <ScalarProperty Name="TransactionTypeName" ColumnName="TransactionTypeName" />
+                <ScalarProperty Name="RawID" ColumnName="RawID" />
+                <ScalarProperty Name="RawName" ColumnName="RawName" />
+                <ScalarProperty Name="Thickness" ColumnName="Thickness" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="DividedByTypeID" ColumnName="DividedByTypeID" />
+                <ScalarProperty Name="DividedByTypeName" ColumnName="DividedByTypeName" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UnitArea" ColumnName="UnitArea" />
+                <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+                <ScalarProperty Name="PurchasingPriceInPounds" ColumnName="PurchasingPriceInPounds" />
+                <ScalarProperty Name="TotalPurchasingPriceInPounds" ColumnName="TotalPurchasingPriceInPounds" />
+                <ScalarProperty Name="UnitPriceInPounds" ColumnName="UnitPriceInPounds" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="GetSupplierBalance" FunctionName="MerkFinanceModel.Store.GetSupplierBalance">
             <ResultMapping>
               <ComplexTypeMapping TypeName="MerkFinanceModel.GetSupplierBalance_Result">
@@ -29353,6 +29529,16 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="MerkFinanceModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="MerkFinanceModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="GetInventoryItemAreaParts" FunctionName="MerkFinanceModel.Store.GetInventoryItemAreaParts">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MerkFinanceModel.GetInventoryItemAreaParts_Result">
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

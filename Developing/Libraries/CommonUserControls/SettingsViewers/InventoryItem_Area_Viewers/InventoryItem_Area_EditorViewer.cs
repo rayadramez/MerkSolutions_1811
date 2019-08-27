@@ -6,7 +6,7 @@ using MVCBusinessLogicLibrary.Controller;
 using MVCBusinessLogicLibrary.MVCFactories;
 using MVCBusinessLogicLibrary.Viewers;
 
-namespace CommonUserControls.MerkDesignWork.InventoryItem_Area_Viewers
+namespace CommonUserControls.SettingsViewers.InventoryItem_Area_Viewers
 {
 	public partial class InventoryItem_Area_EditorViewer :
 		//DevExpress.XtraEditors.XtraUserControl

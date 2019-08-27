@@ -90,7 +90,9 @@ namespace MVCBusinessLogicLibrary.Controller
 		public List<IViewer> RelatedViewers { get; set; }
 		public void ClearControls()
 		{
-			throw new System.NotImplementedException();
+			if (ActiveCollector != null)
+				//ActiveCollector.ClearControls();
+				ActiveCollector.ActiveViewer.ClearControls();
 		}
 
 		public void FillControls()

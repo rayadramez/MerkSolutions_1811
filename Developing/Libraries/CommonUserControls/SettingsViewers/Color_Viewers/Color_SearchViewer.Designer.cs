@@ -1,4 +1,4 @@
-﻿namespace CommonUserControls.MerkDesignWork.Color_Viewers
+﻿namespace CommonUserControls.SettingsViewers.Color_Viewers
 {
 	partial class Color_SearchViewer
 	{

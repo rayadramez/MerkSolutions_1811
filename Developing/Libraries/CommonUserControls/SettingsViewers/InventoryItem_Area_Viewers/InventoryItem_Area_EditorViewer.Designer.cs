@@ -1,4 +1,4 @@
-﻿namespace CommonUserControls.MerkDesignWork.InventoryItem_Area_Viewers
+﻿namespace CommonUserControls.SettingsViewers.InventoryItem_Area_Viewers
 {
 	partial class InventoryItem_Area_EditorViewer
 	{

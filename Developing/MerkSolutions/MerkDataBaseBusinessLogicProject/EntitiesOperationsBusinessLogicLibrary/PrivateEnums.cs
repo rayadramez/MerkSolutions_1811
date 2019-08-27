@@ -2,6 +2,21 @@
 {
 	#region DBCommon
 
+	public enum DB_DividedByType
+	{
+		None = 0,
+		NotDivided = 1,
+		DividedBy4 = 2,
+		DividedBy6 = 3
+	}
+
+	public enum DB_RawMaterialTransactionType
+	{
+		Purchasing = 1,
+		Selling = 2,
+		Consuming = 3
+	}
+
 	public enum DB_PupillaryRAPDGradingScale
 	{
 		None = 0,
@@ -447,7 +462,9 @@
 		InventoryItem_Area,
 		RawMaterials_cu,
 		RawMaterialType_p,
-		Color_cu
+		Color_cu,
+		RawMaterialTranasction,
+		RawMaterialTranasctionType_p
 	}
 
 	public enum DB_Station

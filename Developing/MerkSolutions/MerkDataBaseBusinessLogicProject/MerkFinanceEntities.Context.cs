@@ -66,6 +66,7 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual DbSet<DiagnosisCategory_Diagnosis_cu> DiagnosisCategory_Diagnosis_cu { get; set; }
         public virtual DbSet<DiagnosisType_p> DiagnosisType_p { get; set; }
         public virtual DbSet<DiscountType_p> DiscountType_p { get; set; }
+        public virtual DbSet<DividedByType_p> DividedByType_p { get; set; }
         public virtual DbSet<Doctor_cu> Doctor_cu { get; set; }
         public virtual DbSet<Doctor_Diagnosis_cu> Doctor_Diagnosis_cu { get; set; }
         public virtual DbSet<Doctor_DiagnosisCategory_cu> Doctor_DiagnosisCategory_cu { get; set; }
@@ -539,6 +540,27 @@ namespace MerkDataBaseBusinessLogicProject
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetPreviousVisitTiming_VisionRefractionReading_Result>("GetPreviousVisitTiming_VisionRefractionReading", patientIDParameter, fromDateParameter, toDateParameter);
         }
     
+        public virtual ObjectResult<GetRawMaterialCostPrices_Result> GetRawMaterialCostPrices(Nullable<int> rawMaterialID, Nullable<System.DateTime> fromDate, Nullable<System.DateTime> toDate, Nullable<int> userID)
+        {
+            var rawMaterialIDParameter = rawMaterialID.HasValue ?
+                new ObjectParameter("RawMaterialID", rawMaterialID) :
+                new ObjectParameter("RawMaterialID", typeof(int));
+    
+            var fromDateParameter = fromDate.HasValue ?
+                new ObjectParameter("FromDate", fromDate) :
+                new ObjectParameter("FromDate", typeof(System.DateTime));
+    
+            var toDateParameter = toDate.HasValue ?
+                new ObjectParameter("ToDate", toDate) :
+                new ObjectParameter("ToDate", typeof(System.DateTime));
+    
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetRawMaterialCostPrices_Result>("GetRawMaterialCostPrices", rawMaterialIDParameter, fromDateParameter, toDateParameter, userIDParameter);
+        }
+    
         public virtual ObjectResult<GetSupplierBalance_Result> GetSupplierBalance(Nullable<int> supplierID, Nullable<int> invoiceTypeID)
         {
             var supplierIDParameter = supplierID.HasValue ?
@@ -690,6 +712,15 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual int sp_upgraddiagrams()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
+        }
+    
+        public virtual ObjectResult<GetInventoryItemAreaParts_Result> GetInventoryItemAreaParts(Nullable<int> inventoryItemID)
+        {
+            var inventoryItemIDParameter = inventoryItemID.HasValue ?
+                new ObjectParameter("InventoryItemID", inventoryItemID) :
+                new ObjectParameter("InventoryItemID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetInventoryItemAreaParts_Result>("GetInventoryItemAreaParts", inventoryItemIDParameter);
         }
     }
 }

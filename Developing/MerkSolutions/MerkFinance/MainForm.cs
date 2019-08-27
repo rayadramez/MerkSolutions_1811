@@ -32,5 +32,10 @@ namespace MerkFinance
 		{
 
 		}
+
+		private void btnInvoiceReport_Click(object sender, System.EventArgs e)
+		{
+
+		}
 	}
 }

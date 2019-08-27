@@ -15,5 +15,6 @@
 		object IsStockAvailable { get; set; }
 		object InternalCode { get; set; }
 		object ColorID { get; set; }
+		object DividedTypeID { get; set; }
 	}
 }

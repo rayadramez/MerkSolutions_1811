@@ -38,8 +38,7 @@
       <property name="Width">200</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
-      <property name="VisibleIndex">6</property>
-      <property name="Fixed">Right</property>
+      <property name="VisibleIndex">0</property>
       <property name="Name">gridColumn2</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
@@ -75,8 +74,7 @@
       <property name="Width">200</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
-      <property name="VisibleIndex">5</property>
-      <property name="Fixed">Right</property>
+      <property name="VisibleIndex">1</property>
       <property name="Name">gridColumn5</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
@@ -87,11 +85,10 @@
       <property name="FieldName">Name_S</property>
     </property>
     <property name="Item3" isnull="true" iskey="true">
-      <property name="Width">28</property>
+      <property name="Width">50</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
-      <property name="VisibleIndex">4</property>
-      <property name="Fixed">Right</property>
+      <property name="VisibleIndex">2</property>
       <property name="Name">gridColumn6</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
@@ -118,11 +115,10 @@
           <property name="HAlignment">Center</property>
         </property>
       </property>
-      <property name="Width">150</property>
+      <property name="Width">100</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
       <property name="VisibleIndex">3</property>
-      <property name="Fixed">Right</property>
       <property name="Name">gridColumn9</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
@@ -133,80 +129,94 @@
       <property name="FieldName">RawTypeName</property>
     </property>
     <property name="Item5" isnull="true" iskey="true">
-      <property name="Width">20</property>
+      <property name="Width">80</property>
+      <property name="Visible">true</property>
       <property name="ColumnEditName" />
+      <property name="VisibleIndex">4</property>
       <property name="Name">gridColumn4</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
         <property name="ReadOnly">true</property>
+        <property name="FixedWidth">true</property>
       </property>
       <property name="Caption">العرض</property>
       <property name="FieldName">Width</property>
     </property>
     <property name="Item6" isnull="true" iskey="true">
-      <property name="Width">27</property>
+      <property name="Width">80</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
-      <property name="VisibleIndex">0</property>
+      <property name="VisibleIndex">5</property>
       <property name="Name">gridColumn8</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
         <property name="ReadOnly">true</property>
+        <property name="FixedWidth">true</property>
       </property>
       <property name="Caption">الطول</property>
       <property name="FieldName">Height</property>
     </property>
     <property name="Item7" isnull="true" iskey="true">
-      <property name="Width">20</property>
+      <property name="Width">80</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
-      <property name="VisibleIndex">1</property>
+      <property name="VisibleIndex">6</property>
       <property name="Name">gridColumn7</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
         <property name="ReadOnly">true</property>
+        <property name="FixedWidth">true</property>
       </property>
       <property name="Caption">الوزن</property>
       <property name="FieldName">Weight</property>
     </property>
     <property name="Item8" isnull="true" iskey="true">
-      <property name="Width">20</property>
+      <property name="Width">80</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
-      <property name="VisibleIndex">2</property>
+      <property name="VisibleIndex">7</property>
       <property name="Name">gridColumn10</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
         <property name="ReadOnly">true</property>
+        <property name="FixedWidth">true</property>
       </property>
       <property name="Caption">السمك</property>
       <property name="FieldName">Thickness</property>
     </property>
     <property name="Item9" isnull="true" iskey="true">
-      <property name="Width">20</property>
+      <property name="Width">80</property>
+      <property name="Visible">true</property>
       <property name="ColumnEditName" />
+      <property name="VisibleIndex">8</property>
       <property name="Name">gridColumn20</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
         <property name="ReadOnly">true</property>
+        <property name="FixedWidth">true</property>
       </property>
       <property name="Caption">ت. الصلاحية</property>
       <property name="FieldName">ExpirationDate</property>
     </property>
     <property name="Item10" isnull="true" iskey="true">
-      <property name="Width">20</property>
+      <property name="Width">80</property>
+      <property name="Visible">true</property>
       <property name="ColumnEditName" />
+      <property name="VisibleIndex">9</property>
       <property name="Name">gridColumn15</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
         <property name="ReadOnly">true</property>
+        <property name="FixedWidth">true</property>
       </property>
       <property name="Caption">متوفر؟</property>
       <property name="FieldName">IsStockAvailable</property>
     </property>
     <property name="Item11" isnull="true" iskey="true">
       <property name="Width">20</property>
+      <property name="Visible">true</property>
       <property name="ColumnEditName" />
+      <property name="VisibleIndex">10</property>
       <property name="Name">gridColumn17</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>

@@ -32,17 +32,19 @@
 			this.pnlMain = new DevExpress.XtraEditors.PanelControl();
 			this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
 			this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-			this.btnMenu = new DevExpress.XtraEditors.SimpleButton();
-			this.btnLoggingUser = new DevExpress.XtraEditors.DropDownButton();
-			this.btnHome = new DevExpress.XtraEditors.SimpleButton();
 			this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.btnInvoiceReport = new DevExpress.XtraEditors.SimpleButton();
+			this.btnMenu = new DevExpress.XtraEditors.SimpleButton();
+			this.btnLoggingUser = new DevExpress.XtraEditors.DropDownButton();
+			this.btnHome = new DevExpress.XtraEditors.SimpleButton();
+			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pnlMain)).BeginInit();
@@ -51,13 +53,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
 			this.layoutControl2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
@@ -98,6 +101,7 @@
 			// 
 			// layoutControl2
 			// 
+			this.layoutControl2.Controls.Add(this.btnInvoiceReport);
 			this.layoutControl2.Controls.Add(this.btnMenu);
 			this.layoutControl2.Controls.Add(this.btnLoggingUser);
 			this.layoutControl2.Controls.Add(this.btnHome);
@@ -110,6 +114,83 @@
 			this.layoutControl2.Size = new System.Drawing.Size(1346, 54);
 			this.layoutControl2.TabIndex = 0;
 			this.layoutControl2.Text = "layoutControl2";
+			// 
+			// layoutControlGroup2
+			// 
+			this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+			this.layoutControlGroup2.GroupBordersVisible = false;
+			this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.emptySpaceItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem6});
+			this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlGroup2.Name = "Root";
+			this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlGroup2.Size = new System.Drawing.Size(1346, 54);
+			this.layoutControlGroup2.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlGroup2.TextVisible = false;
+			// 
+			// emptySpaceItem2
+			// 
+			this.emptySpaceItem2.AllowHotTrack = false;
+			this.emptySpaceItem2.Location = new System.Drawing.Point(206, 0);
+			this.emptySpaceItem2.Name = "emptySpaceItem2";
+			this.emptySpaceItem2.Size = new System.Drawing.Size(880, 48);
+			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// layoutControlGroup1
+			// 
+			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+			this.layoutControlGroup1.GroupBordersVisible = false;
+			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2,
+            this.layoutControlItem5});
+			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlGroup1.Name = "Root";
+			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlGroup1.Size = new System.Drawing.Size(1350, 729);
+			this.layoutControlGroup1.TextVisible = false;
+			// 
+			// layoutControlItem2
+			// 
+			this.layoutControlItem2.Control = this.panelControl1;
+			this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlItem2.Name = "layoutControlItem2";
+			this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem2.Size = new System.Drawing.Size(1350, 58);
+			this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem2.TextVisible = false;
+			// 
+			// layoutControlItem5
+			// 
+			this.layoutControlItem5.Control = this.pnlMain;
+			this.layoutControlItem5.Location = new System.Drawing.Point(0, 58);
+			this.layoutControlItem5.Name = "layoutControlItem5";
+			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem5.Size = new System.Drawing.Size(1350, 671);
+			this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem5.TextVisible = false;
+			// 
+			// btnInvoiceReport
+			// 
+			this.btnInvoiceReport.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.btnInvoiceReport.Appearance.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+			this.btnInvoiceReport.Appearance.Options.UseFont = true;
+			this.btnInvoiceReport.Appearance.Options.UseForeColor = true;
+			this.btnInvoiceReport.Image = global::MerkFinance.Properties.Resources.InvoicesReportsIcon_16_02;
+			this.btnInvoiceReport.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+			this.btnInvoiceReport.Location = new System.Drawing.Point(1092, 6);
+			this.btnInvoiceReport.MaximumSize = new System.Drawing.Size(150, 40);
+			this.btnInvoiceReport.MinimumSize = new System.Drawing.Size(150, 40);
+			this.btnInvoiceReport.Name = "btnInvoiceReport";
+			this.btnInvoiceReport.Size = new System.Drawing.Size(150, 40);
+			this.btnInvoiceReport.StyleController = this.layoutControl2;
+			this.btnInvoiceReport.TabIndex = 7;
+			this.btnInvoiceReport.Text = "التقـاريــــر";
+			this.btnInvoiceReport.Click += new System.EventHandler(this.btnInvoiceReport_Click);
 			// 
 			// btnMenu
 			// 
@@ -164,22 +245,6 @@
 			this.btnHome.TabIndex = 6;
 			this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
 			// 
-			// layoutControlGroup2
-			// 
-			this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-			this.layoutControlGroup2.GroupBordersVisible = false;
-			this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.emptySpaceItem2,
-            this.layoutControlItem3,
-            this.layoutControlItem4});
-			this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlGroup2.Name = "Root";
-			this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup2.Size = new System.Drawing.Size(1346, 54);
-			this.layoutControlGroup2.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlGroup2.TextVisible = false;
-			// 
 			// layoutControlItem1
 			// 
 			this.layoutControlItem1.Control = this.btnHome;
@@ -190,14 +255,6 @@
 			this.layoutControlItem1.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem1.TextVisible = false;
-			// 
-			// emptySpaceItem2
-			// 
-			this.emptySpaceItem2.AllowHotTrack = false;
-			this.emptySpaceItem2.Location = new System.Drawing.Point(206, 0);
-			this.emptySpaceItem2.Name = "emptySpaceItem2";
-			this.emptySpaceItem2.Size = new System.Drawing.Size(1036, 48);
-			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem3
 			// 
@@ -221,39 +278,16 @@
 			this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem4.TextVisible = false;
 			// 
-			// layoutControlGroup1
+			// layoutControlItem6
 			// 
-			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-			this.layoutControlGroup1.GroupBordersVisible = false;
-			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2,
-            this.layoutControlItem5});
-			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlGroup1.Name = "Root";
-			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup1.Size = new System.Drawing.Size(1350, 729);
-			this.layoutControlGroup1.TextVisible = false;
-			// 
-			// layoutControlItem2
-			// 
-			this.layoutControlItem2.Control = this.panelControl1;
-			this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlItem2.Name = "layoutControlItem2";
-			this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem2.Size = new System.Drawing.Size(1350, 58);
-			this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem2.TextVisible = false;
-			// 
-			// layoutControlItem5
-			// 
-			this.layoutControlItem5.Control = this.pnlMain;
-			this.layoutControlItem5.Location = new System.Drawing.Point(0, 58);
-			this.layoutControlItem5.Name = "layoutControlItem5";
-			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem5.Size = new System.Drawing.Size(1350, 671);
-			this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem5.TextVisible = false;
+			this.layoutControlItem6.Control = this.btnInvoiceReport;
+			this.layoutControlItem6.Location = new System.Drawing.Point(1086, 0);
+			this.layoutControlItem6.Name = "layoutControlItem6";
+			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem6.Size = new System.Drawing.Size(156, 48);
+			this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem6.TextVisible = false;
 			// 
 			// MainForm
 			// 
@@ -274,13 +308,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
 			this.layoutControl2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -302,5 +337,7 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
 		private DevExpress.XtraEditors.PanelControl pnlMain;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+		private DevExpress.XtraEditors.SimpleButton btnInvoiceReport;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
 	}
 }

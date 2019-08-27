@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Windows.Forms;
 using CommonControlLibrary;
 using MerkDataBaseBusinessLogicProject;
 using MVCBusinessLogicLibrary.BaseViewers;
 using MVCBusinessLogicLibrary.MVCFactories;
 using MVCBusinessLogicLibrary.Viewers;
 
-namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
+namespace CommonUserControls.SettingsViewers.RawMaterial_Viewers
 {
 	public partial class RawMaterial_SearchViewer : 
 		//UserControl
@@ -119,6 +118,8 @@ namespace CommonUserControls.MerkDesignWork.RawMaterial_Viewers
 			get { return lkeColor.EditValue; }
 			set { lkeColor.EditValue = Convert.ToBoolean(value); }
 		}
+
+		public object DividedTypeID { get; set; }
 
 		#endregion
 	}

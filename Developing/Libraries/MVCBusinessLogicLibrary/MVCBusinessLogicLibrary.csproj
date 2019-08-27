@@ -140,6 +140,7 @@
     <Compile Include="MVCDataCollectors\FinanceInvoiceCreationDataCollector.cs" />
     <Compile Include="MVCDataCollectors\Floor_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\GeneralChartOfAccountType_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\GetRawMaterialCostPrices_Report_DataCollecor.cs" />
     <Compile Include="MVCDataCollectors\IMVCDataCollector.cs" />
     <Compile Include="MVCDataCollectors\InPatientRoomBedDataCollector.cs" />
     <Compile Include="MVCDataCollectors\InPatientRoomClassificationDataCollector.cs" />
@@ -166,6 +167,7 @@
     <Compile Include="MVCDataCollectors\PatientDepositBalance_Report_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\PersonType_ChartOfAccount_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\Person_ChartOfAccount_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\RawMaterialTransaction_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\RawMaterial_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\RoleRegistration_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\ServiceCategory_DataCollector.cs" />
@@ -215,6 +217,7 @@
     <Compile Include="Viewers\IFinanceInvoiceCreation.cs" />
     <Compile Include="Viewers\IFloorViewer.cs" />
     <Compile Include="Viewers\IGeneralChartOfAccountTypeViewer.cs" />
+    <Compile Include="Viewers\IGetRawMaterialCostPrices_Report_Viewer.cs" />
     <Compile Include="Viewers\IInPatientRoomBedViewer.cs" />
     <Compile Include="Viewers\IInPatientRoomClassificationViewer.cs" />
     <Compile Include="Viewers\IInPatientRoomViewer.cs" />
@@ -244,6 +247,7 @@
     <Compile Include="Viewers\IPersonRelativeViewer.cs" />
     <Compile Include="Viewers\IPersonType_ChartOfAccount_Viewer.cs" />
     <Compile Include="Viewers\IPerson_ChartOfAccount_Viewer.cs" />
+    <Compile Include="Viewers\IRawMaterialTransaction_Viewer.cs" />
     <Compile Include="Viewers\IRawMaterial_Viewer.cs" />
     <Compile Include="Viewers\IRoleRegistrationViewer.cs" />
     <Compile Include="Viewers\IServiceCategoryViewer.cs" />

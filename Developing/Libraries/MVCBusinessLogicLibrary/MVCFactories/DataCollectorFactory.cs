@@ -134,6 +134,10 @@ namespace MVCBusinessLogicLibrary.MVCFactories
 					return new RawMaterial_DataCollector<TEntity>();
 				case ViewerName.Color_Viewer:
 					return new Color_DataCollector<TEntity>();
+				case ViewerName.RawMaterialTransactions_viewer:
+					return new RawMaterialTransaction_DataCollector<TEntity>();
+				case ViewerName.GetRawMaterialCostPrices_Viewer:
+					return new GetRawMaterialCostPrices_Report_DataCollecor<TEntity>();
 			}
 
 			return null;

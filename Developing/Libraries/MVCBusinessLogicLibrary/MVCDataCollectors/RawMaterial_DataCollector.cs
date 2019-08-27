@@ -41,7 +41,7 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 				((RawMaterials_cu)ActiveDBItem).InternalCode = InternalCode.ToString();
 
 			if (Width != null)
-				((RawMaterials_cu) ActiveDBItem).Width = Convert.ToDouble(Width);
+				((RawMaterials_cu)ActiveDBItem).Width = Convert.ToDouble(Width);
 
 			if (Thickness != null)
 				((RawMaterials_cu)ActiveDBItem).Thickness = Convert.ToDouble(Thickness);
@@ -64,10 +64,17 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			if (ColorID != null)
 				((RawMaterials_cu)ActiveDBItem).Color_CU_ID = Convert.ToInt32(ColorID);
 
+			if (DividedTypeID != null)
+				((RawMaterials_cu)ActiveDBItem).DividedByType_P_ID = Convert.ToInt32(DividedTypeID);
+
 			if (Description != null)
 				((RawMaterials_cu)ActiveDBItem).Description = Description.ToString();
 
+			if (UserID != null)
+				((RawMaterials_cu)ActiveDBItem).InsertedBy = Convert.ToInt32(UserID);
+
 			((RawMaterials_cu)ActiveDBItem).IsOnDuty = true;
+
 			switch (((IRawMaterial_Viewer)ActiveCollector.ActiveViewer).CommonTransactionType)
 			{
 				case DB_CommonTransactionType.DeleteExisting:
@@ -266,6 +273,13 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			get { return ((IRawMaterial_Viewer)ActiveCollector.ActiveViewer).ColorID; }
 			set { ((IRawMaterial_Viewer)ActiveCollector.ActiveViewer).ColorID = value; }
 		}
+
+		public object DividedTypeID
+		{
+			get { return ((IRawMaterial_Viewer)ActiveCollector.ActiveViewer).DividedTypeID; }
+			set { ((IRawMaterial_Viewer)ActiveCollector.ActiveViewer).DividedTypeID = value; }
+		}
+
 		#endregion
 
 	}
