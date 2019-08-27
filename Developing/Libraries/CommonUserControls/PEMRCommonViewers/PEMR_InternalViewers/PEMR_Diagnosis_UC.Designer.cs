@@ -297,7 +297,6 @@
 			this.chkEye_OU.Appearance.Options.UseForeColor = true;
 			this.chkEye_OU.Checked = true;
 			this.chkEye_OU.GroupIndex = 15;
-			this.chkEye_OU.Image = global::CommonUserControls.Properties.Resources.Eye_OU_01_16;
 			this.chkEye_OU.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
 			this.chkEye_OU.Location = new System.Drawing.Point(981, 69);
 			this.chkEye_OU.MaximumSize = new System.Drawing.Size(80, 40);

@@ -573,16 +573,6 @@ namespace CommonUserControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Eye_OU_01_16 {
-            get {
-                object obj = ResourceManager.GetObject("Eye_OU_01_16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap FamilyIcon_16_01 {
             get {
                 object obj = ResourceManager.GetObject("FamilyIcon_16_01", resourceCulture);
