@@ -58,6 +58,7 @@ namespace MerkDataBaseBusinessLogicProject
         public Nullable<bool> IsSurcharge { get; set; }
         public Nullable<double> Width { get; set; }
         public Nullable<double> Height { get; set; }
+        public Nullable<double> Depth { get; set; }
         public Nullable<int> Count { get; set; }
     
         public virtual ChartOfAccount_cu ChartOfAccount_cu { get; set; }

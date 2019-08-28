@@ -1109,6 +1109,7 @@
           <Property Name="IsSurcharge" Type="bit" />
           <Property Name="Width" Type="float" />
           <Property Name="Height" Type="float" />
+          <Property Name="Depth" Type="float" />
           <Property Name="Count" Type="int" />
         </EntityType>
         <EntityType Name="InventoryItem_RawMaterial_cu">
@@ -13778,6 +13779,7 @@
           <Property Name="IsSurcharge" Type="Boolean" />
           <Property Name="Width" Type="Double" />
           <Property Name="Height" Type="Double" />
+          <Property Name="Depth" Type="Double" />
           <Property Name="Count" Type="Int32" />
           <NavigationProperty Name="ChartOfAccount_cu" Relationship="Self.FK_InventoryItem_cu_ChartOfAccount_cu" FromRole="InventoryItem_cu" ToRole="ChartOfAccount_cu" />
           <NavigationProperty Name="FinanceInvoiceDetails" Relationship="Self.FK_FinanceInvoiceDetail_InventoryItem_cu" FromRole="InventoryItem_cu" ToRole="FinanceInvoiceDetail" />
@@ -27147,6 +27149,7 @@
                 <ScalarProperty Name="IsSurcharge" ColumnName="IsSurcharge" />
                 <ScalarProperty Name="Width" ColumnName="Width" />
                 <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Depth" ColumnName="Depth" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -94,6 +94,15 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			if (Description != null)
 				((InventoryItem_cu)ActiveDBItem).Description = Description.ToString();
 
+			if (Width != null)
+				((InventoryItem_cu)ActiveDBItem).Width = Convert.ToDouble(Width);
+
+			if (Height != null)
+				((InventoryItem_cu)ActiveDBItem).Height = Convert.ToDouble(Height);
+
+			if (Depth != null)
+				((InventoryItem_cu)ActiveDBItem).Depth = Convert.ToDouble(Depth);
+
 			((InventoryItem_cu)ActiveDBItem).IsOnDuty = true;
 			switch (((IInventoryItemViewer)ActiveCollector.ActiveViewer).CommonTransactionType)
 			{
@@ -362,6 +371,24 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 		{
 			get { return ((IInventoryItemViewer)ActiveCollector.ActiveViewer).Description; }
 			set { ((IInventoryItemViewer)ActiveCollector.ActiveViewer).Description = value; }
+		}
+
+		public object Width
+		{
+			get { return ((IInventoryItemViewer)ActiveCollector.ActiveViewer).Width; }
+			set { ((IInventoryItemViewer)ActiveCollector.ActiveViewer).Width = value; }
+		}
+
+		public object Height
+		{
+			get { return ((IInventoryItemViewer)ActiveCollector.ActiveViewer).Height; }
+			set { ((IInventoryItemViewer)ActiveCollector.ActiveViewer).Height = value; }
+		}
+
+		public object Depth
+		{
+			get { return ((IInventoryItemViewer)ActiveCollector.ActiveViewer).Depth; }
+			set { ((IInventoryItemViewer)ActiveCollector.ActiveViewer).Depth = value; }
 		}
 
 		#endregion

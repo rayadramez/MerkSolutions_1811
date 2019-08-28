@@ -21,7 +21,6 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Area_Viewers
 
 			CommonViewsActions.LoadXMLFromString(layoutControl1, Resources.LocalizedRes.lyt_Inventoryitem_Area_EditorViewer);
 			CommonViewsActions.SetupSyle(this);
-			spnInventoryItemTotalArea.Font = new Font("Tahoma", 14, FontStyle.Bold);
 		}
 
 		#region Overrides of CommonAbstractViewer<InventoryItem_Area>

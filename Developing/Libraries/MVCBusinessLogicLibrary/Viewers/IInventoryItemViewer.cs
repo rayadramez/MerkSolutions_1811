@@ -25,5 +25,8 @@
 		object SellingEndDate { get; set; }
 		object ExpirationDate { get; set; }
 		object Description { get; set; }
+		object Width { get; set; }
+		object Height { get; set; }
+		object Depth { get; set; }
 	}
 }

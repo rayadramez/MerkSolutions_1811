@@ -176,5 +176,12 @@ namespace CommonUserControls.SettingsViewers.InventoryItemViewers
 		}
 
 		#endregion
+
+
+		public new object Width { get; set; }
+
+		public new object Height { get; set; }
+
+		public object Depth { get; set; }
 	}
 }

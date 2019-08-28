@@ -216,6 +216,24 @@ namespace CommonUserControls.SettingsViewers.InventoryItemViewers
 			set { txtDescription.EditValue = value; }
 		}
 
+		public object Width
+		{
+			get { return spnWidth.EditValue; }
+			set { spnWidth.EditValue = value; }
+		}
+
+		public object Height
+		{
+			get { return spnHeight.EditValue; }
+			set { spnHeight.EditValue = value; }
+		}
+
+		public object Depth
+		{
+			get { return spnDepth.EditValue; }
+			set { spnDepth.EditValue = value; }
+		}
+
 		#endregion
 
 		private void btnInventoryHousing_Click(object sender, EventArgs e)
