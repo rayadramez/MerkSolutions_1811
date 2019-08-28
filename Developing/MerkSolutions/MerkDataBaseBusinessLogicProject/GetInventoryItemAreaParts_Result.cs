@@ -14,6 +14,7 @@ namespace MerkDataBaseBusinessLogicProject
     public partial class GetInventoryItemAreaParts_Result
     {
         public int ItemID { get; set; }
+        public Nullable<int> AreaID { get; set; }
         public Nullable<double> Width { get; set; }
         public Nullable<double> Height { get; set; }
         public Nullable<double> Count { get; set; }

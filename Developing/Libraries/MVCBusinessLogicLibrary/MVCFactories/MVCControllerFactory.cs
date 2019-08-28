@@ -72,7 +72,8 @@ namespace MVCBusinessLogicLibrary.MVCFactories
 		RawMaterial_viewer,
 		Color_Viewer,
 		RawMaterialTransactions_viewer,
-		GetRawMaterialCostPrices_Viewer
+		GetRawMaterialCostPrices_Viewer,
+		GetInventoryItemAreaParts_Viewer
 	}
 
 	public enum MVCType

@@ -510,6 +510,25 @@ namespace CommonUserControls.Resources {
         ///  &lt;property name=&quot;ScrollStyle&quot;&gt;LiveVertScroll, LiveHorzScroll&lt;/property&gt;
         ///  &lt;property name=&quot;FocusRectStyle&quot;&gt;CellFocu [rest of string was truncated]&quot;;.
         /// </summary>
+        internal static string grd_GetInventoryItemAreaParts {
+            get {
+                return ResourceManager.GetString("grd_GetInventoryItemAreaParts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;XtraSerializer version=&quot;1.0&quot; application=&quot;View&quot;&gt;
+        ///  &lt;property name=&quot;#LayoutVersion&quot; /&gt;
+        ///  &lt;property name=&quot;VertScrollTipFieldName&quot; /&gt;
+        ///  &lt;property name=&quot;PreviewFieldName&quot; /&gt;
+        ///  &lt;property name=&quot;GroupPanelText&quot; /&gt;
+        ///  &lt;property name=&quot;NewItemRowText&quot; /&gt;
+        ///  &lt;property name=&quot;LevelIndent&quot;&gt;-1&lt;/property&gt;
+        ///  &lt;property name=&quot;PreviewIndent&quot;&gt;-1&lt;/property&gt;
+        ///  &lt;property name=&quot;PreviewLineCount&quot;&gt;-1&lt;/property&gt;
+        ///  &lt;property name=&quot;ScrollStyle&quot;&gt;LiveVertScroll, LiveHorzScroll&lt;/property&gt;
+        ///  &lt;property name=&quot;FocusRectStyle&quot;&gt;CellFocu [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string grd_GetRawMaterialCostPrices {
             get {
                 return ResourceManager.GetString("grd_GetRawMaterialCostPrices", resourceCulture);
@@ -2509,6 +2528,23 @@ namespace CommonUserControls.Resources {
         internal static string lyt_GeneralChartOfAccountType_SearchViewer {
             get {
                 return ResourceManager.GetString("lyt_GeneralChartOfAccountType_SearchViewer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;XtraSerializer version=&quot;1.0&quot; application=&quot;LayoutControl&quot;&gt;
+        ///  &lt;property name=&quot;#LayoutVersion&quot; /&gt;
+        ///  &lt;property name=&quot;OptionsFocus&quot; isnull=&quot;true&quot; iskey=&quot;true&quot;&gt;
+        ///    &lt;property name=&quot;ActivateSelectedControlOnGotFocus&quot;&gt;true&lt;/property&gt;
+        ///    &lt;property name=&quot;AllowFocusControlOnLabelClick&quot;&gt;false&lt;/property&gt;
+        ///    &lt;property name=&quot;EnableAutoTabOrder&quot;&gt;true&lt;/property&gt;
+        ///    &lt;property name=&quot;AllowFocusControlOnActivatedTabPage&quot;&gt;false&lt;/property&gt;
+        ///    &lt;property name=&quot;AllowFocusGroups&quot;&gt;true&lt;/property&gt;
+        ///    &lt;property name=&quot;Allow [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string lyt_GetInventoryItemAreaParts {
+            get {
+                return ResourceManager.GetString("lyt_GetInventoryItemAreaParts", resourceCulture);
             }
         }
         

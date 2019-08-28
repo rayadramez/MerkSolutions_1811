@@ -140,6 +140,7 @@
     <Compile Include="MVCDataCollectors\FinanceInvoiceCreationDataCollector.cs" />
     <Compile Include="MVCDataCollectors\Floor_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\GeneralChartOfAccountType_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\GetInventoryItemAreaParts_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\GetRawMaterialCostPrices_Report_DataCollecor.cs" />
     <Compile Include="MVCDataCollectors\IMVCDataCollector.cs" />
     <Compile Include="MVCDataCollectors\InPatientRoomBedDataCollector.cs" />
@@ -217,6 +218,7 @@
     <Compile Include="Viewers\IFinanceInvoiceCreation.cs" />
     <Compile Include="Viewers\IFloorViewer.cs" />
     <Compile Include="Viewers\IGeneralChartOfAccountTypeViewer.cs" />
+    <Compile Include="Viewers\IGetInventoryItemAreaParts_Viewer.cs" />
     <Compile Include="Viewers\IGetRawMaterialCostPrices_Report_Viewer.cs" />
     <Compile Include="Viewers\IInPatientRoomBedViewer.cs" />
     <Compile Include="Viewers\IInPatientRoomClassificationViewer.cs" />

@@ -659,6 +659,7 @@
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\VisionRefractionReadingType_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\WeightUnit_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetCustomerInvoices_Result.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetInventoryItemAreaParts_Result.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetInvoicesPaymentBriefReport_Result.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetPatientDepositBalance_Result.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetPatientPreviousInvoices_Result.cs" />

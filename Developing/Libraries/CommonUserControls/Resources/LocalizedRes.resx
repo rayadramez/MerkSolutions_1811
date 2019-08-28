@@ -808,4 +808,10 @@
   <data name="lyt_RawMaterialTransaction_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>lyt_RawMaterialTransaction_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="grd_GetInventoryItemAreaParts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_GetInventoryItemAreaParts.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_GetInventoryItemAreaParts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_GetInventoryItemAreaParts.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

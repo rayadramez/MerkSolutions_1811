@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Drawing;
 using CommonControlLibrary;
 using MerkDataBaseBusinessLogicProject;
+using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MVCBusinessLogicLibrary.BaseViewers;
 using MVCBusinessLogicLibrary.Controller;
 using MVCBusinessLogicLibrary.MVCFactories;
@@ -19,6 +21,7 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Area_Viewers
 
 			CommonViewsActions.LoadXMLFromString(layoutControl1, Resources.LocalizedRes.lyt_Inventoryitem_Area_EditorViewer);
 			CommonViewsActions.SetupSyle(this);
+			spnInventoryItemTotalArea.Font = new Font("Tahoma", 14, FontStyle.Bold);
 		}
 
 		#region Overrides of CommonAbstractViewer<InventoryItem_Area>
@@ -109,6 +112,15 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Area_Viewers
 				CommonActions.CommonActions.GetShapeArea(Convert.ToDouble(Width), Convert.ToDouble(Height));
 			spnTotalArea.EditValue = CommonActions.CommonActions.GetShapeArea(Convert.ToDouble(Width),
 				Convert.ToDouble(Height), Convert.ToInt32(Count));
+		}
+
+		private void lkeInventoryItems_EditValueChanged(object sender, EventArgs e)
+		{
+			if (lkeInventoryItems.EditValue == null)
+				return;
+
+			spnInventoryItemTotalArea.EditValue =
+				InventoryBusinessLogicEngine.GetInventoryItemTotalArea(Convert.ToInt32(lkeInventoryItems.EditValue));
 		}
 	}
 }

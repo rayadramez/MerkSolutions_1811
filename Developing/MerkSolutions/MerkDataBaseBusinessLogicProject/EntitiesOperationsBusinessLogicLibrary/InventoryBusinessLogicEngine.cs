@@ -725,5 +725,27 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 			return list;
 		}
+
+		public static double GetInventoryItemTotalArea(int inventoryItemID)
+		{
+			InventoryItem_cu inventoryItem =
+				InventoryItem_cu.ItemsList.Find(item => Convert.ToInt32(item.ID).Equals(inventoryItemID));
+			if (inventoryItem == null)
+				return 0;
+			return GetInventoryItemTotalArea(inventoryItem);
+		}
+
+		public static double GetInventoryItemTotalArea(InventoryItem_cu inventoryItem)
+		{
+			if (inventoryItem == null)
+				return 0;
+			List<InventoryItem_Area> areasList = InventoryItem_Area.ItemsList.FindAll(item =>
+				Convert.ToInt32(item.InventoryItemID).Equals(Convert.ToInt32(inventoryItem.ID)));
+			double totalArea = 0;
+			foreach (InventoryItem_Area inventoryItemArea in areasList)
+				totalArea += inventoryItemArea.Width * inventoryItemArea.Height * inventoryItemArea.Count;
+
+			return totalArea;
+		}
 	}
 }

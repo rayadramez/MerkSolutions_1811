@@ -65,5 +65,27 @@ namespace MerkDataBaseBusinessLogicProject
 			ItemsList = DBContext_External.InventoryItem_Area.Where(item => item.IsOnDuty).OrderBy(item => item.ID).ToList();
 			return true;
 		}
+
+		public string InventoryItemName
+		{
+			get
+			{
+				InventoryItem_cu inventoryItem = InventoryItem_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(InventoryItemID)));
+				if (inventoryItem == null) 
+					return String.Empty;
+				return inventoryItem.Name_P;
+			}
+		}
+
+		public double Area
+		{
+			get { return Width * Height; }
+		}
+
+		public double TotalArea
+		{
+			get { return Width * Height * Count; }
+		}
 	}
 }

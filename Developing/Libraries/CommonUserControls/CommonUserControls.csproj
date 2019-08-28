@@ -1960,6 +1960,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\grd_GetInventoryItemAreaParts.xml" />
+    <None Include="Resources\lyt_GetInventoryItemAreaParts.xml" />
     <None Include="Resources\grd_GetRawMaterialCostPrices.xml" />
     <None Include="Resources\lyt_GetRawMaterialCostPrices_Viewer.xml" />
     <None Include="Resources\grd_RawMaterialTransaction_SearchViewer.xml" />

@@ -339,6 +339,15 @@ namespace MerkDataBaseBusinessLogicProject
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetCustomerInvoices_Result>("GetCustomerInvoices", customerIDParameter, isOnDutyParameter, invoiceTypeIDParameter, isPaymentEnoughParameter, isFinanciallyReviewedParameter, isFinanciallyCompletedParameter);
         }
     
+        public virtual ObjectResult<GetInventoryItemAreaParts_Result> GetInventoryItemAreaParts(Nullable<int> inventoryItemID)
+        {
+            var inventoryItemIDParameter = inventoryItemID.HasValue ?
+                new ObjectParameter("InventoryItemID", inventoryItemID) :
+                new ObjectParameter("InventoryItemID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetInventoryItemAreaParts_Result>("GetInventoryItemAreaParts", inventoryItemIDParameter);
+        }
+    
         public virtual ObjectResult<GetInvoiceForAddmission_Result> GetInvoiceForAddmission(Nullable<System.DateTime> invoiceCreationDateStart, Nullable<System.DateTime> invoiceCreationDateEnd, Nullable<int> invoiceTypeID, Nullable<bool> invoiceIsOnDuty, Nullable<bool> invoiceIsFinanciallyReviewed, Nullable<bool> invoiceIsPrinted, Nullable<bool> invoiceIsPaymentEnough, Nullable<int> doctorID, Nullable<int> patientID)
         {
             var invoiceCreationDateStartParameter = invoiceCreationDateStart.HasValue ?
@@ -712,15 +721,6 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual int sp_upgraddiagrams()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
-        }
-    
-        public virtual ObjectResult<GetInventoryItemAreaParts_Result> GetInventoryItemAreaParts(Nullable<int> inventoryItemID)
-        {
-            var inventoryItemIDParameter = inventoryItemID.HasValue ?
-                new ObjectParameter("InventoryItemID", inventoryItemID) :
-                new ObjectParameter("InventoryItemID", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetInventoryItemAreaParts_Result>("GetInventoryItemAreaParts", inventoryItemIDParameter);
         }
     }
 }
