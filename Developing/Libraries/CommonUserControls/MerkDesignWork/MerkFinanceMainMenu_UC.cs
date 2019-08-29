@@ -9,6 +9,7 @@ using CommonUserControls.SettingsViewers.InventoryItemViewers;
 using CommonUserControls.SettingsViewers.InventoryItem_Area_Viewers;
 using CommonUserControls.SettingsViewers.InventoryItem_InventoryHousingViewers;
 using CommonUserControls.SettingsViewers.InventoryItem_InventoryItemGroupViewers;
+using CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers;
 using CommonUserControls.SettingsViewers.InventoryItem_UnitMeasurmentViewers;
 using CommonUserControls.SettingsViewers.InvetoryItemGroupViewers;
 using CommonUserControls.SettingsViewers.RawMaterialTransaction;
@@ -68,6 +69,9 @@ namespace CommonUserControls.MerkDesignWork
 
 		private RawMaterialTransaction_EditorViewer _rawMaterialTransactionEditorViewer;
 		private RawMaterialTransaction_SearchViewer _rawMaterialTransactionSearchViewer;
+
+		private InventoryItem_Printing_EditorViewer _inventoryItemPrintingEditorViewer;
+		private InventoryItem_Printing_SearchViewer _inventoryItemPrintingSearchViewer;
 
 		private GetRawMaterialCostPrices_Report _getRawMaterialCostPricesReport;
 		private GetInventoryItemAreaParts_Report _getInventoryItemAreaPartsReport;
@@ -243,6 +247,19 @@ namespace CommonUserControls.MerkDesignWork
 			BaseController<GetInventoryItemAreaParts_Result>.ShowSearchControl(ref _getInventoryItemAreaPartsReport,
 				this, ViewerName.GetInventoryItemAreaParts_Viewer, DB_CommonTransactionType.SearchReport,
 				".... تقــريـــــر تقسيمـــات المنتجــــات .....", true, true);
+		}
+
+		private void btnInventoryItemPrinting_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+		{
+			BaseController<InventoryItem_Printing_cu>.ShowControl(ref _inventoryItemPrintingEditorViewer,
+				ref _inventoryItemPrintingSearchViewer,
+				splitContainerControl2.Panel1,
+				EditorContainerType.Settings,
+				ViewerName.InventoryItem_Printing_Viewer,
+				DB_CommonTransactionType.CreateNew,
+				"أسعــــــار طبـاعــــــة المنتـجـــــــات",
+				AbstractViewerType.SearchViewer,
+				true);
 		}
 	}
 }

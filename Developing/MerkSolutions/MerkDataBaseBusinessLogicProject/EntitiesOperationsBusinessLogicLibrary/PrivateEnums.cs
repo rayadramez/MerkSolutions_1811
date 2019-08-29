@@ -464,7 +464,8 @@
 		RawMaterialType_p,
 		Color_cu,
 		RawMaterialTranasction,
-		RawMaterialTranasctionType_p
+		RawMaterialTranasctionType_p,
+		InventoryItem_Printing_cu
 	}
 
 	public enum DB_Station

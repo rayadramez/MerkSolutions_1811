@@ -1112,6 +1112,22 @@
           <Property Name="Depth" Type="float" />
           <Property Name="Count" Type="int" />
         </EntityType>
+        <EntityType Name="InventoryItem_Printing_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InventoryItem_CU_ID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="PrintingMaxTimeInMinutes" Type="float" Nullable="false" />
+          <Property Name="AddedMinutes" Type="float" />
+          <Property Name="PrintingAverageUnitCostPrice" Type="float" Nullable="false" />
+          <Property Name="UseRealCost" Type="bit" Nullable="false" />
+          <Property Name="PrintingRealCostPrice" Type="float" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="InsertedBy" Type="int" />
+          <Property Name="IsOnDuty" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="InventoryItem_RawMaterial_cu">
           <Key>
             <PropertyRef Name="ID" />
@@ -5439,6 +5455,30 @@
               <PropertyRef Name="Person_CU_ID" />
             </Principal>
             <Dependent Role="InventoryItemTransaction">
+              <PropertyRef Name="InsertedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryItem_Printing_cu_InventoryItem_cu">
+          <End Role="InventoryItem_cu" Type="Self.InventoryItem_cu" Multiplicity="1" />
+          <End Role="InventoryItem_Printing_cu" Type="Self.InventoryItem_Printing_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventoryItem_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="InventoryItem_Printing_cu">
+              <PropertyRef Name="InventoryItem_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryItem_Printing_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="InventoryItem_Printing_cu" Type="Self.InventoryItem_Printing_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="InventoryItem_Printing_cu">
               <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
@@ -9951,6 +9991,7 @@
           <EntitySet Name="InventoryHousing_cu" EntityType="Self.InventoryHousing_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InventoryItem_Area" EntityType="Self.InventoryItem_Area" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InventoryItem_cu" EntityType="Self.InventoryItem_cu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InventoryItem_Printing_cu" EntityType="Self.InventoryItem_Printing_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InventoryItem_RawMaterial_cu" EntityType="Self.InventoryItem_RawMaterial_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InventoryItem_UnitMeasurment_cu" EntityType="Self.InventoryItem_UnitMeasurment_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InventoryItemBrand_cu" EntityType="Self.InventoryItemBrand_cu" Schema="dbo" store:Type="Tables" />
@@ -10898,6 +10939,14 @@
           <AssociationSet Name="FK_InventoryItem_InventoryHousing_cu_User_cu" Association="Self.FK_InventoryItem_InventoryHousing_cu_User_cu">
             <End Role="User_cu" EntitySet="User_cu" />
             <End Role="InventoryItemTransaction" EntitySet="InventoryItemTransaction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventoryItem_Printing_cu_InventoryItem_cu" Association="Self.FK_InventoryItem_Printing_cu_InventoryItem_cu">
+            <End Role="InventoryItem_cu" EntitySet="InventoryItem_cu" />
+            <End Role="InventoryItem_Printing_cu" EntitySet="InventoryItem_Printing_cu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventoryItem_Printing_cu_User_cu" Association="Self.FK_InventoryItem_Printing_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="InventoryItem_Printing_cu" EntitySet="InventoryItem_Printing_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_InventoryItem_RawMaterial_cu_InventoryItem_cu" Association="Self.FK_InventoryItem_RawMaterial_cu_InventoryItem_cu">
             <End Role="InventoryItem_cu" EntitySet="InventoryItem_cu" />
@@ -13791,11 +13840,30 @@
           <NavigationProperty Name="UnitMeasurment_cu" Relationship="Self.FK_InventoryItem_cu_UnitMeasurment_cu" FromRole="InventoryItem_cu" ToRole="UnitMeasurment_cu" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_InventoryItem_cu_User_cu" FromRole="InventoryItem_cu" ToRole="User_cu" />
           <NavigationProperty Name="InventoryItemTransactions" Relationship="Self.FK_InventoryItem_InventoryHousing_cu_InventoryItem_cu" FromRole="InventoryItem_cu" ToRole="InventoryItemTransaction" />
+          <NavigationProperty Name="InventoryItem_Printing_cu" Relationship="Self.FK_InventoryItem_Printing_cu_InventoryItem_cu" FromRole="InventoryItem_cu" ToRole="InventoryItem_Printing_cu" />
           <NavigationProperty Name="InventoryItem_RawMaterial_cu" Relationship="Self.FK_InventoryItem_RawMaterial_cu_InventoryItem_cu" FromRole="InventoryItem_cu" ToRole="InventoryItem_RawMaterial_cu" />
           <NavigationProperty Name="InventoryItem_UnitMeasurment_cu" Relationship="Self.FK_InventoryItem_UnitMeasurment_cu_InventoryItem_cu" FromRole="InventoryItem_cu" ToRole="InventoryItem_UnitMeasurment_cu" />
           <NavigationProperty Name="InventoryItemGroup_InventoryItem_cu" Relationship="Self.FK_InventoryItemGroup_InventoryItem_cu_InventoryItem_cu" FromRole="InventoryItem_cu" ToRole="InventoryItemGroup_InventoryItem_cu" />
           <NavigationProperty Name="InventoryItemPrice_cu" Relationship="Self.FK_InventoryItemPrice_cu_InventoryItem_cu" FromRole="InventoryItem_cu" ToRole="InventoryItemPrice_cu" />
           <NavigationProperty Name="InvoiceDetail_Inventory" Relationship="Self.FK_InvoiceDetail_Inventory_InventoryItem_cu" FromRole="InventoryItem_cu" ToRole="InvoiceDetail_Inventory" />
+        </EntityType>
+        <EntityType Name="InventoryItem_Printing_cu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InventoryItem_CU_ID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PrintingMaxTimeInMinutes" Type="Double" Nullable="false" />
+          <Property Name="AddedMinutes" Type="Double" />
+          <Property Name="PrintingAverageUnitCostPrice" Type="Double" Nullable="false" />
+          <Property Name="UseRealCost" Type="Boolean" Nullable="false" />
+          <Property Name="PrintingRealCostPrice" Type="Double" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="InsertedBy" Type="Int32" />
+          <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="InventoryItem_cu" Relationship="Self.FK_InventoryItem_Printing_cu_InventoryItem_cu" FromRole="InventoryItem_Printing_cu" ToRole="InventoryItem_cu" />
+          <NavigationProperty Name="User_cu" Relationship="Self.FK_InventoryItem_Printing_cu_User_cu" FromRole="InventoryItem_Printing_cu" ToRole="User_cu" />
         </EntityType>
         <EntityType Name="InventoryItem_RawMaterial_cu">
           <Key>
@@ -15727,6 +15795,7 @@
           <NavigationProperty Name="InventoryHousing_cu" Relationship="Self.FK_InventoryHousing_cu_User_cu" FromRole="User_cu" ToRole="InventoryHousing_cu" />
           <NavigationProperty Name="InventoryItem_Area" Relationship="Self.FK_InventoryItem_Area_User_cu" FromRole="User_cu" ToRole="InventoryItem_Area" />
           <NavigationProperty Name="InventoryItem_cu" Relationship="Self.FK_InventoryItem_cu_User_cu" FromRole="User_cu" ToRole="InventoryItem_cu" />
+          <NavigationProperty Name="InventoryItem_Printing_cu" Relationship="Self.FK_InventoryItem_Printing_cu_User_cu" FromRole="User_cu" ToRole="InventoryItem_Printing_cu" />
           <NavigationProperty Name="InventoryItem_RawMaterial_cu" Relationship="Self.FK_InventoryItem_RawMaterial_cu_User_cu" FromRole="User_cu" ToRole="InventoryItem_RawMaterial_cu" />
           <NavigationProperty Name="InventoryItem_UnitMeasurment_cu" Relationship="Self.FK_InventoryItem_UnitMeasurment_cu_User_cu" FromRole="User_cu" ToRole="InventoryItem_UnitMeasurment_cu" />
           <NavigationProperty Name="InventoryItemBrand_cu" Relationship="Self.FK_InventoryItemBrand_cu_User_cu" FromRole="User_cu" ToRole="InventoryItemBrand_cu" />
@@ -19619,6 +19688,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_InventoryItem_Printing_cu_InventoryItem_cu">
+          <End Role="InventoryItem_cu" Type="Self.InventoryItem_cu" Multiplicity="1" />
+          <End Role="InventoryItem_Printing_cu" Type="Self.InventoryItem_Printing_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventoryItem_cu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="InventoryItem_Printing_cu">
+              <PropertyRef Name="InventoryItem_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_InventoryItem_RawMaterial_cu_InventoryItem_cu">
           <End Role="InventoryItem_cu" Type="Self.InventoryItem_cu" Multiplicity="1" />
           <End Role="InventoryItem_RawMaterial_cu" Type="Self.InventoryItem_RawMaterial_cu" Multiplicity="*" />
@@ -19676,6 +19757,18 @@
             </Principal>
             <Dependent Role="InvoiceDetail_Inventory">
               <PropertyRef Name="InventoryItem_CU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryItem_Printing_cu_User_cu">
+          <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
+          <End Role="InventoryItem_Printing_cu" Type="Self.InventoryItem_Printing_cu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User_cu">
+              <PropertyRef Name="Person_CU_ID" />
+            </Principal>
+            <Dependent Role="InventoryItem_Printing_cu">
+              <PropertyRef Name="InsertedBy" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -23240,6 +23333,7 @@
           <EntitySet Name="InventoryHousing_cu" EntityType="Self.InventoryHousing_cu" />
           <EntitySet Name="InventoryItem_Area" EntityType="Self.InventoryItem_Area" />
           <EntitySet Name="InventoryItem_cu" EntityType="Self.InventoryItem_cu" />
+          <EntitySet Name="InventoryItem_Printing_cu" EntityType="Self.InventoryItem_Printing_cu" />
           <EntitySet Name="InventoryItem_RawMaterial_cu" EntityType="Self.InventoryItem_RawMaterial_cu" />
           <EntitySet Name="InventoryItem_UnitMeasurment_cu" EntityType="Self.InventoryItem_UnitMeasurment_cu" />
           <EntitySet Name="InventoryItemBrand_cu" EntityType="Self.InventoryItemBrand_cu" />
@@ -24436,6 +24530,10 @@
             <End Role="InventoryItem_cu" EntitySet="InventoryItem_cu" />
             <End Role="InventoryItemTransaction" EntitySet="InventoryItemTransactions" />
           </AssociationSet>
+          <AssociationSet Name="FK_InventoryItem_Printing_cu_InventoryItem_cu" Association="Self.FK_InventoryItem_Printing_cu_InventoryItem_cu">
+            <End Role="InventoryItem_cu" EntitySet="InventoryItem_cu" />
+            <End Role="InventoryItem_Printing_cu" EntitySet="InventoryItem_Printing_cu" />
+          </AssociationSet>
           <AssociationSet Name="FK_InventoryItem_RawMaterial_cu_InventoryItem_cu" Association="Self.FK_InventoryItem_RawMaterial_cu_InventoryItem_cu">
             <End Role="InventoryItem_cu" EntitySet="InventoryItem_cu" />
             <End Role="InventoryItem_RawMaterial_cu" EntitySet="InventoryItem_RawMaterial_cu" />
@@ -24455,6 +24553,10 @@
           <AssociationSet Name="FK_InvoiceDetail_Inventory_InventoryItem_cu" Association="Self.FK_InvoiceDetail_Inventory_InventoryItem_cu">
             <End Role="InventoryItem_cu" EntitySet="InventoryItem_cu" />
             <End Role="InvoiceDetail_Inventory" EntitySet="InvoiceDetail_Inventory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventoryItem_Printing_cu_User_cu" Association="Self.FK_InventoryItem_Printing_cu_User_cu">
+            <End Role="User_cu" EntitySet="User_cu" />
+            <End Role="InventoryItem_Printing_cu" EntitySet="InventoryItem_Printing_cu" />
           </AssociationSet>
           <AssociationSet Name="FK_InventoryItem_RawMaterial_cu_RawMaterials_cu" Association="Self.FK_InventoryItem_RawMaterial_cu_RawMaterials_cu">
             <End Role="RawMaterials_cu" EntitySet="RawMaterials_cu" />
@@ -27151,6 +27253,23 @@
                 <ScalarProperty Name="Height" ColumnName="Height" />
                 <ScalarProperty Name="Depth" ColumnName="Depth" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InventoryItem_Printing_cu">
+            <EntityTypeMapping TypeName="MerkFinanceModel.InventoryItem_Printing_cu">
+              <MappingFragment StoreEntitySet="InventoryItem_Printing_cu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="InventoryItem_CU_ID" ColumnName="InventoryItem_CU_ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="PrintingMaxTimeInMinutes" ColumnName="PrintingMaxTimeInMinutes" />
+                <ScalarProperty Name="AddedMinutes" ColumnName="AddedMinutes" />
+                <ScalarProperty Name="PrintingAverageUnitCostPrice" ColumnName="PrintingAverageUnitCostPrice" />
+                <ScalarProperty Name="UseRealCost" ColumnName="UseRealCost" />
+                <ScalarProperty Name="PrintingRealCostPrice" ColumnName="PrintingRealCostPrice" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
+                <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

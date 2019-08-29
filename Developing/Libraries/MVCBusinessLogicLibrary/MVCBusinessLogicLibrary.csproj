@@ -156,6 +156,7 @@
     <Compile Include="MVCDataCollectors\InventoryItem_Area_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InventoryItem_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InventoryItem_InventoryHousing_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InventoryItem_Printing_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InventoryItem_UnitMeasurment_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InvoicePaymentBrief_Report_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InvoicePaymentDataCollector.cs" />
@@ -232,6 +233,7 @@
     <Compile Include="Viewers\IInventoryItemViewer.cs" />
     <Compile Include="Viewers\IInventoryItem_Area_Viewer.cs" />
     <Compile Include="Viewers\IInventoryItem_InventoryHousing_Viewer.cs" />
+    <Compile Include="Viewers\IInventoryItem_Printing_Viewer.cs" />
     <Compile Include="Viewers\IInventoryItem_UnitMeasurment_Viewer.cs" />
     <Compile Include="Viewers\IInvetoryItemGroupViewer.cs" />
     <Compile Include="Viewers\IInvoicePaymentBrief_Report_Viewer.cs" />

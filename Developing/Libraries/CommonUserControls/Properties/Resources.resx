@@ -505,9 +505,6 @@
   <data name="RemoveFrom_16_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RemoveFrom_16_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PaintIcon_01_08" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PaintIcon_01_08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Clear_1_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Clear_1_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

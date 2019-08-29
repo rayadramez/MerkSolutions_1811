@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
 			this.spnInventoryItemTotalArea = new DevExpress.XtraEditors.SpinEdit();
 			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -175,7 +175,7 @@
 			this.spnInventoryItemTotalArea.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnInventoryItemTotalArea.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
 			this.spnInventoryItemTotalArea.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
 			this.spnInventoryItemTotalArea.Properties.DisplayFormat.FormatString = "{0:#,##0.##}";
 			this.spnInventoryItemTotalArea.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
 			this.spnInventoryItemTotalArea.Properties.ReadOnly = true;
@@ -256,7 +256,7 @@
 			this.spnTotalArea.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnTotalArea.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
 			this.spnTotalArea.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
 			this.spnTotalArea.Properties.DisplayFormat.FormatString = "{0:#,##0.##}";
 			this.spnTotalArea.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
 			this.spnTotalArea.Properties.ReadOnly = true;
@@ -309,7 +309,7 @@
 			this.spnArea.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnArea.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
 			this.spnArea.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
 			this.spnArea.Properties.DisplayFormat.FormatString = "{0:#,##0.##}";
 			this.spnArea.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
 			this.spnArea.Properties.ReadOnly = true;

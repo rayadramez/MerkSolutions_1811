@@ -119,6 +119,7 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual DbSet<InventoryHousing_cu> InventoryHousing_cu { get; set; }
         public virtual DbSet<InventoryItem_Area> InventoryItem_Area { get; set; }
         public virtual DbSet<InventoryItem_cu> InventoryItem_cu { get; set; }
+        public virtual DbSet<InventoryItem_Printing_cu> InventoryItem_Printing_cu { get; set; }
         public virtual DbSet<InventoryItem_RawMaterial_cu> InventoryItem_RawMaterial_cu { get; set; }
         public virtual DbSet<InventoryItem_UnitMeasurment_cu> InventoryItem_UnitMeasurment_cu { get; set; }
         public virtual DbSet<InventoryItemBrand_cu> InventoryItemBrand_cu { get; set; }

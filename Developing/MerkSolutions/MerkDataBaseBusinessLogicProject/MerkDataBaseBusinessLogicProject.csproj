@@ -417,6 +417,9 @@
     <Compile Include="InventoryItem_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="InventoryItem_Printing_cu.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="InventoryItem_RawMaterial_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
@@ -519,6 +522,7 @@
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Color_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Doctor_StationPointStage_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItem_Area.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItem_Printing_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\OrganizationMachine_StationPoint_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PEMRSavingMode_User_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PupillaryAbnormalities_cu.cs" />

@@ -47,12 +47,13 @@
 			this.btnRawMaterialTransaction = new DevExpress.XtraNavBar.NavBarItem();
 			this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
 			this.btnGetRawMaterialCostPrices = new DevExpress.XtraNavBar.NavBarItem();
-			this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-			this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
-			this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
 			this.btnGetInventoryItemAreaParts = new DevExpress.XtraNavBar.NavBarItem();
 			this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
 			this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
+			this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+			this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
+			this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
+			this.btnInventoryItemPrinting = new DevExpress.XtraNavBar.NavBarItem();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
 			this.splitContainerControl2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).BeginInit();
@@ -104,7 +105,8 @@
             this.btnGetRawMaterialCostPrices,
             this.btnGetInventoryItemAreaParts,
             this.navBarItem5,
-            this.navBarItem6});
+            this.navBarItem6,
+            this.btnInventoryItemPrinting});
 			this.navBarControl2.Location = new System.Drawing.Point(0, 0);
 			this.navBarControl2.Margin = new System.Windows.Forms.Padding(5);
 			this.navBarControl2.Name = "navBarControl2";
@@ -134,6 +136,7 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnInventoryItem),
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnInventoryItemGroup_InventoryItem),
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnInventoryItem_Area),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.btnInventoryItemPrinting),
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnInventoryItemPrice),
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnInventoryItem_InventoryHousing)});
 			this.navBarGroup1.LargeImage = global::CommonUserControls.Properties.Resources.MenuIcon_16_02;
@@ -287,7 +290,6 @@
 			this.navBarGroup2.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
 			this.navBarGroup2.AppearancePressed.Options.UseFont = true;
 			this.navBarGroup2.Caption = "إعـــــدادات المــــواد الخـــــام";
-			this.navBarGroup2.Expanded = true;
 			this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnColor),
             new DevExpress.XtraNavBar.NavBarItemLink(this.btnRawMaterial),
@@ -375,39 +377,6 @@
 			this.btnGetRawMaterialCostPrices.SmallImage = global::CommonUserControls.Properties.Resources.PlayIcon_8_RightToLeft;
 			this.btnGetRawMaterialCostPrices.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnGetRawMaterialCostPrices_LinkClicked);
 			// 
-			// navBarItem1
-			// 
-			this.navBarItem1.Caption = "المخـــــازن";
-			this.navBarItem1.Name = "navBarItem1";
-			// 
-			// navBarItem2
-			// 
-			this.navBarItem2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.navBarItem2.Appearance.Options.UseFont = true;
-			this.navBarItem2.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.navBarItem2.AppearanceDisabled.Options.UseFont = true;
-			this.navBarItem2.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.navBarItem2.AppearanceHotTracked.Options.UseFont = true;
-			this.navBarItem2.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.navBarItem2.AppearancePressed.Options.UseFont = true;
-			this.navBarItem2.Caption = "العمليــات الرئيسيــة للمخـــــزون";
-			this.navBarItem2.Name = "navBarItem2";
-			this.navBarItem2.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem2.SmallImage")));
-			// 
-			// navBarItem3
-			// 
-			this.navBarItem3.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.navBarItem3.Appearance.Options.UseFont = true;
-			this.navBarItem3.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.navBarItem3.AppearanceDisabled.Options.UseFont = true;
-			this.navBarItem3.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.navBarItem3.AppearanceHotTracked.Options.UseFont = true;
-			this.navBarItem3.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.navBarItem3.AppearancePressed.Options.UseFont = true;
-			this.navBarItem3.Caption = "العمليــات الرئيسيــة للمخـــــزون";
-			this.navBarItem3.Name = "navBarItem3";
-			this.navBarItem3.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.SmallImage")));
-			// 
 			// btnGetInventoryItemAreaParts
 			// 
 			this.btnGetInventoryItemAreaParts.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
@@ -451,6 +420,54 @@
 			this.navBarItem6.Name = "navBarItem6";
 			this.navBarItem6.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem6.SmallImage")));
 			// 
+			// navBarItem1
+			// 
+			this.navBarItem1.Caption = "المخـــــازن";
+			this.navBarItem1.Name = "navBarItem1";
+			// 
+			// navBarItem2
+			// 
+			this.navBarItem2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.navBarItem2.Appearance.Options.UseFont = true;
+			this.navBarItem2.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.navBarItem2.AppearanceDisabled.Options.UseFont = true;
+			this.navBarItem2.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.navBarItem2.AppearanceHotTracked.Options.UseFont = true;
+			this.navBarItem2.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.navBarItem2.AppearancePressed.Options.UseFont = true;
+			this.navBarItem2.Caption = "العمليــات الرئيسيــة للمخـــــزون";
+			this.navBarItem2.Name = "navBarItem2";
+			this.navBarItem2.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem2.SmallImage")));
+			// 
+			// navBarItem3
+			// 
+			this.navBarItem3.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.navBarItem3.Appearance.Options.UseFont = true;
+			this.navBarItem3.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.navBarItem3.AppearanceDisabled.Options.UseFont = true;
+			this.navBarItem3.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.navBarItem3.AppearanceHotTracked.Options.UseFont = true;
+			this.navBarItem3.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.navBarItem3.AppearancePressed.Options.UseFont = true;
+			this.navBarItem3.Caption = "العمليــات الرئيسيــة للمخـــــزون";
+			this.navBarItem3.Name = "navBarItem3";
+			this.navBarItem3.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.SmallImage")));
+			// 
+			// btnInventoryItemPrinting
+			// 
+			this.btnInventoryItemPrinting.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.btnInventoryItemPrinting.Appearance.Options.UseFont = true;
+			this.btnInventoryItemPrinting.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.btnInventoryItemPrinting.AppearanceDisabled.Options.UseFont = true;
+			this.btnInventoryItemPrinting.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.btnInventoryItemPrinting.AppearanceHotTracked.Options.UseFont = true;
+			this.btnInventoryItemPrinting.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.btnInventoryItemPrinting.AppearancePressed.Options.UseFont = true;
+			this.btnInventoryItemPrinting.Caption = "أسعــــــار طبـاعــــــة المنتـجـــــــات";
+			this.btnInventoryItemPrinting.Name = "btnInventoryItemPrinting";
+			this.btnInventoryItemPrinting.SmallImage = global::CommonUserControls.Properties.Resources.PlayIcon_8_RightToLeft;
+			this.btnInventoryItemPrinting.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnInventoryItemPrinting_LinkClicked);
+			// 
 			// MerkFinanceMainMenu_UC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,5 +509,6 @@
 		private DevExpress.XtraNavBar.NavBarItem btnGetInventoryItemAreaParts;
 		private DevExpress.XtraNavBar.NavBarItem navBarItem5;
 		private DevExpress.XtraNavBar.NavBarItem navBarItem6;
+		private DevExpress.XtraNavBar.NavBarItem btnInventoryItemPrinting;
 	}
 }

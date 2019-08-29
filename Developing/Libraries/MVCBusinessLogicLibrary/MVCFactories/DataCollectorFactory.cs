@@ -140,6 +140,8 @@ namespace MVCBusinessLogicLibrary.MVCFactories
 					return new GetRawMaterialCostPrices_Report_DataCollecor<TEntity>();
 				case ViewerName.GetInventoryItemAreaParts_Viewer:
 					return new GetInventoryItemAreaParts_DataCollector<TEntity>();
+				case ViewerName.InventoryItem_Printing_Viewer:
+					return new InventoryItem_Printing_DataCollector<TEntity>();
 			}
 
 			return null;

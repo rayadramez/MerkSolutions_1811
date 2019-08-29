@@ -1183,16 +1183,6 @@ namespace CommonUserControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PaintIcon_01_08 {
-            get {
-                object obj = ResourceManager.GetObject("PaintIcon_01_08", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap PaintIcon_01_16 {
             get {
                 object obj = ResourceManager.GetObject("PaintIcon_01_16", resourceCulture);

@@ -947,6 +947,18 @@
     <Compile Include="SettingsViewers\InventoryItem_InventoryHousingViewers\InventoryItem_InventoryHousing_SearchViewer.Designer.cs">
       <DependentUpon>InventoryItem_InventoryHousing_SearchViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_Printing_Viewers\InventoryItem_Printing_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_Printing_Viewers\InventoryItem_Printing_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryItem_Printing_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_Printing_Viewers\InventoryItem_Printing_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_Printing_Viewers\InventoryItem_Printing_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryItem_Printing_SearchViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="SettingsViewers\InventoryItem_UnitMeasurmentViewers\InventoryItem_UnitMeasurment_EditorViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1736,6 +1748,12 @@
     <EmbeddedResource Include="SettingsViewers\InventoryItem_InventoryHousingViewers\InventoryItem_InventoryHousing_SearchViewer.resx">
       <DependentUpon>InventoryItem_InventoryHousing_SearchViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItem_Printing_Viewers\InventoryItem_Printing_EditorViewer.resx">
+      <DependentUpon>InventoryItem_Printing_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItem_Printing_Viewers\InventoryItem_Printing_SearchViewer.resx">
+      <DependentUpon>InventoryItem_Printing_SearchViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SettingsViewers\InventoryItem_UnitMeasurmentViewers\InventoryItem_UnitMeasurment_EditorViewer.resx">
       <DependentUpon>InventoryItem_UnitMeasurment_EditorViewer.cs</DependentUpon>
     </EmbeddedResource>
@@ -1960,6 +1978,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\grd_InventoryItem_Printing_SearchViewer.xml" />
+    <None Include="Resources\lyt_InventoryItem_Printing_EditorViewer.xml" />
     <None Include="Resources\grd_GetInventoryItemAreaParts.xml" />
     <None Include="Resources\lyt_GetInventoryItemAreaParts.xml" />
     <None Include="Resources\grd_GetRawMaterialCostPrices.xml" />
