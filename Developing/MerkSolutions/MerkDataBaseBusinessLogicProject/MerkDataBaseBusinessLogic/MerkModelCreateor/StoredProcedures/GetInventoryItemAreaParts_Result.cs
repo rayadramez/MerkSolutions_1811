@@ -37,11 +37,29 @@ namespace MerkDataBaseBusinessLogicProject
 		{
 			get
 			{
+				//InventoryItem_Area area =
+				//	InventoryItem_Area.ItemsList.Find(item => Convert.ToInt32(item.ID).Equals(Convert.ToInt32(AreaID)));
+				//if (area == null)
+				//	return 0;
+				return Convert.ToDouble(Width) * Convert.ToDouble(Height);
+			}
+		}
+
+		public double TotalArea
+		{
+			get
+			{
+				return Convert.ToDouble(Width) * Convert.ToDouble(Height) * Convert.ToDouble(Count);
+			}
+		}
+
+		public string AreaInternalCode
+		{
+			get
+			{
 				InventoryItem_Area area =
 					InventoryItem_Area.ItemsList.Find(item => Convert.ToInt32(item.ID).Equals(Convert.ToInt32(AreaID)));
-				if (area == null)
-					return 0;
-				return Convert.ToDouble(area.Width) * Convert.ToDouble(area.Height);
+				return area.InternalCode;
 			}
 		}
 	}

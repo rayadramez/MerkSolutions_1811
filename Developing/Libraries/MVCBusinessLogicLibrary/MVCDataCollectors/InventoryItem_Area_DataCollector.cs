@@ -44,7 +44,7 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 				((InventoryItem_Area)ActiveDBItem).InternalCode = InternalCode.ToString();
 
 			if (UserID != null)
-				((Service_cu)ActiveDBItem).InsertedBy = Convert.ToInt32(UserID);
+				((InventoryItem_Area)ActiveDBItem).InsertedBy = Convert.ToInt32(UserID);
 
 			((InventoryItem_Area)ActiveDBItem).IsOnDuty = true;
 
