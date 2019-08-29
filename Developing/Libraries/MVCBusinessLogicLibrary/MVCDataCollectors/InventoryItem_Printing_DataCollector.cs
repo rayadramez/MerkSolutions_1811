@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using ApplicationConfiguration;
 using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
@@ -117,7 +118,8 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 
 		public override object[] CollectSearchCriteria()
 		{
-			List<InventoryItem_Printing_cu> list = InventoryItem_Printing_cu.ItemsList.FindAll(item => item.IsOnDuty);
+			List<InventoryItem_Printing_cu> list = InventoryItem_Printing_cu.ItemsList.FindAll(item => item.IsOnDuty)
+				.OrderByDescending(item => item.Date).ToList();
 			return list.ToArray();
 		}
 
