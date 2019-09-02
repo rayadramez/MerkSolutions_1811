@@ -32,6 +32,9 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			if (InventoryItemID != null)
 				((InventoryItem_Printing_cu)ActiveDBItem).InventoryItem_CU_ID = Convert.ToInt32(InventoryItemID);
 
+			if (RawMaterialsID != null)
+				((InventoryItem_Printing_cu) ActiveDBItem).RawMaterial_CU_ID = Convert.ToInt32(RawMaterialsID);
+
 			if (Date != null)
 				((InventoryItem_Printing_cu)ActiveDBItem).Date = Convert.ToDateTime(Date);
 
@@ -184,6 +187,12 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 		{
 			get { return ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).InventoryItemID; }
 			set { ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).InventoryItemID = value; }
+		}
+
+		public object RawMaterialsID
+		{
+			get { return ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).RawMaterialsID; }
+			set { ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).RawMaterialsID = value; }
 		}
 
 		public object Date

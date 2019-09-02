@@ -141,6 +141,7 @@
     <Compile Include="MVCDataCollectors\Floor_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\GeneralChartOfAccountType_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\GetInventoryItemAreaParts_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\GetInventoryItemCostsDetails_Report_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\GetRawMaterialCostPrices_Report_DataCollecor.cs" />
     <Compile Include="MVCDataCollectors\IMVCDataCollector.cs" />
     <Compile Include="MVCDataCollectors\InPatientRoomBedDataCollector.cs" />
@@ -157,6 +158,7 @@
     <Compile Include="MVCDataCollectors\InventoryItem_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InventoryItem_InventoryHousing_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InventoryItem_Printing_DataCollector.cs" />
+    <Compile Include="MVCDataCollectors\InventoryItem_RawMaterial_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InventoryItem_UnitMeasurment_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InvoicePaymentBrief_Report_DataCollector.cs" />
     <Compile Include="MVCDataCollectors\InvoicePaymentDataCollector.cs" />
@@ -220,6 +222,7 @@
     <Compile Include="Viewers\IFloorViewer.cs" />
     <Compile Include="Viewers\IGeneralChartOfAccountTypeViewer.cs" />
     <Compile Include="Viewers\IGetInventoryItemAreaParts_Viewer.cs" />
+    <Compile Include="Viewers\IGetInventoryItemCostsDetails_Report_Viewer.cs" />
     <Compile Include="Viewers\IGetRawMaterialCostPrices_Report_Viewer.cs" />
     <Compile Include="Viewers\IInPatientRoomBedViewer.cs" />
     <Compile Include="Viewers\IInPatientRoomClassificationViewer.cs" />
@@ -234,6 +237,7 @@
     <Compile Include="Viewers\IInventoryItem_Area_Viewer.cs" />
     <Compile Include="Viewers\IInventoryItem_InventoryHousing_Viewer.cs" />
     <Compile Include="Viewers\IInventoryItem_Printing_Viewer.cs" />
+    <Compile Include="Viewers\IInventoryItem_RawMaterial_Viewer.cs" />
     <Compile Include="Viewers\IInventoryItem_UnitMeasurment_Viewer.cs" />
     <Compile Include="Viewers\IInvetoryItemGroupViewer.cs" />
     <Compile Include="Viewers\IInvoicePaymentBrief_Report_Viewer.cs" />

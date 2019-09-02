@@ -17,6 +17,7 @@ namespace MerkDataBaseBusinessLogicProject
         public int ID { get; set; }
         public int InventoryItem_CU_ID { get; set; }
         public System.DateTime Date { get; set; }
+        public Nullable<int> RawMaterial_CU_ID { get; set; }
         public double PrintingMaxTimeInMinutes { get; set; }
         public Nullable<double> AddedMinutes { get; set; }
         public double PrintingAverageUnitCostPrice { get; set; }
@@ -27,6 +28,7 @@ namespace MerkDataBaseBusinessLogicProject
         public bool IsOnDuty { get; set; }
     
         public virtual InventoryItem_cu InventoryItem_cu { get; set; }
+        public virtual RawMaterials_cu RawMaterials_cu { get; set; }
         public virtual User_cu User_cu { get; set; }
     }
 }

@@ -81,6 +81,7 @@ namespace MerkDataBaseBusinessLogicProject
             this.InsuranceLevel_cu = new HashSet<InsuranceLevel_cu>();
             this.InventoryHousing_cu = new HashSet<InventoryHousing_cu>();
             this.InventoryItem_Area = new HashSet<InventoryItem_Area>();
+            this.InventoryItem_Color_cu = new HashSet<InventoryItem_Color_cu>();
             this.InventoryItem_cu = new HashSet<InventoryItem_cu>();
             this.InventoryItem_Printing_cu = new HashSet<InventoryItem_Printing_cu>();
             this.InventoryItem_RawMaterial_cu = new HashSet<InventoryItem_RawMaterial_cu>();
@@ -124,6 +125,7 @@ namespace MerkDataBaseBusinessLogicProject
             this.PupillaryAbnormalities_cu = new HashSet<PupillaryAbnormalities_cu>();
             this.PupillaryRAPDCauses_cu = new HashSet<PupillaryRAPDCauses_cu>();
             this.QueueManagers = new HashSet<QueueManager>();
+            this.RawMaterial_Color_cu = new HashSet<RawMaterial_Color_cu>();
             this.RawMaterials_cu = new HashSet<RawMaterials_cu>();
             this.RawMaterialTranasctions = new HashSet<RawMaterialTranasction>();
             this.Region_cu = new HashSet<Region_cu>();
@@ -325,6 +327,8 @@ namespace MerkDataBaseBusinessLogicProject
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InventoryItem_Area> InventoryItem_Area { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<InventoryItem_Color_cu> InventoryItem_Color_cu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InventoryItem_cu> InventoryItem_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InventoryItem_Printing_cu> InventoryItem_Printing_cu { get; set; }
@@ -412,6 +416,8 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual ICollection<PupillaryRAPDCauses_cu> PupillaryRAPDCauses_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QueueManager> QueueManagers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RawMaterial_Color_cu> RawMaterial_Color_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RawMaterials_cu> RawMaterials_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

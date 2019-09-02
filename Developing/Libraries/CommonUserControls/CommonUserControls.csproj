@@ -227,11 +227,23 @@
     <Compile Include="InvoiceViewers\ReadyInvoiceForPayments_UC.Designer.cs">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="MerkDesignWork\ReviewInventoryItemsInDetails_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\ReviewInventoryItemsInDetails_UC.Designer.cs">
+      <DependentUpon>ReviewInventoryItemsInDetails_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportsContainer\GetInventoryItemAreaParts_Report.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ReportsContainer\GetInventoryItemAreaParts_Report.Designer.cs">
       <DependentUpon>GetInventoryItemAreaParts_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsContainer\GetInventoryItemCostsDetails_Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportsContainer\GetInventoryItemCostsDetails_Report.Designer.cs">
+      <DependentUpon>GetInventoryItemCostsDetails_Report.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportsContainer\GetRawMaterialCostPrices_Report.cs">
       <SubType>UserControl</SubType>
@@ -280,12 +292,6 @@
     </Compile>
     <Compile Include="MerkDesignWork\MerkFinanceMainMenu_UC.Designer.cs">
       <DependentUpon>MerkFinanceMainMenu_UC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MerkFinanceCommonViewers\MainHomeScreen_UC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MerkFinanceCommonViewers\MainHomeScreen_UC.Designer.cs">
-      <DependentUpon>MainHomeScreen_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="PEMRCommonViewers\Choose_PEMR_VS_Surgery.cs">
       <SubType>Form</SubType>
@@ -959,6 +965,18 @@
     <Compile Include="SettingsViewers\InventoryItem_Printing_Viewers\InventoryItem_Printing_SearchViewer.Designer.cs">
       <DependentUpon>InventoryItem_Printing_SearchViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_RawMaterial_Viewers\InventoryItem_RawMaterials_EditorViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_RawMaterial_Viewers\InventoryItem_RawMaterials_EditorViewer.Designer.cs">
+      <DependentUpon>InventoryItem_RawMaterials_EditorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_RawMaterial_Viewers\InventoryItem_RawMaterial_SearchViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsViewers\InventoryItem_RawMaterial_Viewers\InventoryItem_RawMaterial_SearchViewer.Designer.cs">
+      <DependentUpon>InventoryItem_RawMaterial_SearchViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="SettingsViewers\InventoryItem_UnitMeasurmentViewers\InventoryItem_UnitMeasurment_EditorViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1402,8 +1420,14 @@
     <EmbeddedResource Include="InvoiceViewers\ReadyInvoiceForPayments_UC.resx">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\ReviewInventoryItemsInDetails_UC.resx">
+      <DependentUpon>ReviewInventoryItemsInDetails_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportsContainer\GetInventoryItemAreaParts_Report.resx">
       <DependentUpon>GetInventoryItemAreaParts_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsContainer\GetInventoryItemCostsDetails_Report.resx">
+      <DependentUpon>GetInventoryItemCostsDetails_Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportsContainer\GetRawMaterialCostPrices_Report.resx">
       <DependentUpon>GetRawMaterialCostPrices_Report.cs</DependentUpon>
@@ -1428,9 +1452,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MerkDesignWork\MerkFinanceMainMenu_UC.resx">
       <DependentUpon>MerkFinanceMainMenu_UC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MerkFinanceCommonViewers\MainHomeScreen_UC.resx">
-      <DependentUpon>MainHomeScreen_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PEMRCommonViewers\Choose_PEMR_VS_Surgery.resx">
       <DependentUpon>Choose_PEMR_VS_Surgery.cs</DependentUpon>
@@ -1754,6 +1775,9 @@
     <EmbeddedResource Include="SettingsViewers\InventoryItem_Printing_Viewers\InventoryItem_Printing_SearchViewer.resx">
       <DependentUpon>InventoryItem_Printing_SearchViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SettingsViewers\InventoryItem_RawMaterial_Viewers\InventoryItem_RawMaterials_EditorViewer.resx">
+      <DependentUpon>InventoryItem_RawMaterials_EditorViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SettingsViewers\InventoryItem_UnitMeasurmentViewers\InventoryItem_UnitMeasurment_EditorViewer.resx">
       <DependentUpon>InventoryItem_UnitMeasurment_EditorViewer.cs</DependentUpon>
     </EmbeddedResource>
@@ -1978,6 +2002,17 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\grd_ReviewInventoryItemCostDetails_Printing_Viewer.xml" />
+    <None Include="Resources\grd_ReviewInventoryItemCostDetails_Area_Viewer.xml" />
+    <None Include="Resources\lyt_InventoryItem_RawMaterials_EditorViewer.xml" />
+    <None Include="Resources\grd_Added_InventoryItem_RawMaterial_Internal.xml" />
+    <None Include="Resources\grd_ReviewInventoryItemCostDetails_Viewer.xml" />
+    <None Include="Resources\lyt_ReviewInventoryItemCostDetails_Viewer.xml" />
+    <None Include="Resources\grd_GetInventoryItemCostsDetails_Search.xml" />
+    <None Include="Resources\lyt_GetInventoryItemCostsDetails_Report.xml" />
+    <None Include="Resources\grd_InventoryItem_RawMaterial_SearchViewer.xml" />
+    <None Include="Resources\grd_InventoryItem_RawMaterial_Internal.xml" />
+    <None Include="Resources\lyt_InventoryItem_RawMaterial_EditorViewer.xml" />
     <None Include="Resources\grd_InventoryItem_Printing_SearchViewer.xml" />
     <None Include="Resources\lyt_InventoryItem_Printing_EditorViewer.xml" />
     <None Include="Resources\grd_GetInventoryItemAreaParts.xml" />

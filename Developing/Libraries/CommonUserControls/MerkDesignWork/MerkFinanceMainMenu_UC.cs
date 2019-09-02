@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using CommonControlLibrary;
 using CommonUserControls.ReportsContainer;
 using CommonUserControls.SettingsViewers.Color_Viewers;
 using CommonUserControls.SettingsViewers.InventoryHousingViewers;
@@ -10,12 +11,14 @@ using CommonUserControls.SettingsViewers.InventoryItem_Area_Viewers;
 using CommonUserControls.SettingsViewers.InventoryItem_InventoryHousingViewers;
 using CommonUserControls.SettingsViewers.InventoryItem_InventoryItemGroupViewers;
 using CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers;
+using CommonUserControls.SettingsViewers.InventoryItem_RawMaterial_Viewers;
 using CommonUserControls.SettingsViewers.InventoryItem_UnitMeasurmentViewers;
 using CommonUserControls.SettingsViewers.InvetoryItemGroupViewers;
 using CommonUserControls.SettingsViewers.RawMaterialTransaction;
 using CommonUserControls.SettingsViewers.RawMaterial_Viewers;
 using CommonUserControls.SettingsViewers.UnitMeasurmentTreeLinkViewers;
 using CommonUserControls.SettingsViewers.UnitMeasurmentViewers;
+using DevExpress.XtraEditors;
 using MerkDataBaseBusinessLogicProject;
 using MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary;
 using MVCBusinessLogicLibrary.BaseViewers;
@@ -73,12 +76,20 @@ namespace CommonUserControls.MerkDesignWork
 		private InventoryItem_Printing_EditorViewer _inventoryItemPrintingEditorViewer;
 		private InventoryItem_Printing_SearchViewer _inventoryItemPrintingSearchViewer;
 
+		private InventoryItem_RawMaterials_EditorViewer _inventoryItemRawMaterialEditor;
+		private InventoryItem_RawMaterial_SearchViewer _inventoryItemRawMaterialSearch;
+
 		private GetRawMaterialCostPrices_Report _getRawMaterialCostPricesReport;
 		private GetInventoryItemAreaParts_Report _getInventoryItemAreaPartsReport;
+		private GetInventoryItemCostsDetails_Report _getInventoryItemCostsDetailsReport;
+
+		private ReviewInventoryItemsInDetails_UC _reviewInventoryItemsInDetails;
 
 		public MerkFinanceMainMenu_UC()
 		{
 			InitializeComponent();
+
+			//InventoryItemDetailsConstructor.InitializeList(1, 2, 10);
 		}
 
 		private void btnInventoryHousing_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -260,6 +271,32 @@ namespace CommonUserControls.MerkDesignWork
 				"أسعــــــار طبـاعــــــة المنتـجـــــــات",
 				AbstractViewerType.SearchViewer,
 				true);
+		}
+
+		private void btnInventoryItem_RawMaterial_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+		{
+			BaseController<InventoryItem_RawMaterial_cu>.ShowControl(ref _inventoryItemRawMaterialEditor,
+				ref _inventoryItemRawMaterialSearch,
+				splitContainerControl2.Panel1,
+				EditorContainerType.Settings,
+				ViewerName.InventoryItem_RawMaterial_Viewer,
+				DB_CommonTransactionType.CreateNew,
+				"ربـــط المنتــــج بمـــــواد الخــــــام",
+				AbstractViewerType.SearchViewer,
+				true);
+		}
+
+		private void btnGetInventoryItemCostsDetails_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+		{
+			BaseController<GetInventoryItemCostsDetails_Result>.ShowSearchControl(ref _getInventoryItemCostsDetailsReport,
+				this, ViewerName.GetInventoryItemCostsDetails_Viewer, DB_CommonTransactionType.SearchReport,
+				".... تقــريـــــر تكلفـــة المنتجـــــــات التفصيلـــــي .....", true, true);
+		}
+
+		private void btnReviewInventoryItemDetails_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+		{
+			splitContainerControl2.PanelVisibility = SplitPanelVisibility.Panel1;
+			CommonViewsActions.ShowUserControl(ref _reviewInventoryItemsInDetails, splitContainerControl2.Panel1);
 		}
 	}
 }

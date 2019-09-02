@@ -17,6 +17,7 @@ namespace MerkDataBaseBusinessLogicProject
         public int ID { get; set; }
         public int RawMaterialTransactionType_P_ID { get; set; }
         public int RawMaterial_CU_ID { get; set; }
+        public Nullable<int> Color_CU_ID { get; set; }
         public int DividedByType_P_ID { get; set; }
         public int Count { get; set; }
         public double PuchasingPrice { get; set; }
@@ -26,6 +27,7 @@ namespace MerkDataBaseBusinessLogicProject
         public Nullable<int> InsertedBy { get; set; }
         public bool IsOnDuty { get; set; }
     
+        public virtual Color_cu Color_cu { get; set; }
         public virtual DividedByType_p DividedByType_p { get; set; }
         public virtual RawMaterials_cu RawMaterials_cu { get; set; }
         public virtual RawMaterialTranasctionType_p RawMaterialTranasctionType_p { get; set; }

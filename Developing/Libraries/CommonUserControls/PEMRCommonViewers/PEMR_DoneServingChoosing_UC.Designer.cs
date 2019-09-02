@@ -79,6 +79,7 @@
 			this.btnExit.StyleController = this.layoutControl1;
 			this.btnExit.TabIndex = 46;
 			this.btnExit.Text = "Add New Diagnosis";
+			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
 			// 
 			// labelControl3
 			// 

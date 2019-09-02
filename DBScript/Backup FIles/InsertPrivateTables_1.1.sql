@@ -739,6 +739,9 @@ PRINT 'RawMaterialType_p'
 IF NOT EXISTS (SELECT 1 FROM [dbo].RawMaterialType_p WHERE ID BETWEEN 1 AND 2)
 INSERT INTO dbo.RawMaterialType_p ( ID, Name_P, Name_S, Description ) VALUES  ( 1, N'أخشاب إم دي أف',N'MDF Wood',N'' ),
 ( 2, N'لزق أمير',N'Amir Adhesive',N'' )
+
+IF NOT EXISTS (SELECT 1 FROM [dbo].RawMaterialType_p WHERE ID = 3)
+INSERT INTO dbo.RawMaterialType_p ( ID, Name_P, Name_S, Description ) VALUES ( 3, N'حلقان للمفاتيح',N'Keychain Ring',N'' )
 -- ///////////// END :: RawMaterialType_p
 
 -- ///////////// BEGIN :: DividedByType_p

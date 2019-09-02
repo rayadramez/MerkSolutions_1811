@@ -222,6 +222,8 @@
 			this.txtUserGroupInternalCode.MaximumSize = new System.Drawing.Size(110, 0);
 			this.txtUserGroupInternalCode.MinimumSize = new System.Drawing.Size(110, 0);
 			this.txtUserGroupInternalCode.Name = "txtUserGroupInternalCode";
+			this.txtUserGroupInternalCode.Properties.Appearance.BackColor = System.Drawing.Color.AntiqueWhite;
+			this.txtUserGroupInternalCode.Properties.Appearance.Options.UseBackColor = true;
 			this.txtUserGroupInternalCode.Size = new System.Drawing.Size(110, 20);
 			this.txtUserGroupInternalCode.StyleController = this.layoutControl1;
 			this.txtUserGroupInternalCode.TabIndex = 28;

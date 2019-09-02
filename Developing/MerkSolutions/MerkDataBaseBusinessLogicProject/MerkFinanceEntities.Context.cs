@@ -118,6 +118,7 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual DbSet<InsuranceLevel_cu> InsuranceLevel_cu { get; set; }
         public virtual DbSet<InventoryHousing_cu> InventoryHousing_cu { get; set; }
         public virtual DbSet<InventoryItem_Area> InventoryItem_Area { get; set; }
+        public virtual DbSet<InventoryItem_Color_cu> InventoryItem_Color_cu { get; set; }
         public virtual DbSet<InventoryItem_cu> InventoryItem_cu { get; set; }
         public virtual DbSet<InventoryItem_Printing_cu> InventoryItem_Printing_cu { get; set; }
         public virtual DbSet<InventoryItem_RawMaterial_cu> InventoryItem_RawMaterial_cu { get; set; }
@@ -188,6 +189,7 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual DbSet<PupillarySize_p> PupillarySize_p { get; set; }
         public virtual DbSet<QueueManager> QueueManagers { get; set; }
         public virtual DbSet<QueueManagerStatus_p> QueueManagerStatus_p { get; set; }
+        public virtual DbSet<RawMaterial_Color_cu> RawMaterial_Color_cu { get; set; }
         public virtual DbSet<RawMaterials_cu> RawMaterials_cu { get; set; }
         public virtual DbSet<RawMaterialTranasction> RawMaterialTranasctions { get; set; }
         public virtual DbSet<RawMaterialTranasctionType_p> RawMaterialTranasctionType_p { get; set; }
@@ -347,6 +349,27 @@ namespace MerkDataBaseBusinessLogicProject
                 new ObjectParameter("InventoryItemID", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetInventoryItemAreaParts_Result>("GetInventoryItemAreaParts", inventoryItemIDParameter);
+        }
+    
+        public virtual ObjectResult<GetInventoryItemCostsDetails_Result> GetInventoryItemCostsDetails(Nullable<int> rawMaterialID, Nullable<int> colorID, Nullable<int> itemID, Nullable<int> additionalCostToBeAdded)
+        {
+            var rawMaterialIDParameter = rawMaterialID.HasValue ?
+                new ObjectParameter("RawMaterialID", rawMaterialID) :
+                new ObjectParameter("RawMaterialID", typeof(int));
+    
+            var colorIDParameter = colorID.HasValue ?
+                new ObjectParameter("ColorID", colorID) :
+                new ObjectParameter("ColorID", typeof(int));
+    
+            var itemIDParameter = itemID.HasValue ?
+                new ObjectParameter("ItemID", itemID) :
+                new ObjectParameter("ItemID", typeof(int));
+    
+            var additionalCostToBeAddedParameter = additionalCostToBeAdded.HasValue ?
+                new ObjectParameter("AdditionalCostToBeAdded", additionalCostToBeAdded) :
+                new ObjectParameter("AdditionalCostToBeAdded", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetInventoryItemCostsDetails_Result>("GetInventoryItemCostsDetails", rawMaterialIDParameter, colorIDParameter, itemIDParameter, additionalCostToBeAddedParameter);
         }
     
         public virtual ObjectResult<GetInvoiceForAddmission_Result> GetInvoiceForAddmission(Nullable<System.DateTime> invoiceCreationDateStart, Nullable<System.DateTime> invoiceCreationDateEnd, Nullable<int> invoiceTypeID, Nullable<bool> invoiceIsOnDuty, Nullable<bool> invoiceIsFinanciallyReviewed, Nullable<bool> invoiceIsPrinted, Nullable<bool> invoiceIsPaymentEnough, Nullable<int> doctorID, Nullable<int> patientID)

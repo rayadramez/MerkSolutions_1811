@@ -1,4 +1,5 @@
-﻿using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
+﻿using MerkDataBaseBusinessLogicProject;
+using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
 using MVCBusinessLogicLibrary.MVCDataCollectors;
 
 namespace MVCBusinessLogicLibrary.MVCFactories
@@ -142,6 +143,11 @@ namespace MVCBusinessLogicLibrary.MVCFactories
 					return new GetInventoryItemAreaParts_DataCollector<TEntity>();
 				case ViewerName.InventoryItem_Printing_Viewer:
 					return new InventoryItem_Printing_DataCollector<TEntity>();
+				case ViewerName.InventoryItem_RawMaterial_Viewer:
+					return new InventoryItem_RawMaterial_DataCollector<TEntity>();
+				case ViewerName.GetInventoryItemCostsDetails_Viewer:
+					return new GetInventoryItemCostsDetails_Report_DataCollector<TEntity>();
+
 			}
 
 			return null;

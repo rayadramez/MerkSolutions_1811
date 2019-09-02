@@ -17,7 +17,9 @@ namespace MerkDataBaseBusinessLogicProject
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public RawMaterials_cu()
         {
+            this.InventoryItem_Printing_cu = new HashSet<InventoryItem_Printing_cu>();
             this.InventoryItem_RawMaterial_cu = new HashSet<InventoryItem_RawMaterial_cu>();
+            this.RawMaterial_Color_cu = new HashSet<RawMaterial_Color_cu>();
             this.RawMaterialTranasctions = new HashSet<RawMaterialTranasction>();
         }
     
@@ -42,7 +44,11 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual Color_cu Color_cu { get; set; }
         public virtual DividedByType_p DividedByType_p { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<InventoryItem_Printing_cu> InventoryItem_Printing_cu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InventoryItem_RawMaterial_cu> InventoryItem_RawMaterial_cu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RawMaterial_Color_cu> RawMaterial_Color_cu { get; set; }
         public virtual RawMaterialType_p RawMaterialType_p { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RawMaterialTranasction> RawMaterialTranasctions { get; set; }

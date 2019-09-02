@@ -1,13 +1,11 @@
 ﻿using ApplicationConfiguration;
 using CommonControlLibrary;
 using CommonUserControls.MerkDesignWork;
-using CommonUserControls.MerkFinanceCommonViewers;
 
 namespace MerkFinance
 {
 	public partial class MainForm : DevExpress.XtraEditors.XtraForm
 	{
-		private MainHomeScreen_UC _mainHomeScreen;
 		private MerkFinanceMainMenu_UC _merkFinanceMainMenu;
 
 		public MainForm()

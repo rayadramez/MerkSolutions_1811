@@ -67,6 +67,8 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers
 			set { lkeInventoryItems.EditValue = value; }
 		}
 
+		public object RawMaterialsID { get; set; }
+
 		public object Date
 		{
 			get { return dtDate.EditValue; }

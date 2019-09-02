@@ -119,7 +119,7 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Area_Viewers
 				return;
 
 			spnInventoryItemTotalArea.EditValue =
-				InventoryBusinessLogicEngine.GetInventoryItemTotalArea(Convert.ToInt32(lkeInventoryItems.EditValue));
+				InventoryBusinessLogicEngine.GetInventoryItemTotalAreaParts(Convert.ToInt32(lkeInventoryItems.EditValue));
 		}
 	}
 }

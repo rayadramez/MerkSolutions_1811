@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using MerkDataBaseBusinessLogicProject.MerkDataBaseBusinessLogic.MerkModelCreateor.DBCommon;
 
 namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrary
 {
@@ -726,16 +727,16 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			return list;
 		}
 
-		public static double GetInventoryItemTotalArea(int inventoryItemID)
+		public static double GetInventoryItemTotalAreaParts(int inventoryItemID)
 		{
 			InventoryItem_cu inventoryItem =
 				InventoryItem_cu.ItemsList.Find(item => Convert.ToInt32(item.ID).Equals(inventoryItemID));
 			if (inventoryItem == null)
 				return 0;
-			return GetInventoryItemTotalArea(inventoryItem);
+			return GetInventoryItemTotalAreaParts(inventoryItem);
 		}
 
-		public static double GetInventoryItemTotalArea(InventoryItem_cu inventoryItem)
+		public static double GetInventoryItemTotalAreaParts(InventoryItem_cu inventoryItem)
 		{
 			if (inventoryItem == null)
 				return 0;
@@ -747,5 +748,371 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 			return totalArea;
 		}
+
+		public static double GetInventoryItemTotalCountParts(int inventoryItemID)
+		{
+			InventoryItem_cu inventoryItem =
+				InventoryItem_cu.ItemsList.Find(item => Convert.ToInt32(item.ID).Equals(inventoryItemID));
+			if (inventoryItem == null)
+				return 0;
+			return GetInventoryItemTotalAreaParts(inventoryItem);
+		}
+
+		public static double GetInventoryItemTotalCountParts(object inventoryItemID)
+		{
+			InventoryItem_cu inventoryItem = InventoryItem_cu.ItemsList.Find(item =>
+				Convert.ToInt32(item.ID).Equals(Convert.ToInt32(inventoryItemID)));
+			return GetInventoryItemTotalCountParts(inventoryItemID);
+		}
+
+		public static double GetInventoryItemTotalCountParts(InventoryItem_cu inventoryItem)
+		{
+			if (inventoryItem == null)
+				return 0;
+			List<InventoryItem_Area> areasList = InventoryItem_Area.ItemsList.FindAll(item =>
+				Convert.ToInt32(item.InventoryItemID).Equals(Convert.ToInt32(inventoryItem.ID)));
+			return areasList.Sum(item => item.Count);
+		}
+
+		public static double CalculateRawMaterialArea(int rawMaterialID)
+		{
+			RawMaterials_cu rawMaterial =
+				RawMaterials_cu.ItemsList.Find(item => Convert.ToInt32(item.ID).Equals(rawMaterialID));
+			return CalculateRawMaterialTotalArea(rawMaterial);
+		}
+
+		public static double CalculateRawMaterialTotalArea(RawMaterials_cu rawMaterial)
+		{
+			if (rawMaterial == null)
+				return 0;
+
+			double unitArea = 0;
+			unitArea = Convert.ToDouble(rawMaterial.Width) * Convert.ToDouble(rawMaterial.Height);
+			//DB_DividedByType rawDividedType = (DB_DividedByType)rawMaterial.DividedByType_P_ID;
+			//switch (rawDividedType)
+			//{
+			//	case DB_DividedByType.NotDivided:
+			//		unitArea = Convert.ToDouble(rawMaterial.Width) * Convert.ToDouble(rawMaterial.Height);
+			//		break;
+			//	case DB_DividedByType.DividedBy4:
+			//		unitArea = Convert.ToDouble(rawMaterial.Width) * Convert.ToDouble(rawMaterial.Height / 4);
+			//		break;
+			//	case DB_DividedByType.DividedBy6:
+			//		unitArea = Convert.ToDouble(rawMaterial.Width / 2) * Convert.ToDouble(rawMaterial.Height / 3);
+			//		break;
+			//}
+
+			return unitArea;
+		}
+
+		public static double CalculateRawMaterialUnitCost(RawMaterials_cu rawMaterial, RawMaterialUnitCostCalculation rawMaterialUnitCostCalculation)
+		{
+			if (rawMaterial == null)
+				return 0;
+
+			double unitCost = 0;
+			double rawUnitArea = CalculateRawMaterialTotalArea(rawMaterial);
+			List<RawMaterialTranasction> rawMaterialTransactionsList = DBCommon
+				.GetItemsList<RawMaterialTranasction>(item =>
+					item.RawMaterial_CU_ID.Equals(rawMaterial.ID)).ToList();
+
+			switch (rawMaterialUnitCostCalculation)
+			{
+				case RawMaterialUnitCostCalculation.LastPurchasingCost:
+					RawMaterialTranasction lastTransacion =
+						rawMaterialTransactionsList.OrderByDescending(item => item.Date).First();
+					if (lastTransacion == null)
+						return 0;
+					unitCost = Convert.ToDouble(lastTransacion.PuchasingPrice) / Convert.ToInt32(lastTransacion.Count);
+					unitCost = unitCost / rawUnitArea;
+					break;
+			}
+			return unitCost;
+		}
+
+		public static RawMaterials_cu GetRawMaterial(object rawMaterialID)
+		{
+			if (rawMaterialID == null)
+				return null;
+
+			return RawMaterials_cu.ItemsList.Find(item =>
+				Convert.ToInt32(item.ID).Equals(Convert.ToInt32(rawMaterialID)));
+		}
+
+		public static List<InventoryItem_RawMaterial_cu> GetInventoryItem_RawMaterials_List(InventoryItem_cu inventoryitem)
+		{
+			if (inventoryitem == null)
+				return null;
+
+			List<InventoryItem_RawMaterial_cu> list = new List<InventoryItem_RawMaterial_cu>();
+
+			list = InventoryItem_RawMaterial_cu.ItemsList.FindAll(item =>
+				Convert.ToInt32(item.InventoryItem_CU_ID).Equals(Convert.ToInt32(inventoryitem.ID)));
+
+			return list;
+		}
+
+		public static RawMaterials_cu GetRawMaterial(InventoryItem_RawMaterial_cu ivnentoryItem_RawMaterial)
+		{
+			if (ivnentoryItem_RawMaterial == null)
+				return null;
+
+			RawMaterials_cu rawMaterial = RawMaterials_cu.ItemsList.Find(item =>
+				Convert.ToInt32(item.ID).Equals(Convert.ToInt32(ivnentoryItem_RawMaterial.RawMaterial_CU_ID)));
+
+			return rawMaterial;
+		}
+
+		public static List<RawMaterials_cu> GetRawMaterials_List(InventoryItem_cu inventoryItem)
+		{
+			if (inventoryItem == null)
+				return null;
+
+			List<RawMaterials_cu> list = new List<RawMaterials_cu>();
+
+			List<InventoryItem_RawMaterial_cu> inventoryItem_RawMaterials_List =
+				GetInventoryItem_RawMaterials_List(inventoryItem);
+			foreach (InventoryItem_RawMaterial_cu inventoryItemRawMaterialCu in inventoryItem_RawMaterials_List)
+			{
+				RawMaterials_cu rawMaterial = GetRawMaterial(inventoryItemRawMaterialCu);
+				if (rawMaterial != null)
+					list.Add(rawMaterial);
+			}
+
+			return list;
+		}
+
+		public static InventoryItem_cu GetInventoryItem(object inventoryItemID)
+		{
+			if (inventoryItemID == null)
+				return null;
+
+			InventoryItem_cu inventoryItem = InventoryItem_cu.ItemsList.Find(item =>
+				Convert.ToInt32(item.ID).Equals(Convert.ToInt32(inventoryItemID)));
+			return inventoryItem;
+		}
+
+		public static List<InventoryItem_Printing_cu> GetInventoryItem_Printing_List(object inventoryItemID)
+		{
+			if (inventoryItemID == null)
+				return null;
+
+			InventoryItem_cu inventoryItem = GetInventoryItem(inventoryItemID);
+			return GetInventoryItem_Printing_List(inventoryItem);
+		}
+
+		public static List<InventoryItem_Printing_cu> GetInventoryItem_Printing_List(InventoryItem_cu inventoryItem)
+		{
+			if (inventoryItem == null)
+				return null;
+
+			List<InventoryItem_Printing_cu> list = InventoryItem_Printing_cu.ItemsList
+				.FindAll(item => Convert.ToInt32(item.InventoryItem_CU_ID).Equals(Convert.ToInt32(inventoryItem.ID)))
+				.OrderByDescending(item => item.Date).ThenByDescending(item => item.RawMaterial_CU_ID).ToList();
+
+			List<InventoryItem_Printing_cu> newList = new List<InventoryItem_Printing_cu>();
+
+			List<RawMaterials_cu> rawMaterialsList = GetRawMaterials_List(inventoryItem);
+
+			foreach (RawMaterials_cu rawMaterialsCu in rawMaterialsList)
+			{
+				InventoryItem_Printing_cu ivnentoryItem_Printing =
+					GetInventoryItem_Printing(inventoryItem, rawMaterialsCu);
+				if(ivnentoryItem_Printing != null)
+					newList.Add(ivnentoryItem_Printing);
+
+			}
+
+			return newList;
+		}
+
+		public static InventoryItem_Printing_cu GetInventoryItem_Printing(InventoryItem_cu inventoryItem,
+			RawMaterials_cu rawMaterial)
+		{
+			if (rawMaterial == null)
+				return null;
+
+			InventoryItem_Printing_cu ivnentoryItem_Printing = InventoryItem_Printing_cu.ItemsList
+				.FindAll(item =>
+					Convert.ToInt32(item.InventoryItem_CU_ID).Equals(Convert.ToInt32(inventoryItem.ID)) &&
+					Convert.ToInt32(item.RawMaterial_CU_ID).Equals(Convert.ToInt32(rawMaterial.ID)))
+				.OrderByDescending(item => item.Date).FirstOrDefault();
+
+			return ivnentoryItem_Printing;
+		}
+
+		public static List<InventoryItemDetailsConstructor> GetParentConstructorDetailsList(object inventoryItemID)
+		{
+			List<InventoryItemDetailsConstructor> ParentConstructor = new List<InventoryItemDetailsConstructor>();
+
+			if (inventoryItemID != null)
+			{
+				InventoryItemDetailsConstructor inventoryItemConstructor = new InventoryItemDetailsConstructor();
+				InventoryItem_cu inventoryItem = InventoryItem_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(inventoryItemID)));
+
+				if (inventoryItem == null)
+					return null;
+
+				inventoryItemConstructor.ItemID = inventoryItem.ID;
+				inventoryItemConstructor.ItemInternalCode = inventoryItem.InternalCode;
+				inventoryItemConstructor.ItemName = inventoryItem.Name_P;
+				inventoryItemConstructor.ItemWidth = inventoryItem.Width;
+				inventoryItemConstructor.ItemHeight = inventoryItem.Height;
+				inventoryItemConstructor.ItemDepth = inventoryItem.Depth;
+				inventoryItemConstructor.PartsCount = GetInventoryItemTotalCountParts(inventoryItem);
+
+				SetInventoryItem_AreaParts_ConstructorDetailsList(ref inventoryItemConstructor, inventoryItem);
+				SetInventoryItem_Printing_ConstructorDetailsList(ref inventoryItemConstructor, inventoryItem,
+					PrintingCalculationType.LastDate);
+
+				inventoryItemConstructor.ListType = ListType.SummaryInventoryItems;
+				ParentConstructor.Add(inventoryItemConstructor);
+			}
+			else
+			{
+				foreach (InventoryItem_cu inventoryItem in InventoryItem_cu.ItemsList)
+				{
+					InventoryItemDetailsConstructor inventoryItemConstructor = new InventoryItemDetailsConstructor();
+
+					if (inventoryItem == null)
+						return null;
+
+					inventoryItemConstructor.ItemID = inventoryItem.ID;
+					inventoryItemConstructor.ItemInternalCode = inventoryItem.InternalCode;
+					inventoryItemConstructor.ItemName = inventoryItem.Name_P;
+					inventoryItemConstructor.ItemWidth = inventoryItem.Width;
+					inventoryItemConstructor.ItemHeight = inventoryItem.Height;
+					inventoryItemConstructor.ItemDepth = inventoryItem.Depth;
+					inventoryItemConstructor.PartsCount = GetInventoryItemTotalCountParts(inventoryItem);
+
+					SetInventoryItem_AreaParts_ConstructorDetailsList(ref inventoryItemConstructor, inventoryItem);
+					SetInventoryItem_Printing_ConstructorDetailsList(ref inventoryItemConstructor, inventoryItem,
+						PrintingCalculationType.LastDate);
+
+					inventoryItemConstructor.ListType = ListType.SummaryInventoryItems;
+					ParentConstructor.Add(inventoryItemConstructor);
+				}
+			}
+
+			return ParentConstructor;
+		}
+
+		public static bool SetInventoryItem_AreaParts_ConstructorDetailsList(
+			ref InventoryItemDetailsConstructor inventoryItemConstructor, InventoryItem_cu inventoryItem)
+		{
+			if (inventoryItemConstructor == null)
+				return false;
+
+			List<InventoryItem_Area> inventoryItem_AreasParts = InventoryItem_Area.ItemsList.FindAll(item =>
+				Convert.ToInt32(item.InventoryItemID).Equals(Convert.ToInt32(inventoryItem.ID)));
+
+			inventoryItemConstructor.List_InventoryItem_AreaPartsDetailsConstructor =
+				new List<InventoryItem_AreaPartsDetailsConstructor>();
+
+			if (inventoryItem_AreasParts.Count == 0)
+			{
+				inventoryItemConstructor.TotalPartsArea = Convert.ToDouble(inventoryItemConstructor.ItemWidth) *
+				                                          Convert.ToDouble(inventoryItemConstructor.ItemHeight);
+				return true;
+			}
+
+			foreach (InventoryItem_Area inventoryItemAreasPart in inventoryItem_AreasParts)
+			{
+				InventoryItem_AreaPartsDetailsConstructor itemAreaPart = new InventoryItem_AreaPartsDetailsConstructor();
+				itemAreaPart.ItemID = inventoryItemConstructor.ItemID;
+				itemAreaPart.ItemName = inventoryItem.Name_P;
+				itemAreaPart.ItemInternalCode = inventoryItem.InternalCode;
+				itemAreaPart.PartInternalCode = inventoryItemAreasPart.InternalCode;
+				itemAreaPart.PartWidth = inventoryItemAreasPart.Width;
+				itemAreaPart.PartHeight = inventoryItemAreasPart.Height;
+				itemAreaPart.PartCount = inventoryItemAreasPart.Count;
+				itemAreaPart.PartArea = inventoryItemAreasPart.Count * inventoryItemAreasPart.Width *
+				                        inventoryItemAreasPart.Height;
+				inventoryItemConstructor.ListType = ListType.AreaParts;
+				inventoryItemConstructor.List_InventoryItem_AreaPartsDetailsConstructor.Add(itemAreaPart);
+			}
+
+			double totalArea =
+				inventoryItemConstructor.List_InventoryItem_AreaPartsDetailsConstructor.Sum(item =>
+					Convert.ToDouble(item.PartArea));
+			inventoryItemConstructor.TotalPartsArea = totalArea;
+
+			return true;
+		}
+
+		public static bool SetInventoryItem_Printing_ConstructorDetailsList(
+			ref InventoryItemDetailsConstructor inventoryItemConstructor, InventoryItem_cu inventoryItem,
+			PrintingCalculationType printingCalculationType)
+		{
+			if (inventoryItemConstructor == null)
+				return false;
+
+			InventoryItem_Printing_cu inventoryItemsPrinting = null;
+			List<InventoryItem_Printing_cu> inventoryItemsPrintingList = null;
+
+			switch (printingCalculationType)
+			{
+				case PrintingCalculationType.LastDate:
+					inventoryItemsPrintingList = GetInventoryItem_Printing_List(inventoryItem);
+					break;
+			}
+
+			if (inventoryItemsPrintingList == null || inventoryItemsPrintingList.Count == 0)
+				return false;
+
+			inventoryItemConstructor.List_InventoryItem_PrintingDetailsConstructor =
+				new List<InventoryItem_PrintingDetailsConstructor>();
+
+			foreach (InventoryItem_Printing_cu inventoryItemPrintingCu in inventoryItemsPrintingList)
+			{
+				InventoryItem_PrintingDetailsConstructor printingDetailsConstructor =
+					new InventoryItem_PrintingDetailsConstructor();
+				RawMaterials_cu rawMaterial = RawMaterials_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID)
+						.Equals(Convert.ToInt32(inventoryItemPrintingCu.RawMaterial_CU_ID)));
+
+				if (rawMaterial != null)
+					printingDetailsConstructor.RawName = rawMaterial.Name_P;
+
+				printingDetailsConstructor.ItemID = inventoryItem.ID;
+				printingDetailsConstructor.ItemName = inventoryItem.Name_P;
+				printingDetailsConstructor.PrintingMinutes = inventoryItemPrintingCu.PrintingMaxTimeInMinutes;
+				printingDetailsConstructor.PrintingUnitCostFactor =
+					inventoryItemPrintingCu.PrintingAverageUnitCostPrice;
+				printingDetailsConstructor.PrintingCalculatedCost =
+					Convert.ToDouble(inventoryItemPrintingCu.PrintingAverageUnitCostPrice) *
+					Convert.ToDouble(inventoryItemPrintingCu.PrintingMaxTimeInMinutes);
+				printingDetailsConstructor.PrintingAddedMinutes = inventoryItemPrintingCu.AddedMinutes;
+				printingDetailsConstructor.PrintingTotalCalculatedCost =
+					(Convert.ToDouble(inventoryItemPrintingCu.AddedMinutes) +
+					 Convert.ToDouble(inventoryItemPrintingCu.PrintingMaxTimeInMinutes)) *
+					Convert.ToDouble(inventoryItemPrintingCu.PrintingAverageUnitCostPrice);
+				printingDetailsConstructor.PrintingUseRealCost = inventoryItemPrintingCu.UseRealCost;
+				printingDetailsConstructor.PrintingRealCost = inventoryItemPrintingCu.PrintingRealCostPrice;
+
+				if(inventoryItemConstructor.TotalPartsArea != null)
+					if (!Convert.ToBoolean(printingDetailsConstructor.PrintingUseRealCost))
+						printingDetailsConstructor.PrintingUnitCost =
+							Convert.ToDouble(printingDetailsConstructor.PrintingTotalCalculatedCost) /
+							Convert.ToDouble(inventoryItemConstructor.TotalPartsArea);
+					else
+						printingDetailsConstructor.PrintingUnitCost = printingDetailsConstructor.PrintingRealCost;
+
+				printingDetailsConstructor.TotalPartsArea = inventoryItemConstructor.TotalPartsArea;
+
+				inventoryItemConstructor.List_InventoryItem_PrintingDetailsConstructor.Add(
+					printingDetailsConstructor);
+			}
+
+			inventoryItemConstructor.PrintingUnitCost =
+				Convert.ToDouble(
+					inventoryItemConstructor.List_InventoryItem_PrintingDetailsConstructor.Sum(item =>
+						Convert.ToDouble(item.PrintingUnitCost)));
+			inventoryItemConstructor.ListType = ListType.Printing;
+
+			return true;
+		}
 	}
 }
+

@@ -3,6 +3,7 @@
 	public interface IInventoryItem_Printing_Viewer : IViewer
 	{
 		object InventoryItemID { get; set; }
+		object RawMaterialsID { get; set; }
 		object Date { get; set; }
 		object PrintingMaxTimeInMinutes { get; set; }
 		object AddedMinutes { get; set; }

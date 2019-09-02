@@ -62,7 +62,8 @@ namespace CommonUserControls.SettingsViewers.RawMaterialTransaction
 
 		public override void FillControls()
 		{
-			CommonViewsActions.FillGridlookupEdit(lkeRawMaterial, RawMaterials_cu.ItemsList, "RawMaterialFullName");
+			CommonViewsActions.FillGridlookupEdit(lkeRawMaterial, RawMaterials_cu.ItemsList);
+			CommonViewsActions.FillGridlookupEdit(lkeColorID, Color_cu.ItemsList);
 			dtDate.EditValue = DateTime.Now;
 		}
 
@@ -73,6 +74,7 @@ namespace CommonUserControls.SettingsViewers.RawMaterialTransaction
 			spnCount.EditValue = null;
 			spnPrice.EditValue = null;
 			spnWidth.EditValue = null;
+			lkeColorID.EditValue = null;
 			dtDate.EditValue = DateTime.Now;
 			chkPurchasing.Checked = true;
 		}
@@ -113,6 +115,12 @@ namespace CommonUserControls.SettingsViewers.RawMaterialTransaction
 						break;
 				}
 			}
+		}
+
+		public object ColorID
+		{
+			get { return lkeColorID.EditValue; }
+			set { lkeColorID.EditValue = value; }
 		}
 
 		public object Count

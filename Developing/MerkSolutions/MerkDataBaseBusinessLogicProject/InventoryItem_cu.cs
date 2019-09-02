@@ -19,6 +19,7 @@ namespace MerkDataBaseBusinessLogicProject
         {
             this.FinanceInvoiceDetails = new HashSet<FinanceInvoiceDetail>();
             this.InventoryItem_Area = new HashSet<InventoryItem_Area>();
+            this.InventoryItem_Color_cu = new HashSet<InventoryItem_Color_cu>();
             this.InventoryItemTransactions = new HashSet<InventoryItemTransaction>();
             this.InventoryItem_Printing_cu = new HashSet<InventoryItem_Printing_cu>();
             this.InventoryItem_RawMaterial_cu = new HashSet<InventoryItem_RawMaterial_cu>();
@@ -61,13 +62,17 @@ namespace MerkDataBaseBusinessLogicProject
         public Nullable<double> Height { get; set; }
         public Nullable<double> Depth { get; set; }
         public Nullable<int> Count { get; set; }
+        public Nullable<int> Color_CU_ID { get; set; }
     
         public virtual ChartOfAccount_cu ChartOfAccount_cu { get; set; }
+        public virtual Color_cu Color_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FinanceInvoiceDetail> FinanceInvoiceDetails { get; set; }
         public virtual InventoryHousing_cu InventoryHousing_cu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InventoryItem_Area> InventoryItem_Area { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<InventoryItem_Color_cu> InventoryItem_Color_cu { get; set; }
         public virtual InventoryItemBrand_cu InventoryItemBrand_cu { get; set; }
         public virtual InventoryItemCategory_cu InventoryItemCategory_cu { get; set; }
         public virtual InventoryItemType_p InventoryItemType_p { get; set; }

@@ -15,8 +15,12 @@ namespace MerkDataBaseBusinessLogicProject
     public partial class InventoryItem_RawMaterial_cu
     {
         public int ID { get; set; }
-        public int InventoryIterm_CU_ID { get; set; }
+        public int InventoryItem_CU_ID { get; set; }
         public int RawMaterial_CU_ID { get; set; }
+        public Nullable<int> Count { get; set; }
+        public bool HasDimensions { get; set; }
+        public Nullable<double> Width { get; set; }
+        public Nullable<double> Height { get; set; }
         public Nullable<int> InsertedBy { get; set; }
         public bool IsOnDuty { get; set; }
         public string Description { get; set; }

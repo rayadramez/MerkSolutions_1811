@@ -8,5 +8,10 @@ namespace CommonUserControls.PEMRCommonViewers
 		{
 			InitializeComponent();
 		}
+
+		private void btnExit_Click(object sender, System.EventArgs e)
+		{
+
+		}
 	}
 }

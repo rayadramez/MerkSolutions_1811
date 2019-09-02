@@ -43,6 +43,7 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers
 		public override void FillControls()
 		{
 			CommonViewsActions.FillGridlookupEdit(lkeInventoryItems, InventoryItem_cu.ItemsList);
+			CommonViewsActions.FillGridlookupEdit(lkeRawMaterials, RawMaterials_cu.ItemsList);
 		}
 
 		public override void ClearControls()
@@ -66,6 +67,12 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers
 		{
 			get { return lkeInventoryItems.EditValue; }
 			set { lkeInventoryItems.EditValue = value; }
+		}
+
+		public object RawMaterialsID
+		{
+			get { return lkeRawMaterials.EditValue; }
+			set { lkeRawMaterials.EditValue = value; }
 		}
 
 		public object Date

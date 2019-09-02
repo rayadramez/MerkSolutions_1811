@@ -78,6 +78,8 @@ namespace CommonUserControls.SettingsViewers.RawMaterialTransaction
 			}
 		}
 
+		public object ColorID { get; set; }
+
 		public object Count
 		{
 			get { return spnCount.EditValue; }

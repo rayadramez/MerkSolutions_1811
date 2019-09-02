@@ -811,13 +811,46 @@
   <data name="grd_GetInventoryItemAreaParts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>grd_GetInventoryItemAreaParts.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="grd_GetInventoryItemCostsDetails_Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_GetInventoryItemCostsDetails_Search.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="grd_InventoryItem_Printing_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>grd_InventoryItem_Printing_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InventoryItem_RawMaterial_Internal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InventoryItem_RawMaterial_Internal.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_InventoryItem_RawMaterial_SearchViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_InventoryItem_RawMaterial_SearchViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="lyt_GetInventoryItemAreaParts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>lyt_GetInventoryItemAreaParts.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="lyt_GetInventoryItemCostsDetails_Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_GetInventoryItemCostsDetails_Report.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="lyt_InventoryItem_Printing_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>lyt_InventoryItem_Printing_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItem_RawMaterial_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItem_RawMaterial_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_ReviewInventoryItemCostDetails_Viewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_ReviewInventoryItemCostDetails_Viewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_ReviewInventoryItemCostDetails_Viewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ReviewInventoryItemCostDetails_Viewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_Added_InventoryItem_RawMaterial_Internal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_Added_InventoryItem_RawMaterial_Internal.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="lyt_InventoryItem_RawMaterials_EditorViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_InventoryItem_RawMaterials_EditorViewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_ReviewInventoryItemCostDetails_Area_Viewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_ReviewInventoryItemCostDetails_Area_Viewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="grd_ReviewInventoryItemCostDetails_Printing_Viewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>grd_ReviewInventoryItemCostDetails_Printing_Viewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

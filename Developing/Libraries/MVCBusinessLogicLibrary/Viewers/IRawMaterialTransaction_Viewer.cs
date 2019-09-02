@@ -4,6 +4,7 @@
 	{
 		object RawMaterialID { get; set; }
 		object RawTransactionTypeID { get; set; }
+		object ColorID { get; set; }
 		object Count { get; set; }
 		object PuchasingPrice { get; set; }
 		object Width { get; set; }

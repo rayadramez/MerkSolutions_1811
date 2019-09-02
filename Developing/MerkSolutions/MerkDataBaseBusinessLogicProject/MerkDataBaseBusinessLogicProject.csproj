@@ -248,6 +248,9 @@
     <Compile Include="EntitiesOperationsBusinessLogicLibrary\Insurance.cs" />
     <Compile Include="EntitiesOperationsBusinessLogicLibrary\InventoryBusinessLogicEngine.cs" />
     <Compile Include="EntitiesOperationsBusinessLogicLibrary\InventoryItemConstructor.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\InventoryItemDetailsConstructor.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\InventoryItem_AreaPartsDetailsConstructor.cs" />
+    <Compile Include="EntitiesOperationsBusinessLogicLibrary\InventoryItem_PrintingDetailsConstructor.cs" />
     <Compile Include="EntitiesOperationsBusinessLogicLibrary\InvoiceObject.cs" />
     <Compile Include="EntitiesOperationsBusinessLogicLibrary\MedicalInvoiceItemConstructor.cs" />
     <Compile Include="EntitiesOperationsBusinessLogicLibrary\MerkDBBusinessLogicEngine.cs" />
@@ -307,6 +310,9 @@
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="GetInventoryItemAreaParts_Result.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetInventoryItemCostsDetails_Result.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="GetInvoiceForAddmission_Result.cs">
@@ -412,6 +418,9 @@
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="InventoryItem_Area.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItem_Color_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="InventoryItem_cu.cs">
@@ -523,6 +532,7 @@
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\Doctor_StationPointStage_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItem_Area.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItem_Printing_cu.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\InventoryItem_RawMaterial_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\OrganizationMachine_StationPoint_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PEMRSavingMode_User_cu.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\CustomEntities\PupillaryAbnormalities_cu.cs" />
@@ -664,6 +674,7 @@
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\PrivateEntities\WeightUnit_p.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetCustomerInvoices_Result.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetInventoryItemAreaParts_Result.cs" />
+    <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetInventoryItemCostsDetails_Result.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetInvoicesPaymentBriefReport_Result.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetPatientDepositBalance_Result.cs" />
     <Compile Include="MerkDataBaseBusinessLogic\MerkModelCreateor\StoredProcedures\GetPatientPreviousInvoices_Result.cs" />
@@ -856,6 +867,9 @@
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="RawMaterialType_p.cs">
+      <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterial_Color_cu.cs">
       <DependentUpon>MerkFinanceEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Region_cu.cs">

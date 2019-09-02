@@ -53,6 +53,9 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			if (DividedTypeID != null)
 				((RawMaterialTranasction)ActiveDBItem).DividedByType_P_ID = Convert.ToInt32(DividedTypeID);
 
+			if (ColorID != null)
+				((RawMaterialTranasction)ActiveDBItem).Color_CU_ID = Convert.ToInt32(ColorID);
+
 			if (UserID != null)
 				((RawMaterialTranasction)ActiveDBItem).InsertedBy = Convert.ToInt32(UserID);
 
@@ -219,6 +222,12 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 		{
 			get { return ((IRawMaterialTransaction_Viewer)ActiveCollector.ActiveViewer).DividedTypeID; }
 			set { ((IRawMaterialTransaction_Viewer)ActiveCollector.ActiveViewer).DividedTypeID = value; }
+		}
+
+		public object ColorID
+		{
+			get { return ((IRawMaterialTransaction_Viewer)ActiveCollector.ActiveViewer).ColorID; }
+			set { ((IRawMaterialTransaction_Viewer)ActiveCollector.ActiveViewer).ColorID = value; }
 		}
 
 		#endregion

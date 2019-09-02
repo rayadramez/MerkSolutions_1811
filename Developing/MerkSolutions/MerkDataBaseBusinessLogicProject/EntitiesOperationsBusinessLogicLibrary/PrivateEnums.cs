@@ -2,6 +2,14 @@
 {
 	#region DBCommon
 
+	public enum DB_RawMaterialType
+	{
+		None = 0,
+		MDFWood = 1,
+		Adhesive = 2,
+		KeychainRing = 3
+	}
+
 	public enum DB_DividedByType
 	{
 		None = 0,
@@ -465,7 +473,8 @@
 		Color_cu,
 		RawMaterialTranasction,
 		RawMaterialTranasctionType_p,
-		InventoryItem_Printing_cu
+		InventoryItem_Printing_cu,
+		InventoryItem_RawMaterial_cu
 	}
 
 	public enum DB_Station
@@ -554,6 +563,28 @@
 	#endregion
 
 	#region Other Enums
+
+	public enum ListType
+	{
+		SummaryInventoryItems = 1,
+		AreaParts = 2,
+		Printing = 3
+	}
+
+	public enum PrintingCalculationType
+	{
+		LastDate = 1,
+		Average = 2,
+		SpecificDate = 3
+	}
+
+	public enum RawMaterialUnitCostCalculation
+	{
+		None = 0,
+		LastPurchasingCost = 1,
+		AveragePurchasingCost = 2,
+		SpecificDate = 3,
+	}
 
 	public enum GenderType
 	{
