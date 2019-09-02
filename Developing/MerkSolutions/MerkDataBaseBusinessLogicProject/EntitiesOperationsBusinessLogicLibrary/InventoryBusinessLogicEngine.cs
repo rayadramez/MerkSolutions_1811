@@ -948,8 +948,7 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			if (inventoryItemID != null)
 			{
 				InventoryItemDetailsConstructor inventoryItemConstructor = new InventoryItemDetailsConstructor();
-				InventoryItem_cu inventoryItem = InventoryItem_cu.ItemsList.Find(item =>
-					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(inventoryItemID)));
+				InventoryItem_cu inventoryItem = GetInventoryItem(inventoryItemID);
 
 				if (inventoryItem == null)
 					return null;

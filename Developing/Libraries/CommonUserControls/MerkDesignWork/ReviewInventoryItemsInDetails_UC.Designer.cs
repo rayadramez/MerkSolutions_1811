@@ -34,11 +34,13 @@
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
 			DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
 			DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
 			DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
-			DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.lkeInternalCode = new DevExpress.XtraEditors.GridLookUpEdit();
+			this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.spnPrintingUnitCost = new DevExpress.XtraEditors.SpinEdit();
 			this.spnTotalAreaParts = new DevExpress.XtraEditors.SpinEdit();
 			this.spnTotalParts = new DevExpress.XtraEditors.SpinEdit();
@@ -58,9 +60,26 @@
 			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
 			this.btnExit = new DevExpress.XtraEditors.SimpleButton();
 			this.spnAdditionalCostAmount = new DevExpress.XtraEditors.SpinEdit();
-			this.txtInventoryItemsInternalCode = new DevExpress.XtraEditors.TextEdit();
 			this.lkeInventoryItems = new DevExpress.XtraEditors.GridLookUpEdit();
 			this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.grdAreaParts = new DevExpress.XtraGrid.GridControl();
+			this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.grdPrinting = new DevExpress.XtraGrid.GridControl();
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -115,24 +134,6 @@
 			this.gridColumn58 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.gridColumn59 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.gridColumn60 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.grdAreaParts = new DevExpress.XtraGrid.GridControl();
-			this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -148,10 +149,6 @@
 			this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.lytGroup_AreaParts = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lytGroup_Printing = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -168,8 +165,19 @@
 			this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.simpleSeparator3 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.simpleSeparator5 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.simpleSeparator6 = new DevExpress.XtraLayout.SimpleSeparator();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.lkeInternalCode.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnPrintingUnitCost.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnTotalAreaParts.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnTotalParts.Properties)).BeginInit();
@@ -180,9 +188,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.spnSellingPrice.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnProfitPercentage.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnAdditionalCostAmount.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtInventoryItemsInternalCode.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeInventoryItems.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.grdAreaParts)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.grdPrinting)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
@@ -192,9 +202,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView9)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.grdAreaParts)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
@@ -210,10 +217,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytGroup_AreaParts)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Printing)).BeginInit();
@@ -230,10 +233,20 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.lkeInternalCode);
 			this.layoutControl1.Controls.Add(this.spnPrintingUnitCost);
 			this.layoutControl1.Controls.Add(this.spnTotalAreaParts);
 			this.layoutControl1.Controls.Add(this.spnTotalParts);
@@ -253,7 +266,6 @@
 			this.layoutControl1.Controls.Add(this.labelControl2);
 			this.layoutControl1.Controls.Add(this.btnExit);
 			this.layoutControl1.Controls.Add(this.spnAdditionalCostAmount);
-			this.layoutControl1.Controls.Add(this.txtInventoryItemsInternalCode);
 			this.layoutControl1.Controls.Add(this.lkeInventoryItems);
 			this.layoutControl1.Controls.Add(this.grdAreaParts);
 			this.layoutControl1.Controls.Add(this.grdPrinting);
@@ -269,6 +281,29 @@
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
+			// lkeInternalCode
+			// 
+			this.lkeInternalCode.Location = new System.Drawing.Point(601, 50);
+			this.lkeInternalCode.MaximumSize = new System.Drawing.Size(150, 0);
+			this.lkeInternalCode.MinimumSize = new System.Drawing.Size(150, 0);
+			this.lkeInternalCode.Name = "lkeInternalCode";
+			this.lkeInternalCode.Properties.Appearance.BackColor = System.Drawing.Color.White;
+			this.lkeInternalCode.Properties.Appearance.Options.UseBackColor = true;
+			this.lkeInternalCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.lkeInternalCode.Properties.View = this.gridView6;
+			this.lkeInternalCode.Size = new System.Drawing.Size(150, 20);
+			this.lkeInternalCode.StyleController = this.layoutControl1;
+			this.lkeInternalCode.TabIndex = 31;
+			this.lkeInternalCode.EditValueChanged += new System.EventHandler(this.lkeInternalCode_EditValueChanged);
+			// 
+			// gridView6
+			// 
+			this.gridView6.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.gridView6.Name = "gridView6";
+			this.gridView6.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.gridView6.OptionsView.ShowGroupPanel = false;
+			// 
 			// spnPrintingUnitCost
 			// 
 			this.spnPrintingUnitCost.EditValue = new decimal(new int[] {
@@ -276,7 +311,7 @@
             0,
             0,
             0});
-			this.spnPrintingUnitCost.Location = new System.Drawing.Point(1038, 132);
+			this.spnPrintingUnitCost.Location = new System.Drawing.Point(1036, 116);
 			this.spnPrintingUnitCost.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnPrintingUnitCost.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnPrintingUnitCost.Name = "spnPrintingUnitCost";
@@ -302,7 +337,7 @@
             0,
             0,
             0});
-			this.spnTotalAreaParts.Location = new System.Drawing.Point(250, 96);
+			this.spnTotalAreaParts.Location = new System.Drawing.Point(448, 78);
 			this.spnTotalAreaParts.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnTotalAreaParts.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnTotalAreaParts.Name = "spnTotalAreaParts";
@@ -328,7 +363,7 @@
             0,
             0,
             0});
-			this.spnTotalParts.Location = new System.Drawing.Point(447, 96);
+			this.spnTotalParts.Location = new System.Drawing.Point(635, 78);
 			this.spnTotalParts.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnTotalParts.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnTotalParts.Name = "spnTotalParts";
@@ -354,7 +389,7 @@
             0,
             0,
             0});
-			this.spnDepth.Location = new System.Drawing.Point(644, 96);
+			this.spnDepth.Location = new System.Drawing.Point(806, 78);
 			this.spnDepth.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnDepth.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnDepth.Name = "spnDepth";
@@ -380,7 +415,7 @@
             0,
             0,
             0});
-			this.spnHeight.Location = new System.Drawing.Point(841, 96);
+			this.spnHeight.Location = new System.Drawing.Point(948, 78);
 			this.spnHeight.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnHeight.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnHeight.Name = "spnHeight";
@@ -406,7 +441,7 @@
             0,
             0,
             0});
-			this.spnWidth.Location = new System.Drawing.Point(1038, 96);
+			this.spnWidth.Location = new System.Drawing.Point(1094, 78);
 			this.spnWidth.MaximumSize = new System.Drawing.Size(100, 30);
 			this.spnWidth.MinimumSize = new System.Drawing.Size(100, 30);
 			this.spnWidth.Name = "spnWidth";
@@ -662,23 +697,9 @@
 			this.spnAdditionalCostAmount.StyleController = this.layoutControl1;
 			this.spnAdditionalCostAmount.TabIndex = 41;
 			// 
-			// txtInventoryItemsInternalCode
-			// 
-			this.txtInventoryItemsInternalCode.CausesValidation = false;
-			this.txtInventoryItemsInternalCode.EditValue = "";
-			this.txtInventoryItemsInternalCode.Location = new System.Drawing.Point(640, 69);
-			this.txtInventoryItemsInternalCode.MaximumSize = new System.Drawing.Size(100, 20);
-			this.txtInventoryItemsInternalCode.MinimumSize = new System.Drawing.Size(100, 20);
-			this.txtInventoryItemsInternalCode.Name = "txtInventoryItemsInternalCode";
-			this.txtInventoryItemsInternalCode.Properties.Appearance.BackColor = System.Drawing.Color.AntiqueWhite;
-			this.txtInventoryItemsInternalCode.Properties.Appearance.Options.UseBackColor = true;
-			this.txtInventoryItemsInternalCode.Size = new System.Drawing.Size(100, 20);
-			this.txtInventoryItemsInternalCode.StyleController = this.layoutControl1;
-			this.txtInventoryItemsInternalCode.TabIndex = 33;
-			// 
 			// lkeInventoryItems
 			// 
-			this.lkeInventoryItems.Location = new System.Drawing.Point(837, 69);
+			this.lkeInventoryItems.Location = new System.Drawing.Point(843, 50);
 			this.lkeInventoryItems.MaximumSize = new System.Drawing.Size(300, 0);
 			this.lkeInventoryItems.MinimumSize = new System.Drawing.Size(300, 0);
 			this.lkeInventoryItems.Name = "lkeInventoryItems";
@@ -696,6 +717,438 @@
 			this.gridView5.Name = "gridView5";
 			this.gridView5.OptionsSelection.EnableAppearanceFocusedCell = false;
 			this.gridView5.OptionsView.ShowGroupPanel = false;
+			// 
+			// grdAreaParts
+			// 
+			gridLevelNode1.RelationName = "Level1";
+			this.grdAreaParts.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
+			this.grdAreaParts.Location = new System.Drawing.Point(110, 174);
+			this.grdAreaParts.MainView = this.gridView2;
+			this.grdAreaParts.Name = "grdAreaParts";
+			this.grdAreaParts.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.grdAreaParts.Size = new System.Drawing.Size(1118, 368);
+			this.grdAreaParts.TabIndex = 2;
+			this.grdAreaParts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2,
+            this.gridView4});
+			// 
+			// gridView2
+			// 
+			this.gridView2.Appearance.EvenRow.BackColor = System.Drawing.Color.LemonChiffon;
+			this.gridView2.Appearance.EvenRow.Options.UseBackColor = true;
+			this.gridView2.Appearance.GroupFooter.BackColor = System.Drawing.Color.Aqua;
+			this.gridView2.Appearance.GroupFooter.Options.UseBackColor = true;
+			this.gridView2.Appearance.GroupPanel.BackColor = System.Drawing.Color.Aqua;
+			this.gridView2.Appearance.GroupPanel.Options.UseBackColor = true;
+			this.gridView2.Appearance.OddRow.BackColor = System.Drawing.Color.BlanchedAlmond;
+			this.gridView2.Appearance.OddRow.Options.UseBackColor = true;
+			this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.gridView2.Appearance.Row.Options.UseFont = true;
+			this.gridView2.Appearance.Row.Options.UseTextOptions = true;
+			this.gridView2.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridView2.Appearance.SelectedRow.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+			this.gridView2.Appearance.SelectedRow.Options.UseFont = true;
+			this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn4,
+            this.gridColumn7,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn8});
+			this.gridView2.GridControl = this.grdAreaParts;
+			this.gridView2.Name = "gridView2";
+			this.gridView2.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+			this.gridView2.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+			this.gridView2.OptionsBehavior.AutoExpandAllGroups = true;
+			this.gridView2.OptionsBehavior.Editable = false;
+			this.gridView2.OptionsBehavior.ReadOnly = true;
+			this.gridView2.OptionsCustomization.AllowColumnMoving = false;
+			this.gridView2.OptionsEditForm.ShowOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
+			this.gridView2.OptionsEditForm.ShowOnEnterKey = DevExpress.Utils.DefaultBoolean.True;
+			this.gridView2.OptionsMenu.ShowAddNewSummaryItem = DevExpress.Utils.DefaultBoolean.True;
+			this.gridView2.OptionsMenu.ShowAutoFilterRowItem = false;
+			this.gridView2.OptionsMenu.ShowGroupSummaryEditorItem = true;
+			this.gridView2.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+			this.gridView2.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
+			this.gridView2.OptionsView.ShowAutoFilterRow = true;
+			this.gridView2.OptionsView.ShowChildrenInGroupPanel = true;
+			this.gridView2.OptionsView.ShowFooter = true;
+			this.gridView2.OptionsView.ShowGroupedColumns = true;
+			this.gridView2.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.True;
+			this.gridView2.OptionsView.ShowPreviewRowLines = DevExpress.Utils.DefaultBoolean.True;
+			this.gridView2.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
+			// 
+			// gridColumn1
+			// 
+			this.gridColumn1.AppearanceCell.BackColor = System.Drawing.SystemColors.Info;
+			this.gridColumn1.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.SystemColors.Info;
+			this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn1.AppearanceHeader.Options.UseFont = true;
+			this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn1.Caption = "المنتـــــج";
+			this.gridColumn1.FieldName = "ItemName";
+			this.gridColumn1.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+			this.gridColumn1.Name = "gridColumn1";
+			this.gridColumn1.OptionsColumn.AllowEdit = false;
+			this.gridColumn1.OptionsColumn.FixedWidth = true;
+			this.gridColumn1.OptionsColumn.ReadOnly = true;
+			this.gridColumn1.Visible = true;
+			this.gridColumn1.VisibleIndex = 0;
+			this.gridColumn1.Width = 350;
+			// 
+			// gridColumn2
+			// 
+			this.gridColumn2.AppearanceCell.BackColor = System.Drawing.Color.AntiqueWhite;
+			this.gridColumn2.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.AntiqueWhite;
+			this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn2.AppearanceHeader.Options.UseFont = true;
+			this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn2.Caption = "الكــــود الـداخلـــي";
+			this.gridColumn2.FieldName = "ItemInternalCode";
+			this.gridColumn2.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+			this.gridColumn2.Name = "gridColumn2";
+			this.gridColumn2.OptionsColumn.AllowEdit = false;
+			this.gridColumn2.OptionsColumn.FixedWidth = true;
+			this.gridColumn2.OptionsColumn.ReadOnly = true;
+			this.gridColumn2.Visible = true;
+			this.gridColumn2.VisibleIndex = 1;
+			this.gridColumn2.Width = 100;
+			// 
+			// gridColumn4
+			// 
+			this.gridColumn4.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.gridColumn4.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn4.AppearanceHeader.Options.UseFont = true;
+			this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn4.Caption = "العرض";
+			this.gridColumn4.DisplayFormat.FormatString = "{0:#,##0.##}";
+			this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.gridColumn4.FieldName = "PartWidth";
+			this.gridColumn4.Name = "gridColumn4";
+			this.gridColumn4.OptionsColumn.AllowEdit = false;
+			this.gridColumn4.OptionsColumn.FixedWidth = true;
+			this.gridColumn4.OptionsColumn.ReadOnly = true;
+			this.gridColumn4.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartWidth", "المجموع={0:#,##0.##}")});
+			this.gridColumn4.Visible = true;
+			this.gridColumn4.VisibleIndex = 2;
+			this.gridColumn4.Width = 150;
+			// 
+			// gridColumn7
+			// 
+			this.gridColumn7.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.gridColumn7.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn7.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn7.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn7.AppearanceHeader.Options.UseFont = true;
+			this.gridColumn7.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn7.Caption = "الإرتفاع";
+			this.gridColumn7.DisplayFormat.FormatString = "{0:#,##0.##}";
+			this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.gridColumn7.FieldName = "PartHeight";
+			this.gridColumn7.Name = "gridColumn7";
+			this.gridColumn7.OptionsColumn.AllowEdit = false;
+			this.gridColumn7.OptionsColumn.FixedWidth = true;
+			this.gridColumn7.OptionsColumn.ReadOnly = true;
+			this.gridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartHeight", "المجموع={0:#,##0.##}")});
+			this.gridColumn7.Visible = true;
+			this.gridColumn7.VisibleIndex = 3;
+			this.gridColumn7.Width = 150;
+			// 
+			// gridColumn9
+			// 
+			this.gridColumn9.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.gridColumn9.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn9.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn9.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn9.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.gridColumn9.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.gridColumn9.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn9.AppearanceHeader.Options.UseFont = true;
+			this.gridColumn9.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn9.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn9.Caption = "العدد";
+			this.gridColumn9.DisplayFormat.FormatString = "{0:#,##0.##}";
+			this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.gridColumn9.FieldName = "PartCount";
+			this.gridColumn9.Name = "gridColumn9";
+			this.gridColumn9.OptionsColumn.AllowEdit = false;
+			this.gridColumn9.OptionsColumn.FixedWidth = true;
+			this.gridColumn9.OptionsColumn.ReadOnly = true;
+			this.gridColumn9.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartCount", "المجموع={0:#,##0.##}")});
+			this.gridColumn9.Visible = true;
+			this.gridColumn9.VisibleIndex = 4;
+			this.gridColumn9.Width = 150;
+			// 
+			// gridColumn10
+			// 
+			this.gridColumn10.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.gridColumn10.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn10.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn10.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.gridColumn10.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn10.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn10.Caption = "المساحة";
+			this.gridColumn10.FieldName = "PartArea";
+			this.gridColumn10.Name = "gridColumn10";
+			this.gridColumn10.OptionsColumn.AllowEdit = false;
+			this.gridColumn10.OptionsColumn.FixedWidth = true;
+			this.gridColumn10.OptionsColumn.ReadOnly = true;
+			this.gridColumn10.Visible = true;
+			this.gridColumn10.VisibleIndex = 5;
+			this.gridColumn10.Width = 150;
+			// 
+			// gridColumn8
+			// 
+			this.gridColumn8.Name = "gridColumn8";
+			this.gridColumn8.Visible = true;
+			this.gridColumn8.VisibleIndex = 6;
+			this.gridColumn8.Width = 31;
+			// 
+			// gridView4
+			// 
+			this.gridView4.Appearance.EvenRow.BackColor = System.Drawing.Color.LemonChiffon;
+			this.gridView4.Appearance.EvenRow.Options.UseBackColor = true;
+			this.gridView4.Appearance.OddRow.BackColor = System.Drawing.Color.BlanchedAlmond;
+			this.gridView4.Appearance.OddRow.Options.UseBackColor = true;
+			this.gridView4.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.gridView4.Appearance.Row.Options.UseFont = true;
+			this.gridView4.Appearance.Row.Options.UseTextOptions = true;
+			this.gridView4.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridView4.Appearance.SelectedRow.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+			this.gridView4.Appearance.SelectedRow.Options.UseFont = true;
+			this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn11,
+            this.gridColumn12,
+            this.gridColumn13,
+            this.gridColumn14,
+            this.gridColumn15,
+            this.gridColumn16,
+            this.gridColumn17,
+            this.gridColumn18});
+			this.gridView4.GridControl = this.grdAreaParts;
+			this.gridView4.Name = "gridView4";
+			this.gridView4.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+			this.gridView4.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+			this.gridView4.OptionsBehavior.Editable = false;
+			this.gridView4.OptionsBehavior.ReadOnly = true;
+			this.gridView4.OptionsCustomization.AllowColumnMoving = false;
+			this.gridView4.OptionsEditForm.ShowOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
+			this.gridView4.OptionsEditForm.ShowOnEnterKey = DevExpress.Utils.DefaultBoolean.True;
+			this.gridView4.OptionsMenu.ShowAddNewSummaryItem = DevExpress.Utils.DefaultBoolean.True;
+			this.gridView4.OptionsMenu.ShowAutoFilterRowItem = false;
+			this.gridView4.OptionsMenu.ShowGroupSummaryEditorItem = true;
+			this.gridView4.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+			this.gridView4.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
+			this.gridView4.OptionsView.ShowAutoFilterRow = true;
+			this.gridView4.OptionsView.ShowChildrenInGroupPanel = true;
+			this.gridView4.OptionsView.ShowFooter = true;
+			this.gridView4.OptionsView.ShowGroupedColumns = true;
+			this.gridView4.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.True;
+			this.gridView4.OptionsView.ShowPreviewRowLines = DevExpress.Utils.DefaultBoolean.True;
+			this.gridView4.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.True;
+			// 
+			// gridColumn11
+			// 
+			this.gridColumn11.AppearanceCell.BackColor = System.Drawing.SystemColors.Info;
+			this.gridColumn11.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn11.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn11.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn11.AppearanceHeader.BackColor = System.Drawing.SystemColors.Info;
+			this.gridColumn11.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.gridColumn11.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn11.AppearanceHeader.Options.UseFont = true;
+			this.gridColumn11.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn11.Caption = "المنتـــــج";
+			this.gridColumn11.FieldName = "ItemName";
+			this.gridColumn11.Name = "gridColumn11";
+			this.gridColumn11.OptionsColumn.AllowEdit = false;
+			this.gridColumn11.OptionsColumn.FixedWidth = true;
+			this.gridColumn11.OptionsColumn.ReadOnly = true;
+			this.gridColumn11.Visible = true;
+			this.gridColumn11.VisibleIndex = 0;
+			this.gridColumn11.Width = 350;
+			// 
+			// gridColumn12
+			// 
+			this.gridColumn12.AppearanceCell.BackColor = System.Drawing.Color.AntiqueWhite;
+			this.gridColumn12.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn12.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn12.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn12.AppearanceHeader.BackColor = System.Drawing.Color.AntiqueWhite;
+			this.gridColumn12.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.gridColumn12.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn12.AppearanceHeader.Options.UseFont = true;
+			this.gridColumn12.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn12.Caption = "الكود الداخلي للمنتج";
+			this.gridColumn12.FieldName = "ItemInternalCode";
+			this.gridColumn12.Name = "gridColumn12";
+			this.gridColumn12.OptionsColumn.AllowEdit = false;
+			this.gridColumn12.OptionsColumn.FixedWidth = true;
+			this.gridColumn12.OptionsColumn.ReadOnly = true;
+			this.gridColumn12.Visible = true;
+			this.gridColumn12.VisibleIndex = 1;
+			this.gridColumn12.Width = 100;
+			// 
+			// gridColumn13
+			// 
+			this.gridColumn13.AppearanceCell.BackColor = System.Drawing.Color.AntiqueWhite;
+			this.gridColumn13.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn13.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn13.AppearanceHeader.BackColor = System.Drawing.Color.AntiqueWhite;
+			this.gridColumn13.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.gridColumn13.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn13.AppearanceHeader.Options.UseFont = true;
+			this.gridColumn13.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn13.Caption = "الكود الداخلي";
+			this.gridColumn13.FieldName = "PartInternalCode";
+			this.gridColumn13.Name = "gridColumn13";
+			this.gridColumn13.OptionsColumn.AllowEdit = false;
+			this.gridColumn13.OptionsColumn.FixedWidth = true;
+			this.gridColumn13.OptionsColumn.ReadOnly = true;
+			this.gridColumn13.Visible = true;
+			this.gridColumn13.VisibleIndex = 2;
+			this.gridColumn13.Width = 100;
+			// 
+			// gridColumn14
+			// 
+			this.gridColumn14.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.gridColumn14.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn14.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn14.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn14.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.gridColumn14.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.gridColumn14.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn14.AppearanceHeader.Options.UseFont = true;
+			this.gridColumn14.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn14.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn14.Caption = "العرض";
+			this.gridColumn14.DisplayFormat.FormatString = "{0:#,##0.##}";
+			this.gridColumn14.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.gridColumn14.FieldName = "PartWidth";
+			this.gridColumn14.Name = "gridColumn14";
+			this.gridColumn14.OptionsColumn.AllowEdit = false;
+			this.gridColumn14.OptionsColumn.FixedWidth = true;
+			this.gridColumn14.OptionsColumn.ReadOnly = true;
+			this.gridColumn14.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartWidth", "المجموع={0:#,##0.##}")});
+			this.gridColumn14.Visible = true;
+			this.gridColumn14.VisibleIndex = 3;
+			this.gridColumn14.Width = 150;
+			// 
+			// gridColumn15
+			// 
+			this.gridColumn15.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.gridColumn15.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn15.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn15.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn15.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.gridColumn15.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.gridColumn15.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn15.AppearanceHeader.Options.UseFont = true;
+			this.gridColumn15.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn15.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn15.Caption = "الطول";
+			this.gridColumn15.DisplayFormat.FormatString = "{0:#,##0.##}";
+			this.gridColumn15.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.gridColumn15.FieldName = "PartHeight";
+			this.gridColumn15.Name = "gridColumn15";
+			this.gridColumn15.OptionsColumn.AllowEdit = false;
+			this.gridColumn15.OptionsColumn.FixedWidth = true;
+			this.gridColumn15.OptionsColumn.ReadOnly = true;
+			this.gridColumn15.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartHeight", "المجموع={0:#,##0.##}")});
+			this.gridColumn15.Visible = true;
+			this.gridColumn15.VisibleIndex = 4;
+			this.gridColumn15.Width = 150;
+			// 
+			// gridColumn16
+			// 
+			this.gridColumn16.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.gridColumn16.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn16.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn16.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn16.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.gridColumn16.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.gridColumn16.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn16.AppearanceHeader.Options.UseFont = true;
+			this.gridColumn16.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn16.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn16.Caption = "العدد";
+			this.gridColumn16.DisplayFormat.FormatString = "{0:#,##0.##}";
+			this.gridColumn16.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.gridColumn16.FieldName = "PartCount";
+			this.gridColumn16.Name = "gridColumn16";
+			this.gridColumn16.OptionsColumn.AllowEdit = false;
+			this.gridColumn16.OptionsColumn.FixedWidth = true;
+			this.gridColumn16.OptionsColumn.ReadOnly = true;
+			this.gridColumn16.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartCount", "المجموع={0:#,##0.##}")});
+			this.gridColumn16.Visible = true;
+			this.gridColumn16.VisibleIndex = 5;
+			this.gridColumn16.Width = 150;
+			// 
+			// gridColumn17
+			// 
+			this.gridColumn17.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.gridColumn17.AppearanceCell.Options.UseBackColor = true;
+			this.gridColumn17.AppearanceCell.Options.UseTextOptions = true;
+			this.gridColumn17.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn17.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.gridColumn17.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+			this.gridColumn17.AppearanceHeader.Options.UseBackColor = true;
+			this.gridColumn17.AppearanceHeader.Options.UseFont = true;
+			this.gridColumn17.AppearanceHeader.Options.UseTextOptions = true;
+			this.gridColumn17.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.gridColumn17.Caption = "المساحة";
+			this.gridColumn17.DisplayFormat.FormatString = "{0:#,##0.##}";
+			this.gridColumn17.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.gridColumn17.FieldName = "PartArea";
+			this.gridColumn17.Name = "gridColumn17";
+			this.gridColumn17.OptionsColumn.AllowEdit = false;
+			this.gridColumn17.OptionsColumn.FixedWidth = true;
+			this.gridColumn17.OptionsColumn.ReadOnly = true;
+			this.gridColumn17.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartArea", "المجموع={0:#,##0.##}")});
+			this.gridColumn17.Visible = true;
+			this.gridColumn17.VisibleIndex = 6;
+			this.gridColumn17.Width = 150;
+			// 
+			// gridColumn18
+			// 
+			this.gridColumn18.Name = "gridColumn18";
+			this.gridColumn18.Visible = true;
+			this.gridColumn18.VisibleIndex = 7;
 			// 
 			// grdPrinting
 			// 
@@ -2005,438 +2458,6 @@
 			this.gridColumn60.Visible = true;
 			this.gridColumn60.VisibleIndex = 7;
 			// 
-			// grdAreaParts
-			// 
-			gridLevelNode1.RelationName = "Level1";
-			this.grdAreaParts.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-			this.grdAreaParts.Location = new System.Drawing.Point(110, 190);
-			this.grdAreaParts.MainView = this.gridView2;
-			this.grdAreaParts.Name = "grdAreaParts";
-			this.grdAreaParts.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.grdAreaParts.Size = new System.Drawing.Size(1118, 352);
-			this.grdAreaParts.TabIndex = 2;
-			this.grdAreaParts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2,
-            this.gridView4});
-			// 
-			// gridView2
-			// 
-			this.gridView2.Appearance.EvenRow.BackColor = System.Drawing.Color.LemonChiffon;
-			this.gridView2.Appearance.EvenRow.Options.UseBackColor = true;
-			this.gridView2.Appearance.GroupFooter.BackColor = System.Drawing.Color.Aqua;
-			this.gridView2.Appearance.GroupFooter.Options.UseBackColor = true;
-			this.gridView2.Appearance.GroupPanel.BackColor = System.Drawing.Color.Aqua;
-			this.gridView2.Appearance.GroupPanel.Options.UseBackColor = true;
-			this.gridView2.Appearance.OddRow.BackColor = System.Drawing.Color.BlanchedAlmond;
-			this.gridView2.Appearance.OddRow.Options.UseBackColor = true;
-			this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.gridView2.Appearance.Row.Options.UseFont = true;
-			this.gridView2.Appearance.Row.Options.UseTextOptions = true;
-			this.gridView2.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridView2.Appearance.SelectedRow.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-			this.gridView2.Appearance.SelectedRow.Options.UseFont = true;
-			this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn4,
-            this.gridColumn7,
-            this.gridColumn9,
-            this.gridColumn10,
-            this.gridColumn8});
-			this.gridView2.GridControl = this.grdAreaParts;
-			this.gridView2.Name = "gridView2";
-			this.gridView2.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
-			this.gridView2.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
-			this.gridView2.OptionsBehavior.AutoExpandAllGroups = true;
-			this.gridView2.OptionsBehavior.Editable = false;
-			this.gridView2.OptionsBehavior.ReadOnly = true;
-			this.gridView2.OptionsCustomization.AllowColumnMoving = false;
-			this.gridView2.OptionsEditForm.ShowOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
-			this.gridView2.OptionsEditForm.ShowOnEnterKey = DevExpress.Utils.DefaultBoolean.True;
-			this.gridView2.OptionsMenu.ShowAddNewSummaryItem = DevExpress.Utils.DefaultBoolean.True;
-			this.gridView2.OptionsMenu.ShowAutoFilterRowItem = false;
-			this.gridView2.OptionsMenu.ShowGroupSummaryEditorItem = true;
-			this.gridView2.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
-			this.gridView2.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
-			this.gridView2.OptionsView.ShowAutoFilterRow = true;
-			this.gridView2.OptionsView.ShowChildrenInGroupPanel = true;
-			this.gridView2.OptionsView.ShowFooter = true;
-			this.gridView2.OptionsView.ShowGroupedColumns = true;
-			this.gridView2.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.True;
-			this.gridView2.OptionsView.ShowPreviewRowLines = DevExpress.Utils.DefaultBoolean.True;
-			this.gridView2.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
-			// 
-			// gridColumn1
-			// 
-			this.gridColumn1.AppearanceCell.BackColor = System.Drawing.SystemColors.Info;
-			this.gridColumn1.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.SystemColors.Info;
-			this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn1.AppearanceHeader.Options.UseFont = true;
-			this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn1.Caption = "المنتـــــج";
-			this.gridColumn1.FieldName = "ItemName";
-			this.gridColumn1.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
-			this.gridColumn1.Name = "gridColumn1";
-			this.gridColumn1.OptionsColumn.AllowEdit = false;
-			this.gridColumn1.OptionsColumn.FixedWidth = true;
-			this.gridColumn1.OptionsColumn.ReadOnly = true;
-			this.gridColumn1.Visible = true;
-			this.gridColumn1.VisibleIndex = 0;
-			this.gridColumn1.Width = 350;
-			// 
-			// gridColumn2
-			// 
-			this.gridColumn2.AppearanceCell.BackColor = System.Drawing.Color.AntiqueWhite;
-			this.gridColumn2.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.AntiqueWhite;
-			this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn2.AppearanceHeader.Options.UseFont = true;
-			this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn2.Caption = "الكــــود الـداخلـــي";
-			this.gridColumn2.FieldName = "ItemInternalCode";
-			this.gridColumn2.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
-			this.gridColumn2.Name = "gridColumn2";
-			this.gridColumn2.OptionsColumn.AllowEdit = false;
-			this.gridColumn2.OptionsColumn.FixedWidth = true;
-			this.gridColumn2.OptionsColumn.ReadOnly = true;
-			this.gridColumn2.Visible = true;
-			this.gridColumn2.VisibleIndex = 1;
-			this.gridColumn2.Width = 100;
-			// 
-			// gridColumn4
-			// 
-			this.gridColumn4.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.gridColumn4.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn4.AppearanceHeader.Options.UseFont = true;
-			this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn4.Caption = "العرض";
-			this.gridColumn4.DisplayFormat.FormatString = "{0:#,##0.##}";
-			this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.gridColumn4.FieldName = "PartWidth";
-			this.gridColumn4.Name = "gridColumn4";
-			this.gridColumn4.OptionsColumn.AllowEdit = false;
-			this.gridColumn4.OptionsColumn.FixedWidth = true;
-			this.gridColumn4.OptionsColumn.ReadOnly = true;
-			this.gridColumn4.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartWidth", "المجموع={0:#,##0.##}")});
-			this.gridColumn4.Visible = true;
-			this.gridColumn4.VisibleIndex = 2;
-			this.gridColumn4.Width = 150;
-			// 
-			// gridColumn7
-			// 
-			this.gridColumn7.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.gridColumn7.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn7.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn7.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn7.AppearanceHeader.Options.UseFont = true;
-			this.gridColumn7.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn7.Caption = "الإرتفاع";
-			this.gridColumn7.DisplayFormat.FormatString = "{0:#,##0.##}";
-			this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.gridColumn7.FieldName = "PartHeight";
-			this.gridColumn7.Name = "gridColumn7";
-			this.gridColumn7.OptionsColumn.AllowEdit = false;
-			this.gridColumn7.OptionsColumn.FixedWidth = true;
-			this.gridColumn7.OptionsColumn.ReadOnly = true;
-			this.gridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartHeight", "المجموع={0:#,##0.##}")});
-			this.gridColumn7.Visible = true;
-			this.gridColumn7.VisibleIndex = 3;
-			this.gridColumn7.Width = 150;
-			// 
-			// gridColumn9
-			// 
-			this.gridColumn9.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			this.gridColumn9.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn9.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn9.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn9.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.gridColumn9.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.gridColumn9.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn9.AppearanceHeader.Options.UseFont = true;
-			this.gridColumn9.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn9.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn9.Caption = "العدد";
-			this.gridColumn9.DisplayFormat.FormatString = "{0:#,##0.##}";
-			this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.gridColumn9.FieldName = "PartCount";
-			this.gridColumn9.Name = "gridColumn9";
-			this.gridColumn9.OptionsColumn.AllowEdit = false;
-			this.gridColumn9.OptionsColumn.FixedWidth = true;
-			this.gridColumn9.OptionsColumn.ReadOnly = true;
-			this.gridColumn9.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartCount", "المجموع={0:#,##0.##}")});
-			this.gridColumn9.Visible = true;
-			this.gridColumn9.VisibleIndex = 4;
-			this.gridColumn9.Width = 150;
-			// 
-			// gridColumn10
-			// 
-			this.gridColumn10.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-			this.gridColumn10.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn10.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn10.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-			this.gridColumn10.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn10.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn10.Caption = "المساحة";
-			this.gridColumn10.FieldName = "PartArea";
-			this.gridColumn10.Name = "gridColumn10";
-			this.gridColumn10.OptionsColumn.AllowEdit = false;
-			this.gridColumn10.OptionsColumn.FixedWidth = true;
-			this.gridColumn10.OptionsColumn.ReadOnly = true;
-			this.gridColumn10.Visible = true;
-			this.gridColumn10.VisibleIndex = 5;
-			this.gridColumn10.Width = 150;
-			// 
-			// gridColumn8
-			// 
-			this.gridColumn8.Name = "gridColumn8";
-			this.gridColumn8.Visible = true;
-			this.gridColumn8.VisibleIndex = 6;
-			this.gridColumn8.Width = 31;
-			// 
-			// gridView4
-			// 
-			this.gridView4.Appearance.EvenRow.BackColor = System.Drawing.Color.LemonChiffon;
-			this.gridView4.Appearance.EvenRow.Options.UseBackColor = true;
-			this.gridView4.Appearance.OddRow.BackColor = System.Drawing.Color.BlanchedAlmond;
-			this.gridView4.Appearance.OddRow.Options.UseBackColor = true;
-			this.gridView4.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.gridView4.Appearance.Row.Options.UseFont = true;
-			this.gridView4.Appearance.Row.Options.UseTextOptions = true;
-			this.gridView4.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridView4.Appearance.SelectedRow.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-			this.gridView4.Appearance.SelectedRow.Options.UseFont = true;
-			this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn11,
-            this.gridColumn12,
-            this.gridColumn13,
-            this.gridColumn14,
-            this.gridColumn15,
-            this.gridColumn16,
-            this.gridColumn17,
-            this.gridColumn18});
-			this.gridView4.GridControl = this.grdAreaParts;
-			this.gridView4.Name = "gridView4";
-			this.gridView4.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
-			this.gridView4.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
-			this.gridView4.OptionsBehavior.Editable = false;
-			this.gridView4.OptionsBehavior.ReadOnly = true;
-			this.gridView4.OptionsCustomization.AllowColumnMoving = false;
-			this.gridView4.OptionsEditForm.ShowOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
-			this.gridView4.OptionsEditForm.ShowOnEnterKey = DevExpress.Utils.DefaultBoolean.True;
-			this.gridView4.OptionsMenu.ShowAddNewSummaryItem = DevExpress.Utils.DefaultBoolean.True;
-			this.gridView4.OptionsMenu.ShowAutoFilterRowItem = false;
-			this.gridView4.OptionsMenu.ShowGroupSummaryEditorItem = true;
-			this.gridView4.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
-			this.gridView4.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
-			this.gridView4.OptionsView.ShowAutoFilterRow = true;
-			this.gridView4.OptionsView.ShowChildrenInGroupPanel = true;
-			this.gridView4.OptionsView.ShowFooter = true;
-			this.gridView4.OptionsView.ShowGroupedColumns = true;
-			this.gridView4.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.True;
-			this.gridView4.OptionsView.ShowPreviewRowLines = DevExpress.Utils.DefaultBoolean.True;
-			this.gridView4.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.True;
-			// 
-			// gridColumn11
-			// 
-			this.gridColumn11.AppearanceCell.BackColor = System.Drawing.SystemColors.Info;
-			this.gridColumn11.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn11.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn11.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn11.AppearanceHeader.BackColor = System.Drawing.SystemColors.Info;
-			this.gridColumn11.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.gridColumn11.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn11.AppearanceHeader.Options.UseFont = true;
-			this.gridColumn11.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn11.Caption = "المنتـــــج";
-			this.gridColumn11.FieldName = "ItemName";
-			this.gridColumn11.Name = "gridColumn11";
-			this.gridColumn11.OptionsColumn.AllowEdit = false;
-			this.gridColumn11.OptionsColumn.FixedWidth = true;
-			this.gridColumn11.OptionsColumn.ReadOnly = true;
-			this.gridColumn11.Visible = true;
-			this.gridColumn11.VisibleIndex = 0;
-			this.gridColumn11.Width = 350;
-			// 
-			// gridColumn12
-			// 
-			this.gridColumn12.AppearanceCell.BackColor = System.Drawing.Color.AntiqueWhite;
-			this.gridColumn12.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn12.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn12.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn12.AppearanceHeader.BackColor = System.Drawing.Color.AntiqueWhite;
-			this.gridColumn12.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.gridColumn12.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn12.AppearanceHeader.Options.UseFont = true;
-			this.gridColumn12.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn12.Caption = "الكود الداخلي للمنتج";
-			this.gridColumn12.FieldName = "ItemInternalCode";
-			this.gridColumn12.Name = "gridColumn12";
-			this.gridColumn12.OptionsColumn.AllowEdit = false;
-			this.gridColumn12.OptionsColumn.FixedWidth = true;
-			this.gridColumn12.OptionsColumn.ReadOnly = true;
-			this.gridColumn12.Visible = true;
-			this.gridColumn12.VisibleIndex = 1;
-			this.gridColumn12.Width = 100;
-			// 
-			// gridColumn13
-			// 
-			this.gridColumn13.AppearanceCell.BackColor = System.Drawing.Color.AntiqueWhite;
-			this.gridColumn13.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn13.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn13.AppearanceHeader.BackColor = System.Drawing.Color.AntiqueWhite;
-			this.gridColumn13.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.gridColumn13.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn13.AppearanceHeader.Options.UseFont = true;
-			this.gridColumn13.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn13.Caption = "الكود الداخلي";
-			this.gridColumn13.FieldName = "PartInternalCode";
-			this.gridColumn13.Name = "gridColumn13";
-			this.gridColumn13.OptionsColumn.AllowEdit = false;
-			this.gridColumn13.OptionsColumn.FixedWidth = true;
-			this.gridColumn13.OptionsColumn.ReadOnly = true;
-			this.gridColumn13.Visible = true;
-			this.gridColumn13.VisibleIndex = 2;
-			this.gridColumn13.Width = 100;
-			// 
-			// gridColumn14
-			// 
-			this.gridColumn14.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.gridColumn14.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn14.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn14.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn14.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.gridColumn14.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.gridColumn14.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn14.AppearanceHeader.Options.UseFont = true;
-			this.gridColumn14.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn14.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn14.Caption = "العرض";
-			this.gridColumn14.DisplayFormat.FormatString = "{0:#,##0.##}";
-			this.gridColumn14.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.gridColumn14.FieldName = "PartWidth";
-			this.gridColumn14.Name = "gridColumn14";
-			this.gridColumn14.OptionsColumn.AllowEdit = false;
-			this.gridColumn14.OptionsColumn.FixedWidth = true;
-			this.gridColumn14.OptionsColumn.ReadOnly = true;
-			this.gridColumn14.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartWidth", "المجموع={0:#,##0.##}")});
-			this.gridColumn14.Visible = true;
-			this.gridColumn14.VisibleIndex = 3;
-			this.gridColumn14.Width = 150;
-			// 
-			// gridColumn15
-			// 
-			this.gridColumn15.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.gridColumn15.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn15.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn15.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn15.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.gridColumn15.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.gridColumn15.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn15.AppearanceHeader.Options.UseFont = true;
-			this.gridColumn15.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn15.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn15.Caption = "الطول";
-			this.gridColumn15.DisplayFormat.FormatString = "{0:#,##0.##}";
-			this.gridColumn15.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.gridColumn15.FieldName = "PartHeight";
-			this.gridColumn15.Name = "gridColumn15";
-			this.gridColumn15.OptionsColumn.AllowEdit = false;
-			this.gridColumn15.OptionsColumn.FixedWidth = true;
-			this.gridColumn15.OptionsColumn.ReadOnly = true;
-			this.gridColumn15.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartHeight", "المجموع={0:#,##0.##}")});
-			this.gridColumn15.Visible = true;
-			this.gridColumn15.VisibleIndex = 4;
-			this.gridColumn15.Width = 150;
-			// 
-			// gridColumn16
-			// 
-			this.gridColumn16.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.gridColumn16.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn16.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn16.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn16.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.gridColumn16.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.gridColumn16.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn16.AppearanceHeader.Options.UseFont = true;
-			this.gridColumn16.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn16.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn16.Caption = "العدد";
-			this.gridColumn16.DisplayFormat.FormatString = "{0:#,##0.##}";
-			this.gridColumn16.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.gridColumn16.FieldName = "PartCount";
-			this.gridColumn16.Name = "gridColumn16";
-			this.gridColumn16.OptionsColumn.AllowEdit = false;
-			this.gridColumn16.OptionsColumn.FixedWidth = true;
-			this.gridColumn16.OptionsColumn.ReadOnly = true;
-			this.gridColumn16.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartCount", "المجموع={0:#,##0.##}")});
-			this.gridColumn16.Visible = true;
-			this.gridColumn16.VisibleIndex = 5;
-			this.gridColumn16.Width = 150;
-			// 
-			// gridColumn17
-			// 
-			this.gridColumn17.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.gridColumn17.AppearanceCell.Options.UseBackColor = true;
-			this.gridColumn17.AppearanceCell.Options.UseTextOptions = true;
-			this.gridColumn17.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn17.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.gridColumn17.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-			this.gridColumn17.AppearanceHeader.Options.UseBackColor = true;
-			this.gridColumn17.AppearanceHeader.Options.UseFont = true;
-			this.gridColumn17.AppearanceHeader.Options.UseTextOptions = true;
-			this.gridColumn17.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-			this.gridColumn17.Caption = "المساحة";
-			this.gridColumn17.DisplayFormat.FormatString = "{0:#,##0.##}";
-			this.gridColumn17.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.gridColumn17.FieldName = "PartArea";
-			this.gridColumn17.Name = "gridColumn17";
-			this.gridColumn17.OptionsColumn.AllowEdit = false;
-			this.gridColumn17.OptionsColumn.FixedWidth = true;
-			this.gridColumn17.OptionsColumn.ReadOnly = true;
-			this.gridColumn17.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PartArea", "المجموع={0:#,##0.##}")});
-			this.gridColumn17.Visible = true;
-			this.gridColumn17.VisibleIndex = 6;
-			this.gridColumn17.Width = 150;
-			// 
-			// gridColumn18
-			// 
-			this.gridColumn18.Name = "gridColumn18";
-			this.gridColumn18.Visible = true;
-			this.gridColumn18.VisibleIndex = 7;
-			// 
 			// layoutControlGroup1
 			// 
 			this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -2456,7 +2477,6 @@
             this.layoutControlItem20,
             this.layoutControlItem21,
             this.layoutControlItem22,
-            this.layoutControlGroup2,
             this.lytGroup_AreaParts,
             this.lytGroup_Printing,
             this.lytGroup_RawMaterials,
@@ -2468,7 +2488,16 @@
             this.layoutControlItem7,
             this.layoutControlItem24,
             this.emptySpaceItem2,
-            this.emptySpaceItem3});
+            this.emptySpaceItem3,
+            this.layoutControlItem1,
+            this.emptySpaceItem1,
+            this.layoutControlItem18,
+            this.simpleSeparator1,
+            this.simpleSeparator2,
+            this.simpleSeparator3,
+            this.simpleSeparator4,
+            this.simpleSeparator5,
+            this.simpleSeparator6});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -2536,7 +2565,7 @@
 			this.layoutControlItem8.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem8.Text = "القيمة المضافة";
 			this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Top;
-			this.layoutControlItem8.TextSize = new System.Drawing.Size(88, 13);
+			this.layoutControlItem8.TextSize = new System.Drawing.Size(83, 13);
 			// 
 			// emptySpaceItem6
 			// 
@@ -2581,7 +2610,7 @@
 			this.layoutControlItem15.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem15.Text = "نسبة الربح";
 			this.layoutControlItem15.TextLocation = DevExpress.Utils.Locations.Top;
-			this.layoutControlItem15.TextSize = new System.Drawing.Size(88, 13);
+			this.layoutControlItem15.TextSize = new System.Drawing.Size(83, 13);
 			// 
 			// layoutControlItem16
 			// 
@@ -2596,7 +2625,7 @@
 			this.layoutControlItem16.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem16.Text = "سعر البيع";
 			this.layoutControlItem16.TextLocation = DevExpress.Utils.Locations.Top;
-			this.layoutControlItem16.TextSize = new System.Drawing.Size(88, 13);
+			this.layoutControlItem16.TextSize = new System.Drawing.Size(83, 13);
 			// 
 			// layoutControlItem17
 			// 
@@ -2632,7 +2661,7 @@
 			this.layoutControlItem21.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem21.Text = "الــربــــح";
 			this.layoutControlItem21.TextLocation = DevExpress.Utils.Locations.Top;
-			this.layoutControlItem21.TextSize = new System.Drawing.Size(88, 13);
+			this.layoutControlItem21.TextSize = new System.Drawing.Size(83, 13);
 			// 
 			// layoutControlItem22
 			// 
@@ -2645,49 +2674,6 @@
 			this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem22.TextVisible = false;
 			// 
-			// layoutControlGroup2
-			// 
-			this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.emptySpaceItem1});
-			this.layoutControlGroup2.Location = new System.Drawing.Point(106, 47);
-			this.layoutControlGroup2.Name = "layoutControlGroup2";
-			this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup2.Size = new System.Drawing.Size(1126, 46);
-			this.layoutControlGroup2.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlGroup2.Text = "المنتــــــج";
-			// 
-			// layoutControlItem1
-			// 
-			this.layoutControlItem1.Control = this.lkeInventoryItems;
-			this.layoutControlItem1.Location = new System.Drawing.Point(727, 0);
-			this.layoutControlItem1.Name = "layoutControlItem1";
-			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem1.Size = new System.Drawing.Size(397, 26);
-			this.layoutControlItem1.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem1.Text = "المنتـــــج";
-			this.layoutControlItem1.TextSize = new System.Drawing.Size(88, 13);
-			// 
-			// layoutControlItem2
-			// 
-			this.layoutControlItem2.Control = this.txtInventoryItemsInternalCode;
-			this.layoutControlItem2.Location = new System.Drawing.Point(530, 0);
-			this.layoutControlItem2.Name = "layoutControlItem2";
-			this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem2.Size = new System.Drawing.Size(197, 26);
-			this.layoutControlItem2.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-			this.layoutControlItem2.Text = "الكــــود الـداخلـــي";
-			this.layoutControlItem2.TextSize = new System.Drawing.Size(88, 13);
-			// 
-			// emptySpaceItem1
-			// 
-			this.emptySpaceItem1.AllowHotTrack = false;
-			this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
-			this.emptySpaceItem1.Name = "emptySpaceItem1";
-			this.emptySpaceItem1.Size = new System.Drawing.Size(530, 26);
-			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-			// 
 			// lytGroup_AreaParts
 			// 
 			this.lytGroup_AreaParts.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -2699,10 +2685,10 @@
 			this.lytGroup_AreaParts.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
 			this.lytGroup_AreaParts.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem23});
-			this.lytGroup_AreaParts.Location = new System.Drawing.Point(106, 165);
+			this.lytGroup_AreaParts.Location = new System.Drawing.Point(106, 149);
 			this.lytGroup_AreaParts.Name = "lytGroup_AreaParts";
 			this.lytGroup_AreaParts.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_AreaParts.Size = new System.Drawing.Size(1126, 381);
+			this.lytGroup_AreaParts.Size = new System.Drawing.Size(1126, 397);
 			this.lytGroup_AreaParts.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytGroup_AreaParts.Text = "أقســام المنتجــــــات";
 			this.lytGroup_AreaParts.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_AreaParts_MouseUp);
@@ -2713,7 +2699,7 @@
 			this.layoutControlItem23.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem23.Name = "layoutControlItem23";
 			this.layoutControlItem23.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem23.Size = new System.Drawing.Size(1124, 358);
+			this.layoutControlItem23.Size = new System.Drawing.Size(1124, 374);
 			this.layoutControlItem23.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem23.TextVisible = false;
@@ -2814,84 +2800,168 @@
 			// layoutControlItem3
 			// 
 			this.layoutControlItem3.Control = this.spnWidth;
-			this.layoutControlItem3.Location = new System.Drawing.Point(1035, 93);
+			this.layoutControlItem3.Location = new System.Drawing.Point(1091, 75);
 			this.layoutControlItem3.Name = "layoutControlItem3";
 			this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem3.Size = new System.Drawing.Size(197, 36);
+			this.layoutControlItem3.Size = new System.Drawing.Size(141, 36);
 			this.layoutControlItem3.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem3.Text = "العرض";
-			this.layoutControlItem3.TextSize = new System.Drawing.Size(88, 13);
+			this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+			this.layoutControlItem3.TextSize = new System.Drawing.Size(30, 13);
+			this.layoutControlItem3.TextToControlDistance = 5;
 			// 
 			// layoutControlItem4
 			// 
 			this.layoutControlItem4.Control = this.spnHeight;
-			this.layoutControlItem4.Location = new System.Drawing.Point(838, 93);
+			this.layoutControlItem4.Location = new System.Drawing.Point(945, 75);
 			this.layoutControlItem4.Name = "layoutControlItem4";
 			this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem4.Size = new System.Drawing.Size(197, 36);
+			this.layoutControlItem4.Size = new System.Drawing.Size(144, 36);
 			this.layoutControlItem4.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem4.Text = "الإرتفاع";
-			this.layoutControlItem4.TextSize = new System.Drawing.Size(88, 13);
+			this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+			this.layoutControlItem4.TextSize = new System.Drawing.Size(33, 13);
+			this.layoutControlItem4.TextToControlDistance = 5;
 			// 
 			// layoutControlItem5
 			// 
 			this.layoutControlItem5.Control = this.spnDepth;
-			this.layoutControlItem5.Location = new System.Drawing.Point(641, 93);
+			this.layoutControlItem5.Location = new System.Drawing.Point(803, 75);
 			this.layoutControlItem5.Name = "layoutControlItem5";
 			this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem5.Size = new System.Drawing.Size(197, 36);
+			this.layoutControlItem5.Size = new System.Drawing.Size(140, 36);
 			this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem5.Text = "العمق";
-			this.layoutControlItem5.TextSize = new System.Drawing.Size(88, 13);
+			this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+			this.layoutControlItem5.TextSize = new System.Drawing.Size(29, 13);
+			this.layoutControlItem5.TextToControlDistance = 5;
 			// 
 			// layoutControlItem6
 			// 
 			this.layoutControlItem6.Control = this.spnTotalParts;
-			this.layoutControlItem6.Location = new System.Drawing.Point(444, 93);
+			this.layoutControlItem6.Location = new System.Drawing.Point(632, 75);
 			this.layoutControlItem6.Name = "layoutControlItem6";
 			this.layoutControlItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem6.Size = new System.Drawing.Size(197, 36);
+			this.layoutControlItem6.Size = new System.Drawing.Size(169, 36);
 			this.layoutControlItem6.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem6.Text = "عدد الأقسام";
-			this.layoutControlItem6.TextSize = new System.Drawing.Size(88, 13);
+			this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+			this.layoutControlItem6.TextSize = new System.Drawing.Size(58, 13);
+			this.layoutControlItem6.TextToControlDistance = 5;
 			// 
 			// layoutControlItem7
 			// 
 			this.layoutControlItem7.Control = this.spnTotalAreaParts;
-			this.layoutControlItem7.Location = new System.Drawing.Point(247, 93);
+			this.layoutControlItem7.Location = new System.Drawing.Point(445, 75);
 			this.layoutControlItem7.Name = "layoutControlItem7";
 			this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem7.Size = new System.Drawing.Size(197, 36);
+			this.layoutControlItem7.Size = new System.Drawing.Size(185, 36);
 			this.layoutControlItem7.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem7.Text = "مساحة الأقسام";
-			this.layoutControlItem7.TextSize = new System.Drawing.Size(88, 13);
+			this.layoutControlItem7.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+			this.layoutControlItem7.TextSize = new System.Drawing.Size(74, 13);
+			this.layoutControlItem7.TextToControlDistance = 5;
 			// 
 			// layoutControlItem24
 			// 
 			this.layoutControlItem24.Control = this.spnPrintingUnitCost;
-			this.layoutControlItem24.Location = new System.Drawing.Point(1035, 129);
+			this.layoutControlItem24.Location = new System.Drawing.Point(1033, 113);
 			this.layoutControlItem24.Name = "layoutControlItem24";
 			this.layoutControlItem24.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem24.Size = new System.Drawing.Size(197, 36);
+			this.layoutControlItem24.Size = new System.Drawing.Size(199, 36);
 			this.layoutControlItem24.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem24.Text = "تكلفة وحدة الطباعة";
+			this.layoutControlItem24.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.layoutControlItem24.TextSize = new System.Drawing.Size(88, 13);
+			this.layoutControlItem24.TextToControlDistance = 5;
 			// 
 			// emptySpaceItem2
 			// 
 			this.emptySpaceItem2.AllowHotTrack = false;
-			this.emptySpaceItem2.Location = new System.Drawing.Point(106, 93);
+			this.emptySpaceItem2.Location = new System.Drawing.Point(106, 75);
 			this.emptySpaceItem2.Name = "emptySpaceItem2";
-			this.emptySpaceItem2.Size = new System.Drawing.Size(141, 36);
+			this.emptySpaceItem2.Size = new System.Drawing.Size(339, 36);
 			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// emptySpaceItem3
 			// 
 			this.emptySpaceItem3.AllowHotTrack = false;
-			this.emptySpaceItem3.Location = new System.Drawing.Point(106, 129);
+			this.emptySpaceItem3.Location = new System.Drawing.Point(106, 113);
 			this.emptySpaceItem3.Name = "emptySpaceItem3";
-			this.emptySpaceItem3.Size = new System.Drawing.Size(929, 36);
+			this.emptySpaceItem3.Size = new System.Drawing.Size(927, 36);
 			this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// layoutControlItem1
+			// 
+			this.layoutControlItem1.Control = this.lkeInventoryItems;
+			this.layoutControlItem1.Location = new System.Drawing.Point(840, 47);
+			this.layoutControlItem1.Name = "layoutControlItem1";
+			this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem1.Size = new System.Drawing.Size(392, 26);
+			this.layoutControlItem1.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem1.Text = "المنتـــــج";
+			this.layoutControlItem1.TextSize = new System.Drawing.Size(83, 13);
+			// 
+			// emptySpaceItem1
+			// 
+			this.emptySpaceItem1.AllowHotTrack = false;
+			this.emptySpaceItem1.Location = new System.Drawing.Point(106, 47);
+			this.emptySpaceItem1.Name = "emptySpaceItem1";
+			this.emptySpaceItem1.Size = new System.Drawing.Size(492, 26);
+			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// layoutControlItem18
+			// 
+			this.layoutControlItem18.Control = this.lkeInternalCode;
+			this.layoutControlItem18.Location = new System.Drawing.Point(598, 47);
+			this.layoutControlItem18.Name = "layoutControlItem18";
+			this.layoutControlItem18.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+			this.layoutControlItem18.Size = new System.Drawing.Size(242, 26);
+			this.layoutControlItem18.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+			this.layoutControlItem18.Text = "الكـــود الـداخلـــي";
+			this.layoutControlItem18.TextSize = new System.Drawing.Size(83, 13);
+			// 
+			// simpleSeparator1
+			// 
+			this.simpleSeparator1.AllowHotTrack = false;
+			this.simpleSeparator1.Location = new System.Drawing.Point(106, 73);
+			this.simpleSeparator1.Name = "simpleSeparator1";
+			this.simpleSeparator1.Size = new System.Drawing.Size(1126, 2);
+			// 
+			// simpleSeparator2
+			// 
+			this.simpleSeparator2.AllowHotTrack = false;
+			this.simpleSeparator2.Location = new System.Drawing.Point(106, 111);
+			this.simpleSeparator2.Name = "simpleSeparator2";
+			this.simpleSeparator2.Size = new System.Drawing.Size(1126, 2);
+			// 
+			// simpleSeparator3
+			// 
+			this.simpleSeparator3.AllowHotTrack = false;
+			this.simpleSeparator3.Location = new System.Drawing.Point(1089, 75);
+			this.simpleSeparator3.Name = "simpleSeparator3";
+			this.simpleSeparator3.Size = new System.Drawing.Size(2, 36);
+			// 
+			// simpleSeparator4
+			// 
+			this.simpleSeparator4.AllowHotTrack = false;
+			this.simpleSeparator4.Location = new System.Drawing.Point(943, 75);
+			this.simpleSeparator4.Name = "simpleSeparator4";
+			this.simpleSeparator4.Size = new System.Drawing.Size(2, 36);
+			// 
+			// simpleSeparator5
+			// 
+			this.simpleSeparator5.AllowHotTrack = false;
+			this.simpleSeparator5.Location = new System.Drawing.Point(801, 75);
+			this.simpleSeparator5.Name = "simpleSeparator5";
+			this.simpleSeparator5.Size = new System.Drawing.Size(2, 36);
+			// 
+			// simpleSeparator6
+			// 
+			this.simpleSeparator6.AllowHotTrack = false;
+			this.simpleSeparator6.Location = new System.Drawing.Point(630, 75);
+			this.simpleSeparator6.Name = "simpleSeparator6";
+			this.simpleSeparator6.Size = new System.Drawing.Size(2, 36);
 			// 
 			// ReviewInventoryItemsInDetails_UC
 			// 
@@ -2903,6 +2973,8 @@
 			this.Size = new System.Drawing.Size(1232, 624);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
 			this.layoutControl1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.lkeInternalCode.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnPrintingUnitCost.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnTotalAreaParts.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnTotalParts.Properties)).EndInit();
@@ -2913,9 +2985,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.spnSellingPrice.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnProfitPercentage.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.spnAdditionalCostAmount.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtInventoryItemsInternalCode.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lkeInventoryItems.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.grdAreaParts)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.grdPrinting)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
@@ -2925,9 +2999,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView9)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.grdAreaParts)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
@@ -2943,10 +3014,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytGroup_AreaParts)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lytGroup_Printing)).EndInit();
@@ -2963,6 +3030,15 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -2973,7 +3049,6 @@
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
 		private DevExpress.XtraEditors.GridLookUpEdit lkeInventoryItems;
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
-		private DevExpress.XtraEditors.TextEdit txtInventoryItemsInternalCode;
 		private DevExpress.XtraEditors.SpinEdit spnAdditionalCostAmount;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
 		private DevExpress.XtraEditors.SimpleButton btnExit;
@@ -3001,10 +3076,6 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
 		private DevExpress.XtraEditors.CheckButton chkProfit;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
 		private DevExpress.XtraGrid.GridControl grdAreaParts;
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
 		private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
@@ -3099,5 +3170,16 @@
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+		private DevExpress.XtraEditors.GridLookUpEdit lkeInternalCode;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
+		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
+		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator2;
+		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator3;
+		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator4;
+		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator5;
+		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator6;
 	}
 }
