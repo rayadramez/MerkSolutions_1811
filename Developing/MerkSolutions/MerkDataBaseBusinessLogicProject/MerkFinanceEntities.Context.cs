@@ -217,6 +217,7 @@ namespace MerkDataBaseBusinessLogicProject
         public virtual DbSet<ServiceType_StationPoint_cu> ServiceType_StationPoint_cu { get; set; }
         public virtual DbSet<ServiceType_StationPointStage_cu> ServiceType_StationPointStage_cu { get; set; }
         public virtual DbSet<ServiceType_Surcharge_cu> ServiceType_Surcharge_cu { get; set; }
+        public virtual DbSet<SizeUnitMeasure_p> SizeUnitMeasure_p { get; set; }
         public virtual DbSet<Station_p> Station_p { get; set; }
         public virtual DbSet<StationPoint_cu> StationPoint_cu { get; set; }
         public virtual DbSet<StationPointStage_cu> StationPointStage_cu { get; set; }
@@ -351,7 +352,7 @@ namespace MerkDataBaseBusinessLogicProject
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetInventoryItemAreaParts_Result>("GetInventoryItemAreaParts", inventoryItemIDParameter);
         }
     
-        public virtual ObjectResult<GetInventoryItemCostsDetails_Result> GetInventoryItemCostsDetails(Nullable<int> rawMaterialID, Nullable<int> colorID, Nullable<int> itemID, Nullable<int> additionalCostToBeAdded)
+        public virtual int GetInventoryItemCostsDetails(Nullable<int> rawMaterialID, Nullable<int> colorID, Nullable<int> itemID, Nullable<int> additionalCostToBeAdded)
         {
             var rawMaterialIDParameter = rawMaterialID.HasValue ?
                 new ObjectParameter("RawMaterialID", rawMaterialID) :
@@ -369,7 +370,7 @@ namespace MerkDataBaseBusinessLogicProject
                 new ObjectParameter("AdditionalCostToBeAdded", additionalCostToBeAdded) :
                 new ObjectParameter("AdditionalCostToBeAdded", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetInventoryItemCostsDetails_Result>("GetInventoryItemCostsDetails", rawMaterialIDParameter, colorIDParameter, itemIDParameter, additionalCostToBeAddedParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("GetInventoryItemCostsDetails", rawMaterialIDParameter, colorIDParameter, itemIDParameter, additionalCostToBeAddedParameter);
         }
     
         public virtual ObjectResult<GetInvoiceForAddmission_Result> GetInvoiceForAddmission(Nullable<System.DateTime> invoiceCreationDateStart, Nullable<System.DateTime> invoiceCreationDateEnd, Nullable<int> invoiceTypeID, Nullable<bool> invoiceIsOnDuty, Nullable<bool> invoiceIsFinanciallyReviewed, Nullable<bool> invoiceIsPrinted, Nullable<bool> invoiceIsPaymentEnough, Nullable<int> doctorID, Nullable<int> patientID)

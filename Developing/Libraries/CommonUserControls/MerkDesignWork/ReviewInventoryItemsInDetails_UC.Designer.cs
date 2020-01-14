@@ -28,17 +28,19 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.XtraGrid.GridLevelNode gridLevelNode5 = new DevExpress.XtraGrid.GridLevelNode();
 			DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
 			DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
 			DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
-			DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.chkMM = new DevExpress.XtraEditors.CheckButton();
+			this.chkCM = new DevExpress.XtraEditors.CheckButton();
 			this.lkeInternalCode = new DevExpress.XtraEditors.GridLookUpEdit();
 			this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.spnPrintingUnitCost = new DevExpress.XtraEditors.SpinEdit();
@@ -174,6 +176,8 @@
 			this.simpleSeparator4 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator5 = new DevExpress.XtraLayout.SimpleSeparator();
 			this.simpleSeparator6 = new DevExpress.XtraLayout.SimpleSeparator();
+			this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.lkeInternalCode.Properties)).BeginInit();
@@ -242,10 +246,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.chkMM);
+			this.layoutControl1.Controls.Add(this.chkCM);
 			this.layoutControl1.Controls.Add(this.lkeInternalCode);
 			this.layoutControl1.Controls.Add(this.spnPrintingUnitCost);
 			this.layoutControl1.Controls.Add(this.spnTotalAreaParts);
@@ -280,6 +288,38 @@
 			this.layoutControl1.Size = new System.Drawing.Size(1232, 624);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
+			// 
+			// chkMM
+			// 
+			this.chkMM.Appearance.Options.UseTextOptions = true;
+			this.chkMM.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.chkMM.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+			this.chkMM.GroupIndex = 16;
+			this.chkMM.Location = new System.Drawing.Point(292, 49);
+			this.chkMM.MaximumSize = new System.Drawing.Size(150, 0);
+			this.chkMM.MinimumSize = new System.Drawing.Size(150, 0);
+			this.chkMM.Name = "chkMM";
+			this.chkMM.Size = new System.Drawing.Size(150, 22);
+			this.chkMM.StyleController = this.layoutControl1;
+			this.chkMM.TabIndex = 53;
+			this.chkMM.TabStop = false;
+			this.chkMM.Text = "MM";
+			// 
+			// chkCM
+			// 
+			this.chkCM.Appearance.Options.UseTextOptions = true;
+			this.chkCM.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.chkCM.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+			this.chkCM.GroupIndex = 16;
+			this.chkCM.Location = new System.Drawing.Point(446, 49);
+			this.chkCM.MaximumSize = new System.Drawing.Size(150, 0);
+			this.chkCM.MinimumSize = new System.Drawing.Size(150, 0);
+			this.chkCM.Name = "chkCM";
+			this.chkCM.Size = new System.Drawing.Size(150, 22);
+			this.chkCM.StyleController = this.layoutControl1;
+			this.chkCM.TabIndex = 52;
+			this.chkCM.TabStop = false;
+			this.chkCM.Text = "CM";
 			// 
 			// lkeInternalCode
 			// 
@@ -322,7 +362,7 @@
 			this.spnPrintingUnitCost.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnPrintingUnitCost.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnPrintingUnitCost.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
 			this.spnPrintingUnitCost.Properties.DisplayFormat.FormatString = "{0:#,##0.##}";
 			this.spnPrintingUnitCost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
 			this.spnPrintingUnitCost.Properties.ReadOnly = true;
@@ -348,7 +388,7 @@
 			this.spnTotalAreaParts.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnTotalAreaParts.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnTotalAreaParts.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
 			this.spnTotalAreaParts.Properties.DisplayFormat.FormatString = "{0:#,##0.##}";
 			this.spnTotalAreaParts.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
 			this.spnTotalAreaParts.Properties.ReadOnly = true;
@@ -374,7 +414,7 @@
 			this.spnTotalParts.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnTotalParts.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnTotalParts.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
 			this.spnTotalParts.Properties.DisplayFormat.FormatString = "{0:#,##0.##}";
 			this.spnTotalParts.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
 			this.spnTotalParts.Properties.ReadOnly = true;
@@ -400,7 +440,7 @@
 			this.spnDepth.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnDepth.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnDepth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
 			this.spnDepth.Properties.DisplayFormat.FormatString = "{0:#,##0.##}";
 			this.spnDepth.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
 			this.spnDepth.Properties.ReadOnly = true;
@@ -426,7 +466,7 @@
 			this.spnHeight.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnHeight.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnHeight.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
 			this.spnHeight.Properties.DisplayFormat.FormatString = "{0:#,##0.##}";
 			this.spnHeight.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
 			this.spnHeight.Properties.ReadOnly = true;
@@ -452,7 +492,7 @@
 			this.spnWidth.Properties.Appearance.Options.UseTextOptions = true;
 			this.spnWidth.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.spnWidth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
 			this.spnWidth.Properties.DisplayFormat.FormatString = "{0:#,##0.##}";
 			this.spnWidth.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
 			this.spnWidth.Properties.ReadOnly = true;
@@ -720,10 +760,10 @@
 			// 
 			// grdAreaParts
 			// 
-			gridLevelNode1.RelationName = "Level1";
+			gridLevelNode5.RelationName = "Level1";
 			this.grdAreaParts.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-			this.grdAreaParts.Location = new System.Drawing.Point(110, 174);
+            gridLevelNode5});
+			this.grdAreaParts.Location = new System.Drawing.Point(109, 152);
 			this.grdAreaParts.MainView = this.gridView2;
 			this.grdAreaParts.Name = "grdAreaParts";
 			this.grdAreaParts.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1152,14 +1192,14 @@
 			// 
 			// grdPrinting
 			// 
-			gridLevelNode2.RelationName = "Level1";
+			gridLevelNode1.RelationName = "Level1";
 			this.grdPrinting.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
-			this.grdPrinting.Location = new System.Drawing.Point(109, 549);
+            gridLevelNode1});
+			this.grdPrinting.Location = new System.Drawing.Point(109, 178);
 			this.grdPrinting.MainView = this.gridView1;
 			this.grdPrinting.Name = "grdPrinting";
 			this.grdPrinting.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.grdPrinting.Size = new System.Drawing.Size(1118, 395);
+			this.grdPrinting.Size = new System.Drawing.Size(1118, 368);
 			this.grdPrinting.TabIndex = 3;
 			this.grdPrinting.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
@@ -1584,10 +1624,10 @@
 			// 
 			// gridControl2
 			// 
-			gridLevelNode3.RelationName = "Level1";
+			gridLevelNode2.RelationName = "Level1";
 			this.gridControl2.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3});
-			this.gridControl2.Location = new System.Drawing.Point(109, 601);
+            gridLevelNode2});
+			this.gridControl2.Location = new System.Drawing.Point(109, 230);
 			this.gridControl2.MainView = this.gridView10;
 			this.gridControl2.Name = "gridControl2";
 			this.gridControl2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -2022,14 +2062,14 @@
 			// 
 			// gridControl1
 			// 
-			gridLevelNode4.RelationName = "Level1";
+			gridLevelNode3.RelationName = "Level1";
 			this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode4});
-			this.gridControl1.Location = new System.Drawing.Point(109, 575);
+            gridLevelNode3});
+			this.gridControl1.Location = new System.Drawing.Point(109, 204);
 			this.gridControl1.MainView = this.gridView8;
 			this.gridControl1.Name = "gridControl1";
 			this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.gridControl1.Size = new System.Drawing.Size(1118, 20);
+			this.gridControl1.Size = new System.Drawing.Size(1118, 368);
 			this.gridControl1.TabIndex = 4;
 			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView8,
@@ -2497,7 +2537,9 @@
             this.simpleSeparator3,
             this.simpleSeparator4,
             this.simpleSeparator5,
-            this.simpleSeparator6});
+            this.simpleSeparator6,
+            this.layoutControlItem2,
+            this.layoutControlItem19});
 			this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlGroup1.Name = "Root";
 			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -2682,13 +2724,14 @@
 			this.lytGroup_AreaParts.AppearanceGroup.Options.UseForeColor = true;
 			this.lytGroup_AreaParts.AppearanceGroup.Options.UseTextOptions = true;
 			this.lytGroup_AreaParts.AppearanceGroup.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.lytGroup_AreaParts.Expanded = false;
 			this.lytGroup_AreaParts.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
 			this.lytGroup_AreaParts.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem23});
 			this.lytGroup_AreaParts.Location = new System.Drawing.Point(106, 149);
 			this.lytGroup_AreaParts.Name = "lytGroup_AreaParts";
 			this.lytGroup_AreaParts.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_AreaParts.Size = new System.Drawing.Size(1126, 397);
+			this.lytGroup_AreaParts.Size = new System.Drawing.Size(1126, 26);
 			this.lytGroup_AreaParts.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytGroup_AreaParts.Text = "أقســام المنتجــــــات";
 			this.lytGroup_AreaParts.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_AreaParts_MouseUp);
@@ -2716,7 +2759,7 @@
 			this.lytGroup_Printing.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
 			this.lytGroup_Printing.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.grd});
-			this.lytGroup_Printing.Location = new System.Drawing.Point(106, 546);
+			this.lytGroup_Printing.Location = new System.Drawing.Point(106, 175);
 			this.lytGroup_Printing.Name = "lytGroup_Printing";
 			this.lytGroup_Printing.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytGroup_Printing.Size = new System.Drawing.Size(1126, 26);
@@ -2730,7 +2773,7 @@
 			this.grd.Location = new System.Drawing.Point(0, 0);
 			this.grd.Name = "grd";
 			this.grd.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.grd.Size = new System.Drawing.Size(1124, 401);
+			this.grd.Size = new System.Drawing.Size(1124, 374);
 			this.grd.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.grd.TextSize = new System.Drawing.Size(0, 0);
 			this.grd.TextVisible = false;
@@ -2747,7 +2790,7 @@
 			this.lytGroup_RawMaterials.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
 			this.lytGroup_RawMaterials.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem25});
-			this.lytGroup_RawMaterials.Location = new System.Drawing.Point(106, 572);
+			this.lytGroup_RawMaterials.Location = new System.Drawing.Point(106, 201);
 			this.lytGroup_RawMaterials.Name = "lytGroup_RawMaterials";
 			this.lytGroup_RawMaterials.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytGroup_RawMaterials.Size = new System.Drawing.Size(1126, 26);
@@ -2761,7 +2804,7 @@
 			this.layoutControlItem25.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem25.Name = "layoutControlItem25";
 			this.layoutControlItem25.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.layoutControlItem25.Size = new System.Drawing.Size(1124, 26);
+			this.layoutControlItem25.Size = new System.Drawing.Size(1124, 374);
 			this.layoutControlItem25.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
 			this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem25.TextVisible = false;
@@ -2778,10 +2821,10 @@
 			this.lytGroup_Color.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
 			this.lytGroup_Color.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem26});
-			this.lytGroup_Color.Location = new System.Drawing.Point(106, 598);
+			this.lytGroup_Color.Location = new System.Drawing.Point(106, 227);
 			this.lytGroup_Color.Name = "lytGroup_Color";
 			this.lytGroup_Color.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.lytGroup_Color.Size = new System.Drawing.Size(1126, 26);
+			this.lytGroup_Color.Size = new System.Drawing.Size(1126, 397);
 			this.lytGroup_Color.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
 			this.lytGroup_Color.Text = "الـــــوان المنتـــــج";
 			this.lytGroup_Color.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lytGroup_Color_MouseUp);
@@ -2907,7 +2950,7 @@
 			this.emptySpaceItem1.AllowHotTrack = false;
 			this.emptySpaceItem1.Location = new System.Drawing.Point(106, 47);
 			this.emptySpaceItem1.Name = "emptySpaceItem1";
-			this.emptySpaceItem1.Size = new System.Drawing.Size(492, 26);
+			this.emptySpaceItem1.Size = new System.Drawing.Size(184, 26);
 			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem18
@@ -2962,6 +3005,24 @@
 			this.simpleSeparator6.Location = new System.Drawing.Point(630, 75);
 			this.simpleSeparator6.Name = "simpleSeparator6";
 			this.simpleSeparator6.Size = new System.Drawing.Size(2, 36);
+			// 
+			// layoutControlItem2
+			// 
+			this.layoutControlItem2.Control = this.chkCM;
+			this.layoutControlItem2.Location = new System.Drawing.Point(444, 47);
+			this.layoutControlItem2.Name = "layoutControlItem2";
+			this.layoutControlItem2.Size = new System.Drawing.Size(154, 26);
+			this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem2.TextVisible = false;
+			// 
+			// layoutControlItem19
+			// 
+			this.layoutControlItem19.Control = this.chkMM;
+			this.layoutControlItem19.Location = new System.Drawing.Point(290, 47);
+			this.layoutControlItem19.Name = "layoutControlItem19";
+			this.layoutControlItem19.Size = new System.Drawing.Size(154, 26);
+			this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem19.TextVisible = false;
 			// 
 			// ReviewInventoryItemsInDetails_UC
 			// 
@@ -3039,6 +3100,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.simpleSeparator6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -3181,5 +3244,9 @@
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator4;
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator5;
 		private DevExpress.XtraLayout.SimpleSeparator simpleSeparator6;
+		private DevExpress.XtraEditors.CheckButton chkMM;
+		private DevExpress.XtraEditors.CheckButton chkCM;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
 	}
 }

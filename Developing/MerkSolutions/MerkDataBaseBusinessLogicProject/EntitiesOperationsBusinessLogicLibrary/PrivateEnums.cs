@@ -2,6 +2,13 @@
 {
 	#region DBCommon
 
+	public enum DB_SizeUnitMeasure
+	{
+		None = 0,
+		CM = 1,
+		MM = 2,
+	}
+
 	public enum DB_RawMaterialType
 	{
 		None = 0,
@@ -474,7 +481,9 @@
 		RawMaterialTranasction,
 		RawMaterialTranasctionType_p,
 		InventoryItem_Printing_cu,
-		InventoryItem_RawMaterial_cu
+		InventoryItem_RawMaterial_cu,
+		SizeUnitMeasure_p,
+		InventoryItem_Color_cu
 	}
 
 	public enum DB_Station

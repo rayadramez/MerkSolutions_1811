@@ -45,8 +45,8 @@
 			this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
 			this.btnColor = new DevExpress.XtraNavBar.NavBarItem();
 			this.btnRawMaterial = new DevExpress.XtraNavBar.NavBarItem();
-			this.btnRawMaterialTransaction = new DevExpress.XtraNavBar.NavBarItem();
 			this.btnInventoryItem_RawMaterial = new DevExpress.XtraNavBar.NavBarItem();
+			this.btnRawMaterialTransaction = new DevExpress.XtraNavBar.NavBarItem();
 			this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
 			this.btnGetRawMaterialCostPrices = new DevExpress.XtraNavBar.NavBarItem();
 			this.btnGetInventoryItemAreaParts = new DevExpress.XtraNavBar.NavBarItem();
@@ -344,21 +344,6 @@
 			this.btnRawMaterial.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnRawMaterial.SmallImage")));
 			this.btnRawMaterial.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnRawMaterial_LinkClicked);
 			// 
-			// btnRawMaterialTransaction
-			// 
-			this.btnRawMaterialTransaction.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.btnRawMaterialTransaction.Appearance.Options.UseFont = true;
-			this.btnRawMaterialTransaction.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.btnRawMaterialTransaction.AppearanceDisabled.Options.UseFont = true;
-			this.btnRawMaterialTransaction.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.btnRawMaterialTransaction.AppearanceHotTracked.Options.UseFont = true;
-			this.btnRawMaterialTransaction.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-			this.btnRawMaterialTransaction.AppearancePressed.Options.UseFont = true;
-			this.btnRawMaterialTransaction.Caption = "تسجيـــــل حـركــــــة مــــواد خـــــام";
-			this.btnRawMaterialTransaction.Name = "btnRawMaterialTransaction";
-			this.btnRawMaterialTransaction.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnRawMaterialTransaction.SmallImage")));
-			this.btnRawMaterialTransaction.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnRawMaterialTransaction_LinkClicked);
-			// 
 			// btnInventoryItem_RawMaterial
 			// 
 			this.btnInventoryItem_RawMaterial.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
@@ -373,6 +358,21 @@
 			this.btnInventoryItem_RawMaterial.Name = "btnInventoryItem_RawMaterial";
 			this.btnInventoryItem_RawMaterial.SmallImage = global::CommonUserControls.Properties.Resources.PlayIcon_8_RightToLeft;
 			this.btnInventoryItem_RawMaterial.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnInventoryItem_RawMaterial_LinkClicked);
+			// 
+			// btnRawMaterialTransaction
+			// 
+			this.btnRawMaterialTransaction.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.btnRawMaterialTransaction.Appearance.Options.UseFont = true;
+			this.btnRawMaterialTransaction.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.btnRawMaterialTransaction.AppearanceDisabled.Options.UseFont = true;
+			this.btnRawMaterialTransaction.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.btnRawMaterialTransaction.AppearanceHotTracked.Options.UseFont = true;
+			this.btnRawMaterialTransaction.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+			this.btnRawMaterialTransaction.AppearancePressed.Options.UseFont = true;
+			this.btnRawMaterialTransaction.Caption = "تسجيـــــل حـركــــــة مــــواد خـــــام";
+			this.btnRawMaterialTransaction.Name = "btnRawMaterialTransaction";
+			this.btnRawMaterialTransaction.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnRawMaterialTransaction.SmallImage")));
+			this.btnRawMaterialTransaction.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.btnRawMaterialTransaction_LinkClicked);
 			// 
 			// navBarGroup3
 			// 

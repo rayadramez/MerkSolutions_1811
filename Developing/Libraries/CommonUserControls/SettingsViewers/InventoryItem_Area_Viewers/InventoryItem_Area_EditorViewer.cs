@@ -87,6 +87,30 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Area_Viewers
 			set { txtInternalCode.EditValue = value; }
 		}
 
+		public object SizeUnitMeasure_P_ID
+		{
+			get
+			{
+				if (chkCM.Checked)
+					return (int) DB_SizeUnitMeasure.CM;
+				if(chkMM.Checked)
+					return (int)DB_SizeUnitMeasure.MM;
+				return (int)DB_SizeUnitMeasure.None;
+			}
+			set
+			{
+				switch ((DB_SizeUnitMeasure)value)
+				{
+					case DB_SizeUnitMeasure.CM:
+						chkCM.Checked = true;
+						break;
+					case DB_SizeUnitMeasure.MM:
+						chkMM.Checked = true;
+						break;
+				}
+			}
+		}
+
 		#endregion
 
 		private void spnWidth_EditValueChanged(object sender, System.EventArgs e)

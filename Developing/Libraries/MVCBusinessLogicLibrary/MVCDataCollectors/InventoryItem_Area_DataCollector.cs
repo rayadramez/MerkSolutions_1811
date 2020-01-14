@@ -43,6 +43,9 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			if (InternalCode != null)
 				((InventoryItem_Area)ActiveDBItem).InternalCode = InternalCode.ToString();
 
+			if (SizeUnitMeasure_P_ID != null)
+				((InventoryItem_Area)ActiveDBItem).SizeUnitMeasure_P_ID = Convert.ToInt32(SizeUnitMeasure_P_ID);
+
 			if (UserID != null)
 				((InventoryItem_Area)ActiveDBItem).InsertedBy = Convert.ToInt32(UserID);
 
@@ -211,6 +214,12 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 		{
 			get { return ((IInventoryItem_Area_Viewer)ActiveCollector.ActiveViewer).InternalCode; }
 			set { ((IInventoryItem_Area_Viewer)ActiveCollector.ActiveViewer).InternalCode = value; }
+		}
+
+		public object SizeUnitMeasure_P_ID
+		{
+			get { return ((IInventoryItem_Area_Viewer)ActiveCollector.ActiveViewer).SizeUnitMeasure_P_ID; }
+			set { ((IInventoryItem_Area_Viewer)ActiveCollector.ActiveViewer).SizeUnitMeasure_P_ID = value; }
 		}
 
 		#endregion

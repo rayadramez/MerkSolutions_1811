@@ -7,5 +7,6 @@
 		object Height { get; set; }
 		object Count { get; set; }
 		object InternalCode { get; set; }
+		object SizeUnitMeasure_P_ID { get; set; }
 	}
 }

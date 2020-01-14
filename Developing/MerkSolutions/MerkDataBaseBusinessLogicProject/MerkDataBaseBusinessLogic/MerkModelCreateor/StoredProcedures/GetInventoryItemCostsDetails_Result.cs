@@ -10,10 +10,11 @@ namespace MerkDataBaseBusinessLogicProject
 		public static List<GetInventoryItemCostsDetails_Result> GetItemsList(object rawMaterialID,
 			 object colorID, object itemID, object additionalCostToBeAdded)
 		{
-			return
-				DBContext_External.GetInventoryItemCostsDetails((int?) rawMaterialID,
-					(int?) colorID, (int?)itemID,
-					(int?)additionalCostToBeAdded).ToList();
+			return null;
+			//return
+			//	DBContext_External.GetInventoryItemCostsDetails((int?) rawMaterialID,
+			//		(int?) colorID, (int?)itemID,
+			//		(int?)additionalCostToBeAdded).ToList();
 		}
 
 	}

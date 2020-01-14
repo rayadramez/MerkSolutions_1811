@@ -11,7 +11,7 @@
   <property name="FocusRectStyle">CellFocus</property>
   <property name="HorzScrollStep">3</property>
   <property name="ViewCaptionHeight">-1</property>
-  <property name="Columns" iskey="true" value="8">
+  <property name="Columns" iskey="true" value="9">
     <property name="Item1" isnull="true" iskey="true">
       <property name="AppearanceHeader" isnull="true" iskey="true">
         <property name="Options" isnull="true" iskey="true">
@@ -120,11 +120,11 @@
         <property name="FixedWidth">true</property>
       </property>
       <property name="Caption">العـــرض</property>
-      <property name="FieldName">Width</property>
+      <property name="FieldName">CalculatedWidth</property>
       <property name="Summary" iskey="true" value="1">
         <property name="Item1" isnull="true" iskey="true">
           <property name="Tag" isnull="true" />
-          <property name="FieldName">Width</property>
+          <property name="FieldName">CalculatedWidth</property>
           <property name="SummaryType">Sum</property>
           <property name="DisplayFormat">المجموع={0:#,##0.##}</property>
         </property>
@@ -166,11 +166,11 @@
         <property name="FixedWidth">true</property>
       </property>
       <property name="Caption">الطـــول</property>
-      <property name="FieldName">Height</property>
+      <property name="FieldName">CalculatedHeight</property>
       <property name="Summary" iskey="true" value="1">
         <property name="Item1" isnull="true" iskey="true">
           <property name="Tag" isnull="true" />
-          <property name="FieldName">Height</property>
+          <property name="FieldName">CalculatedHeight</property>
           <property name="SummaryType">Sum</property>
           <property name="DisplayFormat">المجموع={0:#,##0.##}</property>
         </property>
@@ -313,10 +313,40 @@
       </property>
     </property>
     <property name="Item8" isnull="true" iskey="true">
-      <property name="Width">20</property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="Width">150</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
       <property name="VisibleIndex">7</property>
+      <property name="Name">gridColumn8</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="AllowEdit">false</property>
+        <property name="ReadOnly">true</property>
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="Caption">الوحدة</property>
+      <property name="FieldName">SizeUnitMeasureName</property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="Width">20</property>
+      <property name="Visible">true</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">8</property>
       <property name="Name">gridColumn7</property>
     </property>
   </property>

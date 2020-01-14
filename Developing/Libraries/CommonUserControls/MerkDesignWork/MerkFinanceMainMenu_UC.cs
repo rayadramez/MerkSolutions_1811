@@ -84,6 +84,7 @@ namespace CommonUserControls.MerkDesignWork
 		private GetInventoryItemCostsDetails_Report _getInventoryItemCostsDetailsReport;
 
 		private ReviewInventoryItemsInDetails_UC _reviewInventoryItemsInDetails;
+		private ReviewInventoryItemsDetails_UC _reviewInventoryItemsDetails;
 
 		public MerkFinanceMainMenu_UC()
 		{
@@ -296,7 +297,7 @@ namespace CommonUserControls.MerkDesignWork
 		private void btnReviewInventoryItemDetails_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
 		{
 			splitContainerControl2.PanelVisibility = SplitPanelVisibility.Panel1;
-			CommonViewsActions.ShowUserControl(ref _reviewInventoryItemsInDetails, splitContainerControl2.Panel1);
+			CommonViewsActions.ShowUserControl(ref _reviewInventoryItemsDetails, splitContainerControl2.Panel1);
 		}
 	}
 }

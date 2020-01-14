@@ -11,7 +11,7 @@
   <property name="FocusRectStyle">CellFocus</property>
   <property name="HorzScrollStep">3</property>
   <property name="ViewCaptionHeight">-1</property>
-  <property name="Columns" iskey="true" value="11">
+  <property name="Columns" iskey="true" value="14">
     <property name="Item1" isnull="true" iskey="true">
       <property name="AppearanceHeader" isnull="true" iskey="true">
         <property name="Options" isnull="true" iskey="true">
@@ -113,16 +113,10 @@
       <property name="FieldName">Date</property>
     </property>
     <property name="Item4" isnull="true" iskey="true">
-      <property name="DisplayFormat" isnull="true" iskey="true">
-        <property name="FormatString">{0:#,##0.##}</property>
-        <property name="FormatType">Numeric</property>
-      </property>
       <property name="AppearanceHeader" isnull="true" iskey="true">
         <property name="Options" isnull="true" iskey="true">
           <property name="UseTextOptions">true</property>
-          <property name="UseBackColor">true</property>
         </property>
-        <property name="BackColor">224, 224, 224</property>
         <property name="TextOptions" isnull="true" iskey="true">
           <property name="HAlignment">Center</property>
         </property>
@@ -130,9 +124,7 @@
       <property name="AppearanceCell" isnull="true" iskey="true">
         <property name="Options" isnull="true" iskey="true">
           <property name="UseTextOptions">true</property>
-          <property name="UseBackColor">true</property>
         </property>
-        <property name="BackColor">224, 224, 224</property>
         <property name="TextOptions" isnull="true" iskey="true">
           <property name="HAlignment">Center</property>
         </property>
@@ -141,22 +133,14 @@
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
       <property name="VisibleIndex">3</property>
-      <property name="Name">gridColumn9</property>
+      <property name="Name">gridColumn10</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
         <property name="ReadOnly">true</property>
         <property name="FixedWidth">true</property>
       </property>
-      <property name="Caption">عـدد الدقـائـــــق المتـوقعــــــة</property>
-      <property name="FieldName">PrintingMaxTimeInMinutes</property>
-      <property name="Summary" iskey="true" value="1">
-        <property name="Item1" isnull="true" iskey="true">
-          <property name="Tag" isnull="true" />
-          <property name="FieldName">PrintingMaxTimeInMinutes</property>
-          <property name="SummaryType">Sum</property>
-          <property name="DisplayFormat">المجموع={0:#,##0.##}</property>
-        </property>
-      </property>
+      <property name="Caption">المادة الخام</property>
+      <property name="FieldName">RawMaterialName</property>
     </property>
     <property name="Item5" isnull="true" iskey="true">
       <property name="DisplayFormat" isnull="true" iskey="true">
@@ -187,24 +171,146 @@
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
       <property name="VisibleIndex">4</property>
-      <property name="Name">gridColumn4</property>
+      <property name="Name">gridColumn9</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
         <property name="ReadOnly">true</property>
         <property name="FixedWidth">true</property>
       </property>
-      <property name="Caption">تكلفــة الدقيقـــة المتـوقعـــــة</property>
-      <property name="FieldName">PrintingAverageUnitCostPrice</property>
+      <property name="Caption">Total Time</property>
+      <property name="FieldName">TotalMinutes</property>
       <property name="Summary" iskey="true" value="1">
         <property name="Item1" isnull="true" iskey="true">
           <property name="Tag" isnull="true" />
-          <property name="FieldName">PrintingAverageUnitCostPrice</property>
+          <property name="FieldName">TotalMinutes</property>
           <property name="SummaryType">Sum</property>
           <property name="DisplayFormat">المجموع={0:#,##0.##}</property>
         </property>
       </property>
     </property>
     <property name="Item6" isnull="true" iskey="true">
+      <property name="DisplayFormat" isnull="true" iskey="true">
+        <property name="FormatString">{0:#,##0.##}</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+          <property name="UseBackColor">true</property>
+        </property>
+        <property name="BackColor">224, 224, 224</property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+          <property name="UseBackColor">true</property>
+        </property>
+        <property name="BackColor">224, 224, 224</property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="Width">150</property>
+      <property name="Visible">true</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">5</property>
+      <property name="Name">gridColumn12</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="AllowEdit">false</property>
+        <property name="ReadOnly">true</property>
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="Caption">Light Time</property>
+      <property name="FieldName">LightMinutes</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">LightMinutes</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">المجموع={0:#,##0.##}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="Width">120</property>
+      <property name="Visible">true</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">6</property>
+      <property name="Name">gridColumn13</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="AllowEdit">false</property>
+        <property name="ReadOnly">true</property>
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="Caption">متوسط الوقت؟</property>
+      <property name="FieldName">UseAverageCostPrice</property>
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="DisplayFormat" isnull="true" iskey="true">
+        <property name="FormatString">{0:#,##0.##}</property>
+        <property name="FormatType">Numeric</property>
+      </property>
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+          <property name="UseBackColor">true</property>
+        </property>
+        <property name="BackColor">224, 224, 224</property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="AppearanceCell" isnull="true" iskey="true">
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+          <property name="UseBackColor">true</property>
+        </property>
+        <property name="BackColor">224, 224, 224</property>
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="HAlignment">Center</property>
+        </property>
+      </property>
+      <property name="Width">150</property>
+      <property name="Visible">true</property>
+      <property name="ColumnEditName" />
+      <property name="VisibleIndex">7</property>
+      <property name="Name">gridColumn4</property>
+      <property name="OptionsColumn" isnull="true" iskey="true">
+        <property name="AllowEdit">false</property>
+        <property name="ReadOnly">true</property>
+        <property name="FixedWidth">true</property>
+      </property>
+      <property name="Caption">تكلفة الدقيقة</property>
+      <property name="FieldName">MinuteUnitCost</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">MinuteUnitCost</property>
+          <property name="SummaryType">Sum</property>
+          <property name="DisplayFormat">المجموع={0:#,##0.##}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
       <property name="DisplayFormat" isnull="true" iskey="true">
         <property name="FormatString">{0:#,##0.##}</property>
         <property name="FormatType">Numeric</property>
@@ -232,7 +338,7 @@
       <property name="Width">150</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
-      <property name="VisibleIndex">5</property>
+      <property name="VisibleIndex">8</property>
       <property name="Name">gridColumn14</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
@@ -250,7 +356,7 @@
         </property>
       </property>
     </property>
-    <property name="Item7" isnull="true" iskey="true">
+    <property name="Item10" isnull="true" iskey="true">
       <property name="DisplayFormat" isnull="true" iskey="true">
         <property name="FormatString">{0:#,##0.##}</property>
         <property name="FormatType">Numeric</property>
@@ -278,7 +384,7 @@
       <property name="Width">150</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
-      <property name="VisibleIndex">6</property>
+      <property name="VisibleIndex">9</property>
       <property name="Name">gridColumn7</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
@@ -296,7 +402,7 @@
         </property>
       </property>
     </property>
-    <property name="Item8" isnull="true" iskey="true">
+    <property name="Item11" isnull="true" iskey="true">
       <property name="DisplayFormat" isnull="true" iskey="true">
         <property name="FormatString">{0:#,##0.##}</property>
         <property name="FormatType">Numeric</property>
@@ -324,7 +430,7 @@
       <property name="Width">150</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
-      <property name="VisibleIndex">7</property>
+      <property name="VisibleIndex">10</property>
       <property name="Name">gridColumn8</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
@@ -342,7 +448,7 @@
         </property>
       </property>
     </property>
-    <property name="Item9" isnull="true" iskey="true">
+    <property name="Item12" isnull="true" iskey="true">
       <property name="DisplayFormat" isnull="true" iskey="true">
         <property name="FormatString">{0:#,##0.##}</property>
         <property name="FormatType">Numeric</property>
@@ -363,10 +469,10 @@
           <property name="HAlignment">Center</property>
         </property>
       </property>
-      <property name="Width">150</property>
+      <property name="Width">120</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
-      <property name="VisibleIndex">8</property>
+      <property name="VisibleIndex">11</property>
       <property name="Name">gridColumn11</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
@@ -376,7 +482,7 @@
       <property name="Caption">التكلفة الفعلية؟</property>
       <property name="FieldName">UseRealCost</property>
     </property>
-    <property name="Item10" isnull="true" iskey="true">
+    <property name="Item13" isnull="true" iskey="true">
       <property name="DisplayFormat" isnull="true" iskey="true">
         <property name="FormatString">{0:#,##0.##}</property>
         <property name="FormatType">Numeric</property>
@@ -404,7 +510,7 @@
       <property name="Width">150</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
-      <property name="VisibleIndex">9</property>
+      <property name="VisibleIndex">12</property>
       <property name="Name">gridColumn3</property>
       <property name="OptionsColumn" isnull="true" iskey="true">
         <property name="AllowEdit">false</property>
@@ -422,11 +528,11 @@
         </property>
       </property>
     </property>
-    <property name="Item11" isnull="true" iskey="true">
+    <property name="Item14" isnull="true" iskey="true">
       <property name="Width">20</property>
       <property name="Visible">true</property>
       <property name="ColumnEditName" />
-      <property name="VisibleIndex">10</property>
+      <property name="VisibleIndex">13</property>
       <property name="Name">gridColumn6</property>
     </property>
   </property>

@@ -70,6 +70,8 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Area_Viewers
 			set { txtInternalCode.EditValue = value; }
 		}
 
+		public object SizeUnitMeasure_P_ID { get; set; }
+
 		#endregion
 	}
 }

@@ -1067,6 +1067,7 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="InventoryItemID" Type="int" Nullable="false" />
+          <Property Name="SizeUnitMeasure_P_ID" Type="int" Nullable="false" />
           <Property Name="Width" Type="float" Nullable="false" />
           <Property Name="Height" Type="float" Nullable="false" />
           <Property Name="Count" Type="float" Nullable="false" />
@@ -1131,11 +1132,14 @@
           <Property Name="InventoryItem_CU_ID" Type="int" Nullable="false" />
           <Property Name="Date" Type="datetime" Nullable="false" />
           <Property Name="RawMaterial_CU_ID" Type="int" />
-          <Property Name="PrintingMaxTimeInMinutes" Type="float" Nullable="false" />
+          <Property Name="TotalMinutes" Type="float" Nullable="false" />
+          <Property Name="LightMinutes" Type="float" />
+          <Property Name="UseAverageCostPrice" Type="bit" Nullable="false" />
           <Property Name="AddedMinutes" Type="float" />
-          <Property Name="PrintingAverageUnitCostPrice" Type="float" Nullable="false" />
+          <Property Name="MinuteUnitCost" Type="float" Nullable="false" />
           <Property Name="UseRealCost" Type="bit" Nullable="false" />
           <Property Name="PrintingRealCostPrice" Type="float" />
+          <Property Name="RealMinutes" Type="float" />
           <Property Name="Description" Type="nvarchar" MaxLength="200" />
           <Property Name="InsertedBy" Type="int" />
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
@@ -2310,6 +2314,15 @@
           <Property Name="IsOnDuty" Type="bit" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="100" />
           <Property Name="InsertedBy" Type="int" />
+        </EntityType>
+        <EntityType Name="SizeUnitMeasure_p">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name_P" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name_S" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Station_p">
           <Key>
@@ -5339,6 +5352,18 @@
             </Principal>
             <Dependent Role="InventoryItem_Area">
               <PropertyRef Name="InventoryItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryItem_Area_SizeUnitMeasure_p">
+          <End Role="SizeUnitMeasure_p" Type="Self.SizeUnitMeasure_p" Multiplicity="1" />
+          <End Role="InventoryItem_Area" Type="Self.InventoryItem_Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SizeUnitMeasure_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="InventoryItem_Area">
+              <PropertyRef Name="SizeUnitMeasure_P_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -10230,6 +10255,7 @@
           <EntitySet Name="ServiceType_StationPoint_cu" EntityType="Self.ServiceType_StationPoint_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServiceType_StationPointStage_cu" EntityType="Self.ServiceType_StationPointStage_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServiceType_Surcharge_cu" EntityType="Self.ServiceType_Surcharge_cu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SizeUnitMeasure_p" EntityType="Self.SizeUnitMeasure_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Station_p" EntityType="Self.Station_p" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StationPoint_cu" EntityType="Self.StationPoint_cu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StationPointStage_cu" EntityType="Self.StationPointStage_cu" Schema="dbo" store:Type="Tables" />
@@ -11033,6 +11059,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_InventoryItem_Area_InventoryItem_cu" Association="Self.FK_InventoryItem_Area_InventoryItem_cu">
             <End Role="InventoryItem_cu" EntitySet="InventoryItem_cu" />
+            <End Role="InventoryItem_Area" EntitySet="InventoryItem_Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventoryItem_Area_SizeUnitMeasure_p" Association="Self.FK_InventoryItem_Area_SizeUnitMeasure_p">
+            <End Role="SizeUnitMeasure_p" EntitySet="SizeUnitMeasure_p" />
             <End Role="InventoryItem_Area" EntitySet="InventoryItem_Area" />
           </AssociationSet>
           <AssociationSet Name="FK_InventoryItem_Area_User_cu" Association="Self.FK_InventoryItem_Area_User_cu">
@@ -13967,6 +13997,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="InventoryItemID" Type="Int32" Nullable="false" />
+          <Property Name="SizeUnitMeasure_P_ID" Type="Int32" Nullable="false" />
           <Property Name="Width" Type="Double" Nullable="false" />
           <Property Name="Height" Type="Double" Nullable="false" />
           <Property Name="Count" Type="Double" Nullable="false" />
@@ -13974,6 +14005,7 @@
           <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
           <Property Name="InsertedBy" Type="Int32" />
           <NavigationProperty Name="InventoryItem_cu" Relationship="Self.FK_InventoryItem_Area_InventoryItem_cu" FromRole="InventoryItem_Area" ToRole="InventoryItem_cu" />
+          <NavigationProperty Name="SizeUnitMeasure_p" Relationship="Self.FK_InventoryItem_Area_SizeUnitMeasure_p" FromRole="InventoryItem_Area" ToRole="SizeUnitMeasure_p" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_InventoryItem_Area_User_cu" FromRole="InventoryItem_Area" ToRole="User_cu" />
         </EntityType>
         <EntityType Name="InventoryItem_Color_cu">
@@ -14054,11 +14086,14 @@
           <Property Name="InventoryItem_CU_ID" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="RawMaterial_CU_ID" Type="Int32" />
-          <Property Name="PrintingMaxTimeInMinutes" Type="Double" Nullable="false" />
+          <Property Name="TotalMinutes" Type="Double" Nullable="false" />
+          <Property Name="LightMinutes" Type="Double" />
+          <Property Name="UseAverageCostPrice" Type="Boolean" Nullable="false" />
           <Property Name="AddedMinutes" Type="Double" />
-          <Property Name="PrintingAverageUnitCostPrice" Type="Double" Nullable="false" />
+          <Property Name="MinuteUnitCost" Type="Double" Nullable="false" />
           <Property Name="UseRealCost" Type="Boolean" Nullable="false" />
           <Property Name="PrintingRealCostPrice" Type="Double" />
+          <Property Name="RealMinutes" Type="Double" />
           <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="InsertedBy" Type="Int32" />
           <Property Name="IsOnDuty" Type="Boolean" Nullable="false" />
@@ -15583,6 +15618,16 @@
           <NavigationProperty Name="ServiceType_p" Relationship="Self.FK_ServiceType_Surcharge_cu_ServiceType_p" FromRole="ServiceType_Surcharge_cu" ToRole="ServiceType_p" />
           <NavigationProperty Name="Surcharge_cu" Relationship="Self.FK_ServiceType_Surcharge_cu_Surcharge_cu" FromRole="ServiceType_Surcharge_cu" ToRole="Surcharge_cu" />
           <NavigationProperty Name="User_cu" Relationship="Self.FK_ServiceType_Surcharge_cu_User_cu" FromRole="ServiceType_Surcharge_cu" ToRole="User_cu" />
+        </EntityType>
+        <EntityType Name="SizeUnitMeasure_p">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name_P" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_S" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="InventoryItem_Area" Relationship="Self.FK_InventoryItem_Area_SizeUnitMeasure_p" FromRole="SizeUnitMeasure_p" ToRole="InventoryItem_Area" />
         </EntityType>
         <EntityType Name="Station_p">
           <Key>
@@ -19876,6 +19921,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_InventoryItem_Area_SizeUnitMeasure_p">
+          <End Role="SizeUnitMeasure_p" Type="Self.SizeUnitMeasure_p" Multiplicity="1" />
+          <End Role="InventoryItem_Area" Type="Self.InventoryItem_Area" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SizeUnitMeasure_p">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="InventoryItem_Area">
+              <PropertyRef Name="SizeUnitMeasure_P_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_InventoryItem_Area_User_cu">
           <End Role="User_cu" Type="Self.User_cu" Multiplicity="0..1" />
           <End Role="InventoryItem_Area" Type="Self.InventoryItem_Area" Multiplicity="*" />
@@ -23763,6 +23820,7 @@
           <EntitySet Name="ServiceType_StationPoint_cu" EntityType="Self.ServiceType_StationPoint_cu" />
           <EntitySet Name="ServiceType_StationPointStage_cu" EntityType="Self.ServiceType_StationPointStage_cu" />
           <EntitySet Name="ServiceType_Surcharge_cu" EntityType="Self.ServiceType_Surcharge_cu" />
+          <EntitySet Name="SizeUnitMeasure_p" EntityType="Self.SizeUnitMeasure_p" />
           <EntitySet Name="Station_p" EntityType="Self.Station_p" />
           <EntitySet Name="StationPoint_cu" EntityType="Self.StationPoint_cu" />
           <EntitySet Name="StationPointStage_cu" EntityType="Self.StationPointStage_cu" />
@@ -24850,6 +24908,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_InventoryItem_Area_InventoryItem_cu" Association="Self.FK_InventoryItem_Area_InventoryItem_cu">
             <End Role="InventoryItem_cu" EntitySet="InventoryItem_cu" />
+            <End Role="InventoryItem_Area" EntitySet="InventoryItem_Area" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventoryItem_Area_SizeUnitMeasure_p" Association="Self.FK_InventoryItem_Area_SizeUnitMeasure_p">
+            <End Role="SizeUnitMeasure_p" EntitySet="SizeUnitMeasure_p" />
             <End Role="InventoryItem_Area" EntitySet="InventoryItem_Area" />
           </AssociationSet>
           <AssociationSet Name="FK_InventoryItem_Area_User_cu" Association="Self.FK_InventoryItem_Area_User_cu">
@@ -26105,7 +26167,7 @@
           <FunctionImport Name="GetInventoryItemAreaParts" ReturnType="Collection(MerkFinanceModel.GetInventoryItemAreaParts_Result)">
             <Parameter Name="InventoryItemID" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="GetInventoryItemCostsDetails" ReturnType="Collection(MerkFinanceModel.GetInventoryItemCostsDetails_Result)">
+          <FunctionImport Name="GetInventoryItemCostsDetails">
             <Parameter Name="RawMaterialID" Mode="In" Type="Int32" />
             <Parameter Name="ColorID" Mode="In" Type="Int32" />
             <Parameter Name="ItemID" Mode="In" Type="Int32" />
@@ -26257,35 +26319,6 @@
           <Property Type="Double" Name="Width" Nullable="true" />
           <Property Type="Double" Name="Height" Nullable="true" />
           <Property Type="Double" Name="Count" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="GetInventoryItemCostsDetails_Result">
-          <Property Type="Int32" Name="ItemID" Nullable="false" />
-          <Property Type="String" Name="ItemName" Nullable="false" MaxLength="150" />
-          <Property Type="String" Name="ItemInternalCode" Nullable="true" MaxLength="150" />
-          <Property Type="Double" Name="ItemWidth" Nullable="true" />
-          <Property Type="Double" Name="ItemHeight" Nullable="true" />
-          <Property Type="Double" Name="ItemDepth" Nullable="true" />
-          <Property Type="Int32" Name="PrintingID" Nullable="false" />
-          <Property Type="DateTime" Name="PrintingDate" Nullable="false" Precision="23" />
-          <Property Type="Double" Name="PrintingMinutes" Nullable="false" />
-          <Property Type="Double" Name="PrintingUnitCostFactor" Nullable="false" />
-          <Property Type="Double" Name="PrintingCalculatedCost" Nullable="false" />
-          <Property Type="Double" Name="PrintingAddedMinutes" Nullable="true" />
-          <Property Type="Double" Name="PrintingTotalCalculatedCost" Nullable="true" />
-          <Property Type="Boolean" Name="PrintingUseRealCost" Nullable="false" />
-          <Property Type="Double" Name="PrintingReadCost" Nullable="true" />
-          <Property Type="Double" Name="TotalPartsArea" Nullable="true" />
-          <Property Type="Double" Name="TotalPartsCount" Nullable="true" />
-          <Property Type="Int32" Name="RawID" Nullable="false" />
-          <Property Type="String" Name="RawName" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="ColorName" Nullable="false" MaxLength="100" />
-          <Property Type="Double" Name="RawThickness" Nullable="false" />
-          <Property Type="Double" Name="RawUnitPriceInPounds" Nullable="true" />
-          <Property Type="Double" Name="PrintingUnitCost" Nullable="true" />
-          <Property Type="Double" Name="TotalUnitCost" Nullable="true" />
-          <Property Type="Double" Name="NetCostPrice" Nullable="true" />
-          <Property Type="Int32" Name="AdditionalCost" Nullable="true" />
-          <Property Type="Double" Name="AdditionalNetCostPrice" Nullable="true" />
         </ComplexType>
         <ComplexType Name="GetInvoiceForAddmission_Result">
           <Property Type="Int32" Name="PatientID" Nullable="false" />
@@ -27613,6 +27646,7 @@
               <MappingFragment StoreEntitySet="InventoryItem_Area">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="InventoryItemID" ColumnName="InventoryItemID" />
+                <ScalarProperty Name="SizeUnitMeasure_P_ID" ColumnName="SizeUnitMeasure_P_ID" />
                 <ScalarProperty Name="Width" ColumnName="Width" />
                 <ScalarProperty Name="Height" ColumnName="Height" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
@@ -27680,11 +27714,14 @@
                 <ScalarProperty Name="InventoryItem_CU_ID" ColumnName="InventoryItem_CU_ID" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="RawMaterial_CU_ID" ColumnName="RawMaterial_CU_ID" />
-                <ScalarProperty Name="PrintingMaxTimeInMinutes" ColumnName="PrintingMaxTimeInMinutes" />
+                <ScalarProperty Name="TotalMinutes" ColumnName="TotalMinutes" />
+                <ScalarProperty Name="LightMinutes" ColumnName="LightMinutes" />
+                <ScalarProperty Name="UseAverageCostPrice" ColumnName="UseAverageCostPrice" />
                 <ScalarProperty Name="AddedMinutes" ColumnName="AddedMinutes" />
-                <ScalarProperty Name="PrintingAverageUnitCostPrice" ColumnName="PrintingAverageUnitCostPrice" />
+                <ScalarProperty Name="MinuteUnitCost" ColumnName="MinuteUnitCost" />
                 <ScalarProperty Name="UseRealCost" ColumnName="UseRealCost" />
                 <ScalarProperty Name="PrintingRealCostPrice" ColumnName="PrintingRealCostPrice" />
+                <ScalarProperty Name="RealMinutes" ColumnName="RealMinutes" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="InsertedBy" ColumnName="InsertedBy" />
                 <ScalarProperty Name="IsOnDuty" ColumnName="IsOnDuty" />
@@ -28958,6 +28995,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="SizeUnitMeasure_p">
+            <EntityTypeMapping TypeName="MerkFinanceModel.SizeUnitMeasure_p">
+              <MappingFragment StoreEntitySet="SizeUnitMeasure_p">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name_P" ColumnName="Name_P" />
+                <ScalarProperty Name="Name_S" ColumnName="Name_S" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Station_p">
             <EntityTypeMapping TypeName="MerkFinanceModel.Station_p">
               <MappingFragment StoreEntitySet="Station_p">
@@ -29874,39 +29921,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="GetInventoryItemCostsDetails" FunctionName="MerkFinanceModel.Store.GetInventoryItemCostsDetails">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="MerkFinanceModel.GetInventoryItemCostsDetails_Result">
-                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
-                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
-                <ScalarProperty Name="ItemInternalCode" ColumnName="ItemInternalCode" />
-                <ScalarProperty Name="ItemWidth" ColumnName="ItemWidth" />
-                <ScalarProperty Name="ItemHeight" ColumnName="ItemHeight" />
-                <ScalarProperty Name="ItemDepth" ColumnName="ItemDepth" />
-                <ScalarProperty Name="PrintingID" ColumnName="PrintingID" />
-                <ScalarProperty Name="PrintingDate" ColumnName="PrintingDate" />
-                <ScalarProperty Name="PrintingMinutes" ColumnName="PrintingMinutes" />
-                <ScalarProperty Name="PrintingUnitCostFactor" ColumnName="PrintingUnitCostFactor" />
-                <ScalarProperty Name="PrintingCalculatedCost" ColumnName="PrintingCalculatedCost" />
-                <ScalarProperty Name="PrintingAddedMinutes" ColumnName="PrintingAddedMinutes" />
-                <ScalarProperty Name="PrintingTotalCalculatedCost" ColumnName="PrintingTotalCalculatedCost" />
-                <ScalarProperty Name="PrintingUseRealCost" ColumnName="PrintingUseRealCost" />
-                <ScalarProperty Name="PrintingReadCost" ColumnName="PrintingReadCost" />
-                <ScalarProperty Name="TotalPartsArea" ColumnName="TotalPartsArea" />
-                <ScalarProperty Name="TotalPartsCount" ColumnName="TotalPartsCount" />
-                <ScalarProperty Name="RawID" ColumnName="RawID" />
-                <ScalarProperty Name="RawName" ColumnName="RawName" />
-                <ScalarProperty Name="ColorName" ColumnName="ColorName" />
-                <ScalarProperty Name="RawThickness" ColumnName="RawThickness" />
-                <ScalarProperty Name="RawUnitPriceInPounds" ColumnName="RawUnitPriceInPounds" />
-                <ScalarProperty Name="PrintingUnitCost" ColumnName="PrintingUnitCost" />
-                <ScalarProperty Name="TotalUnitCost" ColumnName="TotalUnitCost" />
-                <ScalarProperty Name="NetCostPrice" ColumnName="NetCostPrice" />
-                <ScalarProperty Name="AdditionalCost" ColumnName="AdditionalCost" />
-                <ScalarProperty Name="AdditionalNetCostPrice" ColumnName="AdditionalNetCostPrice" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetInventoryItemCostsDetails" FunctionName="MerkFinanceModel.Store.GetInventoryItemCostsDetails" />
           <FunctionImportMapping FunctionImportName="GetInvoiceForAddmission" FunctionName="MerkFinanceModel.Store.GetInvoiceForAddmission">
             <ResultMapping>
               <ComplexTypeMapping TypeName="MerkFinanceModel.GetInvoiceForAddmission_Result">

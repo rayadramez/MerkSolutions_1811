@@ -38,20 +38,29 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			if (Date != null)
 				((InventoryItem_Printing_cu)ActiveDBItem).Date = Convert.ToDateTime(Date);
 
-			if (PrintingMaxTimeInMinutes != null)
-				((InventoryItem_Printing_cu)ActiveDBItem).PrintingMaxTimeInMinutes = Convert.ToDouble(PrintingMaxTimeInMinutes);
+			if (TotalMinutes != null)
+				((InventoryItem_Printing_cu)ActiveDBItem).TotalMinutes = Convert.ToDouble(TotalMinutes);
+
+			if (LightMinutes != null)
+				((InventoryItem_Printing_cu)ActiveDBItem).LightMinutes = Convert.ToDouble(LightMinutes);
+
+			if (UseAverageCostPrice != null)
+				((InventoryItem_Printing_cu)ActiveDBItem).UseAverageCostPrice = Convert.ToBoolean(UseAverageCostPrice);
 
 			if (AddedMinutes != null)
 				((InventoryItem_Printing_cu)ActiveDBItem).AddedMinutes = Convert.ToDouble(AddedMinutes);
 
-			if (PrintingAverageUnitCostPrice != null)
-				((InventoryItem_Printing_cu)ActiveDBItem).PrintingAverageUnitCostPrice = Convert.ToDouble(PrintingAverageUnitCostPrice);
+			if (MinuteUnitCost != null)
+				((InventoryItem_Printing_cu)ActiveDBItem).MinuteUnitCost = Convert.ToDouble(MinuteUnitCost);
 
 			if (UseRealCost != null)
 				((InventoryItem_Printing_cu)ActiveDBItem).UseRealCost = Convert.ToBoolean(UseRealCost);
 
 			if (PrintingRealCostPrice != null)
 				((InventoryItem_Printing_cu)ActiveDBItem).PrintingRealCostPrice = Convert.ToDouble(PrintingRealCostPrice);
+
+			if (RealMinutes != null)
+				((InventoryItem_Printing_cu)ActiveDBItem).RealMinutes = Convert.ToDouble(RealMinutes);
 
 			if (Description != null)
 				((InventoryItem_Printing_cu) ActiveDBItem).Description = Description.ToString();
@@ -161,9 +170,9 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 		{
 			InventoryItemID = ((InventoryItem_Printing_cu)ActiveDBItem).InventoryItem_CU_ID;
 			Date = ((InventoryItem_Printing_cu)ActiveDBItem).Date;
-			PrintingMaxTimeInMinutes = ((InventoryItem_Printing_cu)ActiveDBItem).PrintingMaxTimeInMinutes;
+			TotalMinutes = ((InventoryItem_Printing_cu)ActiveDBItem).TotalMinutes;
 			AddedMinutes = ((InventoryItem_Printing_cu)ActiveDBItem).AddedMinutes;
-			PrintingAverageUnitCostPrice = ((InventoryItem_Printing_cu)ActiveDBItem).PrintingAverageUnitCostPrice;
+			MinuteUnitCost = ((InventoryItem_Printing_cu)ActiveDBItem).MinuteUnitCost;
 			UseRealCost = ((InventoryItem_Printing_cu)ActiveDBItem).UseRealCost;
 			PrintingRealCostPrice = ((InventoryItem_Printing_cu)ActiveDBItem).PrintingRealCostPrice;
 			Description = ((InventoryItem_Printing_cu)ActiveDBItem).Description;
@@ -201,10 +210,16 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			set { ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).Date = value; }
 		}
 
-		public object PrintingMaxTimeInMinutes
+		public object TotalMinutes
 		{
-			get { return ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).PrintingMaxTimeInMinutes; }
-			set { ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).PrintingMaxTimeInMinutes = value; }
+			get { return ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).TotalMinutes; }
+			set { ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).TotalMinutes = value; }
+		}
+
+		public object LightMinutes
+		{
+			get { return ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).LightMinutes; }
+			set { ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).LightMinutes = value; }
 		}
 
 		public object AddedMinutes
@@ -213,10 +228,16 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 			set { ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).AddedMinutes = value; }
 		}
 
-		public object PrintingAverageUnitCostPrice
+		public object UseAverageCostPrice
 		{
-			get { return ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).PrintingAverageUnitCostPrice; }
-			set { ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).PrintingAverageUnitCostPrice = value; }
+			get { return ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).UseAverageCostPrice; }
+			set { ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).UseAverageCostPrice = value; }
+		}
+
+		public object MinuteUnitCost
+		{
+			get { return ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).MinuteUnitCost; }
+			set { ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).MinuteUnitCost = value; }
 		}
 
 		public object UseRealCost
@@ -229,6 +250,12 @@ namespace MVCBusinessLogicLibrary.MVCDataCollectors
 		{
 			get { return ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).PrintingRealCostPrice; }
 			set { ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).PrintingRealCostPrice = value; }
+		}
+
+		public object RealMinutes
+		{
+			get { return ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).RealMinutes; }
+			set { ((IInventoryItem_Printing_Viewer)ActiveCollector.ActiveViewer).RealMinutes = value; }
 		}
 
 		public object Description

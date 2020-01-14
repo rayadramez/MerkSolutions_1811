@@ -853,4 +853,7 @@
   <data name="grd_ReviewInventoryItemCostDetails_Printing_Viewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>grd_ReviewInventoryItemCostDetails_Printing_Viewer.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="lyt_ReviewInventoryItemsDetails_UC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lyt_ReviewInventoryItemsDetails_UC.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

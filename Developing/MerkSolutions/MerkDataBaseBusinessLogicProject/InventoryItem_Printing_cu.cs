@@ -18,11 +18,14 @@ namespace MerkDataBaseBusinessLogicProject
         public int InventoryItem_CU_ID { get; set; }
         public System.DateTime Date { get; set; }
         public Nullable<int> RawMaterial_CU_ID { get; set; }
-        public double PrintingMaxTimeInMinutes { get; set; }
+        public double TotalMinutes { get; set; }
+        public Nullable<double> LightMinutes { get; set; }
+        public bool UseAverageCostPrice { get; set; }
         public Nullable<double> AddedMinutes { get; set; }
-        public double PrintingAverageUnitCostPrice { get; set; }
+        public double MinuteUnitCost { get; set; }
         public bool UseRealCost { get; set; }
         public Nullable<double> PrintingRealCostPrice { get; set; }
+        public Nullable<double> RealMinutes { get; set; }
         public string Description { get; set; }
         public Nullable<int> InsertedBy { get; set; }
         public bool IsOnDuty { get; set; }

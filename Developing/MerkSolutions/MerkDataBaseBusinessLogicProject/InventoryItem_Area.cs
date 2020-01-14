@@ -16,6 +16,7 @@ namespace MerkDataBaseBusinessLogicProject
     {
         public int ID { get; set; }
         public int InventoryItemID { get; set; }
+        public int SizeUnitMeasure_P_ID { get; set; }
         public double Width { get; set; }
         public double Height { get; set; }
         public double Count { get; set; }
@@ -24,6 +25,7 @@ namespace MerkDataBaseBusinessLogicProject
         public Nullable<int> InsertedBy { get; set; }
     
         public virtual InventoryItem_cu InventoryItem_cu { get; set; }
+        public virtual SizeUnitMeasure_p SizeUnitMeasure_p { get; set; }
         public virtual User_cu User_cu { get; set; }
     }
 }

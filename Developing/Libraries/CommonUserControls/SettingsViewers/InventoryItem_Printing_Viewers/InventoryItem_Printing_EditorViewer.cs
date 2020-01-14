@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using CommonControlLibrary;
+using DevExpress.XtraLayout.Utils;
 using MerkDataBaseBusinessLogicProject;
 using MVCBusinessLogicLibrary.BaseViewers;
 using MVCBusinessLogicLibrary.Controller;
@@ -44,15 +45,17 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers
 		{
 			CommonViewsActions.FillGridlookupEdit(lkeInventoryItems, InventoryItem_cu.ItemsList);
 			CommonViewsActions.FillGridlookupEdit(lkeRawMaterials, RawMaterials_cu.ItemsList);
+
+			chkAverageTime.Checked = true;
 		}
 
 		public override void ClearControls()
 		{
 			lkeInventoryItems.EditValue = null;
 			dtDate.EditValue = DateTime.Now;
-			spnPrintingMaxTimeInMinutes.EditValue = null;
+			spnTotalTime.EditValue = null;
 			spnAddedMinutes.EditValue = null;
-			spnPrintingAverageUnitCostPrice.EditValue = null;
+			spnMinuteCost.EditValue = null;
 			spnCalculatedCost.EditValue = null;
 			spnPrintingRealCostPrice.EditValue = null;
 			txtDescription.EditValue = null;
@@ -81,10 +84,16 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers
 			set { dtDate.EditValue = value; }
 		}
 
-		public object PrintingMaxTimeInMinutes
+		public object TotalMinutes
 		{
-			get { return spnPrintingMaxTimeInMinutes.EditValue; }
-			set { spnPrintingMaxTimeInMinutes.EditValue = value; }
+			get { return spnTotalTime.EditValue; }
+			set { spnTotalTime.EditValue = value; }
+		}
+
+		public object LightMinutes
+		{
+			get { return spnLightTime.EditValue; }
+			set { spnLightTime.EditValue = value; }
 		}
 
 		public object AddedMinutes
@@ -93,10 +102,22 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers
 			set { spnAddedMinutes.EditValue = value; }
 		}
 
-		public object PrintingAverageUnitCostPrice
+		public object UseAverageCostPrice
 		{
-			get { return spnPrintingAverageUnitCostPrice.EditValue; }
-			set { spnPrintingAverageUnitCostPrice.EditValue = value; }
+			get { return chkAverageTime.Checked; }
+			set
+			{
+				if (Convert.ToBoolean(value))
+					chkAverageTime.Checked = true;
+				else
+					chkAverageTime.Checked = true;
+			}
+		}
+
+		public object MinuteUnitCost
+		{
+			get { return spnMinuteCost.EditValue; }
+			set { spnMinuteCost.EditValue = value; }
 		}
 
 		public object UseRealCost
@@ -117,6 +138,8 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers
 			set { spnPrintingRealCostPrice.EditValue = value; }
 		}
 
+		public object RealMinutes { get; set; }
+
 		public object Description
 		{
 			get { return txtDescription.EditValue; }
@@ -127,32 +150,174 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers
 
 		private void spnPrintingMaxTimeInMinutes_EditValueChanged(object sender, EventArgs e)
 		{
-			spnCalculatedCost.EditValue = Convert.ToDouble(spnPrintingMaxTimeInMinutes.EditValue) *
-			                              Convert.ToDouble(spnPrintingAverageUnitCostPrice.EditValue);
-			spnTotalCalculatedCost.EditValue =
-				(Convert.ToDouble(spnPrintingMaxTimeInMinutes.EditValue) +
-				 Convert.ToDouble(spnAddedMinutes.EditValue)) *
-				Convert.ToDouble(spnPrintingAverageUnitCostPrice.EditValue);
+			if (TotalMinutes == null || LightMinutes == null || MinuteUnitCost == null)
+				return;
+
+			double totalMinutes = Convert.ToDouble(TotalMinutes);
+			double lightMinutes = Convert.ToDouble(LightMinutes);
+			double unitCost = Convert.ToDouble(MinuteUnitCost);
+			double cost = 0;
+			double totalCost = 0;
+
+			if (chkAverageTime.Checked)
+				if (AddedMinutes != null)
+				{
+					cost = (((totalMinutes + lightMinutes) / 2)) * unitCost;
+					totalCost = (((totalMinutes + lightMinutes) / 2) + Convert.ToDouble(AddedMinutes)) * unitCost;
+				}
+				else
+					cost = totalCost = ((totalMinutes + lightMinutes) / 2) * unitCost;
+			else if (chkTotalTime.Checked)
+				if (AddedMinutes != null)
+				{
+					cost = totalMinutes * unitCost;
+					totalCost = (totalMinutes + Convert.ToDouble(AddedMinutes)) * unitCost;
+				}
+				else
+					cost = totalCost = totalMinutes * unitCost;
+
+			spnCalculatedCost.EditValue = cost;
+			spnTotalCalculatedCost.EditValue = totalCost;
 		}
 
 		private void spnPrintingAverageUnitCostPrice_EditValueChanged(object sender, EventArgs e)
 		{
-			spnCalculatedCost.EditValue = Convert.ToDouble(spnPrintingMaxTimeInMinutes.EditValue) *
-			                              Convert.ToDouble(spnPrintingAverageUnitCostPrice.EditValue);
-			spnTotalCalculatedCost.EditValue =
-				(Convert.ToDouble(spnPrintingMaxTimeInMinutes.EditValue) +
-				 Convert.ToDouble(spnAddedMinutes.EditValue)) *
-				Convert.ToDouble(spnPrintingAverageUnitCostPrice.EditValue);
+			if (TotalMinutes == null || LightMinutes == null || MinuteUnitCost == null)
+				return;
+
+			double totalMinutes = Convert.ToDouble(TotalMinutes);
+			double lightMinutes = Convert.ToDouble(LightMinutes);
+			double unitCost = Convert.ToDouble(MinuteUnitCost);
+			double cost = 0;
+			double totalCost = 0;
+
+			if (chkAverageTime.Checked)
+				if (AddedMinutes != null)
+				{
+					cost = (((totalMinutes + lightMinutes) / 2)) * unitCost;
+					totalCost = (((totalMinutes + lightMinutes) / 2) + Convert.ToDouble(AddedMinutes)) * unitCost;
+				}
+				else
+					cost = totalCost = ((totalMinutes + lightMinutes) / 2) * unitCost;
+			else if (chkTotalTime.Checked)
+				if (AddedMinutes != null)
+				{
+					cost = totalMinutes * unitCost;
+					totalCost = (totalMinutes + Convert.ToDouble(AddedMinutes)) * unitCost;
+				}
+				else
+					cost = totalCost = totalMinutes * unitCost;
+
+			spnCalculatedCost.EditValue = cost;
+			spnTotalCalculatedCost.EditValue = totalCost;
 		}
 
 		private void spnAddedMinutes_EditValueChanged(object sender, EventArgs e)
 		{
-			spnCalculatedCost.EditValue = Convert.ToDouble(spnPrintingMaxTimeInMinutes.EditValue) *
-			                              Convert.ToDouble(spnPrintingAverageUnitCostPrice.EditValue);
-			spnTotalCalculatedCost.EditValue =
-				(Convert.ToDouble(spnPrintingMaxTimeInMinutes.EditValue) +
-				 Convert.ToDouble(spnAddedMinutes.EditValue)) *
-				Convert.ToDouble(spnPrintingAverageUnitCostPrice.EditValue);
+			if (TotalMinutes == null || LightMinutes == null || MinuteUnitCost == null)
+				return;
+
+			double totalMinutes = Convert.ToDouble(TotalMinutes);
+			double lightMinutes = Convert.ToDouble(LightMinutes);
+			double unitCost = Convert.ToDouble(MinuteUnitCost);
+			double cost = 0;
+			double totalCost = 0;
+
+			if (chkAverageTime.Checked)
+				if (AddedMinutes != null)
+				{
+					cost = (((totalMinutes + lightMinutes) / 2)) * unitCost;
+					totalCost = (((totalMinutes + lightMinutes) / 2) + Convert.ToDouble(AddedMinutes)) * unitCost;
+				}
+				else
+					cost = totalCost = ((totalMinutes + lightMinutes) / 2) * unitCost;
+			else if (chkTotalTime.Checked)
+				if (AddedMinutes != null)
+				{
+					cost = totalMinutes * unitCost;
+					totalCost = (totalMinutes + Convert.ToDouble(AddedMinutes)) * unitCost;
+				}
+				else
+					cost = totalCost = totalMinutes * unitCost;
+
+			spnCalculatedCost.EditValue = cost;
+			spnTotalCalculatedCost.EditValue = totalCost;
+		}
+
+		private void chkUseExpectedCost_CheckedChanged(object sender, EventArgs e)
+		{
+			lytEstimatedCost.Visibility = chkUseExpectedCost.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
+			lytRealCost.Visibility = chkUseRealCost.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
+		}
+
+		private void chkUseRealCost_CheckedChanged(object sender, EventArgs e)
+		{
+			lytEstimatedCost.Visibility = chkUseExpectedCost.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
+			lytRealCost.Visibility = chkUseRealCost.Checked ? LayoutVisibility.Always : LayoutVisibility.Never;
+		}
+
+		private void chkAverageTime_CheckedChanged(object sender, EventArgs e)
+		{
+			if(TotalMinutes == null || LightMinutes == null || MinuteUnitCost == null)
+				return;
+
+			double totalMinutes = Convert.ToDouble(TotalMinutes);
+			double lightMinutes = Convert.ToDouble(LightMinutes);
+			double unitCost = Convert.ToDouble(MinuteUnitCost);
+			double cost = 0;
+			double totalCost = 0;
+
+			if (chkAverageTime.Checked)
+				if (AddedMinutes != null)
+				{
+					cost = (((totalMinutes + lightMinutes) / 2)) * unitCost;
+					totalCost = (((totalMinutes + lightMinutes) / 2) + Convert.ToDouble(AddedMinutes)) * unitCost;
+				}
+				else
+					cost = totalCost = ((totalMinutes + lightMinutes) / 2) * unitCost;
+			else if(chkTotalTime.Checked)
+				if (AddedMinutes != null)
+				{
+					cost = totalMinutes * unitCost;
+					totalCost = (totalMinutes + Convert.ToDouble(AddedMinutes)) * unitCost;
+				}
+				else
+					cost = totalCost = totalMinutes * unitCost;
+
+			spnCalculatedCost.EditValue = cost;
+			spnTotalCalculatedCost.EditValue = totalCost;
+		}
+
+		private void chkTotalTime_CheckedChanged(object sender, EventArgs e)
+		{
+			if(TotalMinutes == null || LightMinutes == null || MinuteUnitCost == null)
+				return;
+
+			double totalMinutes = Convert.ToDouble(TotalMinutes);
+			double lightMinutes = Convert.ToDouble(LightMinutes);
+			double unitCost = Convert.ToDouble(MinuteUnitCost);
+			double cost = 0;
+			double totalCost = 0;
+
+			if (chkAverageTime.Checked)
+				if (AddedMinutes != null)
+				{
+					cost = (((totalMinutes + lightMinutes) / 2)) * unitCost;
+					totalCost = (((totalMinutes + lightMinutes) / 2) + Convert.ToDouble(AddedMinutes)) * unitCost;
+				}
+				else
+					cost = totalCost = ((totalMinutes + lightMinutes) / 2) * unitCost;
+			else if(chkTotalTime.Checked)
+				if (AddedMinutes != null)
+				{
+					cost = totalMinutes * unitCost;
+					totalCost = (totalMinutes + Convert.ToDouble(AddedMinutes)) * unitCost;
+				}
+				else
+					cost = totalCost = totalMinutes * unitCost;
+
+			spnCalculatedCost.EditValue = cost;
+			spnTotalCalculatedCost.EditValue = totalCost;
 		}
 	}
 }

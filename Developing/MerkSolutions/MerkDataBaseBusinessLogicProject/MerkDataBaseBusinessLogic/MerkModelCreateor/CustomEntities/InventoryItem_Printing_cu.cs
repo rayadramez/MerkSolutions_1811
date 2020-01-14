@@ -78,17 +78,51 @@ namespace MerkDataBaseBusinessLogicProject
 			}
 		}
 
+		public string RawMaterialName
+		{
+			get
+			{
+				RawMaterials_cu rawMaterials = RawMaterials_cu.ItemsList.Find(item =>
+					Convert.ToInt32(item.ID).Equals(Convert.ToInt32(RawMaterial_CU_ID)));
+				if (rawMaterials == null)
+					return String.Empty;
+				return rawMaterials.Name_P;
+			}
+		}
+
 		public double CalculatedCost
 		{
-			get { return Convert.ToDouble(PrintingMaxTimeInMinutes) * Convert.ToDouble(PrintingAverageUnitCostPrice); }
+			get
+			{
+				double totalMinutes = Convert.ToDouble(TotalMinutes);
+				double lightMinutes = Convert.ToDouble(LightMinutes);
+				double unitCost = Convert.ToDouble(MinuteUnitCost);
+				double cost = 0;
+
+				if (Convert.ToBoolean(UseAverageCostPrice))
+					cost = ((totalMinutes + lightMinutes) / 2) * unitCost;
+				else
+					cost = totalMinutes * unitCost;
+
+				return cost;
+			}
 		}
 
 		public double TotalCalculatedCost
 		{
 			get
 			{
-				return (Convert.ToDouble(PrintingMaxTimeInMinutes) + Convert.ToDouble(AddedMinutes)) *
-				       Convert.ToDouble(PrintingAverageUnitCostPrice);
+				double totalMinutes = Convert.ToDouble(TotalMinutes);
+				double lightMinutes = Convert.ToDouble(LightMinutes);
+				double unitCost = Convert.ToDouble(MinuteUnitCost);
+				double cost = 0;
+
+				if (Convert.ToBoolean(UseAverageCostPrice))
+					cost = (((totalMinutes + lightMinutes) / 2) + Convert.ToDouble(AddedMinutes)) * unitCost;
+				else
+					cost = (totalMinutes + Convert.ToDouble(AddedMinutes)) * unitCost;
+
+				return cost;
 			}
 		}
 	}

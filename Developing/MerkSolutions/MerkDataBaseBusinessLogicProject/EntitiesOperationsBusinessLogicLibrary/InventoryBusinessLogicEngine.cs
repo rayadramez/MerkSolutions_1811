@@ -743,9 +743,22 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			List<InventoryItem_Area> areasList = InventoryItem_Area.ItemsList.FindAll(item =>
 				Convert.ToInt32(item.InventoryItemID).Equals(Convert.ToInt32(inventoryItem.ID)));
 			double totalArea = 0;
+			InventoryItem_Area._SizeUnitMeasure = DB_SizeUnitMeasure.CM;
 			foreach (InventoryItem_Area inventoryItemArea in areasList)
-				totalArea += inventoryItemArea.Width * inventoryItemArea.Height * inventoryItemArea.Count;
+				totalArea += inventoryItemArea.TotalArea;
 
+			return totalArea;
+		}
+
+		public static double GetInventoryItemTotalAreaParts(InventoryItem_cu inventoryItem, DB_SizeUnitMeasure sizeUnitMeasure)
+		{
+			if (inventoryItem == null)
+				return 0;
+			List<InventoryItem_Area> areasList = InventoryItem_Area.ItemsList.FindAll(item =>
+				Convert.ToInt32(item.InventoryItemID).Equals(Convert.ToInt32(inventoryItem.ID)));
+			double totalArea = 0;
+			foreach (InventoryItem_Area inventoryItemArea in areasList)
+				totalArea += inventoryItemArea.TotalArea;
 			return totalArea;
 		}
 
@@ -1076,17 +1089,17 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 
 				printingDetailsConstructor.ItemID = inventoryItem.ID;
 				printingDetailsConstructor.ItemName = inventoryItem.Name_P;
-				printingDetailsConstructor.PrintingMinutes = inventoryItemPrintingCu.PrintingMaxTimeInMinutes;
+				printingDetailsConstructor.PrintingMinutes = inventoryItemPrintingCu.TotalMinutes;
 				printingDetailsConstructor.PrintingUnitCostFactor =
-					inventoryItemPrintingCu.PrintingAverageUnitCostPrice;
+					inventoryItemPrintingCu.MinuteUnitCost;
 				printingDetailsConstructor.PrintingCalculatedCost =
-					Convert.ToDouble(inventoryItemPrintingCu.PrintingAverageUnitCostPrice) *
-					Convert.ToDouble(inventoryItemPrintingCu.PrintingMaxTimeInMinutes);
+					Convert.ToDouble(inventoryItemPrintingCu.MinuteUnitCost) *
+					Convert.ToDouble(inventoryItemPrintingCu.TotalMinutes);
 				printingDetailsConstructor.PrintingAddedMinutes = inventoryItemPrintingCu.AddedMinutes;
 				printingDetailsConstructor.PrintingTotalCalculatedCost =
 					(Convert.ToDouble(inventoryItemPrintingCu.AddedMinutes) +
-					 Convert.ToDouble(inventoryItemPrintingCu.PrintingMaxTimeInMinutes)) *
-					Convert.ToDouble(inventoryItemPrintingCu.PrintingAverageUnitCostPrice);
+					 Convert.ToDouble(inventoryItemPrintingCu.TotalMinutes)) *
+					Convert.ToDouble(inventoryItemPrintingCu.MinuteUnitCost);
 				printingDetailsConstructor.PrintingUseRealCost = inventoryItemPrintingCu.UseRealCost;
 				printingDetailsConstructor.PrintingRealCost = inventoryItemPrintingCu.PrintingRealCostPrice;
 
@@ -1111,6 +1124,89 @@ namespace MerkDataBaseBusinessLogicProject.EntitiesOperationsBusinessLogicLibrar
 			inventoryItemConstructor.ListType = ListType.Printing;
 
 			return true;
+		}
+
+		public static double GetPrintingCost(List<InventoryItem_Printing_cu> printingList)
+		{
+			if (printingList == null || printingList.Count == 0)
+				return 0;
+
+			double cost = 0;
+			foreach (InventoryItem_Printing_cu inventoryItemPrintingCu in printingList)
+			{
+				if (inventoryItemPrintingCu.UseRealCost && inventoryItemPrintingCu.PrintingRealCostPrice != null)
+					cost += Convert.ToDouble(inventoryItemPrintingCu.PrintingRealCostPrice);
+				else
+					cost += inventoryItemPrintingCu.TotalCalculatedCost;
+			}
+
+			return cost;
+		}
+
+		public static double GetRawMaterialsCost(List<InventoryItem_RawMaterial_cu> rawMaterialsList)
+		{
+			if (rawMaterialsList == null || rawMaterialsList.Count == 0)
+				return 0;
+
+			InventoryItem_RawMaterial_cu inventoryItemRawMaterial = rawMaterialsList.FirstOrDefault();
+			if (inventoryItemRawMaterial == null)
+				return 0;
+
+			InventoryItem_cu inventoryItem =
+				InventoryItem_cu.ItemsList.Find(item => item.ID.Equals(inventoryItemRawMaterial.InventoryItem_CU_ID));
+			if (inventoryItem == null)
+				return 0;
+
+			double partsArea = GetInventoryItemTotalAreaParts(inventoryItem);
+
+			double cost = 0;
+			foreach (InventoryItem_RawMaterial_cu inventoryItemRawMaterialCu in rawMaterialsList)
+			{
+				double rawMaterialUnitCost = GetRawMaterialUnitCost(inventoryItemRawMaterialCu);
+				if (inventoryItemRawMaterialCu.HasDimensions)
+				{
+					double rawArea = Convert.ToDouble(inventoryItemRawMaterialCu.Width) *
+					              Convert.ToDouble(inventoryItemRawMaterialCu.Height) *
+					              Convert.ToDouble(inventoryItemRawMaterialCu.Count);
+					if (partsArea >= rawArea)
+						cost += rawMaterialUnitCost * partsArea;
+					else
+						cost += rawMaterialUnitCost * rawArea;
+				}
+			}
+
+			return cost;
+		}
+
+		public static double GetRawMaterialUnitCost(InventoryItem_RawMaterial_cu bridge)
+		{
+			if (bridge == null)
+				return 0;
+
+			RawMaterials_cu rawMaterials = RawMaterials_cu.ItemsList.Find(item =>
+				Convert.ToInt32(item.ID).Equals(Convert.ToInt32(bridge.RawMaterial_CU_ID)));
+			double cost = CalculateRawMaterialUnitCost(rawMaterials, RawMaterialUnitCostCalculation.LastPurchasingCost);
+			return cost;
+		}
+
+		public static double GetRawMaterialsTotalArea(List<InventoryItem_RawMaterial_cu> rawMaterialsList)
+		{
+			if (rawMaterialsList == null || rawMaterialsList.Count == 0)
+				return 0;
+
+			double rawArea = 0;
+
+			foreach (InventoryItem_RawMaterial_cu inventoryItemRawMaterialCu in rawMaterialsList)
+			{
+				if (inventoryItemRawMaterialCu.HasDimensions)
+				{
+					rawArea = Convert.ToDouble(inventoryItemRawMaterialCu.Width) *
+					          Convert.ToDouble(inventoryItemRawMaterialCu.Height) *
+					          Convert.ToDouble(inventoryItemRawMaterialCu.Count);
+				}
+			}
+
+			return rawArea;
 		}
 	}
 }

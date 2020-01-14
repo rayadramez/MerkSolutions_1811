@@ -746,10 +746,17 @@ INSERT INTO dbo.RawMaterialType_p ( ID, Name_P, Name_S, Description ) VALUES ( 3
 
 -- ///////////// BEGIN :: DividedByType_p
 PRINT 'DividedByType_p'
-IF NOT EXISTS (SELECT 1 FROM [dbo].DividedByType_p WHERE ID BETWEEN 1 AND 2)
+IF NOT EXISTS (SELECT 1 FROM [dbo].DividedByType_p WHERE ID BETWEEN 1 AND 3)
 INSERT INTO dbo.DividedByType_p ( ID, Name_P, Name_S, Description ) VALUES  ( 1, N'غير مقسم',N'Not Divided',N'120*240' ),
 ( 2, N'مقسم إلى 4 بالطول',N'Divided By 4 Height',N'120*60' ),
 ( 3, N'مقسم إلى 6 بالعرض والطول',N'Divided By 6 Width and Height',N'60*80' )
+-- ///////////// END :: DividedByType_p
+
+-- ///////////// BEGIN :: DividedByType_p
+PRINT 'DividedByType_p'
+IF NOT EXISTS (SELECT 1 FROM [dbo].SizeUnitMeasure_p WHERE ID BETWEEN 1 AND 2)
+INSERT INTO dbo.SizeUnitMeasure_p ( ID, Name_P, Name_S, Description ) VALUES  ( 1, N'سنتى متر',N'CM',N'120*240' ),
+( 2, N'مللي متر',N'MM',N'120*60' )
 -- ///////////// END :: DividedByType_p
 
 IF @@ERROR<>0 AND @@TRANCOUNT>0 ROLLBACK TRANSACTION

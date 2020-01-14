@@ -75,11 +75,13 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers
 			set { dtDate.EditValue = value; }
 		}
 
-		public object PrintingMaxTimeInMinutes
+		public object TotalMinutes
 		{
 			get { return spnPrintingMaxTimeInMinutes.EditValue; }
 			set { spnPrintingMaxTimeInMinutes.EditValue = value; }
 		}
+
+		public object LightMinutes { get; set; }
 
 		public object AddedMinutes
 		{
@@ -87,7 +89,9 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers
 			set { spnAddedMinutes.EditValue = value; }
 		}
 
-		public object PrintingAverageUnitCostPrice
+		public object UseAverageCostPrice { get; set; }
+
+		public object MinuteUnitCost
 		{
 			get { return spnPrintingAverageUnitCostPrice.EditValue; }
 			set { spnPrintingAverageUnitCostPrice.EditValue = value; }
@@ -110,6 +114,8 @@ namespace CommonUserControls.SettingsViewers.InventoryItem_Printing_Viewers
 			get { return spnPrintingRealCostPrice.EditValue; }
 			set { spnPrintingRealCostPrice.EditValue = value; }
 		}
+
+		public object RealMinutes { get; set; }
 
 		public object Description
 		{

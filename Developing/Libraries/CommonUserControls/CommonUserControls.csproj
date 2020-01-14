@@ -227,6 +227,12 @@
     <Compile Include="InvoiceViewers\ReadyInvoiceForPayments_UC.Designer.cs">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="MerkDesignWork\ReviewInventoryItemsDetails_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MerkDesignWork\ReviewInventoryItemsDetails_UC.Designer.cs">
+      <DependentUpon>ReviewInventoryItemsDetails_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="MerkDesignWork\ReviewInventoryItemsInDetails_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1420,6 +1426,9 @@
     <EmbeddedResource Include="InvoiceViewers\ReadyInvoiceForPayments_UC.resx">
       <DependentUpon>ReadyInvoiceForPayments_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MerkDesignWork\ReviewInventoryItemsDetails_UC.resx">
+      <DependentUpon>ReviewInventoryItemsDetails_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MerkDesignWork\ReviewInventoryItemsInDetails_UC.resx">
       <DependentUpon>ReviewInventoryItemsInDetails_UC.cs</DependentUpon>
     </EmbeddedResource>
@@ -2002,6 +2011,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\lyt_ReviewInventoryItemsDetails_UC.xml" />
     <None Include="Resources\grd_ReviewInventoryItemCostDetails_Printing_Viewer.xml" />
     <None Include="Resources\grd_ReviewInventoryItemCostDetails_Area_Viewer.xml" />
     <None Include="Resources\lyt_InventoryItem_RawMaterials_EditorViewer.xml" />
